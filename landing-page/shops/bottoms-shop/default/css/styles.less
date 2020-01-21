@@ -1,0 +1,51 @@
+.mobile {
+    @media screen and (max-width: 414px) {
+        display: block;
+    }
+
+    display: none;
+}
+
+.desktop {
+    @media screen and (max-width: 414px) {
+        display: none;
+    }
+}
+
+
+.bottoms-container {
+    clear: both;
+
+    ul {
+        list-style-type: none;
+        display: flex;
+
+        li {
+            @media screen and (max-width: 768px) {
+                text-align: center;
+            }
+
+            flex-basis: 25%;
+
+            a {
+                @media screen and (max-width: 414px) {
+                    font-size: 10px;
+                    line-height: 28px;
+                    letter-spacing: 4px;
+                }
+
+                font-family: gilroy-bold;
+
+                font-size: 15px;
+                line-height: 28px;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                border-bottom: 1px solid #47363D;
+                padding: 0 0 1%;
+                color: #47363D;
+                text-decoration:none;
+            }
+        }
+    }
+
+}

@@ -1,0 +1,1 @@
+{"version":3,"sources":["../scripts.js"],"names":["$","document","ready","after"],"mappings":";;AAAAA,CAAC,CAACC,QAAD,CAAD,CAAYC,KAAZ,CAAkB,YAAU;AAC3BF,EAAAA,CAAC,CAAC,aAAD,CAAD,CAAiBG,KAAjB,CAAuBH,CAAC,CAAC,oBAAD,CAAxB;AACA,CAFD","sourcesContent":["$(document).ready(function(){\n\t$('.main-title').after($('.bottoms-container'));\n});"],"file":"scripts.js"}

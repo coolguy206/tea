@@ -11,7 +11,7 @@ module.exports = {
   hp: {
     //dynamic files
     expand: true,
-    cwd: 'homepage/default/js/babel/',
+    cwd: 'homepage/default/js/browserify/',
     src: ['*.js'],
     dest: 'homepage/default/js/jsmin/',
     ext: '.min.js',
@@ -29,7 +29,7 @@ module.exports = {
   landing: {
     //dynamic files
     expand: true,
-    cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/babel/',
+    cwd: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/browserify/',
     src: ['*.js'],
     dest: 'landing-page/' + config.landing.name + '/' + config.landing.date + '/js/jsmin/',
     ext: '.min.js',
