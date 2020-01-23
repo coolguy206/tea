@@ -13,151 +13,164 @@
 <!-- TABLE OF CONTENTS -->
 ## Table of Contents
 
-* [About the Project](#about-the-project)
-  * [Built With](#built-with)
 * [Getting Started](#getting-started)
-  * [Prerequisites](#prerequisites)
-  * [Installation](#installation)
-* [Usage](#usage)
-* [Roadmap](#roadmap)
-* [Contributing](#contributing)
-* [License](#license)
-* [Contact](#contact)
-* [Acknowledgements](#acknowledgements)
+* [Dowload](#download)
+* [Install](#install)
+* [Grunt Tasks](#grunt-tasks)
+* [gruntconfig.js](#gruntconfig)
+* [Run](#run)
+* [Toolkit](#toolkit)
+* [Branches](#branches)
+* [Category Pages](#catgory-pages)
+  * [Default](#default)
+  * [Feature Shops](#feature-shops)
+  * [Footer](#footer)
+* [Content Zones](#content-zones)
+* [Home Page](#homepage)
+* [Landing Page](#landing-page)
+* [Mega Menu](#mega-menu)
+* [Promos](#promos)
 
 
 
-<!-- ABOUT THE PROJECT -->
-## About The Project
-
-[![Product Name Screen Shot][product-screenshot]](https://example.com)
-
-There are many great README templates available on GitHub, however, I didn't find one that really suit my needs so I created this enhanced one. I want to create a README template so amazing that it'll be the last one you ever need.
-
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should element DRY principles to the rest of your life :smile:
-
-Of course, no one template will serve all projects since your needs may be different. So I'll be adding more in the near future. You may also suggest changes by forking this repo and creating a pull request or opening an issue.
-
-A list of commonly used resources that I find helpful are listed in the acknowledgements.
-
-### Built With
-This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
-* [Bootstrap](https://getbootstrap.com)
-* [JQuery](https://jquery.com)
-* [Laravel](https://laravel.com)
-
-
-
-<!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
+This will walk you through the file structure and help you understand the code.
 
-### Prerequisites
+## Dowload
 
-This is an example of how to list things you need to use the software and how to install them.
-* npm
-```sh
-npm install npm@latest -g
-```
+First you need to download the code. Go to [https://github.com/coolguy206/tea] (https://github.com/coolguy206/tea)
+and dowload the zip and extract the folder.
 
-### Installation
+## Install
 
-1. Get a free API Key at [https://example.com](https://example.com)
-2. Clone the repo
-```sh
-git clone https://github.com/your_username_/Project-Name.git
-```
-3. Install NPM packages
+You will need to install:
+* [Node.js] (https://nodejs.org/en/)
+* [Git Bash] (https://gitforwindows.org/)
+
+After downloading Node and Git Bash open up Git Bash and cd into the downloaded repo.
+
+"cd" is a linux command. For a beginners tutorial on linux commands check this out: [https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners] (https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners)
+
+Once you have cd into the downloaded repo type into Git Bash: 
+
 ```sh
 npm install
 ```
-4. Enter your API in `config.js`
-```JS
-const API_KEY = 'ENTER YOUR API';
+
+This will dowload all the npm modules and grunt. After Git Bash finishes downloading you can check if grunt is installed by typing in Git Bash:
+
+```sh
+grunt hello
 ```
 
+You should see in Git Bash
+
+Running "hello" task
+hello world from Grunt!
 
 
-<!-- USAGE EXAMPLES -->
-## Usage
+## Grunt Tasks
 
-Use this space to show useful examples of how a project can be used. Additional screenshots, code examples and demos work well in this space. You may also link to more resources.
+The grunt tasks are all located in the grunt folder.
 
-_For more examples, please refer to the [Documentation](https://example.com)_
+I have npm modules:
+* [load-grunt-tasks] (https://www.npmjs.com/package/load-grunt-tasks)
+* [load-grunt-config] (https://www.npmjs.com/package/load-grunt-config)
 
-
-
-<!-- ROADMAP -->
-## Roadmap
-
-See the [open issues](https://github.com/othneildrew/Best-README-Template/issues) for a list of proposed features (and known issues).
+which allows to run grunt tasks from isolated files. All the grunt tasks start from watch.js
+I would start there if you want to understand how the grunt tasks sequentially compile.
 
 
+## gruntconfig.js
 
-<!-- CONTRIBUTING -->
-## Contributing
+This file controls which file you are compiling and working on so that you don't edit all the files at once.
 
-Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+For example:
+Say you are working on changing the email sign up lightbox. You would edit gruntconfig.js under the
+zone object and put the path to the file.
 
-1. Fork the Project
-2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the Branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
+For this example you would put:
 
-
-
-<!-- LICENSE -->
-## License
-
-Distributed under the MIT License. See `LICENSE` for more information.
+'email-sign-up/lightbox'
 
 
+## Run
 
-<!-- CONTACT -->
-## Contact
+To run the workflow in Git Bash type:
+```sh
+grunt watch
+```
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
+## Toolkit
 
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
-
-
-
-<!-- ACKNOWLEDGEMENTS -->
-## Acknowledgements
-* [GitHub Emoji Cheat Sheet](https://www.webpagefx.com/tools/emoji-cheat-sheet)
-* [Img Shields](https://shields.io)
-* [Choose an Open Source License](https://choosealicense.com)
-* [GitHub Pages](https://pages.github.com)
-* [Animate.css](https://daneden.github.io/animate.css)
-* [Loaders.css](https://connoratherton.com/loaders)
-* [Slick Carousel](https://kenwheeler.github.io/slick)
-* [Smooth Scroll](https://github.com/cferdinandi/smooth-scroll)
-* [Sticky Kit](http://leafo.net/sticky-kit)
-* [JVectorMap](http://jvectormap.com)
-* [Font Awesome](https://fontawesome.com)
+All the code will compile into the toolkit folder where you can copy and paste into toolkit. Normally it should just be one file but if it is multiple files in the toolkit folder use the "content.html" file.
 
 
+## Branches
+
+Usually I would create new branches for the upcoming promos or site refresh.
+
+The naming conventions are as follow:
+
+[site/promo/content zone/landing page].[name].[date]
+
+For example:
+
+* refresh.2.20
+* promo.black-friday.11.19
+* zone.curalate.3.1
+* landing.size-chart.4.15
+
+I would usually pull the edits into master branch sequentially when I have the time and then delete the branches to keep things clean.
 
 
+## Category Pages
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[contributors-shield]: https://img.shields.io/github/contributors/othneildrew/Best-README-Template.svg?style=flat-square
-[contributors-url]: https://github.com/othneildrew/Best-README-Template/graphs/contributors
-[forks-shield]: https://img.shields.io/github/forks/othneildrew/Best-README-Template.svg?style=flat-square
-[forks-url]: https://github.com/othneildrew/Best-README-Template/network/members
-[stars-shield]: https://img.shields.io/github/stars/othneildrew/Best-README-Template.svg?style=flat-square
-[stars-url]: https://github.com/othneildrew/Best-README-Template/stargazers
-[issues-shield]: https://img.shields.io/github/issues/othneildrew/Best-README-Template.svg?style=flat-square
-[issues-url]: https://github.com/othneildrew/Best-README-Template/issues
-[license-shield]: https://img.shields.io/github/license/othneildrew/Best-README-Template.svg?style=flat-square
-[license-url]: https://github.com/othneildrew/Best-README-Template/blob/master/LICENSE.txt
-[linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=flat-square&logo=linkedin&colorB=555
-[linkedin-url]: https://linkedin.com/in/othneildrew
-[product-screenshot]: images/screenshot.png
+This folder contains code for the category pages in toolkit. this code can either be in the flex fields or the banner ads.
+
+### Default
+
+This folder was where the files were when we used to add top header images to top categories:
+* girls
+* boys
+* baby girl
+* baby boy
+* newborn
+
+### Feature Shops
+
+This is also where the feature shop files are.
+
+### Footer
+
+This folder is where footer seo copy are.
+
+For example: 
+Girls new arrivals page footer seo copy 
+"girls-clothing.html"
+The contents of the html file would then be in a banner ad.
+
+## Content Zones
+
+This folder contains all the content zone files.
+
+## Home Page
+
+This folder contains all the home page files.
+
+
+## Landing Pages
+
+This folder contains all the landing pages files.
+
+
+## Mega Menu
+
+This folder contains the files that edit the mega menu images for site refresh or promos. This is in the banner ads in toolkit Whick makes it possible to schedule.
+
+## Promos
+
+This folder contains the files for promos. The "one-offs" folder is usually the folder I use
+for promos that don't fit with all the other promo folders.
+
