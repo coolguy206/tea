@@ -17,11 +17,11 @@
 * [Download](#download)
 * [Install](#install)
 * [Grunt Tasks](#grunt-tasks)
-* [Gruntconfig.js](#gruntconfig.js)
+* [Gruntconfig](#gruntconfig)
 * [Run](#run)
 * [Toolkit](#toolkit)
 * [Branches](#branches)
-* [Category Pages](#catgory-pages)
+* [Category Pages](#category-pages)
   * [Default](#default)
   * [Feature Shops](#feature-shops)
   * [Footer](#footer)
@@ -82,7 +82,7 @@ which allows to run grunt tasks from isolated files. All the grunt tasks start f
 I would start there if you want to understand how the grunt tasks sequentially compile.
 
 
-## Gruntconfig.js
+## Gruntconfig
 
 This file controls which file you are compiling and working on so that you don't edit all the files at once.
 
