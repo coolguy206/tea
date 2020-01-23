@@ -87,6 +87,7 @@ I would start there if you want to understand how the grunt tasks sequentially c
 This file controls which file you are compiling and working on so that you don't edit all the files at once.
 
 For example:
+
 Say you are working on changing the email sign up lightbox. You would edit gruntconfig.js under the
 zone object and put the path to the file.
 
@@ -147,6 +148,7 @@ This is also where the feature shop files are.
 This folder is where footer seo copy are.
 
 For example: 
+
 Girls new arrivals page footer seo copy 
 "girls-clothing.html"
 The contents of the html file would then be in a banner ad.
