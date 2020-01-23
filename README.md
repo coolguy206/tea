@@ -14,10 +14,10 @@
 ## Table of Contents
 
 * [Getting Started](#getting-started)
-* [Dowload](#download)
+* [Download](#download)
 * [Install](#install)
 * [Grunt Tasks](#grunt-tasks)
-* [gruntconfig.js](#gruntconfig)
+* [gruntconfig.js](#gruntconfig.js)
 * [Run](#run)
 * [Toolkit](#toolkit)
 * [Branches](#branches)
@@ -26,8 +26,8 @@
   * [Feature Shops](#feature-shops)
   * [Footer](#footer)
 * [Content Zones](#content-zones)
-* [Home Page](#homepage)
-* [Landing Page](#landing-page)
+* [Home Page](#home-page)
+* [Landing Pages](#landing-pages)
 * [Mega Menu](#mega-menu)
 * [Promos](#promos)
 
@@ -39,18 +39,18 @@ This will walk you through the file structure and help you understand the code.
 
 ## Dowload
 
-First you need to download the code. Go to [https://github.com/coolguy206/tea] (https://github.com/coolguy206/tea)
+First you need to download the code. Go to [https://github.com/coolguy206/tea](https://github.com/coolguy206/tea)
 and dowload the zip and extract the folder.
 
 ## Install
 
 You will need to install:
-* [Node.js] (https://nodejs.org/en/)
-* [Git Bash] (https://gitforwindows.org/)
+* [Node.js](https://nodejs.org/en/)
+* [Git Bash](https://gitforwindows.org/)
 
 After downloading Node and Git Bash open up Git Bash and cd into the downloaded repo.
 
-"cd" is a linux command. For a beginners tutorial on linux commands check this out: [https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners] (https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners)
+"cd" is a linux command. For a beginners tutorial on linux commands check this out: [https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners](https://maker.pro/linux/tutorial/basic-linux-commands-for-beginners)
 
 Once you have cd into the downloaded repo type into Git Bash: 
 
@@ -75,8 +75,8 @@ hello world from Grunt!
 The grunt tasks are all located in the grunt folder.
 
 I have npm modules:
-* [load-grunt-tasks] (https://www.npmjs.com/package/load-grunt-tasks)
-* [load-grunt-config] (https://www.npmjs.com/package/load-grunt-config)
+* [load-grunt-tasks](https://www.npmjs.com/package/load-grunt-tasks)
+* [load-grunt-config](https://www.npmjs.com/package/load-grunt-config)
 
 which allows to run grunt tasks from isolated files. All the grunt tasks start from watch.js
 I would start there if you want to understand how the grunt tasks sequentially compile.
