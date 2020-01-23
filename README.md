@@ -17,7 +17,7 @@
 * [Download](#download)
 * [Install](#install)
 * [Grunt Tasks](#grunt-tasks)
-* [gruntconfig.js](#gruntconfig.js)
+* [Gruntconfig.js](#gruntconfig.js)
 * [Run](#run)
 * [Toolkit](#toolkit)
 * [Branches](#branches)
@@ -37,7 +37,7 @@
 
 This will walk you through the file structure and help you understand the code.
 
-## Dowload
+## Download
 
 First you need to download the code. Go to [https://github.com/coolguy206/tea](https://github.com/coolguy206/tea)
 and dowload the zip and extract the folder.
@@ -82,7 +82,7 @@ which allows to run grunt tasks from isolated files. All the grunt tasks start f
 I would start there if you want to understand how the grunt tasks sequentially compile.
 
 
-## gruntconfig.js
+## Gruntconfig.js
 
 This file controls which file you are compiling and working on so that you don't edit all the files at once.
 
