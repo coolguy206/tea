@@ -1,0 +1,60 @@
+@brown: #47363D;
+@grey: #EDEBEC;
+
+.content-wrap {
+
+    .no,
+    .yes,
+    .sending,
+    .success,
+    .error,
+    .error-message {
+        display: none;
+    }
+
+    .error-message {
+        color: #D94D52;
+        font-family: gilroy-bold;
+        font-size: 14px;
+        line-height: 28px;
+        letter-spacing: 1px;
+    }
+
+    .yes {
+        form {
+
+            label,
+            input,
+            select,
+            button {
+                display: block;
+            }
+
+            label {
+                font-family: gilroy-regular;
+                font-size: 12px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                color: @brown;
+            }
+
+            input,
+            select {
+            	@media screen and (max-width:414px){
+            		width: 100%;
+            	}
+                width: 370px;
+                height: 55px;
+                left: 0px;
+                top: 26px;
+                background: @grey;
+                font-family: gilroy-regular;
+                font-size: 14px;
+                line-height: 28px;
+                letter-spacing: 1px;
+                color: @brown;
+                margin: 0 0 2%;
+            }
+        }
+    }
+}

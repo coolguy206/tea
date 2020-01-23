@@ -1,0 +1,43 @@
+.content-wrap .no,.content-wrap .yes,.content-wrap .sending,.content-wrap .success,.content-wrap .error,.content-wrap .error-message {
+  display: none;
+}
+
+.content-wrap .error-message {
+  color: #D94D52;
+  font-family: gilroy-bold;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 1px;
+}
+
+.content-wrap .yes form label,.content-wrap .yes form input,.content-wrap .yes form select,.content-wrap .yes form button {
+  display: block;
+}
+
+.content-wrap .yes form label {
+  font-family: gilroy-regular;
+  font-size: 12px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #47363D;
+}
+
+.content-wrap .yes form input,.content-wrap .yes form select {
+  width: 370px;
+  height: 55px;
+  left: 0px;
+  top: 26px;
+  background: #EDEBEC;
+  font-family: gilroy-regular;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  color: #47363D;
+  margin: 0 0 2%;
+}
+
+@media screen and (max-width:414px) {
+  .content-wrap .yes form input,  .content-wrap .yes form select {
+    width: 100%;
+  }
+}
