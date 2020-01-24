@@ -1,3 +1,8 @@
+.content-wrap p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
 .content-wrap .no,.content-wrap .yes,.content-wrap .sending,.content-wrap .success,.content-wrap .error,.content-wrap .error-message {
   display: none;
 }

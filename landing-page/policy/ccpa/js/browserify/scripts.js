@@ -83,6 +83,17 @@ $(document).ready(function () {
           $('.sending').fadeOut(function () {
             $('.success').fadeIn();
           });
+          window.dataLayer.push({
+            'event': 'sailthru CCPA',
+            "theEmail": email,
+            "theFirst": first,
+            "theLast": last,
+            "theAddress1": address1,
+            "theAddress2": address2,
+            "theCity": city,
+            "theState": state,
+            "theZip": zip
+          });
         },
         "onError": function onError() {
           console.log('sailthru error');

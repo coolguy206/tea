@@ -63,7 +63,7 @@ $(document).ready(function() {
                 $('.sending').fadeIn();
             });
             var y = $('.sending').position().top;
-            window.scrollTo(0, y); 
+            window.scrollTo(0, y);
 
             Sailthru.integration("userSignUp", {
                 "id": email,
@@ -88,6 +88,18 @@ $(document).ready(function() {
                         $('.success').fadeIn();
                     });
 
+                    window.dataLayer.push({
+                        'event': 'sailthru CCPA',
+                        "theEmail": email,
+                        "theFirst": first,
+                        "theLast": last,
+                        "theAddress1": address1,
+                        "theAddress2": address2,
+                        "theCity": city,
+                        "theState": state,
+                        "theZip": zip,
+                    })
+
                 },
                 "onError": function() {
                     console.log('sailthru error');
@@ -100,7 +112,7 @@ $(document).ready(function() {
         } else {
             $('.error-message').show();
             var y = $('.error-message').position().top;
-            window.scrollTo(0, y); 
+            window.scrollTo(0, y);
             $('.email').focus();
         }
 
