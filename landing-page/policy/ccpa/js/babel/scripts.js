@@ -64,7 +64,7 @@ $(document).ready(function () {
         "id": email,
         "email": email,
         "lists": {
-          "test": 1
+          "ccpa": 1
         },
         "source": 'CCPA',
         "vars": {
