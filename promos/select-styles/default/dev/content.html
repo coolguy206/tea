@@ -1,85 +1,37 @@
 <!-- <img class="ref" src="/mas_assets/media/tea_collection/promos/select-styles/2019/1207/v0/191207-banner-d-ref.jpg" alt="" /> -->
-
 <div class="the-promo">
-	<span class="span-wrap">
-		<span class="first">MIX + MATCH FLASH SALE</span>
-		<span class="second"> $15 TOPS + $20 BOTTOMS</span>
-	</span>
-	<span class="shop-now">
-		<a data="promo banner" href="/select-styles">SHOP THE SALE</a>
-	</span>
-	<span class="details"><a data="promo banner" class="see-details" href="#details-promo">details</a></span>
+    <span class="span-wrap">
+        <span class="first">TAKE 25% OFF OUR FAVORITES</span>
+        <!-- <span class="second"> $15 TOPS + $20 BOTTOMS</span> -->
+    </span>
+    <span class="shop-now">
+        <a data="promo banner" href="/select-styles">SHOP NOW</a>
+    </span>
+    <span class="details"><a data="promo banner" class="see-details" href="#details-promo">details</a></span>
+</div>
 
+<div class="hp-promo">
+	<img class="desktop" src="/mas_assets/media/tea_collection/promos/select-styles/2020/0203/v0/200203-banner-d.jpg">
+	<img class="mobile" src="/mas_assets/media/tea_collection/promos/select-styles/2020/0203/v0/200203-banner-m.jpg">
+	<div></div>
 </div>
 
 
 <!-- FINE PRINT -->
 <div id="details-promo">
-	<div class="details-container">
-		<!-- <div class="">
-			<div class="cta-drop-down">
-				<a data="promo banner lightbox" href="/girls-clothing/favorites/limited-time-sale">girl</a>
-				<a data="promo banner lightbox" href="/boys-clothing/favorites/limited-time-sale">boy</a>
-				<a data="promo banner lightbox" href="/baby-girl-clothes/favorites/limited-time-sale">baby girl</a>
-				<a data="promo banner lightbox" href="/baby-boy-clothes/favorites/limited-time-sale">baby boy</a>
-				<a data="promo banner lightbox" href="/tween-girls-clothing/favorites/limited-time-sale" class="sale-cta">tween</a>
-			</div>
-		</div> -->
-		<h2>Details</h2>
-		<p>
-			Prices as marked on styles labeled ‘select sale style'. Offer available online at teacollection.com only and valid through 12/8/2019 at 11:59 PM PST. Cannot be combined with other promotions. No adjustments on previous purchases. Not redeemable
-			for cash. Limited to stock on hand. Discount taken will be pre-tax and before shipping. Discount applied at time of purchase will be taken off each item returned.
-		</p>
-
-		<p><a href="#" class="close-fancy">CLOSE</a></p>
-	</div>
+    <div class="details-container">
+        <h2>Details</h2>
+        <p>
+            Receive 25% off select styles on your order at Teacollection.com, pre-tax. Discount will be auto-applied at checkout. Offer valid on purchase of select styles marked "25% off applied at checkout". If you would like to use a different promo code, simply remove DELIGHTFUL25 in checkout and apply your preferred promo offer. Offer expires at 11:59pm PST on 2/06/2020. Cannot be combined with other offers. No adjustments on previous purchases. Not redeemable for cash. Limited to stock on hand.  
+        </p>
+        <p><a href="#" class="close-fancy">CLOSE</a></p>
+    </div>
 </div>
 
-<!-- toolkit -->
 <style>
-	include "../css/styles.css"
+include "../css/styles.css"
 </style>
 
 <script>
-	jQuery(document).ready(function() {
-
-		//array of urls to hide the banners
-		var urlArray = [{
-				name: 'hp',
-				url: '/',
-			},
-			// {
-			// 	name: 'black-friday',
-			// 	url: '/black-friday'
-			// },
-			// {
-			// 	name:'sale-page',
-			// 	url:'/clothing-sale'
-			// },
-		];
-
-		//function to hide or show the banner
-		var hideBanners = function() {
-			var url = window.location.pathname;
-
-			// $('.the-promo .see-details').fancybox();
-
-			$.each(urlArray, function(i, val) {
-				if (url == val.url) {
-					$('div[data-zone="sitewide_banner"]').empty();
-				}
-			});
-		};
-
-		//on page load call hideBanners
-		hideBanners();
-
-		$('.the-promo .see-details').fancybox();
-
-		$('.close-fancy').click(function(e) {
-			// e.preventDefault();
-			$.fancybox.close();
-		});
-
-	});
+	include "../js/jsmin/scripts.min.js"
 </script>
