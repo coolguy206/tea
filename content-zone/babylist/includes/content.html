@@ -3,17 +3,26 @@
 
 {literal}
 <style>
-	.babylist{background-color:#E8E511;border:2px solid #E8E511;color:#000;height:54px;display:flex;justify-content:center;align-items:center;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:9% 0;box-sizing:border-box;flex-basis:100%;display:none}
+	.babylist{color:#47363D;display:flex;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:6% 0 0;box-sizing:border-box;flex-basis:100%;display:none}@media screen and (max-width:414px){}
 </style>
 
 <script>
 jQuery(document).ready(function(e){
-	$('.add-to-cart').after($('.babylist'))
+	$('.product-actions').append($('.babylist'))
   var url = window.location.href;
 
 	var dept = $('#the-mpd').attr('data-department').toLowerCase();
 	if(dept.indexOf('newborn') !== -1 || dept.indexOf("little girl") !== -1 || dept.indexOf("little boy") !== -1){
-		$('.babylist').css('display', 'flex');
+    $('.babylist').css('display', 'flex');
+
+    if(url.indexOf('product') == -1){
+      $('.babylist').css({
+        height: '54px',
+        justifyContent: 'center',
+        alignItems: 'center',
+      });
+    }
+		
 	}
 
 {/literal}

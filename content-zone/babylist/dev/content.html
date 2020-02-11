@@ -8,12 +8,21 @@
 
 <script>
 jQuery(document).ready(function(e){
-	$('.add-to-cart').after($('.babylist'))
+	$('.product-actions').append($('.babylist'))
   var url = window.location.href;
 
 	var dept = $('#the-mpd').attr('data-department').toLowerCase();
 	if(dept.indexOf('newborn') !== -1 || dept.indexOf("little girl") !== -1 || dept.indexOf("little boy") !== -1){
-		$('.babylist').css('display', 'flex');
+    $('.babylist').css('display', 'flex');
+
+    if(url.indexOf('product') == -1){
+      $('.babylist').css({
+        height: '54px',
+        justifyContent: 'center',
+        alignItems: 'center',
+      });
+    }
+		
 	}
 
 {/literal}
