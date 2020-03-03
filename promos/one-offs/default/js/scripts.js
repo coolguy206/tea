@@ -1,5 +1,5 @@
 jQuery(document).ready(function() {
-
+/*
     const first = $('.the-promo').find('.span-wrap').clone();
     const shopNow = $('.the-promo').find('.shop-now').clone();
     // $('.hp-promo div').append(first, shopNow);
@@ -14,7 +14,7 @@ jQuery(document).ready(function() {
         $('.the-promo').show();
     }
     
-
+*/
     $('.the-promo .see-details').fancybox();
 
     $('.close-fancy').click(function(e) {
