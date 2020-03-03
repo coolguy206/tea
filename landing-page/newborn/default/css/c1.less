@@ -1,0 +1,64 @@
+@import 'var.less';
+
+.c1 {
+    @media screen and (max-width: 414px) {
+        background: @background;
+    }
+
+    position: relative;
+
+    a {
+        text-decoration:none;
+    }
+
+    .the-content {
+        @media screen and (max-width: 414px) {
+            width: 100%;
+            top: 0%;
+            left: 0;
+            position: relative;
+            padding: 0 0 9%;
+        }
+
+        position: absolute;
+        top: 12%;
+        left: 39%;
+        width: 22%;
+        text-align: center;
+
+        img {
+            margin: 0 0 10%;
+            width:30%;
+        }
+
+        h2 {
+            @media screen and (max-width: 414px) {
+                display: none;
+            }
+        }
+
+        p {
+            @media screen and (max-width: 414px) {
+                margin: 4% auto 0;
+                width: 66%;
+            }
+
+            margin: 6% auto 0;
+            width: 79%;
+        }
+
+        div {
+            @media screen and (max-width: 414px) {
+                margin: 3% 0 0;
+                text-align: center;
+            }
+
+            margin: 11% 0 0;
+
+            span {
+                color: @ctaColor;
+
+            }
+        }
+    }
+}
