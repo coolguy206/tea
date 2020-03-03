@@ -1,0 +1,75 @@
+.c1 {
+  position: relative;
+}
+
+.c2 {
+  padding: 3% 6% 3% 6%;
+}
+
+@media screen and (max-width:414px) {
+  .c2 {
+    padding: 4% 0;
+  }
+}
+
+.c3 {
+  padding: 3% 5% 3% 7%;
+  background: #FDF5F2;
+}
+
+@media screen and (max-width:414px) {
+  .c3 {
+    padding: 4% 0 0;
+    background: none;
+  }
+}
+
+.c4 {
+  padding: 3% 6% 4% 6%;
+}
+
+@media screen and (max-width:414px) {
+  .c4 {
+    padding: 4% 0;
+  }
+}
+
+.c5 {
+  position: relative;
+}
+
+.c6 {
+  padding: 2% 6% 4% 6%;
+}
+
+@media screen and (max-width:414px) {
+  .c6 {
+    padding: 4% 0;
+  }
+}
+
+.ref {
+  width: 98%;
+  position: absolute;
+  top: -97px;
+  opacity: .5;
+  z-index: 9999;
+}
+
+@media screen and (max-width:414px) {
+  .ref {
+    width: 100%;
+    top: 5px;
+  }
+}
+
+.content-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content-wrap .c2,.content-wrap .c3,.content-wrap .c4,.content-wrap .c6 {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}

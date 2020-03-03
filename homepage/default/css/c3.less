@@ -1,72 +1,110 @@
 @import "var.less";
 
 .c3 {
-  @media screen and (max-width:414px) {
-    flex-wrap: wrap;
-  }
-  display: flex;
-  background: @background;
-  padding: 2.4% 0 4.5%;
-  text-align: center;
-  justify-content: center;
+    @media screen and (max-width: 414px) {
+        flex-wrap: wrap;
+    }
 
-  div {
-    &.first,
-    &.second,
-    &.third {
-      @media screen and (max-width:414px) {
-        padding: 0 5%;
-        margin: 0 0 12%;
-      }
-      flex-basis: 33%;
-      text-align: center;
-      // padding: 0 0 0 2.4%;
-      padding: 0 1.4%;
-      box-sizing: border-box;
+    display: flex;
+    background: #FDF5F2;
+    padding: 2.4% 0 3%;
+    text-align: center;
+    justify-content: center;
 
-      a {
-        text-decoration: none;
-      }
+    div {
 
-      .the-content {
-        h2 {
-          @media screen and (max-width:1679px) {
-            font-size: 1.6vw;
-            line-height: 1.6vw;
-          }
-          @media screen and (max-width:414px) {
-            font-size: 6vw;
-            margin: 8% 0 10%;
-          }
-          font-family: @gilroyb;
-          font-size: 30px;
-          line-height: 28px;
-          letter-spacing: 0.25em;
-          text-transform: uppercase;
-          margin: 7% 0;
+        &.first,
+        &.second,
+        &.third {
+            @media screen and (max-width: 414px) {
+                padding: 0 5%;
+                margin: 0 0 12%;
+            }
+
+            flex-basis: 33%;
+            text-align: center;
+            padding: 0 1.5%;
+            box-sizing: border-box;
+
+            a {
+                text-decoration: none;
+            }
+
+            .the-content {
+                h2 {
+                    @media screen and (max-width: 1679px) {
+                        font-size: 1.6vw;
+                        line-height: 1.6vw;
+                    }
+
+                    @media screen and (max-width:414px) {
+                        font-size: 6vw;
+                        margin: 8% 0 10%;
+                    }
+
+                    font-family: @gilroyb;
+                    font-size: 30px;
+                    line-height: 28px;
+                    letter-spacing: 0.25em;
+                    text-transform: uppercase;
+                    margin: 7% 0;
+                }
+            }
         }
-      }
-    }
 
-    &.first {
-      a,
-      h2 {
-        color: #62B3B4;
-      }
-    }
+        &.first {
 
-    &.second {
-      a,
-      h2 {
-        color: #F76578;
-      }
-    }
+            a,
+            h2 {
+                color: #43788B;
+            }
 
-    &.third {
-      a,
-      h2 {
-        color: #FF924A;
-      }
+            a {
+                &.cta1 {
+                    left: -1%;
+                }
+
+                &.cta2 {
+                    left: 6%;
+                }
+            }
+        }
+
+        &.second {
+
+            a,
+            h2 {
+                color: #795E8D;
+            }
+
+            a {
+                span {
+                    @media screen and (max-width:414px){
+                        display:none;
+                    }
+                }
+                &.cta1 {
+                    left: -6%;
+                }
+
+                &.cta2 {
+                    left: 0%;
+                }
+
+                &.cta3 {
+                    left: 7%;
+                }
+            }
+        }
+
+        &.third {
+
+            a,
+            h2 {
+                color: #985F24;
+            }
+
+
+        }
     }
-  }
 }

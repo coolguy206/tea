@@ -1,48 +1,99 @@
 @import "var.less";
 
 .c5 {
-  display: flex;
+    display: flex;
 
-  a {
+
     text-decoration: none;
     display: block;
     position: relative;
 
     .the-content {
-      @media screen and (max-width: 414px) {
-        width: 100%;
-        right: 0;
-        top: 9%;
-      }
-      position: absolute;
-      top: 25%;
-      right: 27%;
-      width: 16%;
-      text-align: center;
-
-      h2,
-      p,
-      span {
-        color: #fff;
-      }
-
-      h2 {
         @media screen and (max-width: 414px) {
-          margin: 0 0 8%;
+            width: 100%;
+            right: 0;
+            top: 9%;
         }
-        width: 80%;
-        display: inline-block;
-        margin: 0 0 13%;
-      }
 
-      p {
-        @media screen and (max-width:414px) {
-          display: none;
+        position: absolute;
+        top: 33%;
+        right: 5%;
+        width: 24%;
+        text-align: center;
+
+
+        h2 {
+            @media screen and (max-width: 414px) {
+                margin: 0 0 8%;
+            }
+
+            width: 80%;
+            display: inline-block;
+            margin: 0 0 10%;
+            color: #fff;
         }
-        margin: 0 0 9%;
-      }
 
-      span {}
+        p {
+            @media screen and (max-width: 414px) {
+                display: none;
+            }
+
+            margin: 0 auto 11%;
+            width: 68%;
+        }
+
+        p,
+        a,
+        span {
+            @media screen and (max-width: 414px) {
+                color: #fff;
+            }
+
+            color: #337FA1;
+        }
+
+        a {
+            span {
+                @media screen and (max-width:414px){
+                    display:none;
+                }
+            }
+        }
+
+        div {
+            &:first-of-type {
+                margin: 0 0 9%;
+
+                a {
+                    &.cta1 {
+                        left: -2%;
+                    }
+
+                    &.cta2 {
+                        left: 2%;
+                    }
+
+                    &.cta3 {
+                        left: 6%;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                margin: 0 0 9%;
+
+                a {
+                    &.cta4 {
+                        left: -3%;
+                    }
+
+                    &.cta5 {
+                        left: 6%;
+                    }
+
+                }
+            }
+        }
     }
-  }
+
 }
