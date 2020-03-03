@@ -15,7 +15,7 @@ jQuery(document).ready(function() {
     }
     
 */
-    $('.the-promo .see-details').fancybox();
+    $('.newborn-promo .see-details').fancybox();
 
     $('.close-fancy').click(function(e) {
         // e.preventDefault();
