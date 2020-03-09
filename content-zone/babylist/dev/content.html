@@ -13,7 +13,7 @@ jQuery(document).ready(function(e){
 
 	var dept = $('#the-mpd').attr('data-department').toLowerCase();
 	if(dept.indexOf('newborn') !== -1 || dept.indexOf("little girl") !== -1 || dept.indexOf("little boy") !== -1){
-    $('.babylist').css('display', 'flex');
+    $('.babylist').css('display', 'inline-block');
 
     if(url.indexOf('product') == -1){
       $('.babylist').css({
@@ -26,7 +26,7 @@ jQuery(document).ready(function(e){
 	}
 
 {/literal}
-  var images = '{$html_url}{image type=id id=$file_id size=normal}';
+  var images = '{image type=id id=$file_id size=normal}';
   var price = '{$store_price|string_format:"%.2f"}';
   var title = '{$brand} {$model}';
   //console.log('babylist info');

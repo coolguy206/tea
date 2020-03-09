@@ -1,10 +1,10 @@
-<a href="#" class="babylist">Add to Babylist</a> {literal}<style>.babylist{color:#47363D;display:flex;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:6% 0 0;box-sizing:border-box;flex-basis:100%;display:none}@media screen and (max-width:414px){}</style><script>jQuery(document).ready(function(e){
+<a href="#" class="babylist">Add to Babylist</a> {literal}<style>.babylist{color:#47363D;padding:0;font-family:'Gilroy-Bold';letter-spacing:3px;text-transform:uppercase;text-decoration:none;margin:3% 0 0;padding:1rem;box-sizing:border-box;flex-basis:100%;display:none;border:2px solid #47363D;-webkit-transition:all .3s ease;-moz-transition:all .3s ease;-o-transition:all .3s ease;transition:all .3s ease}@media screen and (max-width:414px){}.babylist:hover{background-color:#75686D;color:#fff}</style><script>jQuery(document).ready(function(e){
 	$('.product-actions').append($('.babylist'))
   var url = window.location.href;
 
 	var dept = $('#the-mpd').attr('data-department').toLowerCase();
 	if(dept.indexOf('newborn') !== -1 || dept.indexOf("little girl") !== -1 || dept.indexOf("little boy") !== -1){
-    $('.babylist').css('display', 'flex');
+    $('.babylist').css('display', 'inline-block');
 
     if(url.indexOf('product') == -1){
       $('.babylist').css({
@@ -17,7 +17,7 @@
 	}
 
 {/literal}
-  var images = '{$html_url}{image type=id id=$file_id size=normal}';
+  var images = '{image type=id id=$file_id size=normal}';
   var price = '{$store_price|string_format:"%.2f"}';
   var title = '{$brand} {$model}';
   //console.log('babylist info');
