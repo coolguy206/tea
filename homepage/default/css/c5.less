@@ -2,45 +2,98 @@
 
 .c5 {
     display: flex;
+    flex-wrap: wrap;
 
+    div {
 
-    text-decoration: none;
-    display: block;
-    position: relative;
+        &.first,
+        &.second {
+            @media screen and (max-width: 414px) {
+                padding: 4% 4% 8%;
+            }
+
+            padding: 4% 4%;
+            position: relative;
+        }
+
+        &.first {
+            background: #FFE57F;
+
+            .the-content {
+                h2 {
+                    color: #028D6E;
+                }
+
+                a {
+                    color: #028D6E;
+
+                    &.cta1 {
+                        left: -3%;
+                    }
+
+                    &.cta2 {
+                        left: 3%;
+                    }
+
+                }
+            }
+        }
+
+        &.second {
+            background: #BACECD;
+
+            .the-content {
+                h2 {
+                    color: #795E8D;
+                }
+
+                a {
+                    &.cta1 {
+                        left: 0;
+                        color: #795E8D;
+                    }
+
+                }
+            }
+        }
+
+    }
 
     .the-content {
         @media screen and (max-width: 414px) {
             width: 100%;
             right: 0;
-            top: 9%;
+            top: 0%;
         }
 
-        position: absolute;
-        top: 33%;
-        right: 5%;
-        width: 24%;
+        position: relative;
+        top: 0;
         text-align: center;
+        margin: 6% 0 0;
 
 
         h2 {
-            @media screen and (max-width: 414px) {
-                margin: 0 0 8%;
+            @media screen and (max-width: 1679px) {
+                font-size: 2.4vw;
+                line-height: 2.2vw;
             }
 
-            width: 80%;
-            display: inline-block;
-            margin: 0 0 10%;
-            color: #fff;
-        }
-
-        p {
             @media screen and (max-width: 414px) {
-                display: none;
+                font-size: 24px;
+                line-height: 28px;
+                margin: 0;
             }
 
-            margin: 0 auto 11%;
-            width: 68%;
+            display: block;
+            width: 100%;
+            margin: 0;
+            font-size: 30px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            font-family: gilroy-bold;
         }
+
 
         p,
         a,
@@ -49,50 +102,22 @@
                 color: #fff;
             }
 
-            color: #337FA1;
         }
 
         a {
             span {
-                @media screen and (max-width:414px){
-                    display:none;
+                @media screen and (max-width: 414px) {
+                    display: none;
                 }
             }
         }
 
         div {
-            &:first-of-type {
-                margin: 0 0 9%;
-
-                a {
-                    &.cta1 {
-                        left: -2%;
-                    }
-
-                    &.cta2 {
-                        left: 2%;
-                    }
-
-                    &.cta3 {
-                        left: 6%;
-                    }
-                }
+            @media screen and (max-width:414px){
+                margin:5% 0 0;
             }
+            margin: 4% 0 0;
 
-            &:last-of-type {
-                margin: 0 0 9%;
-
-                a {
-                    &.cta4 {
-                        left: -3%;
-                    }
-
-                    &.cta5 {
-                        left: 6%;
-                    }
-
-                }
-            }
         }
     }
 
