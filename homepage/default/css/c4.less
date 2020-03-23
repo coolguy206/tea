@@ -1,97 +1,144 @@
 @import "var.less";
+@c4-first-font-color: #FF8CA4;
+@c4-first-cta-color: #FF8CA4;
+@c4-second-font-color: #45AD94;
+@c4-second-cta-color: #45AD94;
+
 
 .c4 {
-    @media screen and (max-width: 414px) {
-        flex-wrap: wrap;
-    }
-
-    position: relative;
+    display: flex;
+    flex-wrap: wrap;
 
     div {
 
-        img {
-            -webkit-align-self: center;
-            align-self: center;
+        &.first,
+        &.second {
+            @media screen and (max-width: 414px) {
+                // padding: 11% 5% 0%;
+            }
+
+            padding: 3% 2% 0;
+            position: relative;
+            text-align: center;
         }
 
-        &.the-content {
+        &.first {
             @media screen and (max-width: 414px) {
-                top: 72%;
-                width: 100%;
+                padding: 11% 5% 0%;
             }
 
-            position: absolute;
-            top: 21%;
-            width: 33%;
-            text-align: center;
+            .the-content {
 
-            h2 {
-                @media screen and (max-width: 1679px) {
-                    // font-size: 1.6vw;
-                    // line-height: 1.6vw;
-                }
 
-                @media screen and (max-width:414px) {
-                    font-size: 32px;
-                    line-height: 64px;
-                    margin: 0;
-                }
-
-                text-align: center;
-                text-transform: capitalize;
-                margin: 10% auto 0;
-                font-family: souvenirstd-light;
-            }
-
-            p {
-                @media screen and (max-width: 414px) {
-                    display: none;
-                }
-
-                width: 49%;
-                margin: 7% auto 0;
-                text-align: center;
-                color: #337FA1;
-            }
-
-            div {
-                @media screen and (max-width: 414px) {
-                    margin: 3% 0 0;
-                }
-
-                margin: 8% 0 0;
-                text-align: center;
-
-                a {
-                    color: #337FA1;
-
-                    span {
-                        @media screen and (max-width: 414px) {
-                            display: none;
-                        }
+                h2 {
+                    @media screen and (max-width: 414px) {
+                        width: 95%;
+                        margin: 0 auto;
                     }
 
+                    color: @c4-first-font-color;
+                }
+
+                a {
+                    color: @c4-first-cta-color;
+
                     &.cta1 {
-                        left: -4%;
+                        left: -2%;
                     }
 
                     &.cta2 {
-                        left: 0%;
-                    }
-
-                    &.cta3 {
-                        left: 3%;
-                    }
-
-                    &.cta4 {
-                        left: -4%;
-                    }
-
-                    &.cta5 {
                         left: 2%;
                     }
+
                 }
             }
+        }
+
+        &.second {
+            @media screen and (max-width: 414px) {
+                padding: 0% 5% 0%;
+            }
+
+            .the-content {
+
+
+                h2 {
+                    color: @c4-second-font-color;
+                }
+
+                a {
+                    &.cta1 {
+                        left: 0;
+                        color: @c4-second-cta-color;
+                    }
+
+                }
+            }
+        }
+
+    }
+
+    .the-content {
+        @media screen and (max-width: 414px) {
+            width: 100%;
+            right: 0;
+            top: 0%;
+        }
+
+        position: relative;
+        top: 0;
+        text-align: center;
+        margin: 5% 0 11%;
+
+
+        h2 {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.6vw;
+                line-height: 1.6vw;
+            }
+
+            @media screen and (max-width: 414px) {
+                font-size: 24px;
+                line-height: 28px;
+                margin: 0;
+
+            }
+
+            display: block;
+            width: 100%;
+            margin: 0;
+            font-size: 30px;
+            line-height: 28px;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            font-family: gilroy-bold;
+        }
+
+
+        p,
+        a,
+        span {
+            @media screen and (max-width: 414px) {
+                color: #fff;
+            }
+
+        }
+
+        a {
+            span {
+                @media screen and (max-width: 414px) {
+                    display: none;
+                }
+            }
+        }
+
+        div {
+            @media screen and (max-width: 414px) {
+                margin: 5% 0 0;
+            }
+
+            margin: 4% 0 0;
+
         }
     }
 

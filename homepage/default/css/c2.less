@@ -1,128 +1,164 @@
 @import "var.less";
-@c2-color: #0E9577;
+@c2-first-font-color: #43788B;
+@c2-first-cta-color: #43788B;
+@c2-second-font-color: #EF7570;
+@c2-second-cta-color: #EF7570;
 
 .c2 {
-    @media screen and (max-width: 1024px) {}
-
-    @media screen and (max-width:768px) {}
-
-    @media screen and (max-width:414px) {
-        padding: 11% 0 12%;
-        display: block;
-        text-align: center;
+    @media screen and (max-width: 414px) {
+        flex-wrap: wrap;
     }
-
-    @media screen and (max-width:375px) {}
-
-    @media screen and (max-width:320px) {}
 
     display: flex;
-    margin: 0;
-    padding: 3% 0 3%;
-    justify-content: center;
-
-    h2 {
-        @media screen and (max-width: 1679px) {
-            font-size: 2vw;
-            line-height: 2.5vw;
-        }
-
-        @media screen and (max-width: 414px) {
-            font-size: 26px;
-            line-height: 28px;
-            // letter-spacing: .2em;
-            left: 0;
-            margin: 0 0 5%;
-            letter-spacing: 0;
-        }
-
-        color: @c2-color;
-        font-size: 30px;
-        line-height: 45px;
-        position: relative;
-        left: -2%;
-        margin: 0;
-        font-family:@souv;
-
-    }
+    padding: 0;
+    text-align: center;
+    flex-wrap: wrap;
 
     div {
 
-        a {
-            color: @c2-color;
-        }
+        &.first,
+        &.second,
+        &.third {
 
-        &.desktop {
-            top: -26%;
-            position: relative;
-
-            a {
-
-                &.cta1 {
-                    left: 1%;
-                }
-
-                &.cta2 {
-                    left: 4%;
-                }
-
-                &.cta3 {
-                    left: 6%;
-                }
-
-                &.cta4 {
-                    left: 8%;
-                }
-
-                &.cta5 {
-                    left: 11%;
-                }
-
-                &.cta6 {
-                    left: 14%;
-                }
-            }
-
-        }
-
-        &.mobile {
-
-            div {
-                &:first-of-type {
-                    margin: 0 0 8%;
-                }
-            }
+            text-align: center;
+            padding: 0 1.5%;
+            box-sizing: border-box;
 
             a {
+                text-decoration: none;
+            }
 
-                span {
-                    display: none;
-                }
+            .the-content {
+                h2 {
+                    @media screen and (max-width: 1679px) {
+                        font-size: 1.6vw;
+                        line-height: 1.6vw;
+                    }
 
-                &.cta1 {
-                    left: -7%;
-                }
+                    @media screen and (max-width:414px) {
+                        font-size: 24px;
+                        line-height: 28px;
+                        margin: 8% 0 10%;
+                    }
 
-                &.cta2 {
-                    left: 1%;
-                }
-
-                &.cta3 {
-                    left: 9%;
-                }
-
-                &.cta4 {
-                    left: -5%;
-                }
-
-                &.cta5 {
-                    left: 2%;
-                }
-
-                &.cta6 {
-                    left: 8%;
+                    font-family: @gilroyb;
+                    font-size: 30px;
+                    line-height: 28px;
+                    letter-spacing: 0.25em;
+                    text-transform: uppercase;
+                    margin: 7% 0;
                 }
             }
         }
+
+        &.first {
+            @media screen and (max-width: 414px) {
+                padding: 5% 5%;
+
+            }
+
+            flex-basis: 65%;
+            padding: 3% 0 0 3%;
+
+            .the-content {
+                @media screen and (max-width: 414px) {
+                    padding: 6% 0;
+                    width: 100%;
+                }
+
+                padding: 4% 0 4%;
+
+                a,
+                h2 {
+                    margin: 0;
+                }
+
+                h2 {
+                    color: @c2-first-font-color;
+                }
+
+
+                div {
+                    @media screen and (max-width: 414px) {
+                        margin: 7% 0 0;
+                    }
+
+                    margin: 3% 0 0;
+
+                    a {
+                        color: @c2-first-cta-color;
+
+                        &.cta1 {
+                            left: -2%;
+                        }
+
+                        &.cta2 {
+                            left: 2%;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        &.second {
+            @media screen and (max-width: 414px) {
+                padding: 0 5% 11%;
+            }
+
+            flex-basis: 35%;
+            padding: 3% 2.6% 0;
+
+
+            .the-content {
+                @media screen and (max-width: 414px) {
+                    padding: 7% 0 0;
+                }
+
+                padding: 8% 0 0;
+
+                a,
+                h2 {
+
+                    margin: 0;
+                }
+
+                h2 {
+                    color: @c2-second-font-color;
+                }
+
+
+                div {
+                    @media screen and (max-width: 414px) {
+                        // margin: 5% 0 0;
+                    }
+
+                    margin: 7% 0 0;
+
+                    a {
+                        color: @c2-second-cta-color;
+
+                        span {
+                            @media screen and (max-width: 414px) {
+                                display: none;
+                            }
+                        }
+
+                        &.cta1 {
+                            // left: -5%;
+                        }
+
+                        &.cta2 {
+                            // left: 5%;
+                        }
+
+
+                    }
+                }
+            }
+
+        }
+
     }
 }
