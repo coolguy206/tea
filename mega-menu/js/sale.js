@@ -1,15 +1,3 @@
-<div class="mega-img-container">
-    <a href="/clothing-sale" class="sale-url">
-        <img alt="sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/200314-mega-menu.jpg">
-    </a>
-    <a href="/sale/girls-clothing/clearance" class="clearance-url">
-        <img alt="clearance sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/clearance-mega-menu.jpg">
-    </a>
-</div>
-<style>
-.mega-menu-sale-img{width:100%;max-width:100%;padding:5%;box-sizing:border-box}div[data-zone="mega_sale"]{text-align:left;display:block !important}.mega-img-container{display:flex !important}
-</style>
-<script>
 $(document).ready(function() {
     $('.site-nav-submenu .bar>div').hover(function() {
         var href = $(this).find('a').first().attr('href');
@@ -67,4 +55,3 @@ $(document).ready(function() {
 
 
 });
-</script>
