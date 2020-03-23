@@ -10,7 +10,7 @@ $(document).ready(function() {
         var clearance = href;
         clearance = clearance.replace('view-all', 'clearance');
 
-        if (href !== '/sale/newborn-clothing/view-all') {
+        // if (href !== '/sale/newborn-clothing/view-all') {
 
             switch (href) {
                 case '/girls-clothing/new-arrivals':
@@ -18,7 +18,7 @@ $(document).ready(function() {
                 case '/baby-girl-clothes/new-arrivals':
                 case '/baby-boy-clothes/new-arrivals':
 
-                    clearance = clearance.replace('new-arrivals', 'last-chance');
+                    clearance = clearance.replace('new-arrivals', 'clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
@@ -26,13 +26,13 @@ $(document).ready(function() {
                 case '/toddler-boys-clothes/favorites/new-arrivals':
                 case '/newborn-clothes/favorites/new-arrivals':
 
-                    clearance = clearance.replace('es/favorites/new-arrivals', 'ing/last-chance');
+                    clearance = clearance.replace('es/favorites/new-arrivals', 'ing/clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
                  case '/tween-girls-clothing/favorites/new-arrivals':
 
-                    clearance = clearance.replace('favorites/new-arrivals', 'last-chance');
+                    clearance = clearance.replace('favorites/new-arrivals', 'clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
@@ -44,9 +44,9 @@ $(document).ready(function() {
             // console.log(clearance);
             $('.clearance-url').attr('href', clearance);
             $('.clearance-url').show();
-        } else {
-            $('.clearance-url').hide();
-        }
+        // } else {
+        //     $('.clearance-url').hide();
+        // }
 
 
     }, function() {

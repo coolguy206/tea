@@ -1,7 +1,7 @@
 <div class="mega-img-container">
-    <a href="/clothing-sale" class="sale-url">
+  <!--   <a href="/clothing-sale" class="sale-url">
         <img alt="sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/200314-mega-menu.jpg">
-    </a>
+    </a> -->
     <a href="/sale/girls-clothing/clearance" class="clearance-url">
         <img alt="clearance sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/clearance-mega-menu.jpg">
     </a>
@@ -22,7 +22,7 @@ $(document).ready(function() {
         var clearance = href;
         clearance = clearance.replace('view-all', 'clearance');
 
-        if (href !== '/sale/newborn-clothing/view-all') {
+        // if (href !== '/sale/newborn-clothing/view-all') {
 
             switch (href) {
                 case '/girls-clothing/new-arrivals':
@@ -30,7 +30,7 @@ $(document).ready(function() {
                 case '/baby-girl-clothes/new-arrivals':
                 case '/baby-boy-clothes/new-arrivals':
 
-                    clearance = clearance.replace('new-arrivals', 'last-chance');
+                    clearance = clearance.replace('new-arrivals', 'clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
@@ -38,13 +38,13 @@ $(document).ready(function() {
                 case '/toddler-boys-clothes/favorites/new-arrivals':
                 case '/newborn-clothes/favorites/new-arrivals':
 
-                    clearance = clearance.replace('es/favorites/new-arrivals', 'ing/last-chance');
+                    clearance = clearance.replace('es/favorites/new-arrivals', 'ing/clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
                  case '/tween-girls-clothing/favorites/new-arrivals':
 
-                    clearance = clearance.replace('favorites/new-arrivals', 'last-chance');
+                    clearance = clearance.replace('favorites/new-arrivals', 'clearance');
                     clearance = `/sale${clearance}`;
                     break;
 
@@ -56,9 +56,9 @@ $(document).ready(function() {
             // console.log(clearance);
             $('.clearance-url').attr('href', clearance);
             $('.clearance-url').show();
-        } else {
-            $('.clearance-url').hide();
-        }
+        // } else {
+        //     $('.clearance-url').hide();
+        // }
 
 
     }, function() {
