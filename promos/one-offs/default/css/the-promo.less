@@ -1,5 +1,9 @@
+@backgroundColor: #0f8f6f;
+@fontColor1: #a9c3db;
+@fontColor2: #ffffff;
+
 .header-banner {
-    background: #f9f2e1;
+    background: @backgroundColor;
     max-width: 100%;
     width: 100%;
     padding: 0;
@@ -19,8 +23,9 @@
     margin: 0 auto;
     padding: 1% 0;
     position: relative;
-    background: #f9f2e1;
+    background: @backgroundColor;
     text-align: center;
+    display:none;
 
     // .see-details {
     //  display: block;
@@ -49,17 +54,17 @@
             }
 
             left: -1%;
-            color: #d26373;
+            color: @fontColor1;
             position: relative;
             font-family: gilroy-bold;
         }
 
         &.second {
             @media screen and (max-width: 414px) {
-                display: none;
+                // display: none;
             }
 
-            color: #fdf5f2;
+            color: @fontColor2;
         }
 
         &.shop-now {
@@ -96,7 +101,7 @@
             a {
                 font-size: 12px;
                 line-height: 18px;
-                color: #d26373;
+                color: #fff;
                 text-decoration: none;
                 font-family: gilroy-regular;
                 text-transform: capitalize;

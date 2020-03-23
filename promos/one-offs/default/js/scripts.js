@@ -15,7 +15,14 @@ jQuery(document).ready(function() {
     }
     
 */
-    $('.newborn-promo .see-details').fancybox();
+
+    const url = window.location.pathname;
+
+    if(url !== '/'){
+        $('.the-promo').show();
+    }
+
+    $('.the-promo .see-details').fancybox();
 
     $('.close-fancy').click(function(e) {
         // e.preventDefault();
