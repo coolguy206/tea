@@ -1,4 +1,4 @@
-<div class="wrap-content"><h2>Get In Touch</h2><div><a href="tel:8663748747">866.374.8747</a><br><br><a href="mailto:service@teacollection.com">service@teacollection.com</a><br><br><h3>Hours</h3><ul><li>Monday-Friday 6am-6pm PT</li><li>Saturday-Sunday 7am-1pm PT</li></ul><h3>Chat Hours</h3><ul><li>Monday-Friday 7am-5:30pm PT</li><li>Saturday-Sunday 7:30am-12:30pm PT</li></ul><p>Hold music provided by <a href="https://www.putumayo.com/putumayo-kids/" target="_blank">Putumayo Kids</a></p></div><div class="holiday-closure"><h2>CUSTOMER CARE WILL BE CLOSED</h2><p></p></div><p>Tea Collection<br>1 Arkansas Street<br>Studio B<br>San Francisco, CA 94107</p><h2>For Press Inquiries</h2><a href="mailto:PR@teacollection.com">PR@teacollection.com</a></div><style>.wrap-content{padding:1rem;box-sizing:border-box}.wrap-content a{font-size:1rem}.wrap-content img{max-width:100%}.wrap-content ul li{font-size:1rem}.wrap-content p{font-size:1rem}.wrap-content .holiday-closure{border:1px solid #5A5A5C;padding:10px;display:none}.wrap-content .holiday-closure ul li{font-size:1rem}.wrap-content .holiday-closure,.wrap-content h1,.wrap-content h2,.wrap-content h3,.wrap-content p,.wrap-content ul{margin-bottom:10px}</style><script>$(document).ready(function() {
+<div class="wrap-content"><h2>Get In Touch</h2><div><a href="tel:8663748747">866.374.8747</a><br><br><a href="mailto:service@teacollection.com">service@teacollection.com</a><br><br><h3>Hours</h3><ul><li>Monday-Friday 6am-6pm PT</li><li>Saturday-Sunday 7am-1pm PT</li></ul><h3>Chat Hours</h3><ul><li>Monday-Friday 7am-5:30pm PT</li></ul><p>Hold music provided by <a href="https://www.putumayo.com/putumayo-kids/" target="_blank">Putumayo Kids</a></p></div><div class="holiday-closure"><h2>CUSTOMER CARE WILL BE CLOSED</h2><p></p></div><p>Tea Collection<br>1 Arkansas Street<br>Studio B<br>San Francisco, CA 94107</p><h2>For Press Inquiries</h2><a href="mailto:PR@teacollection.com">PR@teacollection.com</a></div><style>.wrap-content{padding:1rem;box-sizing:border-box}.wrap-content a{font-size:1rem}.wrap-content img{max-width:100%}.wrap-content ul li{font-size:1rem}.wrap-content p{font-size:1rem}.wrap-content .holiday-closure{border:1px solid #5A5A5C;padding:10px;display:none}.wrap-content .holiday-closure ul li{font-size:1rem}.wrap-content .holiday-closure,.wrap-content h1,.wrap-content h2,.wrap-content h3,.wrap-content p,.wrap-content ul{margin-bottom:10px}</style><script>$(document).ready(function() {
     // jQuery('img[usemap]').rwdImageMaps();
 
     var date = new Date();
@@ -14,10 +14,10 @@
     switch (month) {
       //november
       case 11:
-        if (day >= 23) {
+        if (day >= 27) {
           $('.holiday-closure').hide();
-        } else if (day <= 22) {
-          message = '<h3>Thanksgiving Day ' + month + '/28/' + year + '</h3>';
+        } else if (day <= 26) {
+          message = '<h3>Thanksgiving Day ' + month + '/26/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -61,17 +61,17 @@
         if (day <= 16) {
           $('.holiday-closure').hide();
         } else if (day >= 17) {
-          message = '<h3>Easter ' + month + '/21/' + year + '</h3>';
+          message = '<h3>Easter ' + month + '/12/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
         break;
         //april
       case 4:
-        if (day >= 21) {
+        if (day >= 13) {
           $('.holiday-closure').hide();
-        } else if (day <= 21) {
-          message = '<h3>Easter ' + month + '/21/' + year + '</h3>';
+        } else if (day <= 12) {
+          message = '<h3>Easter ' + month + '/12/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -81,7 +81,7 @@
         if (day <= 15) {
           $('.holiday-closure').hide();
         } else if (day >= 16) {
-          message = '<h3>Memorial Day ' + month + '/27/' + year + '</h3>';
+          message = '<h3>Memorial Day ' + month + '/25/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
@@ -99,9 +99,9 @@
         break;
         //july
       case 7:
-        if (day >= 6) {
+        if (day >= 5) {
           $('.holiday-closure').hide();
-        } else if (day <= 5) {
+        } else if (day <= 4) {
           message = '<h3>Independence Day ' + month + '/4/' + year + ' </h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
@@ -113,17 +113,17 @@
           $('.holiday-closure').hide();
         } else if (day >= 16) {
           var month = month + 1;
-          message = '<h3>Labor Day ' + month + '/2/' + year + '</h3>';
+          message = '<h3>Labor Day ' + month + '/7/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
         break;
         //september
       case 9:
-        if (day >= 5) {
+        if (day >= 8) {
           $('.holiday-closure').hide();
-        } else if (day <= 4) {
-          message = '<h3>Labor Day ' + month + '/2/' + year + '</h3>';
+        } else if (day <= 7) {
+          message = '<h3>Labor Day ' + month + '/7/' + year + '</h3>';
           $('.holiday-closure p').html(message);
           $('.holiday-closure').show();
         }
