@@ -19,6 +19,11 @@ html {
   }
 }
 
+.newborn-promo {
+  margin: 0 0 1%;
+  text-align: center;
+}
+
 .the-promo,.hp-promo {
   max-width: 1680px;
   margin: 0 auto;
@@ -120,7 +125,7 @@ html {
   max-width: 100%;
 }
 
-#details-promo {
+.details-promo {
   display: none;
   background: #fff;
   width: 700px;
@@ -128,27 +133,27 @@ html {
 }
 
 @media screen and (max-width:767px) {
-  #details-promo {
+  .details-promo {
     width: 95%;
   }
 }
 
-#details-promo .details-container {
+.details-promo .details-container {
   margin: 27px;
   padding: 20px 0;
   background: #fff;
 }
 
-#details-promo .details-container h2 {
+.details-promo .details-container h2 {
   letter-spacing: 1px;
   font-family: gilroy-bold;
 }
 
-#details-promo .details-container p {
+.details-promo .details-container p {
   font-family: gilroy-regular;
 }
 
-#details-promo .details-container .close-fancy {
+.details-promo .details-container .close-fancy {
   display: block;
   text-align: center;
 }
