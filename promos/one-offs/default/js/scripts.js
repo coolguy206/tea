@@ -19,7 +19,7 @@ jQuery(document).ready(function() {
     const url = window.location.pathname;
 
     if (url !== '/') {
-        $('.the-promo').show();
+        // $('.the-promo').show();
     }
 
     $('.the-promo .see-details').fancybox();
@@ -27,9 +27,10 @@ jQuery(document).ready(function() {
     $('.close-fancy').click(function(e) {
         // e.preventDefault();
         $.fancybox.close();
+        $('.fancybox-container').remove();
     });
 
-    $('.promos').bxSlider({
+    $('.promos-wrap').bxSlider({
         auto: true,
         autoHover: true,
         mode: 'fade'

@@ -17,16 +17,16 @@ jQuery(document).ready(function () {
   */
   var url = window.location.pathname;
 
-  if (url !== '/') {
-    $('.the-promo').show();
+  if (url !== '/') {// $('.the-promo').show();
   }
 
   $('.the-promo .see-details').fancybox();
   $('.close-fancy').click(function (e) {
     // e.preventDefault();
     $.fancybox.close();
+    $('.fancybox-container').remove();
   });
-  $('.promos').bxSlider({
+  $('.promos-wrap').bxSlider({
     auto: true,
     autoHover: true,
     mode: 'fade'
