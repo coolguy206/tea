@@ -32,7 +32,6 @@ html {
 
 .promos .the-promo,.promos .hp-promo {
   text-align: center;
-  padding: 1% 0;
 }
 
 @media screen and (max-width:768px) {
@@ -137,6 +136,10 @@ html {
 
 .promos .the-promo.promo1 span.details a,.promos .hp-promo.promo1 span.details a {
   color: #f66d67;
+}
+
+.promos .the-promo.promo2,.promos .hp-promo.promo2,.promos .the-promo.promo3,.promos .hp-promo.promo3 {
+  display: none;
 }
 
 .promos .the-promo.promo2,.promos .hp-promo.promo2 {

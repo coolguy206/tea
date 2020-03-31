@@ -20,16 +20,22 @@ jQuery(document).ready(function () {
   if (url !== '/') {// $('.the-promo').show();
   }
 
-  $('.the-promo .see-details').fancybox();
+  $('.the-promo .see-details').fancybox({
+    helpers: {
+      overlay: null
+    }
+  });
   $('.close-fancy').click(function (e) {
     // e.preventDefault();
     $.fancybox.close();
-    $('.fancybox-container').remove();
   });
   $('.promos-wrap').bxSlider({
     auto: true,
     autoHover: true,
-    mode: 'fade'
+    // mode: 'fade',
+    onSliderLoad: function onSliderLoad() {
+      $('.promos.promo2, .promos.promo3').show();
+    }
   });
 });
 //# sourceMappingURL=scripts.js.map
