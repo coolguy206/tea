@@ -22,11 +22,7 @@ jQuery(document).ready(function() {
         // $('.the-promo').show();
     }
 
-    $('.the-promo .see-details').fancybox({
-        helpers: {
-            overlay: null
-        }
-    });
+    $('.the-promo .see-details').fancybox();
 
     $('.close-fancy').click(function(e) {
         // e.preventDefault();
@@ -34,13 +30,6 @@ jQuery(document).ready(function() {
 
     });
 
-    $('.promos-wrap').bxSlider({
-        auto: true,
-        autoHover: true,
-        // mode: 'fade',
-        onSliderLoad:function(){
-            $('.promos.promo2, .promos.promo3').show();
-        }
-    });
+
 
 });
