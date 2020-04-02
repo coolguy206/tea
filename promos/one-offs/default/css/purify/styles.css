@@ -32,6 +32,7 @@ html {
 
 .promos .the-promo,.promos .hp-promo {
   text-align: center;
+  padding: 1% 0;
 }
 
 @media screen and (max-width:768px) {
@@ -95,13 +96,21 @@ html {
 }
 
 .promos .the-promo span.details,.promos .hp-promo span.details {
-  left: 93.5%;
+  left: 90%;
   position: absolute;
+}
+
+@media screen and (max-width:768px) {
+  .promos .the-promo span.details,  .promos .hp-promo span.details {
+    left: 86%;
+  }
 }
 
 @media screen and (max-width:414px) {
   .promos .the-promo span.details,  .promos .hp-promo span.details {
-    left: 86%;
+    left: 0;
+    position: relative;
+    display: block;
   }
 }
 

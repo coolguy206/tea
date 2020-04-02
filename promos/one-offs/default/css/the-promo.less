@@ -37,7 +37,7 @@
 
         // background: @backgroundColor;
         text-align: center;
-        // padding: 1% 0;
+        padding: 1% 0;
         // display:none;
 
         // .see-details {
@@ -105,11 +105,18 @@
             }
 
             &.details {
-                @media screen and (max-width: 414px) {
+                @media screen and (max-width: 768px) {
                     left: 86%;
                 }
 
-                left: 93.5%;
+                @media screen and (max-width: 414px) {
+                    // left: 78%;
+                    left: 0;
+                    position: relative;
+                    display: block;
+                }
+
+                left: 90%;
                 position: absolute;
 
                 a {
@@ -157,8 +164,9 @@
             }
         }
 
-        &.promo2, &.promo3 {
-            display:none;
+        &.promo2,
+        &.promo3 {
+            display: none;
         }
 
         &.promo2 {

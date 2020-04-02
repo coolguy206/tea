@@ -32,7 +32,7 @@ jQuery(document).ready(function () {
   $('.promos-wrap').bxSlider({
     auto: true,
     autoHover: true,
-    // mode: 'fade',
+    mode: 'fade',
     onSliderLoad: function onSliderLoad() {
       $('.promos.promo2, .promos.promo3').show();
     }
