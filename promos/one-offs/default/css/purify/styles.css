@@ -24,28 +24,28 @@ html {
   text-align: center;
 }
 
-.promos {
+.promos,.promo3 {
   max-width: 1680px;
   margin: 0 auto;
   position: relative;
 }
 
-.promos .the-promo,.promos .hp-promo {
+.the-promo,.hp-promo {
   text-align: center;
   padding: 1% 0;
 }
 
 @media screen and (max-width:768px) {
-  .promos .the-promo,  .promos .hp-promo {
+  .the-promo,  .hp-promo {
     padding: 2% 0;
   }
 }
 
-.promos .the-promo a,.promos .hp-promo a {
+.the-promo a,.hp-promo a {
   text-decoration: none;
 }
 
-.promos .the-promo span,.promos .hp-promo span {
+.the-promo span,.hp-promo span {
   position: relative;
   font-family: gilroy-bold;
   font-size: 12px;
@@ -54,24 +54,24 @@ html {
   text-transform: uppercase;
 }
 
-.promos .the-promo span.span-wrap,.promos .hp-promo span.span-wrap {
+.the-promo span.span-wrap,.hp-promo span.span-wrap {
   left: 0;
 }
 
-.promos .the-promo span.first,.promos .hp-promo span.first {
+.the-promo span.first,.hp-promo span.first {
   left: -1%;
   position: relative;
   font-family: gilroy-bold;
 }
 
 @media screen and (max-width:414px) {
-  .promos .the-promo span.first,  .promos .hp-promo span.first {
+  .the-promo span.first,  .hp-promo span.first {
     left: 0;
     display: block;
   }
 }
 
-.promos .the-promo span.shop-now,.promos .hp-promo span.shop-now {
+.the-promo span.shop-now,.hp-promo span.shop-now {
   left: 1%;
   text-align: center;
   border: none;
@@ -80,12 +80,12 @@ html {
 }
 
 @media screen and (max-width:414px) {
-  .promos .the-promo span.shop-now,  .promos .hp-promo span.shop-now {
+  .the-promo span.shop-now,  .hp-promo span.shop-now {
     left: 0;
   }
 }
 
-.promos .the-promo span.shop-now i,.promos .hp-promo span.shop-now i {
+.the-promo span.shop-now i,.hp-promo span.shop-now i {
   font-size: 12px;
   line-height: 18px;
   letter-spacing: 2px;
@@ -95,26 +95,26 @@ html {
   text-decoration: none;
 }
 
-.promos .the-promo span.details,.promos .hp-promo span.details {
+.the-promo span.details,.hp-promo span.details {
   left: 90%;
   position: absolute;
 }
 
 @media screen and (max-width:768px) {
-  .promos .the-promo span.details,  .promos .hp-promo span.details {
+  .the-promo span.details,  .hp-promo span.details {
     left: 86%;
   }
 }
 
 @media screen and (max-width:414px) {
-  .promos .the-promo span.details,  .promos .hp-promo span.details {
+  .the-promo span.details,  .hp-promo span.details {
     left: 0;
     position: relative;
     display: block;
   }
 }
 
-.promos .the-promo span.details a,.promos .hp-promo span.details a {
+.the-promo span.details a,.hp-promo span.details a {
   font-size: 12px;
   line-height: 18px;
   text-decoration: none;
@@ -123,71 +123,71 @@ html {
   letter-spacing: 0;
 }
 
-.promos .the-promo img,.promos .hp-promo img {
+.the-promo img,.hp-promo img {
   max-width: 100%;
 }
 
-.promos .the-promo.promo1,.promos .hp-promo.promo1 {
+.promo1 {
   background: #c4d2eb;
 }
 
-.promos .the-promo.promo1 span.first,.promos .hp-promo.promo1 span.first {
+.promo1 span.first {
   color: #fff;
 }
 
-.promos .the-promo.promo1 span.second,.promos .hp-promo.promo1 span.second {
+.promo1 span.second {
   color: #f66d67;
 }
 
-.promos .the-promo.promo1 span.shop-now i,.promos .hp-promo.promo1 span.shop-now i {
+.promo1 span.shop-now i {
   color: #f66d67;
 }
 
-.promos .the-promo.promo1 span.details a,.promos .hp-promo.promo1 span.details a {
+.promo1 span.details a {
   color: #f66d67;
 }
 
-.promos .the-promo.promo2,.promos .hp-promo.promo2,.promos .the-promo.promo3,.promos .hp-promo.promo3 {
+.promo2 {
   display: none;
 }
 
-.promos .the-promo.promo2,.promos .hp-promo.promo2 {
+.promo2 {
   background: #f9f2e1;
 }
 
-.promos .the-promo.promo2 span.first,.promos .hp-promo.promo2 span.first {
+.promo2 span.first {
   color: #d26373;
 }
 
-.promos .the-promo.promo2 span.second,.promos .hp-promo.promo2 span.second {
+.promo2 span.second {
   color: #000;
 }
 
-.promos .the-promo.promo2 span.shop-now i,.promos .hp-promo.promo2 span.shop-now i {
+.promo2 span.shop-now i {
   color: #000;
 }
 
-.promos .the-promo.promo2 span.details a,.promos .hp-promo.promo2 span.details a {
+.promo2 span.details a {
   color: #000;
 }
 
-.promos .the-promo.promo3,.promos .hp-promo.promo3 {
+.promo3 {
   background: #fff0f1;
 }
 
-.promos .the-promo.promo3 span.first,.promos .hp-promo.promo3 span.first {
+.promo3 span.first {
   color: #f66d67;
 }
 
-.promos .the-promo.promo3 span.second,.promos .hp-promo.promo3 span.second {
+.promo3 span.second {
   color: #d0a052;
 }
 
-.promos .the-promo.promo3 span.shop-now i,.promos .hp-promo.promo3 span.shop-now i {
+.promo3 span.shop-now i {
   color: #d0a052;
 }
 
-.promos .the-promo.promo3 span.details a,.promos .hp-promo.promo3 span.details a {
+.promo3 span.details a {
   color: #f66d67;
 }
 
