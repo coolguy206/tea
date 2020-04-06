@@ -242,3 +242,15 @@ html {
     transform: translate(-50%, 0);
   }
 }
+
+@-moz-document url-prefix()  {
+  .bx-wrapper .bx-prev,  .bx-wrapper .bx-next {
+    top: 40% !important;
+  }
+
+@media screen and (max-width:414px) {
+    .bx-wrapper .bx-prev,    .bx-wrapper .bx-next {
+      top: 50% !important;
+    }
+}
+}
