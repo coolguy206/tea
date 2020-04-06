@@ -9,8 +9,15 @@
 
     .bx-prev,
     .bx-next {
+        @media screen and (max-width: 414px) {
+            top: 50% !important;
+        }
+
         background-position: 0 0 !important;
         top: 40% !important;
+        background-size:contain !important;
+        width: 15px !important;
+        height: 15px !important;
     }
 
     .bx-prev {
