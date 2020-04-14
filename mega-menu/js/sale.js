@@ -3,50 +3,43 @@ $(document).ready(function() {
         var href = $(this).find('a').first().attr('href');
         // console.log(href);
 
-        var last = href;
-        last = href.replace('view-all', 'last-chance');
-        $('.sale-url').attr('href', last);
 
-        var clearance = href;
-        clearance = clearance.replace('view-all', 'clearance');
-
-        // if (href !== '/sale/newborn-clothing/view-all') {
-
-            switch (href) {
-                case '/girls-clothing/new-arrivals':
-                case '/boys-clothing/new-arrivals':
-                case '/baby-girl-clothes/new-arrivals':
-                case '/baby-boy-clothes/new-arrivals':
-
-                    clearance = clearance.replace('new-arrivals', 'clearance');
-                    clearance = `/sale${clearance}`;
-                    break;
-
-                case '/toddler-girls-clothes/favorites/new-arrivals':
-                case '/toddler-boys-clothes/favorites/new-arrivals':
-                case '/newborn-clothes/favorites/new-arrivals':
-
-                    clearance = clearance.replace('es/favorites/new-arrivals', 'ing/clearance');
-                    clearance = `/sale${clearance}`;
-                    break;
-
-                 case '/tween-girls-clothing/favorites/new-arrivals':
-
-                    clearance = clearance.replace('favorites/new-arrivals', 'clearance');
-                    clearance = `/sale${clearance}`;
-                    break;
-
-                default:
-                    // code block
-            }
+        var promo1 = href;
 
 
-            // console.log(clearance);
-            $('.clearance-url').attr('href', clearance);
-            $('.clearance-url').show();
-        // } else {
-        //     $('.clearance-url').hide();
+        // switch (href) {
+        //     case '/sale/girls-clothing/view-all':
+        //     case '/sale/boys-clothing/view-all':
+        //     case '/sale/baby-girl-clothes/view-all':
+        //     case '/sale/baby-boy-clothes/view-all':
+
+
+        //         promo1 = promo1.replace('/sale', '');
+        //         promo1 = promo1.replace('view-all', 'new-arrivals');
+        //         break;
+
+        //     case '/sale/toddler-girls-clothing/view-all':
+        //     case '/sale/toddler-boys-clothing/view-all':
+        //     case '/sale/newborn-clothing/view-all':
+
+        //         promo1 = promo1.replace('/sale', '');
+        //         promo1 = promo1.replace('ing/view-all', 'es/favorites/new-arrivals');
+        //         break;
+
+
+        //     case '/sale/tween-girls-clothing/view-all':
+
+        //         promo1 = promo1.replace('/sale', '');
+        //         promo1 = promo1.replace('view-all', 'favorites/new-arrivals');
+        //         break;
+
+        //     default:
+        //         // code block
         // }
+
+        // console.log(promo1);
+        $('.promo1-url').attr('href', promo1);
+        $('.promo1-url').show();
 
 
     }, function() {
