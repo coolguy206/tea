@@ -1,16 +1,17 @@
 @import "var.less";
-@c2-first-font-color: #43788B;
-@c2-first-cta-color: #43788B;
-@c2-second-font-color: #EF7570;
-@c2-second-cta-color: #EF7570;
+@c2-first-font-color: #805FA6;
+@c2-first-cta-color: #805FA6;
+@c2-second-font-color: #4A8666;
+@c2-second-cta-color: #4A8666;
 
 .c2 {
     @media screen and (max-width: 414px) {
         flex-wrap: wrap;
+        padding: 0 0 15%;
     }
 
     display: flex;
-    padding: 0;
+    padding: 0 0 .8%;
     text-align: center;
     flex-wrap: wrap;
 
@@ -53,7 +54,7 @@
 
         &.first {
             @media screen and (max-width: 414px) {
-                padding: 5% 5%;
+                padding: 5%;
 
             }
 
@@ -74,26 +75,31 @@
                 }
 
                 h2 {
+                    @media screen and (max-width: 414px) {
+                        width: 70%;
+                        margin: 0 auto;
+                    }
+
                     color: @c2-first-font-color;
                 }
 
 
                 div {
                     @media screen and (max-width: 414px) {
-                        margin: 7% 0 0;
+                        margin: 5.5% 0 0;
                     }
 
-                    margin: 3% 0 0;
+                    margin: 2% 0 0;
 
                     a {
                         color: @c2-first-cta-color;
 
                         &.cta1 {
-                            left: -2%;
+                            // left: -2%;
                         }
 
                         &.cta2 {
-                            left: 2%;
+                            // left: 2%;
                         }
                     }
                 }
@@ -104,7 +110,7 @@
 
         &.second {
             @media screen and (max-width: 414px) {
-                padding: 0 5% 11%;
+                padding: 4.5% 0 0%;
             }
 
             flex-basis: 35%;
@@ -113,7 +119,7 @@
 
             .the-content {
                 @media screen and (max-width: 414px) {
-                    padding: 7% 0 0;
+                    padding: 5% 0 0;
                 }
 
                 padding: 8% 0 0;
@@ -131,10 +137,10 @@
 
                 div {
                     @media screen and (max-width: 414px) {
-                        // margin: 5% 0 0;
+                        margin: 5% 0 0;
                     }
 
-                    margin: 7% 0 0;
+                    margin: 4% 0 0;
 
                     a {
                         color: @c2-second-cta-color;
@@ -146,11 +152,11 @@
                         }
 
                         &.cta1 {
-                            // left: -5%;
+                            left: -5%;
                         }
 
                         &.cta2 {
-                            // left: 5%;
+                            left: 5%;
                         }
 
 

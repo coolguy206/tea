@@ -1,4 +1,5 @@
 @import "var.less";
+@c7-cta-color: #2967B0;
 
 .c7 {
   @media screen and (max-width: 414px) {
@@ -37,7 +38,7 @@
           margin: 9% 0 0;
 
           span {
-            color: #2967B0;
+            color: @c7-cta-color;
 
             .desktop-copy {
               @media screen and (max-width: 414px) {
@@ -56,7 +57,17 @@
       }
     }
 
-    &.first {}
+    &.first {
+      a {
+        .the-content {
+          span {
+            @media screen and (max-width: 414px){
+              letter-spacing: .1em;
+            }
+          }
+        }
+      }
+    }
 
     &.second {}
 
