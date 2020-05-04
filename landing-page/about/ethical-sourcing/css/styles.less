@@ -1,55 +1,112 @@
+.ref {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    opacity: .5;
+}
+
 .desktop {
-	@media screen and (max-width:736px) {
-		display: none;
-	}
+    @media screen and (max-width: 414px) {
+        display: none;
+    }
 }
 
 .mobile {
-	display: none;
-	@media screen and (max-width:736px) {
-		display: block;
-	}
+
+    @media screen and (max-width: 414px) {
+        display: block;
+    }
+
+    display: none;
 }
 
 .wrap-content {
-	img {
-		max-width: 100%;
-	}
+    text-align: center;
 
-	p {
-		font-size: 1rem;
-	}
+    img {
+        max-width: 100%;
 
-	header {
-		height: auto;
-	}
+        &[alt="RE + WEAR"] {
+            margin: 2em 0;
+        }
+    }
 
-	div {
-		&.partners {
-			display: flex;
-			flex-wrap: wrap;
+    p {
+        @media screen and (max-width: 414px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
 
-			div {
-				@media screen and (max-width:414px) {
-					flex-basis: 100%;
-					margin: 0 0 1rem;
-				}
-				flex-basis: 50%;
-			}
+        font-size: 20px;
+        line-height: 30px;
+        letter-spacing: 0.02em;
+        color: #47363D;
+    }
 
-			p {
-				flex-basis: 100%;
-			}
-		}
+    h1,
+    h2,
+        {
+        @media screen and (max-width: 414px) {
+            font-size: 22px;
+            line-height: 28px;
+        }
 
-		&.faq {
-			ul {
-				list-style-type: none;
+        font-family: gilroy-bold;
+        font-size: 34px;
+        line-height: 45px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+        color: #436FC1;
+        margin: 1em 0;
+    }
 
-				li {
-					p {}
-				}
-			}
-		}
-	}
+    h3 {
+        @media screen and (max-width: 414px) {
+            font-size: 18px;
+            line-height: 28px;
+        }
+
+        font-family: gilroy-bold;
+        font-size: 20px;
+        line-height: 50px;
+        letter-spacing: 0.02em;
+        color: #47363D;
+    }
+
+    header {
+        height: auto;
+
+        h1 {}
+    }
+
+    div {
+        &.partners {
+            display: flex;
+            flex-wrap: wrap;
+
+            div {
+                @media screen and (max-width: 414px) {
+                    flex-basis: 100%;
+                    margin: 0 0 1rem;
+                }
+
+                flex-basis: 50%;
+            }
+
+            p {
+                flex-basis: 100%;
+            }
+        }
+
+        &.faq {
+            ul {
+                list-style-type: none;
+
+                li {
+                    p {}
+                }
+            }
+        }
+    }
 }
