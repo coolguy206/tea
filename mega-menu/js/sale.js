@@ -7,7 +7,7 @@ $(document).ready(function() {
         var promo1 = href;
         var promo2 = href;
 
-
+        /*
         switch (href) {
             //sale to new arrivals
             case '/sale/girls-clothing/view-all':
@@ -66,10 +66,11 @@ $(document).ready(function() {
             default:
                 // code block
         }
+        */
 
         // console.log(promo1);
         $('.promo1-url').attr('href', promo1);
-        $('.promo2-url').attr('href', promo2);
+        // $('.promo2-url').attr('href', promo2);
         $('.promo1-url').show();
 
 
