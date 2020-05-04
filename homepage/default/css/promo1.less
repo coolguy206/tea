@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #a6ffd7;
+@promo-cta-color: #065191;
 
 .promo1 {
     @media screen and (max-width: 414px) {
@@ -42,54 +42,7 @@
                 }
 
                 color: @promo-cta-color;
-                margin: 0 0 2%;
-
-                &.cta1 {
-                    // left: -1%;
-                }
-
-                &.cta2 {
-                    // left: 12%;
-                }
-
-                &.cta3 {
-                    // left: 3%;
-                }
-
-                &.cta4 {
-                    // left: 9%;
-                }
-
-                &.cta5 {
-                    // left: 1%;
-                }
-
-                &.cta1,
-                &.cta4,
-                    {
-                    @media screen and (max-width: 414px) {
-                        // left: -3%;
-                    }
-
-                    // left: -3%;
-
-                }
-
-                &.cta3,
-                &.cta5,
-                    {
-                    @media screen and (max-width: 768px) {
-                        // margin: 0 4%;
-                    }
-
-                    @media screen and (max-width: 414px) {
-                        // left: 3%;
-                        // margin: 0;
-                    }
-
-                    // left: 3%;
-
-                }
+                // margin: 0 0 2%;
 
             }
 
@@ -97,39 +50,60 @@
 
         &.desktop.the-content {
             position: absolute;
-            top: 59%;
-            width: 100%;
+            top: 73%;
+            width: 33%;
             text-align: center;
-
-            a {
-                color: #fff;
-                margin: 0 2% 0 0;
-                left: 0;
-            }
-        }
-
-        &.mobile.the-content {
-            top: 53%;
+            left: 50%;
+            transform: translateX(-50%);
 
             div {
-                margin: 0 0 2%;
+                margin: 0 0 5%;
 
                 a {
-                    color: #fff;
+
+                    margin: 0 2% 0 0;
+                    left: 0;
 
                     &.cta1,
                     &.cta4 {
                         left: -3%;
                     }
 
-                    &.cta3 {
+                    &.cta2,
+                    &.cta5 {
                         left: 0;
                     }
 
-                    &.cta2,
-                    &.cta5 {
+                    &.cta3,
+                    &.cta6 {
                         left: 3%;
                     }
+                }
+            }
+
+        }
+
+        &.mobile.the-content {
+            top: 66%;
+
+            div {
+                margin: 0 0 3%;
+
+                a {
+
+                    &.cta1,
+                    &.cta3,
+                    &.cta5 {
+                        left: -3%;
+                    }
+
+                    &.cta2,
+                    &.cta4,
+                    &.cta6 {
+                        left: 3%;
+                    }
+
+
                 }
             }
         }
