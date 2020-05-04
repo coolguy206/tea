@@ -1,6 +1,8 @@
-@backgroundColor: #c4d2eb;
-@fontColor1: #fff;
-@fontColor2: #f66d67;
+@backgroundColor: #538671;
+@fontColor1: #a6ffd7;
+@fontColor2: #ffe96b;
+@fontColor3: #a6ffd7;
+@fontColor4: #f9c1cf;
 
 .header-banner {
     background: @backgroundColor;
@@ -47,24 +49,54 @@
             left: 0;
         }
 
-        &.first {
-            @media screen and (max-width: 414px) {
-                left: 0;
-                display: block;
-            }
-
-            left: -1%;
-            color: @fontColor1;
-            position: relative;
+        &.first,
+        &.second,
+        &.third,
+        &.fourth {
             font-family: gilroy-bold;
+            position: relative;
+
+            a {
+                font-family: gilroy-bold;
+            }
+        }
+
+        &.first {
+            @media screen and (max-width: 414px){
+                display:none;
+            }
+            color: @fontColor1;
+
+
+            a {
+                color: @fontColor1;
+            }
         }
 
         &.second {
-            @media screen and (max-width: 414px) {
-                // display: none;
-            }
-
             color: @fontColor2;
+
+            a {
+                color: @fontColor2;
+            }
+        }
+
+
+
+        &.third {
+            color: @fontColor3;
+
+            a {
+                color: @fontColor3;
+            }
+        }
+
+        &.fourth {
+            color: @fontColor4;
+
+            a {
+                color: @fontColor4;
+            }
         }
 
         &.shop-now {

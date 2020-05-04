@@ -2,13 +2,15 @@
    <!--  <a href="/clothing-sale" class="sale-url">
         <img alt="sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/200314-mega-menu.jpg">
     </a> -->
-    <a href="/clothing-sale" class="promo1-url">
-        <img alt="TAKE AN EXTRA 30% OFF SALE PLUS FREE SHIPPING ON $49+" class="mega-menu-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/sos/2020/0402/v0/200402-mega-menu.jpg">
+    <a href="/new-arrivals" class="promo1-url">
+        <img alt="SHOP 20% OFF EVERYTHING" class="mega-menu-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0411/v0/200411-mega-20.jpg">
     </a>
-    <!-- include "promo2.html" -->
+    <a href="/clothing-sale" class="promo2-url">
+        <img alt="SHOP EXTRA 30% OFF SALE" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0411/v0/200411-mega-30.jpg">
+    </a>
 </div>
 <style>
-.mega-menu-sale-img{width:100%;max-width:100%;padding:5%;box-sizing:border-box}div[data-zone="mega_sale"]{text-align:left;display:block !important}.mega-img-container{display:flex !important}
+.mega-menu-sale-img{width:100%;max-width:100%;padding:0;margin:0 0 0 5%;box-sizing:border-box}div[data-zone="mega_sale"]{text-align:left;display:block !important}.mega-img-container{display:flex !important}
 </style>
 <script>
 $(document).ready(function() {
@@ -18,62 +20,63 @@ $(document).ready(function() {
 
 
         var promo1 = href;
+        var promo2 = href;
 
 
         switch (href) {
             //sale to new arrivals
-            // case '/sale/girls-clothing/view-all':
-            // case '/sale/boys-clothing/view-all':
-            // case '/sale/baby-girl-clothes/view-all':
-            // case '/sale/baby-boy-clothes/view-all':
+            case '/sale/girls-clothing/view-all':
+            case '/sale/boys-clothing/view-all':
+            case '/sale/baby-girl-clothes/view-all':
+            case '/sale/baby-boy-clothes/view-all':
 
 
-            //     promo1 = promo1.replace('/sale', '');
-            //     promo1 = promo1.replace('view-all', 'new-arrivals');
-            //     break;
-
-            // case '/sale/toddler-girls-clothing/view-all':
-            // case '/sale/toddler-boys-clothing/view-all':
-            // case '/sale/newborn-clothing/view-all':
-
-            //     promo1 = promo1.replace('/sale', '');
-            //     promo1 = promo1.replace('ing/view-all', 'es/favorites/new-arrivals');
-            //     break;
-
-
-            // case '/sale/tween-girls-clothing/view-all':
-
-            //     promo1 = promo1.replace('/sale', '');
-            //     promo1 = promo1.replace('view-all', 'favorites/new-arrivals');
-            //     break
-
-            //new arrivals to sale
-            case '/girls-clothing/new-arrivals':
-            case '/boys-clothing/new-arrivals':
-            case '/baby-girl-clothes/new-arrivals':
-            case '/baby-boy-clothes/new-arrivals':
-
-                promo1 = promo1.replace('new-arrivals', '');
-                promo1 = `/sale${promo1}`;
-
+                promo1 = promo1.replace('/sale', '');
+                promo1 = promo1.replace('view-all', 'new-arrivals');
                 break;
 
-            case '/toddler-girls-clothes/favorites/new-arrivals':
-            case '/toddler-boys-clothes/favorites/new-arrivals':
-            case '/newborn-clothes/favorites/new-arrivals':
+            case '/sale/toddler-girls-clothing/view-all':
+            case '/sale/toddler-boys-clothing/view-all':
+            case '/sale/newborn-clothing/view-all':
 
-                promo1 = promo1.replace('es/favorites/new-arrivals', 'ing');
-                promo1 = `/sale${promo1}`;
-
+                promo1 = promo1.replace('/sale', '');
+                promo1 = promo1.replace('ing/view-all', 'es/favorites/new-arrivals');
                 break;
 
 
-            case '/tween-girls-clothing/favorites/new-arrivals':
+            case '/sale/tween-girls-clothing/view-all':
 
-                promo1 = promo1.replace('favorites/new-arrivals', '');
-                promo1 = `/sale${promo1}`;
+                promo1 = promo1.replace('/sale', '');
+                promo1 = promo1.replace('view-all', 'favorites/new-arrivals');
+                break
 
-                break;
+                //new arrivals to sale
+                // case '/girls-clothing/new-arrivals':
+                // case '/boys-clothing/new-arrivals':
+                // case '/baby-girl-clothes/new-arrivals':
+                // case '/baby-boy-clothes/new-arrivals':
+
+                //     promo1 = promo1.replace('new-arrivals', '');
+                //     promo1 = `/sale${promo1}`;
+
+                //     break;
+
+                // case '/toddler-girls-clothes/favorites/new-arrivals':
+                // case '/toddler-boys-clothes/favorites/new-arrivals':
+                // case '/newborn-clothes/favorites/new-arrivals':
+
+                //     promo1 = promo1.replace('es/favorites/new-arrivals', 'ing');
+                //     promo1 = `/sale${promo1}`;
+
+                //     break;
+
+
+                // case '/tween-girls-clothing/favorites/new-arrivals':
+
+                //     promo1 = promo1.replace('favorites/new-arrivals', '');
+                //     promo1 = `/sale${promo1}`;
+
+                //     break;
 
             default:
                 // code block
@@ -81,6 +84,7 @@ $(document).ready(function() {
 
         // console.log(promo1);
         $('.promo1-url').attr('href', promo1);
+        $('.promo2-url').attr('href', promo2);
         $('.promo1-url').show();
 
 
