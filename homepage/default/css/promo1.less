@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #065191;
+@promo-cta-color: #ff8f54;
 
 .promo1 {
     @media screen and (max-width: 414px) {
@@ -49,9 +49,12 @@
         }
 
         &.desktop.the-content {
+            @media screen and (max-width: 768px){
+                top: 55%;
+            }
             position: absolute;
-            top: 73%;
-            width: 33%;
+            top: 64%;
+            width: 50%;
             text-align: center;
             left: 50%;
             transform: translateX(-50%);
@@ -66,17 +69,17 @@
 
                     &.cta1,
                     &.cta4 {
-                        left: -3%;
+                        // left: -3%;
                     }
 
                     &.cta2,
                     &.cta5 {
-                        left: 0;
+                        // left: 0;
                     }
 
                     &.cta3,
                     &.cta6 {
-                        left: 3%;
+                        // left: 3%;
                     }
                 }
             }
@@ -84,7 +87,7 @@
         }
 
         &.mobile.the-content {
-            top: 66%;
+            top: 61.5%;
 
             div {
                 margin: 0 0 3%;
@@ -92,13 +95,12 @@
                 a {
 
                     &.cta1,
-                    &.cta3,
-                    &.cta5 {
+                    &.cta4,
+                        {
                         left: -3%;
                     }
 
                     &.cta2,
-                    &.cta4,
                     &.cta6 {
                         left: 3%;
                     }

@@ -2,12 +2,10 @@
    <!--  <a href="/clothing-sale" class="sale-url">
         <img alt="sale" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0314/v0/200314-mega-menu.jpg">
     </a> -->
-    <a href="/new-arrivals" class="promo1-url">
-        <img alt="friends & family event 30% off" class="mega-menu-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/friends-family/2020/0427/v0/200427-mega-menu-30.jpg">
+    <a href="/select-styles" class="promo1-url">
+        <img alt="The TAKE IT EASY EVENT SHOP 40% OFF TEES & SHORTS" class="mega-menu-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/one-offs/2020/0507/v0/200507-mega-menu.jpg">
     </a>
-    <a href="/pajamas" class="promo2-url">
-        <img alt="friends & family event $20 PJs" class="mega-menu-sale-img" alt="mega menu" src="/mas_assets/media/tea_collection/promos/friends-family/2020/0427/v0/200427-mega-menu-20.jpg">
-    </a>
+    <!-- include "promo2.html" -->
 </div>
 <style>
 .mega-menu-sale-img{width:100%;max-width:100%;padding:0;margin:0 0 0 5%;box-sizing:border-box}div[data-zone="mega_sale"]{text-align:left;display:block !important}.mega-img-container{display:flex !important}
@@ -25,85 +23,108 @@ $(document).ready(function() {
 
         switch (href) {
             //sale to new arrivals
-            case '/sale/girls-clothing/view-all':
-                promo2 = '/girls-pajamas-sleepwear';
-                break;
+            // case '/sale/girls-clothing/view-all':
+            //     promo1 = '/girls-pajamas-sleepwear';
+            //     break;
 
-            case '/sale/boys-clothing/view-all':
-                promo2 = '/boys-pajamas-sleepwear';
-                break;
+            // case '/sale/boys-clothing/view-all':
+            //     promo1 = '/boys-pajamas-sleepwear';
+            //     break;
 
-            case '/sale/baby-girl-clothes/view-all':
-                promo2 = '/baby-girl-pajamas';
-                break;
+            // case '/sale/baby-girl-clothes/view-all':
+            //     promo1 = '/baby-girl-pajamas';
+            //     break;
 
-            case '/sale/baby-boy-clothes/view-all':
-                promo2 = '/baby-boy-pajamas';
-                break;
+            // case '/sale/baby-boy-clothes/view-all':
+            //     promo1 = '/baby-boy-pajamas';
+            //     break;
 
-            case '/sale/toddler-girls-clothing/view-all':
-                promo2 = '/toddler-girls-clothes/pajamas';
-                break;
+            // case '/sale/toddler-girls-clothing/view-all':
+            //     promo1 = '/toddler-girls-clothes/pajamas';
+            //     break;
 
-            case '/sale/toddler-boys-clothing/view-all':
-                promo2 = '/toddler-boys-clothes/pajamas';
-                break;
+            // case '/sale/toddler-boys-clothing/view-all':
+            //     promo1 = '/toddler-boys-clothes/pajamas';
+            //     break;
 
-            case '/sale/newborn-clothing/view-all':
-            case '/sale/tween-girls-clothing/view-all':
-                promo2 = '/pajamas';
-                break;
+            // case '/sale/newborn-clothing/view-all':
+            // case '/sale/tween-girls-clothing/view-all':
+            //     promo1 = '/pajamas';
+            //     break;
 
-                // case '/sale/tween-girls-clothing/view-all':
-                //     promo2 = '';
-                //     break;
+            // case '/sale/tween-girls-clothing/view-all':
+            //     promo2 = '';
+            //     break;
 
-                //new arrivals to view all
+            //new arrivals to view all
             case '/girls-clothing/new-arrivals':
+            case '/sale/girls-clothing/view-all':
+                promo1 = '/girls-clothing/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
+                break;
+
             case '/boys-clothing/new-arrivals':
+            case '/sale/boys-clothing/view-all':
+                promo1 = '/boys-clothing/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
+                break;
+
             case '/baby-girl-clothes/new-arrivals':
+            case '/sale/baby-girl-clothes/view-all':
+                promo1 = '/baby-girl-clothes/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
+                break;
+
             case '/baby-boy-clothes/new-arrivals':
-
-                promo1 = promo1.replace('new-arrivals', 'view-all');
-                // promo1 = `/sale${promo1}`;
-
+            case '/sale/baby-boy-clothes/view-all':
+                promo1 = '/baby-boy-clothes/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/toddler-girls-clothes/favorites/new-arrivals':
-            case '/toddler-boys-clothes/favorites/new-arrivals':
-            case '/newborn-clothes/favorites/new-arrivals':
-            case '/tween-girls-clothing/favorites/new-arrivals':
-
-                promo1 = promo1.replace('favorites/new-arrivals', 'view-all');
-                // promo1 = `/sale${promo1}`;
-
+            case '/sale/toddler-girls-clothing/view-all':
+                promo1 = '/toddler-girls-clothes/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
                 break;
 
-            case '/newborn-clothes/':
-                promo1 = `${promo1}view-all`;
+            case '/toddler-boys-clothes/favorites/new-arrivals':
+            case '/sale/toddler-boys-clothing/view-all':
+                promo1 = '/toddler-boys-clothes/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
+                break;
 
+            case '/newborn-clothes/favorites/new-arrivals':
+            case '/sale/newborn-clothing/view-all':
+                promo1 = '/select-styles';
+                $('.promo1-url, .promo2-url').hide();
+                break;
+            case '/tween-girls-clothing/favorites/new-arrivals':
+            case '/sale/tween-girls-clothing/view-all':
+                promo1 = '/tween-girls-clothing/favorites/limited-time-sale';
+                $('.promo1-url, .promo2-url').show();
+                break;
+
+                // case '/newborn-clothes/':
+                // promo1 = `${promo1}view-all`;
                 // case '/tween-girls-clothing/favorites/new-arrivals':
-
                 //     promo1 = promo1.replace('favorites/new-arrivals', '');
                 //     promo1 = `/sale${promo1}`;
-
                 //     break;
 
-            default:
-                // code block
-        }
+                // default:
+                // code block        }
 
+
+        };
 
         // console.log(promo1);
         $('.promo1-url').attr('href', promo1);
-        $('.promo2-url').attr('href', promo2);
-        $('.promo1-url, .promo2-url').show();
-
+        // $('.promo2-url').attr('href', promo2);
+        // $('.promo1-url, .promo2-url').show();
 
     }, function() {
 
-    })
-
+    });
 
 });
 </script>
