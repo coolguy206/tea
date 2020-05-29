@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #ff8f54;
+@promo-cta-color: #fff;
 
 .promo1 {
     @media screen and (max-width: 414px) {
@@ -9,6 +9,11 @@
     position: relative;
     // background: #DFF6DC;
     // padding: 2% 0;
+
+    video {
+        vertical-align: middle;
+        max-width: 100%;
+    }
 
 
     div {
@@ -31,6 +36,25 @@
             width: 50%;
             text-align: center;
 
+            span {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1vw;
+                }
+                @media screen and (max-width: 414px){
+                    font-size: 4vw;
+                    margin: 0 0 4%;
+                    display:block;
+                }
+
+                color: @promo-cta-color;
+                font-family: gilroy-bold;
+                font-size: 15px;
+                line-height: 28px;
+                letter-spacing: 0.2em;
+                text-transform: uppercase;
+                margin: 0 2% 0 0;
+            }
+
             a {
                 @media screen and (max-width: 768px) {
                     // margin: 0 5% 5%;
@@ -49,18 +73,19 @@
         }
 
         &.desktop.the-content {
-            @media screen and (max-width: 768px){
-                top: 55%;
+            @media screen and (max-width: 768px) {
+                // top: 55%;
             }
+
             position: absolute;
-            top: 64%;
-            width: 50%;
+            top: 87%;
+            width: 100%;
             text-align: center;
-            left: 50%;
-            transform: translateX(-50%);
+            left: 0;
+            // transform: translateX(-50%);
 
             div {
-                margin: 0 0 5%;
+                // margin: 0 0 5%;
 
                 a {
 
@@ -87,7 +112,7 @@
         }
 
         &.mobile.the-content {
-            top: 61.5%;
+            top: 68%;
 
             div {
                 margin: 0 0 3%;
@@ -97,12 +122,12 @@
                     &.cta1,
                     &.cta4,
                         {
-                        left: -3%;
+                        left: -10%;
                     }
 
-                    &.cta2,
-                    &.cta6 {
-                        left: 3%;
+                    &.cta3,
+                    &.cta5 {
+                        left: 10%;
                     }
 
 

@@ -46,37 +46,37 @@ $(document).ready(function() {
             //new arrivals to view all
             case '/girls-clothing/new-arrivals':
             case '/sale/girls-clothing/view-all':
-                promo1 = '/girls-clothing/favorites/limited-time-sale';
+                promo1 = '/girls-swimwear';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/boys-clothing/new-arrivals':
             case '/sale/boys-clothing/view-all':
-                promo1 = '/boys-clothing/favorites/limited-time-sale';
+                promo1 = '/boys-swimwear';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/baby-girl-clothes/new-arrivals':
             case '/sale/baby-girl-clothes/view-all':
-                promo1 = '/baby-girl-clothes/favorites/limited-time-sale';
+                promo1 = '/baby-girl-swimwear';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/baby-boy-clothes/new-arrivals':
             case '/sale/baby-boy-clothes/view-all':
-                promo1 = '/baby-boy-clothes/favorites/limited-time-sale';
+                promo1 = '/baby-boy-swimwear';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/toddler-girls-clothes/favorites/new-arrivals':
             case '/sale/toddler-girls-clothing/view-all':
-                promo1 = '/toddler-girls-clothes/favorites/limited-time-sale';
+                promo1 = '/toddler-girls-clothes/swim';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
             case '/toddler-boys-clothes/favorites/new-arrivals':
             case '/sale/toddler-boys-clothing/view-all':
-                promo1 = '/toddler-boys-clothes/favorites/limited-time-sale';
+                promo1 = '/toddler-boys-clothes/swim';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
@@ -87,7 +87,7 @@ $(document).ready(function() {
                 break;
             case '/tween-girls-clothing/favorites/new-arrivals':
             case '/sale/tween-girls-clothing/view-all':
-                promo1 = '/tween-girls-clothing/favorites/limited-time-sale';
+                promo1 = '/tween-girls-clothing/category/swimwear';
                 $('.promo1-url, .promo2-url').show();
                 break;
 
