@@ -1,104 +1,121 @@
 @import "var.less";
-@c4-first-font-color: #437696;
-@c4-first-cta-color: #437696;
-@c4-second-font-color: #E76558;
-@c4-second-cta-color: #E76558;
+@c4-first-font-color: #EF7570;
+@c4-first-cta-color: #EF7570;
+@c4-second-font-color: #437696;
+@c4-second-cta-color: #437696;
+
 
 .c4 {
-    @media screen and (max-width: 414px) {
-        flex-wrap: wrap;
-        background: none;
-        padding: 5% 0;
-    }
-
     display: flex;
-    padding: 0 0 1.8%;
-    text-align: center;
     flex-wrap: wrap;
-    // background: #FDF5F2;
 
     div {
 
         &.first,
-        &.second,
-        &.third {
-            @media screen and (max-width: 414px){
-                margin: 0 0 15%;
+        &.second {
+            @media screen and (max-width: 414px) {
+                // padding: 11% 5% 0%;
             }
 
+            padding: 3% 2% 0;
+            position: relative;
             text-align: center;
-            padding: 3% 5% 0%;
-            box-sizing: border-box;
+        }
+
+        &.the-content {
+            @media screen and (max-width: 414px) {
+                width: 100%;
+                right: 0;
+                top: 0%;
+            }
+
+            position: relative;
+            top: 0;
+            text-align: center;
+            margin: 5% 0 11%;
+
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.6vw;
+                    line-height: 1.6vw;
+                }
+
+                @media screen and (max-width: 414px) {
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin: 0;
+
+                }
+
+                display: block;
+                width: 100%;
+                margin: 0;
+                font-size: 30px;
+                line-height: 28px;
+                letter-spacing: 0.25em;
+                text-transform: uppercase;
+                font-family: gilroy-bold;
+            }
+
+
+            p,
+            a,
+            span {
+                @media screen and (max-width: 414px) {
+                    color: #fff;
+                }
+
+            }
 
             a {
-                text-decoration: none;
+                span {
+                    @media screen and (max-width: 414px) {
+                        display: none;
+                    }
+                }
             }
 
+            div {
+                @media screen and (max-width: 414px) {
+                    margin: 5% 0 0;
+                }
+
+                margin: 4% 0 0;
+
+            }
+        }
+
+        &.first {
+            @media screen and (max-width: 414px) {
+                padding: 5%;
+            }
+
+            flex-basis: 34%;
+            padding: 2.7% 2% 0;
+
             .the-content {
-                @media screen and (max-width:414px){
-                    padding:0;
-                }
-                padding: 7% 0;
-
+                margin: 8% 0 11%;
 
                 h2 {
-                    @media screen and (max-width: 1679px) {
-                        font-size: 1.6vw;
-                        line-height: 1.6vw;
+                    @media screen and (max-width: 414px) {
+                        width: 95%;
+                        margin: 0 auto;
                     }
 
-                    @media screen and (max-width:414px) {
-                        font-size: 24px;
-                        line-height: 28px;
-                        margin: 8% 0 10%;
-                    }
-
-                    font-family: @gilroyb;
-                    font-size: 30px;
-                    line-height: 28px;
-                    letter-spacing: 0.25em;
-                    text-transform: uppercase;
-                    margin: 7% 0;
-                }
-
-                a,
-                h2 {
-                    margin: 0;
+                    color: @c4-first-font-color;
                 }
 
                 div {
                     @media screen and (max-width: 414px) {
-                        margin: 5% 0 0;
+                        margin: 7% 0 0;
                     }
 
-                    margin: 4% 0 0;
-                }
-            }
-        }
-
-
-        &.first {
-            @media screen and (max-width: 414px) {
-                padding: 0;
-            }
-
-
-
-            .the-content {
-                @media screen and (max-width: 414px) {
-                    // padding: 8.2% 0;
-                }
-
-
-                h2 {
-                    color: @c4-first-font-color;
-                }
-
-
-                div {
+                    margin: 5% 0 0;
 
                     a {
                         color: @c4-first-cta-color;
+
 
                         &.cta1 {
                             // left: -2%;
@@ -108,59 +125,79 @@
                             // left: 2%;
                         }
 
-                        span {
-                            @media screen and (max-width: 414px) {
-                                display: none;
-                            }
-                        }
                     }
                 }
+
             }
-
-
         }
 
         &.second {
             @media screen and (max-width: 414px) {
-                padding: 4.6% 0 0;
+                padding: 0;
             }
 
+            flex-basis: 66%;
+            padding: 2.7% 1.3% 0;
 
             .the-content {
                 @media screen and (max-width: 414px) {
-                    // padding: 8.2% 0;
+                    position: absolute;
+                    top: 4%;
                 }
 
+                margin: 3.5% 0 0;
+
                 h2 {
+                    @media screen and (max-width: 414px) {
+                        color: #F5FF00;
+                    }
+
                     color: @c4-second-font-color;
                 }
 
-
                 div {
-                    @media screen and (max-width: 414px) {
-                        margin: 5% 0 0;
-                    }
+                    margin: 2.5% 0 0;
 
+                    &.mobile {
+                        margin: 6% 0 0;
+
+                        div {
+                            margin: 0 0 6%;
+
+                            a {
+                                color: #F5FF00;
+
+
+                                &.cta1,
+                                &.cta4 {
+                                    left: -8%;
+                                }
+
+                                &.cta3,
+                                &.cta5 {
+                                    left: 8%;
+                                }
+                            }
+                        }
+                    }
 
                     a {
                         color: @c4-second-cta-color;
-
+                        margin: 0 2% 0 0;
 
                         &.cta1 {
-                            // left: -5%;
+                            // left: 0;
+
                         }
-
-                        &.cta2 {
-                            // left: 5%;
-                        }
-
-
                     }
                 }
-            }
 
+
+            }
         }
 
-
     }
+
+
+
 }
