@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #fff;
+@promo-cta-color: #386fb5;
 
 .promo1 {
     @media screen and (max-width: 414px) {
@@ -25,25 +25,28 @@
             }
 
             @media screen and (max-width: 414px) {
-                top: 74%;
+                top: 76.5%;
                 width: 100%;
                 right: 0;
+                left:0;
             }
 
             position: absolute;
-            top: 73%;
-            left: 0;
+            top: 72%;
+            left: 10.5%;
             width: 50%;
             text-align: center;
+
 
             span {
                 @media screen and (max-width: 1679px) {
                     font-size: 1vw;
                 }
-                @media screen and (max-width: 414px){
+
+                @media screen and (max-width: 414px) {
                     font-size: 4vw;
                     margin: 0 0 4%;
-                    display:block;
+                    display: block;
                 }
 
                 color: @promo-cta-color;
@@ -53,6 +56,7 @@
                 letter-spacing: 0.2em;
                 text-transform: uppercase;
                 margin: 0 2% 0 0;
+
             }
 
             a {
@@ -62,11 +66,47 @@
 
                 @media screen and (max-width: 414px) {
                     width: auto;
-                    margin: 0 0 4% !important;
+                    margin: 0 0 6% !important;
                 }
 
                 color: @promo-cta-color;
-                // margin: 0 0 2%;
+                margin: 0 0 2.5%;
+
+                &.cta1 {
+                    @media screen and (max-width: 414px){
+                        left: -8%;
+                    }
+                    left: -4%;
+                }
+
+                &.cta3 {
+                    @media screen and (max-width: 414px){
+                        left: 8%;
+                    }
+                    left: 4%;
+                }
+
+                &.cta4 {
+                    @media screen and (max-width: 414px){
+                        left: -3%;
+                    }
+                    left: -2%;
+                }
+
+                &.cta5 {
+                    @media screen and (max-width: 414px){
+                        left: 5%;
+                    }
+                    left: 2%;
+                }
+
+                span {
+                    @media screen and (max-width: 414px) {
+                        display: none;
+                    }
+
+                    margin:0;
+                }
 
             }
 
