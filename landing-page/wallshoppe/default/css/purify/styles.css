@@ -1,0 +1,30 @@
+@media screen and (max-width:414px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width:414px) {
+  .mobile {
+    display: inline;
+  }
+}
+
+.content-wrap {
+  margin: 0 0 2%;
+  text-align: center;
+}
+
+@media screen and (max-width:414px) {
+  .content-wrap {
+    margin: 0 0 4%;
+  }
+}
+
+.content-wrap img {
+  max-width: 100%;
+}

@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+    $('.main-title').hide();
+    
     var grid1 = [{
             count: 0
         },
