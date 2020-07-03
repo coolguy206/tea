@@ -39,4 +39,13 @@ module.exports = {
     }]
   },
 
+  mega: {
+    files: [{
+      expand: true,
+      cwd: 'mega-menu/js/babel/',
+      src: '*.js',
+      dest: 'mega-menu/js/browserify/'
+    }]
+  },
+
 };

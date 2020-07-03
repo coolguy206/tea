@@ -9,8 +9,8 @@ module.exports = {
 
 
   mega: {
-    files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html'],
-    tasks: ['less:mega', 'includes:mega'],
+    files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html', 'mega-menu/js/*.js'],
+    tasks: ['less:mega', 'babel:mega', 'browserify:mega', 'uglify:mega', 'includes:mega', 'htmlmin:mega'],
   },
 
 

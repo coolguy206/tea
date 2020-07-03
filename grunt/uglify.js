@@ -45,4 +45,13 @@ module.exports = {
     ext: '.min.js',
   },
 
+  mega: {
+    //dynamic files
+    expand: true,
+    cwd: 'mega-menu/js/browserify/',
+    src: ['*.js'],
+    dest: 'mega-menu/js/jsmin/',
+    ext: '.min.js',
+  },
+
 };
