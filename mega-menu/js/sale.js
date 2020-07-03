@@ -7,6 +7,8 @@ import {
 
 $(document).ready(function() {
 
+  $('.menu .swimwear').text('$15 Swim');
+
   $('.dept-girl, .dept-boy, .dept-baby, .dept-sale').hover(function() {
     $('.promo1-url, .promo2-url').show();
   }, function() {
