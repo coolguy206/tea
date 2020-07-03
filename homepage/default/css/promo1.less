@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #386fb5;
+@promo-cta-color:  #b362a4;
 
 .promo1 {
     @media screen and (max-width: 414px) {
@@ -25,17 +25,17 @@
             }
 
             @media screen and (max-width: 414px) {
-                top: 76.5%;
+                top: 72%;
                 width: 100%;
                 right: 0;
                 left:0;
             }
 
             position: absolute;
-            top: 72%;
-            left: 10.5%;
+            top: 80.5%;
             width: 50%;
             text-align: center;
+            left: 0;
 
 
             span {
@@ -73,106 +73,47 @@
                 margin: 0 0 2.5%;
 
                 &.cta1 {
-                    @media screen and (max-width: 414px){
-                        left: -8%;
-                    }
-                    left: -4%;
+                    left: -6%;
                 }
 
-                &.cta3 {
-                    @media screen and (max-width: 414px){
-                        left: 8%;
-                    }
-                    left: 4%;
-                }
-
-                &.cta4 {
-                    @media screen and (max-width: 414px){
-                        left: -3%;
-                    }
+                &.cta2 {
                     left: -2%;
                 }
 
-                &.cta5 {
-                    @media screen and (max-width: 414px){
-                        left: 5%;
-                    }
+                &.cta3 {
                     left: 2%;
                 }
 
+                &.cta4 {
+                    left: 6%;
+                }
+
+                &.cta1, &.cta3 {
+                    @media screen and (max-width: 414px){
+                        left: -1%;
+                    }
+                }
+
+
+                &.cta2, &.cta4 {
+                    @media screen and (max-width: 414px){
+                        left: 5%;
+                    }
+                }
+
+
                 span {
                     @media screen and (max-width: 414px) {
-                        display: none;
+                        // display: none;
                     }
 
                     margin:0;
+                    display:inline;
                 }
 
             }
 
         }
-
-        &.desktop.the-content {
-            @media screen and (max-width: 768px) {
-                // top: 55%;
-            }
-
-            position: absolute;
-            top: 87%;
-            width: 100%;
-            text-align: center;
-            left: 0;
-            // transform: translateX(-50%);
-
-            div {
-                // margin: 0 0 5%;
-
-                a {
-
-                    margin: 0 2% 0 0;
-                    left: 0;
-
-                    &.cta1,
-                    &.cta4 {
-                        // left: -3%;
-                    }
-
-                    &.cta2,
-                    &.cta5 {
-                        // left: 0;
-                    }
-
-                    &.cta3,
-                    &.cta6 {
-                        // left: 3%;
-                    }
-                }
-            }
-
-        }
-
-        &.mobile.the-content {
-            top: 68%;
-
-            div {
-                margin: 0 0 3%;
-
-                a {
-
-                    &.cta1,
-                    &.cta4,
-                        {
-                        left: -10%;
-                    }
-
-                    &.cta3,
-                    &.cta5 {
-                        left: 10%;
-                    }
-
-
-                }
-            }
-        }
+       
     }
 }
