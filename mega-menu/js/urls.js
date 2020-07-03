@@ -1,16 +1,16 @@
 export const urls = {
   promo1: {
-    girl: `/girls-clothing/favorites/limited-time-sale`,
-    boy: `/boys-clothing/favorites/limited-time-sale`,
-    tween: `/tween-girls-clothing/favorites/limited-time-sale`,
+    girl: `/sale/girls-clothing/view-all`,
+    boy: `/sale/boys-clothing/view-all`,
+    tween: `/sale/tween-girls-clothing/view-all`,
     baby: {
-      girl: `/baby-girl-clothes/favorites/limited-time-sale`,
-      boy: `/baby-boy-clothes/favorites/limited-time-sale`,
-      newborn: ``,
+      girl: `/sale/baby-girl-clothes/view-all`,
+      boy: `/sale/baby-boy-clothes/view-all`,
+      newborn: `/sale/newborn-clothing/view-all`,
     },
     toddler: {
-      girl: `/select-styles/toddler-girls-clothes/favorites/limited-time-sale`,
-      boy: `/select-styles/toddler-boys-clothes/favorites/limited-time-sale`,
+      girl: `/sale/toddler-girls-clothing/view-all`,
+      boy: `/sale/toddler-boys-clothing/view-all`,
     },
   },
   promo2: {

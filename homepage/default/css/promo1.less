@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #b362a4;
+@promo-cta-color: #70CDB0;
 @promo-cta1-color: #FD6E42;
 @promo-cta2-color: #FCA025;
 @promo-cta3-color: #F999A5;
@@ -19,18 +19,18 @@
   div {
     &.the-content {
       @media screen and (max-width: 768px) {
-        // top: 10%;
+        top: 55.5%;
       }
       @media screen and (max-width: 414px) {
-        top: 70%;
+        top: 64%;
         width: 100%;
         right: 0;
         left: 0;
         transform: translateX(0);
       }
       position: absolute;
-      top: 80.5%;
-      width: 50%;
+      top: 67.5%;
+      width: 60%;
       text-align: center;
       left: 50%;
       transform: translateX(-50%);
@@ -61,38 +61,55 @@
           width: auto;
           margin: 0 0 6% !important;
         }
-        // color: @promo-cta-color;
+        color: @promo-cta-color;
         margin: 0 0 2.5%;
 
         &:hover {
-          color: #fff;
+          // color: #fff;
         }
 
         &.cta1 {
           @media screen and (max-width: 414px) {
-            left: -3%;
+            left: -10%;
           }
-          left: -2%;
-          background: @promo-cta1-color;
+          left: -6%;
+          // background: @promo-cta-color;
         }
 
         &.cta2 {
           @media screen and (max-width: 414px) {
-            left: 3%;
+            left: 10%;
           }
-          left: 0;
-          background: @promo-cta2-color;
+          left: -4%;
+          // background: @promo-cta-color;
         }
 
         &.cta3 {
           @media screen and (max-width: 414px) {
-            left: 0;
+            left: -4%;
           }
-          left: 2%;
-          background: @promo-cta3-color;
+          left: -1%;
+          // background: @promo-cta-color;
         }
 
         &.cta4 {
+          @media screen and (max-width: 414px) {
+            left: 4%;
+          }
+          left: 1%;
+        }
+
+        &.cta5 {
+          @media screen and (max-width: 414px) {
+            left: 4%;
+          }
+          left: 4%;
+        }
+
+        &.cta6 {
+          @media screen and (max-width: 414px) {
+            left: -8%;
+          }
           left: 6%;
         }
 
