@@ -1,5 +1,6 @@
 @import "var.less";
-@promo-cta-color: #9a7124;
+@promo-cta-color: #fff;
+@promo-cta-background: #5D99A1;
 @promo-swim-cta-color: #ee696d;
 @promo-cta2-color: #FCA025;
 @promo-cta3-color: #F999A5;
@@ -19,18 +20,18 @@
   div {
     &.the-content {
       @media screen and (max-width: 768px) {
-        top: 61.5%;
+        // top: 61.5%;
       }
       @media screen and (max-width: 414px) {
-        top: 72%;
+        top: 62%;
         width: 100%;
         right: 0;
         left: 0;
         transform: translateX(0);
       }
       position: absolute;
-      top: 70.5%;
-      width: 35%;
+      top: 75.5%;
+      width: 81%;
       text-align: center;
       left: 50%;
       transform: translateX(-50%);
@@ -58,10 +59,11 @@
           // margin: 0 5% 5%;
         }
         @media screen and (max-width: 414px) {
-          width: auto;
+          // width: auto;
           // margin: 0 0 1.5% !important;
         }
         color: @promo-cta-color;
+        background: @promo-cta-background;
         margin: 0 0 6.5%;
 
         &:hover {
@@ -70,51 +72,51 @@
 
         &.cta1 {
           @media screen and (max-width: 414px) {
-            left: -6%;
+            left: -3%;
           }
-          left: -5%;
+          left: -7%;
           // background: @promo-cta-color;
         }
 
         &.cta2 {
           @media screen and (max-width: 414px) {
-            left: 0;
+            left: 3%;
           }
-          left: 0;
+          left: -4%;
           // background: @promo-cta-color;
         }
 
         &.cta3 {
           @media screen and (max-width: 414px) {
-            left: 6%;
+            left: -3%;
           }
-          left: 5%;
+          left: -1%;
           // background: @promo-cta-color;
         }
 
         &.cta4 {
           @media screen and (max-width: 414px) {
-            left: -6%;
+            left: 3%;
           }
-          left: -3%;
+          left: 1%;
         }
 
         &.cta5 {
           @media screen and (max-width: 414px) {
-            left: 6%;
+            left: -3%;
           }
-          left: 3%;
+          left: 4%;
         }
 
         &.cta6 {
           @media screen and (max-width: 414px) {
-            left: 0;
+            left: 3%;
           }
-          left: 0;
-          color: @promo-swim-cta-color;
+          left: 7%;
+
 
           span {
-            color: @promo-swim-cta-color;
+
           }
         }
 

@@ -1,5 +1,5 @@
-@promo1Bg: #bef0e4;
-@promo1Color1: #f66478;
+@promo1Bg: #F1B61A;
+@promo1Color1: #fff;
 @promo1Color2: #fffe9f;
 @promo1Color3: #5f8c73;
 @promo2Bg: #f2efe3;
@@ -32,7 +32,7 @@
     }
     // background: @backgroundColor;
     text-align: center;
-    padding: 1% 0;
+    padding: 2% 0;
     // display:none;
     // .see-details {
     //  display: block;
@@ -43,10 +43,16 @@
     }
 
     span {
+      @media screen and (max-width:768px){
+        font-size: 12px;
+        line-height: 18px;
+      }
       position: relative;
       font-family: gilroy-bold;
-      font-size: 12px;
-      line-height: 18px;
+      // font-size: 12px;
+      // line-height: 18px;
+      font-size: 25px;
+      line-height: 30px;
       letter-spacing: 2px;
       text-transform: uppercase;
 
@@ -117,7 +123,10 @@
         position: absolute;
 
         a {
-          font-size: 12px;
+          @media screen and (max-width:768px){
+            font-size: 12px;
+          }
+          font-size: 15px;
           line-height: 18px;
           // color: #fff;
           text-decoration: none;

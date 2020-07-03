@@ -5,7 +5,7 @@ var _switchNewArrivals = require("./switch-new-arrivals.js");
 var _switchSale = require("./switch-sale.js");
 
 $(document).ready(function () {
-  $('.menu .swimwear').text('$15 Swim');
+  // $('.menu .swimwear').text('$15 Swim');
   $('.dept-girl, .dept-boy, .dept-baby, .dept-sale').hover(function () {
     $('.promo1-url, .promo2-url').show();
   }, function () {}); // $('.dept-boy').hover(function() {
