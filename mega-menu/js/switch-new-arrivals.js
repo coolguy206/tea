@@ -58,8 +58,8 @@ export const switchNewArrivals = (href) => {
     case '/newborn-clothes/':
       promo1 = urls.promo1.baby.newborn;
       promo2 = urls.promo2.baby.newborn;
-      $('.promo1-url').show();
-      $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url').show();
+      // $('.promo2-url').hide();
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;

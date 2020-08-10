@@ -63,8 +63,8 @@ var switchSale = function switchSale(href) {
     case '/sale/newborn-clothing/view-all':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo2.baby.newborn;
-      $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url').show(); // $('.promo1-url').hide();
+
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;

@@ -64,8 +64,8 @@ var switchSale = function switchSale(href) {
     case '/sale/newborn-clothing/view-all':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo2.baby.newborn;
-      $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url').show(); // $('.promo1-url').hide();
+
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
@@ -95,17 +95,17 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo1: {
-    girl: "/girls-clothing/favorites/limited-time-sale",
-    boy: "/boys-clothing/favorites/limited-time-sale",
-    tween: "/tween-girls-clothing/favorites/limited-time-sale",
+    girl: "/girls-clothes",
+    boy: "/boys-clothes",
+    tween: "/tween-girls-clothing",
     baby: {
-      girl: "/baby-girl-clothes/favorites/limited-time-sale",
-      boy: "/baby-boy-clothes/favorites/limited-time-sale",
-      newborn: "/newborn-clothes/favorites/new-arrivals"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
+      newborn: "/newborn-clothes"
     },
     toddler: {
-      girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
-      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/view-all",
