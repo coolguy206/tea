@@ -1,7 +1,7 @@
-@promo1Bg: #fcdbe1;
-@promo1Color1: #3d6591;
-@promo1Color2: #fff;
-@promo1Color3: #fff;
+@promo1Bg: #daf0eb;
+@promo1Color1: #3c71e5;
+@promo1Color2: #368d8e;
+@promo1Color3: #ad7bb6;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -42,7 +42,8 @@
       text-decoration: none;
     }
 
-    span {
+    span,
+    span > a {
       @media screen and (max-width:768px) {
         font-size: 12px;
         line-height: 18px;
@@ -65,7 +66,7 @@
           left: 0;
           display: block;
         }
-        left: -1%;
+        // left: -1%;
         // color: @fontColor1;
         position: relative;
         font-family: gilroy-bold;
@@ -146,14 +147,23 @@
 
       span {
         &.first {
+          a {
+            color: @promo1Color1;
+          }
           color: @promo1Color1;
         }
 
         &.second {
+          a {
+            color: @promo1Color2;
+          }
           color: @promo1Color2;
         }
 
         &.third {
+          a {
+            color: @promo1Color3;
+          }
           color: @promo1Color3;
         }
 
