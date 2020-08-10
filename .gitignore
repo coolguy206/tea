@@ -9,6 +9,7 @@
 /**/designs
 **/images
 log/
+api/**/node_modules/**
 node_modules/**
 **/*.DS_Store
 bower_components
