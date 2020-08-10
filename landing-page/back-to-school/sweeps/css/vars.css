@@ -1,0 +1,1 @@
+.mobile{display:none}@media screen and (max-width:414px){.mobile{display:block}}.ref{position:absolute;opacity:.5;top:9%;left:50%;transform:translateX(-50%);max-width:100%}@media screen and (max-width:414px){.ref{top:11.3%;top:5.3%;left:0;transform:translateX(0)}}

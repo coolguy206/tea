@@ -1,59 +1,32 @@
-<div class="wrap-content">
-
-  <div class="c1">
-    <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2019/0812/v2/c1-d.png" class="desktop bg" alt="back to school give away" />
-
-    <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2019/0812/v2/c1-m.png" class="mobile bg" alt="back to school give away" />
-
-    <div>
-      <a href="#view-prizes" class="prizes">see the prizes</a>
-
-      <a class="" href="https://teacollection.typeform.com/to/ygQUFB" data-mode="popup" data-hide-headers="true" data-hide-footer="true" target="_blank">enter to win</a>
-
-      <script>
-        (function() {
-          var qs, js, q, s, d = document,
-            gi = d.getElementById,
-            ce = d.createElement,
-            gt = d.getElementsByTagName,
-            id = "typef_orm_share",
-            b = "https://embed.typeform.com/";
-          if (!gi.call(d, id)) {
-            js = ce.call(d, "script");
-            js.id = id;
-            js.src = b + "embed.js";
-            q = gt.call(d, "script")[0];
-            q.parentNode.insertBefore(js, q)
-          }
-        })()
-      </script>
-    </div>
+<!-- <img class="ref" src="/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2020/0804/v0/bg-m.jpg" /> -->
+<div class="content-wrap">
+  <div class="first">
+    <img src="/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2020/0804/v0/pdps.jpg" alt="products" />
   </div>
-
-  <p class="rules"><a href="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2019/0812/v2/official-rules-btss.pdf" target="_blank">Download Back to School Giveaway<br> Official Rules</a></p>
-
-  <div id="view-prizes">
-    <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2019/0812/v2/prizes-d.jpg" class="desktop" />
-
-    <img src="https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2019/0812/v2/prizes-m.jpg" class="mobile" />
+  <div class="second">
+    <h1><span class="back">Back to School</span> <span class="giveaway">GIVEAWAY</span></h1>
+    <p class="prep">Prep for fall learning with these stylish essentials!</p>
+    <a href="#this-form" class="enter-to-win">enter to win</a>
+    <p>Enter for the chance to win a<br /> <span>$600 prize package</span> that includes:</p>
+    <p>$200 toward children’s clothing from<br /> <a href="/new-arrivals">TEA COLLECTION</a></p>
+    <p>$100 toward children’s shoes from<br class="mobile" /> <a href="https://www.livieandluca.com/" target="_blank">LIVIE & LUCA</a></p>
+    <p>$100 toward books from<br /> <a href="https://www.braveandkindbooks.com/" target="_blank">BRAVE + KIND BOOKSHOP</a></p>
+    <p>$100 toward backpacks from<br class="mobile" /> <a href="https://parklandmfg.com/collections/kids" target="_blank">PARKLAND</a></p>
+    <p>$50 toward notebooks from<br class="mobile" /> <a href="https://clementinekids.com/collections/notebooks" target="_blank">CLEMENTINE KIDS</a></p>
+    <p>$50 toward patches from <a href="https://mokuyobi.com/collections/patches" target="_blank">MOKUYOBI</a></p>
+    <p class="official"><a href="/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2020/0804/v0/2020-bts-giveaway-rules.pdf" target="_blank">OFFICIAL RULES</a></p>
   </div>
-
-
+  <div class="third">
+    <img src="/mas_assets/media/tea_collection/landing-pages/back-to-school/sweeps/2020/0804/v0/logos.jpg" alt="logos" />
+  </div>
 </div>
 
-<!--toolkit -->
+include "form.html"
+
 <style>
   include "../css/styles.css"
 </style>
 
-<script src="https://www.teacollection.com/mas_assets/theme/tea_collection/js/jquery.rwdImageMaps.min.js"></script>
-
-
 <script>
-  $(document).ready(function() {
-    jQuery('img[usemap]').rwdImageMaps();
-
-    $('.c1 .prizes').fancybox();
-
-  });
+  include "../js/jsmin/scripts.min.js"
 </script>

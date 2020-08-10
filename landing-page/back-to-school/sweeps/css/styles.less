@@ -1,14 +1,15 @@
-.ref {
-	position: absolute;
-	opacity: 0.5;
-	//display:none;
+@import 'vars.less';
+@import 'content.less';
+@import 'form.less';
+
+.box-ajax-none {
+	display: none;
 }
 
-.midbox,
-.my-account {
-	h1 {
-		display: none;
-	}
+.site-content .site-content-inner .site-content-bg-wrapper,
+.site-content-inner.container {
+	padding: 0;
+	background: #fff;
 }
 
 #simplemodal-container,
@@ -16,104 +17,3 @@
 .common-wrap {
 	display: none !important;
 }
-
-.padded {
-	padding: 0 !important;
-}
-
-.mobile {
-	@media screen and (max-width:768px) {
-		display: inline-block !important;
-	}
-	display: none !important;
-}
-
-.desktop {
-	@media screen and (max-width:768px) {
-		display: none !important;
-	}
-}
-
-.wrap-content {
-	overflow: hidden;
-
-	img {
-		max-width: 100%;
-	}
-
-	.rules {
-		text-align: center;
-		margin: 20px 0;
-
-		a {
-			text-decoration: none;
-			font-family: brown-pro-bold;
-			text-transform: uppercase;
-			color: #666;
-			font-size: 14px;
-		}
-	}
-
-	.c1 {
-		position: relative;
-
-		div {
-			@media screen and (max-width:768px) {
-				top: 1189px;
-				padding: 0 0 0 126px;
-			}
-			@media screen and (max-width:414px) {
-				top: 651px;
-				padding: 0 0 0 71px;
-			}
-			@media screen and (max-width:376px) {
-				top: 589px;
-				padding: 0 0 0 63px;
-			}
-			@media screen and (max-width:321px) {
-				top: 499px;
-				padding: 0 0 0 53px;
-			}
-			position: absolute;
-			top: 306px;
-			padding: 0 0 0 82px;
-
-			a {
-				@media screen and (max-width: 414px) {
-					font-size: 9px;
-					border-bottom: 1px solid;
-					padding: 0 0 4px;
-					letter-spacing: 3px;
-					margin: 0 43px 0 0;
-				}
-				@media screen and (max-width:321px) {
-					margin: 0 23px 0 0;
-				}
-				color: #fff;
-				font-size: 16px;
-				text-transform: uppercase;
-				text-decoration: none;
-				border-bottom: 2px solid;
-				padding: 0 0 5px;
-				font-family: brown-pro-bold;
-				letter-spacing: 3px;
-				margin: 0 62px 0 0;
-			}
-		}
-	}
-}
-//end of .wrap-content
-
-#view-prizes {
-	@media screen and (max-width:737px) {
-		width: 100%;
-	}
-	clear: both;
-	width: 775px;
-	display: none;
-
-	img {
-		max-width: 100%;
-	}
-}
-//end of #view-prizes div

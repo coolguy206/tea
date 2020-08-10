@@ -1,0 +1,161 @@
+@import 'vars.less';
+
+.content-wrap {
+	display: flex;
+	flex-wrap: wrap;
+
+	div {
+		text-align: center;
+
+		&.first,
+		&.second,
+		&.third {
+			@media screen and (max-width: 414px) {
+				flex-basis: 100% !important;
+			}
+		}
+
+		&.first {
+			@media screen and (max-width: 414px) {
+				order: 2;
+			}
+			flex-basis: 32%;
+			background: #B9DCC6;
+		}
+
+		&.second {
+			@media screen and (max-width: 414px) {
+				order: 1;
+				padding: 3%;
+			}
+			flex-basis: 36%;
+			padding: 1% 0 0;
+
+			h1 {
+				span {
+					@media screen and (max-width:1679px) {
+						font-size: 3.6vw;
+						line-height: 4.5vw;
+					}
+					@media screen and (max-width: 414px) {
+						font-size: 12vw;
+						line-height: 15vw;
+					}
+					font-style: normal;
+					font-size: 60px;
+					line-height: 72px;
+					display: block;
+					// letter-spacing: 0.2em;
+					&.back {
+						font-family: souvenirstd-light;
+						color: @yellow;
+					}
+
+					&.giveaway {
+						font-family: gilroy-bold;
+						color: @green;
+						letter-spacing: 0.2em;
+					}
+				}
+			}
+
+			p {
+				@media screen and (max-width: 1679px) {
+					font-size: 1.1vw;
+					line-height: 1.1vw;
+				}
+				@media screen and (max-width: 414px) {
+					font-size: 3.9vw;
+					line-height: 3.1vw;
+					margin: 0 0 5%;
+				}
+				font-family: gilroy-regular;
+				font-size: 18px;
+				line-height: 21px;
+				color: #FFFFFF;
+				margin: 0 0 3.5%;
+				letter-spacing: 0.04em;
+
+				span {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.1vw;
+						// line-height: 1.1vw;
+					}
+					@media screen and (max-width: 414px) {
+						font-size: 3.9vw;
+					}
+					color: @yellow;
+					font-family: gilroy-bold;
+					font-size: 18px;
+					line-height: 21px;
+					text-decoration: none;
+				}
+
+				&.prep {
+					@media screen and (max-width: 414px) {
+						margin: 11% 0 0;
+					}
+					margin: 7% 0 0;
+				}
+
+				&.official {
+					a {
+						color: @green;
+						font-family: gilroy-bold;
+						letter-spacing: 0.2em;
+						text-decoration: none;
+					}
+				}
+			}
+
+			a {
+				@media screen and (max-width: 1679px) {
+					font-size: 1.1vw;
+					// line-height: 1.1vw;
+				}
+				@media screen and (max-width: 414px) {
+					font-size: 3.9vw;
+				}
+				color: @yellow;
+				font-family: gilroy-bold;
+				font-size: 18px;
+				line-height: 21px;
+				text-decoration: none;
+				letter-spacing: 0.2em;
+
+				&.enter-to-win {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.2vw;
+					}
+					@media screen and (max-width: 414px) {
+						font-size: 4.7vw;
+						margin: 11% 0;
+						padding: 3% 9%;
+					}
+					font-family: gilroy-bold;
+					font-size: 20px;
+					line-height: 24px;
+					letter-spacing: 0.2em;
+					color: @blue;
+					background: @yellow;
+					text-transform: uppercase;
+					padding: 2% 5% 1.5%;
+					margin: 7% 0 8%;
+					display: inline-block;
+				}
+			}
+		}
+
+		&.third {
+			@media screen and (max-width: 414px) {
+				order: 3;
+			}
+			flex-basis: 32%;
+		}
+
+		&.second,
+		&.third {
+			background: @blue;
+		}
+	}
+}
