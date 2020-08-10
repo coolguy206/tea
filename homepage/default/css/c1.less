@@ -1,110 +1,125 @@
-@import "var.less";
-// @import "promo1.less";
-
+@import "var.less"; // @import "promo1.less";
 @c1-font-color: #FFF;
-@c1-cta-color: #F7FAB2;
+@c1-cta-color: #Fff;
 
 .c1 {
-    position: relative;
-    width: 100%;
+  position: relative;
+  width: 100%;
 
+  div {
+    &.the-content {
+      @media screen and (max-width: 414px) {
+        width: 100%;
+        left: 0;
+        top: 12%;
+      }
+      position: absolute;
+      top: 22%;
+      width: 29%;
+      left: 36%;
+      text-align: center;
 
+      a,
+      a,
+      h2,
+      p {
+        color: #fff;
+        font-family: @souv;
+        margin: 0 auto;
+      }
 
-    div {
-        &.the-content {
-            @media screen and (max-width: 414px) {
-                width: 100%;
-                left: 0;
-                top: 55%;
-            }
-
-            position: absolute;
-            top: 24%;
-            width: 29%;
-            right: 8%;
-            text-align: center;
-
-            a,
-            h2,
-            p,
-            a {
-                color: #fff;
-                font-family: @souv;
-                margin: 0 auto;
-            }
-
-
-            h2 {
-                @media screen and (max-width: 1679px) {
-                    font-size: 4.5vw;
-                    line-height: 4.5vw;
-                }
-
-                @media screen and (max-width: 414px) {
-                    font-size: 9vw;
-                    margin:0;
-                    // color: #6DA99D;
-                }
-
-                margin: 5% 0 0;
-                text-transform: none;
-                color: @c1-cta-color;
-                font-size: 74px;
-                line-height: 74px;
-                font-family:@gilroyb;
-
-            }
-
-            p {
-                @media screen and (max-width: 414px) {
-                    display: none;
-                }
-
-                margin: 3% auto 0;
-                text-transform: none;
-                letter-spacing: 0;
-                width: 80%;
-            }
-
-            div {
-                @media screen and (max-width: 414px) {
-                    margin: 8% 0 0;
-
-                }
-
-                margin: 6% 0 0;
-                text-align: center;
-
-                a {
-                    @media screen and (max-width: 414px) {
-                        // color: #6DA99D;
-                    }
-
-                    font-family: @gilroyb;
-                    color: @c1-cta-color;
-
-                    span {
-                        @media screen and (max-width: 414px) {
-                            display: none;
-                        }
-                    }
-
-
-                    &.cta1,
-                    &.cta4 {
-                        left: -10%;
-                    }
-
-                    &.cta3,
-                    &.cta5 {
-                        left: 10%;
-                    }
-
-
-                }
-
-            }
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 2.3vw;
+          line-height: 2.4vw;
         }
+        @media screen and (max-width: 414px) {
+          font-size: 9vw;
+          margin: 0;
+          line-height: 9vw;
+          // color: #6DA99D;
+        }
+        margin: 5% 0 0;
+        text-transform: none;
+        color: @c1-cta-color;
+        font-size: 38px;
+        line-height: 40px;
+        font-family: @gilroyb;
+      }
 
+      p {
+        @media screen and (max-width: 414px) {
+          display: none;
+        }
+        margin: 9% auto 0;
+        text-transform: none;
+        letter-spacing: 0;
+        width: 75%;
+      }
+
+      div {
+        @media screen and (max-width: 414px) {
+          margin: 10% 0 0;
+        }
+        margin: 7% 0 0;
+        text-align: center;
+
+        a {
+          @media screen and (max-width: 414px) {
+            // color: #6DA99D;
+          }
+          font-family: @gilroyb;
+          color: @c1-cta-color;
+
+          span {
+            @media screen and (max-width: 414px) {
+              display: none;
+            }
+          }
+
+          &.cta1 {
+            @media screen and (max-width: 414px) {
+              left: -9%;
+            }
+            left: -3%;
+          }
+
+          &.cta2 {
+            @media screen and (max-width: 414px) {
+              left: 0;
+            }
+            left: 3%;
+          }
+
+          &.cta3 {
+            @media screen and (max-width: 414px) {
+              left: -4%;
+            }
+            left: -3%;
+          }
+
+          &.cta4 {
+            @media screen and (max-width: 414px) {
+              left: 0;
+            }
+            left: 3%;
+          }
+
+          &.cta5 {
+            @media screen and (max-width: 414px) {
+              left: 9%;
+            }
+            left: -3%;
+          }
+
+          &.cta6 {
+            @media screen and (max-width: 414px) {
+              left: 4%;
+            }
+            left: 3%;
+          }
+        }
+      }
     }
+  }
 }

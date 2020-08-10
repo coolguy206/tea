@@ -1,203 +1,186 @@
 @import "var.less";
-@c4-first-font-color: #EF7570;
-@c4-first-cta-color: #EF7570;
-@c4-second-font-color: #437696;
-@c4-second-cta-color: #437696;
-
+@c4-background: #FDF5F2;
+@c4-first-font-color: #8BABD1;
+@c4-first-cta-color: #8BABD1;
+@c4-second-font-color: #F47B6A;
+@c4-second-cta-color: #F47B6A;
 
 .c4 {
-    display: flex;
-    flex-wrap: wrap;
+  @media screen and (max-width: 414px) {
+    padding: 0;
+    background: none;
+  }
+  display: flex;
+  flex-wrap: wrap;
+  background: @c4-background;
 
-    div {
-
-        &.first,
-        &.second {
-            @media screen and (max-width: 414px) {
-                // padding: 11% 5% 0%;
-            }
-
-            padding: 3% 2% 0;
-            position: relative;
-            text-align: center;
-        }
-
-        &.the-content {
-            @media screen and (max-width: 414px) {
-                width: 100%;
-                right: 0;
-                top: 0%;
-            }
-
-            position: relative;
-            top: 0;
-            text-align: center;
-            margin: 5% 0 11%;
-
-
-            h2 {
-                @media screen and (max-width: 1679px) {
-                    font-size: 1.6vw;
-                    line-height: 1.6vw;
-                }
-
-                @media screen and (max-width: 414px) {
-                    font-size: 24px;
-                    line-height: 28px;
-                    margin: 0;
-
-                }
-
-                display: block;
-                width: 100%;
-                margin: 0;
-                font-size: 30px;
-                line-height: 28px;
-                letter-spacing: 0.25em;
-                text-transform: uppercase;
-                font-family: gilroy-bold;
-            }
-
-
-            p,
-            a,
-            span {
-                @media screen and (max-width: 414px) {
-                    color: #fff;
-                }
-
-            }
-
-            a {
-                span {
-                    @media screen and (max-width: 414px) {
-                        display: none;
-                    }
-                }
-            }
-
-            div {
-                @media screen and (max-width: 414px) {
-                    margin: 5% 0 0;
-                }
-
-                margin: 4% 0 0;
-
-            }
-        }
-
-        &.first {
-            @media screen and (max-width: 414px) {
-                padding: 5%;
-            }
-
-            flex-basis: 34%;
-            padding: 2.7% 2% 0;
-
-            .the-content {
-                margin: 8% 0 11%;
-
-                h2 {
-                    @media screen and (max-width: 414px) {
-                        width: 95%;
-                        margin: 0 auto;
-                    }
-
-                    color: @c4-first-font-color;
-                }
-
-                div {
-                    @media screen and (max-width: 414px) {
-                        margin: 7% 0 0;
-                    }
-
-                    margin: 5% 0 0;
-
-                    a {
-                        color: @c4-first-cta-color;
-
-
-                        &.cta1 {
-                            // left: -2%;
-                        }
-
-                        &.cta2 {
-                            // left: 2%;
-                        }
-
-                    }
-                }
-
-            }
-        }
-
-        &.second {
-            @media screen and (max-width: 414px) {
-                padding: 0;
-            }
-
-            flex-basis: 66%;
-            padding: 2.7% 1.3% 0;
-
-            .the-content {
-                @media screen and (max-width: 414px) {
-                    position: absolute;
-                    top: 4%;
-                }
-
-                margin: 3.5% 0 0;
-
-                h2 {
-                    @media screen and (max-width: 414px) {
-                        color: #F5FF00;
-                    }
-
-                    color: @c4-second-font-color;
-                }
-
-                div {
-                    margin: 2.5% 0 0;
-
-                    &.mobile {
-                        margin: 6% 0 0;
-
-                        div {
-                            margin: 0 0 6%;
-
-                            a {
-                                color: #F5FF00;
-
-
-                                &.cta1,
-                                &.cta4 {
-                                    left: -8%;
-                                }
-
-                                &.cta3,
-                                &.cta5 {
-                                    left: 8%;
-                                }
-                            }
-                        }
-                    }
-
-                    a {
-                        color: @c4-second-cta-color;
-                        margin: 0 2% 0 0;
-
-                        &.cta1 {
-                            // left: 0;
-
-                        }
-                    }
-                }
-
-
-            }
-        }
-
+  div {
+    &.first,
+    &.second {
+      @media screen and (max-width: 414px) {
+        // padding: 11% 5% 0%;
+      }
+      padding: 3% 2% 0;
+      position: relative;
+      text-align: center;
+      flex-basis: 50%;
     }
 
+    &.the-content {
+      @media screen and (max-width: 414px) {
+        width: 100%;
+        right: 0;
+        top: 0;
+      }
+      position: relative;
+      top: 0;
+      text-align: center;
+      margin: 5% 0 11%;
 
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.6vw;
+          line-height: 1.6vw;
+        }
+        @media screen and (max-width: 414px) {
+          font-size: 24px;
+          line-height: 28px;
+          margin: 0;
+        }
+        display: block;
+        width: 100%;
+        margin: 0;
+        font-size: 30px;
+        line-height: 28px;
+        letter-spacing: 0.25em;
+        text-transform: uppercase;
+        font-family: gilroy-bold;
+      }
 
+      a,
+      p,
+      span {
+        @media screen and (max-width: 414px) {
+          color: #fff;
+        }
+      }
+
+      a {
+        span {
+          @media screen and (max-width: 414px) {
+            display: none;
+          }
+        }
+      }
+
+      div {
+        @media screen and (max-width: 414px) {
+          margin: 5% 0 0;
+        }
+        margin: 4% 0 0;
+      }
+    }
+
+    &.first {
+      @media screen and (max-width: 414px) {
+        padding: 0 0 12%;
+      }
+      padding: 4.9% 1% 0;
+
+      .the-content {
+        @media screen and (max-width: 414px) {
+          margin: 6.5% 0 0;
+        }
+        margin: 4.2% 0 8.5%;
+
+        h2 {
+          @media screen and (max-width: 414px) {
+            width: 95%;
+            margin: 0 auto;
+          }
+          color: @c4-first-font-color;
+        }
+
+        div {
+          @media screen and (max-width: 414px) {
+            margin: 7% 0 0;
+          }
+          margin: 3.5% 0 0;
+
+          a {
+            color: @c4-first-cta-color;
+
+            &.cta1 {
+              // left: -2%;
+            }
+
+            &.cta2 {
+              // left: 2%;
+            }
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 414px) {
+        padding: 5% 5% 10%;
+        background: @background;
+      }
+      padding: 4.8% 1% 0;
+
+      .the-content {
+        @media screen and (max-width: 414px) {
+          margin: 6% 0 0;
+        }
+        margin: 4.5% 0 0;
+
+        h2 {
+          @media screen and (max-width: 414px) {}
+          color: @c4-second-font-color;
+        }
+
+        div {
+          @media screen and (max-width: 414px) {
+            margin: 9% 0 0;
+          }
+          margin: 3.2% 0 0;
+
+          &.mobile {
+            margin: 6% 0 0;
+
+            div {
+              margin: 0 0 6%;
+
+              a {
+                color: #F5FF00;
+
+                &.cta1,
+                &.cta4 {
+                  left: -8%;
+                }
+
+                &.cta3,
+                &.cta5 {
+                  left: 8%;
+                }
+              }
+            }
+          }
+
+          a {
+            @media screen and (max-width: 414px) {
+              margin: 0;
+            }
+            color: @c4-second-cta-color;
+            margin: 0 2% 0 0;
+
+            &.cta1 {
+              // left: 0;
+            }
+          }
+        }
+      }
+    }
+  }
 }

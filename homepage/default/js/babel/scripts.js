@@ -2,15 +2,19 @@
 
 var addAlt = require('./alt.js');
 
-addAlt('.hp .c1 img', 'two girls');
-addAlt('.hp .c2 .first img', 'three boys');
-addAlt('.hp .c2 .second img', 'two girls');
-addAlt('.hp .c3 img', 'girls in swimwear');
-addAlt('.hp .c4 .first img', 'baby girl');
-addAlt('.hp .c4 .second img', 'two girls in pjs');
-addAlt('.hp .c7 .first img', 'two girls');
-addAlt('.hp .c7 .second img', 'tea gives back 10% of profits to ensure a better world for kids everywhere');
-addAlt('.hp .c7 .third img', 'boy and guitar');
+addAlt('.hp .c1 img', 'three girls');
+addAlt('.hp .c2 .first img', 'baby girl');
+addAlt('.hp .c2 .second img', 'boy and girl');
+addAlt('.hp .c3 .first img', 'baby in romper');
+addAlt('.hp .c3 .second img', 'baby girl');
+addAlt('.hp .c3 .third img', 'baby boy');
+addAlt('.hp .c4 .first img', 'newborn');
+addAlt('.hp .c4 .second img', 'baby in pajamas');
+addAlt('.hp .c5 .first img', 'sneak a peak at sale');
+addAlt('.hp .c5 .second img', 'treasures from seasons past');
+addAlt('.hp .c7 .first img', 'activi-teas for curious kids');
+addAlt('.hp .c7 .second img', 'tea gives back 10% of profits to ensure a better world for kids everywher');
+addAlt('.hp .c7 .third img', 'boy and girl');
 
 var inview = require('./inview.js');
 
