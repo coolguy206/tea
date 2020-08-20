@@ -1,0 +1,15 @@
+<div id="shipping-message">
+	<p>Due to effects of COVID-19 and changes within USPS, there may be slight delays in fulfilling your order. Please bear with us as we all try to adapt to this difficult situation</p>
+</div>
+
+<style>
+	#shipping-message{display:none}#shipping-message p{color:#d94d52;font-family:gilroy-regular;font-size:16px;line-height:24px}
+</style>
+
+<script>
+	$(document).ready(function() {
+	  var a = window.location.pathname,
+	    b = $("#shipping-message");
+	  "/order/shipping-info" == a ? ($('div[data-zone="category_pages"]').before(b), $(b).show()) : 1 == $(".customer-service .title").length && ($(".customer-service .title").before(b), $(b).css("textAlign", "center").show());
+	});
+</script>
