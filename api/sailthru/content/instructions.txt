@@ -1,6 +1,0 @@
-INSTRUCTIONS
-
-TO UPDATE
-1. run get-content.js
-2. edit post-content.js if you want to change the params
-3. run post-content.js
