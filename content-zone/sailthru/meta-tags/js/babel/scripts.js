@@ -3,6 +3,7 @@
 $(document).ready(function () {
   var url = window.location.href;
   var color = url.split('#')[1];
+  color = color.toLowerCase();
   var mpd = $('#the-mpd').text();
   var json = JSON.parse(mpd);
   var imgURL;
