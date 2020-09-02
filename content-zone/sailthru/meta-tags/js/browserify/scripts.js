@@ -3,16 +3,30 @@
 
 $(document).ready(function () {
   var url = window.location.href;
-  var color = url.split('#')[1];
-  color = color.toLowerCase();
+  var color;
+
+  if (url.indexOf('?') !== -1) {
+    color = url.split('?')[0];
+    color = color.split('#')[1];
+    color = color.toLowerCase();
+  } else {
+    color = url.split('#')[1];
+    color = color.toLowerCase();
+  }
+
+  console.log(color);
   var mpd = $('#the-mpd').text();
   var json = JSON.parse(mpd);
+  var gender = $('#the-mpd').attr('data-department').toLowerCase();
+  var category = $('#the-mpd').attr('data-category').toLowerCase();
+  var thePrice;
+  var priceTag;
   var imgURL;
   var sku;
   var sig;
   var price;
   var inventory = Number($('meta[name="inventory"]').attr('content'));
-  var tags = $('meta[name="sailthru.tags"]').attr('content'); // console.log(`inventory: ${inventory}`);
+  var tags = "tea, tea-collection, kids-clothes, children-clothes, kids-clothing, kids-outfits, ".concat(gender, ", ").concat(category); // console.log(`inventory: ${inventory}`);
 
   var api_key = "8379ab7deccf4e4aa16a01990e0f4fa2";
   var secret = "a05b94dd5722b409a097f77b14795d05";
@@ -31,13 +45,31 @@ $(document).ready(function () {
         theSku = theSku[0] + '-' + theSku[1];
         sku = theSku; // console.log(theSku);
 
+        thePrice = val.store_price;
+        thePrice = Number(thePrice.substring(1));
         price = val.store_price;
         price = Number(price.slice(1)) * 100; //console.log(price);
       }
     });
-    var theJSON = "{\"id\": \"".concat(url, "\", \"tags\": \"").concat(tags, "\", \"inventory\": ").concat(inventory, ", \"price\": ").concat(price, ", \"keys\": {\"sku\": \"").concat(sku, "\"}, \"images\":{\"full\": {\"url\": \"").concat(imgURL, "\"}, \"thumb\": {\"url\": \"").concat(imgURL, "\"}}}");
+    console.log(thePrice);
+
+    if (thePrice <= 25) {
+      priceTag = "price-0-25";
+    } else if (thePrice > 25 && thePrice <= 50) {
+      priceTag = "price-25-50";
+    } else if (thePrice > 50 && thePrice <= 75) {
+      priceTag = "price-50-75";
+    } else if (thePrice > 75 && thePrice <= 100) {
+      priceTag = "price-75-100";
+    } else if (thePrice > 100) {
+      priceTag = "price-100+";
+    }
+
+    console.log(priceTag);
+    tags = "".concat(tags, ", ").concat(priceTag);
+    var theJSON = "{\"id\": \"".concat(url, "\", \"tags\": \"").concat(tags, "\", \"inventory\": ").concat(inventory, ", \"price\": ").concat(price, ", \"images\":{\"full\": {\"url\": \"").concat(imgURL, "\"}, \"thumb\": {\"url\": \"").concat(imgURL, "\"}}}");
     sig = md5(secret + api_key + format + theJSON);
-    console.log("\n    api_key: ".concat(api_key, "\n    sig: ").concat(sig, "\n    format: ").concat(format, "\n    \"json\": ").concat(theJSON, "\n    ")); // var settings = {
+    console.log("\n    sig: ".concat(sig, "\n    \"json\": ").concat(theJSON, "\n    ")); // var settings = {
     //   "url": "https://api.sailthru.com/content",
     //   "method": "POST",
     //   "timeout": 0,

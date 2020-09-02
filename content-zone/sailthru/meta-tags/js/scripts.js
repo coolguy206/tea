@@ -1,16 +1,29 @@
 $(document).ready(function() {
   var url = window.location.href;
-  var color = url.split('#')[1];
-  color = color.toLowerCase();
+  var color;
+  if (url.indexOf('?') !== -1) {
+    color = url.split('?')[0];
+    color = color.split('#')[1];
+    color = color.toLowerCase();
+  } else {
+    color = url.split('#')[1];
+    color = color.toLowerCase();
+  }
+  console.log(color);
+
 
   var mpd = $('#the-mpd').text();
   var json = JSON.parse(mpd);
+  var gender = $('#the-mpd').attr('data-department').toLowerCase();
+  var category = $('#the-mpd').attr('data-category').toLowerCase();
+  var thePrice;
+  var priceTag;
   var imgURL;
   var sku;
   var sig;
   var price;
   var inventory = Number($('meta[name="inventory"]').attr('content'));
-  var tags = $('meta[name="sailthru.tags"]').attr('content');
+  var tags = `tea, tea-collection, kids-clothes, children-clothes, kids-clothing, kids-outfits, ${gender}, ${category}`;
   // console.log(`inventory: ${inventory}`);
 
   var api_key = `8379ab7deccf4e4aa16a01990e0f4fa2`;
@@ -35,20 +48,39 @@ $(document).ready(function() {
         sku = theSku;
         // console.log(theSku);
 
+        thePrice = val.store_price;
+        thePrice = Number(thePrice.substring(1));
+
         price = val.store_price;
         price = Number(price.slice(1)) * 100;
+
         //console.log(price);
       }
     });
 
-    var theJSON = `{"id": "${url}", "tags": "${tags}", "inventory": ${inventory}, "price": ${price}, "keys": {"sku": "${sku}"}, "images":{"full": {"url": "${imgURL}"}, "thumb": {"url": "${imgURL}"}}}`;
+
+    console.log(thePrice);
+    if (thePrice <= 25) {
+      priceTag = `price-0-25`;
+    } else if (thePrice > 25 && thePrice <= 50) {
+      priceTag = `price-25-50`;
+    } else if (thePrice > 50 && thePrice <= 75) {
+      priceTag = `price-50-75`;
+    } else if (thePrice > 75 && thePrice <= 100) {
+      priceTag = `price-75-100`;
+    } else if (thePrice > 100) {
+      priceTag = `price-100+`
+    }
+    console.log(priceTag);
+
+    tags = `${tags}, ${priceTag}`
+
+    var theJSON = `{"id": "${url}", "tags": "${tags}", "inventory": ${inventory}, "price": ${price}, "images":{"full": {"url": "${imgURL}"}, "thumb": {"url": "${imgURL}"}}}`;
     sig = md5(secret + api_key + format + theJSON);
 
 
     console.log(`
-    api_key: ${api_key}
     sig: ${sig}
-    format: ${format}
     "json": ${theJSON}
     `);
 
