@@ -6,7 +6,7 @@ $(document).ready(function () {
   var color;
 
   if (url.indexOf('?') !== -1) {
-    color = url.split('?')[0];
+    color = url.split('?')[1];
     color = color.split('#')[1];
     color = color.toLowerCase();
   } else {
