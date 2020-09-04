@@ -11,13 +11,16 @@ $(document).ready(function () {
   } else {
     color = url.split('#')[1];
     color = color.toLowerCase();
-  }
+  } // color = $('.pdp-item-details-attributes dt .selected-value').text().toLowerCase();
 
-  console.log(color);
+
+  console.log("color: ".concat(color));
   var mpd = $('#the-mpd').text();
   var json = JSON.parse(mpd);
   var gender = $('#the-mpd').attr('data-department').toLowerCase();
   var category = $('#the-mpd').attr('data-category').toLowerCase();
+  var colorTag = $('#the-mpd').attr('data-color').toLowerCase();
+  var colorName;
   var thePrice;
   var priceTag;
   var imgURL;
@@ -25,20 +28,27 @@ $(document).ready(function () {
   var sig;
   var price;
   var inventory = Number($('meta[name="inventory"]').attr('content'));
-  var tags = "tea, tea-collection, kids-clothes, children-clothes, kids-clothing, kids-outfits, ".concat(gender, ", ").concat(category); // console.log(`inventory: ${inventory}`);
+  var tags = "".concat(gender, ", ").concat(category);
+
+  if (colorTag !== "") {
+    tags = "".concat(tags, ", ").concat(colorTag);
+  } // console.log(`inventory: ${inventory}`);
+
 
   var api_key = "8379ab7deccf4e4aa16a01990e0f4fa2";
   var secret = "a05b94dd5722b409a097f77b14795d05";
   var format = "json";
 
   if (color !== undefined) {
+    // if (url.indexOf('#') !== -1) {
     color = color.replace(/%20/g, " ");
     $.each(json.parent_data, function (i, val) {
       var thisColor = val.color;
       thisColor = thisColor.toLowerCase();
 
-      if (color == thisColor) {
+      if (thisColor.indexOf(color) !== -1) {
         imgURL = val.large_image_url;
+        colorName = thisColor;
         var theSku = val.sku;
         theSku = theSku.split('-');
         theSku = theSku[0] + '-' + theSku[1];
@@ -50,7 +60,7 @@ $(document).ready(function () {
         price = Number(price.slice(1)) * 100; //console.log(price);
       }
     });
-    console.log(thePrice);
+    console.log("thePrice: ".concat(thePrice));
 
     if (thePrice <= 25) {
       priceTag = "price-0-25";
@@ -64,8 +74,8 @@ $(document).ready(function () {
       priceTag = "price-100+";
     }
 
-    console.log(priceTag);
-    tags = "".concat(tags, ", ").concat(priceTag);
+    console.log("priceTag: ".concat(priceTag));
+    tags = "".concat(tags, ", ").concat(colorName, ", ").concat(priceTag);
     var theJSON = "{\"id\": \"".concat(url, "\", \"tags\": \"").concat(tags, "\", \"inventory\": ").concat(inventory, ", \"price\": ").concat(price, ", \"images\":{\"full\": {\"url\": \"").concat(imgURL, "\"}, \"thumb\": {\"url\": \"").concat(imgURL, "\"}}}");
     sig = md5(secret + api_key + format + theJSON);
     console.log("\n    sig: ".concat(sig, "\n    \"json\": ").concat(theJSON, "\n    ")); // var settings = {
