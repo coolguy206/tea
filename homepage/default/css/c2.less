@@ -1,8 +1,10 @@
 @import "var.less";
-@c2-first-font-color: #F598A2;
-@c2-first-cta-color: #F598A2;
-@c2-second-font-color: #74AC92;
-@c2-second-cta-color: #74AC92;
+@c2-first-font-color: #8BABD1;
+@c2-first-cta-color: #8BABD1;
+@c2-second-font-color: #F47C6B;
+@c2-second-cta-color: #F47C6B;
+@c2-third-font-color: #D5AC35;
+@c2-third-cta-color: #D5AC35;
 
 .c2 {
   @media screen and (max-width: 414px) {
@@ -19,15 +21,24 @@
     &.first,
     &.second,
     &.third {
+      @media screen and (max-width:414px) {
+        padding: 5% 5% 0;
+      }
       text-align: center;
-      padding: 0 1.5%;
+      padding: 2.5% 1% 0;
       box-sizing: border-box;
+      flex-basis: 33%;
 
       a {
         text-decoration: none;
       }
 
       .the-content {
+        @media screen and (max-width:414px) {
+          margin: 9% 0;
+        }
+        margin: 7% 0 0;
+
         h2 {
           @media screen and (max-width: 1679px) {
             font-size: 1.6vw;
@@ -36,17 +47,27 @@
           @media screen and (max-width:414px) {
             font-size: 24px;
             line-height: 28px;
-            margin: 8% 0 10%;
+            // margin: 8% 0 10%;
+            margin: 0;
           }
           font-family: @gilroyb;
           font-size: 30px;
           line-height: 28px;
           letter-spacing: 0.25em;
           text-transform: uppercase;
-          margin: 7% 0;
+        }
+
+        a,
+        h2 {
+          margin: 0;
         }
 
         div {
+          @media screen and (max-width:414px) {
+            margin: 8% 0;
+          }
+          margin: 4% 0 0;
+
           a {
             span {
               @media screen and (max-width: 414px) {
@@ -59,43 +80,21 @@
     }
 
     &.first {
-      @media screen and (max-width: 414px) {
-        padding: 5%;
-      }
-      flex-basis: 33%;
-      padding: 2.5% 1% 0;
-
+      // flex-basis: 33%;
+      // padding: 2.5% 1% 0;
       .the-content {
-        @media screen and (max-width: 414px) {
-          padding: 8% 0;
-          width: 100%;
-        }
-        padding: 7% 0 0;
-
-        a,
+        // padding: 7% 0 0;
         h2 {
-          margin: 0;
-        }
-
-        h2 {
-          @media screen and (max-width: 414px) {
-            width: 100%;
-            margin: 0 auto;
-          }
           color: @c2-first-font-color;
         }
 
         div {
-          @media screen and (max-width: 414px) {
-            margin: 9% 0 0;
-          }
-          margin: 5% 0 0;
-
+          // margin: 5% 0 0;
           a {
             color: @c2-first-cta-color;
 
             &.cta1 {
-              left: -5%;
+              // left: -5%;
             }
 
             &.cta2 {
@@ -112,36 +111,20 @@
 
     &.second {
       @media screen and (max-width: 414px) {
-        padding: 6% 0 0;
-        position: relative;
+        padding: 0;
+        margin: 2% 0 0;
+        background: #fff;
       }
-      flex-basis: 67%;
-      padding: 2.6% 1% 0;
-
+      // flex-basis: 33%;
+      // padding: 2.6% 1% 0;
       .the-content {
-        @media screen and (max-width: 414px) {
-          padding: 0;
-          position: absolute;
-          top: 11.5%;
-          width: 100%;
-        }
-        padding: 3% 0 0;
-
-        a,
-        h2 {
-          margin: 0;
-        }
-
+        // padding: 3% 0 0;
         h2 {
           color: @c2-second-font-color;
         }
 
         div {
-          @media screen and (max-width: 414px) {
-            margin: 7.5% 0 0;
-          }
-          margin: 3% 0 0;
-
+          // margin: 3% 0 0;
           a {
             color: @c2-second-cta-color;
 
@@ -153,9 +136,9 @@
 
             &.cta1 {
               @media screen and (max-width: 414px) {
-                left: -3%;
+                // left: -3%;
               }
-              left: -1%;
+              // left: -1%;
             }
 
             &.cta2 {
@@ -163,6 +146,30 @@
                 left: 3%;
               }
               left: 1%;
+            }
+          }
+        }
+      }
+    }
+
+    &.third {
+      // padding: 1.7% 1% 0;
+      // flex-basis: 33%;
+      .the-content {
+        h2 {
+          color: @c2-third-font-color;
+        }
+
+        div {
+          a {
+            color: @c2-third-cta-color;
+
+            &.cta1 {
+              // left: -5%;
+            }
+
+            &.cta2 {
+              // left: 5%;
             }
           }
         }

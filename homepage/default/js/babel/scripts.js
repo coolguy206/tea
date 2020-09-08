@@ -2,19 +2,19 @@
 
 var addAlt = require('./alt.js');
 
-addAlt('.hp .c1 img', 'three girls');
-addAlt('.hp .c2 .first img', 'baby girl');
-addAlt('.hp .c2 .second img', 'boy and girl');
-addAlt('.hp .c3 .first img', 'baby in romper');
-addAlt('.hp .c3 .second img', 'baby girl');
-addAlt('.hp .c3 .third img', 'baby boy');
-addAlt('.hp .c4 .first img', 'newborn');
-addAlt('.hp .c4 .second img', 'baby in pajamas');
+addAlt('.hp .c1 img', 'girl in pink dress');
+addAlt('.hp .c2 .first img', 'baby girl in stripe ddress');
+addAlt('.hp .c2 .second img', 'baby in green romper');
+addAlt('.hp .c2 .third img', 'baby boy in camo pants');
+addAlt('.hp .c3 .first img', 'boy in light blue shirt');
+addAlt('.hp .c3 .second img', 'girls in pattern dresses');
+addAlt('.hp .c4 .first img', 'newborn in yellow onesies');
+addAlt('.hp .c4 .second img', 'baby blue pajamas');
 addAlt('.hp .c5 .first img', 'sneak a peak at sale');
 addAlt('.hp .c5 .second img', 'treasures from seasons past');
-addAlt('.hp .c7 .first img', 'activi-teas for curious kids');
+addAlt('.hp .c7 .first img', 'lama eating grass');
 addAlt('.hp .c7 .second img', 'tea gives back 10% of profits to ensure a better world for kids everywher');
-addAlt('.hp .c7 .third img', 'boy and girl');
+addAlt('.hp .c7 .third img', 'girls in pink dress');
 
 var inview = require('./inview.js');
 

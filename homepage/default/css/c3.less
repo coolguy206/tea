@@ -1,15 +1,15 @@
 @import "var.less";
-@c3-first-font-color: #F47C6B;
-@c3-first-cta-color: #F47C6B;
-@c3-second-font-color: #8BABD1;
-@c3-second-cta-color: #8BABD1;
+@c3-first-font-color: #74AC92;
+@c3-first-cta-color: #74AC92;
+@c3-second-font-color: #F598A2;
+@c3-second-cta-color: #F598A2;
 @c3-third-font-color: #D5AC35;
 @c3-third-cta-color: #D5AC35;
 
 .c3 {
   @media screen and (max-width: 414px) {
     flex-wrap: wrap;
-    background: none;
+    background: @background;
     padding: 0;
   }
   display: flex;
@@ -24,13 +24,17 @@
       text-align: center;
       box-sizing: border-box;
       flex-basis: 33%;
+      padding: 1.7% 1% 0;
 
       a {
         text-decoration: none;
       }
 
       .the-content {
-        padding: 7% 0;
+        @media screen and (max-width: 414px) {
+          margin: 8% 0 !important;
+        }
+        margin: 3% 0;
 
         h2 {
           @media screen and (max-width: 1679px) {
@@ -40,14 +44,12 @@
           @media screen and (max-width:414px) {
             font-size: 24px;
             line-height: 28px;
-            margin: 8% 0 10%;
           }
           font-family: @gilroyb;
           font-size: 30px;
           line-height: 28px;
           letter-spacing: 0.25em;
           text-transform: uppercase;
-          margin: 7% 0;
         }
 
         a,
@@ -57,41 +59,11 @@
 
         div {
           @media screen and (max-width: 414px) {
-            margin: 7% 0 0;
+            margin: 4% 0 0 !important;
           }
-          margin: 4% 0 0;
-        }
-      }
-    }
+          margin: 2.5% 0 0;
 
-    &.first {
-      @media screen and (max-width: 414px) {
-        padding: 5%;
-        background: #FDF5F2;
-      }
-      padding: 1.7% 1% 0;
-
-      .the-content {
-        @media screen and (max-width: 414px) {
-          padding: 8.2% 0;
-        }
-
-        h2 {
-          color: @c3-first-font-color;
-        }
-
-        div {
           a {
-            color: @c3-first-cta-color;
-
-            &.cta1 {
-              // left: -2%;
-            }
-
-            &.cta2 {
-              // left: 2%;
-            }
-
             span {
               @media screen and (max-width: 414px) {
                 display: none;
@@ -102,36 +74,90 @@
       }
     }
 
-    &.second {
+    &.first {
       @media screen and (max-width: 414px) {
-        padding: 0;
-        margin: 0 0 3%;
+        padding: 1% 0 0;
+        // background: #FDF5F2;
+        position: relative;
       }
-      padding: 1.7% 1% 0;
+      // padding: 1.7% 1% 0;
+      flex-basis: 67%;
 
       .the-content {
         @media screen and (max-width: 414px) {
-          padding: 8.2% 0;
+          position: absolute;
+          top: 1.5%;
+          padding: 0;
+          margin: 0;
         }
 
         h2 {
+          @media screen and (max-width: 414px) {
+            color: #fff;
+            width: 65%;
+            margin: 0 auto;
+          }
+          color: @c3-first-font-color;
+        }
+
+        div {
+          a {
+            @media screen and (max-width: 414px) {
+              color: #fff;
+            }
+            color: @c3-first-cta-color;
+
+            &.cta1 {
+              @media screen and (max-width:414px) {
+                left: -4%;
+              }
+              left: -2%;
+            }
+
+            &.cta2 {
+              @media screen and (max-width:414px) {
+                left: 4%;
+              }
+              left: 2%;
+            }
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 414px) {
+        padding: 5%;
+      }
+      // padding: 1.7% 1% 0;
+      .the-content {
+        @media screen and (max-width: 414px) {}
+        margin: 6% 0 0;
+
+        h2 {
+          @media screen and (max-width:414px) {
+            font-size: 20px;
+          }
           color: @c3-second-font-color;
         }
 
         div {
-          @media screen and (max-width: 414px) {
-            margin: 5% 0 0;
-          }
+          @media screen and (max-width: 414px) {}
+          margin: 6% 0 0;
 
           a {
             color: @c3-second-cta-color;
 
             &.cta1 {
-              // left: -5%;
+              left: -7%;
             }
 
             &.cta2 {
-              // left: 5%;
+              left: 0;
+            }
+
+            &.cta3 {
+              left: 7%;
             }
           }
         }
@@ -143,8 +169,7 @@
         padding: 5%;
         background: @background;
       }
-      padding: 1.7% 1% 0;
-
+      // padding: 1.7% 1% 0;
       .the-content {
         @media screen and (max-width: 414px) {
           padding: 8.2% 0;

@@ -20,10 +20,11 @@
     &.second,
     &.third {
       @media screen and (max-width: 414px) {
-        margin: 0 0 15%;
+        padding: 0;
+        margin: 0 0 12%;
       }
       text-align: center;
-      padding: 3% 5% 0;
+      padding: 2.4% 1% 0;
       box-sizing: border-box;
 
       a {
@@ -64,20 +65,22 @@
             margin: 3% 0 0;
           }
           margin: 4% 0 0;
+
+          a {
+            span {
+              @media screen and (max-width: 414px) {
+                display: none;
+              }
+            }
+          }
         }
       }
     }
 
     &.first {
-      @media screen and (max-width: 414px) {
-        padding: 0;
-        margin: 0 0 10%;
-      }
-      padding: 2.4% 1% 0;
-
       .the-content {
         @media screen and (max-width: 414px) {
-          padding: 0;
+          // padding: 0;
         }
         padding: 0.6% 0 0;
 
@@ -96,24 +99,12 @@
             &.cta2 {
               // left: 2%;
             }
-
-            span {
-              @media screen and (max-width: 414px) {
-                display: none;
-              }
-            }
           }
         }
       }
     }
 
     &.second {
-      @media screen and (max-width: 414px) {
-        padding: 4.6% 0 0;
-        margin: 0 0 10%;
-      }
-      padding: 2.5% 1% 0;
-
       .the-content {
         @media screen and (max-width: 414px) {
           // padding: 8.2% 0;
@@ -126,7 +117,7 @@
 
         div {
           @media screen and (max-width: 414px) {
-            margin: 5% 0 0;
+            // margin: 5% 0 0;
           }
 
           a {
