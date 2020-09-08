@@ -12,7 +12,7 @@ html {
 
 .promos .hp-promo,.promos .the-promo {
   text-align: center;
-  padding: 2% 0;
+  padding: .8% 0;
 }
 
 @media screen and (max-width:768px) {
@@ -24,9 +24,9 @@ html {
 .promos .hp-promo span,.promos .the-promo span {
   position: relative;
   font-family: gilroy-bold;
-  font-size: 25px;
-  line-height: 30px;
-  letter-spacing: 2px;
+  font-size: 16px;
+  line-height: 24px;
+  letter-spacing: .2em;
   text-transform: uppercase;
 }
 
@@ -87,11 +87,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #daf0eb;
+  background: #F9EBE5;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #3c71e5;
+  color: #47363D;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {

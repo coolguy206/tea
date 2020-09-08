@@ -13,13 +13,10 @@ jQuery(document).ready(function () {
       } else {
           $('.the-promo').show();
       }
-      
-  */
-  var url = window.location.pathname;
+    */
+  var url = window.location.pathname; // if (url !== '/') {
 
-  if (url !== '/') {
-    $('.promos').show();
-  }
+  $('.promos').show(); // }
 
   $('.the-promo .see-details').fancybox({
     helpers: {
