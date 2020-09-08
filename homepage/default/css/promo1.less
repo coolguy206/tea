@@ -1,6 +1,6 @@
 @import "var.less";
-@promo-cta-color: #A86DAD;
-@promo-cta-background: #EB9071;
+@promo-cta-color: #fff;
+@promo-cta-background: #FFA91E;
 @promo-swim-cta-color: #ee696d;
 @promo-cta2-color: #FCA025;
 @promo-cta3-color: #F999A5;
@@ -20,18 +20,18 @@
   div {
     &.the-content {
       @media screen and (max-width: 768px) {
-        top: 75%;
+        top: 67%;
       }
       @media screen and (max-width: 414px) {
-        top: 77%;
-        width: 100%;
-        right: 0;
-        left: 0;
-        transform: translateX(0);
+        top: 68%;
+        width: 57%;
+        // right: 0;
+        // left: 0;
+        // transform: translateX(0);
       }
       position: absolute;
-      top: 82.5%;
-      width: 58%;
+      top: 67%;
+      width: 16%;
       text-align: center;
       left: 50%;
       transform: translateX(-50%);
@@ -56,15 +56,19 @@
 
       a {
         @media screen and (max-width: 768px) {
-          // margin: 0 5% 5%;
+          padding: 3% 0;
         }
         @media screen and (max-width: 414px) {
           // width: auto;
-          margin: 0 0 7%;
+          margin: 0 0 8%;
+          padding: 6% 0;
+          font-size: 3vw;
         }
         color: @promo-cta-color;
-        // background: @promo-cta-background;
-        margin: 0 0 4.5%;
+        background: @promo-cta-background;
+        margin: 0 0 8.5%;
+        width: 100%;
+        padding: 6% 0;
 
         &:hover {
           // color: #fff;
@@ -72,14 +76,14 @@
 
         &.cta1 {
           @media screen and (max-width: 414px) {
-            left: -2%;
+            // left: -2%;
           }
-          left: -2.5%;
+          left: 0;
         }
 
         &.cta2 {
           @media screen and (max-width: 414px) {
-            left: 4%;
+            // left: 4%;
           }
           left: 0;
         }
@@ -88,7 +92,7 @@
           @media screen and (max-width: 414px) {
             left: 0;
           }
-          left: 2.5%;
+          left: 0;
         }
 
         &.cta4 {

@@ -1,0 +1,10 @@
+<h3><span class="fas fa-chevron-left"></span> Baby Boy <span class="fas fa-chevron-right"></span></h3>
+<div class="links">
+	<ul>
+		<li>Shop by Category</li>
+		<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mobile mega menu sale baby boy" >View All</a></li>
+		{sub_cats name="cat" category="sale/baby-boy-clothes"}
+			<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu sale baby boy" >{$cat.title}</a></li>
+		{/sub_cats}
+	</ul>
+</div>

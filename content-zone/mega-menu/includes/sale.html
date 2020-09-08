@@ -1,36 +1,42 @@
 <div class="site-nav-submenu sale">
 	<div class="bar">
-		<div>
-			<a href="/sale/girls-clothing/view-all" data="mega menu sale girl">Girl</a>
-			<span class="line"></span>
-			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
-					{assign var=i value=0}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
-							<li><a href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu sale girl view all" >View All</a></li>
-							{sub_cats name="cat" category="sale/girls-clothing"}
-							{if $i && $i % 6 eq 0}
-								</ul>
+
+
+				<div>
+					<a href="/sale/girls-clothing/view-all" data="mega menu sale girl">Girl</a>
+					<span class="line"></span>
+					<div class="menu flex-menu">
+						<div class="panel panel-1">
+							{assign var=i value=0}
 								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
-							{/if}
-								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale girl categories" >{$cat.title}</a></li>
-							{math equation="x + y" x=$i y=1 assign=i}
-							{/sub_cats}
-						</ul>
+									<li>Shop by Category</li>
+									<li><a href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu sale girl view all" >View All</a></li>
+									{sub_cats name="cat" category="sale/girls-clothing"}
+									{if $i && $i % 6 eq 0}
+										</ul>
+										<ul class="category-sale">
+											<li class="spacer">Spacer</li>
+									{/if}
+										<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale girl categories" >{$cat.title}</a></li>
+									{math equation="x + y" x=$i y=1 assign=i}
+									{/sub_cats}
+								</ul>
+						</div>
+
+						<div class="panel panel-2 panel-sale">
+							<div class="da-rennab-zone" data-zone="mega_sale"></div>
+						</div>
+
+					</div>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
-					<div class="da-rennab-zone" data-zone="mega_sale"></div>
-				</div>
-				<div class="clear"></div>
-			</div>
-		</div>
+				
+
+
 		<div>
 			<a href="/sale/boys-clothing/view-all" data="mega menu sale boy" >Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -46,17 +52,20 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
+
+
 		<div>
 			<a href="/sale/tween-girls-clothing/view-all" data="mega menu sale tween" >Tween</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -72,10 +81,11 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
 
@@ -84,7 +94,7 @@
 			<a href="/sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl" >Toddler Girl</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -100,18 +110,20 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
+
 
 		<div>
 			<a href="/sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy" >Toddler Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -127,18 +139,20 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+				
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+
 			</div>
 		</div>
+
 
 		<div>
 			<a href="/sale/baby-girl-clothes/view-all" data="mega menu sale baby girl" >Baby Girl</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -154,17 +168,20 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
+
+
 		<div>
 			<a href="/sale/baby-boy-clothes/view-all" data="mega menu sale baby boy">Baby Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -180,17 +197,20 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
+
+
 		<div>
 			<a href="/sale/newborn-clothing/view-all" data="mega menu sale newborn" >Newborn</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
@@ -206,37 +226,45 @@
 							{/sub_cats}
 						</ul>
 				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
+
+				<div class="panel panel-2 panel-sale">
 					<div class="da-rennab-zone" data-zone="mega_sale"></div>
 				</div>
-				<div class="clear"></div>
+			
 			</div>
 		</div>
-		{* clearance cat is inactive for now <div>
-			<a href="/sale/clearance/view-all">Clearance</a>
-			<span class="line"></span>
-			<div class="menu flex-menu">
-				<div class="panel col-s-5 col-xs-5 col-xxs-5">
-					{assign var=i value=0}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
-							<li><a href="{$secure_html_url}sale/clearance/view-all">View All</a></li>
-							{sub_cats name="cat" category="sale/clearance"}
-							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
-							{/if}
-								<li><a href="{$cat.url}" class="{$cat.title|lower}">{$cat.title}</a></li>
-							{math equation="x + y" x=$i y=1 assign=i}
-							{/sub_cats}
-						</ul>
-				</div>
-				<div class="panel col-s-7 col-xs-7 col-xxs-7">
-					<div class="da-rennab-zone" data-zone="mega_sale"></div>
-				</div>
-				<div class="clear"></div>
+
+
+		{* clearance cat is inactive for now
+		<div>
+		<a href="/sale/clearance/view-all">Clearance</a>
+		<span class="line"></span>
+		<div class="menu flex-menu">
+			<div class="panel panel-1">
+				{assign var=i value=0}
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+						<li><a href="{$secure_html_url}sale/clearance/view-all">View All</a></li>
+						{sub_cats name="cat" category="sale/clearance"}
+						{if $i && $i % 6 eq 0}
+							</ul>
+							<ul class="category-sale">
+								<li class="spacer">Spacer</li>
+						{/if}
+							<li><a href="{$cat.url}" class="{$cat.title|lower}">{$cat.title}</a></li>
+						{math equation="x + y" x=$i y=1 assign=i}
+						{/sub_cats}
+					</ul>
 			</div>
-		</div>*}
+
+			<div class="panel panel-2 panel-sale">
+				<div class="da-rennab-zone" data-zone="mega_sale"></div>
+			</div>
+
+		</div>
+		</div>
+
+		*}
+
 	</div>
 </div>
