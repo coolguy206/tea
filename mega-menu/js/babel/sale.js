@@ -14,8 +14,8 @@ $(document).ready(function () {
     $('.promo1-url, .promo2-url').show();
   }, function () {});
   $('.dept-boy').hover(function () {
-    $('.promo2-url').show();
-    $('.promo1-url').hide();
+    $('.promo1-url, .promo2-url').show();
+    $('.promo2-url').hide();
   }, function () {}); // $('.dept-boy').hover(function() {
   //   $('.promo1-url').hide();
   // }, function() {

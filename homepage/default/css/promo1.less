@@ -1,5 +1,5 @@
 @import "var.less";
-@promo-cta-color: #3A569F;
+@promo-cta-color: #447482;
 @promo-cta-background: #D0AF3C;
 @promo-swim-cta-color: #ee696d;
 @promo-cta2-color: #FCA025;
@@ -20,21 +20,33 @@
   div {
     &.the-content {
       @media screen and (max-width: 768px) {
-        top: 67%;
+        top: 59%;
       }
       @media screen and (max-width: 414px) {
-        top: 72%;
+        top: 69%;
         width: 100%;
         // right: 0;
         // left: 0;
         // transform: translateX(0);
       }
       position: absolute;
-      top: 69%;
-      width: 30%;
+      top: 66.5%;
+      width: 24%;
       text-align: center;
       left: 50%;
       transform: translateX(-50%);
+
+      .first {
+        margin: 0 0 9%;
+      }
+
+      .second {
+        margin: 0 0 9%;
+      }
+
+      .third {
+        margin: 0 0 9%;
+      }
 
       span {
         @media screen and (max-width: 1679px) {
@@ -62,13 +74,14 @@
           // width: auto;
           margin: 0 0 6%;
           padding: 3% 0;
-          font-size: 3vw;
+          font-size: 4vw;
         }
         color: @promo-cta-color;
-        background: @promo-cta-background;
+        // background: @promo-cta-background;
         margin: 0 0 5%;
         width: 40%;
         padding: 1.5% 0;
+        display: inline;
 
         &:hover {
           // color: #fff;
@@ -104,23 +117,23 @@
 
         &.cta5 {
           @media screen and (max-width: 414px) {
-            left: 0;
+            // left: 0;
           }
-          left: 5.5%;
+          left: -2%;
         }
 
         &.cta6 {
           @media screen and (max-width: 414px) {
-            left: 3%;
+            // left: 3%;
           }
-          left: 7%;
+          left: 2%;
 
           span {}
         }
 
         span {
           @media screen and (max-width: 414px) {
-            display: none;
+            // display: none;
             // color: #fff;
           }
           margin: 0;

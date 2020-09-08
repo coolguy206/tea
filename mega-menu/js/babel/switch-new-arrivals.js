@@ -25,7 +25,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.boy;
       promo2 = _urls.urls.promo1.sale.boy;
       $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo2-url').hide();
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
@@ -43,7 +43,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.baby.boy;
       promo2 = _urls.urls.promo1.sale.baby.boy;
       $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo2-url').hide();
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
@@ -61,7 +61,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.toddler.boy;
       promo2 = _urls.urls.promo1.sale.toddler.boy;
       $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo2-url').hide();
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
@@ -71,7 +71,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo1.sale.baby.newborn;
       $('.promo1-url, .promo2-url').show();
-      $('.promo1-url').hide();
+      $('.promo2-url').hide(); // $('.promo1-url').hide();
+
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
@@ -80,7 +81,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.tween;
       promo2 = _urls.urls.promo1.sale.tween;
       $('.promo1-url, .promo2-url').show();
-      $('.promo2-url').hide();
+      $('.promo2-url').hide(); // $('.promo1-url').hide();
+
       $('.promo1-url').attr('href', promo1);
       $('.promo2-url').attr('href', promo2);
       break;
