@@ -226,6 +226,10 @@
   }
 }
 
+.how-it-works div img {
+  padding: 0 0 30px;
+}
+
 .how-it-works div.div-1 {
   padding: 0 0 0 9%;
 }
