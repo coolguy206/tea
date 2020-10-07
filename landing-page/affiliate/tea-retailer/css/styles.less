@@ -2,17 +2,34 @@
   padding: 1rem;
   box-sizing: border-box;
 
+  p {
+    font-size: 1rem;
+  }
+
   form {
+    span {
+      &.error {
+        display: none;
+        color: red;
+        text-transform: uppercase;
+        font-family: gilroy-bold;
+      }
+    }
+
     button,
     input,
     label {
+      @media screen and (max-width: 414px) {
+        margin: 0 0 4%;
+      }
       display: block;
-      margin: 0 0 1.25rem;
+      margin: 0 0 1%;
+      font-size: 1rem;
     }
 
     label {
       font-family: gilroy-regular;
-      font-size: 0.75rem;
+      // font-size: 0.75rem;
       color: #47363D;
     }
 
@@ -26,6 +43,30 @@
       height: 55px;
       box-sizing: border-box;
       padding: 0 0 0 1rem;
+
+      &[type="radio"] {
+        width: 30px;
+        height: 30px;
+        border-radius: 2em;
+        //-webkit-appearance: auto;
+        &::after {
+          content: attr(value);
+          font-family: gilroy-regular;
+          position: relative;
+          left: 170%;
+          top: 10%;
+        }
+
+        &:checked {
+          background: #47363D;
+
+          &::after {
+            background: none;
+            border: none;
+            border-radius: 0;
+          }
+        }
+      }
     }
 
     .processing {
