@@ -18,9 +18,9 @@ jQuery(document).ready(function() {
 
   const url = window.location.pathname;
 
-  // if (url !== '/') {
-  $('.promos').show();
-  // }
+  if (url !== '/') {
+    $('.promos').show();
+  }
 
   $('.the-promo .see-details').fancybox({
     helpers: {

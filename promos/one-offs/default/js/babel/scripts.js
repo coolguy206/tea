@@ -14,9 +14,11 @@ jQuery(document).ready(function () {
           $('.the-promo').show();
       }
     */
-  var url = window.location.pathname; // if (url !== '/') {
+  var url = window.location.pathname;
 
-  $('.promos').show(); // }
+  if (url !== '/') {
+    $('.promos').show();
+  }
 
   $('.the-promo .see-details').fancybox({
     helpers: {
