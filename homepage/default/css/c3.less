@@ -1,8 +1,8 @@
 @import "var.less";
-@c3-first-font-color: #74AC92;
-@c3-first-cta-color: #74AC92;
-@c3-second-font-color: #F598A2;
-@c3-second-cta-color: #F598A2;
+@c3-first-font-color: #F598A2;
+@c3-first-cta-color: #F598A2;
+@c3-second-font-color: #74AC92;
+@c3-second-cta-color: #74AC92;
 @c3-third-font-color: #D5AC35;
 @c3-third-cta-color: #D5AC35;
 
@@ -24,7 +24,7 @@
       text-align: center;
       box-sizing: border-box;
       flex-basis: 33%;
-      padding: 1.7% 1% 0;
+      padding: 1.7% 1.4% 0;
 
       a {
         text-decoration: none;
@@ -32,7 +32,7 @@
 
       .the-content {
         @media screen and (max-width: 414px) {
-          margin: 8% 0 !important;
+          margin: 10% 0 0 !important;
         }
         margin: 3% 0;
 
@@ -59,7 +59,7 @@
 
         div {
           @media screen and (max-width: 414px) {
-            margin: 4% 0 0 !important;
+            margin: 5% 0 8% 0 !important;
           }
           margin: 2.5% 0 0;
 
@@ -81,12 +81,12 @@
         position: relative;
       }
       // padding: 1.7% 1% 0;
-      flex-basis: 67%;
+      flex-basis: 66%;
 
       .the-content {
         @media screen and (max-width: 414px) {
           position: absolute;
-          top: 1.5%;
+          top: 0;
           padding: 0;
           margin: 0;
         }
@@ -94,8 +94,11 @@
         h2 {
           @media screen and (max-width: 414px) {
             color: #fff;
-            width: 65%;
+            width: 67%;
             margin: 0 auto;
+          }
+          @media screen and (max-width: 375px) {
+            width: 100%;
           }
           color: @c3-first-font-color;
         }
@@ -109,16 +112,23 @@
 
             &.cta1 {
               @media screen and (max-width:414px) {
-                left: -4%;
+                // left: -4%;
               }
-              left: -2%;
+              left: -7%;
             }
 
             &.cta2 {
               @media screen and (max-width:414px) {
-                left: 4%;
+                // left: 0;
               }
-              left: 2%;
+              left: 0;
+            }
+
+            &.cta3 {
+              @media screen and (max-width:414px) {
+                // left: 4%;
+              }
+              left: 7%;
             }
           }
         }
@@ -136,7 +146,7 @@
 
         h2 {
           @media screen and (max-width:414px) {
-            font-size: 20px;
+            // font-size: 20px;
           }
           color: @c3-second-font-color;
         }
@@ -153,11 +163,17 @@
             }
 
             &.cta2 {
-              left: 0;
+              left: 7%;
             }
 
             &.cta3 {
               left: 7%;
+            }
+
+            span {
+              @media screen and (max-width: 414px) {
+                display: inline;
+              }
             }
           }
         }

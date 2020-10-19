@@ -2,8 +2,8 @@
 @c4-background: #FDF5F2;
 @c4-first-font-color: #8BABD1;
 @c4-first-cta-color: #8BABD1;
-@c4-second-font-color: #F47B6A;
-@c4-second-cta-color: #F47B6A;
+@c4-second-font-color: #936FAB;
+@c4-second-cta-color: #936FAB;
 
 .c4 {
   @media screen and (max-width: 414px) {
@@ -12,15 +12,14 @@
   }
   display: flex;
   flex-wrap: wrap;
-  background: @c4-background;
-
+  // background: @c4-background;
   div {
     &.first,
     &.second {
       @media screen and (max-width: 414px) {
         // padding: 11% 5% 0%;
       }
-      padding: 4.9% 1% 0;
+      padding: 1% 1% 0;
       position: relative;
       text-align: center;
       flex-basis: 50%;
@@ -31,6 +30,7 @@
         width: 100%;
         right: 0;
         top: 0;
+        margin: 10% 0 0 !important;
       }
       position: relative;
       top: 0;
@@ -75,7 +75,7 @@
 
       div {
         @media screen and (max-width: 414px) {
-          margin: 5% 0 0;
+          margin: 5% 0 8% 0 !important;
         }
         margin: 3.5% 0 0;
       }
@@ -108,11 +108,11 @@
             color: @c4-first-cta-color;
 
             &.cta1 {
-              // left: -2%;
+              left: -5%;
             }
 
             &.cta2 {
-              // left: 2%;
+              left: 5%;
             }
           }
         }
@@ -121,17 +121,21 @@
 
     &.second {
       @media screen and (max-width: 414px) {
-        padding: 5% 5% 10%;
+        padding: 0;
         background: @background;
       }
       // padding: 4.8% 1% 0;
       .the-content {
         @media screen and (max-width: 414px) {
           margin: 6% 0 0;
+          position: absolute;
+          top: 50%;
         }
         // margin: 4.5% 0 0;
         h2 {
-          @media screen and (max-width: 414px) {}
+          @media screen and (max-width: 414px) {
+            color: #fff;
+          }
           color: @c4-second-font-color;
         }
 
@@ -147,8 +151,7 @@
               margin: 0 0 6%;
 
               a {
-                color: #F5FF00;
-
+                // color: #F5FF00;
                 &.cta1,
                 &.cta4 {
                   left: -8%;
@@ -165,6 +168,7 @@
           a {
             @media screen and (max-width: 414px) {
               margin: 0;
+              color: #fff;
             }
             color: @c4-second-cta-color;
             // margin: 0 2% 0 0;

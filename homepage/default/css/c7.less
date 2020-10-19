@@ -32,11 +32,14 @@
       a {
         .the-content {
           @media screen and (max-width: 414px) {
-            margin: 5% 0 0;
+            margin: 10% 0 0;
           }
           margin: 9% 0 0;
 
           span {
+            @media screen and (max-width: 414px) {
+              font-size: 3vw !important;
+            }
             color: @c7-cta-color;
 
             .desktop-copy {
