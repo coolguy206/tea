@@ -1,28 +1,57 @@
 @import "var.less";
 @c4-background: #FDF5F2;
-@c4-first-font-color: #8BABD1;
-@c4-first-cta-color: #8BABD1;
+@c4-first-font-color: #771B2C;
+@c4-first-cta-color: #fff;
+@c4-first-cta-background: #771B2C;
 @c4-second-font-color: #936FAB;
 @c4-second-cta-color: #936FAB;
 
 .c4 {
   @media screen and (max-width: 414px) {
     padding: 0;
-    background: none;
+    background: #B3904E;
   }
   display: flex;
   flex-wrap: wrap;
   // background: @c4-background;
+  h2 {
+    @media screen and (max-width: 1679px) {
+      font-size: 3.6vw;
+      line-height: 3.5vw;
+    }
+    @media screen and (max-width: 414px) {
+      font-size: 40px;
+      line-height: 28px;
+      margin: 9% 0;
+    }
+    color: @c4-first-font-color;
+    font-family: @souv;
+    font-size: 58px;
+    line-height: 58px;
+    text-transform: capitalize;
+    letter-spacing: 0;
+  }
+
+  a {
+    img {
+      &.mobile {
+        @media screen and (max-width:414px) {
+          display: inline;
+        }
+      }
+    }
+  }
+
   div {
     &.first,
     &.second {
       @media screen and (max-width: 414px) {
         // padding: 11% 5% 0%;
       }
-      padding: 1% 1% 0;
-      position: relative;
+      padding: 0;
       text-align: center;
-      flex-basis: 50%;
+      flex-basis: 100%;
+      position: relative;
     }
 
     &.the-content {
@@ -31,31 +60,14 @@
         right: 0;
         top: 0;
         margin: 10% 0 0 !important;
+        position: relative;
       }
-      position: relative;
-      top: 0;
+      position: absolute;
+      top: 25.5%;
       text-align: center;
-      margin: 4.2% 0 8.5%;
-
-      h2 {
-        @media screen and (max-width: 1679px) {
-          font-size: 1.6vw;
-          line-height: 1.6vw;
-        }
-        @media screen and (max-width: 414px) {
-          font-size: 24px;
-          line-height: 28px;
-          margin: 0;
-        }
-        display: block;
-        width: 100%;
-        margin: 0;
-        font-size: 30px;
-        line-height: 28px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        font-family: gilroy-bold;
-      }
+      margin: 0;
+      width: 33.3%;
+      right: 0;
 
       a,
       p,
@@ -63,6 +75,19 @@
         @media screen and (max-width: 414px) {
           color: #fff;
         }
+      }
+
+      p {
+        @media screen and (max-width:414px) {
+          font-size: 18px;
+          line-height: 24px;
+          width: 75%;
+        }
+        @media screen and (max-width:375px) {
+          width: 100%;
+        }
+        margin: 7.5% auto 0;
+        width: 55%;
       }
 
       a {
@@ -77,13 +102,13 @@
         @media screen and (max-width: 414px) {
           margin: 5% 0 8% 0 !important;
         }
-        margin: 3.5% 0 0;
+        margin: 13% 0 0;
       }
     }
 
     &.first {
       @media screen and (max-width: 414px) {
-        padding: 0 0 12%;
+        padding: 0 5% 12%;
       }
       // padding: 4.9% 1% 0;
       .the-content {
@@ -105,10 +130,14 @@
           }
           // margin: 3.5% 0 0;
           a {
+            @media screen and (max-width:414px) {
+              width: 80%;
+            }
             color: @c4-first-cta-color;
+            background: @c4-first-cta-background;
 
             &.cta1 {
-              left: -5%;
+              // left: -5%;
             }
 
             &.cta2 {

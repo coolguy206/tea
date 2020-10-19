@@ -1,53 +1,63 @@
+@import 'var.less';
+@c2-background: #FDF5F2;
+@c2-cta-color: #771B2C;
+
 .c2 {
+  @media screen and (max-width: 414px) {
+    padding: 4% 0;
+  }
+  padding: 2% 6% 4%;
+  background: @c2-background;
+
+  .first {
     @media screen and (max-width: 414px) {
-        padding: 4% 0;
+      padding: 0;
     }
+    position: relative;
+    padding: 1% 1% 0 0;
 
-    padding: 3% 6% 3% 6%;
+    .the-content {
+      @media screen and (max-width: 414px) {
+        top: 62%;
+        left: 50%;
+        width: 100%;
+        transform: translateX(-50%);
+      }
+      position: absolute;
+      top: 69%;
+      left: 16%;
+      width: 64%;
+      text-align: center;
 
-    .first {
-        @media screen and (max-width: 414px) {
-            padding: 0;
-        }
-
-        position: relative;
-        padding: 1% 1% 0 0%;
-
-        .the-content {
-            @media screen and (max-width: 414px) {
-                top: 45%;
-                left: 4%;
-                width: 45%;
-            }
-
-            position: absolute;
-            top: 49%;
-            left: 5%;
-            width: 40%;
-            text-align: center;
-
-            span {
-                color: #fff;
-                margin: 5% 0 0;
-            }
-        }
-    }
-
-    .second {
-        @media screen and (max-width: 414px) {
-            margin: 2% 0 0;
-        }
-
-        display: flex;
-        flex-wrap: wrap;
+      span {
+        color: #fff;
+        margin: 6% 0 0;
+        background: @c2-cta-color;
+        width: 42%;
 
         a {
-            @media screen and (max-width: 414px) {
-                padding: 3%;
-            }
-
-            flex-basis: 50%;
-            padding: 1%;
+          text-decoration: none;
+          font-family: @gilroyb;
         }
+      }
     }
+  }
+
+  .second {
+    @media screen and (max-width: 414px) {
+      margin: 2% 0 0;
+      padding: 0;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.5% 0 0;
+
+    a {
+      @media screen and (max-width: 414px) {
+        padding: 3% 1.5% 1.5%;
+      }
+      flex-basis: 50%;
+      padding: 1%;
+    }
+  }
 }

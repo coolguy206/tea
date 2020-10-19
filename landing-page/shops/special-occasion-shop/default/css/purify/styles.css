@@ -3,7 +3,8 @@
 }
 
 .c2 {
-  padding: 3% 6% 3% 6%;
+  padding: 2% 6% 4%;
+  background: #FDF5F2;
 }
 
 @media screen and (max-width:414px) {
@@ -13,19 +14,12 @@
 }
 
 .c3 {
-  padding: 3% 5% 3% 7%;
-  background: #FDF5F2;
-}
-
-@media screen and (max-width:414px) {
-  .c3 {
-    padding: 4% 0 0;
-    background: none;
-  }
+  position: relative;
 }
 
 .c4 {
-  padding: 3% 6% 4% 6%;
+  padding: 2% 6% 4%;
+  background: #FDF5F2;
 }
 
 @media screen and (max-width:414px) {
@@ -39,7 +33,8 @@
 }
 
 .c6 {
-  padding: 2% 6% 4% 6%;
+  padding: 3.3% 2.4% 3%;
+  background: #FDF5F2;
 }
 
 @media screen and (max-width:414px) {

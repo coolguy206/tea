@@ -1,8 +1,8 @@
 @import "var.less";
-@c6-first-font-color: #CB4E8A;
-@c6-first-cta-color: #CB4E8A;
-@c6-second-font-color: #CB4E8A;
-@c6-second-cta-color: #CB4E8A;
+@c6-first-font-color: #fff;
+@c6-first-cta-color: #fff;
+@c6-second-font-color: #fff;
+@c6-second-cta-color: #fff;
 
 .c6 {
   @media screen and (max-width: 414px) {
@@ -18,9 +18,9 @@
       @media screen and (max-width: 414px) {
         // padding: 11% 5% 0%;
         background: none !important;
-        margin: 0 0 5%;
+        margin: 0;
       }
-      padding: 4.6% 1% 0;
+      padding: 0;
       position: relative;
       text-align: center;
       flex-basis: 50%;
@@ -33,29 +33,27 @@
         top: 0;
         margin: 10% 0 0 !important;
       }
-      position: relative;
-      top: 0;
+      position: absolute;
+      top: 50%;
       text-align: center;
-      margin: 4.2% 0 6%;
+      margin: 0;
+      width: 100%;
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 1.6vw;
-          line-height: 1.6vw;
+          font-size: 3.6vw;
+          // line-height: 1.6vw;
         }
         @media screen and (max-width: 414px) {
-          font-size: 24px;
+          font-size: 40px;
           line-height: 28px;
-          margin: 0;
+          margin: 4% 0;
         }
-        display: block;
-        width: 100%;
-        margin: 0;
-        font-size: 30px;
-        line-height: 28px;
-        letter-spacing: 0.25em;
-        text-transform: uppercase;
-        font-family: gilroy-bold;
+        color: @c6-first-font-color;
+        font-family: @souv;
+        text-transform: capitalize;
+        font-size: 60px;
+        letter-spacing: 0;
       }
 
       a,
@@ -78,7 +76,7 @@
         @media screen and (max-width: 414px) {
           margin: 5% 0 8% 0 !important;
         }
-        margin: 3.5% 0 0;
+        margin: 5% 0 0;
       }
     }
 
@@ -90,8 +88,10 @@
       .the-content {
         @media screen and (max-width: 414px) {
           margin: 6.5% 0 0;
+          top: 45%;
         }
-        // margin: 4.2% 0 8.5%;
+        top: 57%;
+
         h2 {
           @media screen and (max-width: 414px) {
             width: 95%;
@@ -129,11 +129,19 @@
       .the-content {
         @media screen and (max-width: 414px) {
           margin: 6% 0 0;
+          top: 8%;
         }
-        // margin: 4.5% 0 0;
+        top: 17%;
+
         h2 {
+          @media screen and (max-width: 1679px) {
+            font-size: 40px;
+            line-height: 40px;
+          }
           @media screen and (max-width: 414px) {}
           color: @c6-second-font-color;
+          font-size: 90px;
+          line-height: 90px;
         }
 
         div {

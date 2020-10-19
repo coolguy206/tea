@@ -1,40 +1,67 @@
 @import "var.less";
-@c3-first-font-color: #F598A2;
-@c3-first-cta-color: #F598A2;
-@c3-second-font-color: #74AC92;
-@c3-second-cta-color: #74AC92;
+@c3-first-font-color: #6B1671;
+@c3-first-cta-color: #6B1671;
+@c3-second-font-color: #fff;
+@c3-second-cta-color: #fff;
 @c3-third-font-color: #D5AC35;
 @c3-third-cta-color: #D5AC35;
 
 .c3 {
   @media screen and (max-width: 414px) {
     flex-wrap: wrap;
-    background: @background;
+    background: #E8C3CA;
     padding: 0;
   }
   display: flex;
-  padding: 0 0 0.5%;
+  padding: 0;
   text-align: center;
-  flex-wrap: wrap;
-
+  // flex-wrap: wrap;
   div {
     &.first,
     &.second,
     &.third {
       text-align: center;
       box-sizing: border-box;
-      flex-basis: 33%;
-      padding: 1.7% 1.4% 0;
+      flex-basis: 33.5%;
+      padding: 0;
+      position: relative;
 
       a {
         text-decoration: none;
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.8vw;
+          // line-height: 1.6vw;
+        }
+        @media screen and (max-width:414px) {
+          font-size: 24px;
+          line-height: 28px;
+          width: 100%;
+          position: relative;
+          order: 1;
+          top: 0;
+          margin: 0 0 7%;
+        }
+        position: absolute;
+        top: 3.5%;
+        width: 50%;
+        font-family: @gilroyb;
+        font-size: 30px;
+        letter-spacing: 7px;
+        text-transform: uppercase;
+        color: @c3-first-font-color;
       }
 
       .the-content {
         @media screen and (max-width: 414px) {
           margin: 10% 0 0 !important;
         }
-        margin: 3% 0;
+        margin: 0;
+        position: absolute;
+        bottom: 8.5%;
+        width: 100%;
 
         h2 {
           @media screen and (max-width: 1679px) {
@@ -76,12 +103,31 @@
 
     &.first {
       @media screen and (max-width: 414px) {
-        padding: 1% 0 0;
+        padding: 10% 0 0;
         // background: #FDF5F2;
         position: relative;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
       }
       // padding: 1.7% 1% 0;
-      flex-basis: 66%;
+      flex-basis: 67%;
+
+      & > a {
+        @media screen and (max-width:414px) {
+          width: 100%;
+          display: inline-block;
+          order: 2;
+        }
+
+        img {
+          &.mobile {
+            @media screen and (max-width:414px) {
+              display: inline;
+            }
+          }
+        }
+      }
 
       .the-content {
         @media screen and (max-width: 414px) {
@@ -89,7 +135,11 @@
           top: 0;
           padding: 0;
           margin: 0;
+          order: 3;
+          position: relative;
+          width: 100%;
         }
+        width: 50%;
 
         h2 {
           @media screen and (max-width: 414px) {
@@ -106,7 +156,7 @@
         div {
           a {
             @media screen and (max-width: 414px) {
-              color: #fff;
+              // color: #fff;
             }
             color: @c3-first-cta-color;
 
@@ -114,7 +164,7 @@
               @media screen and (max-width:414px) {
                 // left: -4%;
               }
-              left: -7%;
+              left: -6%;
             }
 
             &.cta2 {
@@ -128,7 +178,7 @@
               @media screen and (max-width:414px) {
                 // left: 4%;
               }
-              left: 7%;
+              left: 6%;
             }
           }
         }
@@ -137,7 +187,7 @@
 
     &.second {
       @media screen and (max-width: 414px) {
-        padding: 5%;
+        padding: 0;
       }
       // padding: 1.7% 1% 0;
       .the-content {
@@ -159,11 +209,11 @@
             color: @c3-second-cta-color;
 
             &.cta1 {
-              left: -7%;
+              left: -2%;
             }
 
             &.cta2 {
-              left: 7%;
+              left: 3%;
             }
 
             &.cta3 {

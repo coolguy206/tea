@@ -1,91 +1,75 @@
 @import "var.less"; // @import "promo1.less";
-@c1-font-color: #072C35;
-@c1-cta-color: #Fff;
-@c1-cta-background: #072C35;
+@na-font-color: #E8C3CA;
+@na-cta-color: #FFF989;
+@na-cta-background: #072C35;
 
-.c1 {
+.new-arrivals {
   position: relative;
   width: 100%;
+  background: #8F713B;
 
   div {
     &.the-content {
       @media screen and (max-width: 414px) {
         width: 100%;
         left: 0;
-        top: 7%;
+        top: 16%;
+        flex-wrap: wrap;
+        padding: 6% 0;
       }
-      position: absolute;
-      top: 22.5%;
-      width: 29%;
-      left: 36%;
+      position: relative;
       text-align: center;
+      display: flex;
+      padding: 2.7% 0;
 
       a,
       a,
       h2,
       p {
-        color: @c1-font-color;
+        color: @na-font-color;
         font-family: @souv;
         margin: 0 auto;
       }
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 3.6vw;
-          line-height: 2.4vw;
+          font-size: 2.7vw;
+          // line-height: 2.4vw;
         }
         @media screen and (max-width: 414px) {
-          // font-size: 9vw;
-          // margin: 0;
+          font-size: 9vw;
+          margin: 3% 0;
           line-height: 9vw;
-          font-size: 50px;
-          color: #fff;
+          flex-basis: 100%;
+          text-align: center;
         }
-        margin: 5% 0 0;
+        margin: 0;
         text-transform: none;
-        color: @c1-font-color;
+        font-size: 46px;
         line-height: 40px;
-        font-family: @souv;
-        font-size: 60px;
+        flex-basis: 49%;
         letter-spacing: 1px;
-
-        span {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.23vw;
-            letter-spacing: 0.4vw;
-          }
-          @media screen and (max-width:414px) {
-            font-size: 18px;
-            letter-spacing: 1.4vw;
-          }
-          font-family: @gilroyb;
-          font-size: 20px;
-          display: block;
-          letter-spacing: 6px;
-          margin: 0 0 1%;
-        }
+        text-align: right;
       }
 
       p {
         @media screen and (max-width: 414px) {
-          color: #fff;
-          font-size: 18px;
-          line-height: 24px;
-          width: 80%;
-          margin: 6% auto 0;
+          display: none;
         }
         margin: 9% auto 0;
         text-transform: none;
-        // letter-spacing: 1px;
-        width: 60%;
+        letter-spacing: 0;
+        width: 78%;
       }
 
       div {
         @media screen and (max-width: 414px) {
           margin: 0;
         }
-        margin: 12% 0 0;
+        margin: 0;
         text-align: center;
+        flex-basis: 100%;
+        padding: 0.4% 0 0;
 
         div {
           @media screen and (max-width: 414px) {
@@ -94,14 +78,10 @@
         }
 
         a {
-          @media screen and (max-width: 414px) {
-            width: 80%;
-            margin: 93% 0 0;
-          }
+          @media screen and (max-width: 414px) {}
           font-family: @gilroyb;
-          color: @c1-cta-color;
-          background: @c1-cta-background;
-
+          color: @na-cta-color;
+          // background: @na-cta-background;
           span {
             @media screen and (max-width: 414px) {
               display: none;
@@ -110,44 +90,44 @@
 
           &.cta1 {
             @media screen and (max-width: 414px) {
-              // left: -2%;
+              left: -9%;
             }
-            // left: -3%;
+            left: -9%;
           }
 
           &.cta2 {
             @media screen and (max-width: 414px) {
-              // left: 2%;
+              left: 0;
             }
-            // left: 3%;
+            left: -7%;
           }
 
           &.cta3 {
             @media screen and (max-width: 414px) {
-              // left: -2%;
+              left: 9%;
             }
-            // left: -3%;
+            left: -5%;
           }
 
           &.cta4 {
             @media screen and (max-width: 414px) {
-              // left: 2%;
+              left: -5%;
             }
-            // left: 3%;
+            left: -3%;
           }
 
           &.cta5 {
             @media screen and (max-width: 414px) {
-              // left: -2%;
+              left: 5%;
             }
-            // left: -3%;
+            left: -1%;
           }
 
           &.cta6 {
             @media screen and (max-width: 414px) {
-              // left: 2%;
+              left: 0;
             }
-            // left: 3%;
+            left: 1%;
           }
         }
       }

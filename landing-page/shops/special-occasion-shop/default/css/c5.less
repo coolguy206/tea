@@ -1,32 +1,36 @@
+@import 'var.less';
+@c5-cta-color: #781B2D;
+
 .c5 {
-    position: relative;
+  position: relative;
 
-    .the-content {
-        @media screen and (max-width: 414px) {
-            top: 2%;
-            right: 0;
-            width: 100%;
-        }
-
-        position: absolute;
-        top: 53%;
-        right: 2%;
-        width: 22%;
-        text-align: center;
-
-        h2 {
-            @media screen and (max-width: 414px) {
-                width: 50%;
-                margin: 0 auto;
-            }
-        }
-
-        span {
-            @media screen and (max-width: 414px) {
-                margin: 0;
-            }
-
-            margin: 5% 0 0;
-        }
+  .the-content {
+    @media screen and (max-width: 414px) {
+      top: 52%;
+      left: 0;
+      width: 100%;
     }
+    position: absolute;
+    top: 21%;
+    left: 45%;
+    width: 22%;
+    text-align: center;
+
+    h2 {
+      @media screen and (max-width: 414px) {
+        width: 75%;
+        margin: 0 auto;
+      }
+    }
+
+    span {
+      @media screen and (max-width: 414px) {
+        margin: 3% 0;
+        width: 38%;
+      }
+      margin: 10% 0 0;
+      background: @c5-cta-color;
+      width: 60%;
+    }
+  }
 }
