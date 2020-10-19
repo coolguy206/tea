@@ -239,7 +239,7 @@ var urls = {
   promo1: {
     girl: "/girls-clothing/new-arrivals",
     boy: "/boys-clothing/new-arrivals",
-    tween: "/tween-girls-clothing/favorites/new-arrivals",
+    tween: "/tween-girls-clothing/view-all",
     baby: {
       girl: "/baby-girl-clothes/new-arrivals",
       boy: "/baby-boy-clothes/new-arrivals",
