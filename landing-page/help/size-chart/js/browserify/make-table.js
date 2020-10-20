@@ -47,7 +47,9 @@ module.exports = function () {
 
   var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
-  var sheet = sheets; //loop through sheet and find the matched table
+  var sheet = sheets;
+  console.log('from make-table.js');
+  console.log(sheet); //loop through sheet and find the matched table
 
   $.each(sheet, function (i, val) {
     var sheetVal = val.data[0].rowData[2].values[0].formattedValue;

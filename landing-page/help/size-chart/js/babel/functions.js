@@ -279,17 +279,20 @@ $(document).ready(function () {
   $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
   /*-----------------------------------------------------------------------------------------*/
   // var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
+  // const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
+  //test sheet
 
-  var sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY'; // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
+  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c"; // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
 
   var hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
-  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true"); //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
+  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true"); // console.log(sheetUrl);
+  //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
 
   if (sheets == undefined) {
     console.log('no sheets go get sheets'); //make the get call
 
     $.getJSON(sheetUrl, function (data) {
-      // console.log(data);
+      // console.log(data.sheets);
       sheets = data.sheets; //make the table
 
       makeTable(); //remove the loading
@@ -297,8 +300,9 @@ $(document).ready(function () {
       $('.tables-loading').remove();
     });
   } else {
-    // console.log('sheets found');
+    console.log('sheets found'); // console.log(sheets);
     //make the table
+
     makeTable(); //remove the loading
 
     $('.tables-loading').remove();

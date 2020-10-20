@@ -490,7 +490,9 @@ module.exports = function () {
 
   var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
-  var sheet = sheets; //loop through sheet and find the matched table
+  var sheet = sheets;
+  console.log('from make-table.js');
+  console.log(sheet); //loop through sheet and find the matched table
 
   $.each(sheet, function (i, val) {
     var sheetVal = val.data[0].rowData[2].values[0].formattedValue;
@@ -1021,6 +1023,25 @@ module.exports = [{
     leftP: 'Brand new babies are a bit messy! Buy a few extra outfits so you don\'t have to do laundry every day.',
     rightH2: 'Romper Rules',
     rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!'
+  }]
+},
+/*-----------------------------------------------------------------------------------------*/
+{
+  dept: 'adult',
+  cat: [{
+    name: 'tops',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
+  }, {
+    name: 'pajamas',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
 }];
 

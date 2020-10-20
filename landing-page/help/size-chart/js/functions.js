@@ -334,10 +334,16 @@ $(document).ready(function() {
   /*-----------------------------------------------------------------------------------------*/
 
   // var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
-  const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
+  // const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
+
+  //test sheet
+  const sheetId = `1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c`;
+
   // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
   const hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
   const sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?key=${hidden}&includeGridData=true`;
+
+  // console.log(sheetUrl);
 
   //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
   if (sheets == undefined) {
@@ -345,7 +351,7 @@ $(document).ready(function() {
 
     //make the get call
     $.getJSON(sheetUrl, function(data) {
-      // console.log(data);
+      // console.log(data.sheets);
       sheets = data.sheets;
 
       //make the table
@@ -355,7 +361,8 @@ $(document).ready(function() {
       $('.tables-loading').remove();
     });
   } else {
-    // console.log('sheets found');
+    console.log('sheets found');
+    // console.log(sheets);
 
     //make the table
     makeTable();

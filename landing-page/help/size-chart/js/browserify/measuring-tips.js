@@ -263,6 +263,25 @@ module.exports = [{
     rightH2: 'Romper Rules',
     rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!'
   }]
+},
+/*-----------------------------------------------------------------------------------------*/
+{
+  dept: 'adult',
+  cat: [{
+    name: 'tops',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
+  }, {
+    name: 'pajamas',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
+  }]
 }];
 
 

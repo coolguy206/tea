@@ -28,6 +28,8 @@ module.exports = function() {
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
 
   var sheet = sheets;
+  console.log('from make-table.js');
+  console.log(sheet);
 
   //loop through sheet and find the matched table
   $.each(sheet, function(i, val) {
