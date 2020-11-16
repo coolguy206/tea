@@ -1,98 +1,4 @@
-<!-- dev styles -->
-<!-- <link rel="stylesheet" type="text/css" href="../css/styles.css">   -->
-
-<div class="catalog-wrap">
-
-	<h1>Request A Catalog</h1>
-
-	<section>
-		<p>Yes, I'd love to receive Tea's seasonal catalogs (only available in the US at present).</p>
-		<p>Please fill in the fields below:</p>
-		<p class="italic">* Required Fields</p>
-		<form name="contact_form" class="responsys" data="catalogs-request">
-			<input type="hidden" name="CATALOG_REQUEST" value="yes" />
-
-			<div>
-				<label>first name*</label>
-				<input type="text" name="FIRST_NAME" placeholder="First Name*" required>
-			</div>
-
-			<div>
-				<label>last name*</label>
-				<input type="text" name="LAST_NAME" placeholder="Last Name*" required>
-			</div>
-
-			<div>
-				<label>address 1*</label>
-				<input type="text" name="POSTAL_STREET_1_" placeholder="Address 1*" required>
-			</div>
-
-			<div>
-				<label>address 2</label>
-				<input type="text" name="POSTAL_STREET_2_" placeholder="Address 2">
-			</div>
-
-			<div>
-				<label>city*</label>
-				<input type="text" name="CITY_" placeholder="City*" required>
-			</div>
-
-			<div>
-				<label>State/Province*</label>
-				<select name="STATE_" required id="states">
-					<option>Please Select*</option>
-				</select>
-			</div>
-
-			<div>
-				<label>ZIP/Postal Code*</label>
-				<input type="text" name="POSTAL_CODE_" placeholder="ZIP/Postal Code*" required>
-			</div>
-
-			<div>
-				<label>Email*</label>
-				<input type='email' name='EMAIL_ADDRESS_' placeholder="Email*" required>
-			</div>
-
-			<div class="the-checkbox">
-				<label>Subscribe To Email List</label>
-				<input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="yes" checked="checked">
-			</div>
-
-			<div>
-				<label>How did you hear about Tea?</label>
-				<select name="USER_SOURCE" id="user-src">
-					<option>Please Select</option>
-				</select>
-			</div>
-
-			<div>
-				<p class="success">successfully sent!!!</p>
-				<p class="sending">sending...</p>
-				<input type="submit" value="Submit">
-			</div>
-		</form>
-	</section>
-
-	<footer>
-		<h2>Tea Collection Catalogs</h2>
-		<p>Our catalogs take you on an adventure to the places that inspired our seasonal styles. For our spring and summer collections, we celebrate the adventurous spirit of the land Down Under. From Sydney to the Outback and rainforests to reefs, we
-			found endless inspiration in Australia for our kids fashion collection. Request our free children's catalog today to discover our newest styles from this incredible destination.</p>
-	</footer>
-
-</div>
-
-
-<!--toolkit -->
-
-<style>
-	.catalog-wrap h1{margin:0 0 2rem}.catalog-wrap section{margin:0 0 2rem}.catalog-wrap section p{font-size:1rem;margin:0 0 1rem}.catalog-wrap section .responsys p{text-transform:uppercase;font-size:1rem;display:none}.catalog-wrap section .responsys p.success{font-family:gilroy-bold}.catalog-wrap section .responsys p.sending{font-family:gilroy-regular}.catalog-wrap section .responsys div{display:flex;flex-wrap:wrap;margin:0 0 1rem}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div label,.catalog-wrap section .responsys div select{display:inline-block;margin:0 1rem 1rem 0;font-family:gilroy-regular}.catalog-wrap section .responsys div label{font-size:1rem;text-transform:capitalize;width:20%;font-family:gilroy-regular}@media screen and (max-width:1024px){.catalog-wrap section .responsys div label{width:30%}}@media screen and (max-width:414px){.catalog-wrap section .responsys div label{width:100%}}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{padding:.75rem 1.125rem;width:28%;margin:0;box-sizing:border-box;background:#EDEBEC}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:53%;padding:1rem 2rem}}@media screen and (max-width:414px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:100%}}.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:16px !important;height:16px;border:1px solid #47363D;background:#fff;box-sizing:border-box;padding:0}.catalog-wrap section .responsys div input[type="checkbox"]:checked,.catalog-wrap section .responsys div select[type="checkbox"]:checked,.catalog-wrap section .responsys div input[type="checkbox"]:hover,.catalog-wrap section .responsys div select[type="checkbox"]:hover{background:#47363D}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"],.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:auto}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{text-transform:uppercase;border:2px solid #47363D;background:#fff;color:#47363D;font-family:gilroy-bold;padding:.75rem 1.25rem}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{padding:1rem 2rem}}.catalog-wrap section .responsys div input[type="submit"]:hover,.catalog-wrap section .responsys div select[type="submit"]:hover{background:#75686D;color:#fff}.catalog-wrap section .responsys div input[type="submit"]:active,.catalog-wrap section .responsys div select[type="submit"]:active{background:#47363D}.catalog-wrap section .responsys div .error{color:#cc0033;font-size:1rem}@media screen and (max-width:737px){.catalog-wrap section .responsys div .error{display:block}}.catalog-wrap section .responsys div select option{text-transform:capitalize}.catalog-wrap footer h2{margin:0 0 1rem}.catalog-wrap footer p{font-size:1rem}
-</style>
-
-
-
-<script>
-	jQuery(document).ready(function() {
+<div class="catalog-wrap"><h1>Request A Catalog</h1><section><p>Yes, I'd love to receive Tea's seasonal catalogs (only available in the US at present).</p><p>Please fill in the fields below:</p><p class="italic">* Required Fields</p><form name="contact_form" class="responsys" data="catalogs-request"><input type="hidden" name="CATALOG_REQUEST" value="yes"><div><label>first name*</label> <input type="text" name="first_name" placeholder="First Name*" required></div><div><label>last name*</label> <input type="text" name="last_name" placeholder="Last Name*" required></div><div><label>address 1*</label> <input type="text" name="POSTAL_STREET_1_" placeholder="Address 1*" required></div><div><label>address 2</label> <input type="text" name="POSTAL_STREET_2_" placeholder="Address 2"></div><div><label>city*</label> <input type="text" name="CITY_" placeholder="City*" required></div><div><label>State/Province*</label> <select name="STATE_" required id="states"><option>Please Select*</option></select></div><div><label>ZIP/Postal Code*</label> <input type="text" name="POSTAL_CODE_" placeholder="ZIP/Postal Code*" required></div><div><label>Email*</label> <input type="email" name="EMAIL_ADDRESS_" placeholder="Email*" required></div><div class="the-checkbox"><label>Subscribe To Email List</label> <input id="optin" type="checkbox" name="EMAIL_PERMISSION_STATUS_" value="yes" checked="checked"></div><div><label>How did you hear about Tea?</label> <select name="USER_SOURCE" id="user-src"><option>Please Select</option></select></div><div><p class="success">successfully sent!!!</p><p class="sending">sending...</p><input type="submit" value="Submit"></div></form></section><footer><h2>Tea Collection Catalogs</h2><p>Our catalogs take you on an adventure to the places that inspired our seasonal styles. For our spring and summer collections, we celebrate the adventurous spirit of the land Down Under. From Sydney to the Outback and rainforests to reefs, we found endless inspiration in Australia for our kids fashion collection. Request our free children's catalog today to discover our newest styles from this incredible destination.</p></footer></div><style>.catalog-wrap h1{margin:0 0 2rem}.catalog-wrap section{margin:0 0 2rem}.catalog-wrap section p{font-size:1rem;margin:0 0 1rem}.catalog-wrap section .responsys p{text-transform:uppercase;font-size:1rem;display:none}.catalog-wrap section .responsys p.success{font-family:gilroy-bold}.catalog-wrap section .responsys p.sending{font-family:gilroy-regular}.catalog-wrap section .responsys div{display:flex;flex-wrap:wrap;margin:0 0 1rem}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div label,.catalog-wrap section .responsys div select{display:inline-block;margin:0 1rem 1rem 0;font-family:gilroy-regular}.catalog-wrap section .responsys div label{font-size:1rem;text-transform:capitalize;width:20%;font-family:gilroy-regular}@media screen and (max-width:1024px){.catalog-wrap section .responsys div label{width:30%}}@media screen and (max-width:414px){.catalog-wrap section .responsys div label{width:100%}}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{padding:.75rem 1.125rem;width:28%;margin:0;box-sizing:border-box;background:#EDEBEC}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:53%;padding:1rem 2rem}}@media screen and (max-width:414px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:100%}}.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:16px !important;height:16px;border:1px solid #47363D;background:#fff;box-sizing:border-box;padding:0}.catalog-wrap section .responsys div input[type="checkbox"]:checked,.catalog-wrap section .responsys div select[type="checkbox"]:checked,.catalog-wrap section .responsys div input[type="checkbox"]:hover,.catalog-wrap section .responsys div select[type="checkbox"]:hover{background:#47363D}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"],.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:auto}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{text-transform:uppercase;border:2px solid #47363D;background:#fff;color:#47363D;font-family:gilroy-bold;padding:.75rem 1.25rem}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{padding:1rem 2rem}}.catalog-wrap section .responsys div input[type="submit"]:hover,.catalog-wrap section .responsys div select[type="submit"]:hover{background:#75686D;color:#fff}.catalog-wrap section .responsys div input[type="submit"]:active,.catalog-wrap section .responsys div select[type="submit"]:active{background:#47363D}.catalog-wrap section .responsys div .error{color:#cc0033;font-size:1rem}@media screen and (max-width:737px){.catalog-wrap section .responsys div .error{display:block}}.catalog-wrap section .responsys div select option{text-transform:capitalize}.catalog-wrap footer h2{margin:0 0 1rem}.catalog-wrap footer p{font-size:1rem}</style><script>jQuery(document).ready(function() {
 		jQuery('#optin').change(function() {
 			cb = jQuery(this);
 			if (cb.prop('checked')) {
@@ -221,8 +127,8 @@
 			$('form.responsys input[type="submit"]').hide();
 			$('form.responsys .sending').show();
 
-			var fname = $('form.responsys input[name="FIRST_NAME"]').val();
-			var lname = $('form.responsys input[name="LAST_NAME"]').val();
+			var fname = $('form.responsys input[name="first_name"]').val();
+			var lname = $('form.responsys input[name="last_name"]').val();
 			var address1 = $('form.responsys input[name="POSTAL_STREET_1_"]').val();
 			var address2 = $('form.responsys input[name="POSTAL_STREET_2_"]').val();
 			var city = $('form.responsys input[name="CITY_"]').val();
@@ -252,8 +158,8 @@
 					},
 					"vars": {
 						"CATALOG_REQUEST": "yes",
-						"First Name": fname,
-						"Last Name": lname,
+						"first_name": fname,
+						"last_name": lname,
 						"Address 1": address1,
 						"Address 2": address2,
 						"City": city,
@@ -285,5 +191,4 @@
 				$('.responsys .the-error').remove();
 			}
 		});
-	});
-</script>
+	});</script>
