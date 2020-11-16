@@ -52,8 +52,8 @@ $(document).ready(function () {
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,
-          "FIRST_NAME": fname,
-          "LAST_NAME": lname
+          "first_name": fname,
+          "last_name": lname
         },
         "source": ac,
         "onSuccess": function onSuccess() {
