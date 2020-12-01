@@ -1,14 +1,14 @@
 @import "var.less";
-@promo-cta-color: #345171;
+@promo-cta-color: #D7AB37;
 @promo-cta-background: #F8FF8F;
 @promo-cta2-color: #FCA025;
 @promo-cta3-color: #F999A5;
 
 .promo1 {
   @media screen and (max-width: 414px) {
-    margin: 0 0 10%;
+    // margin: 0 0 10%;
   }
-  margin: 0 0 2%;
+  margin: 0;
   position: relative;
   // background: #DFF6DC;
   // padding: 2% 0;
@@ -20,12 +20,12 @@
   div {
     &.the-content {
       @media screen and (max-width: 1024px) {
-        top: 44%;
+        top: 58%;
         // width: 51%;
-        left: 47%;
+        // left: 47%;
       }
       @media screen and (max-width: 414px) {
-        top: 53%;
+        top: 60%;
         width: 100%;
         // right: 0;
         left: 0;
@@ -34,20 +34,33 @@
       position: absolute;
       // text-align: center;
       // transform: translateX(-50%);
-      top: 49%;
-      width: 54%;
-      left: 49%;
+      top: 64%;
+      width: 26%;
+      left: 37%;
+
+      .first,
+      .second,
+      .third {
+        @media screen and (max-width: 768px) {
+          margin: 0;
+        }
+        @media screen and (max-width: 414px) {
+          margin: 0 0 9%;
+        }
+        margin: 0 0 9%;
+        text-align: center;
+      }
 
       .first {
-        margin: 0 0 9%;
+        // margin: 0 0 9%;
       }
 
       .second {
-        margin: 0 0 9%;
+        // margin: 0 0 9%;
       }
 
       .third {
-        margin: 0 0 9%;
+        // margin: 0 0 9%;
       }
 
       span {
@@ -77,15 +90,17 @@
           margin: 0 auto 6%;
           // padding: 3% 0;
           font-size: 4vw;
-          display: block;
-          width: 64%;
+          // padding: 0 0 8px;
+          // display: block;
+          // width: 64%;
         }
         color: @promo-cta-color;
-        background: @promo-cta-background;
-        margin: 0 3% 0 0;
+        // background: @promo-cta-background;
+        // margin: 0 3% 0 0;
         // width: 40%;
         // padding: 1.5% 0;
         display: inline;
+        padding: 0 0 8px;
 
         &:hover {
           // color: #fff;
@@ -95,42 +110,42 @@
           @media screen and (max-width: 414px) {
             // left: -2%;
           }
-          // left: -2%;
+          left: -4%;
         }
 
         &.cta2 {
           @media screen and (max-width: 414px) {
             // left: 4%;
           }
-          // left: 2%;
+          left: 4%;
         }
 
         &.cta3 {
           @media screen and (max-width: 414px) {
             // left: 0;
           }
-          // left: -2%;
+          left: -4%;
         }
 
         &.cta4 {
           @media screen and (max-width: 414px) {
             // left: 3%;
           }
-          left: 2%;
+          left: 4%;
         }
 
         &.cta5 {
           @media screen and (max-width: 414px) {
             // left: 0;
           }
-          left: -2%;
+          left: -4%;
         }
 
         &.cta6 {
           @media screen and (max-width: 414px) {
             // left: 3%;
           }
-          left: 2%;
+          left: 4%;
 
           span {}
         }
