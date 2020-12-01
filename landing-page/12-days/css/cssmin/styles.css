@@ -1,1 +1,1 @@
-.container{padding:0}.container img{max-width:100%}.mobile{display:none}@media screen and (max-width:414px){.desktop{display:none}.mobile{display:block}}
+.container-12-days{padding:0;display:flex;flex-wrap:nowrap}.container-12-days img{max-width:100%}.mobile{display:none}@media screen and (max-width:414px){.container-12-days{flex-wrap:wrap}.container-12-days div{flex-basis:50%}.container-12-days div.first{flex-basis:100%}.desktop{display:none}.mobile{display:block}}
