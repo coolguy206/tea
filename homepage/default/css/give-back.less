@@ -1,0 +1,36 @@
+@import "var.less"; // @import "promo1.less";
+@gb-font-color: #E8C3CA;
+@gb-cta-color: #FFF989;
+@gb-background: #00786C;
+
+.give-back {
+  @media screen and (max-width:414px) {
+    padding: 10% 0;
+  }
+  position: relative;
+  width: 100%;
+  background: @gb-background;
+  padding: 2% 0;
+
+  a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+
+    h2 {
+      @media screen and (max-width: 1679px) {
+        font-size: 1.1vw;
+      }
+      @media screen and (max-width:414px) {
+        font-size: 22px;
+        line-height: 38px;
+      }
+      font-family: @gilroyb;
+      color: @gb-font-color;
+      font-size: 18px;
+      line-height: 24px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+    }
+  }
+}

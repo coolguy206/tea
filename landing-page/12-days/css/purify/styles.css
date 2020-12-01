@@ -16,12 +16,6 @@
   }
 }
 
-@media screen and (max-width:414px) {
-  .container-12-days div.first {
-    flex-basis: 100%;
-  }
-}
-
 .container-12-days img {
   max-width: 100%;
 }

@@ -1,6 +1,6 @@
 @import "var.less";
-@c2-first-font-color: #fff;
-@c2-first-cta-color: #fff;
+@c2-first-font-color: #0B3C81;
+@c2-first-cta-color: #0B3C81;
 @c2-second-font-color: #fff;
 @c2-second-cta-color: #fff;
 @c2-third-font-color: #FFF989;
@@ -88,12 +88,20 @@
       .the-content {
         // padding: 7% 0 0;
         h2 {
+          @media screen and (max-width:414px) {
+            color: #fff;
+            text-shadow: 1px 1px 13px #7f7f7f;
+          }
           color: @c2-first-font-color;
         }
 
         div {
           // margin: 5% 0 0;
           a {
+            @media screen and (max-width:414px) {
+              color: #fff;
+              text-shadow: 1px 1px 13px #7f7f7f;
+            }
             color: @c2-first-cta-color;
 
             &.cta1 {

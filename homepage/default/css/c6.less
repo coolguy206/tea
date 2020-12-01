@@ -127,6 +127,9 @@
       }
       // padding: 4.8% 1% 0;
       .the-content {
+        @media screen and (max-width:1679px) {
+          top: 33%;
+        }
         @media screen and (max-width: 414px) {
           margin: 6% 0 0;
           top: 8%;
@@ -135,10 +138,13 @@
 
         h2 {
           @media screen and (max-width: 1679px) {
+            font-size: 3.6vw;
+            line-height: 3.6vw;
+          }
+          @media screen and (max-width: 414px) {
             font-size: 40px;
             line-height: 40px;
           }
-          @media screen and (max-width: 414px) {}
           color: @c6-second-font-color;
           font-size: 90px;
           line-height: 90px;
