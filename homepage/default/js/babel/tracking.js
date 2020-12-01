@@ -1,6 +1,7 @@
 "use strict";
 
 module.exports = function (elem, id) {
+  console.log("from tracking.js");
   var a = $(elem);
   $.each(a, function (j, val) {
     $(val).addClass('hp-url').attr({

@@ -1,47 +1,46 @@
-$(document).ready(function() {
+jQuery(document).ready(function() {
+  /*
+      const first = $('.the-promo').find('.span-wrap').clone();
+      const shopNow = $('.the-promo').find('.shop-now').clone();
+      // $('.hp-promo div').append(first, shopNow);
+      $('.hp-promo div').append(shopNow);
 
-  //responsive image map
-  //$('img[usemap]').rwdImageMaps();
+      const url = window.location.pathname;
 
-  //array of urls to hide the banners
-  const urlArray = [{
-      name: 'hp',
-      url: '/',
-    },
-    // {
-    // 	name: 'black-friday',
-    // 	url: '/black-friday'
-    // },
-    // {
-    // 	name:'sale-page',
-    // 	url:'/clothing-sale'
-    // },
-  ];
-
-  //function to hide or show the banner
-  const hideBanners = () => {
-    let url = window.location.pathname;
-
-    // $('.the-promo .see-details').fancybox();
-
-
-    $.each(urlArray, function(i, val) {
-      if (url == val.url) {
-        $('div[data-zone="sitewide_banner"]').empty();
+      if(url == '/'){
+          $('.hp-promo').show();
+          $('.hp').before($('.hp-promo'));
+      } else {
+          $('.the-promo').show();
       }
-    });
-  };
 
-  //on page load call hideBanners
-  hideBanners();
+  */
 
-  $('.the-promo .see-details').fancybox();
+  const url = window.location.pathname;
 
+  if (url !== '/12-days-of-tea' && url !== '/') {
+    $('.promos').show();
+  }
+
+  $('.the-promo .see-details').fancybox({
+    helpers: {
+      overlay: null
+    }
+  });
 
   $('.close-fancy').click(function(e) {
     // e.preventDefault();
     $.fancybox.close();
 
   });
+
+  // $('.promos-wrap').bxSlider({
+  //     auto: true,
+  //     autoHover: true,
+  //     mode: 'fade',
+  //     onSliderLoad:function(){
+  //         $('.promos.promo2, .promos.promo3').show();
+  //     }
+  // });
 
 });

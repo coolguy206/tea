@@ -1,6 +1,7 @@
 "use strict";
 
 module.exports = function (elem, alt) {
+  console.log("from alt.js");
   var img = $(elem);
   $.each(img, function (i, val) {
     $(val).attr('alt', alt);
