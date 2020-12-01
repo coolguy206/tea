@@ -1,87 +1,32 @@
 jQuery(document).ready(function() {
+  /*
+      const first = $('.the-promo').find('.span-wrap').clone();
+      const shopNow = $('.the-promo').find('.shop-now').clone();
+      // $('.hp-promo div').append(first, shopNow);
+      $('.hp-promo div').append(shopNow);
 
-  //responsive image map
-  // jQuery('img[usemap]').rwdImageMaps();
+      const url = window.location.pathname;
 
-  //array of urls to hide the banners
-  const urlArray = [{
-      name: 'hp',
-      url: '/',
-    },
-    // {
-    // 	name: 'black-friday',
-    // 	url: '/black-friday'
-    // },
-    // {
-    // 	name:'sale-page',
-    // 	url:'/clothing-sale'
-    // },
-  ];
-
-  //function to hide or show the banner
-  const hideBanners = () => {
-    let url = window.location.pathname;
-
-    // $('.the-promo .see-details').fancybox();
-
-
-    $.each(urlArray, function(i, val) {
-      if (url == val.url) {
-        $('div[data-zone="sitewide_banner"]').empty();
+      if(url == '/'){
+          $('.hp-promo').show();
+          $('.hp').before($('.hp-promo'));
+      } else {
+          $('.the-promo').show();
       }
-      // else if (url.split('/')[1] == 'select-styles') {
-      // 	$('div[data-zone="sitewide_banner"]').hide();
-      // 	$('div[data-zone="sitewide_banner_mobile"]').hide();
-      // 	return false;
-      // }
-    });
 
-    //if black friday landing page change dropdown cta urls
-    // if (url.split('/')[1] == 'black-friday') {
-    // 	//desktop
-    // 	if ($(window).width() > 737) {
-    // 		var area = $('map[name="map-d"] area');
-    // 		$.each(area, function(i, val) {
-    // 			var text = $(val).attr('name');
-    // 			if (text == 'girl') {
-    // 				$(val).attr('href', '/black-friday/girl');
-    // 			} else if (text == 'boy') {
-    // 				$(val).attr('href', '/black-friday/boy');
-    // 			} else if (text == 'baby girl') {
-    // 				$(val).attr('href', '/black-friday/baby-girl');
-    // 			} else if (text == 'baby boy') {
-    // 				$(val).attr('href', '/black-friday/baby-boy');
-    // 			} else if (text == 'tween') {
-    // 				$(val).attr('href', '/black-friday/tween');
-    // 			}
-    // 		});
-    // 	}
-    // 	//mobile
-    // 	else {
-    // 		var ctas = $('.cta-drop-down a');
-    // 		$.each(ctas, function(i, val) {
-    // 			var text = $(val).text();
-    // 			if (text == 'girl') {
-    // 				$(val).attr('href', '/black-friday/girl');
-    // 			} else if (text == 'boy') {
-    // 				$(val).attr('href', '/black-friday/boy');
-    // 			} else if (text == 'baby girl') {
-    // 				$(val).attr('href', '/black-friday/baby-girl');
-    // 			} else if (text == 'baby boy') {
-    // 				$(val).attr('href', '/black-friday/baby-boy');
-    // 			} else if (text == 'tween') {
-    // 				$(val).attr('href', '/black-friday/tween');
-    // 			}
-    // 		});
-    // 	}
-    // }
-  };
+  */
 
-  //on page load call hideBanners
-  hideBanners();
+  const url = window.location.pathname;
 
-  $('.the-promo .see-details').fancybox();
+  if (url !== '/12-days-of-tea' && url !== '/') {
+    $('.promos').show();
+  }
 
+  $('.the-promo .see-details').fancybox({
+    helpers: {
+      overlay: null
+    }
+  });
 
   $('.close-fancy').click(function(e) {
     // e.preventDefault();
@@ -89,5 +34,13 @@ jQuery(document).ready(function() {
 
   });
 
+  // $('.promos-wrap').bxSlider({
+  //     auto: true,
+  //     autoHover: true,
+  //     mode: 'fade',
+  //     onSliderLoad:function(){
+  //         $('.promos.promo2, .promos.promo3').show();
+  //     }
+  // });
 
 });

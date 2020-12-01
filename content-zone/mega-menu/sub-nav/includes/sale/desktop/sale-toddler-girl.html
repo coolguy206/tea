@@ -1,0 +1,36 @@
+<div>
+	<a href="/sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl" >Toddler Girl</a>
+	<span class="line"></span>
+	<div class="menu flex-menu">
+		<div class="panel panel-1">
+			{assign var=i value=0}
+
+				<ul class="category-sale">
+					<li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+					{sub_cats name="cat" category="black-friday/toddler-girl"}
+						<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title}</a></li>
+					{/sub_cats}
+				</ul>
+
+				<ul class="category-sale">
+					<li>Shop by Category</li>
+
+					<li><a href="{$secure_html_url}sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl view all" >View All</a></li>
+					{sub_cats name="cat" category="sale/toddler-girls-clothing"}
+					{if $i && $i % 6 eq 0}
+						</ul>
+						<ul class="category-sale">
+							<li class="spacer">Spacer</li>
+					{/if}
+						<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale tween categories" >{$cat.title}</a></li>
+					{math equation="x + y" x=$i y=1 assign=i}
+					{/sub_cats}
+				</ul>
+		</div>
+
+		<div class="panel panel-2 panel-sale">
+			<div class="da-rennab-zone" data-zone="mega_sale"></div>
+		</div>
+
+	</div>
+</div>

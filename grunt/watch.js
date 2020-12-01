@@ -9,14 +9,14 @@ module.exports = {
 
 
   mega: {
-    files: ['mega-menu/css/*.less', 'mega-menu/dev/*.html', 'mega-menu/js/*.js'],
+    files: ['mega-menu/css/*.less', 'mega-menu/dev/**/*.html', 'mega-menu/js/*.js'],
     tasks: ['less:mega', 'babel:mega', 'browserify:mega', 'uglify:mega', 'includes:mega', 'htmlmin:mega'],
   },
 
 
 
   zone: {
-    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/*.html', 'content-zone/' + config.zone.name + '/js/*.js'],
+    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/**/*.html', 'content-zone/' + config.zone.name + '/js/*.js'],
     tasks: ['less:zone', 'purifycss:zone', 'cssmin:zone', 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone', ],
   },
 

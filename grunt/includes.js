@@ -15,7 +15,7 @@ module.exports = {
       //toolkit
       {
         cwd: 'mega-menu/dev/',
-        src: ['*.html'],
+        src: ['*.html', 'black-friday/*.html'],
         dest: 'mega-menu/includes/',
       },
     ],
@@ -30,7 +30,7 @@ module.exports = {
       //content zone toolkit
       {
         cwd: 'content-zone/' + config.zone.name + '/dev',
-        src: ['*.html'],
+        src: ['*.html', 'black-friday/desktop/*.html', 'black-friday/mobile/*.html', 'desktop/*.html', 'mobile/*.html', 'sale/desktop/*.html', 'sale/mobile/*.html'],
         dest: 'content-zone/' + config.zone.name + '/includes/',
       },
     ],
