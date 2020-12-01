@@ -1,30 +1,9 @@
-.container-12-days {
-	@media screen and (max-width: 414px) {
-		flex-wrap: wrap;
-	}
+.container {
 	padding: 0;
-	display: flex;
-	flex-wrap: nowrap;
-
-	div {
-		@media screen and (max-width: 414px) {
-			flex-basis: 50%;
-		}
-		// flex-basis: 33%;
-		&.third {
-			@media screen and (max-width: 414px) {
-				flex-basis: 100%;
-			}
-		}
-	}
 
 	img {
 		max-width: 100%;
 	}
-}
-
-.main-title {
-	display: none;
 }
 
 .desktop {
@@ -37,5 +16,9 @@
 	@media screen and (max-width:414px) {
 		display: block;
 	}
+	display: none;
+}
+
+.main-title {
 	display: none;
 }
