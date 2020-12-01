@@ -24,7 +24,7 @@ html {
 .promos .hp-promo span,.promos .the-promo span {
   position: relative;
   font-family: gilroy-bold;
-  font-size: 16px;
+  font-size: 20px;
   line-height: 24px;
   letter-spacing: .2em;
   text-transform: uppercase;
@@ -42,7 +42,6 @@ html {
 }
 
 .promos .hp-promo span.first,.promos .the-promo span.first {
-  left: -1%;
   position: relative;
   font-family: gilroy-bold;
 }
@@ -88,11 +87,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #2DB988;
+  background: #382751;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #FFD1D4;
+  color: #FFD4EF;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
