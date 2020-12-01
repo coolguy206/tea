@@ -18,7 +18,7 @@ jQuery(document).ready(function() {
 
   const url = window.location.pathname;
 
-  if (url !== '/') {
+  if (url !== '/12-days-of-tea' && url !== '/') {
     $('.promos').show();
   }
 
