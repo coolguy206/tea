@@ -15,7 +15,7 @@
       <ul class="category first">
         <li>Shop by Category</li>
 
-        <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
+
         {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
         {if $i && $i % 6 eq 0}
           </ul>
@@ -26,6 +26,7 @@
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
           <li><a class="sale" href="/sale/toddler-girls-clothing" data="mega menu toddler girl sale">Sale</a></li>
+          <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
         </ul>
       </ul>
     </div>

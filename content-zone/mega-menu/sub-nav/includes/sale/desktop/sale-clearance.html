@@ -6,7 +6,7 @@
 		{assign var=i value=0}
 			<ul class="category-sale">
 				<li>Shop by Category</li>
-				<li><a href="{$secure_html_url}sale/clearance/view-all">View All</a></li>
+
 				{sub_cats name="cat" category="sale/clearance"}
 				{if $i && $i % 6 eq 0}
 					</ul>
@@ -16,6 +16,8 @@
 					<li><a href="{$cat.url}" class="{$cat.title|lower}">{$cat.title}</a></li>
 				{math equation="x + y" x=$i y=1 assign=i}
 				{/sub_cats}
+
+				<li><a href="{$secure_html_url}sale/clearance/view-all">View All</a></li>
 			</ul>
 	</div>
 

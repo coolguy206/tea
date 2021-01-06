@@ -8,9 +8,11 @@
       <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories">{$cat.title}</a></li>
     {/sub_cats} -->
 
-		<li><a href="{$secure_html_url}sale/boys-clothing/view-all" data="mobile mega menu sale boy" >View All</a></li>
+
 		{sub_cats name="cat" category="sale/boys-clothing"}
 			<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu sale boy" >{$cat.title}</a></li>
 		{/sub_cats}
+
+		<li><a href="{$secure_html_url}sale/boys-clothing/view-all" data="mobile mega menu sale boy" >View All</a></li>
 	</ul>
 </div>

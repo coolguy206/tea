@@ -6,7 +6,7 @@
       {assign var=i value=0}
       <ul class="category first">
         <li>Shop by Category</li>
-        <li><a href="{$secure_html_url}newborn-clothes/view-all" data="mega menu newborn view all" >View All</a></li>
+
         {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
         {if $i && $i % 3 eq 0}
           </ul>
@@ -17,6 +17,7 @@
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
           <li><a class="sale" href="{$secure_html_url}sale/newborn-clothing/view-all" data="mega menu newborn sale" >Sale</a></li>
+          <li><a href="{$secure_html_url}newborn-clothes/view-all" data="mega menu newborn view all" >View All</a></li>
         </ul>
       </ul>
     </div>
