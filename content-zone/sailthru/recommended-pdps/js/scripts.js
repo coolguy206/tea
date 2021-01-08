@@ -1,9 +1,12 @@
 $(document).ready(function() {
-  //popular vs trending
-  var id = '8286a49c-84e0-11ea-91cc-002590d1a41a';
+  //popular or trending
+  // var id = '8286a49c-84e0-11ea-91cc-002590d1a41a';
   // console.log(id);
 
-  //viewed vs purchased
+  //context or viewed
+  var id = `2c3a95ec-a5cb-11ea-87c0-002590d1a2f6`;
+
+  //viewed or purchased
   // var id = `134796ac-8591-11ea-b811-002590d1a41a`;
 
   Sailthru.init({
@@ -24,7 +27,7 @@ $(document).ready(function() {
       var jsonArr = JSON.parse(data[id].json);
 
       // console.log(typeof jsonArr);
-      // console.log(jsonArr);
+      console.log(jsonArr);
 
       $.each(jsonArr, function(i, val) {
 
@@ -35,9 +38,9 @@ $(document).ready(function() {
         price = price.toFixed(2);
         var title = val.title;
 
-        console.log(url, img, price, title);
+        // console.log(url, img, price, title);
         if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
-          console.log('tea pdp');
+          // console.log('tea pdp');
           if (img !== undefined && price !== undefined && title !== undefined) {
             var elem = `
             <li>
