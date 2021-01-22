@@ -19,17 +19,17 @@ var urls = {
       boy: "/toddler-boys-clothes/favorites/new-arrivals"
     },
     sale: {
-      girl: "/sale/girls-clothing/view-all",
-      boy: "/sale/boys-clothing/view-all",
-      tween: "/sale/tween-girls-clothing/view-all",
+      girl: "/sale/girls-clothing/",
+      boy: "/sale/boys-clothing/",
+      tween: "/sale/tween-girls-clothing/",
       baby: {
-        girl: "/sale/baby-girl-clothes/view-all",
-        boy: "/sale/baby-boy-clothes/view-all",
-        newborn: "/sale/newborn-clothing/view-all"
+        girl: "/sale/baby-girl-clothes/",
+        boy: "/sale/baby-boy-clothes/",
+        newborn: "/sale/newborn-clothing/"
       },
       toddler: {
-        girl: "/sale/toddler-girls-clothing/view-all",
-        boy: "/sale/toddler-boys-clothing/view-all"
+        girl: "/sale/toddler-girls-clothing/",
+        boy: "/sale/toddler-boys-clothing/"
       }
     }
   },
