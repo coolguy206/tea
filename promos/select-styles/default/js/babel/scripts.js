@@ -6,8 +6,8 @@ jQuery(document).ready(function () {
       const shopNow = $('.the-promo').find('.shop-now').clone();
       // $('.hp-promo div').append(first, shopNow);
       $('.hp-promo div').append(shopNow);
-       const url = window.location.pathname;
-       if(url == '/'){
+        const url = window.location.pathname;
+        if(url == '/'){
           $('.hp-promo').show();
           $('.hp').before($('.hp-promo'));
       } else {
