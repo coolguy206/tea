@@ -9,7 +9,8 @@ $(document).ready(function () {
   $('.dept-girl, .dept-baby').hover(function () {
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-    $('.promo2-url').hide(); // $('.clearance-url').hide();
+    $('.promo2-url').hide();
+    $('.clearance-url').hide();
   }, function () {});
   $('.dept-sale').hover(function () {
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
@@ -19,7 +20,8 @@ $(document).ready(function () {
   $('.dept-boy').hover(function () {
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-    $('.promo2-url').hide(); // $('.clearance-url').hide();
+    $('.promo2-url').hide();
+    $('.clearance-url').hide();
   }, function () {});
   $('.site-nav-submenu .bar>div').hover(function () {
     var href = $(this).find('a').first().attr('href'); // console.log(href);

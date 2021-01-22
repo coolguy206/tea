@@ -19,8 +19,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.girl;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/boys-clothing/view-all':
@@ -29,8 +29,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.boy;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/baby-girl-clothes/view-all':
@@ -39,8 +39,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.baby.girl;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/baby-boy-clothes/view-all':
@@ -49,8 +49,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.baby.boy;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/toddler-girls-clothing/view-all':
@@ -59,8 +59,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.toddler.girl;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/toddler-boys-clothing/view-all':
@@ -69,8 +69,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.toddler.boy;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/newborn-clothing/view-all':
@@ -79,8 +79,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.baby.newborn;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     case '/sale/tween-girls-clothing/view-all':
@@ -89,8 +89,8 @@ var switchSale = function switchSale(href) {
       clearance = _urls.urls.promo2.tween;
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
+
       break;
 
     default:
