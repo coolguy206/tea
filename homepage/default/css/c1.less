@@ -1,6 +1,8 @@
 @import "var.less"; // @import "promo1.less";
-@c1-font-color: #6C1772;
-@c1-cta-color: #Fff;
+@c1-font-color: #075B55;
+@c1-h2-color: #075B55;
+@c1-p-color: #fff;
+@c1-cta-color: #fff;
 @c1-cta-background: #072C35;
 
 .c1 {
@@ -15,8 +17,8 @@
         top: 4%;
       }
       position: absolute;
-      top: 22.5%;
-      width: 29%;
+      top: 13.5%;
+      width: 28%;
       left: 36%;
       text-align: center;
 
@@ -24,7 +26,7 @@
       a,
       h2,
       p {
-        color: @c1-font-color;
+        // color: @c1-font-color;
         font-family: @souv;
         margin: 0 auto;
       }
@@ -32,19 +34,19 @@
       h2 {
         @media screen and (max-width: 1679px) {
           font-size: 3.6vw;
-          line-height: 2.4vw;
+          line-height: 4.3vw;
         }
         @media screen and (max-width: 414px) {
           // font-size: 9vw;
           // margin: 0;
           line-height: 9vw;
-          font-size: 50px;
+          font-size: 44px;
           // color: #fff;
         }
         margin: 5% 0 0;
         text-transform: none;
-        color: @c1-font-color;
-        line-height: 40px;
+        color: @c1-h2-color;
+        line-height: 72px;
         font-family: @gilroyb;
         font-size: 60px;
         letter-spacing: 1px;
@@ -68,16 +70,17 @@
 
       p {
         @media screen and (max-width: 414px) {
-          // color: #fff;
+          color: @c1-h2-color;
           font-size: 18px;
           line-height: 24px;
           width: 96%;
           margin: 6% auto 0;
         }
-        margin: 9% auto 0;
+        margin: 11% auto 0;
+        color: @c1-p-color;
         text-transform: none;
         // letter-spacing: 1px;
-        width: 78%;
+        width: 100%;
       }
 
       div {
@@ -98,6 +101,7 @@
           @media screen and (max-width: 414px) {
             // width: 80%;
             // margin: 93% 0 0;
+            color: @c1-h2-color;
           }
           font-family: @gilroyb;
           color: @c1-cta-color;
