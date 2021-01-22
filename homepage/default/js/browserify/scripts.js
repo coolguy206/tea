@@ -94,7 +94,7 @@ var inview = require('./inview.js');
 var addTracking = require('./tracking.js');
 
 $(document).ready(function () {
-  addAlt('.hp .c1 img', 'girl and baby girl in dress');
+  addAlt('.hp .c1 img', 'girl in blue dress and boy in striped top');
   addAlt('.hp .c2 .first img', 'baby girl in pengquin tee');
   addAlt('.hp .c2 .second img', 'baby in romper');
   addAlt('.hp .c2 .third img', 'baby boy in holiday outfit');
@@ -108,7 +108,7 @@ $(document).ready(function () {
   addAlt('.hp .c5 .fourth img', 'boy in stripe sweater');
   addAlt('.hp .c6 .first img', 'girl in stripes');
   addAlt('.hp .c6 .second img', 'clearance');
-  addAlt('.hp .c7 .first img', 'girl with chicken top');
+  addAlt('.hp .c7 .first img', 'tea × olika hand sanitizer');
   addAlt('.hp .c7 .second img', 'family sitting together');
   addAlt('.hp .c7 .third img', 'baby girl in dinosaur dress');
   inview('.hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7');
