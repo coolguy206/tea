@@ -1,3 +1,5 @@
+@red: #be1d22;
+
 .customer-service-2 {
 	font-size: 1rem;
 
@@ -20,21 +22,21 @@
 	p {}
 }
 
-table.holiday {
-	td,
-	th {
-		color: #be1d22;
-		border: 1px solid #be1d22 !important;
-	}
-}
-
 .shipping-tables {
 	width: 100%;
 
 	td,
 	th {
-		border: 1px solid;
+		@media screen and (max-width:414px) {
+			padding: 0;
+			text-align: center;
+		}
+		border: 1px solid #000;
 		padding: 1rem;
+
+		&.holiday {
+			color: @red;
+		}
 
 		span {}
 	}
