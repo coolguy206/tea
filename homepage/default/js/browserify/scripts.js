@@ -94,7 +94,7 @@ var inview = require('./inview.js');
 var addTracking = require('./tracking.js');
 
 $(document).ready(function () {
-  addAlt('.hp .c1 img', 'girl in blue dress and boy in striped top');
+  addAlt('.hp .c1 img', 'Pajama Party');
   addAlt('.hp .c2 .first img', 'baby girl in pengquin tee');
   addAlt('.hp .c2 .second img', 'baby in romper');
   addAlt('.hp .c2 .third img', 'baby boy in holiday outfit');
@@ -106,11 +106,11 @@ $(document).ready(function () {
   addAlt('.hp .c5 .second img', 'baby sets outfits');
   addAlt('.hp .c5 .third img', 'red orange pajamas');
   addAlt('.hp .c5 .fourth img', 'boy in stripe sweater');
-  addAlt('.hp .c6 .first img', 'girl in stripes');
+  addAlt('.hp .c6 .first img', 'boy in banana graphic tee & girl in stripe top');
   addAlt('.hp .c6 .second img', 'clearance');
-  addAlt('.hp .c7 .first img', 'tea × olika hand sanitizer');
-  addAlt('.hp .c7 .second img', 'family sitting together');
-  addAlt('.hp .c7 .third img', 'baby girl in dinosaur dress');
+  addAlt('.hp .c7 .first img', 'boy in dessert');
+  addAlt('.hp .c7 .second img', 'learn how #teagivesback');
+  addAlt('.hp .c7 .third img', 'boy in graphic tee & girl in stripe dress');
   inview('.hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7');
 
   for (var i = 1; i < 8; i++) {
