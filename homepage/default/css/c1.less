@@ -1,9 +1,9 @@
 @import "var.less"; // @import "promo1.less";
 @c1-font-color: #fff;
-@c1-h2-color: #EBB131;
-@c1-p-color: #5777A7;
-@c1-cta-color: #5777A7;
-@c1-cta-background: #072C35;
+@c1-h2-color: #FEFD00;
+@c1-p-color: #fff;
+@c1-cta-color: #fff;
+@c1-cta-background: #3862AA;
 
 .c1 {
   position: relative;
@@ -15,11 +15,13 @@
         width: 100%;
         left: 0;
         top: 0;
+        transform: translateX(0);
       }
       position: absolute;
-      top: 18.5%;
-      width: 28%;
-      left: 36%;
+      top: 10%;
+      width: 61%;
+      left: 50%;
+      transform: translateX(-50%);
       text-align: center;
 
       a,
@@ -33,25 +35,25 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4.6vw;
-          line-height: 4.3vw;
+          font-size: 4.8vw;
+          line-height: 4.8vw;
         }
         @media screen and (max-width: 414px) {
           // font-size: 9vw;
           // margin: 0;
           line-height: 9vw;
           font-size: 35px;
-          // color: #fff;
+          color: #EC5053;
           margin: 12% 0 0;
-          display: none;
+          // display: none;
         }
         margin: 5% 0 0;
         text-transform: none;
         color: @c1-h2-color;
-        line-height: 72px;
+        line-height: 80px;
         font-family: @gilroyb;
-        font-size: 60px;
-        letter-spacing: 1px;
+        font-size: 80px;
+        letter-spacing: 0.25em;
 
         span {
           @media screen and (max-width: 1679px) {
@@ -72,30 +74,35 @@
 
       p {
         @media screen and (max-width: 1679px) {
-          font-size: 1.4vw;
-          line-height: 1.8vw;
+          font-size: 2.4vw;
+          line-height: 2.4vw;
         }
         @media screen and (max-width: 414px) {
-          color: @c1-h2-color;
+          color: @c1-cta-background;
           font-size: 18px;
           line-height: 24px;
           width: 96%;
           margin: 5% auto 0;
-          display: none;
+          // display: none;
         }
-        margin: 11% auto 0;
+        @media screen and (max-width: 320px) {
+          font-size: 17px;
+        }
+        margin: 3% auto 0;
         color: @c1-p-color;
         text-transform: none;
+        font-size: 40px;
+        line-height: 40px;
         // letter-spacing: 1px;
         width: 100%;
       }
 
       div {
         @media screen and (max-width: 414px) {
-          margin: 25% 0 0;
+          margin: 5% 0 0;
           //margin: 3% 0 0;
         }
-        margin: 12% 0 0;
+        margin: 6% 0 0;
         text-align: center;
 
         div {
@@ -105,14 +112,24 @@
         }
 
         a {
+          @media screen and (max-width: 1679px) {
+            width: auto;
+            height: auto;
+            padding: 1.4% 2.5%;
+          }
           @media screen and (max-width: 414px) {
-            // width: 80%;
+            width: 44%;
+            padding: 3.3% 2.5%;
             // margin: 93% 0 0;
             //color: @c1-h2-color;
           }
           font-family: @gilroyb;
           color: @c1-cta-color;
-          // background: @c1-cta-background;
+          background: @c1-cta-background;
+          width: 180px;
+          height: 45px;
+          padding: 1.4% 0;
+
           span {
             @media screen and (max-width: 414px) {
               display: none;
@@ -121,30 +138,30 @@
 
           &.cta1 {
             @media screen and (max-width: 414px) {
-              // left: -2%;
+              left: -2%;
             }
-            left: -4%;
+            left: -2%;
           }
 
           &.cta2 {
             @media screen and (max-width: 414px) {
-              // left: 2%;
+              left: 2%;
             }
-            // left: 3%;
+            left: -1%;
           }
 
           &.cta3 {
             @media screen and (max-width: 414px) {
-              // left: -2%;
+              left: -2%;
             }
-            left: -4%;
+            left: 1%;
           }
 
           &.cta4 {
             @media screen and (max-width: 414px) {
-              // left: 2%;
+              left: 2%;
             }
-            left: 0;
+            left: 2%;
           }
 
           &.cta5 {
