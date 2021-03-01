@@ -1,12 +1,12 @@
 $(document).ready(function() {
-  //popular or trending
+  //popular vs trending
   // var id = '8286a49c-84e0-11ea-91cc-002590d1a41a';
   // console.log(id);
 
-  //context or viewed
+  //context
   var id = `2c3a95ec-a5cb-11ea-87c0-002590d1a2f6`;
 
-  //viewed or purchased
+  //viewed vs purchased
   // var id = `134796ac-8591-11ea-b811-002590d1a41a`;
 
   Sailthru.init({
@@ -26,23 +26,25 @@ $(document).ready(function() {
 
       var jsonArr = JSON.parse(data[id].json);
 
-      // console.log(typeof jsonArr);
+      console.log(jsonArr.length);
       console.log(jsonArr);
 
-      $.each(jsonArr, function(i, val) {
+      if (jsonArr.length > 0) {
 
-        var url = val.url;
-        var img = val.image;
-        var price = val.price;
-        price = price / 100;
-        price = price.toFixed(2);
-        var title = val.title;
+        $.each(jsonArr, function(i, val) {
 
-        // console.log(url, img, price, title);
-        if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
-          // console.log('tea pdp');
-          if (img !== undefined && price !== undefined && title !== undefined) {
-            var elem = `
+          var url = val.url;
+          var img = val.image;
+          var price = val.price;
+          price = price / 100;
+          price = price.toFixed(2);
+          var title = val.title;
+
+          console.log(url, img, price, title);
+          if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
+            // console.log('tea pdp');
+            if (img !== undefined && price !== undefined && title !== undefined) {
+              var elem = `
             <li>
               <a href="${url}">
                 <img src="${img}" alt="${title}">
@@ -55,24 +57,31 @@ $(document).ready(function() {
               </p>
             </li>`;
 
-            $('.sailthru-list').append(elem);
-          }
+              $('.sailthru-list').append(elem);
 
-        }
+            } //end of if(img...)
+          } // end of if(url...)
 
+        }); //end of $.each
 
-      });
+        $('.sailthru-list').bxSlider({
+          minSlides: 1,
+          maxSlides: 4,
+          slideWidth: 300,
+          moveSlides: 1,
+          controls: true,
+          nextText: '<span class="fas fa-chevron-right"></span>',
+          prevText: '<span class="fas fa-chevron-left"></span>',
+          pager: false
+        });
 
-      $('.sailthru-list').bxSlider({
-        minSlides: 1,
-        maxSlides: 4,
-        slideWidth: 300,
-        moveSlides: 1,
-        controls: true,
-        nextText: '<span class="fas fa-chevron-right"></span>',
-        prevText: '<span class="fas fa-chevron-left"></span>',
-        pager: false
-      });
+        $('h2.sailthru-h2').show();
+
+      } //end of if jsonArr.length > 0
+      else {
+        console.log('no pdps returned');
+        console.log(data);
+      }
 
     },
     onError: function(err) {

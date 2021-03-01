@@ -4,7 +4,7 @@ var apiKey = keys.keys.api_key,
   sailthru = require('sailthru-client').createSailthruClient(apiKey, apiSecret);
 
 //change job_id
-var job_id = `5ffe0cddf27e5f2e217b133e`;
+var job_id = `6010a8a51de1664b8c20b667`;
 
 //check on job getJobStatus
 sailthru.getJobStatus(job_id, function(err, response) {
