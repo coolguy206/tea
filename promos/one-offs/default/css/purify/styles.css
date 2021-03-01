@@ -49,7 +49,6 @@ html {
 @media screen and (max-width:414px) {
   .promos .hp-promo span.first,  .promos .the-promo span.first {
     left: 0;
-    display: block;
   }
 }
 
@@ -87,11 +86,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #3083A5;
+  background: #F598A2;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #80F5D6;
+  color: #A7546E;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
