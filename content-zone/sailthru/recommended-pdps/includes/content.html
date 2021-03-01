@@ -1,29 +1,29 @@
 <div class="sailthru-pdps">
-  <div class="sailthru-popular">
-    <h2 class="sailthru-h2">Popular & Trending</h2>
+  <!-- <div class="sailthru-popular">
+    <h2 class="sailthru-h2">You Might<br class="mobile"> Also Like</h2>
     <ul class="sailthru-list"></ul>
-  </div>
+  </div> -->
 
   <div class="sailthru-context">
     <h2 class="sailthru-h2">You Might Also Like</h2>
     <ul class="sailthru-list"></ul>
   </div>
 
-  <div class="sailthru-purchased">
+  <!-- <div class="sailthru-purchased">
     <h2 class="sailthru-h2">Viewed & Purchased</h2>
     <ul class="sailthru-list"></ul>
-  </div>
+  </div> -->
 
-  <div class="sailthru-interest">
+  <!-- <div class="sailthru-interest">
     <h2 class="sailthru-h2">Interest & Prediction</h2>
     <ul class="sailthru-list"></ul>
-  </div>
+  </div> -->
 
 </div>
 
 {literal}
 <style>
-  .sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}
+  .sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.mobile{display:none}@media screen and (max-width:415px){.mobile{display:block}}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}
 </style>
 
 <script>
@@ -35,6 +35,7 @@
   $(document).ready(function() {
 
     var theURL = window.location.href;
+    console.log(theURL);
 
     //popular or trending
     var id_popular = '8286a49c-84e0-11ea-91cc-002590d1a41a';
@@ -64,6 +65,7 @@
           price = price / 100;
           price = price.toFixed(2);
           var title = val.title;
+          // title = title.replace('Tea Collection', '');
 
           // console.log(url, img, price, title);
           if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
@@ -114,19 +116,24 @@
 
     Sailthru.personalize({
 
-      sections: [{
+      sections: [
+        /*
+        {
           id: id_popular,
           selector: '.sailthru-popular .sailthru-list',
           onSuccess: function(data) {
             console.log('sailthru recommended pdps for popular & trending');
             console.log(data);
             x(data, '.sailthru-popular');
+            $('#pdp-item-suggestions').after($('.sailthru-pdps'));
           },
           onError: function(err) {
             console.log('sailthru recommended pdps popular & trending error');
             console.log(err);
           }
         },
+        */
+
         {
           id: id_context,
           selector: '.sailthru-context .sailthru-list',
@@ -134,13 +141,15 @@
             console.log('sailthru recommended pdps for context');
             console.log(data);
             x(data, '.sailthru-context');
-
+            $('#pdp-item-suggestions').after($('.sailthru-pdps'));
           },
           onError: function(err) {
             console.log('sailthru recommended pdps context error');
             console.log(err);
           }
         },
+
+        /*
         {
           id: id_purchased,
           selector: '.sailthru-purchased .sailthru-list',
@@ -167,8 +176,11 @@
             console.log(err);
           }
         },
+        */
       ],
-      vars: theURL,
+      vars: {
+        "context_key": theURL
+      },
 
     });
 

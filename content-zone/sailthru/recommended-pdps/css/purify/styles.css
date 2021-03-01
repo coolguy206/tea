@@ -11,6 +11,16 @@
   display: none;
 }
 
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width:415px) {
+  .mobile {
+    display: block;
+  }
+}
+
 .sailthru-list {
   list-style-type: none;
 }

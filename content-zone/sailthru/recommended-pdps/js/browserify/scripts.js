@@ -2,7 +2,8 @@
 "use strict";
 
 $(document).ready(function () {
-  var theURL = window.location.href; //popular or trending
+  var theURL = window.location.href;
+  console.log(theURL); //popular or trending
 
   var id_popular = '8286a49c-84e0-11ea-91cc-002590d1a41a'; //context
 
@@ -23,7 +24,8 @@ $(document).ready(function () {
         var price = val.price;
         price = price / 100;
         price = price.toFixed(2);
-        var title = val.title; // console.log(url, img, price, title);
+        var title = val.title; // title = title.replace('Tea Collection', '');
+        // console.log(url, img, price, title);
 
         if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
           // console.log('tea pdp');
@@ -54,56 +56,69 @@ $(document).ready(function () {
   };
 
   Sailthru.personalize({
-    sections: [{
+    sections: [
+    /*
+    {
       id: id_popular,
       selector: '.sailthru-popular .sailthru-list',
-      onSuccess: function onSuccess(data) {
+      onSuccess: function(data) {
         console.log('sailthru recommended pdps for popular & trending');
         console.log(data);
         x(data, '.sailthru-popular');
+        $('#pdp-item-suggestions').after($('.sailthru-pdps'));
       },
-      onError: function onError(err) {
+      onError: function(err) {
         console.log('sailthru recommended pdps popular & trending error');
         console.log(err);
       }
-    }, {
+    },
+    */
+    {
       id: id_context,
       selector: '.sailthru-context .sailthru-list',
       onSuccess: function onSuccess(data) {
         console.log('sailthru recommended pdps for context');
         console.log(data);
         x(data, '.sailthru-context');
+        $('#pdp-item-suggestions').after($('.sailthru-pdps'));
       },
       onError: function onError(err) {
         console.log('sailthru recommended pdps context error');
         console.log(err);
       }
-    }, {
+    }
+    /*
+    {
       id: id_purchased,
       selector: '.sailthru-purchased .sailthru-list',
-      onSuccess: function onSuccess(data) {
+      onSuccess: function(data) {
         console.log('sailthru recommended pdps for purchased & viewed');
         console.log(data);
         x(data, '.sailthru-purchased');
       },
-      onError: function onError(err) {
+      onError: function(err) {
         console.log('sailthru recommended pdps purchased & viewed error');
         console.log(err);
       }
-    }, {
+    },
+    {
       id: id_interest,
       selector: '.sailthru-interest .sailthru-list',
-      onSuccess: function onSuccess(data) {
+      onSuccess: function(data) {
         console.log('sailthru recommended pdps for interest & prediction');
         console.log(data);
         x(data, '.sailthru-interest');
       },
-      onError: function onError(err) {
+      onError: function(err) {
         console.log('sailthru recommended pdps interest & prediction error');
         console.log(err);
       }
-    }],
-    vars: theURL
+    },
+    */
+    ],
+    vars: {
+      "context_key": theURL
+    }
   });
 });
 
