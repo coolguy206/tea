@@ -1,1 +1,146 @@
-<div class="sailthru-pdps"><h2 class="sailthru-h2">You Might Also Like</h2><ul class="sailthru-list"></ul></div>{literal}<style>.sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}</style><script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script><script>!function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";$(document).ready(function(){var a="2c3a95ec-a5cb-11ea-87c0-002590d1a2f6";Sailthru.init({customerId:"856bfba3e6c8f69c9faad446ffedbce0",isCustom:!0}),Sailthru.personalize({sections:[{id:a}],vars:{},onSuccess:function(b){var c=JSON.parse(b[a].json);console.log(c.length),console.log(c),c.length>0?($.each(c,function(a,b){var c=b.url,d=b.image,e=b.price;e/=100,e=e.toFixed(2);var f=b.title;if(console.log(c,d,e,f),void 0!==c&&c.indexOf("teashowroom")==-1&&c.indexOf("sandbox.")==-1&&void 0!==d&&void 0!==e&&void 0!==f){var g='\n            <li>\n              <a href="'.concat(c,'">\n                <img src="').concat(d,'" alt="').concat(f,'">\n              </a>\n              <h3>\n                <a href="').concat(c,'">').concat(f,'</a>\n              </h3>\n              <p>\n                <span class="sale_price">$').concat(e,"</span>\n              </p>\n            </li>");$(".sailthru-list").append(g)}}),$(".sailthru-list").bxSlider({minSlides:1,maxSlides:4,slideWidth:300,moveSlides:1,controls:!0,nextText:'<span class="fas fa-chevron-right"></span>',prevText:'<span class="fas fa-chevron-left"></span>',pager:!1}),$("h2.sailthru-h2").show()):(console.log("no pdps returned"),console.log(b))},onError:function(a){console.log(a)}})})},{}]},{},[1]);</script>{/literal}
+<div class="sailthru-pdps"><div class="sailthru-popular"><h2 class="sailthru-h2">Popular & Trending</h2><ul class="sailthru-list"></ul></div><div class="sailthru-context"><h2 class="sailthru-h2">You Might Also Like</h2><ul class="sailthru-list"></ul></div><div class="sailthru-purchased"><h2 class="sailthru-h2">Viewed & Purchased</h2><ul class="sailthru-list"></ul></div><div class="sailthru-interest"><h2 class="sailthru-h2">Interest & Prediction</h2><ul class="sailthru-list"></ul></div></div>{literal}<style>.sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}</style><script>Sailthru.init({
+    customerId: '856bfba3e6c8f69c9faad446ffedbce0',
+    isCustom: true,
+  });
+
+  $(document).ready(function() {
+
+    var theURL = window.location.href;
+
+    //popular or trending
+    var id_popular = '8286a49c-84e0-11ea-91cc-002590d1a41a';
+
+    //context
+    var id_context = `2c3a95ec-a5cb-11ea-87c0-002590d1a2f6`;
+
+    //viewed or purchased
+    var id_purchased = `134796ac-8591-11ea-b811-002590d1a41a`;
+
+    //interest or prediction
+    var id_interest = `dcc9346e-8590-11ea-bec9-002590d1a2f6`;
+
+
+    var x = (data, parent) => {
+
+      var jsonArr = JSON.parse(data.json);
+      // console.log(jsonArr.length);
+      // console.log(jsonArr);
+
+      if (jsonArr.length > 0) {
+
+        $.each(jsonArr, function(i, val) {
+          var url = val.url;
+          var img = val.image;
+          var price = val.price;
+          price = price / 100;
+          price = price.toFixed(2);
+          var title = val.title;
+
+          // console.log(url, img, price, title);
+          if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
+            // console.log('tea pdp');
+            if (img !== undefined && price !== undefined && title !== undefined) {
+              var elem = `
+                        <li>
+                          <a href="${url}">
+                            <img src="${img}" alt="${title}">
+                          </a>
+                          <h3>
+                            <a href="${url}">${title}</a>
+                          </h3>
+                          <p>
+                            <span class="sale_price">$${price}</span>
+                          </p>
+                        </li>`;
+
+              $(parent + ' .sailthru-list').append(elem);
+
+            } //end of if(img...)
+          } // end of if(url...)
+
+        }); //end of $.each
+
+        $(parent + ' .sailthru-list').bxSlider({
+          minSlides: 1,
+          maxSlides: 4,
+          slideWidth: 300,
+          moveSlides: 1,
+          controls: true,
+          nextText: '<span class="fas fa-chevron-right"></span>',
+          prevText: '<span class="fas fa-chevron-left"></span>',
+          pager: false
+        });
+
+        $(parent + ' h2.sailthru-h2').show();
+
+      } //end of if jsonArr.length > 0
+      else {
+        console.log('no pdps returned');
+        // console.log(data);
+      }
+
+
+    };
+
+
+    Sailthru.personalize({
+
+      sections: [{
+          id: id_popular,
+          selector: '.sailthru-popular .sailthru-list',
+          onSuccess: function(data) {
+            console.log('sailthru recommended pdps for popular & trending');
+            console.log(data);
+            x(data, '.sailthru-popular');
+          },
+          onError: function(err) {
+            console.log('sailthru recommended pdps popular & trending error');
+            console.log(err);
+          }
+        },
+        {
+          id: id_context,
+          selector: '.sailthru-context .sailthru-list',
+          onSuccess: function(data) {
+            console.log('sailthru recommended pdps for context');
+            console.log(data);
+            x(data, '.sailthru-context');
+
+          },
+          onError: function(err) {
+            console.log('sailthru recommended pdps context error');
+            console.log(err);
+          }
+        },
+        {
+          id: id_purchased,
+          selector: '.sailthru-purchased .sailthru-list',
+          onSuccess: function(data) {
+            console.log('sailthru recommended pdps for purchased & viewed');
+            console.log(data);
+            x(data, '.sailthru-purchased');
+          },
+          onError: function(err) {
+            console.log('sailthru recommended pdps purchased & viewed error');
+            console.log(err);
+          }
+        },
+        {
+          id: id_interest,
+          selector: '.sailthru-interest .sailthru-list',
+          onSuccess: function(data) {
+            console.log('sailthru recommended pdps for interest & prediction');
+            console.log(data);
+            x(data, '.sailthru-interest');
+          },
+          onError: function(err) {
+            console.log('sailthru recommended pdps interest & prediction error');
+            console.log(err);
+          }
+        },
+      ],
+      vars: theURL,
+
+    });
+
+  });</script>{/literal}

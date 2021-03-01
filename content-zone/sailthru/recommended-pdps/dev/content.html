@@ -1,7 +1,24 @@
 <div class="sailthru-pdps">
-  <h2 class="sailthru-h2">You Might Also Like</h2>
+  <div class="sailthru-popular">
+    <h2 class="sailthru-h2">Popular & Trending</h2>
+    <ul class="sailthru-list"></ul>
+  </div>
 
-  <ul class="sailthru-list"></ul>
+  <div class="sailthru-context">
+    <h2 class="sailthru-h2">You Might Also Like</h2>
+    <ul class="sailthru-list"></ul>
+  </div>
+
+  <div class="sailthru-purchased">
+    <h2 class="sailthru-h2">Viewed & Purchased</h2>
+    <ul class="sailthru-list"></ul>
+  </div>
+
+  <div class="sailthru-interest">
+    <h2 class="sailthru-h2">Interest & Prediction</h2>
+    <ul class="sailthru-list"></ul>
+  </div>
+
 </div>
 
 {literal}
@@ -9,9 +26,13 @@
   include "../css/styles.css"
 </style>
 
-<script src="https://ak.sail-horizon.com/spm/spm.v1.min.js"></script>
-
 <script>
-  include "../js/jsmin/scripts.min.js"
+  Sailthru.init({
+    customerId: '856bfba3e6c8f69c9faad446ffedbce0',
+    isCustom: true,
+  });
+
+  include "../js/scripts.js"
 </script>
+
 {/literal}
