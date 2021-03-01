@@ -7,7 +7,7 @@ var inview = require('./inview.js');
 var addTracking = require('./tracking.js');
 
 $(document).ready(function () {
-  addAlt('.hp .c1 img', 'girl in cherry dress boy in plaid shirt girl twirl in blue flower dress');
+  addAlt('.hp .c1 img', 'kids running up a hill');
   addAlt('.hp .c2 .first img', 'baby girl in blue dress');
   addAlt('.hp .c2 .second img', 'baby boy in yellow graphic tee');
   addAlt('.hp .c2 .third img', 'baby in blue striped romper');

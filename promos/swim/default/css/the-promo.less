@@ -1,7 +1,7 @@
-@promo1Bg: #fcd13b;
-@promo1Color1: #fff;
+@promo1Bg: #3E878E;
+@promo1Color1: #FAF2E1;
 @promo1Color2: #9a7124;
-@promo1Color3: #f66478;
+@promo1Color3: #FAF2E1;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -43,11 +43,18 @@
     }
 
     span {
+      @media screen and (max-width: 414px) {
+        font-size: 12px;
+        line-height: 15px;
+      }
       position: relative;
       font-family: gilroy-bold;
-      font-size: 12px;
-      line-height: 18px;
-      letter-spacing: 2px;
+      // font-size: 12px;
+      // line-height: 18px;
+      // letter-spacing: 2px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
 
       &.span-wrap {
@@ -59,7 +66,7 @@
           left: 0;
           display: block;
         }
-        left: -1%;
+        // left: -1%;
         // color: @fontColor1;
         position: relative;
         font-family: gilroy-bold;
@@ -108,8 +115,12 @@
         position: absolute;
 
         a {
-          font-size: 12px;
-          line-height: 18px;
+          @media screen and (max-width: 414px) {
+            font-size: 12px;
+            line-height: 14px;
+          }
+          font-size: 15px;
+          line-height: 17px;
           // color: #fff;
           text-decoration: none;
           font-family: gilroy-regular;
@@ -147,7 +158,7 @@
 
         &.details {
           a {
-            color: @promo1Color1;
+            color: @promo1Color3;
           }
         }
       }
