@@ -1,7 +1,7 @@
 @import "var.less";
 @c3-first-font-color: #fff;
-@c3-first-cta-color: #fff;
-@c3-first-cta-background: #EC5053;
+@c3-first-cta-color: #fff; // @c3-first-cta-background: #EC5053;
+@c3-first-cta-background: #B45A90;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #FFF;
 @c3-second-cta-background: #3862AA;
@@ -172,17 +172,24 @@
             // position: relative;
             // top: 0;
             // left: 0;
+            margin: 42% 0 3%;
           }
           @media screen and (max-width: 375px) {
             width: 100%;
+          }
+          @media screen and (max-width: 321px) {
+            margin: 22% 0 3%;
           }
           color: @c3-first-font-color;
           // left: 50%;
         }
 
         div {
+          @media screen and (max-width: 414px) {
+            margin: 0;
+          }
           @media screen and (max-width: 375px) {
-            margin: 92% 0 0;
+            // margin: 92% 0 0;
           }
 
           a {
