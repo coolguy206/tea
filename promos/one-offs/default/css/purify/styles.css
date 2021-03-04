@@ -3,11 +3,38 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@media screen and (max-width:414px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width:414px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.header-banner {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .promos {
+  display: none;
+  background: #F9F2E0;
+}
+
+.promos .promos-wrap {
   max-width: 1680px;
   margin: 0 auto;
   position: relative;
-  display: none;
 }
 
 .promos .hp-promo,.promos .the-promo {
@@ -49,7 +76,6 @@ html {
 @media screen and (max-width:414px) {
   .promos .hp-promo span.first,  .promos .the-promo span.first {
     left: 0;
-    display: block;
   }
 }
 
@@ -83,15 +109,16 @@ html {
     left: 0;
     position: relative;
     display: block;
+    margin: 2% 0 0;
   }
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #5F7255;
+  background: #F9F2E0;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #FAF2E1;
+  color: #F6817F;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
@@ -112,6 +139,34 @@ html {
 
 .promos .hp-promo.promo3 span.first,.promos .the-promo.promo3 span.first {
   color: #f66d67;
+}
+
+.free-shipping-150 {
+  background: #F9F2E0;
+  margin: 0 auto;
+  position: fixed;
+  padding: .1% 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.free-shipping-150 h2 {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #47363D;
+}
+
+@media screen and (max-width:414px) {
+  .free-shipping-150 h2 {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .details-promo {

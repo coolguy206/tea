@@ -78,8 +78,8 @@ var switchSale = function switchSale(href) {
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo1.baby.newborn;
       clearance = _urls.urls.promo2.baby.newborn;
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+
       $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
@@ -88,8 +88,8 @@ var switchSale = function switchSale(href) {
       promo1 = _urls.urls.promo1.tween;
       promo2 = _urls.urls.promo1.tween;
       clearance = _urls.urls.promo2.tween;
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+
       $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
@@ -115,17 +115,17 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo1: {
-    girl: "/girls-pajamas-sleepwear",
-    boy: "/boys-pajamas-sleepwear",
-    tween: "/tween-girls-clothing/favorites/limited-time-sale",
+    girl: "/girls-clothing ",
+    boy: "/boys-clothing ",
+    tween: "/tween-girls-clothing ",
     baby: {
-      girl: "/baby-girl-pajamas",
-      boy: "/baby-boy-pajamas",
-      newborn: "/newborn-clothes/favorites/new-arrivals"
+      girl: "/baby-girl-clothes ",
+      boy: "/baby-boy-clothes ",
+      newborn: "/newborn-clothes"
     },
     toddler: {
-      girl: "/toddler-girls-clothes/pajamas",
-      boy: "/toddler-boys-clothes/pajamas"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/",

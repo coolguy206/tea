@@ -1,7 +1,7 @@
-@promo1Bg: #5F7255;
-@promo1Color1: #FAF2E1;
-@promo1Color2: #EDAE48;
-@promo1Color3: #FAF2E1;
+@promo1Bg: #F9F2E0;
+@promo1Color1: #F6817F;
+@promo1Color2: #2B64AB;
+@promo1Color3: #47363E;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -12,7 +12,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,10 +20,17 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
@@ -67,7 +74,7 @@
       &.first {
         @media screen and (max-width: 414px) {
           left: 0;
-          display: block;
+          // display: block;
         }
         // left: -1%;
         // color: @fontColor1;
@@ -122,6 +129,7 @@
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
