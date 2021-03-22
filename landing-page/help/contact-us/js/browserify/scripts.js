@@ -72,7 +72,7 @@ $(document).ready(function () {
       if (day <= 16) {
         $('.holiday-closure').hide();
       } else if (day >= 17) {
-        message = "<h3>Easter ".concat(month, "/4/").concat(year, "</h3>");
+        message = "<h3>Easter ".concat(month, "/3/").concat(year, " - ").concat(month, "/4/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -84,7 +84,7 @@ $(document).ready(function () {
       if (day >= 5) {
         $('.holiday-closure').hide();
       } else if (day <= 4) {
-        message = "<h3>Easter ".concat(month, "/4/").concat(year, "</h3>");
+        message = "<h3>Easter ".concat(month, "/3/").concat(year, " - ").concat(month, "/4/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }

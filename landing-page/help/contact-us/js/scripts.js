@@ -77,7 +77,7 @@ $(document).ready(function() {
       if (day <= 16) {
         $('.holiday-closure').hide();
       } else if (day >= 17) {
-        message = `<h3>Easter ${month}/4/${year}</h3>`;
+        message = `<h3>Easter ${month}/3/${year} - ${month}/4/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -87,7 +87,7 @@ $(document).ready(function() {
       if (day >= 5) {
         $('.holiday-closure').hide();
       } else if (day <= 4) {
-        message = `<h3>Easter ${month}/4/${year}</h3>`;
+        message = `<h3>Easter ${month}/3/${year} - ${month}/4/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
