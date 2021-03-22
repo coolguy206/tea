@@ -13,10 +13,10 @@ $(document).ready(function () {
   switch (month) {
     //november
     case 11:
-      if (day >= 27) {
+      if (day >= 26) {
         $('.holiday-closure').hide();
-      } else if (day <= 26) {
-        message = "<h3>Thanksgiving Day ".concat(month, "/26/").concat(year, "</h3>");
+      } else if (day <= 25) {
+        message = "<h3>Thanksgiving Day ".concat(month, "/25/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -71,7 +71,7 @@ $(document).ready(function () {
       if (day <= 16) {
         $('.holiday-closure').hide();
       } else if (day >= 17) {
-        message = "<h3>Easter ".concat(month, "/12/").concat(year, "</h3>");
+        message = "<h3>Easter ".concat(month, "/4/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -80,10 +80,10 @@ $(document).ready(function () {
     //april
 
     case 4:
-      if (day >= 13) {
+      if (day >= 5) {
         $('.holiday-closure').hide();
-      } else if (day <= 12) {
-        message = "<h3>Easter ".concat(month, "/12/").concat(year, "</h3>");
+      } else if (day <= 4) {
+        message = "<h3>Easter ".concat(month, "/4/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -95,7 +95,7 @@ $(document).ready(function () {
       if (day <= 15) {
         $('.holiday-closure').hide();
       } else if (day >= 16) {
-        message = "<h3>Memorial Day ".concat(month, "/25/").concat(year, " </h3>");
+        message = "<h3>Memorial Day ".concat(month, "/31/").concat(year, " </h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -133,7 +133,7 @@ $(document).ready(function () {
         $('.holiday-closure').hide();
       } else if (day >= 16) {
         var month = month + 1;
-        message = "<h3>Labor Day ".concat(month, "/7/").concat(year, "</h3>");
+        message = "<h3>Labor Day ".concat(month, "/6/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -142,10 +142,10 @@ $(document).ready(function () {
     //september
 
     case 9:
-      if (day >= 8) {
+      if (day >= 7) {
         $('.holiday-closure').hide();
-      } else if (day <= 7) {
-        message = "<h3>Labor Day ".concat(month, "/7/").concat(year, "</h3>");
+      } else if (day <= 6) {
+        message = "<h3>Labor Day ".concat(month, "/6/").concat(year, "</h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }

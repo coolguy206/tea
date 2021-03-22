@@ -14,10 +14,10 @@ $(document).ready(function() {
   switch (month) {
     //november
     case 11:
-      if (day >= 27) {
+      if (day >= 26) {
         $('.holiday-closure').hide();
-      } else if (day <= 26) {
-        message = `<h3>Thanksgiving Day ${month}/26/${year}</h3>`;
+      } else if (day <= 25) {
+        message = `<h3>Thanksgiving Day ${month}/25/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -77,17 +77,17 @@ $(document).ready(function() {
       if (day <= 16) {
         $('.holiday-closure').hide();
       } else if (day >= 17) {
-        message = `<h3>Easter ${month}/12/${year}</h3>`;
+        message = `<h3>Easter ${month}/4/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //april
     case 4:
-      if (day >= 13) {
+      if (day >= 5) {
         $('.holiday-closure').hide();
-      } else if (day <= 12) {
-        message = `<h3>Easter ${month}/12/${year}</h3>`;
+      } else if (day <= 4) {
+        message = `<h3>Easter ${month}/4/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -97,7 +97,7 @@ $(document).ready(function() {
       if (day <= 15) {
         $('.holiday-closure').hide();
       } else if (day >= 16) {
-        message = `<h3>Memorial Day ${month}/25/${year} </h3>`;
+        message = `<h3>Memorial Day ${month}/31/${year} </h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -129,17 +129,17 @@ $(document).ready(function() {
         $('.holiday-closure').hide();
       } else if (day >= 16) {
         var month = month + 1;
-        message = `<h3>Labor Day ${month}/7/${year}</h3>`;
+        message = `<h3>Labor Day ${month}/6/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //september
     case 9:
-      if (day >= 8) {
+      if (day >= 7) {
         $('.holiday-closure').hide();
-      } else if (day <= 7) {
-        message = `<h3>Labor Day ${month}/7/${year}</h3>`;
+      } else if (day <= 6) {
+        message = `<h3>Labor Day ${month}/6/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
