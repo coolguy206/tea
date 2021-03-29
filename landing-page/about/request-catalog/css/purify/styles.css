@@ -118,17 +118,6 @@
   background: #47363D;
 }
 
-.catalog-wrap section .responsys div .error {
-  color: #cc0033;
-  font-size: 1rem;
-}
-
-@media screen and (max-width:737px) {
-  .catalog-wrap section .responsys div .error {
-    display: block;
-  }
-}
-
 .catalog-wrap section .responsys div select option {
   text-transform: capitalize;
 }

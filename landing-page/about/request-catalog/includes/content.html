@@ -6,7 +6,7 @@
 	<h1>Request A Catalog</h1>
 
 	<section>
-		<p>Yes, I'd love to receive Tea's seasonal catalogs (only available in the US at present).</p>
+		<p>Yes, I'd love to receive Tea's catalogs (available for U.S. addresses at present).</p>
 		<p>Please fill in the fields below:</p>
 		<p class="italic">* Required Fields</p>
 		<form name="contact_form" class="responsys" data="catalogs-request">
@@ -76,8 +76,8 @@
 
 	<footer>
 		<h2>Tea Collection Catalogs</h2>
-		<p>Our catalogs take you on an adventure to the places that inspired our seasonal styles. For our spring and summer collections, we celebrate the adventurous spirit of the land Down Under. From Sydney to the Outback and rainforests to reefs, we
-			found endless inspiration in Australia for our kids fashion collection. Request our free children's catalog today to discover our newest styles from this incredible destination.</p>
+		<p>Join the adventure! Tea’s catalogs take you to the destinations that inspire our children’s clothing collections. Discover globally-inspired, heirloom-quality styles that spark curiosity and connection. Available for newborn, baby, toddler,
+			kids and tween, Tea Collection travels the world to bring the beauty of different cultures and modern design to children’s clothing.</p>
 	</footer>
 
 </div>
@@ -89,201 +89,6 @@
 	.catalog-wrap h1{margin:0 0 2rem}.catalog-wrap section{margin:0 0 2rem}.catalog-wrap section p{font-size:1rem;margin:0 0 1rem}.catalog-wrap section .responsys p{text-transform:uppercase;font-size:1rem;display:none}.catalog-wrap section .responsys p.success{font-family:gilroy-bold}.catalog-wrap section .responsys p.sending{font-family:gilroy-regular}.catalog-wrap section .responsys div{display:flex;flex-wrap:wrap;margin:0 0 1rem}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div label,.catalog-wrap section .responsys div select{display:inline-block;margin:0 1rem 1rem 0;font-family:gilroy-regular}.catalog-wrap section .responsys div label{font-size:1rem;text-transform:capitalize;width:20%;font-family:gilroy-regular}@media screen and (max-width:1024px){.catalog-wrap section .responsys div label{width:30%}}@media screen and (max-width:414px){.catalog-wrap section .responsys div label{width:100%}}.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{padding:.75rem 1.125rem;width:28%;margin:0;box-sizing:border-box;background:#EDEBEC}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:53%;padding:1rem 2rem}}@media screen and (max-width:414px){.catalog-wrap section .responsys div input,.catalog-wrap section .responsys div select{width:100%}}.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:16px !important;height:16px;border:1px solid #47363D;background:#fff;box-sizing:border-box;padding:0}.catalog-wrap section .responsys div input[type="checkbox"]:checked,.catalog-wrap section .responsys div select[type="checkbox"]:checked,.catalog-wrap section .responsys div input[type="checkbox"]:hover,.catalog-wrap section .responsys div select[type="checkbox"]:hover{background:#47363D}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"],.catalog-wrap section .responsys div input[type="checkbox"],.catalog-wrap section .responsys div select[type="checkbox"]{width:auto}.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{text-transform:uppercase;border:2px solid #47363D;background:#fff;color:#47363D;font-family:gilroy-bold;padding:.75rem 1.25rem}@media screen and (max-width:1024px){.catalog-wrap section .responsys div input[type="submit"],.catalog-wrap section .responsys div select[type="submit"]{padding:1rem 2rem}}.catalog-wrap section .responsys div input[type="submit"]:hover,.catalog-wrap section .responsys div select[type="submit"]:hover{background:#75686D;color:#fff}.catalog-wrap section .responsys div input[type="submit"]:active,.catalog-wrap section .responsys div select[type="submit"]:active{background:#47363D}.catalog-wrap section .responsys div .error{color:#cc0033;font-size:1rem}@media screen and (max-width:737px){.catalog-wrap section .responsys div .error{display:block}}.catalog-wrap section .responsys div select option{text-transform:capitalize}.catalog-wrap footer h2{margin:0 0 1rem}.catalog-wrap footer p{font-size:1rem}
 </style>
 
-
-
 <script>
-	jQuery(document).ready(function() {
-		jQuery('#optin').change(function() {
-			cb = jQuery(this);
-			if (cb.prop('checked')) {
-				jQuery(this).val('yes');
-			} else {
-				jQuery(this).val('no');
-			}
-		});
-
-		//add the states
-		$.getJSON("https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json", function(result) {
-			// console.log(result);
-			$.each(result, function(i, val) {
-				// console.log(val.name);
-				switch (val.name) {
-					case 'American Samoa':
-					case 'Federated States Of Micronesia':
-					case 'Guam':
-					case 'Marshall Islands':
-					case 'Northern Mariana Islands':
-					case 'Palau':
-					case 'Puerto Rico':
-					case 'Virgin Islands':
-						console.log('nope');
-						break;
-					default:
-						var option = '<option value="' + val.abbreviation + '">' + val.name + '</option>';
-						$('#states').append(option);
-				}
-
-			});
-		});
-
-		var userSrc = [{
-				value: 'friend',
-				key: 'friend'
-			},
-			{
-				value: 'facebook',
-				key: 'facebook'
-			},
-			{
-				value: 'pinterest',
-				key: 'pinterest'
-			},
-			{
-				value: 'gift',
-				key: 'gift'
-			},
-			{
-				value: 'search engine',
-				key: 'search'
-			},
-			{
-				value: 'parents magazine',
-				key: 'parents'
-			},
-			{
-				value: 'pregnancy magazine',
-				key: 'pregnancy'
-			},
-			{
-				value: 'other magazine',
-				key: 'othermagazine'
-			},
-			{
-				value: 'blog/parenting site',
-				key: 'blog'
-			},
-			{
-				value: 'tea catalog',
-				key: 'catalog'
-			},
-			{
-				value: 'tiny prints',
-				key: 'tinyprints'
-			},
-			{
-				value: 'HauteLook',
-				key: 'hautelook'
-			},
-			{
-				value: 'LilLuxe',
-				key: 'lilluxe'
-			},
-			{
-				value: 'Zulily',
-				key: 'zulily'
-			},
-			{
-				value: 'Gilt',
-				key: 'gilt'
-			},
-			{
-				value: 'Nordstrom',
-				key: 'nordstrom'
-			},
-			{
-				value: 'Amazon',
-				key: 'amazon'
-			},
-			{
-				value: 'Diapers.com',
-				key: 'diapers'
-			},
-			{
-				value: 'Children\'s Boutique',
-				key: 'store'
-			},
-			{
-				value: 'Other',
-				key: 'other'
-			}
-		];
-
-		//add the user source
-		$.each(userSrc, function(i, val) {
-			var option = '<option value="' + val.key + '">' + val.value + '</option>';
-			$('#user-src').append(option);
-		});
-
-		//submit the form
-		$('.responsys').submit(function(e) {
-			e.preventDefault();
-
-			$('form.responsys input[type="submit"]').hide();
-			$('form.responsys .sending').show();
-
-			var fname = $('form.responsys input[name="first_name"]').val();
-			var lname = $('form.responsys input[name="last_name"]').val();
-			var address1 = $('form.responsys input[name="POSTAL_STREET_1_"]').val();
-			var address2 = $('form.responsys input[name="POSTAL_STREET_2_"]').val();
-			var city = $('form.responsys input[name="CITY_"]').val();
-			var state = $('#states').val();
-			var zip = $('form.responsys input[name="POSTAL_CODE_"]').val();
-			var email = $('form.responsys input[name="EMAIL_ADDRESS_"]').val();
-			var subscribe = $('#optin').val();
-			var howHear = $('#user-src').val();
-			if (howHear == "Please Select") {
-				howHear = "";
-			}
-			//remove all errors
-			$('.responsys .the-error').remove();
-
-			//make sure a state is selected
-			var states = $('#states').val();
-			if (states == 'Please Select*') {
-				var err = '<div class="the-error"><label></label><span class="error">Please Select a State</span></div>';
-				$('#states').closest('div').before(err);
-			} else {
-
-				Sailthru.integration("userSignUp", {
-					"id": email,
-					"email": email,
-					"lists": {
-						"MASTER_CONTACTS_LIST": 1
-					},
-					"vars": {
-						"CATALOG_REQUEST": "yes",
-						"first_name": fname,
-						"last_name": lname,
-						"Address 1": address1,
-						"Address 2": address2,
-						"City": city,
-						"State": state,
-						"Zip": zip,
-						"Subscribe": subscribe,
-						"How Did You Hear About Tea?": howHear
-					},
-					"onSuccess": function() {
-						$('form.responsys .sending').hide();
-						$('form.responsys .success').show();
-
-						setTimeout(function() {
-							$('form.responsys .success').fadeOut(function() {
-								$('form.responsys input[type="submit"]').fadeIn();
-							});
-						}, 2000);
-					},
-
-				});
-			}
-		});
-
-		//#states change
-		$('#states').change(function(e) {
-			var states = $('#states').val();
-			if (states !== 'Please Select*') {
-				//remove all errors
-				$('.responsys .the-error').remove();
-			}
-		});
-	});
+	!function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";jQuery(document).ready(function(){jQuery("#optin").change(function(){cb=jQuery(this),cb.prop("checked")?jQuery(this).val("yes"):jQuery(this).val("no")}),$.getJSON("https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json",function(a){$.each(a,function(a,b){switch(b.name){case"American Samoa":case"Federated States Of Micronesia":case"Guam":case"Marshall Islands":case"Northern Mariana Islands":case"Palau":case"Puerto Rico":case"Virgin Islands":console.log("nope");break;default:var c='<option value="'+b.abbreviation+'">'+b.name+"</option>";$("#states").append(c)}})});var a=[{value:"friend",key:"friend"},{value:"gift",key:"gift"},{value:"social media",key:"social media"},{value:"online ad",key:"online ad"},{value:"magazine/online article/blog",key:"magazine/online article/blog"},{value:"search engine",key:"search"},{value:"children's boutique",key:"children boutique"},{value:"department store",key:"department store"},{value:"Amazon",key:"amazon"},{value:"Zulily",key:"zulily"},{value:"registry website",key:"registry website"},{value:"other",key:"other"}];$.each(a,function(a,b){var c='<option value="'+b.key+'">'+b.value+"</option>";$("#user-src").append(c)}),$(".responsys").submit(function(a){a.preventDefault(),$('form.responsys input[type="submit"]').hide(),$("form.responsys .sending").show();var b=$('form.responsys input[name="first_name"]').val(),c=$('form.responsys input[name="last_name"]').val(),d=$('form.responsys input[name="POSTAL_STREET_1_"]').val(),e=$('form.responsys input[name="POSTAL_STREET_2_"]').val(),f=$('form.responsys input[name="CITY_"]').val(),g=$("#states").val(),h=$('form.responsys input[name="POSTAL_CODE_"]').val(),i=$('form.responsys input[name="EMAIL_ADDRESS_"]').val(),j=$("#optin").val(),k=$("#user-src").val();"Please Select"==k&&(k=""),$(".responsys .the-error").remove();var l=$("#states").val();if("Please Select*"==l){var m='<div class="the-error"><label></label><span class="error">Please Select a State</span></div>';$("#states").closest("div").before(m)}else Sailthru.integration("userSignUp",{id:i,email:i,lists:{MASTER_CONTACTS_LIST:1},vars:{CATALOG_REQUEST:"yes",first_name:b,last_name:c,"Address 1":d,"Address 2":e,City:f,State:g,Zip:h,Subscribe:j,"How Did You Hear About Tea?":k},onSuccess:function(){$("form.responsys .sending").hide(),$("form.responsys .success").show(),setTimeout(function(){$("form.responsys .success").fadeOut(function(){$('form.responsys input[type="submit"]').fadeIn()})},2e3)}})}),$("#states").change(function(a){var b=$("#states").val();"Please Select*"!==b&&$(".responsys .the-error").remove()})})},{}]},{},[1]);
 </script>
