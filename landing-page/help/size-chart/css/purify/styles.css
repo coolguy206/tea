@@ -38,6 +38,16 @@
   padding: 0;
 }
 
+.size-chart-container .note {
+  margin: 0;
+}
+
+@media screen and (max-width:414px) {
+  .size-chart-container .note {
+    margin: 1em 0;
+  }
+}
+
 .size-chart-container h1 {
   font-size: 42px;
   line-height: 53px;
