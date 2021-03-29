@@ -17,12 +17,6 @@
   position: relative;
 }
 
-@media screen and (max-width:414px) {
-  .c1 {
-    background: #FDF5F2;
-  }
-}
-
 .c2 {
   padding: 4% 5%;
   flex-basis: 100%;
