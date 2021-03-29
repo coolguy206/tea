@@ -1,6 +1,7 @@
 @import 'var.less';
-@c2-background: #FDF5F2;
-@c2-cta-color: #771B2C;
+@c2-background: #fff;
+@c2-cta-color: #F7657A;
+@c2-font-color: #F7657A;
 
 .c2 {
   @media screen and (max-width: 414px) {
@@ -16,30 +17,54 @@
     position: relative;
     padding: 1% 1% 0 0;
 
-    .the-content {
-      @media screen and (max-width: 414px) {
-        top: 62%;
+    span {
+      color: #fff;
+      margin: 6% 0 0;
+      background: @c2-cta-color;
+      width: 42%;
+      padding: 2.2% 4%;
+
+      &.mobile {
+        position: absolute;
+        bottom: 11%;
+        width: 55%;
         left: 50%;
-        width: 100%;
         transform: translateX(-50%);
       }
+
+      a {
+        text-decoration: none;
+        font-family: @gilroyb;
+      }
+    }
+
+    .the-content {
+      @media screen and (max-width: 414px) {
+        top: 10%;
+        left: -5%;
+        // width: 100%;
+        // transform: translateX(-50%);
+      }
       position: absolute;
-      top: 69%;
-      left: 16%;
+      top: 8%;
+      left: 0;
       width: 64%;
       text-align: center;
 
-      span {
-        color: #fff;
-        margin: 6% 0 0;
-        background: @c2-cta-color;
-        width: 42%;
-
-        a {
-          text-decoration: none;
-          font-family: @gilroyb;
-        }
+      h2 {
+        color: @c2-font-color;
       }
+      // span {
+      //   color: #fff;
+      //   margin: 6% 0 0;
+      //   background: @c2-cta-color;
+      //   width: 42%;
+      //
+      //   a {
+      //     text-decoration: none;
+      //     font-family: @gilroyb;
+      //   }
+      // }
     }
   }
 

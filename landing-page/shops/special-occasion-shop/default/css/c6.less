@@ -1,8 +1,8 @@
 @import 'var.less';
-@c6-cta-color: #075B54;
-@c6-font-color: #075B54;
-@c6-background: #FDF5F2;
-/*.c6 {
+@c6-cta-color: #F7657A;
+@c6-font-color: #F7657A;
+@c6-span-color: #B45B91;
+@c6-background: #fff; /*.c6 {
   @media screen and (max-width: 414px) {
     padding: 4% 0;
   }
@@ -46,6 +46,7 @@
     }
   }
 }*/
+
 .c6 {
   @media screen and (max-width: 414px) {
     padding: 4% 0;
@@ -63,8 +64,9 @@
         top: 0;
         left: 0;
         padding: 2.5% 0;
+        margin: 4% 0 0;
       }
-      background: #075B54;
+      background: @c6-cta-color;
       padding: 1% 0;
       left: 3.4%;
       width: 18%;
@@ -88,12 +90,18 @@
       }
       flex-basis: 24%;
       margin: 0 1.1% 0 0;
+      text-align: center;
 
       &:last-of-type {
         margin: 0;
       }
-
-      a {}
+      // a {
+      span {
+        color: @c6-span-color;
+        margin: 7% 0 0;
+        // display: none;
+      }
+      // }
     }
   }
 }

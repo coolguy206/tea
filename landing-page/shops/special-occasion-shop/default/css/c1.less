@@ -1,6 +1,6 @@
 @import 'var.less';
-@c1-cta-color: #8F713B;
-@c1-font-color-m: #282B54;
+@c1-cta-color: #59BF98;
+@c1-font-color: #B45B91;
 
 .c1 {
   position: relative;
@@ -9,7 +9,6 @@
     @media screen and (max-width: 414px) {
       width: 45%;
       margin: 0 auto;
-      color: @c1-font-color-m !important;
       width: 100%;
       position: absolute;
       top: 5%;
@@ -21,17 +20,43 @@
       width: 100%;
       top: 0;
       left: 0;
-      position: relative;
-      padding: 0 0 4%;
+      // position: relative;
+      padding: 9% 0 0;
     }
     position: absolute;
-    top: 22.7%;
+    top: 11.7%;
     left: 34.5%;
     width: 31%;
 
+    img {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+      margin: 0 0 9%;
+    }
+
+    h2,
+    p {
+      @media screen and (max-width:414px) {
+        color: #fff;
+        position: relative;
+      }
+      color: @c1-font-color;
+    }
+
+    h2 {
+      @media screen and (max-width:414px) {
+        margin: 0 0 4%;
+      }
+    }
+
     p {
       @media screen and (max-width: 414px) {
-        display: none;
+        // display: none;
+        font-size: 4vw;
+        line-height: 5vw;
+        width: 100%;
+        margin: 0 0 5%;
       }
       margin: 3.5% auto 9%;
       width: 75%;
@@ -48,6 +73,7 @@
         color: #fff;
         background: @c1-cta-color;
         width: 42%;
+        padding: 2% 4%;
 
         span {
           @media screen and (max-width: 414px) {

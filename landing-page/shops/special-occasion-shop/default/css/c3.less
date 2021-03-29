@@ -1,6 +1,6 @@
 @import 'var.less';
-@c3-cta-color: #282B54;
-/*.c3 {
+@c3-cta-color: #88397A;
+@c3-font-color: #88397A; /*.c3 {
     @media screen and (max-width: 414px) {
         padding: 4% 0 0;
         background: none;
@@ -51,26 +51,36 @@
         }
     }
 }*/
+
 .c3 {
   position: relative;
 
   .the-content {
+    @media screen and (max-width: 768px) {
+      top: 9.5%;
+    }
     @media screen and (max-width: 414px) {
-      top: 52%;
+      top: 4%;
       left: 0;
       width: 100%;
     }
     position: absolute;
-    top: 29.5%;
+    top: 17.5%;
     left: 38%;
     width: 24%;
     text-align: center;
 
+    img {
+      margin: 0 0 2%;
+    }
+
     h2 {
       @media screen and (max-width: 414px) {
-        width: 65%;
-        margin: 0 auto;
+        width: 100%;
+        margin: 0 auto 4%;
+        color: #fff;
       }
+      color: @c3-font-color;
     }
 
     span {
