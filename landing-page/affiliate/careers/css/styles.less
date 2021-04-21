@@ -17,22 +17,67 @@
 
 	h1,
 	h2,
-	h3 {}
+	h3 {
+		@media screen and (max-width: 414px) {
+			margin: 0 0 4%;
+		}
+		font-family: souvenirstd-light;
+		font-weight: bold;
+		margin: 0 0 1%;
+	}
 
-	h1 {}
+	h1 {
+		@media screen and (max-width:1679px) {
+			font-size: 4vw;
+		}
+		@media screen and (max-width: 414px) {
+			font-size: 50px;
+		}
+		font-size: 50px;
+	}
 
-	h2 {}
+	h2,
+	h3 {
+		@media screen and (max-width: 1679px) {
+			font-size: 2vw;
+		}
+		@media screen and (max-width: 414px) {
+			font-size: 36px;
+			line-height: 46px;
+		}
+		font-size: 36px;
+		line-height: 40px;
+	}
 
 	b,
 	h3 {}
 
-	p {}
+	div,
+	li,
+	p {
+		@media screen and (max-width: 1679px) {
+			font-size: 1.3vw;
+			line-height: 2vw;
+		}
+		@media screen and (max-width: 414px) {
+			font-size: 18px;
+			line-height: 24px;
+			margin: 0 0 4%;
+		}
+		font-size: 20px;
+		line-height: 30px;
+		font-family: gilroy-regular;
+		margin: 0 0 1%;
+	}
 
 	.jobs-list,
 	.the-job {
 		ul {}
 
 		li {
+			@media screen and (max-width: 414px) {
+				margin: 0 0 10%;
+			}
 			list-style-type: none;
 
 			a {
