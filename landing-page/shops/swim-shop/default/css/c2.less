@@ -1,0 +1,208 @@
+@import "var.less";
+@c2-first-font-color: #0B3C81;
+@c2-first-cta-color: #fff;
+@c2-first-cta-background: #3862AA;
+@c2-second-font-color: #fff;
+@c2-second-cta-color: #fff;
+@c2-second-cta-background: #EC5053;
+@c2-third-font-color: #FFF989;
+@c2-third-cta-color: #FFF;
+@c2-third-cta-background: #59BF98;
+
+.c2 {
+  @media screen and (max-width: 414px) {
+    flex-wrap: wrap;
+    padding: 0;
+    // background: @background;
+  }
+  display: flex;
+  // padding: 0 0 0.8%;
+  text-align: center;
+  // flex-wrap: wrap;
+  div {
+    &.first,
+    &.second,
+    &.third {
+      @media screen and (max-width:414px) {
+        padding: 0;
+      }
+      text-align: center;
+      padding: 0;
+      box-sizing: border-box;
+      flex-basis: 34%;
+      position: relative;
+
+      a {
+        text-decoration: none;
+      }
+
+      .the-content {
+        @media screen and (max-width:414px) {
+          margin: 10% 0 0 !important;
+          bottom: 14%;
+        }
+        margin: 7% 0 0;
+        position: absolute;
+        bottom: 9%;
+        width: 100%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.6vw;
+            line-height: 1.6vw;
+          }
+          @media screen and (max-width:414px) {
+            font-size: 24px;
+            line-height: 28px;
+            // margin: 8% 0 10%;
+            margin: 0;
+          }
+          font-family: @gilroyb;
+          font-size: 30px;
+          line-height: 28px;
+          letter-spacing: 0.25em;
+          text-transform: uppercase;
+        }
+
+        a,
+        h2 {
+          margin: 0;
+        }
+
+        div {
+          @media screen and (max-width:414px) {
+            // margin: 5% 0 8% 0 !important;
+          }
+          margin: 4% 0 0;
+
+          a {
+            @media screen and (max-width: 1024px) {
+              height: auto;
+              // padding: 2.5%;
+            }
+            @media screen and (max-width:414px) {
+              width: auto;
+              // padding: 3.3% 0;
+            }
+            height: 45px;
+            padding: 3%;
+
+            span {
+              @media screen and (max-width: 414px) {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.first {
+      // flex-basis: 33%;
+      // padding: 2.5% 1% 0;
+      .the-content {
+        // padding: 7% 0 0;
+        h2 {
+          @media screen and (max-width:414px) {
+            color: #fff;
+            text-shadow: 1px 1px 13px #7f7f7f;
+          }
+          color: @c2-first-font-color;
+        }
+
+        div {
+          // margin: 5% 0 0;
+          a {
+            @media screen and (max-width:414px) {
+              color: #fff;
+              text-shadow: 1px 1px 13px #7f7f7f;
+            }
+            color: @c2-first-cta-color;
+            background: @c2-first-cta-background;
+
+            &.cta1 {
+              // left: -2%;
+            }
+
+            &.cta2 {
+              left: 2%;
+            }
+
+            &.cta3 {
+              left: 5%;
+            }
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 414px) {
+        padding: 0;
+        margin: 0;
+        background: #fff;
+      }
+      // flex-basis: 33%;
+      // padding: 2.6% 1% 0;
+      .the-content {
+        // padding: 3% 0 0;
+        h2 {
+          color: @c2-second-font-color;
+        }
+
+        div {
+          // margin: 3% 0 0;
+          a {
+            color: @c2-second-cta-color;
+            background: @c2-second-cta-background;
+
+            span {
+              @media screen and (max-width: 414px) {
+                display: none;
+              }
+            }
+
+            &.cta1 {
+              @media screen and (max-width: 414px) {
+                // left: -3%;
+              }
+              // left: -1%;
+            }
+
+            &.cta2 {
+              @media screen and (max-width: 414px) {
+                left: 3%;
+              }
+              left: 1%;
+            }
+          }
+        }
+      }
+    }
+
+    &.third {
+      // padding: 1.7% 1% 0;
+      // flex-basis: 33%;
+      .the-content {
+        h2 {
+          color: @c2-third-font-color;
+        }
+
+        div {
+          a {
+            color: @c2-third-cta-color;
+            background: @c2-third-cta-background;
+
+            &.cta1 {
+              // left: -5%;
+            }
+
+            &.cta2 {
+              // left: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

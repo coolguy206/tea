@@ -218,6 +218,132 @@
 	</div>
 </div>
 
+<div class="site-nav-submenu swim">
+	<div class="bar">
+		<div>
+		  <a href="/girls-swimwear" data="mega menu swim">GIRL</a>
+		  <span class="line"></span>
+
+		  {*
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+
+		        {sub_cats name="cat" category="girls-swimwear"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_girl"></div>
+		    </div>
+		  </div>
+		  *}
+		</div>
+
+		<div>
+		  <a href="/boys-swimwear" data="mega menu swim">BOY</a>
+		  <span class="line"></span>
+		  {*
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+
+		        {sub_cats name="cat" category="boys-swimwear"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_boy"></div>
+		    </div>
+		  </div>
+		  *}
+		</div>
+
+		<div>
+		  <a href="/baby-girl-swimwear" data="mega menu swim">BABY GIRL</a>
+		  <span class="line"></span>
+		  {*
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+
+		        {sub_cats name="cat" category="baby-girl-swimwear"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_baby_girl"></div>
+		    </div>
+		  </div>
+		  *}
+		</div>
+
+		<div>
+		  <a href="/baby-boy-swimwear" data="mega menu swim">BABY BOY</a>
+		  <span class="line"></span>
+		  {*
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+
+		        {sub_cats name="cat" category="baby-boy-swimwear"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_baby_boy"></div>
+		    </div>
+		  </div>
+		  *}
+		</div>
+
+	</div>
+</div>
+
 <div class="site-nav-submenu baby">
 	<div class="bar">
 		<div>
@@ -683,6 +809,7 @@
 </div>
 
 
+
 {* mobile *}
 <div id="site-nav-mobile" class="site-nav-mobile">
 	<ul>
@@ -890,6 +1017,20 @@
 		</li>
 
 		<li>
+			<h2>Swim <span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				<h3><a href="/girls-swimwear" class="girls swimwear" data="mobile mega menu swim categories" >GIRL</a></h3>
+
+				<h3><a href="/boys-swimwear" class="boys swimwear" data="mobile mega menu swim categories" >BOY</a></h3>
+
+				<h3><a href="/baby-girl-swimwear" class="baby girl swimwear" data="mobile mega menu swim categories" >BABY GIRL</a></h3>
+
+				<h3><a href="/baby-boy-swimwear" class="baby boy swimwear" data="mobile mega menu swim categories" >BABY BOY</a></h3>
+
+			</div>
+		</li>
+
+		<li>
 		  <h2>Sale <span class="fas fa-plus"></span></h2>
 		  <div class="sub">
 
@@ -1058,6 +1199,7 @@
 		</li>
 	</ul>
 </div>
+
 
 {literal}
 <style>
