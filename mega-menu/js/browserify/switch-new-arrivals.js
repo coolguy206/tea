@@ -28,8 +28,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.boy;
       promo2 = _urls.urls.promo1.boy;
       clearance = _urls.urls.promo2.boy;
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide();
       $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
@@ -48,9 +48,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.baby.boy;
       promo2 = _urls.urls.promo1.baby.boy;
       clearance = _urls.urls.promo2.baby.boy;
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -68,9 +68,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.toddler.boy;
       promo2 = _urls.urls.promo1.toddler.boy;
       clearance = _urls.urls.promo2.toddler.boy;
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -79,9 +79,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo1.baby.newborn;
       clearance = _urls.urls.promo2.baby.newborn;
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -89,19 +89,18 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.tween;
       promo2 = _urls.urls.promo1.tween;
       clearance = _urls.urls.promo2.tween;
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide();
       $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
     default:
       break;
-  }
+  } // $('.promo1-url').attr('href', promo1);
+  // $('.promo2-url').attr('href', promo2);
+  // $('.clearance-url').attr('href', clearance);
 
-  $('.promo1-url').attr('href', promo1);
-  $('.promo2-url').attr('href', promo2);
-  $('.clearance-url').attr('href', clearance);
 };
 
 exports.switchNewArrivals = switchNewArrivals;
