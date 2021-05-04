@@ -28,7 +28,7 @@ html {
 
 .promos {
   display: none;
-  background: #FAF2E1;
+  background: #F3EAD1;
 }
 
 .promos .promos-wrap {
@@ -69,6 +69,7 @@ html {
 }
 
 .promos .hp-promo span.first,.promos .the-promo span.first {
+  left: -1%;
   position: relative;
   font-family: gilroy-bold;
 }
@@ -115,7 +116,7 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #FAF2E1;
+  background: #F3EAD1;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
