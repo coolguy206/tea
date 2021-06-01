@@ -29,6 +29,23 @@
     margin: 0 0 3%;
     // letter-spacing: 0.25em;
     // text-transform: capitalize;
+    span {
+      @media screen and (max-width:414px) {
+        display: block;
+      }
+      position: relative;
+
+      a {
+        @media screen and (max-width:414px) {
+          left: 0;
+          top: 0;
+        }
+        color: @graphics-font-color;
+        left: 3%;
+        //top: -20%;
+        top: -.5vh;
+      }
+    }
   }
 
   div {
