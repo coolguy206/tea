@@ -1,7 +1,7 @@
 "use strict";
 
 module.exports = function (elem) {
-  console.log("from inview.js");
+  // console.log(`from inview.js`);
   $(elem).on('inview', function (event, isInView) {
     if (isInView) {
       // element is now visible in the viewport

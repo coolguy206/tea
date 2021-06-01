@@ -29,5 +29,7 @@ $(document).ready(function () {
   for (var i = 1; i < 8; i++) {
     addTracking('.hp .c' + i + ' a', 'c' + i);
   }
+
+  $('img[usemap]').rwdImageMaps();
 });
 //# sourceMappingURL=scripts.js.map

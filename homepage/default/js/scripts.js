@@ -27,4 +27,6 @@ $(document).ready(function() {
     addTracking('.hp .c' + i + ' a', 'c' + i);
   }
 
+  $('img[usemap]').rwdImageMaps();
+
 });

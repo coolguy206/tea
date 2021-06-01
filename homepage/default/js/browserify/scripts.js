@@ -2,7 +2,7 @@
 "use strict";
 
 module.exports = function (elem, alt) {
-  console.log("from alt.js");
+  // console.log(`from alt.js`);
   var img = $(elem);
   $.each(img, function (i, val) {
     $(val).attr('alt', alt);
@@ -27,7 +27,7 @@ module.exports = function (elem, alt) {
 "use strict";
 
 module.exports = function (elem) {
-  console.log("from inview.js");
+  // console.log(`from inview.js`);
   $(elem).on('inview', function (event, isInView) {
     if (isInView) {
       // element is now visible in the viewport
@@ -116,6 +116,8 @@ $(document).ready(function () {
   for (var i = 1; i < 8; i++) {
     addTracking('.hp .c' + i + ' a', 'c' + i);
   }
+
+  $('img[usemap]').rwdImageMaps();
 });
 
 
@@ -123,7 +125,7 @@ $(document).ready(function () {
 "use strict";
 
 module.exports = function (elem, id) {
-  console.log("from tracking.js");
+  // console.log(`from tracking.js`);
   var a = $(elem);
   $.each(a, function (j, val) {
     $(val).addClass('hp-url').attr({
