@@ -28,7 +28,7 @@ html {
 
 .promos {
   display: none;
-  background: #A683BF;
+  background: #F9F2E0;
 }
 
 .promos .promos-wrap {
@@ -77,7 +77,6 @@ html {
 @media screen and (max-width:414px) {
   .promos .hp-promo span.first,  .promos .the-promo span.first {
     left: 0;
-    display: block;
   }
 }
 
@@ -116,11 +115,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #A683BF;
+  background: #F9F2E0;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #FFD37B;
+  color: #B689C0;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
