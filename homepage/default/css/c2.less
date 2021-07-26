@@ -1,10 +1,10 @@
 @import "var.less";
 @c2-first-font-color: #fff;
 @c2-first-cta-color: #fff;
-@c2-first-cta-background: #59CCAD;
+@c2-first-cta-background: #8E4A84;
 @c2-second-font-color: #fff;
 @c2-second-cta-color: #fff;
-@c2-second-cta-background: #FB8180;
+@c2-second-cta-background: #225E9E;
 @c2-third-font-color: #fff;
 @c2-third-cta-color: #FFF;
 @c2-third-cta-background: #B45A90;
@@ -39,7 +39,7 @@
       .the-content {
         @media screen and (max-width:414px) {
           margin: 10% 0 0 !important;
-          bottom: 14%;
+          bottom: 10%;
         }
         margin: 7% 0 0;
         position: absolute;
@@ -48,20 +48,20 @@
 
         h2 {
           @media screen and (max-width: 1679px) {
-            font-size: 1.6vw;
-            line-height: 1.6vw;
+            font-size: 3.6vw;
+            // line-height: 1.6vw;
           }
           @media screen and (max-width:414px) {
-            font-size: 24px;
+            font-size: 36px;
             line-height: 28px;
             // margin: 8% 0 10%;
             margin: 0;
           }
           font-family: @gilroyb;
-          font-size: 30px;
+          font-size: 60px;
           line-height: 28px;
-          letter-spacing: 0.25em;
-          text-transform: uppercase;
+          letter-spacing: 0.1rem;
+          // text-transform: uppercase;
         }
 
         a,
@@ -80,6 +80,7 @@
               width: 44%;
               padding: 3.3% 0;
             }
+            padding: 1.6% 2.4%;
 
             span {
               @media screen and (max-width: 414px) {
@@ -92,7 +93,10 @@
     }
 
     &.first {
-      // flex-basis: 33%;
+      @media screen and (max-width:414px) {
+        flex-basis: 100% !important;
+      }
+      flex-basis: 50% !important;
       // padding: 2.5% 1% 0;
       .the-content {
         // padding: 7% 0 0;
@@ -115,11 +119,11 @@
             background: @c2-first-cta-background;
 
             &.cta1 {
-              left: -2%;
+              left: -1%;
             }
 
             &.cta2 {
-              left: 2%;
+              left: 1%;
             }
 
             &.cta3 {
@@ -136,7 +140,7 @@
         margin: 0;
         background: #fff;
       }
-      // flex-basis: 33%;
+      flex-basis: 50%;
       // padding: 2.6% 1% 0;
       .the-content {
         // padding: 3% 0 0;
@@ -147,8 +151,12 @@
         div {
           // margin: 3% 0 0;
           a {
+            @media screen and (max-width:414px) {
+              padding: 3.3% 0;
+            }
             color: @c2-second-cta-color;
             background: @c2-second-cta-background;
+            padding: 1.6% 3.8%;
 
             span {
               @media screen and (max-width: 414px) {
@@ -160,14 +168,14 @@
               @media screen and (max-width: 414px) {
                 // left: -3%;
               }
-              // left: -1%;
+              left: -1%;
             }
 
             &.cta2 {
               @media screen and (max-width: 414px) {
                 // left: 3%;
               }
-              // left: 1%;
+              left: 1%;
             }
           }
         }
