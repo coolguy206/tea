@@ -1,6 +1,6 @@
 @import "var.less";
-@promo-cta1-color: #fff;
-@promo-cta1-background: #55C1DB;
+@promo-cta1-color: #FEDFD7;
+@promo-cta1-background: #3862AA;
 @promo-cta2-color: #fff;
 @promo-cta2-background: #EF3C25;
 @promo-cta3-color: #fff;
@@ -38,17 +38,18 @@
         // top: 68%;
         width: 100%;
         left: 0;
-        bottom: 5%;
+        // bottom: 5%;
         // right: 0;
         // left: 50%;
-        transform: translateX(0%);
+        transform: translateY(0%);
+        top: 66%;
         text-align: center;
       }
       position: absolute;
-      bottom: 8%;
-      transform: translateX(-50%);
+      top: 55%;
+      transform: translateY(-50%);
       width: 50%;
-      left: 50%;
+      left: 52%;
       // right: 5%;
       .first,
       .second,
@@ -57,7 +58,7 @@
           // margin: 0;
         }
         @media screen and (max-width: 414px) {
-          margin: 0 0 5%;
+          // margin: 0 0 5%;
           //display: block;
         }
         // margin: 0 0 4%;
@@ -114,7 +115,7 @@
           // padding: 3.3% 0;
           // margin: 0 0 -1%;
           // padding: 4% 0;
-          // margin: 0;
+          margin: 0 0 4%;
           width: 44%;
           // font-size: 4vw;
           padding: 3% 0;
@@ -124,7 +125,7 @@
         color: @promo-cta1-color;
         background: @promo-cta1-background;
         // flex-basis: 50%;
-        margin: 0 0 4%;
+        margin: 0 0 2%;
         width: 21.5%;
         padding: 1.1% 0;
         // padding: 0;
@@ -140,7 +141,7 @@
           @media screen and (max-width: 414px) {
             left: -2%;
           }
-          left: -4%;
+          // left: 0%;
           background: @promo-cta1-background;
           color: @promo-cta1-color;
         }
@@ -149,9 +150,9 @@
           @media screen and (max-width: 414px) {
             left: 2%;
           }
-          left: -2%;
-          background: @promo-cta2-background;
-          color: @promo-cta2-color;
+          left: 2%;
+          // background: @promo-cta2-background;
+          // color: @promo-cta2-color;
         }
 
         &.cta3 {
@@ -163,8 +164,8 @@
             // }
           }
           // left: -4%;
-          background: @promo-cta3-background;
-          color: @promo-cta3-color;
+          // background: @promo-cta3-background;
+          // color: @promo-cta3-color;
         }
 
         &.cta4 {
@@ -177,8 +178,8 @@
             // }
           }
           left: 2%;
-          background: @promo-cta4-background;
-          color: @promo-cta4-color;
+          // background: @promo-cta4-background;
+          // color: @promo-cta4-color;
         }
 
         &.cta5 {
