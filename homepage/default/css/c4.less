@@ -1,10 +1,10 @@
 @import "var.less";
 @c4-first-font-color: #fff;
 @c4-first-cta-color: #fff;
-@c4-first-cta-background: #94D5CB;
+@c4-first-cta-background: #B98B55;
 @c4-second-font-color: #FFF;
 @c4-second-cta-color: #FFF;
-@c4-second-cta-background: #DC3747;
+@c4-second-cta-background: #EB923F;
 @c4-third-font-color: #FFF;
 @c4-third-cta-color: #FFF;
 @c4-third-cta-background: #4E7352;
@@ -96,25 +96,24 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: auto;
-              height: auto;
-              // padding: 1.4% 3%;
+              // width: auto;
+              // height: auto;
+              padding: 4.5%;
             }
             @media screen and(max-width: 414px) {
               // color: #fff;
               // font-size: 2.7vw;
-              flex-basis: 44%;
-              padding: 3.3% 0;
-              margin: 0 0 5%;
+              // flex-basis: 44%;
+              // padding: 3.3% 0;
+              // margin: 0 0 5%;
             }
             // width: 180px;
             // height: 45px;
-            padding: 2.5% 3%;
-            margin: 0;
-
+            // padding: 2.5% 3%;
+            // margin: 0;
             span {
               @media screen and (max-width: 414px) {
-                display: none;
+                // display: none;
               }
             }
           }
@@ -194,8 +193,11 @@
           }
 
           a {
+            @media screen and (max-width:1679px) {
+              width: 44%;
+            }
             @media screen and (max-width:1024px) {
-              width: auto;
+              // width: auto;
             }
             @media screen and (max-width: 414px) {
               // color: #fff;
@@ -203,11 +205,12 @@
               // flex-basis: 43.5%;
               // padding: 3.3% 0;
               // margin: 0 0 5%;
-              flex-basis: 58%;
+              // flex-basis: 58%;
+              width: 50%;
             }
             color: @c4-first-cta-color;
             background: @c4-first-cta-background;
-            // width: 242px;
+            width: 243px;
             // margin: 0 0 20%;
             &.cta1 {
               @media screen and (max-width:414px) {
@@ -264,6 +267,9 @@
           }
           // margin: 6% 0 0;
           a {
+            @media screen and (max-width: 1679px) {
+              width: 33%;
+            }
             @media screen and (max-width: 414px) {
               // background: #3862AA;
             }
@@ -300,7 +306,7 @@
 
             span {
               @media screen and (max-width: 414px) {
-                display: inline;
+                // display: inline;
               }
             }
           }
@@ -329,8 +335,15 @@
           }
 
           a {
+            @media screen and (max-width:1679px) {
+              width: 44%;
+            }
+            @media screen and (max-width:414px) {
+              width: 50%;
+            }
             color: @c4-third-cta-color;
             background-color: @c4-third-cta-background;
+            width: 243px;
 
             &.cta1 {
               // left: -5%;

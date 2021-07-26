@@ -3,14 +3,14 @@ const inview = require('./inview.js');
 const addTracking = require('./tracking.js');
 
 $(document).ready(function() {
-  addAlt('.hp .c1 img', 'kids holding hands walking on grass');
-  addAlt('.hp .c2 .first img', 'girls holding hands in dresses and leggings');
-  addAlt('.hp .c2 .second img', 'kids in graphic tees and stripe pants');
+  addAlt('.hp .c1 img', 'kids on a bike');
+  addAlt('.hp .c2 .first img', 'baby in apple romper');
+  addAlt('.hp .c2 .second img', 'girl in heart graphic dress');
   addAlt('.hp .c2 .third img', 'girl in strip dress');
-  addAlt('.hp .c3 .first img', 'baby in floral romper');
-  addAlt('.hp .c3 .second img', 'girl in ladybug graphic tee');
-  addAlt('.hp .c4 .first img', 'fish pattern on clothes');
-  addAlt('.hp .c4 .second img', 'baby boy in crocodile graphic tee');
+  addAlt('.hp .c3 .first img', 'kid in bike graphic tee');
+  addAlt('.hp .c3 .second img', 'girl in rainbow top');
+  addAlt('.hp .c4 .first img', 'bear pattern on clothes');
+  addAlt('.hp .c4 .second img', 'baby in orange slices graphic tee');
   addAlt('.hp .c4 .third img', 'clothes with fish patterns');
   addAlt('.hp .c5 .first img', 'boy in motorcycle graphic tee');
   addAlt('.hp .c5 .second img', 'fish & seahorse outfit');
@@ -20,7 +20,7 @@ $(document).ready(function() {
   addAlt('.hp .c6 .second img', 'girls in striped dress and top');
   addAlt('.hp .c7 .first img', 'girl with toy horse on her head');
   addAlt('.hp .c7 .second img', 'learn how #teagivesback');
-  addAlt('.hp .c7 .third img', 'sibling in Tea Collection clothes');
+  addAlt('.hp .c7 .third img', 'siblings in Tea Collection clothes');
 
   inview('.hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7');
 

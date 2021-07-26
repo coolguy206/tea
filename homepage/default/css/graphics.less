@@ -63,12 +63,19 @@
       }
       flex-basis: 25%;
       padding: 0 2%;
+      text-decoration: none;
 
       img {}
 
       span {
         color: @graphics-cta-color;
         margin: 10% 0 0;
+
+        &.mobile {
+          @media screen and (max-width: 414px) {
+            display: inline-block;
+          }
+        }
       }
     }
   }

@@ -32,15 +32,15 @@
   }
   @media screen and (max-width: 414px) {
     font-size: 3vw;
-    padding: 3% 0;
-    width: 36%;
+    // padding: 3% 0;
+    // width: 36%;
   }
   display: inline-block;
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
   position: relative;
-  padding: 2.5% 4%;
+  // padding: 2.5% 4%;
   font-family: @gilroyb;
   font-size: 15px;
   line-height: 18px;
@@ -60,4 +60,29 @@
     display: block;
   }
   display: none;
+}
+
+.span {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.a {
+  @media screen and (max-width: 1679px) {
+    width: 22%;
+    height: auto;
+    padding: 3%;
+  }
+  @media screen and (max-width: 414px) {
+    width: 43%;
+    height: 45px;
+    padding: 0;
+  }
+  width: 180px;
+  height: 45px;
+  padding: 0;
+  position: relative;
 }
