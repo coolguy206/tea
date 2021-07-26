@@ -22,7 +22,7 @@ $(document).ready(function() {
     $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
     $('.promo2-url').hide();
-    $('.clearance-url').hide();
+    // $('.clearance-url').hide();
   }, function() {
 
   });
