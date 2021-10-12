@@ -3,16 +3,43 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+@media screen and (max-width:414px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width:414px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.header-banner {
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
 .promos {
+  display: none;
+  background: #67825F;
+}
+
+.promos .promos-wrap {
   max-width: 1680px;
   margin: 0 auto;
   position: relative;
-  display: none;
 }
 
 .promos .hp-promo,.promos .the-promo {
   text-align: center;
-  padding: 2% 0;
+  padding: .8% 0;
 }
 
 @media screen and (max-width:768px) {
@@ -24,10 +51,16 @@ html {
 .promos .hp-promo span,.promos .the-promo span {
   position: relative;
   font-family: gilroy-bold;
-  font-size: 25px;
-  line-height: 30px;
-  letter-spacing: 2px;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: .2em;
   text-transform: uppercase;
+}
+
+@media screen and (max-width:1024px) {
+  .promos .hp-promo span,  .promos .the-promo span {
+    font-size: 16px;
+  }
 }
 
 @media screen and (max-width:768px) {
@@ -83,15 +116,16 @@ html {
     left: 0;
     position: relative;
     display: block;
+    margin: 2% 0 0;
   }
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #CC6B65;
+  background: #67825F;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #E2DFCE;
+  color: #F8CF5B;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
@@ -112,6 +146,34 @@ html {
 
 .promos .hp-promo.promo3 span.first,.promos .the-promo.promo3 span.first {
   color: #f66d67;
+}
+
+.free-shipping-150 {
+  background: #F9F2E0;
+  margin: 0 auto;
+  position: fixed;
+  padding: .1% 0;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  display: none;
+}
+
+.free-shipping-150 h2 {
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #47363D;
+}
+
+@media screen and (max-width:414px) {
+  .free-shipping-150 h2 {
+    font-size: 10px;
+    line-height: 12px;
+  }
 }
 
 .details-promo {

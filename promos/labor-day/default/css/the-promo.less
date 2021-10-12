@@ -1,7 +1,7 @@
-@promo1Bg: #CC6B65;
-@promo1Color1: #E2DFCE;
+@promo1Bg: #67825F;
+@promo1Color1: #F8CF5B;
 @promo1Color2: #FFF;
-@promo1Color3: #E2DFCE;
+@promo1Color3: #FFF;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -12,7 +12,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,10 +20,17 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
@@ -32,7 +39,8 @@
     }
     // background: @backgroundColor;
     text-align: center;
-    padding: 2% 0;
+    // padding: 2% 0;
+    padding: 0.8% 0;
     // display:none;
     // .see-details {
     //  display: block;
@@ -44,6 +52,10 @@
 
     span,
     span > a {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
       @media screen and (max-width:768px) {
         font-size: 12px;
         line-height: 18px;
@@ -52,9 +64,11 @@
       font-family: gilroy-bold;
       // font-size: 12px;
       // line-height: 18px;
-      font-size: 25px;
-      line-height: 30px;
-      letter-spacing: 2px;
+      // font-size: 25px;
+      // line-height: 30px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
 
       &.span-wrap {
@@ -74,11 +88,9 @@
 
       &.second {
         @media screen and (max-width: 414px) {
-          // display: none;
-          left: 0;
+          display: block;
         }
         // color: @fontColor2;
-        left: 1%;
       }
 
       &.third {
@@ -86,7 +98,7 @@
           left: 0;
           display: inline;
         }
-        left: 1%;
+        left: 0;
       }
 
       &.shop-now {
@@ -121,6 +133,7 @@
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
