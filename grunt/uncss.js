@@ -1,9 +1,11 @@
-module.exports = function(grunt){
-	return {
-		nav: {
-        	files: {
-          		'dist':['src1','src2']
-        	}
-    	}
+var config = require("./../gruntConfig.js");
+
+module.exports = {
+
+  hp: {
+    files: {
+      'homepage/default/css/uncss/styles.css': ['homepage/default/includes/content-uncss.html']
+    }
   }
+
 };

@@ -23,7 +23,7 @@ module.exports = {
 
   hp: {
     files: ['homepage/default/css/*.less', 'homepage/default/dev/*.html', 'homepage/default/js/*.js'],
-    tasks: ['less:hp', /*'purifycss:hp',*/ 'cssmin:hp', 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
+    tasks: ['less:hp', /*'purifycss:hp', 'cssmin:hp',*/ 'uncss:hp', 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
   },
 
 
