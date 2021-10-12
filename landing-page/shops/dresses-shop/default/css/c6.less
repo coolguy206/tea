@@ -1,0 +1,348 @@
+@import "var.less";
+@c6-first-font-color: #0187A2;
+@c6-first-cta-color: #fff;
+@c6-first-cta-background: #E5BF16;
+@c6-second-font-color: #fff;
+@c6-second-cta-color: #fff;
+@c6-second-cta-background: #B45A90;
+@c6-third-font-color: #fff;
+@c6-third-cta-color: #fff;
+@c6-third-cta-background: #ED5052;
+
+.c6 {
+  @media screen and (max-width: 414px) {
+    flex-wrap: wrap;
+    background: #E8C3CA;
+    padding: 0;
+  }
+  display: flex;
+  padding: 0;
+  text-align: center;
+  // flex-wrap: wrap;
+  div {
+    &.first,
+    &.second,
+    &.third {
+      text-align: center;
+      box-sizing: border-box;
+      // flex-basis: 33.5%;
+      flex-basis: 50%;
+      padding: 0;
+      position: relative;
+
+      a {
+        text-decoration: none;
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 3.6vw;
+          // line-height: 1.6vw;
+        }
+        @media screen and (max-width:414px) {
+          font-size: 40px;
+          line-height: 44px;
+        }
+        @media screen and (max-width:320px) {
+          font-size: 36px;
+        }
+        font-family: @gilroyb;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+        color: @c6-first-font-color;
+        margin: 0 0 3%;
+        // left: 50%;
+        // transform: translateX(-50%);
+      }
+
+      .the-content {
+        @media screen and (max-width: 414px) {
+          margin: 10% 0 0 !important;
+        }
+        margin: 0;
+        position: absolute;
+        bottom: 6%;
+        width: 100%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            // font-size: 1.6vw;
+            // line-height: 1.6vw;
+          }
+          @media screen and (max-width:414px) {
+            // font-size: 24px;
+            // line-height: 28px;
+          }
+          // font-family: @gilroyb;
+          // font-size: 30px;
+          // line-height: 28px;
+          // letter-spacing: 0.25em;
+          // text-transform: uppercase;
+        }
+        // a,
+        // h2 {
+        //   margin: 0;
+        // }
+        div {
+          @media screen and (max-width: 414px) {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            margin: 110% 0 0;
+          }
+          @media screen and (max-width: 376px) {
+            margin: 92% 0 0;
+          }
+          margin: 0 0 4%;
+
+          a {
+            @media screen and (max-width:1679px) {
+              // width: auto;
+              // height: auto;
+              // padding: 1.4% 3%;
+            }
+            @media screen and(max-width: 414px) {
+              // color: #fff;
+              // font-size: 2.7vw;
+              // flex-basis: 44%;
+              // padding: 3.3% 0;
+              // margin: 0 0 5%;
+            }
+            // width: 180px;
+            // height: 45px;
+            // padding: 1.5% 0;
+            // margin: 0;
+            span {
+              @media screen and (max-width: 414px) {
+                // display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.first {
+      @media screen and (max-width: 414px) {
+        // padding: 10% 0 0;
+        // background: #FDF5F2;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 0;
+      }
+      // padding: 1.7% 1% 0;
+      // flex-basis: 67%;
+      & > a {
+        @media screen and (max-width:414px) {
+          width: 100%;
+          display: inline-block;
+          order: 2;
+        }
+
+        img {
+          &.mobile {
+            @media screen and (max-width:414px) {
+              display: inline;
+            }
+          }
+        }
+      }
+
+      .the-content {
+        @media screen and (max-width: 414px) {
+          // position: absolute;
+          // bottom: 0;
+          // top: 0;
+          // padding: 0;
+          // margin: 0;
+          // order: 3;
+          // width: 100%;
+          // left: 0;
+        }
+        // width: 20%;
+        // left: 50%;
+        // transform: translateX(-50%);
+        // top: 52%;
+        h2 {
+          @media screen and (max-width: 768px) {
+            line-height: 4vw;
+          }
+          @media screen and (max-width: 414px) {
+            // color: #fff;
+            // width: 100%;
+            // margin: 0 auto;
+            // position: relative;
+            // top: 0;
+            // left: 0;
+            // margin: 42% 0 3%;
+            line-height: 44px;
+          }
+          @media screen and (max-width: 375px) {
+            width: 100%;
+          }
+          @media screen and (max-width: 321px) {
+            margin: 22% 0 3%;
+          }
+          color: @c6-first-font-color;
+          // left: 50%;
+        }
+
+        div {
+          @media screen and (max-width: 414px) {
+            margin: 0;
+          }
+          @media screen and (max-width: 375px) {
+            // margin: 92% 0 0;
+          }
+
+          a {
+            @media screen and (max-width:1024px) {
+              // width: auto;
+            }
+            @media screen and (max-width: 414px) {
+              // color: #fff;
+              // font-size: 2.7vw;
+              // flex-basis: 43.5%;
+              // padding: 3.3% 0;
+              // margin: 0 0 5%;
+            }
+            color: @c6-first-cta-color;
+            background: @c6-first-cta-background;
+            // width: 242px;
+            // margin: 0 0 20%;
+            &.cta1 {
+              @media screen and (max-width:414px) {
+                // left: -2%;
+              }
+              // left: -2%;
+            }
+
+            &.cta2 {
+              @media screen and (max-width:414px) {
+                left: 2%;
+              }
+              left: -1%;
+            }
+
+            &.cta3 {
+              @media screen and (max-width:414px) {
+                left: -2%;
+              }
+              left: 0;
+            }
+
+            &.cta4 {
+              @media screen and (max-width:414px) {
+                left: 2%;
+              }
+              left: 1%;
+            }
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 414px) {
+        padding: 0;
+      }
+
+      h2 {
+        @media screen and (max-width:414px) {
+          // font-size: 20px;
+        }
+        color: @c6-second-font-color;
+      }
+      // padding: 1.7% 1% 0;
+      .the-content {
+        @media screen and (max-width: 414px) {
+          // top: 0;
+        }
+        // margin: 6% 0 0;
+        div {
+          @media screen and (max-width: 414px) {
+            margin: 0;
+          }
+          // margin: 6% 0 0;
+          a {
+            color: @c6-second-cta-color;
+            background: @c6-second-cta-background;
+
+            &.cta1 {
+              @media screen and (max-width: 414px) {
+                left: -2%;
+              }
+              left: -3%;
+            }
+
+            &.cta2 {
+              @media screen and (max-width: 414px) {
+                left: 2%;
+              }
+              left: -1%;
+            }
+
+            &.cta3 {
+              @media screen and (max-width: 414px) {
+                left: -2%;
+              }
+              left: 0;
+            }
+
+            &.cta4 {
+              @media screen and (max-width: 414px) {
+                left: 2%;
+              }
+              left: 1%;
+            }
+
+            span {
+              @media screen and (max-width: 414px) {
+                // display: inline;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    &.third {
+      @media screen and (max-width: 414px) {
+        padding: 5%;
+        background: @background;
+      }
+      // padding: 1.7% 1% 0;
+      .the-content {
+        @media screen and (max-width: 414px) {
+          padding: 8.2% 0;
+        }
+
+        h2 {
+          color: @c6-third-font-color;
+        }
+
+        div {
+          @media screen and (max-width: 414px) {
+            margin: 5% 0 0;
+          }
+
+          a {
+            color: @c6-third-cta-color;
+
+            &.cta1 {
+              // left: -5%;
+            }
+
+            &.cta2 {
+              // left: 5%;
+            }
+          }
+        }
+      }
+    }
+  }
+}

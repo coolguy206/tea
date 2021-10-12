@@ -218,10 +218,10 @@
 	</div>
 </div>
 
-<div class="site-nav-submenu swim">
+<div class="site-nav-submenu dresses">
 	<div class="bar">
 		<div>
-		  <a href="/girls-swimwear" data="mega menu swim">GIRL</a>
+		  <a href="/girls-dresses" data="mega menu dresses">GIRL DRESSES</a>
 		  <span class="line"></span>
 
 		  {*
@@ -251,38 +251,9 @@
 		  *}
 		</div>
 
+		<!-- include "../swim/desktop/boy.html" -->
 		<div>
-		  <a href="/boys-swimwear" data="mega menu swim">BOY</a>
-		  <span class="line"></span>
-		  {*
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        {sub_cats name="cat" category="boys-swimwear"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_boy"></div>
-		    </div>
-		  </div>
-		  *}
-		</div>
-
-		<div>
-		  <a href="/baby-girl-swimwear" data="mega menu swim">BABY GIRL</a>
+		  <a href="/baby-girl-dresses" data="mega menu dresses">BABY GIRL DRESSES</a>
 		  <span class="line"></span>
 		  {*
 		  <div class="menu flex-menu">
@@ -311,36 +282,7 @@
 		  *}
 		</div>
 
-		<div>
-		  <a href="/baby-boy-swimwear" data="mega menu swim">BABY BOY</a>
-		  <span class="line"></span>
-		  {*
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        {sub_cats name="cat" category="baby-boy-swimwear"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_baby_boy"></div>
-		    </div>
-		  </div>
-		  *}
-		</div>
-
+		<!-- include "../swim/desktop/baby-boy.html" -->
 	</div>
 </div>
 
@@ -1017,22 +959,23 @@
 		</li>
 
 		<li>
-			<h2>Swim <span class="fas fa-plus"></span></h2>
+			<h2>Dresses <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				<h3><a href="/girls-swimwear" class="girls swimwear" data="mobile mega menu swim categories" >GIRL</a></h3>
+				<h3><a style="font-size: .875rem;" href="/dresses" class="dresses" data="mobile mega menu dresses categories" >VIEW ALL</a></h3>
 
-				<h3><a href="/boys-swimwear" class="boys swimwear" data="mobile mega menu swim categories" >BOY</a></h3>
+				<h3><a style="font-size: .875rem;" href="/girls-dresses" class="girls dresses" data="mobile mega menu dresses categories" >GIRL DRESSES</a></h3>
 
-				<h3><a href="/baby-girl-swimwear" class="baby girl swimwear" data="mobile mega menu swim categories" >BABY GIRL</a></h3>
+				<!-- include "../swim/mobile/boy-m.html" -->
+				<h3><a style="font-size: .875rem;" href="/baby-girl-dresses" class="baby girl dresses" data="mobile mega menu dresses categories" >BABY GIRL DRESSES</a></h3>
 
-				<h3><a href="/baby-boy-swimwear" class="baby boy swimwear" data="mobile mega menu swim categories" >BABY BOY</a></h3>
-
+				<!-- include "../swim/mobile/baby-boy-m.html" -->
 			</div>
 		</li>
 
 		<li>
 		  <h2>Sale <span class="fas fa-plus"></span></h2>
 		  <div class="sub">
+		    <h3><a style="font-size: .875rem;" href="/clothing-sale" class="sale-view-all" data="mobile mega menu dresses categories" >VIEW ALL</a></h3>
 
 		    <h3><span class="fas fa-chevron-left"></span> Girl <span class="fas fa-chevron-right"></span></h3>
 		    <div class="links">
@@ -1187,6 +1130,7 @@
 		    *}
 		    <div>
 		</li>
+
 
 		<li>
 			<h2><a href="{category_url category='about/the-tea-story'}" data="mobile mega menu about tea">About Tea</a></h2>
