@@ -6,6 +6,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo1: {
+    babyPromo: "/baby-clothes",
     girl: "/girls-clothes/",
     boy: "/boys-clothes/",
     tween: "/tween-girls-clothing",

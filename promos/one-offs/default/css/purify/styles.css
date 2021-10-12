@@ -28,7 +28,7 @@ html {
 
 .promos {
   display: none;
-  background: #F8CDC7;
+  background: #8EA7AA;
 }
 
 .promos .promos-wrap {
@@ -121,11 +121,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #F8CDC7;
+  background: #8EA7AA;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #6C716A;
+  color: #FFD4E7;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
