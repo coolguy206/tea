@@ -95,14 +95,14 @@ var addTracking = require('./tracking.js');
 
 $(document).ready(function () {
   addAlt('.hp .c1 img', 'kids on a bike');
-  addAlt('.hp .c2 .first img', 'baby in apple romper');
-  addAlt('.hp .c2 .second img', 'girl in heart graphic dress');
+  addAlt('.hp .c2 .first img', 'girl in flower graphic dress');
+  addAlt('.hp .c2 .second img', 'baby in yellow romper');
   addAlt('.hp .c2 .third img', 'girl in strip dress');
   addAlt('.hp .c3 .first img', 'kid in bike graphic tee');
   addAlt('.hp .c3 .second img', 'girl in rainbow top');
-  addAlt('.hp .c4 .first img', 'bear pattern on clothes');
-  addAlt('.hp .c4 .second img', 'baby in orange slices graphic tee');
-  addAlt('.hp .c4 .third img', 'clothes with fish patterns');
+  addAlt('.hp .c4 .first img', 'baby in yellow dress');
+  addAlt('.hp .c4 .second img', 'strawberry and rainbow PJs');
+  addAlt('.hp .c4 .third img', 'baby in orange slice graphic oneies');
   addAlt('.hp .c5 .first img', 'boy in motorcycle graphic tee');
   addAlt('.hp .c5 .second img', 'fish & seahorse outfit');
   addAlt('.hp .c5 .third img', 'baby in strawberry graphic oneies');
