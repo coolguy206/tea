@@ -1,6 +1,8 @@
 @import 'var.less';
-@c4-cta-color: #59BF98;
-@c4-font-color: #59BF98;
+@c4-cta-color: #fff;
+@c4-cta-background-color: #7F2B2F;
+@c4-font-color: #fff;
+@c4-h2-color: #fff;
 @c4-background: #fff;
 
 .c4 {
@@ -12,7 +14,7 @@
 
   .first {
     @media screen and (max-width: 414px) {
-      padding: 0;
+      padding: 0 2%;
     }
     position: relative;
     padding: 1% 1% 0 0;
@@ -24,16 +26,12 @@
     }
 
     .the-content {
-      @media screen and (max-width:768px) {
-        top: 40.5%;
-      }
+      @media screen and (max-width:768px) {}
       @media screen and (max-width: 414px) {
         width: 100%;
-        right: 0;
-        top: 6%;
       }
       position: absolute;
-      top: 53.5%;
+      bottom: 10%;
       right: 1%;
       width: 44%;
       text-align: center;
@@ -49,24 +47,16 @@
           margin: 0 0 4%;
           color: #fff;
         }
-        color: @c4-font-color;
+        color: @c4-h2-color;
       }
 
-      span {
+      .cta-border {
         @media screen and (max-width:414px) {
           margin: 3% 0;
-          width: 52%;
         }
-        color: #fff;
+        color: @c4-cta-color;
         margin: 8% 0 0;
-        background: @c4-cta-color;
-        width: 68%;
-        padding: 3.1% 4%;
-
-        a {
-          text-decoration: none;
-          font-family: @gilroyb;
-        }
+        background: @c4-cta-background-color;
       }
     }
   }

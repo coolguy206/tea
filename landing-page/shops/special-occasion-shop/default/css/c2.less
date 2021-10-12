@@ -1,7 +1,9 @@
 @import 'var.less';
 @c2-background: #fff;
-@c2-cta-color: #F7657A;
-@c2-font-color: #F7657A;
+@c2-cta-color: #fff;
+@c2-cta-background-color: #7F2B2F;
+@c2-font-color: #fff;
+@c2-h2-color: #003D69;
 
 .c2 {
   @media screen and (max-width: 414px) {
@@ -12,59 +14,44 @@
 
   .first {
     @media screen and (max-width: 414px) {
-      padding: 0;
+      padding: 0 2%;
     }
     position: relative;
     padding: 1% 1% 0 0;
 
-    span {
-      color: #fff;
-      margin: 6% 0 0;
-      background: @c2-cta-color;
-      width: 42%;
-      padding: 2.2% 4%;
-
-      &.mobile {
-        position: absolute;
-        bottom: 11%;
-        width: 55%;
-        left: 50%;
-        transform: translateX(-50%);
-      }
-
-      a {
-        text-decoration: none;
-        font-family: @gilroyb;
-      }
-    }
-
     .the-content {
       @media screen and (max-width: 414px) {
-        top: 10%;
-        left: -5%;
+        top: 6%;
+        left: -1%;
         // width: 100%;
         // transform: translateX(-50%);
       }
       position: absolute;
-      top: 8%;
+      top: 11%;
       left: 0;
-      width: 64%;
+      width: 54%;
       text-align: center;
 
       h2 {
-        color: @c2-font-color;
+        color: @c2-h2-color;
       }
-      // span {
-      //   color: #fff;
-      //   margin: 6% 0 0;
-      //   background: @c2-cta-color;
-      //   width: 42%;
-      //
-      //   a {
-      //     text-decoration: none;
-      //     font-family: @gilroyb;
-      //   }
-      // }
+
+      .cta-border {
+        @media screen and (max-width:414px) {
+          width: 44vw;
+        }
+        color: @c2-cta-color;
+        margin: 6% 0 0;
+        background: @c2-cta-background-color;
+
+        &.mobile {
+          position: absolute;
+          bottom: 11%;
+          width: 55%;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+      }
     }
   }
 

@@ -1,79 +1,76 @@
 @import 'var.less';
-@c1-cta-color: #59BF98;
-@c1-font-color: #B45B91;
+@c1-cta-color: #fff;
+@c1-cta-background-color: #003D69;
+@c1-h2-color: #7F2B2F;
+@c1-font-color: #7F2B2F;
 
 .c1 {
   position: relative;
-
-  h2 {
-    @media screen and (max-width: 414px) {
-      width: 45%;
-      margin: 0 auto;
-      width: 100%;
-      position: absolute;
-      top: 5%;
-    }
-  }
 
   .the-content {
     @media screen and (max-width: 414px) {
       width: 100%;
       top: 0;
       left: 0;
+      transform: translate(0);
       // position: relative;
       padding: 9% 0 0;
     }
     position: absolute;
-    top: 11.7%;
-    left: 34.5%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 31%;
+    text-align: center;
 
     img {
-      position: relative;
-      left: 50%;
-      transform: translateX(-50%);
-      margin: 0 0 9%;
-    }
-
-    h2,
-    p {
-      @media screen and (max-width:414px) {
-        color: #fff;
-        position: relative;
+      @media screen and (max-width: 1679px) {
+        width: 9.3vw;
       }
-      color: @c1-font-color;
+      margin: 0 0 9%;
     }
 
     h2 {
       @media screen and (max-width:414px) {
         margin: 0 0 4%;
+        font-size: 12vw;
+        line-height: 11vw;
       }
+      color: @c1-h2-color;
     }
 
     p {
+      @media screen and (max-width: 1679px) {
+        // display: none;
+        font-size: 1.4vw;
+        line-height: 1.9vw;
+      }
       @media screen and (max-width: 414px) {
         // display: none;
-        font-size: 4vw;
-        line-height: 5vw;
+        font-size: 5vw;
+        line-height: 7vw;
         width: 100%;
         margin: 0 0 5%;
       }
       margin: 3.5% auto 9%;
-      width: 75%;
+      font-size: 24px;
+      line-height: 32px;
+      color: @c1-font-color;
     }
 
     div {
       @media screen and (max-width: 414px) {
-        margin: 3% 0 0;
         text-align: center;
       }
       margin: 3% 0 0;
 
       a {
-        color: #fff;
-        background: @c1-cta-color;
-        width: 42%;
-        padding: 2% 4%;
+        @media screen and (max-width:414px) {
+          // width: 182px;
+          width: 44vw;
+        }
+        color: @c1-cta-color;
+        background: @c1-cta-background-color;
 
         span {
           @media screen and (max-width: 414px) {
@@ -82,38 +79,28 @@
         }
 
         &.cta1 {
-          @media screen and (max-width:414px) {
-            left: -2%;
-          }
-          left: 7%;
+          @media screen and (max-width:414px) {}
+          left: -1%;
         }
 
         &.cta2 {
-          @media screen and (max-width:414px) {
-            left: 2%;
-          }
-          left: 10%;
+          @media screen and (max-width:414px) {}
+          left: 1%;
         }
 
         &.cta3 {
-          @media screen and (max-width:414px) {
-            left: -2%;
-          }
-          left: 7%;
+          @media screen and (max-width:414px) {}
+          left: -1%;
         }
 
         &.cta4 {
-          @media screen and (max-width:414px) {
-            left: 2%;
-          }
-          left: 10%;
+          @media screen and (max-width:414px) {}
+          left: 1%;
         }
 
         &.cta5 {
-          @media screen and (max-width:414px) {
-            left: 5%;
-          }
-          left: 10%;
+          @media screen and (max-width:414px) {}
+          left: 1%;
         }
       }
     }
