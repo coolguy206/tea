@@ -18,7 +18,6 @@
     <h2 class="sailthru-h2">Interest & Prediction</h2>
     <ul class="sailthru-list"></ul>
   </div> -->
-
 </div>
 
 {literal}
@@ -32,7 +31,32 @@
     isCustom: true,
   });
 
-  include "../js/scripts.js"
+  $(document).ready(function() {
+    $('body').on('click', '.sailthru-pdps .sailthru-list a', function(e) {
+    console.log(`recommended pdp item clicked`);
+    // console.log(this);
+    var name = $(this).find('img').attr('alt');
+    var url = $(this).attr('href');
+    var price = $(this).next().next()[0].children;
+    if (price.length == 2) {
+      price = Number($(this).next().next().find('span').text().replace('$', '')).toFixed(2);
+    } else {
+      price = Number($(this).next().next().text().replace('$', '')).toFixed(2);
+    }
+{/literal}
+    var email = '{$smarty.request.email|default:$last_login}';
+    var cookie = '{$smarty.cookies.sailthru_pc}';
+{literal}
+    window.dataLayer.push({
+      event: 'sailthru recommendations context click',
+      theEmail: email,
+      theName: name,
+      theUrl: url,
+      thePrice: price,
+      theCookie: cookie
+    });
+  });
+});
+include "../js/scripts.js"
 </script>
-
 {/literal}
