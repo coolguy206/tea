@@ -3,7 +3,7 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .desktop {
     display: none;
   }
@@ -13,7 +13,7 @@ html {
   display: none;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .mobile {
     display: block;
   }
@@ -28,7 +28,7 @@ html {
 
 .promos {
   display: none;
-  background: #185DA0;
+  background: #DEB375;
 }
 
 .promos .promos-wrap {
@@ -79,7 +79,7 @@ html {
   font-family: gilroy-bold;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .promos .hp-promo span.first,  .promos .the-promo span.first {
     left: 0;
     display: block;
@@ -94,7 +94,7 @@ html {
   top: 0;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .promos .hp-promo span.shop-now,  .promos .the-promo span.shop-now {
     left: 0;
   }
@@ -111,7 +111,7 @@ html {
   }
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .promos .hp-promo span.details,  .promos .the-promo span.details {
     left: 0;
     position: relative;
@@ -121,11 +121,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #185DA0;
+  background: #DEB375;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #F4EACF;
+  color: #fff;
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
@@ -169,7 +169,7 @@ html {
   color: #47363D;
 }
 
-@media screen and (max-width:414px) {
+@media screen and (max-width:428px) {
   .free-shipping-150 h2 {
     font-size: 10px;
     line-height: 12px;
