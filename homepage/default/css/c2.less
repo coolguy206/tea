@@ -1,13 +1,13 @@
 @import "var.less";
 @c2-first-font-color: #fff;
-@c2-first-cta-color: #EED35A;
-@c2-first-cta-background: #98424D;
+@c2-first-cta-color: #E3B0C8;
+@c2-first-cta-background: #52368A;
 @c2-second-font-color: #fff;
-@c2-second-cta-color: #E3B0C8;
-@c2-second-cta-background: #4E4177;
+@c2-second-cta-color: #1B3E54;
+@c2-second-cta-background: #F2CA3F;
 @c2-third-font-color: #fff;
-@c2-third-cta-color: #FFF;
-@c2-third-cta-background: #B45A90;
+@c2-third-cta-color: #FFEAF9;
+@c2-third-cta-background: #C059A4;
 
 .c2 {
   @media screen and (max-width: 414px) {
@@ -73,9 +73,13 @@
           @media screen and (max-width:414px) {
             // margin: 5% 0 8% 0 !important;
           }
-          margin: 4% 0 0;
+          margin: 5% 0 0;
 
           a {
+            @media screen and (max-width: 1679px) {
+              width: 33%;
+              padding: 4.5%;
+            }
             @media screen and (max-width:414px) {
               // width: 44%;
               // padding: 3.3% 0;
@@ -96,7 +100,7 @@
       @media screen and (max-width:414px) {
         flex-basis: 100% !important;
       }
-      flex-basis: 50% !important;
+      // flex-basis: 50% !important;
       // padding: 2.5% 1% 0;
       .the-content {
         // padding: 7% 0 0;
@@ -140,7 +144,7 @@
         margin: 0;
         background: #fff;
       }
-      flex-basis: 50%;
+      // flex-basis: 50%;
       // padding: 2.6% 1% 0;
       .the-content {
         // padding: 3% 0 0;

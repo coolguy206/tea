@@ -3,12 +3,12 @@ const inview = require('./inview.js');
 const addTracking = require('./tracking.js');
 
 $(document).ready(function() {
-  addAlt('.hp .c1 img', 'kids on a bike');
-  addAlt('.hp .c2 .first img', 'girl in flower graphic dress');
-  addAlt('.hp .c2 .second img', 'baby in moose graphic romper');
-  addAlt('.hp .c2 .third img', 'girl in strip dress');
-  addAlt('.hp .c3 .first img', 'kids in mountain & moose graphic tee');
-  addAlt('.hp .c3 .second img', 'girl in butterfly top');
+  addAlt('.hp .c1 img', 'kids in blues & purples in a field of grass');
+  addAlt('.hp .c2 .first img', 'baby girl in flower graphic romper');
+  addAlt('.hp .c2 .second img', 'baby boy in blue romper');
+  addAlt('.hp .c2 .third img', 'baby girl in yellow flower dress');
+  addAlt('.hp .c3 .first img', 'girl in pink flower dress');
+  addAlt('.hp .c3 .second img', 'kids in blue color outfits');
   addAlt('.hp .c4 .first img', 'halloween shop');
   addAlt('.hp .c4 .second img', 'baby in yellow flower dress');
   addAlt('.hp .c4 .third img', 'strawberry & rainbow PJs');
