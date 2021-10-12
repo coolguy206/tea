@@ -1,0 +1,175 @@
+@import 'vars.less';
+@cta-font-color: #F9EBE6;
+@cta-background-color: #4A556B;
+@color2: #E07177;
+@color1: #4A556B;
+@background: #F9EBE6;
+
+.this-form {
+	@media screen and (max-width: 414px) {
+		padding: 17.5% 0;
+	}
+	background: #F8F8F8;
+	padding: 4.5% 0;
+
+	.sending,
+	.successfully-sent {
+		display: none;
+		text-align: center;
+
+		h2 {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.8vw;
+			}
+			@media screen and (max-width: 414px) {
+				font-size: 5vw;
+			}
+			font-family: gilroy-regular;
+			font-size: 1.25rem;
+		}
+
+		a {
+			text-decoration: none;
+			color: #4268ca;
+		}
+	}
+
+	form {
+		@media screen and (max-width: 414px) {
+			width: 100%;
+			left: 0;
+			transform: translateX(0);
+			padding: 0 5%;
+		}
+		width: 50%;
+		left: 50%;
+		position: relative;
+		transform: translateX(-50%);
+		display: flex;
+		flex-wrap: wrap;
+		padding: 0 0 0 1.9%;
+
+		div {
+			@media screen and (max-width: 414px) {
+				flex-basis: 100%;
+				margin: 0 0 9%;
+			}
+			flex-basis: 50%;
+			margin: 0 0 3.9%;
+
+			&.button-box {
+				@media screen and (max-width: 414px) {
+					margin: 12% 0 0;
+				}
+				flex-basis: 100%;
+				text-align: center;
+				margin: 0;
+			}
+		}
+
+		p {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.1vw;
+				line-height: 1.1vw;
+			}
+			@media screen and (max-width: 414px) {
+				font-size: 3.9vw;
+				line-height: 4.1vw;
+			}
+			font-family: gilroy-regular;
+			font-size: 16px;
+			line-height: 21px;
+			flex-basis: 100%;
+			letter-spacing: 0.04em;
+			// color: #47363D;
+			&.by-entering {
+				@media screen and (max-width: 414px) {
+					margin: 7% 0 0;
+				}
+				margin: 3% 0 0;
+			}
+
+			&.required {
+				@media screen and (max-width: 414px) {
+					margin: 13% 0 1%;
+				}
+				margin: 3% 0 1%;
+			}
+		}
+
+		label {
+			@media screen and (max-width: 1679px) {
+				font-size: 0.7vw;
+			}
+			@media screen and (max-width: 414px) {
+				font-size: 3vw;
+			}
+			font-family: gilroy-regular;
+			font-size: 12px;
+			line-height: 28px;
+			letter-spacing: 1px;
+			display: block;
+			padding: 0 0 0 5%;
+		}
+
+		input {
+			@media screen and (max-width: 414px) {
+				width: 100%;
+			}
+			background: #EDEBEC;
+			border: none;
+			padding: 4.5% 6%;
+			display: block;
+			width: 91%;
+			font-family: gilroy-regular;
+			border-radius: 0;
+			letter-spacing: 0.04em;
+
+			&[type="checkbox"] {
+				background: none;
+				border: 1px solid;
+				display: inline-block;
+				padding: 0;
+				height: 16px;
+				width: 16px;
+
+				&:checked {
+					background: #47363d;
+				}
+			}
+		}
+
+		button {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.2vw;
+			}
+			@media screen and (max-width: 414px) {
+				font-size: 4.7vw;
+				margin: 0;
+				padding: 3% 9% !important;
+			}
+			font-family: gilroy-bold !important;
+			font-size: 20px;
+			line-height: 24px;
+			letter-spacing: 0.2em !important;
+			color: @cta-font-color !important;
+			background: @cta-background-color !important;
+			text-transform: uppercase !important;
+			padding: 2% 5% 1.5% 5% !important;
+			border: none !important;
+		}
+	}
+}
+
+.this-error {
+	text-transform: uppercase;
+	display: none;
+	color: #D94D52;
+	font-family: gilroy-bold;
+	flex-basis: 100%;
+	letter-spacing: 0.04em;
+}
+
+.error-border {
+	border: 1px solid #D94D52 !important;
+}
