@@ -34,6 +34,25 @@ $(document).ready(function() {
         if (title !== undefined) {
           title = title.replace(/Tea Collection/, '');
         }
+        var originalPrice = ``;
+        var vars = val.vars;
+        if (vars !== undefined) {
+          originalPrice = vars.variants[0].original_price_column;
+          originalPrice = originalPrice.replace(/ USD/g, '');
+          originalPrice = Number(originalPrice).toFixed(2);
+          //console.log(originalPrice);
+        }
+
+        var priceElem = ``;
+        if (originalPrice !== ``) {
+          if (originalPrice !== price) {
+            priceElem = `<p><strike>$${originalPrice}</strike> <span class="sale_price">$${price}</span></p>`;
+          } else {
+            priceElem = `<p>$${price}</p>`;
+          }
+        } else {
+          priceElem = `<p>$${price}</p>`;
+        }
 
 
         // console.log(url, img, price, title);
@@ -48,9 +67,7 @@ $(document).ready(function() {
                         <h3>
                           <a href="${url}">${title}</a>
                         </h3>
-                        <p>
-                          <span class="sale_price">$${price}</span>
-                        </p>
+                        ${priceElem}
                       </li>`;
 
             $(parent + ' .sailthru-list').append(elem);
@@ -63,6 +80,8 @@ $(document).ready(function() {
       $(parent + ' .sailthru-list').bxSlider({
         minSlides: 1,
         maxSlides: 4,
+        autoplay: true,
+        autoplaySpeed: 2000,
         slideWidth: 300,
         moveSlides: 1,
         controls: true,

@@ -1,4 +1,4 @@
-<div class="sailthru-pdps"><div class="sailthru-context"><h2 class="sailthru-h2">You Might Also Like</h2><ul class="sailthru-list"></ul></div></div>{literal}<style>.sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.mobile{display:none}@media screen and (max-width:415px){.mobile{display:block}}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}</style><script>Sailthru.init({
+<div class="sailthru-pdps"><div class="sailthru-context"><h2 class="sailthru-h2">You Might Also Like</h2><ul class="sailthru-list"></ul></div></div>{literal}<style>.sailthru-h2{color:#47363D;font-family:'Gilroy-Regular';font-size:26px;font-size:1.625rem;line-height:39px;letter-spacing:4px;text-transform:uppercase;text-align:center;margin:20px 0;display:none}.mobile{display:none}@media screen and (max-width:415px){.mobile{display:block}}.sailthru-list{list-style-type:none}.sailthru-list a{text-decoration:none}.sailthru-list li h3{margin:5px 0 0;line-height:21px;text-align:left}.sailthru-list li h3 a{color:#47363D;font-family:'Gilroy-Bold';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;text-decoration:none}.sailthru-list li p{color:#47363D;font-family:'Gilroy-Regular';font-size:14px;font-size:.875rem;line-height:21px;letter-spacing:.5px;margin:5px 0}.sailthru-list li p span.sale_price{color:#D94D52}.sailthru-pdps .bx-wrapper .bx-next,.sailthru-pdps .bx-wrapper .bx-prev{background:none !important;text-decoration:none !important}.sailthru-pdps .bx-wrapper .bx-next span,.sailthru-pdps .bx-wrapper .bx-prev span{display:block;text-indent:initial;font-size:20px;font-size:1.25rem}</style><script>Sailthru.init({
     customerId: '856bfba3e6c8f69c9faad446ffedbce0',
     isCustom: true,
   });
@@ -39,6 +39,25 @@
           if (title !== undefined) {
             title = title.replace(/Tea Collection/, '');
           }
+          var originalPrice = ``;
+          var vars = val.vars;
+          if (vars !== undefined) {
+            originalPrice = vars.variants[0].original_price_column;
+            originalPrice = originalPrice.replace(/ USD/g, '');
+            originalPrice = Number(originalPrice).toFixed(2);
+            //console.log(originalPrice);
+          }
+
+          var priceElem = ``;
+          if (originalPrice !== ``) {
+            if (originalPrice !== price) {
+              priceElem = `<p><strike>$${originalPrice}</strike> <span class="sale_price">$${price}</span></p>`;
+            } else {
+              priceElem = `<p>$${price}</p>`;
+            }
+          } else {
+            priceElem = `<p>$${price}</p>`;
+          }
 
 
           // console.log(url, img, price, title);
@@ -53,9 +72,7 @@
                           <h3>
                             <a href="${url}">${title}</a>
                           </h3>
-                          <p>
-                            <span class="sale_price">$${price}</span>
-                          </p>
+                          ${priceElem}
                         </li>`;
 
               $(parent + ' .sailthru-list').append(elem);
@@ -68,6 +85,8 @@
         $(parent + ' .sailthru-list').bxSlider({
           minSlides: 1,
           maxSlides: 4,
+          autoplay: true,
+          autoplaySpeed: 2000,
           slideWidth: 300,
           moveSlides: 1,
           controls: true,

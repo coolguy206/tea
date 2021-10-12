@@ -27,13 +27,34 @@ $(document).ready(function () {
 
         if (title !== undefined) {
           title = title.replace(/Tea Collection/, '');
+        }
+
+        var originalPrice = "";
+        var vars = val.vars;
+
+        if (vars !== undefined) {
+          originalPrice = vars.variants[0].original_price_column;
+          originalPrice = originalPrice.replace(/ USD/g, '');
+          originalPrice = Number(originalPrice).toFixed(2); //console.log(originalPrice);
+        }
+
+        var priceElem = "";
+
+        if (originalPrice !== "") {
+          if (originalPrice !== price) {
+            priceElem = "<p><strike>$".concat(originalPrice, "</strike> <span class=\"sale_price\">$").concat(price, "</span></p>");
+          } else {
+            priceElem = "<p>$".concat(price, "</p>");
+          }
+        } else {
+          priceElem = "<p>$".concat(price, "</p>");
         } // console.log(url, img, price, title);
 
 
         if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
           // console.log('tea pdp');
           if (img !== undefined && price !== undefined && title !== undefined) {
-            var elem = "\n                      <li>\n                        <a href=\"".concat(url, "\">\n                          <img src=\"").concat(img, "\" alt=\"").concat(title, "\">\n                        </a>\n                        <h3>\n                          <a href=\"").concat(url, "\">").concat(title, "</a>\n                        </h3>\n                        <p>\n                          <span class=\"sale_price\">$").concat(price, "</span>\n                        </p>\n                      </li>");
+            var elem = "\n                      <li>\n                        <a href=\"".concat(url, "\">\n                          <img src=\"").concat(img, "\" alt=\"").concat(title, "\">\n                        </a>\n                        <h3>\n                          <a href=\"").concat(url, "\">").concat(title, "</a>\n                        </h3>\n                        ").concat(priceElem, "\n                      </li>");
             $(parent + ' .sailthru-list').append(elem);
           } //end of if(img...)
 
@@ -44,6 +65,8 @@ $(document).ready(function () {
       $(parent + ' .sailthru-list').bxSlider({
         minSlides: 1,
         maxSlides: 4,
+        autoplay: true,
+        autoplaySpeed: 2000,
         slideWidth: 300,
         moveSlides: 1,
         controls: true,
