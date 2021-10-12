@@ -1,6 +1,6 @@
-@promo1Bg: #C293BF;
-@promo1Color1: #F6CD97;
-@promo1Color2: #FFFFFF;
+@promo1Bg: #7C854C;
+@promo1Color1: #FDD872;
+@promo1Color2: #F8CDC7;
 @promo1Color3: #FFF;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
@@ -52,6 +52,10 @@
 
     span,
     span > a {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
       @media screen and (max-width:768px) {
         font-size: 12px;
         line-height: 18px;
@@ -84,7 +88,7 @@
 
       &.second {
         @media screen and (max-width: 414px) {
-          // display: none;
+          display: block;
         }
         // color: @fontColor2;
       }
@@ -94,7 +98,7 @@
           left: 0;
           display: inline;
         }
-        left: 1%;
+        left: 0;
       }
 
       &.shop-now {
