@@ -1,7 +1,7 @@
-@promo1Bg: #FAEDCD;
-@promo1Color1: #B13B47;
-@promo1Color2: #3E638F;
-@promo1Color3: #3E638F;
+@promo1Bg: #AE6B28;
+@promo1Color1: #DEED88;
+@promo1Color2: #FFFFFF;
+@promo1Color3: #FFF;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -12,7 +12,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,10 +20,17 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
@@ -32,7 +39,8 @@
     }
     // background: @backgroundColor;
     text-align: center;
-    padding: 2% 0;
+    // padding: 2% 0;
+    padding: 0.8% 0;
     // display:none;
     // .see-details {
     //  display: block;
@@ -52,9 +60,11 @@
       font-family: gilroy-bold;
       // font-size: 12px;
       // line-height: 18px;
-      font-size: 25px;
-      line-height: 30px;
-      letter-spacing: 2px;
+      // font-size: 25px;
+      // line-height: 30px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.2em;
       text-transform: uppercase;
 
       &.span-wrap {
@@ -119,6 +129,7 @@
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
