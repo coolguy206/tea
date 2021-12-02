@@ -1,7 +1,7 @@
-@promo1Bg: #F9F2E0;
-@promo1Color1: #FF439A;
-@promo1Color2: #3CB38B;
-@promo1Color3: #48353E;
+@promo1Bg: #F4EAD1;
+@promo1Color1: #DE3742;
+@promo1Color2: #911F30;
+@promo1Color3: #911F30;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -12,7 +12,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,19 +20,27 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 810px) {
       padding: 2% 0;
     }
     // background: @backgroundColor;
     text-align: center;
-    padding: 1.2% 0;
+    // padding: 2% 0;
+    padding: 0.8% 0;
     // display:none;
     // .see-details {
     //  display: block;
@@ -44,18 +52,23 @@
 
     span,
     span > a {
-      @media screen and (max-width:768px) {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
+      @media screen and (max-width:810px) {
         font-size: 12px;
         line-height: 18px;
       }
       position: relative;
       font-family: gilroy-bold;
+      // font-size: 12px;
+      // line-height: 18px;
+      // font-size: 25px;
+      // line-height: 30px;
       font-size: 20px;
       line-height: 24px;
       letter-spacing: 0.2em;
-      // font-size: 25px;
-      // line-height: 30px;
-      // letter-spacing: 2px;
       text-transform: uppercase;
 
       &.span-wrap {
@@ -63,9 +76,9 @@
       }
 
       &.first {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
-          //display: block;
+          display: block;
         }
         // left: -1%;
         // color: @fontColor1;
@@ -74,22 +87,22 @@
       }
 
       &.second {
-        @media screen and (max-width: 414px) {
-          // display: none;
+        @media screen and (max-width: 428px) {
+          display: block;
         }
         // color: @fontColor2;
       }
 
       &.third {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
           display: inline;
         }
-        left: 1%;
+        left: 0;
       }
 
       &.shop-now {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
         }
         left: 1%;
@@ -111,21 +124,22 @@
       }
 
       &.details {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 810px) {
           left: 86%;
           // display: none;
         }
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           // left: 78%;
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
 
         a {
-          @media screen and (max-width:768px) {
+          @media screen and (max-width:810px) {
             font-size: 12px;
           }
           font-size: 15px;
