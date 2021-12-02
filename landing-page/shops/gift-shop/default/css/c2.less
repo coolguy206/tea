@@ -1,0 +1,203 @@
+@import "var.less";
+@c2-first-font-color: #fff;
+@c2-first-cta-color: #fff;
+@c2-first-cta-background: #11574A;
+@c2-second-font-color: #fff;
+@c2-second-cta-color: #fff;
+@c2-second-cta-background: #B02933;
+@c2-third-font-color: #fff;
+@c2-third-cta-color: #fff;
+@c2-third-cta-background: #2D82A1;
+
+.c2 {
+  @media screen and (max-width: 428px) {
+    flex-wrap: wrap;
+    padding: 0;
+    // background: @background;
+  }
+  display: flex;
+  // padding: 0 0 0.8%;
+  text-align: center;
+  // flex-wrap: wrap;
+  div {
+    &.first,
+    &.second,
+    &.third {
+      @media screen and (max-width:428px) {
+        padding: 0;
+      }
+      text-align: center;
+      padding: 3.5%;
+      box-sizing: border-box;
+      flex-basis: 33%;
+      position: relative;
+
+      a {
+        text-decoration: none;
+      }
+
+      .the-content {
+        @media screen and (max-width:428px) {
+          margin: 10% 0 0 !important;
+          bottom: 10%;
+        }
+        // margin: 7% 0 0;
+        position: absolute;
+        bottom: 14%;
+        left: 0;
+        width: 100%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            font-size: 3vw;
+            line-height: 3vw;
+            // line-height: 1.6vw;
+          }
+          @media screen and (max-width:428px) {
+            font-size: 12vw;
+            line-height: 12vw;
+            // margin: 8% 0 10%;
+            // margin: 0;
+          }
+          font-family: @gilroyb;
+          font-size: 50px;
+          line-height: 50px;
+          letter-spacing: 0.1rem;
+          margin: 0 0 4%;
+          text-shadow: 0 0 14px rgba(0,0,0,0.15);
+          // text-transform: uppercase;
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 14.5vw;
+            // padding: 4.5%;
+          }
+          @media screen and (max-width:428px) {
+            width: 53vw;
+            // padding: 3.3% 0;
+          }
+          // padding: 1.6% 2.4%;
+          // padding: 0;
+          width: 246px;
+
+          span {
+            @media screen and (max-width: 428px) {
+              // display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.first {
+      @media screen and (max-width:428px) {
+        flex-basis: 100% !important;
+      }
+      // flex-basis: 50% !important;
+      // padding: 2.5% 1% 0;
+      .the-content {
+        // padding: 7% 0 0;
+        h2 {
+          @media screen and (max-width:428px) {
+            // color: #fff;
+            // text-shadow: 1px 1px 13px #7f7f7f;
+          }
+          color: @c2-first-font-color;
+        }
+        // margin: 5% 0 0;
+        a {
+          @media screen and (max-width:428px) {
+            // color: #fff;
+            // text-shadow: 1px 1px 13px #7f7f7f;
+          }
+          color: @c2-first-cta-color;
+          background: @c2-first-cta-background;
+
+          &.cta1 {
+            left: 0;
+          }
+
+          &.cta2 {
+            left: 1%;
+          }
+
+          &.cta3 {
+            left: 5%;
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 428px) {
+        padding: 0;
+        margin: 0;
+        background: #fff;
+        flex-basis: 100% !important;
+      }
+      // flex-basis: 50% !important;
+      // padding: 2.6% 1% 0;
+      .the-content {
+        // padding: 3% 0 0;
+        h2 {
+          color: @c2-second-font-color;
+        }
+
+        a {
+          @media screen and (max-width:428px) {
+            // padding: 3.3% 0;
+          }
+          color: @c2-second-cta-color;
+          background: @c2-second-cta-background;
+          // padding: 1.6% 3.8%;
+          span {
+            @media screen and (max-width: 428px) {
+              // display: none;
+            }
+          }
+
+          &.cta1 {
+            @media screen and (max-width: 428px) {
+              // left: -3%;
+            }
+            left: 0;
+          }
+
+          &.cta2 {
+            @media screen and (max-width: 428px) {
+              // left: 3%;
+            }
+            left: 1%;
+          }
+        }
+      }
+    }
+
+    &.third {
+      @media screen and (max-width:428px) {
+        flex-basis: 100% !important;
+      }
+      // padding: 1.7% 1% 0;
+      // flex-basis: 33%;
+      .the-content {
+        h2 {
+          color: @c2-third-font-color;
+        }
+
+        a {
+          color: @c2-third-cta-color;
+          background: @c2-third-cta-background;
+
+          &.cta1 {
+            // left: -2%;
+          }
+
+          &.cta2 {
+            // left: 2%;
+          }
+        }
+      }
+    }
+  }
+}

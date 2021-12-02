@@ -1,0 +1,119 @@
+@import 'var.less';
+@c1-cta-color: #fff;
+@c1-cta-background-color: #513F7A;
+@c1-h2-color: #513F7A;
+@c1-font-color: #fff;
+
+.c1 {
+  position: relative;
+
+  .the-content {
+    @media screen and (max-width: 428px) {
+      width: 100%;
+      top: 0;
+      left: 0;
+      transform: translate(0);
+      // position: relative;
+      padding: 9% 0 0;
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 31%;
+    text-align: center;
+
+    img {
+      @media screen and (max-width: 1679px) {
+        width: 9.3vw;
+      }
+      margin: 0 0 9%;
+    }
+
+    h2 {
+      @media screen and (max-width:1679px) {
+        font-size: 3.5vw;
+        line-height: 3.5vw;
+      }
+      @media screen and (max-width:428px) {
+        margin: 0 0 4%;
+        font-size: 12vw;
+        line-height: 11vw;
+      }
+      color: @c1-h2-color;
+      font-size: 70px;
+      line-height: 70px;
+    }
+
+    p {
+      @media screen and (max-width: 1679px) {
+        // display: none;
+        font-size: 1.4vw;
+        line-height: 1.9vw;
+      }
+      @media screen and (max-width: 428px) {
+        // display: none;
+        font-size: 5vw;
+        line-height: 7vw;
+        width: 100%;
+        margin: 0 0 5%;
+      }
+      margin: 3.5% auto 9%;
+      font-size: 24px;
+      line-height: 32px;
+      color: @c1-font-color;
+      text-shadow: 0 0 14px rgba(0,0,0,0.15);
+    }
+
+    div {
+      @media screen and (max-width: 428px) {
+        text-align: center;
+      }
+      margin: 3% 0 0;
+
+      a {
+        @media screen and (max-width:1679px) {
+          width: 13.5vw;
+        }
+        @media screen and (max-width:428px) {
+          // width: 182px;
+          width: 44vw;
+        }
+        color: @c1-cta-color;
+        background: @c1-cta-background-color;
+        width: 225px;
+
+        span {
+          @media screen and (max-width: 428px) {
+            // display: none;
+          }
+        }
+
+        &.cta1 {
+          @media screen and (max-width:428px) {}
+          left: -1%;
+        }
+
+        &.cta2 {
+          @media screen and (max-width:428px) {}
+          left: 1%;
+        }
+
+        &.cta3 {
+          @media screen and (max-width:428px) {}
+          left: -1%;
+        }
+
+        &.cta4 {
+          @media screen and (max-width:428px) {}
+          left: 1%;
+        }
+
+        &.cta5 {
+          @media screen and (max-width:428px) {}
+          left: 1%;
+        }
+      }
+    }
+  }
+}

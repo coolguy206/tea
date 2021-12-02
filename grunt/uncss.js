@@ -17,4 +17,12 @@ module.exports = {
     }]
   },
 
+  landing: {
+    files: [{
+      // nonull: true,
+      src: ['landing-page/' + config.landing.name + '/includes/content-uncss.html'],
+      dest: 'landing-page/' + config.landing.name + '/css/uncss/styles.css'
+    }]
+  },
+
 };
