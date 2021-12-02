@@ -4,6 +4,49 @@
 	img {
 		max-width: 100%;
 	}
+
+	div {
+		& > div {
+			@media screen and (max-width: 428px) {
+				flex-wrap: wrap;
+			}
+			display: flex;
+
+			a {
+				display: inline-block;
+
+				&._1 {
+					@media screen and (max-width: 428px) {}
+				}
+
+				&._2 {
+					@media screen and (max-width: 428px) {
+						width: 50%;
+					}
+				}
+
+				&._3 {
+					@media screen and (max-width: 428px) {
+						width: 50%;
+					}
+				}
+			}
+
+			img {
+				&._1 {
+					@media screen and (max-width: 428px) {}
+				}
+
+				&._2 {
+					@media screen and (max-width: 428px) {}
+				}
+
+				&._3 {
+					@media screen and (max-width: 428px) {}
+				}
+			}
+		}
+	}
 }
 
 .desktop {
