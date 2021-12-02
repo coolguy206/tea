@@ -1,9 +1,9 @@
 @import "var.less";
 @c1-font-color: #fff;
-@c1-h2-color: #7D3648;
+@c1-h2-color: #E3D7FF;
 @c1-p-color: #fff;
-@c1-cta-color: #fff;
-@c1-cta-background: #7D3648;
+@c1-cta-color: #E3D7FF;
+@c1-cta-background: #513F7A;
 
 .c1 {
   position: relative;
@@ -20,8 +20,8 @@
       position: absolute;
       top: 50%;
       width: 50%;
-      left: 3%;
-      transform: translate(0, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
 
       a,
@@ -109,12 +109,12 @@
         // letter-spacing: 1px;
         width: 100%;
         font-family: @gilroyr;
-        // text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
+        text-shadow: 0 0 14px rgba(0,0,0,0.15);
       }
 
       div {
         @media screen and (max-width: 428px) {
-          margin: 109% 0 0;
+          margin: 100% 0 0;
           //margin: 3% 0 0;
         }
         // margin: 3% 0 0;
@@ -177,10 +177,13 @@
             }
 
             &.cta5 {
-              @media screen and (max-width: 428px) {
-                // left: -2%;
+              @media screen and (max-width: 1679px) {
+                width: 15vw;
               }
-              // left: -3%;
+              @media screen and (max-width: 428px) {
+                width: 50vw;
+              }
+              width: 250px;
             }
 
             &.cta6 {

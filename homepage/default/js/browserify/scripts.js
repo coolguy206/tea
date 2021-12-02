@@ -94,17 +94,17 @@ var inview = require('./inview.js');
 var addTracking = require('./tracking.js');
 
 $(document).ready(function () {
-  addAlt('.hp .c1 img', 'family kids in plaid');
-  addAlt('.hp .c2 .first img', 'kids in holiday romper');
-  addAlt('.hp .c2 .second img', 'baby boy in holiday outfit');
+  addAlt('.hp .c1 img', 'kids in holiday clothes');
+  addAlt('.hp .c2 .first img', 'kids in special occasion clothes');
+  addAlt('.hp .c2 .second img', 'family in PJs');
   addAlt('.hp .c2 .third img', 'baby girl in holiday outfit');
-  addAlt('.hp .c3 .first img', 'girl in floral dress');
-  addAlt('.hp .c3 .second img', 'boy in jumpsuit');
-  addAlt('.hp .c3 .second img', 'girl in pink outfit');
-  addAlt('.hp .c4 .first img', 'family in holiday outfit');
-  addAlt('.hp .c4 .second img', 'kid in halloween outfit');
-  addAlt('.hp .c4 .third img', 'strawberry & rainbow PJs');
-  addAlt('.hp .c5 .first img', 'family in PJs');
+  addAlt('.hp .c3 .first img', 'baby in penguin romper');
+  addAlt('.hp .c3 .second img', 'baby boy in wolf graphic outfit');
+  addAlt('.hp .c3 .second img', 'baby girl in wolf graphic dress');
+  addAlt('.hp .c4 .first img', 'girl in flower graphic dress');
+  addAlt('.hp .c4 .second img', 'boy in moose graphic tee');
+  addAlt('.hp .c4 .third img', 'girl in wolf graphic outfit');
+  addAlt('.hp .c5 .first img', 'kid in plaid sweater');
   addAlt('.hp .c5 .second img', 'baby in dress');
   addAlt('.hp .c5 .third img', 'baby in floral romper');
   addAlt('.hp .c5 .fourth img', 'boy in stripe sweater');
