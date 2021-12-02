@@ -20,6 +20,13 @@ jQuery(document).ready(function() {
 
   if (url !== '/') {
     $('.promos').show();
+    $('.free-shipping-150').show();
+  }
+
+  if (url == '/') {
+    $('.header-banner').css('max-width', '100%');
+    $('.free-shipping-150').css('position', 'relative');
+    $('.free-shipping-150').show();
   }
 
   $('.the-promo .see-details').fancybox({
@@ -31,8 +38,8 @@ jQuery(document).ready(function() {
   $('.close-fancy').click(function(e) {
     // e.preventDefault();
     $.fancybox.close();
-  });
 
+  });
 
   // $('.promos-wrap').bxSlider({
   //     auto: true,
