@@ -1,3 +1,4 @@
+{*
 <div class="site-nav-submenu bf">
 	<div class="bar">
 		<div>
@@ -190,7 +191,7 @@
 
 	</div>
 </div>
-
+*}
 <div class="site-nav-submenu girl">
 	<div class="bar">
 		<div>
@@ -199,14 +200,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/girl"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -250,14 +251,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/toddler-girl"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -308,14 +309,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/boy"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -360,14 +361,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/toddler-boy"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -410,20 +411,22 @@
 	</div>
 </div>
 
-<!-- <div class="site-nav-submenu 12-days">
+<div class="site-nav-submenu dresses">
 	<div class="bar">
-		{sub_cats name="cat" category="12-days-of-tea"}
+		{*
+		{sub_cats name="cat" category="dresses"}
 		<div>
-		  <a href="{$cat.url}" data="mega menu 12-day">{$cat.title}</a>
+		  <a href="{$cat.url}" data="mega menu dresses">{$cat.title}</a>
 		  <span class="line"></span>
 		</div>
 		{/sub_cats}
+		*}
 
-		{*
+
 		<div>
 		  <a href="/girl-dresses" data="mega menu dresses">GIRL DRESSES</a>
 		  <span class="line"></span>
-
+		{*
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
 		      {assign var=i value=0}
@@ -447,12 +450,41 @@
 		      <div class="da-rennab-zone" data-zone="mega_girl"></div>
 		    </div>
 		  </div>
-
-		</div>
 		*}
+		</div>
+
+		<div>
+		  <a href="/baby-girl-dresses" data="mega menu dresses">BABY GIRL DRESSES</a>
+		  <span class="line"></span>
+		  {*
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:14% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+
+		        {sub_cats name="cat" category="baby-girl-swimwear"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu" data="mega menu swim categories">{$cat.title}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_baby_girl"></div>
+		    </div>
+		  </div>
+		  *}
+		</div>
 
 	</div>
-</div> -->
+</div>
 
 <div class="site-nav-submenu baby">
 	<div class="bar">
@@ -462,14 +494,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/baby-girl"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -513,14 +545,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/baby-boy"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -565,14 +597,14 @@
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
-
+		{*
 		      <ul class="category">
 		        <li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 		        {sub_cats name="cat" category="black-friday/newborn"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 		        {/sub_cats}
 		      </ul>
-
+		*}
 		      <ul class="category first">
 		        <li>Shop by Category</li>
 
@@ -623,14 +655,14 @@
 					<div class="menu flex-menu">
 						<div class="panel panel-1">
 							{assign var=i value=0}
-
+		{*
 								<ul class="category-sale">
 									<li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 					        {sub_cats name="cat" category="black-friday/girl"}
 					          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 					        {/sub_cats}
 								</ul>
-
+		*}
 								<ul class="category-sale">
 									<li>Shop by Category</li>
 
@@ -663,14 +695,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 						<ul class="category-sale">
 							<li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 							{sub_cats name="cat" category="black-friday/boy"}
 								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
 							{/sub_cats}
 						</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
@@ -705,14 +737,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 						<ul class="category-sale">
 							<li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 							{sub_cats name="cat" category="black-friday/toddler-girl"}
 								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
 							{/sub_cats}
 						</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
@@ -745,14 +777,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 						<ul class="category-sale">
 							<li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 							{sub_cats name="cat" category="black-friday/toddler-boy"}
 								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
 							{/sub_cats}
 						</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
@@ -785,14 +817,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 						<ul class="category-sale">
 							<li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 							{sub_cats name="cat" category="black-friday/baby-girl"}
 								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
 							{/sub_cats}
 						</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
@@ -825,14 +857,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 						<ul class="category-sale">
 							<li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 							{sub_cats name="cat" category="black-friday/baby-boy"}
 								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
 							{/sub_cats}
 						</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
@@ -865,14 +897,14 @@
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
 					{assign var=i value=0}
-
+		{*
 					<ul class="category-sale">
 						<li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 						{sub_cats name="cat" category="black-friday/newborn"}
 							<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 						{/sub_cats}
 					</ul>
-
+		*}
 						<ul class="category-sale">
 							<li>Shop by Category</li>
 
