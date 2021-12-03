@@ -1,0 +1,160 @@
+@import 'var.less';
+@import 'classes.less';
+@red: #FF1744;
+@cta1-color: #424348;
+@cta1-background: #F2D3FF;
+@cta2-color: #2F2F2F;
+@cta2-background: #D8EBDD;
+@cta3-color: #fff;
+@cta3-background: #ECDAA8;
+@cta4-color: #2F2F2F;
+@cta4-background: #B9D4F8;
+@cta5-color: #2F2F2F;
+@cta5-background: #E5E5E5;
+@cta6-color: #2F2F2F;
+@cta6-background: #E5E5E5;
+
+.container-black-friday {
+	&.black-friday,
+	&.black-friday-10,
+	&.black-friday-12,
+	&.black-friday-15,
+	&.black-friday-18,
+	&.black-friday-20,
+	&.black-friday-shop-all {
+		div {
+			a {
+				&.cta3 {
+					@media screen and (max-width:428px) {
+						margin: 0 0 3%;
+					}
+				}
+
+				&.cta4 {
+					@media screen and (max-width:428px) {
+						margin: 0 3% 0 0;
+					}
+				}
+
+				&.cta5 {
+					@media screen and (max-width:428px) {
+						margin: 0;
+					}
+				}
+
+				span {
+					&::after {
+						@media screen and (max-width:428px) {
+							content: '';
+						}
+						content: '\00a0';
+					}
+					@media screen and (max-width:428px) {
+						display: none;
+					}
+				}
+			}
+		}
+	}
+
+	&.black-friday-baby-boy,
+	&.black-friday-baby-boy-12,
+	&.black-friday-baby-boy-15,
+	&.black-friday-baby-boy-18,
+	&.black-friday-boy,
+	&.black-friday-boy-12,
+	&.black-friday-boy-15,
+	&.black-friday-boy-18,
+	&.black-friday-newborn,
+	&.black-friday-newborn-10,
+	&.black-friday-newborn-15,
+	&.black-friday-newborn-18,
+	&.black-friday-toddler-boy,
+	&.black-friday-toddler-boy-12,
+	&.black-friday-toddler-boy-15,
+	&.black-friday-toddler-boy-18 {
+		div {
+			@media screen and (max-width:428px) {
+				width: 70%;
+			}
+			left: 50%;
+			transform: translate(-50%,-50%);
+			width: auto;
+
+			a {
+				&.cta2 {
+					@media screen and (max-width:428px) {
+						margin: 0 0 3%;
+					}
+				}
+
+				&.cta3 {
+					@media screen and (max-width:428px) {
+						margin: 0 3% 0 0;
+					}
+				}
+
+				&.cta4 {
+					margin: 0;
+				}
+			}
+		}
+	}
+
+	div {
+		a {
+			@media screen and (max-width: 1679px) {
+				font-size: 0.9vw;
+				width: 11.1vw;
+				height: 2.6vw;
+			}
+			@media screen and (max-width:428px) {
+				font-size: 3.3vw;
+				width: 24vw;
+				height: 11vw;
+				margin: 0 3% 3% 0;
+			}
+			color: @cta1-color;
+			margin: 0 2% 0 0;
+			width: 186px;
+			height: 43px;
+
+			&.cta1 {
+				@media screen and (max-width:428px) {}
+				// color: @cta1-color;
+				background: @cta1-background;
+			}
+
+			&.cta2 {
+				@media screen and (max-width:428px) {}
+				// color: @cta1-color;
+				background: @cta2-background;
+			}
+
+			&.cta3 {
+				@media screen and (max-width:428px) {
+					margin: 0 0 3%;
+				}
+				// color: @cta3-color;
+				background: @cta3-background;
+			}
+
+			&.cta4 {
+				@media screen and (max-width:428px) {
+					margin: 0 3% 0 0;
+				}
+				// color: @cta4-color;
+				background: @cta4-background;
+			}
+
+			&.cta5,
+			&.cta6 {
+				@media screen and (max-width:428px) {
+					margin: 0;
+				}
+				// color: @cta5-color;
+				background: @cta6-background;
+			}
+		}
+	}
+}

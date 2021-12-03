@@ -1,164 +1,130 @@
-import {
-  urls
-} from './urls';
-import {
-  makeLinks
-} from './makeLinks';
-
 $(document).ready(function() {
+  //expand sidebar
   $('.shops h2').addClass('open');
   $('.shops .links').css('display', 'block');
   $('.shops h2 span').attr('class', 'fas fa-minus');
 
-  var li = $('.category-page .nav .side-nav ul li .links ul li');
-  $.each(li, function(i, val) {
-    switch (i) {
-      case 1:
-      case 2:
-      case 3:
-      case 4:
-        $(val).css('margin-left', '20px');
-        break;
-
-    }
-  });
-
-  // console.log(urls);
-
   var url = window.location.pathname;
 
-  var number = 0;
-  switch (url) {
-    case '/black-friday':
-    case '/black-friday/10':
-    case '/black-friday/12':
-    case '/black-friday/15':
-    case '/black-friday/20':
-      number = 4;
-      break;
-    case '/black-friday/girl/10':
-      number = 2;
-      break;
-    default:
-      number = 3;
-      break;
+  var bfClass = url.replace(/\//g, '-').replace('-', '');
+  $('.container-black-friday').addClass(bfClass);
+
+  var subCats = ``;
+  var theCtas = ``;
+
+  if (url == '/black-friday') {
+
+    //banner ctas
+    subCats = $('.category-page .nav .side-nav ul li .links ul li a');
+    $.each(subCats, function(i, val) {
+      var thisURL = ``;
+      var num = ``;
+      var href = $(val).attr('href');
+      var str = $(val).text();
+      switch (str) {
+        case `Girl`:
+          num = 1;
+          break;
+        case `Boy`:
+          num = 2;
+          break;
+        case `Baby Girl`:
+          num = 3;
+          break;
+        case `Baby Boy`:
+          num = 4;
+          break;
+        case `Newborn`:
+          num = 5;
+          break;
+      }
+      // console.log(str);
+      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday`) {
+        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
+      }
+    });
+
+    if ($('.category-page .nav .side-nav ul li .links ul li a').length == 8) {
+      console.log('only exec once');
+      //add subcats to sidebar
+      var theHTML = `<ul class="sub">
+      <li class="">
+        <a href="/black-friday/10" title="$10 Styles">$10 Styles</a>
+      </li>
+      <li class="">
+        <a href="/black-friday/12" title="$12 Styles">$12 Styles</a>
+      </li>
+      <li class="">
+        <a href="/black-friday/15" title="$15 Styles">$15 Styles</a>
+      </li>
+      <li class="">
+        <a href="/black-friday/18" title="$18 Styles">$18 Styles</a>
+      </li>
+      <li class="">
+        <a href="/black-friday/20" title="$20 Styles">$20 Styles</a>
+      </li>
+    </ul>`;
+      $($('.category-page .nav .side-nav ul li .links ul li a')[0]).after(theHTML);
+    }
+
+  } else if (url == '/black-friday/10' || url == '/black-friday/12' || url == '/black-friday/15' || url == '/black-friday/18' || url == '/black-friday/20' || url == '/black-friday/shop-all') {
+
+    //banner ctas
+    subCats = $('.category-page .nav .side-nav ul li .links ul li a');
+    $.each(subCats, function(i, val) {
+      var thisURL = ``;
+      var num = ``;
+      var href = $(val).attr('href');
+      var str = $(val).text();
+      switch (str) {
+        case `Girl`:
+          num = 1;
+          break;
+        case `Boy`:
+          num = 2;
+          break;
+        case `Baby Girl`:
+          num = 3;
+          break;
+        case `Baby Boy`:
+          num = 4;
+          break;
+        case `Newborn`:
+          num = 5;
+          break;
+      }
+      // console.log(str);
+      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday`) {
+        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
+      }
+    });
+
+
+
+  } else {
+
+    //banner ctas
+    subCats = $('.category-page .nav .side-nav ul li .links ul li a.active + ul li a');
+    $.each(subCats, function(i, val) {
+      var thisURL = ``;
+      var num = i + 1;
+      var color = ``;
+      var href = $(val).attr('href');
+      var str = $(val).text();
+      str = str.replace(/Styles/g, '').replace(/ /g, '');
+      str = str.replace(/Girl/g, '').replace(/Boy/g, '').replace(/Baby/g, '').replace(/Newborn/g, '').replace(/Toddler/g, '');
+      // console.log(str);
+      if (str == `ShopAll`) {
+        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}">shop all</a> `;
+      } else if (str !== `$20`) {
+        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}">shop ${str}</a> `;
+      }
+    });
+
+
   }
 
-  //collapse size sidebar
-  if ($('.category-page .nav .side-nav ul li h2')[number] !== undefined) {
-    $('.category-page .nav .side-nav ul li h2')[number].classList.remove('open');
-    $('.category-page .nav .side-nav ul li h2 span')[number - 1].className = 'fas fa-plus';
-    $('.category-page .nav .side-nav ul li .facets')[number - 2].style.display = 'none';
-  }
-
-
-
-  url = url.split('/');
-
-  var baseURL = url[1];
-  var cat = url[2];
-
-  // console.log(baseURL, cat);
-
-  switch (cat) {
-    case '10':
-    case '12':
-    case '15':
-    case '20':
-      var titleText = $('.main-title').text();
-      titleText = titleText.split(' ');
-      // console.log(titleText);
-      // console.log(`should be top level nav`);
-      titleText = `${titleText[0]} black friday styles`;
-      // console.log(titleText);
-      $('.main-title').text(titleText);
-      break;
-    case 'girl':
-    case 'boy':
-    case 'tween':
-      var titleText = $('.main-title').text();
-      titleText = titleText.split(' ');
-      // console.log(titleText);
-      if (titleText.length < 3) {
-        if (titleText[1] == undefined) {
-          // console.log(`undefined, should be top level nav`);
-          titleText = `${titleText[0]} black friday styles`;
-          // console.log(titleText);
-        } else {
-          // console.log(`subnav`)
-          titleText = `${titleText[0]} ${cat} ${titleText[1]}`;
-          // console.log(titleText);
-        }
-        $('.main-title').text(titleText);
-      }
-      break;
-    case 'baby-girl':
-    case 'baby-boy':
-    case 'toddler-girl':
-    case 'toddler-boy':
-      var titleText = $('.main-title').text();
-      titleText = titleText.split(' ');
-      // console.log(titleText);
-      if (titleText.length < 3) {
-        if (titleText[0] == 'Baby' || titleText[0] == 'Toddler') {
-          // console.log(`undefined, should be top level nav`);
-          titleText = `${titleText[0]} ${titleText[1]} <br class="mobile"> black friday styles`;
-          // console.log(titleText);
-        } else {
-          // console.log(`subnav`)
-          var thisCat = cat;
-          thisCat = thisCat.replace(/-/g, ' ');
-          titleText = `${titleText[0]} ${thisCat} ${titleText[1]}`;
-          // console.log(titleText);
-        }
-        $('.main-title').html(titleText);
-      }
-      break;
-  };
-
-
-
-  switch (cat) {
-    case '10':
-      makeLinks(urls.num10, baseURL, cat)
-      break;
-    case '12':
-      makeLinks(urls.num12, baseURL, cat)
-      break;
-    case '15':
-      makeLinks(urls.num15, baseURL, cat)
-      break;
-    case '20':
-      makeLinks(urls.num20, baseURL, cat)
-      break;
-    case undefined:
-      makeLinks(urls.numUndefined, baseURL, cat)
-      break;
-    case 'girl':
-      makeLinks(urls.girl, baseURL, cat)
-      break;
-    case 'boy':
-      makeLinks(urls.boy, baseURL, cat)
-      break;
-    case 'tween':
-      makeLinks(urls.tween, baseURL, cat)
-      break;
-    case 'baby-girl':
-      makeLinks(urls.baby.girl, baseURL, cat)
-      break;
-    case 'baby-boy':
-      makeLinks(urls.baby.boy, baseURL, cat)
-      break;
-    case 'newborn':
-      makeLinks(urls.baby.newborn, baseURL, cat)
-      break;
-    case 'toddler-girl':
-      makeLinks(urls.toddler.girl, baseURL, cat)
-      break;
-    case 'toddler-boy':
-      makeLinks(urls.toddler.boy, baseURL, cat)
-      break;
-  };
+  $('.container-black-friday div').append(theCtas);
 
   // $('.site-content-bg-wrapper').prepend($('.container-black-friday'));
 

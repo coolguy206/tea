@@ -4,6 +4,14 @@
 	<div class="menu flex-menu">
 		<div class="panel panel-1">
 			{assign var=i value=0}
+
+			<ul class="category-sale">
+				<li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+				{sub_cats name="cat" category="black-friday/newborn"}
+					<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
+				{/sub_cats}
+			</ul>
+
 				<ul class="category-sale">
 					<li>Shop by Category</li>
 

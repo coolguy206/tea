@@ -1,6 +1,6 @@
-@promo1Bg: #000;
-@promo1Color1: #59C0B7;
-@promo1Color2: #fff;
+@promo1Bg: #2F2F2F;
+@promo1Color1: #C693BE;
+@promo1Color2: #ECDAA8;
 @promo1Color3: #fff;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
@@ -12,7 +12,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,14 +20,21 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 810px) {
       padding: 2% 0;
     }
     // background: @backgroundColor;
@@ -45,7 +52,11 @@
 
     span,
     span > a {
-      @media screen and (max-width:768px) {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
+      @media screen and (max-width:810px) {
         font-size: 12px;
         line-height: 18px;
       }
@@ -65,7 +76,7 @@
       }
 
       &.first {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
           display: block;
         }
@@ -76,22 +87,22 @@
       }
 
       &.second {
-        @media screen and (max-width: 414px) {
-          // display: none;
+        @media screen and (max-width: 428px) {
+          display: block;
         }
         // color: @fontColor2;
       }
 
       &.third {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
           display: inline;
         }
-        left: 1%;
+        left: 0;
       }
 
       &.shop-now {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
         }
         left: 1%;
@@ -113,21 +124,22 @@
       }
 
       &.details {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 810px) {
           left: 86%;
           // display: none;
         }
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           // left: 78%;
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
 
         a {
-          @media screen and (max-width:768px) {
+          @media screen and (max-width:810px) {
             font-size: 12px;
           }
           font-size: 15px;
