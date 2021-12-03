@@ -1,7 +1,9 @@
 @import 'vars.less';
+@cta-background-color: #DEED88;
+@cta-font-color: #075B55;
 
 .this-form {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 428px) {
 		padding: 17.5% 0;
 	}
 	background: #F8F8F8;
@@ -16,7 +18,7 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 1.8vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 5vw;
 			}
 			font-family: gilroy-regular;
@@ -30,7 +32,7 @@
 	}
 
 	form {
-		@media screen and (max-width: 414px) {
+		@media screen and (max-width: 428px) {
 			width: 100%;
 			left: 0;
 			transform: translateX(0);
@@ -45,7 +47,7 @@
 		padding: 0 0 0 1.9%;
 
 		div {
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				flex-basis: 100%;
 				margin: 0 0 9%;
 			}
@@ -53,7 +55,7 @@
 			margin: 0 0 3.9%;
 
 			&.button-box {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 12% 0 0;
 				}
 				flex-basis: 100%;
@@ -67,7 +69,7 @@
 				font-size: 1.1vw;
 				line-height: 1.1vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 3.9vw;
 				line-height: 4.1vw;
 			}
@@ -78,14 +80,14 @@
 			letter-spacing: 0.04em;
 			// color: #47363D;
 			&.by-entering {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 7% 0 0;
 				}
 				margin: 3% 0 0;
 			}
 
 			&.required {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 13% 0 1%;
 				}
 				margin: 3% 0 1%;
@@ -96,7 +98,7 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 0.7vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 3vw;
 			}
 			font-family: gilroy-regular;
@@ -108,7 +110,7 @@
 		}
 
 		input {
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				width: 100%;
 			}
 			background: #EDEBEC;
@@ -137,21 +139,31 @@
 		button {
 			@media screen and (max-width: 1679px) {
 				font-size: 1.2vw;
+				width: 15vw;
+				height: 3vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 4.7vw;
-				margin: 0;
-				padding: 3% 9% !important;
+				// margin: 0;
+				// padding: 3% 9% !important;
+				width: 59vw;
+				height: 12vw;
 			}
 			font-family: gilroy-bold !important;
 			font-size: 20px;
 			line-height: 24px;
 			letter-spacing: 0.2em !important;
-			color: @green !important;
-			background: @background !important;
+			color: @cta-font-color !important;
+			background: @cta-background-color !important;
 			text-transform: uppercase !important;
-			padding: 2% 5% 1.5% 5% !important;
+			padding: 0 !important;
 			border: none !important;
+			display: flex;
+			width: 252px;
+			height: 50px;
+			justify-content: center;
+			align-items: center;
+			margin: 7% auto;
 		}
 	}
 }
