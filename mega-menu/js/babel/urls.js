@@ -7,17 +7,17 @@ exports.urls = void 0;
 var urls = {
   promo1: {
     babyPromo: "/black-friday",
-    girl: "/black-friday/girl",
-    boy: "/black-friday/boy",
+    girl: "/girls-clothes",
+    boy: "/boys-clothes",
     tween: "/tween-girls-clothing",
     baby: {
-      girl: "/black-friday/baby-girl",
-      boy: "/black-friday/baby-boy",
-      newborn: "/black-friday/newborn"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
+      newborn: "/newborn-clothes/favorites/new-arrivals"
     },
     toddler: {
-      girl: "/black-friday/toddler-girl",
-      boy: "/black-friday/toddler-boy"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/",
@@ -35,17 +35,17 @@ var urls = {
     }
   },
   promo2: {
-    girl: "/sale/girls-clothing/clearance",
-    boy: "/sale/boys-clothing/clearance",
+    girl: "/warehousesale-girls",
+    boy: "/warehousesale-boys",
     tween: "/sale/tween-girls-clothing/clearance",
     baby: {
-      girl: "/sale/baby-girl-clothes/clearance",
-      boy: "/sale/baby-boy-clothes/clearance",
-      newborn: "/sale/newborn-clothing/clearance"
+      girl: "/warehousesale-baby-girl",
+      boy: "/warehousesale-baby-boy",
+      newborn: "/warehousesale-newborn"
     },
     toddler: {
-      girl: "/sale/toddler-girls-clothing/clearance",
-      boy: "/sale/toddler-boys-clothing/clearance"
+      girl: "/warehousesale-toddler-girls",
+      boy: "/warehousesale-toddler-boys"
     }
   }
 };
