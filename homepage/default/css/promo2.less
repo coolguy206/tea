@@ -1,0 +1,163 @@
+@import "var.less";
+@promo2-cta1-color: #424348;
+@promo2-cta1-background: #F2D3FF;
+@promo2-cta2-color: #fff;
+@promo2-cta2-background: #D8EBDD;
+@promo2-cta3-color: #fff;
+@promo2-cta3-background: #ECDAA8;
+@promo2-cta4-color: #fff;
+@promo2-cta4-background: #B9D4F8;
+@promo2-cta5-color: #fff;
+@promo2-cta5-background: #3862AA;
+@promo2-cta6-color: #fff;
+@promo2-cta6-background: #E8B2AB;
+
+.promo2 {
+  @media screen and (max-width: 428px) {}
+  position: relative;
+  display: flex;
+  // flex-wrap: wrap;
+  // video {
+  //   vertical-align: middle;
+  //   max-width: 100%;
+  // }
+  div {
+    &.the-content {
+      @media screen and (max-width: 1024px) {}
+      @media screen and (max-width: 810px) {}
+      @media screen and (max-width: 428px) {
+        top: 55%;
+        width: 100%;
+        left: 0;
+        transform: translateX(0%);
+        text-align: center;
+      }
+      position: absolute;
+      top: 48%;
+      transform: translate(-50%, 0%);
+      width: 50%;
+      left: 50%;
+
+      .first,
+      .second,
+      .third {
+        @media screen and (max-width: 810px) {}
+        @media screen and (max-width: 428px) {}
+        margin: 0;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        // flex-wrap: wrap;
+      }
+
+      .first {
+        @media screen and (max-width:428px) {
+          margin: 0 0 1%;
+        }
+        margin: 0 0 4%;
+      }
+
+      .second {
+        @media screen and (max-width:428px) {
+          margin: 0 0 1%;
+        }
+        margin: 0 0 4%;
+      }
+
+      .third {
+        // margin: 0 0 9%;
+      }
+
+      span {
+        @media screen and (max-width: 1679px) {
+          font-size: 0.9vw;
+        }
+        @media screen and (max-width: 428px) {
+          font-size: 3vw;
+        }
+        // color: @promo-cta-color;
+        font-family: gilroy-bold;
+        font-size: 15px;
+        line-height: 28px;
+        letter-spacing: 0.2em;
+        text-transform: uppercase;
+        margin: 0 2% 0 0;
+      }
+
+      a {
+        @media screen and (max-width: 1679px) {}
+        @media screen and (max-width: 1024px) {}
+        @media screen and (max-width: 810px) {}
+        @media screen and (max-width: 428px) {
+          margin: 0 0 4%;
+        }
+        color: @promo2-cta1-color;
+        background: @promo2-cta1-background;
+
+        &:hover {}
+
+        &.cta1 {
+          @media screen and (max-width: 428px) {
+            left: -2%;
+          }
+          left: -4%;
+          background: @promo2-cta1-background;
+          color: @promo2-cta1-color;
+        }
+
+        &.cta2 {
+          @media screen and (max-width: 428px) {
+            left: 2%;
+          }
+          left: -2%;
+          background: @promo2-cta2-background;
+          // color: @promo2-cta2-color;
+        }
+
+        &.cta3 {
+          @media screen and (max-width: 428px) {
+            left: -2%;
+          }
+          left: 0;
+          background: @promo2-cta3-background;
+          // color: @promo2-cta3-color;
+          // margin: 0;
+        }
+
+        &.cta4 {
+          @media screen and (max-width: 428px) {
+            // left: 2%;
+          }
+          left: 2%;
+          background: @promo2-cta4-background;
+          // color: @promo2-cta4-color;
+          // margin: 0;
+        }
+
+        &.cta5 {
+          @media screen and (max-width: 428px) {
+            // left: 0;
+          }
+          left: -2%;
+          // background: @promo2-cta5-background;
+          // color: @promo2-cta5-color;
+        }
+
+        &.cta6 {
+          @media screen and (max-width: 428px) {
+            // left: 1%;
+          }
+          left: 2%;
+          // background: @promo2-cta6-background;
+          // color: @promo2-cta6-color;
+          span {}
+        }
+
+        span {
+          @media screen and (max-width: 1680px) {}
+          @media screen and (max-width: 428px) {}
+        }
+      }
+    }
+  }
+}
