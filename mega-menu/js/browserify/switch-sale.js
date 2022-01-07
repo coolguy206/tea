@@ -87,8 +87,8 @@ var switchSale = function switchSale(href) {
     case '/sale/newborn-clothing/view-all':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo2.baby.newborn;
-      clearance = _urls.urls.promo2.baby.newborn; // $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      clearance = _urls.urls.promo2.baby.newborn;
+      $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -134,7 +134,7 @@ var urls = {
     baby: {
       girl: "/baby-girl-clothes/favorites/limited-time-sale",
       boy: "/baby-boy-clothes/favorites/limited-time-sale",
-      newborn: "/newborn-clothes/favorites/new-arrivals"
+      newborn: "/newborn-clothing/favorites/limited-time-sale"
     },
     toddler: {
       girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",

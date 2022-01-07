@@ -14,7 +14,7 @@ var urls = {
     baby: {
       girl: "/baby-girl-clothes/favorites/limited-time-sale",
       boy: "/baby-boy-clothes/favorites/limited-time-sale",
-      newborn: "/newborn-clothes/favorites/new-arrivals"
+      newborn: "/newborn-clothing/favorites/limited-time-sale"
     },
     toddler: {
       girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",

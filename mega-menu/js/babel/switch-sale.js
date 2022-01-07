@@ -86,8 +86,8 @@ var switchSale = function switchSale(href) {
     case '/sale/newborn-clothing/view-all':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo2.baby.newborn;
-      clearance = _urls.urls.promo2.baby.newborn; // $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      clearance = _urls.urls.promo2.baby.newborn;
+      $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
