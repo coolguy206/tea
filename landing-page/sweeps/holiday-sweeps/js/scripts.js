@@ -5,7 +5,7 @@ import {
 
 $(document).ready(function() {
   const url = window.location.href;
-  const ac = "Sweeps-Holiday2021";
+  const ac = "Virtual_Art_Class_LP_2021";
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -35,7 +35,7 @@ $(document).ready(function() {
         "email": email,
         "lists": {
           // "MASTER_CONTACTS_LIST": 1
-          "Sweeps-Holiday2021": 1
+          "Virtual_Art_Class_2021": 1
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,

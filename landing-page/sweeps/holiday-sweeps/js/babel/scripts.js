@@ -5,7 +5,7 @@ var _api = require("./api.js");
 // console.log(keys);
 $(document).ready(function () {
   var url = window.location.href;
-  var ac = "Sweeps-Holiday2021";
+  var ac = "Virtual_Art_Class_LP_2021";
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -33,7 +33,7 @@ $(document).ready(function () {
         "email": email,
         "lists": {
           // "MASTER_CONTACTS_LIST": 1
-          "Sweeps-Holiday2021": 1
+          "Virtual_Art_Class_2021": 1
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,
