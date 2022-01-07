@@ -36,7 +36,7 @@ $(document).ready(function () {
         // </ul>`;
 
         $('.holiday-closure h2').text('CUSTOMER CARE HOLIDAY HOURS');
-        message = "\n        <ul>\n          <li>Christmas Eve Hours: 7am PT - 2pm PT</li>\n          <li>Christmas Day CLOSED</li>\n          <li>New Year's Eve Hours: 7am PT - 2pm PT</li>\n          <li>New Years Day CLOSED</li>\n        </ul>\n        ";
+        message = "\n        <ul>\n          <li>Christmas Eve CLOSED</li>\n          <li>Christmas Day CLOSED</li>\n          <li>New Year's Eve CLOSED</li>\n          <li>New Years Day CLOSED</li>\n        </ul>\n        ";
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }

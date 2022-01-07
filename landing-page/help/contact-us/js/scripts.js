@@ -37,9 +37,9 @@ $(document).ready(function() {
         $('.holiday-closure h2').text('CUSTOMER CARE HOLIDAY HOURS')
         message = `
         <ul>
-          <li>Christmas Eve Hours: 7am PT - 2pm PT</li>
+          <li>Christmas Eve CLOSED</li>
           <li>Christmas Day CLOSED</li>
-          <li>New Year's Eve Hours: 7am PT - 2pm PT</li>
+          <li>New Year's Eve CLOSED</li>
           <li>New Years Day CLOSED</li>
         </ul>
         `;
