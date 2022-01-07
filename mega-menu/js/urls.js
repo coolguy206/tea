@@ -29,17 +29,17 @@ export const urls = {
     }
   },
   promo2: {
-    girl: `/warehousesale-girls`,
-    boy: `/warehousesale-boys`,
+    girl: `/girls-clothing/favorites/limited-time-sale`,
+    boy: `/boys-clothing/favorites/limited-time-sale`,
     tween: `/sale/tween-girls-clothing/clearance`,
     baby: {
-      girl: `/warehousesale-baby-girl`,
-      boy: `/warehousesale-baby-boy`,
+      girl: `/baby-girl-clothes/favorites/limited-time-sale`,
+      boy: `/baby-boy-clothes/favorites/limited-time-sale`,
       newborn: `/warehousesale-newborn`,
     },
     toddler: {
-      girl: `/warehousesale-toddler-girls`,
-      boy: `/warehousesale-toddler-boys`,
+      girl: `/select-styles/toddler-girls-clothes/favorites/limited-time-sale`,
+      boy: `/select-styles/toddler-boys-clothes/favorites/limited-time-sale`,
     },
   }
 };

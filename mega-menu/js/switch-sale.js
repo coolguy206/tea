@@ -14,8 +14,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.girl;
       promo2 = urls.promo2.girl;
       clearance = urls.promo2.girl;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -27,8 +27,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.boy;
       promo2 = urls.promo2.boy;
       clearance = urls.promo2.boy;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -39,8 +39,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.baby.girl;
       promo2 = urls.promo2.baby.girl;
       clearance = urls.promo2.baby.girl;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -51,8 +51,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.baby.boy;
       promo2 = urls.promo2.baby.boy;
       clearance = urls.promo2.baby.boy;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -64,8 +64,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.toddler.girl;
       promo2 = urls.promo2.toddler.girl;
       clearance = urls.promo2.toddler.girl;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -77,8 +77,8 @@ export const switchSale = (href) => {
       promo1 = urls.promo1.sale.toddler.boy;
       promo2 = urls.promo2.toddler.boy;
       clearance = urls.promo2.toddler.boy;
-      $('.promo1-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
