@@ -1,7 +1,8 @@
-@promo1Bg: #F9F2E0;
-@promo1Color1: #EC5053;
-@promo1Color2: #A52558;
-@promo1Color3: #3862AA;
+@promo1Bg: #D9E4E0;
+@promo1Color1: #008E70;
+@promo1Color2: #8F4786;
+@promo1Color3: #95D4CB;
+@promo1Details: #8F4786;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -12,7 +13,7 @@
 @promo3Color3: #f66d67;
 
 .header-banner {
-  background: @promo1Bg;
+  //background: @promo1Bg;
   max-width: 100%;
   width: 100%;
   padding: 0;
@@ -20,14 +21,21 @@
 }
 
 .promos {
-  max-width: 1680px;
-  margin: 0 auto;
-  position: relative;
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
   display: none;
+  background: @promo1Bg;
+
+  .promos-wrap {
+    max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
 
   .hp-promo,
   .the-promo {
-    @media screen and (max-width: 768px) {
+    @media screen and (max-width: 810px) {
       padding: 2% 0;
     }
     // background: @backgroundColor;
@@ -45,9 +53,17 @@
 
     span,
     span > a {
-      @media screen and (max-width:768px) {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
+      @media screen and (max-width:810px) {
         font-size: 12px;
         line-height: 18px;
+      }
+      @media screen and (max-width:428px) {
+        font-size: 2.8vw;
+        line-height: 4.2vw;
       }
       position: relative;
       font-family: gilroy-bold;
@@ -65,7 +81,7 @@
       }
 
       &.first {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
           display: block;
         }
@@ -76,22 +92,22 @@
       }
 
       &.second {
-        @media screen and (max-width: 414px) {
-          // display: none;
+        @media screen and (max-width: 428px) {
+          // display: block;
         }
         // color: @fontColor2;
       }
 
       &.third {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
           display: inline;
         }
-        left: 1%;
+        left: 0;
       }
 
       &.shop-now {
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           left: 0;
         }
         left: 1%;
@@ -113,21 +129,22 @@
       }
 
       &.details {
-        @media screen and (max-width: 768px) {
+        @media screen and (max-width: 810px) {
           left: 86%;
           // display: none;
         }
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           // left: 78%;
           left: 0;
           position: relative;
           display: block;
+          margin: 2% 0 0;
         }
         left: 90%;
         position: absolute;
 
         a {
-          @media screen and (max-width:768px) {
+          @media screen and (max-width:810px) {
             font-size: 12px;
           }
           font-size: 15px;
@@ -178,7 +195,7 @@
 
         &.details {
           a {
-            color: @promo1Color3;
+            color: @promo1Details;
           }
         }
       }
