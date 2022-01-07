@@ -1,7 +1,8 @@
-@promo1Bg: #CDB585;
-@promo1Color1: #4A556B;
-@promo1Color2: #fff;
-@promo1Color3: #fff;
+@promo1Bg: #FAF3E1;
+@promo1Color1: #DF3842;
+@promo1Color2: #075B55;
+@promo1Color3: #95D4CB;
+@promo1Details: #075B55;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -59,6 +60,10 @@
       @media screen and (max-width:810px) {
         font-size: 12px;
         line-height: 18px;
+      }
+      @media screen and (max-width:428px) {
+        font-size: 2.8vw;
+        line-height: 4.2vw;
       }
       position: relative;
       font-family: gilroy-bold;
@@ -190,7 +195,7 @@
 
         &.details {
           a {
-            color: @promo1Color3;
+            color: @promo1Details;
           }
         }
       }
