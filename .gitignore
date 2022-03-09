@@ -8,8 +8,8 @@
 /**/design
 /**/designs
 **/images
+cloudinary-config.js
 log/
-api/**
 api/**/node_modules/**
 node_modules/**
 **/*.DS_Store
