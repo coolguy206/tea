@@ -1,19 +1,19 @@
 module.exports = {
 
-    hp: {
-        name: 'default'
-    },
-    cat: {
-        name: 'default'
-    },
-    landing: {
-        name: 'shops/bottoms-shop/default'
-    },
-    zone: {
-        name: 'curalate/global-css'
-    },
-    promo: {
-        name: 'one-offs/default'
-    }
+  hp: {
+    name: 'default'
+  },
+  cat: {
+    name: 'default'
+  },
+  landing: {
+    name: 'sweeps/20th-sweeps'
+  },
+  zone: {
+    name: 'mega-menu/sub-nav'
+  },
+  promo: {
+    name: 'one-offs/default'
+  }
 
 };
