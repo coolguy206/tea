@@ -87,10 +87,10 @@ var switchNewArrivals = function switchNewArrivals(href) {
     case '/newborn-clothes/':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo1.baby.newborn;
-      clearance = _urls.urls.promo1.baby.newborn;
-      $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
+      clearance = _urls.urls.promo1.baby.newborn; // $('.promo1-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
+
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
