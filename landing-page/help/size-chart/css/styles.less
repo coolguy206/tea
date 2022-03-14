@@ -2,24 +2,21 @@
 @blue-color: #436FC1;
 @pink-color: #F9EBE6;
 
-.ref {
-	position: absolute;
-	opacity: 0.5;
-	z-index: 9999;
-	top: 1%;
-	left: 53.2%;
-	width: 1680px;
+.nav.col-l-2.col-m-3.col-s-12.col-xs-12 {
+	@media screen and (max-width:810px) {
+		display: none !important;
+	}
 }
 
 .mobile {
-	@media screen and (max-width:768px) {
+	@media screen and (max-width:428px) {
 		display: inline-block !important;
 	}
 	display: none !important;
 }
 
 .desktop {
-	@media screen and (max-width:768px) {
+	@media screen and (max-width:428px) {
 		display: none !important;
 	}
 }
@@ -40,7 +37,7 @@
 	padding: 0;
 
 	.note {
-		@media screen and (max-width: 414px) {
+		@media screen and (max-width: 428px) {
 			margin: 1em 0;
 		}
 		margin: 0;
@@ -111,7 +108,7 @@
 			flex-wrap: wrap;
 
 			.the-img {
-				@media screen and (max-width:414px) {
+				@media screen and (max-width:428px) {
 					flex-basis: 100%;
 				}
 				flex-basis: 50%;
@@ -120,7 +117,7 @@
 			}
 
 			.text {
-				@media screen and (max-width:414px) {
+				@media screen and (max-width:428px) {
 					flex-basis: 100%;
 				}
 				overflow: hidden;
@@ -220,7 +217,7 @@
 		// 	}
 		// }
 		select {
-			@media screen and (max-width:414px) {
+			@media screen and (max-width:428px) {
 				border-radius: 0;
 				flex-basis: 100%;
 				margin: 0 0 5%;
@@ -248,7 +245,7 @@
 	}
 
 	.measure-tips {
-		@media screen and (max-width:414px) {
+		@media screen and (max-width:428px) {
 			flex-basis: 100%;
 		}
 		background-repeat: no-repeat;
@@ -338,7 +335,7 @@
 	}
 
 	.size-chart-table {
-		@media screen and (max-width:414px) {
+		@media screen and (max-width:428px) {
 			flex-basis: 100%;
 		}
 		box-sizing: border-box;
@@ -371,7 +368,7 @@
 			select {
 				&.brand,
 				&.shoes {
-					@media screen and (max-width:414px) {
+					@media screen and (max-width:428px) {
 						padding: 3%;
 					}
 					width: 100%;
