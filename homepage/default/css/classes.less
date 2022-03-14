@@ -69,7 +69,7 @@
 
 .desktop {
   @media screen and (max-width: 428px) {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -78,6 +78,13 @@
     display: block;
   }
   display: none;
+}
+
+.mobile-cta {
+  @media screen and(max-width: 428px) {
+    display: inline-flex !important;
+  }
+  display: none !important;
 }
 
 .a {
