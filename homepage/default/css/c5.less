@@ -1,13 +1,13 @@
 @import "var.less";
 @c5-first-font-color: #fff;
 @c5-first-cta-color: #fff;
-@c5-first-cta-background: #299BBA;
+@c5-first-cta-background: #FDB201;
 @c5-second-font-color: #fff;
 @c5-second-cta-color: #fff;
-@c5-second-cta-background: #AE6B28;
+@c5-second-cta-background: #00ACD0;
 @c5-third-font-color: #fff;
 @c5-third-cta-color: #FFF;
-@c5-third-cta-background: #2967B0;
+@c5-third-cta-background: #58CCAD;
 
 .c5 {
   @media screen and (max-width: 428px) {
@@ -48,20 +48,28 @@
 
         h2 {
           @media screen and (max-width: 1679px) {
-            font-size: 1.6vw;
-            line-height: 1.6vw;
+            // font-size: 1.6vw;
+            // line-height: 1.6vw;
+            font-size: 3.3vw;
           }
           @media screen and (max-width:428px) {
-            font-size: 24px;
-            line-height: 28px;
+            // font-size: 24px;
+            // line-height: 28px;
+            // font-size: 5.5vw;
+            // line-height: 7vw;
+            font-size: 8.5vw;
+            line-height: 10.5vw;
             // margin: 8% 0 10%;
             margin: 0;
           }
           font-family: @gilroyb;
-          font-size: 30px;
-          line-height: 28px;
-          letter-spacing: 0.25em;
-          text-transform: uppercase;
+          // font-size: 30px;
+          // line-height: 28px;
+          // letter-spacing: 0.25em;
+          font-size: 54px;
+          line-height: 44px;
+          letter-spacing: 0.1rem;
+          // text-transform: uppercase;
           text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
         }
 
@@ -74,16 +82,16 @@
           @media screen and (max-width:428px) {
             // margin: 5% 0 8% 0 !important;
           }
-          margin: 4% 0 0;
+          margin: 5% 0 0;
 
           a {
             @media screen and (max-width:1679px) {
-              width: 14.5vw;
+              width: 18.5vw;
             }
             @media screen and (max-width:428px) {
-              width: 51vw;
+              width: 57vw;
             }
-            width: 243px;
+            width: 310px;
 
             span {
               @media screen and (max-width: 428px) {
@@ -189,8 +197,18 @@
 
         div {
           a {
+            @media screen and (max-width: 1679px) {
+              width: 10.7vw;
+              // height: 2.7vw;
+            }
+            @media screen and (max-width: 428px) {
+              width: 43.5vw;
+              // height: 11vw;
+              // padding: 0;
+            }
             color: @c5-third-cta-color;
             background: @c5-third-cta-background;
+            width: 180px;
 
             &.cta1 {
               left: -2%;
