@@ -13,7 +13,7 @@ var urls = {
     baby: {
       girl: "/baby-girl-clothes",
       boy: "/baby-boy-clothes",
-      newborn: "/newborn-clothes/favorites/new-arrivals"
+      newborn: "/newborn-clothes/view-all"
     },
     toddler: {
       girl: "/toddler-girls-clothes",
