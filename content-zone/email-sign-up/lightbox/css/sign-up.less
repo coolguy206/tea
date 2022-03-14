@@ -1,0 +1,112 @@
+.the-overlay {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: #000;
+  opacity: 0.5;
+}
+
+.signup {
+  box-sizing: border-box;
+  background: #436FC1;
+  // padding: 0 0 5rem;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+
+  #close-icon2 {
+    @media screen and (max-width: 1679px) {
+      width: 3vw;
+    }
+    width: 50px;
+    position: absolute;
+    right: 6.5%;
+    top: 4.5%;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .the-form {
+    // padding: 4% 0 0;
+  }
+
+  h4 {
+    @media screen and (max-width:1679px) {
+      font-size: 1.1vw;
+      line-height: 1.4vw;
+      // letter-spacing: 0.2vw;
+    }
+    @media screen and (max-width:1024px) {}
+    @media screen and (max-width:810px) {}
+    @media screen and (max-width:428px) {}
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 23px;
+    letter-spacing: 4px;
+    margin: 0 0 4%;
+    color: #FFAC98;
+
+    &:last-of-type {
+      // margin: 3% 0 0;
+    }
+  }
+
+  h2 {
+    @media screen and (max-width:1679px) {
+      font-size: 2.5vw;
+      line-height: 3vw;
+      // letter-spacing: 0.2vw;
+    }
+    @media screen and (max-width:1024px) {}
+    @media screen and (max-width:810px) {}
+    @media screen and (max-width:428px) {}
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: 4px;
+    color: #E8E511;
+    margin: 0 0 4%;
+    // width: 50%;
+    text-align: center;
+    text-transform: uppercase;
+
+    span {
+      @media screen and (max-width:1679px) {
+        font-size: 1.1vw;
+      }
+      font-size: 18px;
+    }
+  }
+
+  p {
+    @media screen and (max-width:1679px) {
+      font-size: 1vw;
+      line-height: 1.6vw;
+    }
+    @media screen and (max-width:1024px) {}
+    @media screen and (max-width:810px) {}
+    @media screen and (max-width:428px) {}
+    text-align: center;
+    font-size: 16px;
+    line-height: 24px;
+    // margin: 6% auto 0;
+    // width: 51%;
+    color: #F9EBE6;
+
+    &.sending {
+      color: #F9EBE6;
+      text-transform: uppercase;
+      font-family: gilroy-bold;
+      font-size: 1rem;
+      display: none;
+      text-align: center;
+    }
+  }
+  @import 'form.less';
+  @import 'thanks.less';
+}
