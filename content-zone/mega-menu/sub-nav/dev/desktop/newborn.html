@@ -16,7 +16,7 @@
         <li>Shop by Category</li>
 
         {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
-        {if $i && $i % 3 eq 0}
+        {if $i && $i % 4 eq 0}
           </ul>
           <ul class="category">
             <li class="spacer">Spacer</li>
@@ -39,6 +39,8 @@
         {/sub_cats}
       </ul>
     </div>
+
+    include "kidizen.html"
 
     <div class="panel panel-3">
       <div class="da-rennab-zone" data-zone="mega_newborn"></div>

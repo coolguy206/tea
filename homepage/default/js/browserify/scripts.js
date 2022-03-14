@@ -108,9 +108,10 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c5 .fourth img', 'baby in flower and rabbit pjs');
   (0, _alt.alt)('.hp .c6 .first img', 'baby in fish and jelly fish outfit');
   (0, _alt.alt)('.hp .c6 .second img', 'girls in striped dress and top');
-  (0, _alt.alt)('.hp .c7 .first img', 'happy mom & son');
-  (0, _alt.alt)('.hp .c7 .second img', 'learn how #teagivesback');
-  (0, _alt.alt)('.hp .c7 .third img', 'girl in watermelon outfit');
+  (0, _alt.alt)('.hp .c7 .first img', 'tea rewear');
+  (0, _alt.alt)('.hp .c7 .second img', 'happy mom & son');
+  (0, _alt.alt)('.hp .c7 .third img', 'learn how #teagivesback');
+  (0, _alt.alt)('.hp .c7 .fourth img', 'girl in watermelon outfit');
   (0, _alt.alt)('.hp .swim img', 'watermelon graphic swimwear');
   (0, _inview.inview)('.hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics');
 

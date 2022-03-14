@@ -14,6 +14,7 @@
 
   div {
     &.first,
+    &.fourth,
     &.second,
     &.third {
       @media screen and (max-width:1679px) {
@@ -24,11 +25,10 @@
         margin: 0 0 15%;
       }
       display: flex;
-      flex-basis: 33%;
+      flex-basis: 24%;
       text-align: center;
-      padding: 0 1%;
       justify-content: center;
-      padding: 0 3%;
+      padding: 0 2%;
 
       a {
         .the-content {
@@ -65,7 +65,7 @@
         .the-content {
           span {
             @media screen and (max-width: 428px) {
-              letter-spacing: 0.1em;
+              // letter-spacing: 0.1em;
             }
           }
         }
