@@ -1,45 +1,50 @@
 @import 'var.less';
 @c2-background: #fff;
 @c2-cta-color: #fff;
-@c2-cta-background-color: #7F2B2F;
+@c2-cta-background-color: #66B683;
 @c2-font-color: #fff;
-@c2-h2-color: #003D69;
+@c2-h2-color: #fff;
 
 .c2 {
-  @media screen and (max-width: 414px) {
+  @media screen and (max-width: 428px) {
     padding: 4% 0;
+    flex-wrap: wrap !important;
   }
-  padding: 2% 6% 4%;
+  // padding: 2% 6% 4%;
+  padding: 4%;
   background: @c2-background;
+  flex-wrap: nowrap !important;
+  gap: 1vw;
 
   .first {
-    @media screen and (max-width: 414px) {
-      padding: 0 2%;
+    @media screen and (max-width: 428px) {
+      padding: 0 4%;
+      flex-basis: 100% !important;
     }
     position: relative;
-    padding: 1% 1% 0 0;
-
+    // padding: 1% 1% 0 0;
     .the-content {
-      @media screen and (max-width: 414px) {
-        top: 6%;
-        left: -1%;
-        // width: 100%;
+      @media screen and (max-width: 428px) {
+        bottom: 9%;
+        left: 0;
+        width: 100%;
         // transform: translateX(-50%);
       }
       position: absolute;
-      top: 11%;
+      bottom: 13%;
       left: 0;
       width: 54%;
       text-align: center;
 
       h2 {
+        @media screen and (max-width:428px) {
+          font-size: 12vw;
+        }
         color: @c2-h2-color;
       }
 
       .cta-border {
-        @media screen and (max-width:414px) {
-          width: 44vw;
-        }
+        @media screen and (max-width:428px) {}
         color: @c2-cta-color;
         margin: 6% 0 0;
         background: @c2-cta-background-color;
@@ -56,20 +61,27 @@
   }
 
   .second {
-    @media screen and (max-width: 414px) {
-      margin: 2% 0 0;
-      padding: 0;
+    @media screen and (max-width: 428px) {
+      margin: 4% 0 0;
+      padding: 0 4%;
+      flex-basis: 100% !important;
+      gap: 3vw;
     }
     display: flex;
     flex-wrap: wrap;
-    padding: 0.5% 0 0;
+    // padding: 0.5% 0 0;
+    gap: 1vw;
 
     a {
-      @media screen and (max-width: 414px) {
-        padding: 3% 1.5% 1.5%;
+      @media screen and (max-width: 428px) {
+        padding: 0;
+        // flex-basis: 48%;
       }
-      flex-basis: 50%;
-      padding: 1%;
+      flex-basis: 48%;
+      // padding: 1%;
+      &:hover {
+        cursor: default;
+      }
     }
   }
 }

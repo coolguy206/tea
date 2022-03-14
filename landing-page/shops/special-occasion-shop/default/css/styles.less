@@ -7,18 +7,6 @@
 @import 'c5.less';
 @import 'c6.less';
 
-.ref {
-  @media screen and (max-width: 414px) {
-    width: 100%;
-    top: 5px;
-  }
-  width: 98%;
-  position: absolute;
-  top: -97px;
-  opacity: 0.5;
-  z-index: 9999;
-}
-
 .content-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -94,4 +82,10 @@
 
 .content.col-l-10.col-m-9.col-s-12.col-xs-12 {
   width: 100% !important;
+}
+
+.site-content-inner.container {
+  @media screen and (max-width: 428px) {
+    padding: 0 !important;
+  }
 }

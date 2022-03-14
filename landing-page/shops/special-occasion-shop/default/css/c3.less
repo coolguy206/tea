@@ -1,6 +1,6 @@
 @import 'var.less';
 @c3-cta-color: #fff;
-@c3-cta-background-color: #003D69;
+@c3-cta-background-color: #2A5672;
 @c3-font-color: #fff;
 @c3-h2-color: #fff;
 
@@ -8,9 +8,9 @@
   position: relative;
 
   .the-content {
-    @media screen and (max-width: 768px) {}
-    @media screen and (max-width: 414px) {
-      bottom: 21%;
+    @media screen and (max-width: 810px) {}
+    @media screen and (max-width: 428px) {
+      bottom: 14%;
     }
     position: absolute;
     bottom: 10%;
@@ -22,17 +22,19 @@
     }
 
     h2 {
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: 428px) {
         width: 100%;
-        margin: 0 auto 4%;
+        margin: 0;
         color: #fff;
+        font-size: 11vw;
+        line-height: 11vw;
       }
       color: @c3-h2-color;
     }
 
     span {
-      @media screen and (max-width: 414px) {
-        margin: 3% 0;
+      @media screen and (max-width: 428px) {
+        margin: 4% 0 0;
       }
       margin: 2% 0 0;
       background: @c3-cta-background-color;

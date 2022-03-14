@@ -1,14 +1,14 @@
 @import 'var.less';
 @c1-cta-color: #fff;
-@c1-cta-background-color: #003D69;
-@c1-h2-color: #7F2B2F;
-@c1-font-color: #7F2B2F;
+@c1-cta-background-color: #E4BD3C;
+@c1-h2-color: #fff;
+@c1-font-color: #fff;
 
 .c1 {
   position: relative;
 
   .the-content {
-    @media screen and (max-width: 414px) {
+    @media screen and (max-width: 428px) {
       width: 100%;
       top: 0;
       left: 0;
@@ -31,9 +31,9 @@
     }
 
     h2 {
-      @media screen and (max-width:414px) {
+      @media screen and (max-width:428px) {
         margin: 0 0 4%;
-        font-size: 12vw;
+        font-size: 11vw;
         line-height: 11vw;
       }
       color: @c1-h2-color;
@@ -45,62 +45,45 @@
         font-size: 1.4vw;
         line-height: 1.9vw;
       }
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: 428px) {
         // display: none;
-        font-size: 5vw;
-        line-height: 7vw;
+        font-size: 4.7vw;
+        line-height: 6vw;
         width: 100%;
         margin: 0 0 5%;
       }
-      margin: 3.5% auto 9%;
+      margin: 5% auto;
       font-size: 24px;
       line-height: 32px;
       color: @c1-font-color;
     }
 
     div {
-      @media screen and (max-width: 414px) {
-        text-align: center;
-      }
-      margin: 3% 0 0;
+      @media screen and (max-width: 428px) {}
 
       a {
-        @media screen and (max-width:414px) {
-          // width: 182px;
-          width: 44vw;
-        }
+        @media screen and (max-width:428px) {}
         color: @c1-cta-color;
         background: @c1-cta-background-color;
 
-        span {
-          @media screen and (max-width: 414px) {
-            // display: none;
-          }
-        }
-
         &.cta1 {
-          @media screen and (max-width:414px) {}
-          left: -1%;
+          @media screen and (max-width:428px) {}
         }
 
         &.cta2 {
-          @media screen and (max-width:414px) {}
-          left: 1%;
+          @media screen and (max-width:428px) {}
         }
 
         &.cta3 {
-          @media screen and (max-width:414px) {}
-          left: -1%;
+          @media screen and (max-width:428px) {}
         }
 
         &.cta4 {
-          @media screen and (max-width:414px) {}
-          left: 1%;
+          @media screen and (max-width:428px) {}
         }
 
         &.cta5 {
-          @media screen and (max-width:414px) {}
-          left: 1%;
+          @media screen and (max-width:428px) {}
         }
       }
     }
