@@ -1,5 +1,15 @@
 @import "var.less";
 
+.the-grid {
+  display: inline-grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  column-gap: 6%;
+  row-gap: 14%;
+  justify-content: center;
+  justify-items: center;
+}
+
 .cta-no-border {
   @media screen and (max-width: 1679px) {
     font-size: 0.9vw;
@@ -17,13 +27,21 @@
   text-align: center;
   text-transform: uppercase;
   text-decoration: none;
-  border-bottom: 2px solid;
-  padding: 0 0 0.1%;
+  // border-bottom: 2px solid;
+  // padding: 0 0 0.1%;
   position: relative;
   font-family: @gilroyb;
   font-size: 15px;
   line-height: 28px;
   letter-spacing: 0.2em;
+
+  &::after {
+    content: '';
+    border-bottom: 2px solid;
+    display: block;
+    position: relative;
+    bottom: 1%;
+  }
 }
 
 .cta-border {
@@ -61,13 +79,6 @@
   }
   display: none;
 }
-// .span {
-//   position: absolute;
-//   top: 50%;
-//   left: 0;
-//   transform: translateY(-50%);
-//   width: 100%;
-// }
 
 .a {
   @media screen and (max-width: 1679px) {
