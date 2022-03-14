@@ -1,8 +1,8 @@
-@promo1Bg: #274358;
-@promo1Color1: #DDEE7E;
-@promo1Color2: #fff;
-@promo1Color3: #95D4CB;
-@promo1Details: #fff;
+@promo1Bg: #FACF5B;
+@promo1Color1: #fff;
+@promo1Color2: #62825C;
+@promo1Color3: #62825C;
+@promo1Details: #62825C;
 @promo2Bg: #f2efe3;
 @promo2Color1: #d29217;
 @promo2Color2: #065191;
@@ -201,11 +201,13 @@
       }
     }
 
-    &.promo2,
-    &.promo3 {
+    &:is(.promo2, .promo3) {
       display: none;
     }
-
+    // &.promo2,
+    // &.promo3 {
+    //   display: none;
+    // }
     &.promo2 {
       background: @promo2Bg;
 
