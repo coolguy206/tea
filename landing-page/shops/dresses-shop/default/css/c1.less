@@ -1,9 +1,9 @@
 @import "var.less";
 @c1-font-color: #fff;
-@c1-h2-color: #8A5573;
-@c1-p-color: #43484B;
+@c1-h2-color: #A42E7C;
+@c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #385B5D;
+@c1-cta-background: #0479A5;
 
 .c1 {
   position: relative;
@@ -11,7 +11,7 @@
 
   div {
     &.the-content {
-      @media screen and (max-width: 414px) {
+      @media screen and (max-width: 428px) {
         width: 100%;
         left: 0;
         top: 0;
@@ -38,7 +38,7 @@
           font-size: 4.8vw;
           line-height: 4.8vw;
         }
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           // font-size: 9vw;
           // margin: 0;
           line-height: 11vw;
@@ -69,16 +69,14 @@
         // @media screen and (max-width:1024px) {
         //   margin: 7% auto;
         // }
-        @media screen and (max-width: 414px) {
+        @media screen and (max-width: 428px) {
           // color: @c1-h2-color;
           font-size: 18px;
           line-height: 24px;
           width: 100%;
           margin: 5% auto;
-          // display: none;
           text-shadow: none;
-          // color: #B45A90;
-          color: #47363D;
+          color: #0479A5;
         }
         @media screen and (max-width: 320px) {
           font-size: 15px;
@@ -96,63 +94,38 @@
       }
 
       div {
-        @media screen and (max-width: 414px) {
-          // margin: 5% 0 0;
-          //margin: 3% 0 0;
-        }
-        // margin: 3% 0 0;
+        @media screen and (max-width: 428px) {}
         text-align: center;
+        margin: 0 0 2%;
 
-        div {
-          @media screen and (max-width: 414px) {
-            margin: 0 0 5%;
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 13.5vw;
           }
-          margin: 2% 0 0;
+          @media screen and (max-width: 428px) {
+            // width: 44%;
+            // padding: 3.3% 2.5%;
+            // margin: 93% 0 0;
+            //color: @c1-h2-color;
+            width: 42.5vw;
+          }
+          font-family: @gilroyb;
+          color: @c1-cta-color;
+          background: @c1-cta-background;
+          width: 225px;
 
-          a {
-            @media screen and (max-width: 1679px) {
-              width: 27%;
-              // height: auto;
-              // padding: 2.5%;
-            }
-            @media screen and (max-width: 414px) {
-              // width: 44%;
-              // padding: 3.3% 2.5%;
-              // margin: 93% 0 0;
-              //color: @c1-h2-color;
-              width: 41.5%;
-            }
-            font-family: @gilroyb;
-            color: @c1-cta-color;
-            background: @c1-cta-background;
-            width: 225px;
+          &.cta1 {
+            @media screen and (max-width: 428px) {}
+            left: -1%;
+          }
 
-            span {
-              @media screen and (max-width: 414px) {
-                // display: none;
-              }
-            }
+          &.cta2 {
+            @media screen and (max-width: 428px) {}
+            left: 1%;
+          }
 
-            &.cta1 {
-              @media screen and (max-width: 414px) {
-                left: -2%;
-              }
-              left: -1%;
-            }
-
-            &.cta2 {
-              @media screen and (max-width: 414px) {
-                left: 2%;
-              }
-              left: 1%;
-            }
-
-            &.cta3 {
-              @media screen and (max-width: 414px) {
-                // left: -2%;
-              }
-              left: 0;
-            }
+          &.cta3 {
+            @media screen and (max-width: 428px) {}
           }
         }
       }

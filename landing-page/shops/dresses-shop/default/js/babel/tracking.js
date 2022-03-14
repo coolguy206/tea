@@ -1,6 +1,11 @@
 "use strict";
 
-module.exports = function (elem, id) {
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.tracking = void 0;
+
+var tracking = function tracking(elem, id) {
   // console.log(`from tracking.js`);
   var a = $(elem);
   $.each(a, function (j, val) {
@@ -9,7 +14,8 @@ module.exports = function (elem, id) {
       'id': id
     });
   });
-}; // const addTracking = (elem, id) => {
+}; // module.exports = function(elem, id) {
+//   // console.log(`from tracking.js`);
 //   let a = $(elem);
 //   $.each(a, function(j, val) {
 //     $(val).addClass('hp-url').attr({
@@ -18,7 +24,7 @@ module.exports = function (elem, id) {
 //     });
 //   });
 // };
-// for (let i = 1; i < 9; i++) {
-//   addTracking('.hp .c' + i + ' a', 'c' + i);
-// }
+
+
+exports.tracking = tracking;
 //# sourceMappingURL=tracking.js.map

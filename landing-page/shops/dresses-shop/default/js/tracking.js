@@ -1,4 +1,4 @@
-module.exports = function(elem, id) {
+export const tracking = function(elem, id) {
   // console.log(`from tracking.js`);
   let a = $(elem);
   $.each(a, function(j, val) {
@@ -9,7 +9,8 @@ module.exports = function(elem, id) {
   });
 };
 
-// const addTracking = (elem, id) => {
+// module.exports = function(elem, id) {
+//   // console.log(`from tracking.js`);
 //   let a = $(elem);
 //   $.each(a, function(j, val) {
 //     $(val).addClass('hp-url').attr({
@@ -18,7 +19,3 @@ module.exports = function(elem, id) {
 //     });
 //   });
 // };
-
-// for (let i = 1; i < 9; i++) {
-//   addTracking('.hp .c' + i + ' a', 'c' + i);
-// }

@@ -4,35 +4,55 @@
 @gb-background: #fff;
 
 .give-back {
-  @media screen and (max-width:414px) {
-    padding: 10% 0;
+  @media screen and (max-width:428px) {
+    padding: 15% 0;
   }
   position: relative;
   width: 100%;
   background: @gb-background;
   padding: 2% 0;
+  text-align: center;
 
   div {
+    @media screen and (max-width:428px) {
+      grid-template-columns: repeat(4, 1fr);
+      grid-template-rows: repeat(4, 1fr);
+      column-gap: 0;
+      row-gap: 5%;
+      display: grid;
+    }
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1%;
+    column-gap: 0;
+
     a {
       color: @gb-cta-color;
       text-decoration: none;
-    }
 
-    &.mobile {
-      text-align: center;
-
-      div {
-        display: flex;
-        justify-content: space-evenly;
-        margin: 0 0 4%;
-
-        a {}
+      &.cta1,
+      &.cta3,
+      &.cta5 {
+        @media screen and (max-width:428px) {
+          grid-column-start: 1;
+          grid-column-end: 3;
+        }
       }
-    }
 
-    &.desktop {
-      display: flex;
-      justify-content: space-evenly;
+      &.cta2,
+      &.cta4,
+      &.cta6 {
+        @media screen and (max-width:428px) {
+          grid-column-start: 3;
+          grid-column-end: 5;
+        }
+      }
+
+      &.cta7 {
+        @media screen and (max-width:428px) {
+          grid-column-start: 2;
+          grid-column-end: 4;
+        }
+      }
     }
   }
 }
