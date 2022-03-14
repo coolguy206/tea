@@ -7,17 +7,17 @@ exports.urls = void 0;
 var urls = {
   promo1: {
     babyPromo: "/black-friday",
-    girl: "/girls-pajamas-sleepwear",
-    boy: "/boys-pajamas-sleepwear",
+    girl: "/girls-clothing/new-arrivals",
+    boy: "/boys-clothing/new-arrivals",
     tween: "/tween-girls-clothing",
     baby: {
-      girl: "/baby-girl-pajamas",
-      boy: "/baby-boy-pajamas",
+      girl: "/baby-girl-clothes/new-arrivals",
+      boy: "/baby-boy-clothes/new-arrivals",
       newborn: "/newborn-clothes/view-all"
     },
     toddler: {
-      girl: "/toddler-girls-clothes/pajamas",
-      boy: "/toddler-boys-clothes/pajamas"
+      girl: "/toddler-girls-clothes/favorites/new-arrivals",
+      boy: "/toddler-boys-clothes/favorites/new-arrivals"
     },
     sale: {
       girl: "/sale/girls-clothing/",
