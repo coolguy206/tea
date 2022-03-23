@@ -12,49 +12,73 @@ var filePath = `homepage/default/dev/images/`;
 var c = new Client();
 c.on('ready', function() {
 
-  //MAKE DIRECTORY
-  // c.mkdir(url, true, (err) => {
-  //   if (err) throw err;
-  //   console.log(`successfully made dir: ${url}`);
-  //   c.end();
-  // });
+  //MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
 
-  //UPLOAD FILES AND MAKE HTML FILES
-  /*
-  fs.readdir(`${filePath}src`, (err, files) => {
+  c.mkdir(url, true, (err) => {
     if (err) throw err;
-    // console.log("\nCurrent directory filenames:");
-    files.forEach(file => {
-      // console.log(file);
-      c.put(`${filePath}src/${file}`, `${url}${file}`, (err) => {
-        if (err) throw err;
-        console.log(`successfully uploaded file: ${file}`);
+    console.log(`successfully made dir: ${url}`);
+    //read the files on local machine
+    fs.readdir(`${filePath}src`, (err, files) => {
+      if (err) throw err;
+      // console.log("\nCurrent directory filenames:");
+      files.forEach(file => {
+        // console.log(file);
 
-        var name = file.split('.')[0];
-        var html = ``;
-        if (name.indexOf(`-`) !== -1) {
-          // console.log(name);
-          if (name.indexOf(`d`) !== -1) {
-            html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-          } else if (name.indexOf(`m`) !== -1) {
-            html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+        //upload the file
+        c.put(`${filePath}src/${file}`, `${url}${file}`, (err) => {
+          if (err) throw err;
+          console.log(`successfully uploaded file: ${file}`);
+
+          var name = file.split('.')[0];
+          var html = ``;
+          if (name.indexOf(`-`) !== -1) {
+            // console.log(name);
+            if (name.indexOf(`d`) !== -1) {
+              html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+            } else if (name.indexOf(`m`) !== -1) {
+              html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+            } else {
+              html = `<img data-src="/mas_assets${url}${file}">`;
+            }
           } else {
             html = `<img data-src="/mas_assets${url}${file}">`;
           }
-        } else {
-          html = `<img data-src="/mas_assets${url}${file}">`;
-        }
 
-        fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
-          if (err) throw err;
-          console.log(`File written successfully. ${name}.html`);
+          //make the html file
+          fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
+            if (err) throw err;
+            console.log(`File written successfully. ${name}.html`);
+          });
+          c.end();
         });
-        c.end();
       });
-    });
-  })
-*/
+    })
+    // c.end();
+  });
+
+  //GET LIST OF FILES THEN DELETE FILES IN DIRECTORY
+  /*
+  c.list(url, function(err, list) {
+    if (err) throw err;
+    list.map((val, i) => {
+      if (val.type == '-') {
+        // console.log(val);
+
+        //DELETE FILES
+        c.delete(`${url}${val.name}`, function(err) {
+          if (err) throw err;
+          console.log(`successfully deleted file: ${url}${val.name}`);
+          c.end();
+        });
+      }
+    })
+    // console.dir(list);
+    // c.end();
+  });
+  */
+
   //LIST DIRECTORIES
+  /*
   c.list(url, function(err, list) {
     if (err) throw err;
     list.map((val, i) => {
@@ -65,7 +89,7 @@ c.on('ready', function() {
     // console.dir(list);
     c.end();
   });
-
+  */
 });
 //CONNECT FTP
 c.connect({
