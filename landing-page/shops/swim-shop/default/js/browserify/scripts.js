@@ -44,6 +44,7 @@ var inview = function inview(elem) {
 
         $(val).removeAttr('data-src');
       });
+      $(this).css('visibility', 'visible');
     }
   });
 };

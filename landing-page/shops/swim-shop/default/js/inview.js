@@ -16,6 +16,8 @@ export const inview = function(elem) {
         }
         $(val).removeAttr('data-src');
       });
+
+      $(this).css('visibility', 'visible');
     }
   });
 };
