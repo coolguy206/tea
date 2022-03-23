@@ -1,12 +1,70 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.inview = void 0;
+
+var inview = function inview(elem) {
+  // console.log(`from inview.js`);
+  $(elem).on('inview', function (event, isInView) {
+    if (isInView) {
+      // element is now visible in the viewport
+      // console.log('in view');
+      var imgs = $(this).find('img'); // let width = $(window).width();
+      // console.log(imgs);
+      // console.log(width);
+
+      $.each(imgs, function (i, val) {
+        var src = $(val).attr('data-src'); // console.log(src);
+
+        if (src) {
+          $(val).attr('src', src);
+        }
+
+        $(val).removeAttr('data-src');
+      });
+    }
+  });
+}; // module.exports = function(elem) {
+//   // console.log(`from inview.js`);
+//   $(elem).on('inview', function(event, isInView) {
+//     if (isInView) {
+//       // element is now visible in the viewport
+//       // console.log('in view');
+//       let imgs = $(this).find('img');
+//       // let width = $(window).width();
+//       // console.log(imgs);
+//       // console.log(width);
+//       $.each(imgs, function(i, val) {
+//         let src = $(val).attr('data-src');
+//         // console.log(src);
+//         if (src) {
+//           $(val).attr('src', src);
+//         }
+//         $(val).removeAttr('data-src');
+//       });
+//     }
+//   });
+// };
+
+
+exports.inview = inview;
+
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
 var _switchNewArrivals = require("./switch-new-arrivals.js");
 
 var _switchSale = require("./switch-sale.js");
 
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
+  (0, _inview.inview)('.mega-img-container');
   $('.dept-girl, .dept-baby').hover(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
     $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -49,7 +107,7 @@ $(document).ready(function () {
 });
 
 
-},{"./switch-new-arrivals.js":2,"./switch-sale.js":3}],2:[function(require,module,exports){
+},{"./inview.js":1,"./switch-new-arrivals.js":3,"./switch-sale.js":4}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -160,7 +218,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
 exports.switchNewArrivals = switchNewArrivals;
 
 
-},{"./urls.js":4}],3:[function(require,module,exports){
+},{"./urls.js":5}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -270,7 +328,7 @@ var switchSale = function switchSale(href) {
 exports.switchSale = switchSale;
 
 
-},{"./urls.js":4}],4:[function(require,module,exports){
+},{"./urls.js":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -280,16 +338,16 @@ exports.urls = void 0;
 var urls = {
   promo1: {
     babyPromo: "/black-friday",
-    girl: "/girls-clothing/favorites/limited-time-sale",
-    boy: "/boys-clothing/favorites/limited-time-sale",
+    girl: "/girls-clothing",
+    boy: "/boys-clothing",
     baby: {
-      girl: "/baby-girl-clothes/favorites/limited-time-sale",
-      boy: "/baby-boy-clothes/favorites/limited-time-sale",
-      newborn: "/newborn-clothing/favorites/limited-time-sale"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
+      newborn: "/newborn-clothes/view-all"
     },
     toddler: {
-      girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
-      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/",
@@ -322,4 +380,4 @@ var urls = {
 exports.urls = urls;
 
 
-},{}]},{},[1]);
+},{}]},{},[2]);

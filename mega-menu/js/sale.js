@@ -4,10 +4,15 @@ import {
 import {
   switchSale
 } from './switch-sale.js';
+import {
+  inview
+} from './inview.js';
 
 $(document).ready(function() {
 
   // $('.menu .swimwear').text('$15 Swim');
+
+  inview('.mega-img-container');
 
   $('.dept-girl, .dept-baby').hover(function() {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();

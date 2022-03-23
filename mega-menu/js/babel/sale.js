@@ -4,8 +4,11 @@ var _switchNewArrivals = require("./switch-new-arrivals.js");
 
 var _switchSale = require("./switch-sale.js");
 
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
+  (0, _inview.inview)('.mega-img-container');
   $('.dept-girl, .dept-baby').hover(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
     $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
