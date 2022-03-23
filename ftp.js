@@ -1,5 +1,6 @@
 var Client = require('ftp');
 var fs = require('fs');
+var api = require('./api.js');
 
 var baseURL = `/media/tea_collection/`;
 var category = `homepage/2022/0317/v0/`;
@@ -19,6 +20,7 @@ c.on('ready', function() {
   // });
 
   //UPLOAD FILES AND MAKE HTML FILES
+  /*
   fs.readdir(`${filePath}src`, (err, files) => {
     if (err) throw err;
     // console.log("\nCurrent directory filenames:");
@@ -51,23 +53,23 @@ c.on('ready', function() {
       });
     });
   })
-
+*/
   //LIST DIRECTORIES
-  // c.list(url, function(err, list) {
-  //   if (err) throw err;
-  //   list.map((val, i) => {
-  //     if (val.type == 'd') {
-  //       console.log(val);
-  //     }
-  //   })
-  //   // console.dir(list);
-  //   c.end();
-  // });
+  c.list(url, function(err, list) {
+    if (err) throw err;
+    list.map((val, i) => {
+      // if (val.type == 'd') {
+      console.log(val);
+      // }
+    })
+    // console.dir(list);
+    c.end();
+  });
 
 });
 //CONNECT FTP
 c.connect({
-  host: `aws.ftp.teacollection.com`,
-  user: `tea@make-a-store`,
-  password: `muRzUh.2AWBZU`
+  host: api.ftp.host,
+  user: api.ftp.user,
+  password: api.ftp.password
 });
