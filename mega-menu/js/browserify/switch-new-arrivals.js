@@ -96,16 +96,6 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       break;
 
-    case '/tween-girls-clothing/favorites/new-arrivals':
-      promo1 = _urls.urls.promo1.tween;
-      promo2 = _urls.urls.promo1.tween;
-      clearance = _urls.urls.promo1.tween;
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
-      break;
-
     default:
       break;
   }
@@ -129,22 +119,20 @@ exports.urls = void 0;
 var urls = {
   promo1: {
     babyPromo: "/black-friday",
-    girl: "/sale/girls-clothing/last-chance",
-    boy: "/sale/boys-clothing/last-chance",
-    tween: "/tween-girls-clothing",
+    girl: "/girls-clothing/favorites/limited-time-sale",
+    boy: "/boys-clothing/favorites/limited-time-sale",
     baby: {
-      girl: "/sale/baby-girl-clothes/last-chance",
-      boy: "/sale/baby-boy-clothes/last-chance",
-      newborn: "/sale/newborn-clothing/last-chance"
+      girl: "/baby-girl-clothes/favorites/limited-time-sale",
+      boy: "/baby-boy-clothes/favorites/limited-time-sale",
+      newborn: "/newborn-clothing/favorites/limited-time-sale"
     },
     toddler: {
-      girl: "/sale/toddler-girls-clothing/last-chance",
-      boy: "/sale/toddler-boys-clothing/last-chance"
+      girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
+      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
     },
     sale: {
       girl: "/sale/girls-clothing/",
       boy: "/sale/boys-clothing/",
-      tween: "/sale/tween-girls-clothing/",
       baby: {
         girl: "/sale/baby-girl-clothes/",
         boy: "/sale/baby-boy-clothes/",
@@ -159,7 +147,6 @@ var urls = {
   promo2: {
     girl: "/girls-clothing/favorites/limited-time-sale",
     boy: "/boys-clothing/favorites/limited-time-sale",
-    tween: "/sale/tween-girls-clothing/clearance",
     baby: {
       girl: "/baby-girl-clothes/favorites/limited-time-sale",
       boy: "/baby-boy-clothes/favorites/limited-time-sale",

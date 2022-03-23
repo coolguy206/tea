@@ -97,18 +97,6 @@ export const switchSale = (href) => {
 
       break;
 
-    case '/sale/tween-girls-clothing/view-all':
-      promo1 = urls.promo1.sale.tween;
-      promo2 = urls.promo1.sale.tween;
-      clearance = urls.promo1.sale.tween;
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
-
-      break;
-
-
     default:
       break;
   }

@@ -94,16 +94,6 @@ var switchSale = function switchSale(href) {
 
       break;
 
-    case '/sale/tween-girls-clothing/view-all':
-      promo1 = _urls.urls.promo1.sale.tween;
-      promo2 = _urls.urls.promo1.sale.tween;
-      clearance = _urls.urls.promo1.sale.tween;
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
-      $('.promo2-url').hide();
-      $('.clearance-url').hide();
-      break;
-
     default:
       break;
   }
