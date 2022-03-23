@@ -1,11 +1,11 @@
 .desktop {
-	@media screen and (max-width:414px) {
+	@media screen and (max-width:428px) {
 		display: none;
 	}
 }
 
 .mobile {
-	@media screen and (max-width:414px) {
+	@media screen and (max-width:428px) {
 		display: block;
 	}
 	display: none;
@@ -21,7 +21,7 @@
 		@media screen and (max-width:1024px) {
 			width: 100%;
 		}
-		@media screen and (max-width: 737px) {
+		@media screen and (max-width: 810px) {
 			font-size: 1rem;
 		}
 		font-size: 1rem;
@@ -37,7 +37,7 @@
 }
 
 .mobile-catalog {
-	@media screen and (max-width: 737px) {
+	@media screen and (max-width: 810px) {
 		display: block;
 	}
 	display: none;
@@ -53,18 +53,18 @@
 }
 
 .navigation-catalog {
-	@media screen and (max-width: 737px) {
+	@media screen and (max-width: 810px) {
 		margin: 0 !important;
 		padding: 2em;
 		box-sizing: border-box;
 	}
 
 	h1 {
-		@media screen and (max-width: 737px) {
+		@media screen and (max-width: 810px) {
 			padding: 0 !important;
 			margin: 0 !important;
 		}
-		@media screen and (max-width:414px) {
+		@media screen and (max-width:428px) {
 			text-align: center;
 		}
 	}
@@ -75,13 +75,13 @@
 		list-style-type: none;
 
 		li {
-			@media screen and (max-width:1024px) {
+			@media screen and (max-width:810px) {
 				flex-basis: 50%;
 			}
-			@media screen and (max-width:414px) {
+			@media screen and (max-width:428px) {
 				flex-basis: 100%;
 			}
-			// @media screen and (max-width: 737px) {
+			// @media screen and (max-width: 810px) {
 			// 	margin: 0;
 			// 	width: 181px;
 			// }
@@ -94,18 +94,20 @@
 			flex-basis: 33%;
 			height: auto;
 			text-align: center;
-			margin: 2rem 0;
-
-			&[data-name="childrens-clothes-gifts-2009"],
-			&[data-name="kids-baby-clothes-holidays-2009"] {
-				img {
-					@media screen and (max-width:414px) {
-						width: 50%;
-					}
-					width: 22%;
-				}
-			}
-
+			margin: 0;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			padding: 0 2%;
+			// &[data-name="childrens-clothes-gifts-2009"],
+			// &[data-name="kids-baby-clothes-holidays-2009"] {
+			// 	img {
+			// 		@media screen and (max-width:428px) {
+			// 			width: 50%;
+			// 		}
+			// 		width: 22%;
+			// 	}
+			// }
 			&:hover {
 				cursor: pointer;
 			}
@@ -116,8 +118,8 @@
 
 			h4 {
 				letter-spacing: 0;
-				width: 70%;
-				margin: 0 auto;
+				// width: 70%;
+				margin: 10% auto;
 			}
 		}
 	}

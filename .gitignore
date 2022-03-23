@@ -8,6 +8,7 @@
 /**/design
 /**/designs
 **/images
+api.js
 cloudinary-config.js
 log/
 api/**/node_modules/**
