@@ -8,6 +8,7 @@
     "axios": "^0.26.1",
     "cloudinary": "^1.28.1",
     "cssunminifier": "0.0.2",
+    "ftp": "^0.3.10",
     "grunt": "^1.4.1",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^4.0.0",
