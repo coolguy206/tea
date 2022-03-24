@@ -1,14 +1,14 @@
 var cloudinary = require('cloudinary').v2;
 var fs = require('fs');
-const filePath = `landing-page/sweeps/20th-sweeps/dev/images`;
-const config = require('./cloudinary-config.js');
+const filePath = `images`;
+const api = require('./api.js');
 
 // console.log(config);
 
 cloudinary.config({
-  cloud_name: config.cloud_name,
-  api_key: config.api_key,
-  api_secret: config.api_secret
+  cloud_name: api.cloudinary.cloud_name,
+  api_key: api.cloudinary.api_key,
+  api_secret: api.cloudinary.api_secret
 });
 
 // console.log(cloudinary.config());
