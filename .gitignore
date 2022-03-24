@@ -10,7 +10,6 @@
 /**/designs
 **/images
 api.js
-cloudinary-config.js
 log/
 node_modules/**
 **/*.DS_Store
