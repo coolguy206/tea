@@ -9,6 +9,7 @@
 /**/design
 /**/designs
 **/images
+.env
 api.js
 log/
 node_modules/**

@@ -1,9 +1,9 @@
 const fs = require('fs');
 const axios = require('axios');
 const md5 = require('md5');
-const api = require('./api.js');
+require('dotenv').config()
 
-// console.log(api);
+// console.log(process.env.ISSUU_APIKEY, process.env.ISSUU_SECRET);
 
 const baseUrl = `https://api.issuu.com/1_0`;
 
@@ -29,7 +29,7 @@ const issuu = `https://issuu.com/teacollection/docs/`;
 
 // console.log(baseUrl, access, a1, action, a2, format, f, pageSize, p, issuu);
 
-var sig = `${api.issuu.secret}${a1}${a2}apiKey${api.issuu.apiKey}${f}${p}30${r}asc`;
+var sig = `${process.env.ISSUU_SECRET}${a1}${a2}apiKey${process.env.ISSUU_APIKEY}${f}${p}30${r}asc`;
 // console.log(sig);
 
 sig = md5(sig);
@@ -44,7 +44,7 @@ var catalogs = [];
 var promises = [];
 var li = ``;
 
-axios.get(`${baseUrl}?${access}&${action}&apiKey=${api.issuu.apiKey}&${format}&${pageSize}30&${resultOrder}asc&signature=${sig}`).then((res) => {
+axios.get(`${baseUrl}?${access}&${action}&apiKey=${process.env.ISSUU_APIKEY}&${format}&${pageSize}30&${resultOrder}asc&signature=${sig}`).then((res) => {
   // console.log(res.data.rsp._content.result);
 
   var data = res.data.rsp._content.result;
@@ -66,11 +66,11 @@ axios.get(`${baseUrl}?${access}&${action}&apiKey=${api.issuu.apiKey}&${format}&$
 
   for (var i = theCount.startIndex; i <= theCount.totalCount; i = i + 30) {
     // console.log(i);
-    var theSig = `${api.issuu.secret}${a1}${a2}apiKey${api.issuu.apiKey}${f}${p}30${r}asc${s}${i}`;
+    var theSig = `${process.env.ISSUU_SECRET}${a1}${a2}apiKey${process.env.ISSUU_APIKEY}${f}${p}30${r}asc${s}${i}`;
     // console.log(theSig);
     theSig = md5(theSig);
 
-    promises.push(axios.get(`${baseUrl}?${access}&${action}&apiKey=${api.issuu.apiKey}&${format}&${pageSize}30&${resultOrder}asc&${startIndex}${i}&signature=${theSig}`).then((res) => {
+    promises.push(axios.get(`${baseUrl}?${access}&${action}&apiKey=${process.env.ISSUU_APIKEY}&${format}&${pageSize}30&${resultOrder}asc&${startIndex}${i}&signature=${theSig}`).then((res) => {
       // console.log(res.data.rsp._content.result._content);
       var data = res.data.rsp._content.result;
       // theCount.totalCount = data.totalCount;

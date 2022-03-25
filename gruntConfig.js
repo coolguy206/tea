@@ -10,7 +10,7 @@ module.exports = {
     name: 'sweeps/20th-sweeps'
   },
   zone: {
-    name: 'mega-menu/sub-nav'
+    name: 'mega-menu/top-nav'
   },
   promo: {
     name: 'one-offs/default'

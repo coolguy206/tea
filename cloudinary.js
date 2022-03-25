@@ -1,18 +1,18 @@
 var cloudinary = require('cloudinary').v2;
 var fs = require('fs');
 const filePath = `images`;
-const api = require('./api.js');
+require('dotenv').config()
 
-// console.log(config);
+// console.log(process.env.CLOUDINARY_CLOUD_NAME, process.env.CLOUDINARY_API_KEY, process.env.CLOUDINARY_API_SECRECT);
 
 cloudinary.config({
-  cloud_name: api.cloudinary.cloud_name,
-  api_key: api.cloudinary.api_key,
-  api_secret: api.cloudinary.api_secret
+  cloud_name: process.env.CLOUDINARY_CLOUD_NAME,
+  api_key: process.env.CLOUDINARY_API_KEY,
+  api_secret: process.env.CLOUDINARY_API_SECRECT
 });
 
 // console.log(cloudinary.config());
-
+/*
 fs.readdir(`${filePath}/src`, (err, files) => {
   // console.log(files);
 
@@ -44,3 +44,4 @@ fs.readdir(`${filePath}/src`, (err, files) => {
 
   });
 });
+*/

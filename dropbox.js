@@ -1,15 +1,16 @@
 var Dropbox = require('dropbox').Dropbox;
 var fs = require('fs');
-var api = require('./api.js');
+require('dotenv').config()
 const extract = require('extract-zip')
 
 var dbx = new Dropbox({
-  accessToken: api.dropbox.token
+  accessToken: process.env.DROPBOX_TOKEN
 });
 
 var folderPath = '/riley/images';
 
 // console.log(dbx.filesDownloadZip);
+// console.log(process.env.DROPBOX_TOKEN);
 
 //GET USER
 /*
@@ -23,6 +24,7 @@ dbx.usersGetCurrentAccount()
   */
 
 //DOWNLOAD FOLDER AS ZIP AND EXTRACT IT
+/*
 dbx.filesDownloadZip({
     path: folderPath
   })
@@ -48,9 +50,10 @@ dbx.filesDownloadZip({
   .catch(function(error) {
     console.error(error);
   });
+*/
 
 //GET ALL FOLDERS
-/*
+
 dbx.filesListFolder({
     path: ''
   })
@@ -61,4 +64,3 @@ dbx.filesListFolder({
   .catch(function(error) {
     console.error(error);
   });
-  */

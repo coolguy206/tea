@@ -8,6 +8,7 @@
     "axios": "^0.26.1",
     "cloudinary": "^1.28.1",
     "cssunminifier": "0.0.2",
+    "dotenv": "^16.0.0",
     "dropbox": "^10.26.1",
     "extract-zip": "^2.0.1",
     "ftp": "^0.3.10",
