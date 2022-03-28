@@ -4,10 +4,10 @@ require('dotenv').config()
 const extract = require('extract-zip')
 
 var dbx = new Dropbox({
-  accessToken: process.env.DROPBOX_TOKEN
+  accessToken: process.env.TEA_DROPBOX_TOKEN
 });
 
-var folderPath = '/riley/images';
+var folderPath = `/sam khieu’s files/shared/design/2022/promotions/03 march/033122 25% off dressy styles/04 handoff/site/`;
 
 // console.log(dbx.filesDownloadZip);
 // console.log(process.env.DROPBOX_TOKEN);
@@ -24,7 +24,7 @@ dbx.usersGetCurrentAccount()
   */
 
 //DOWNLOAD FOLDER AS ZIP AND EXTRACT IT
-/*
+
 dbx.filesDownloadZip({
     path: folderPath
   })
@@ -50,12 +50,13 @@ dbx.filesDownloadZip({
   .catch(function(error) {
     console.error(error);
   });
-*/
+
 
 //GET ALL FOLDERS
-
+/*
 dbx.filesListFolder({
-    path: ''
+    // path: ''
+    path: folderPath
   })
   .then(function(response) {
     console.log(response.result.entries);
@@ -64,3 +65,4 @@ dbx.filesListFolder({
   .catch(function(error) {
     console.error(error);
   });
+  */

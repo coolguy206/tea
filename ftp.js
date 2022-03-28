@@ -3,9 +3,10 @@ var fs = require('fs');
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `landing-pages/20th-sweeps/2022/0310/v0/`;
+var category = `promos/one-offs/2022/0331/v0/`;
 var url = `${baseURL}${category}`
-var filePath = `landing-page/sweeps/20th-sweeps/dev/images/`;
+var readFilePath = `Site/`;
+var writeFilePath = `promos/default/dev/images/`;
 
 // console.log(url)
 console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);;
@@ -14,82 +15,85 @@ var c = new Client();
 c.on('ready', function() {
 
   //MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
-  /*
-    c.mkdir(url, true, (err) => {
+
+  c.mkdir(url, true, (err) => {
+    if (err) throw err;
+    console.log(`successfully made dir: ${url}`);
+    //read the files on local machine
+    fs.readdir(`${readFilePath}`, (err, files) => {
       if (err) throw err;
-      console.log(`successfully made dir: ${url}`);
-      //read the files on local machine
-      fs.readdir(`${filePath}src`, (err, files) => {
-        if (err) throw err;
-        // console.log("\nCurrent directory filenames:");
-        files.forEach(file => {
-          // console.log(file);
+      // console.log("\nCurrent directory filenames:");
+      files.forEach(file => {
+        // console.log(`${readFilePath}${file}`);
+        // console.log(`${url}${file}`)
 
-          //upload the file
-          c.put(`${filePath}src/${file}`, `${url}${file}`, (err) => {
-            if (err) throw err;
-            console.log(`successfully uploaded file: ${file}`);
+        //upload the file
+        c.put(`${readFilePath}${file}`, `${url}${file}`, (err) => {
+          if (err) throw err;
+          console.log(`successfully uploaded file: ${file}`);
 
-            var name = file.split('.')[0];
-            var html = ``;
-            if (name.indexOf(`-`) !== -1) {
-              // console.log(name);
-              if (name.indexOf(`d`) !== -1) {
-                html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-              } else if (name.indexOf(`m`) !== -1) {
-                html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
-              } else {
-                html = `<img data-src="/mas_assets${url}${file}">`;
-              }
+          var name = file.split('.')[0];
+          var html = ``;
+          if (name.indexOf(`-`) !== -1) {
+            // console.log(name);
+            if (name.indexOf(`d`) !== -1) {
+              html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+            } else if (name.indexOf(`m`) !== -1) {
+              html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
             } else {
               html = `<img data-src="/mas_assets${url}${file}">`;
             }
+          } else {
+            html = `<img data-src="/mas_assets${url}${file}">`;
+          }
 
-            //make the html file
-            fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
-              if (err) throw err;
-              console.log(`File written successfully. ${name}.html`);
-            });
-            c.end();
+          //make the html file
+          fs.writeFile(`${writeFilePath}/${name}.html`, html, (err) => {
+            if (err) throw err;
+            console.log(`File written successfully. ${name}.html`);
           });
+          c.end();
         });
-      })
-      // c.end();
-    });
-  */
+
+      });
+    })
+    // c.end();
+  });
+
 
   //GET LIST OF FILES THEN COMPILE HTML FILES
+  /*
+    c.list(url, function(err, list) {
+      if (err) throw err;
+      list.map((val, i) => {
 
-  c.list(url, function(err, list) {
-    if (err) throw err;
-    list.map((val, i) => {
-
-      console.log(val);
-      var name = val.name.split('.')[0];
-      var html = ``;
-      if (name.indexOf(`-`) !== -1) {
-        // console.log(name);
-        if (name.indexOf(`d`) !== -1) {
-          html = `<img class="desktop" data-src="/mas_assets${url}${val.name}">`;
-        } else if (name.indexOf(`m`) !== -1) {
-          html = `<img class="mobile" data-src="/mas_assets${url}${val.name}">`;
+        console.log(val);
+        var name = val.name.split('.')[0];
+        var html = ``;
+        if (name.indexOf(`-`) !== -1) {
+          // console.log(name);
+          if (name.indexOf(`d`) !== -1) {
+            html = `<img class="desktop" data-src="/mas_assets${url}${val.name}">`;
+          } else if (name.indexOf(`m`) !== -1) {
+            html = `<img class="mobile" data-src="/mas_assets${url}${val.name}">`;
+          } else {
+            html = `<img data-src="/mas_assets${url}${val.name}">`;
+          }
         } else {
           html = `<img data-src="/mas_assets${url}${val.name}">`;
         }
-      } else {
-        html = `<img data-src="/mas_assets${url}${val.name}">`;
-      }
 
-      //make the html file
-      fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
-        if (err) throw err;
-        console.log(`File written successfully. ${name}.html`);
-      });
+        //make the html file
+        fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
+          if (err) throw err;
+          console.log(`File written successfully. ${name}.html`);
+        });
 
-    })
+      })
 
-    c.end();
-  });
+      c.end();
+    });
+  */
 
   //GET LIST OF FILES THEN DELETE FILES IN DIRECTORY
   /*
