@@ -3,9 +3,9 @@ var fs = require('fs');
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `homepage/2022/0317/v0/`;
+var category = `landing-pages/20th-sweeps/2022/0310/v0/`;
 var url = `${baseURL}${category}`
-var filePath = `homepage/default/dev/images/`;
+var filePath = `landing-page/sweeps/20th-sweeps/dev/images/`;
 
 // console.log(url)
 console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);;
@@ -58,6 +58,39 @@ c.on('ready', function() {
     });
   */
 
+  //GET LIST OF FILES THEN COMPILE HTML FILES
+
+  c.list(url, function(err, list) {
+    if (err) throw err;
+    list.map((val, i) => {
+
+      console.log(val);
+      var name = val.name.split('.')[0];
+      var html = ``;
+      if (name.indexOf(`-`) !== -1) {
+        // console.log(name);
+        if (name.indexOf(`d`) !== -1) {
+          html = `<img class="desktop" data-src="/mas_assets${url}${val.name}">`;
+        } else if (name.indexOf(`m`) !== -1) {
+          html = `<img class="mobile" data-src="/mas_assets${url}${val.name}">`;
+        } else {
+          html = `<img data-src="/mas_assets${url}${val.name}">`;
+        }
+      } else {
+        html = `<img data-src="/mas_assets${url}${val.name}">`;
+      }
+
+      //make the html file
+      fs.writeFile(`${filePath}/output/${name}.html`, html, (err) => {
+        if (err) throw err;
+        console.log(`File written successfully. ${name}.html`);
+      });
+
+    })
+
+    c.end();
+  });
+
   //GET LIST OF FILES THEN DELETE FILES IN DIRECTORY
   /*
   c.list(url, function(err, list) {
@@ -80,18 +113,18 @@ c.on('ready', function() {
   */
 
   //LIST DIRECTORIES
-
-  c.list(url, function(err, list) {
-    if (err) throw err;
-    list.map((val, i) => {
-      // if (val.type == 'd') {
-      console.log(val);
-      // }
-    })
-    // console.dir(list);
-    c.end();
-  });
-
+  /*
+    c.list(url, function(err, list) {
+      if (err) throw err;
+      list.map((val, i) => {
+        // if (val.type == 'd') {
+        console.log(val);
+        // }
+      })
+      // console.dir(list);
+      c.end();
+    });
+  */
 });
 //CONNECT FTP
 c.connect({
