@@ -2,8 +2,11 @@
 
 var _api = require("./api.js");
 
+var _inview = require("./inview.js");
+
 // console.log(keys);
 $(document).ready(function () {
+  (0, _inview.inview)('.content-wrap');
   var url = window.location.href;
   var ac = "20thsweeps_LP";
 

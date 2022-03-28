@@ -1,9 +1,15 @@
 import {
   keys
 } from './api.js';
+import {
+  inview
+} from './inview.js';
 // console.log(keys);
 
 $(document).ready(function() {
+
+  inview('.content-wrap');
+
   const url = window.location.href;
   const ac = "20thsweeps_LP";
 

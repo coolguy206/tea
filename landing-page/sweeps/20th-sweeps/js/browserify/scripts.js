@@ -15,10 +15,69 @@ exports.keys = keys;
 },{}],2:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.inview = void 0;
+
+var inview = function inview(elem) {
+  // console.log(`from inview.js`);
+  $(elem).on('inview', function (event, isInView) {
+    if (isInView) {
+      // element is now visible in the viewport
+      // console.log('in view');
+      var imgs = $(this).find('img'); // let width = $(window).width();
+      // console.log(imgs);
+      // console.log(width);
+
+      $.each(imgs, function (i, val) {
+        var src = $(val).attr('data-src'); // console.log(src);
+
+        if (src) {
+          $(val).attr('src', src);
+        }
+
+        $(val).removeAttr('data-src');
+      });
+      $(this).css('visibility', 'visible');
+    }
+  });
+}; // module.exports = function(elem) {
+//   // console.log(`from inview.js`);
+//   $(elem).on('inview', function(event, isInView) {
+//     if (isInView) {
+//       // element is now visible in the viewport
+//       // console.log('in view');
+//       let imgs = $(this).find('img');
+//       // let width = $(window).width();
+//       // console.log(imgs);
+//       // console.log(width);
+//       $.each(imgs, function(i, val) {
+//         let src = $(val).attr('data-src');
+//         // console.log(src);
+//         if (src) {
+//           $(val).attr('src', src);
+//         }
+//         $(val).removeAttr('data-src');
+//       });
+//     }
+//   });
+// };
+
+
+exports.inview = inview;
+
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
 var _api = require("./api.js");
+
+var _inview = require("./inview.js");
 
 // console.log(keys);
 $(document).ready(function () {
+  (0, _inview.inview)('.content-wrap');
   var url = window.location.href;
   var ac = "20thsweeps_LP";
 
@@ -99,4 +158,4 @@ $(document).ready(function () {
 });
 
 
-},{"./api.js":1}]},{},[2]);
+},{"./api.js":1,"./inview.js":2}]},{},[3]);
