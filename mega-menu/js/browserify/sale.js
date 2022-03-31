@@ -207,9 +207,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
     default:
       break;
-  }
+  } // $('.promo1-url').attr('href', promo1);
 
-  $('.promo1-url').attr('href', promo1);
+
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo1);
   $('.clearance-url').attr('href', clearance);
@@ -317,9 +317,9 @@ var switchSale = function switchSale(href) {
 
     default:
       break;
-  }
+  } // $('.promo1-url').attr('href', promo1);
 
-  $('.promo1-url').attr('href', promo1);
+
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo1);
   $('.clearance-url').attr('href', clearance);
