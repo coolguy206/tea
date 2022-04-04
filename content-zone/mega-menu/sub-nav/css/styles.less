@@ -199,6 +199,23 @@
 		width: auto !important;
 		flex-basis: 70% !important;
 		padding: 0 !important;
+
+		li {
+			a {
+				@media screen and (max-width: 1679px) {
+					font-size: 0.9vw !important;
+					line-height: 1vw !important;
+				}
+
+				&.kidizen-url {
+					&:hover {
+						&:before {
+							bottom: 0 !important;
+						}
+					}
+				}
+			}
+		}
 	}
 }
 
