@@ -35,7 +35,7 @@ $(document).ready(function() {
   alt('.hp .c7 .fourth img', 'baby girl in rainbow graphic dress');
   alt('.hp .swim img', 'watermelon graphic swimwear')
 
-  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .give-back');
+  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .give-back');
 
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);
