@@ -1,14 +1,10 @@
 /**/*.jpg
 /**/*.png
-/**/*.psd
 /**/*.gif
 /**/*.docx
 /**/*.pdf
 /**/*.zip
 /**/build
-/**/design
-/**/designs
-**/images
 .env
 api.js
 log/

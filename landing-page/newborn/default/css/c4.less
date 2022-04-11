@@ -1,6 +1,7 @@
 @import 'var.less';
-@c4-color: #404347;
-@c4-cta-color: #437282;
+@c4-color: #6D8995;
+@c4-cta-color: #fff;
+@c4-cta-background-color: #F7AB98;
 
 .c4 {
   position: relative;
@@ -10,15 +11,18 @@
       width: 100%;
       top: 6%;
       left: 0;
+      transform: translate(0);
     }
     position: absolute;
-    top: 23%;
-    left: 39%;
-    width: 22%;
+    top: 50%;
+    left: 0;
+    width: 33%;
     text-align: center;
+    transform: translate(0, -50%);
 
     img {
       margin: 0 0 10%;
+      width: 32.8%;
     }
 
     h2 {
@@ -35,27 +39,24 @@
 
     p {
       @media screen and (max-width: 428px) {
-        margin: 120% auto 0;
-        width: 67%;
+        // margin: 120% auto 0;
+        // width: 67%;
       }
       margin: 6% auto 0;
-      width: 79%;
+      // width: 79%;
       color: @c4-color;
     }
 
     div {
       @media screen and (max-width: 428px) {
-        margin: 3% 0 0;
+        margin: 6% 0 0;
         text-align: center;
       }
       margin: 11% 0 0;
 
-      a {
-        color: @c4-cta-color;
-      }
-
       span {
         color: @c4-cta-color;
+        background: @c4-cta-background-color;
       }
     }
   }
