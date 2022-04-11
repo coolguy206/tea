@@ -8,7 +8,7 @@ export const switchNewArrivals = (href) => {
 
   switch (href) {
     case '/girls-clothing/new-arrivals':
-      // promo1 = urls.promo1.babyPromo;
+      // promo1 = urls.promo1.Promo;
       promo1 = urls.promo1.girl;
       promo2 = urls.promo1.girl;
       clearance = urls.promo1.girl;
@@ -21,7 +21,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/boys-clothing/new-arrivals':
-      // promo1 = urls.promo1.babyPromo;
+      // promo1 = urls.promo1.Promo;
       promo1 = urls.promo1.boy;
       promo2 = urls.promo1.boy;
       clearance = urls.promo1.boy;
@@ -58,7 +58,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-girls-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo1.babyPromo;
+      // promo1 = urls.promo1.Promo;
       promo1 = urls.promo1.toddler.girl;
       promo2 = urls.promo1.toddler.girl;
       clearance = urls.promo1.toddler.girl;
@@ -71,7 +71,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-boys-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo1.babyPromo;
+      // promo1 = urls.promo1.Promo;
       promo1 = urls.promo1.toddler.boy;
       promo2 = urls.promo1.toddler.boy;
       clearance = urls.promo1.toddler.boy;
@@ -88,9 +88,9 @@ export const switchNewArrivals = (href) => {
       promo1 = urls.promo1.baby.newborn;
       promo2 = urls.promo1.baby.newborn;
       clearance = urls.promo1.baby.newborn;
-      $('.promo1-url').show();
+      // $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
+      $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
@@ -100,7 +100,7 @@ export const switchNewArrivals = (href) => {
       break;
   }
 
-  // $('.promo1-url').attr('href', promo1);
+  $('.promo1-url').attr('href', promo1);
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo1);
   $('.clearance-url').attr('href', clearance);

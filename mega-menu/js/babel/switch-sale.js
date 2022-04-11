@@ -14,7 +14,7 @@ var switchSale = function switchSale(href) {
 
   switch (href) {
     case '/sale/girls-clothing/view-all':
-      // promo1 = urls.promo1.sale.babyPromo;
+      // promo1 = urls.promo1.sale.Promo;
       promo1 = _urls.urls.promo1.girl;
       promo2 = _urls.urls.promo1.sale.girl;
       clearance = _urls.urls.promo1.sale.girl; // $('.promo1-url').show();
@@ -26,7 +26,7 @@ var switchSale = function switchSale(href) {
       break;
 
     case '/sale/boys-clothing/view-all':
-      // promo1 = urls.promo1.sale.babyPromo;
+      // promo1 = urls.promo1.sale.Promo;
       promo1 = _urls.urls.promo1.boy;
       promo2 = _urls.urls.promo1.sale.boy;
       clearance = _urls.urls.promo1.sale.boy; // $('.promo1-url').show();
@@ -60,7 +60,7 @@ var switchSale = function switchSale(href) {
       break;
 
     case '/sale/toddler-girls-clothing/view-all':
-      // promo1 = urls.promo1.sale.babyPromo;
+      // promo1 = urls.promo1.sale.Promo;
       promo1 = _urls.urls.promo1.toddler.girl;
       promo2 = _urls.urls.promo1.sale.toddler.girl;
       clearance = _urls.urls.promo1.sale.toddler.girl; // $('.promo1-url').show();
@@ -72,7 +72,7 @@ var switchSale = function switchSale(href) {
       break;
 
     case '/sale/toddler-boys-clothing/view-all':
-      // promo1 = urls.promo1.sale.babyPromo;
+      // promo1 = urls.promo1.sale.Promo;
       promo1 = _urls.urls.promo1.toddler.boy;
       promo2 = _urls.urls.promo1.sale.toddler.boy;
       clearance = _urls.urls.promo1.sale.toddler.boy; // $('.promo1-url').show();
@@ -86,19 +86,19 @@ var switchSale = function switchSale(href) {
     case '/sale/newborn-clothing/view-all':
       promo1 = _urls.urls.promo1.baby.newborn;
       promo2 = _urls.urls.promo1.sale.baby.newborn;
-      clearance = _urls.urls.promo1.sale.baby.newborn;
-      $('.promo1-url').show(); // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
+      clearance = _urls.urls.promo1.sale.baby.newborn; // $('.promo1-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
+
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
 
     default:
       break;
-  } // $('.promo1-url').attr('href', promo1);
+  }
 
-
+  $('.promo1-url').attr('href', promo1);
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo1);
   $('.clearance-url').attr('href', clearance);
