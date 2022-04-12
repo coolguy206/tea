@@ -10,7 +10,7 @@ module.exports = {
 
   mega: {
     files: ['mega-menu/css/*.less', 'mega-menu/dev/**/*.html', 'mega-menu/js/*.js'],
-    tasks: ['less:mega', 'babel:mega', 'browserify:mega', 'uglify:mega', 'includes:mega', 'htmlmin:mega'],
+    tasks: ['less:mega', 'babel:mega', 'browserify:mega', 'uglify:mega', 'ftp_push:megaMenuCSS', 'ftp_push:megaMenuJS', 'includes:mega', 'htmlmin:mega'],
   },
 
 
@@ -23,7 +23,7 @@ module.exports = {
 
   hp: {
     files: ['homepage/default/css/*.less', 'homepage/default/dev/*.html', 'homepage/default/js/*.js'],
-    tasks: ['less:hp', /*'purifycss:hp', 'cssmin:hp',*/ 'uncss:hp', 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
+    tasks: ['less:hp', /*'purifycss:hp', 'cssmin:hp',*/ 'uncss:hp', 'babel:hp', 'browserify:hp', 'uglify:hp', 'ftp_push:hpCSS', 'ftp_push:hpJS', 'includes:hp', 'htmlmin:hp'],
   },
 
 
@@ -41,7 +41,7 @@ module.exports = {
 
   promos: {
     files: ['promos/' + config.promo.name + '/css/*.less', 'promos/' + config.promo.name + '/dev/*.html', 'promos/' + config.promo.name + '/js/*.js'],
-    tasks: ['less:promos', 'uncss:promos', 'purifycss:promos', 'cssmin:promos', 'babel:promos', 'uglify:promos', 'includes:promos', 'htmlmin:promos'],
+    tasks: ['less:promos', 'uncss:promos', 'purifycss:promos', 'cssmin:promos', 'babel:promos', 'uglify:promos', 'ftp_push:promoCSS', 'ftp_push:promoJS', 'includes:promos', 'htmlmin:promos'],
   },
 
 };
