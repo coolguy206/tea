@@ -18,6 +18,7 @@
     "grunt-contrib-less": "^2.0.0",
     "grunt-contrib-uglify": "^1.0.1",
     "grunt-contrib-watch": "^1.0.0",
+    "grunt-ftp-push": "^1.2.1",
     "md5": "^2.3.0",
     "sailthru-client": "^3.0.6"
   },

@@ -1,9 +1,5 @@
-/**/*.jpg
-/**/*.png
-/**/*.gif
-/**/*.docx
+
 /**/*.pdf
-/**/*.zip
 /**/build
 .env
 api.js

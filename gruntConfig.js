@@ -1,7 +1,31 @@
 module.exports = {
 
   hp: {
-    name: 'default'
+    name: 'default',
+    ftp: {
+      css: {
+        src: 'default/css/uncss/',
+        dest: 'homepage/2022/0414/css/v0/',
+        file: 'styles.css'
+      },
+      js: {
+        src: 'default/js/jsmin/',
+        dest: 'homepage/2022/0414/js/v0/',
+        file: 'scripts.min.js'
+      }
+    },
+  },
+  megaMenu: {
+    ftp: {
+      css: {
+        src: 'css/',
+        dest: 'mega-menu/2022/0414/css/v0/',
+      },
+      js: {
+        src: 'js/jsmin/',
+        dest: 'mega-menu/2022/0414/js/v0/',
+      }
+    },
   },
   cat: {
     name: 'default'
@@ -13,7 +37,17 @@ module.exports = {
     name: 'mega-menu/top-nav'
   },
   promo: {
-    name: 'one-offs/default'
+    name: 'default',
+    ftp: {
+      css: {
+        src: 'default/css/',
+        dest: 'promos/one-offs/2022/0414/css/v0/',
+      },
+      js: {
+        src: 'default/js/jsmin/',
+        dest: 'promos/one-offs/2022/0414/js/v0/',
+      }
+    },
   }
 
 };
