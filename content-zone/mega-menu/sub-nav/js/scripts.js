@@ -11,7 +11,13 @@ $(document).ready(function() {
 
   $('body').on('click', '.kidizen-url', function(e) {
     e.preventDefault();
+    var url = $(this).attr('data-url');
+    console.log('clicked rewear');
     $('body').prepend(elem);
+    if(url !== undefined){
+      $('#tea-rewear-leave').attr('href', url);
+    }
+
   });
 
   $('body').on('click', '.kidizen-close, .kidizen-content a, .kidizen-overlay', function() {
