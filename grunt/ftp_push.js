@@ -109,4 +109,38 @@ module.exports = {
     }]
   },
 
+  zoneCSS: {
+    options: {
+      host: process.env.FTP_HOST,
+      username: process.env.FTP_USER,
+      password: process.env.FTP_PASSWORD,
+      dest: `${baseURL}${config.zone.ftp.css.dest}`,
+      incrementalUpdates: false
+    },
+    files: [{
+      expand: true,
+      cwd: `content-zone/${config.zone.name}/css/`,
+      src: [
+        "*.css",
+      ]
+    }]
+  },
+
+  zoneJS: {
+    options: {
+      host: process.env.FTP_HOST,
+      username: process.env.FTP_USER,
+      password: process.env.FTP_PASSWORD,
+      dest: `${baseURL}${config.zone.ftp.js.dest}`,
+      incrementalUpdates: false
+    },
+    files: [{
+      expand: true,
+      cwd: `content-zone/${config.zone.name}/js/jsmin`,
+      src: [
+        "*.js",
+      ]
+    }]
+  },
+
 };
