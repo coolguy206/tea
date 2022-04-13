@@ -5,12 +5,12 @@ module.exports = {
     ftp: {
       css: {
         src: 'default/css/uncss/',
-        dest: 'homepage/2022/0414/css/v0/',
+        dest: 'homepage/2022/0412/css/v0/',
         file: 'styles.css'
       },
       js: {
         src: 'default/js/jsmin/',
-        dest: 'homepage/2022/0414/js/v0/',
+        dest: 'homepage/2022/0412/js/v0/',
         file: 'scripts.min.js'
       }
     },
@@ -19,11 +19,11 @@ module.exports = {
     ftp: {
       css: {
         src: 'css/',
-        dest: 'mega-menu/2022/0414/css/v0/',
+        dest: 'mega-menu/2022/0412/css/v0/',
       },
       js: {
         src: 'js/jsmin/',
-        dest: 'mega-menu/2022/0414/js/v0/',
+        dest: 'mega-menu/2022/0412/js/v0/',
       }
     },
   },
@@ -34,7 +34,17 @@ module.exports = {
     name: 'sweeps/20th-sweeps'
   },
   zone: {
-    name: 'mega-menu/top-nav'
+    name: 'rewear',
+    ftp: {
+      css: {
+        src: 'css/',
+        dest: 'content-zone/rewear/2022/0412/css/v0/',
+      },
+      js: {
+        src: 'js/jsmin/',
+        dest: 'content-zone/rewear/2022/0412/js/v0/',
+      }
+    },
   },
   promo: {
     name: 'default',
