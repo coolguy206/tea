@@ -4,7 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "dependencies": {
-    "async": "^2.6.3",
+    "async": "^3.2.2",
     "axios": "^0.26.1",
     "cloudinary": "^1.28.1",
     "cssunminifier": "0.0.2",
