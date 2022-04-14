@@ -11,6 +11,7 @@ html {
 }
 
 .promos {
+  display: none;
   background: #E6B2A5;
 }
 

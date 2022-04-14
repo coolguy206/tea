@@ -10,9 +10,15 @@ import {
 import {
   tracking
 } from './tracking.js';
+var config = require("./../../../../gruntConfig.js");
 
+// var linkElem = `<link rel="stylesheet" href="/mas_assets/media/tea_collection/${config.hp.ftp.css.dest}${config.hp.ftp.css.file}">`;
+// console.log(linkElem);
+//
+// $('.hp').after(linkElem);
 
 $(document).ready(function() {
+  alt('.hp .promo1 img', 'babies');
   alt('.hp .c1 img', 'kids on the beach');
   alt('.hp .c2 .first img', 'family at the pool');
   alt('.hp .c2 .second img', 'kids in special occasion clothes');
@@ -40,6 +46,8 @@ $(document).ready(function() {
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);
   }
+
+
 
   // $('img[usemap]').rwdImageMaps();
 

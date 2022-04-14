@@ -1,4 +1,68 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+module.exports = {
+
+  hp: {
+    name: 'default',
+    ftp: {
+      css: {
+        src: 'default/css/uncss/',
+        dest: 'homepage/2022/0414/css/v1/',
+        file: 'styles.css'
+      },
+      js: {
+        src: 'default/js/jsmin/',
+        dest: 'homepage/2022/0414/js/v1/',
+        file: 'scripts.min.js'
+      }
+    },
+  },
+  megaMenu: {
+    ftp: {
+      css: {
+        src: 'css/',
+        dest: 'mega-menu/2022/0414/css/v1/',
+      },
+      js: {
+        src: 'js/jsmin/',
+        dest: 'mega-menu/2022/0414/js/v1/',
+      }
+    },
+  },
+  cat: {
+    name: 'default'
+  },
+  landing: {
+    name: 'sweeps/20th-sweeps'
+  },
+  zone: {
+    name: 'mega-menu/top-nav',
+    ftp: {
+      css: {
+        src: 'mega-menu/top-nav/css/',
+        dest: 'content-zone/mega-menu/top-nav/2022/0414/css/v0/',
+      },
+      js: {
+        src: 'mega-menu/top-nav/js/jsmin/',
+        dest: 'content-zone/mega-menu/top-nav/2022/0414/js/v0/',
+      }
+    },
+  },
+  promo: {
+    name: 'default',
+    ftp: {
+      css: {
+        src: 'default/css/',
+        dest: 'promos/one-offs/2022/0414/css/v2/',
+      },
+      js: {
+        src: 'default/js/jsmin/',
+        dest: 'promos/one-offs/2022/0414/js/v2/',
+      }
+    },
+  }
+
+};
+},{}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -24,7 +88,7 @@ var alt = function alt(elem, _alt) {
 exports.alt = alt;
 
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -80,7 +144,7 @@ var inview = function inview(elem) {
 exports.inview = inview;
 
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 var _alt = require("./alt.js");
@@ -92,7 +156,14 @@ var _tracking = require("./tracking.js");
 // const addAlt = require('./alt.js');
 // const inview = require('./inview.js');
 // const addTracking = require('./tracking.js');
+var config = require("./../../../../gruntConfig.js"); // var linkElem = `<link rel="stylesheet" href="/mas_assets/media/tea_collection/${config.hp.ftp.css.dest}${config.hp.ftp.css.file}">`;
+// console.log(linkElem);
+//
+// $('.hp').after(linkElem);
+
+
 $(document).ready(function () {
+  (0, _alt.alt)('.hp .promo1 img', 'babies');
   (0, _alt.alt)('.hp .c1 img', 'kids on the beach');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');
   (0, _alt.alt)('.hp .c2 .second img', 'kids in special occasion clothes');
@@ -123,7 +194,7 @@ $(document).ready(function () {
 });
 
 
-},{"./alt.js":1,"./inview.js":2,"./tracking.js":4}],4:[function(require,module,exports){
+},{"./../../../../gruntConfig.js":1,"./alt.js":2,"./inview.js":3,"./tracking.js":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -155,4 +226,4 @@ var tracking = function tracking(elem, id) {
 exports.tracking = tracking;
 
 
-},{}]},{},[3]);
+},{}]},{},[4]);
