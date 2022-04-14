@@ -14,10 +14,10 @@ $(document).ready(function() {
   switch (month) {
     //november
     case 11:
-      if (day >= 26) {
+      if (day >= 25) {
         $('.holiday-closure').hide();
-      } else if (day <= 25) {
-        message = `<h3>Thanksgiving Day ${month}/25/${year}</h3>`;
+      } else if (day <= 24) {
+        message = `<h3>Thanksgiving Day ${month}/24/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -74,41 +74,41 @@ $(document).ready(function() {
       //march & april
     case 3:
       var month = month + 1;
-      if (day <= 16) {
+      if (day <= 1) {
         $('.holiday-closure').hide();
-      } else if (day >= 17) {
-        message = `<h3>Easter ${month}/3/${year} - ${month}/4/${year}</h3>`;
+      } else if (day >= 2) {
+        message = `<h3>Easter ${month}/16/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //april
     case 4:
-      if (day >= 5) {
+      if (day <= 5) {
         $('.holiday-closure').hide();
-      } else if (day <= 4) {
-        message = `<h3>Easter ${month}/3/${year} - ${month}/4/${year}</h3>`;
+      } else if (day >= 6) {
+        message = `<h3>Easter ${month}/16/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //may
     case 5:
-      if (day <= 15) {
+      if (day <= 2) {
         $('.holiday-closure').hide();
-      } else if (day >= 16) {
-        message = `<h3>Memorial Day ${month}/31/${year} </h3>`;
+      } else if (day >= 3) {
+        message = `<h3>Mother's Day ${month}/8/${year} </h3> <h3>Memorial Day ${month}/30/${year} </h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //june & july
     case 6:
-      if (day <= 15) {
+      if (day <= 2) {
         $('.holiday-closure').hide();
-      } else if (day >= 16) {
+      } else if (day >= 3) {
         var month = month + 1;
-        message = `<h3>Independence Day ${month}/4/${year} </h3>`;
+        message = `<h3>Father's Day ${month}/19/${year} </h3> <h3>Independence Day ${month}/4/${year} </h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
@@ -129,17 +129,17 @@ $(document).ready(function() {
         $('.holiday-closure').hide();
       } else if (day >= 16) {
         var month = month + 1;
-        message = `<h3>Labor Day ${month}/6/${year}</h3>`;
+        message = `<h3>Labor Day ${month}/5/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
       break;
       //september
     case 9:
-      if (day >= 7) {
+      if (day >= 6) {
         $('.holiday-closure').hide();
-      } else if (day <= 6) {
-        message = `<h3>Labor Day ${month}/6/${year}</h3>`;
+      } else if (day <= 5) {
+        message = `<h3>Labor Day ${month}/5/${year}</h3>`;
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
