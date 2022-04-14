@@ -7,16 +7,16 @@ exports.urls = void 0;
 var urls = {
   promo1: {
     Promo: "/black-friday",
-    girl: "/flashsale-girls",
-    boy: "/flashsale-boys",
+    girl: "/baby-clothes",
+    boy: "/baby-clothes",
     baby: {
-      girl: "/flashsale-baby-girl",
-      boy: "/flashsale-baby-boy",
-      newborn: "/flashsale-newborn"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
+      newborn: "/newborn-clothes/view-all"
     },
     toddler: {
-      girl: "/flashsale-toddler-girls",
-      boy: "/flashsale-toddler-boys"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/",
@@ -33,16 +33,16 @@ var urls = {
     }
   },
   promo2: {
-    girl: "/girls-clothing/favorites/limited-time-sale",
-    boy: "/boys-clothing/favorites/limited-time-sale",
+    girl: "/flashsale-girls",
+    boy: "/flashsale-boys",
     baby: {
-      girl: "/baby-girl-clothes/favorites/limited-time-sale",
-      boy: "/baby-boy-clothes/favorites/limited-time-sale",
-      newborn: "/warehousesale-newborn"
+      girl: "/flashsale-baby-girl",
+      boy: "/flashsale-baby-boy",
+      newborn: "/flashsale-newborn"
     },
     toddler: {
-      girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
-      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
+      girl: "/flashsale-toddler-girls",
+      boy: "/flashsale-toddler-boys"
     }
   }
 };
