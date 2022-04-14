@@ -6,15 +6,6 @@ var _inview = require("./inview.js");
 
 var _tracking = require("./tracking.js");
 
-// const addAlt = require('./alt.js');
-// const inview = require('./inview.js');
-// const addTracking = require('./tracking.js');
-var config = require("./../../../../gruntConfig.js"); // var linkElem = `<link rel="stylesheet" href="/mas_assets/media/tea_collection/${config.hp.ftp.css.dest}${config.hp.ftp.css.file}">`;
-// console.log(linkElem);
-//
-// $('.hp').after(linkElem);
-
-
 $(document).ready(function () {
   (0, _alt.alt)('.hp .promo1 img', 'babies');
   (0, _alt.alt)('.hp .c1 img', 'kids on the beach');

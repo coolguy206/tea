@@ -1,6 +1,3 @@
-// const addAlt = require('./alt.js');
-// const inview = require('./inview.js');
-// const addTracking = require('./tracking.js');
 import {
   alt
 } from './alt.js';
@@ -10,12 +7,6 @@ import {
 import {
   tracking
 } from './tracking.js';
-var config = require("./../../../../gruntConfig.js");
-
-// var linkElem = `<link rel="stylesheet" href="/mas_assets/media/tea_collection/${config.hp.ftp.css.dest}${config.hp.ftp.css.file}">`;
-// console.log(linkElem);
-//
-// $('.hp').after(linkElem);
 
 $(document).ready(function() {
   alt('.hp .promo1 img', 'babies');
@@ -46,8 +37,6 @@ $(document).ready(function() {
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);
   }
-
-
 
   // $('img[usemap]').rwdImageMaps();
 

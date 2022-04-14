@@ -1,68 +1,4 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
-module.exports = {
-
-  hp: {
-    name: 'default',
-    ftp: {
-      css: {
-        src: 'default/css/uncss/',
-        dest: 'homepage/2022/0412/css/v0/',
-        file: 'styles.css'
-      },
-      js: {
-        src: 'default/js/jsmin/',
-        dest: 'homepage/2022/0412/js/v0/',
-        file: 'scripts.min.js'
-      }
-    },
-  },
-  megaMenu: {
-    ftp: {
-      css: {
-        src: 'css/',
-        dest: 'mega-menu/2022/0412/css/v0/',
-      },
-      js: {
-        src: 'js/jsmin/',
-        dest: 'mega-menu/2022/0412/js/v0/',
-      }
-    },
-  },
-  cat: {
-    name: 'default'
-  },
-  landing: {
-    name: 'sweeps/20th-sweeps'
-  },
-  zone: {
-    name: 'rewear',
-    ftp: {
-      css: {
-        src: 'css/',
-        dest: 'content-zone/rewear/2022/0412/css/v0/',
-      },
-      js: {
-        src: 'js/jsmin/',
-        dest: 'content-zone/rewear/2022/0412/js/v0/',
-      }
-    },
-  },
-  promo: {
-    name: 'default',
-    ftp: {
-      css: {
-        src: 'default/css/',
-        dest: 'promos/one-offs/2022/0412/css/v0/',
-      },
-      js: {
-        src: 'default/js/jsmin/',
-        dest: 'promos/one-offs/2022/0412/js/v0/',
-      }
-    },
-  }
-
-};
-},{}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -88,7 +24,7 @@ var alt = function alt(elem, _alt) {
 exports.alt = alt;
 
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -144,7 +80,7 @@ var inview = function inview(elem) {
 exports.inview = inview;
 
 
-},{}],4:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _alt = require("./alt.js");
@@ -152,15 +88,6 @@ var _alt = require("./alt.js");
 var _inview = require("./inview.js");
 
 var _tracking = require("./tracking.js");
-
-// const addAlt = require('./alt.js');
-// const inview = require('./inview.js');
-// const addTracking = require('./tracking.js');
-var config = require("./../../../../gruntConfig.js"); // var linkElem = `<link rel="stylesheet" href="/mas_assets/media/tea_collection/${config.hp.ftp.css.dest}${config.hp.ftp.css.file}">`;
-// console.log(linkElem);
-//
-// $('.hp').after(linkElem);
-
 
 $(document).ready(function () {
   (0, _alt.alt)('.hp .promo1 img', 'babies');
@@ -194,7 +121,7 @@ $(document).ready(function () {
 });
 
 
-},{"./../../../../gruntConfig.js":1,"./alt.js":2,"./inview.js":3,"./tracking.js":5}],5:[function(require,module,exports){
+},{"./alt.js":1,"./inview.js":2,"./tracking.js":4}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -226,4 +153,4 @@ var tracking = function tracking(elem, id) {
 exports.tracking = tracking;
 
 
-},{}]},{},[4]);
+},{}]},{},[3]);
