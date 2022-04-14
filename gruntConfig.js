@@ -51,11 +51,11 @@ module.exports = {
     ftp: {
       css: {
         src: 'default/css/',
-        dest: 'promos/one-offs/2022/0414/css/v0/',
+        dest: 'promos/one-offs/2022/0412/css/v0/',
       },
       js: {
         src: 'default/js/jsmin/',
-        dest: 'promos/one-offs/2022/0414/js/v0/',
+        dest: 'promos/one-offs/2022/0412/js/v0/',
       }
     },
   }
