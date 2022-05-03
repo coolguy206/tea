@@ -7,7 +7,7 @@ var dbx = new Dropbox({
   accessToken: process.env.TEA_DROPBOX_TOKEN
 });
 
-var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/04 April/041422 25% Off Baby Styles/04 Handoff/Site`;
+var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/04 April/042022 Buy 3 Get 1 Free/04 Handoff/Site`;
 folderPath = folderPath.toLowerCase();
 // console.log(folderPath);
 

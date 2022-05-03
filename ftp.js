@@ -3,7 +3,7 @@ var fs = require('fs');
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/0414/v0/`;
+var category = `promos/one-offs/2022/0420/images/v0/`;
 // var category = `homepage/2022/0401/v0/`;
 // var category = `landing-pages/newborn/2022/0408/v0/`;
 var url = `${baseURL}${category}`

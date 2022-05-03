@@ -1,3 +1,6 @@
+// const addAlt = require('./alt.js');
+// const inview = require('./inview.js');
+// const addTracking = require('./tracking.js');
 import {
   alt
 } from './alt.js';
@@ -30,7 +33,7 @@ $(document).ready(function() {
   alt('.hp .c7 .second img', 'happy mom & son');
   alt('.hp .c7 .third img', 'learn how #teagivesback');
   alt('.hp .c7 .fourth img', 'baby girl in rainbow graphic dress');
-  alt('.hp .swim img', 'watermelon graphic swimwear')
+  alt('.hp .swim img', 'watermelon graphic swimwear');
 
   inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .give-back');
 

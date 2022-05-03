@@ -89,6 +89,9 @@ var _inview = require("./inview.js");
 
 var _tracking = require("./tracking.js");
 
+// const addAlt = require('./alt.js');
+// const inview = require('./inview.js');
+// const addTracking = require('./tracking.js');
 $(document).ready(function () {
   (0, _alt.alt)('.hp .promo1 img', 'babies');
   (0, _alt.alt)('.hp .c1 img', 'kids on the beach');

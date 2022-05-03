@@ -1,3 +1,6 @@
+var date = `0420`;
+var version = `v0`;
+
 module.exports = {
 
   hp: {
@@ -5,12 +8,12 @@ module.exports = {
     ftp: {
       css: {
         src: 'default/css/uncss/',
-        dest: 'homepage/2022/0414/css/v1/',
+        dest: `homepage/2022/${date}/css/${version}/`,
         file: 'styles.css'
       },
       js: {
         src: 'default/js/jsmin/',
-        dest: 'homepage/2022/0414/js/v1/',
+        dest: `homepage/2022/${date}/js/${version}/`,
         file: 'scripts.min.js'
       }
     },
@@ -19,11 +22,11 @@ module.exports = {
     ftp: {
       css: {
         src: 'css/',
-        dest: 'mega-menu/2022/0414/css/v1/',
+        dest: `mega-menu/2022/${date}/css/${version}/`,
       },
       js: {
         src: 'js/jsmin/',
-        dest: 'mega-menu/2022/0414/js/v1/',
+        dest: `mega-menu/2022/${date}/js/${version}/`,
       }
     },
   },
@@ -31,18 +34,18 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'help/contact-us'
+    name: 'sweeps/20th-sweeps'
   },
   zone: {
     name: 'mega-menu/top-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
-        dest: 'content-zone/mega-menu/top-nav/2022/0414/css/v0/',
+        dest: `content-zone/mega-menu/top-nav/2022/${date}/css/${version}/`,
       },
       js: {
         src: 'mega-menu/top-nav/js/jsmin/',
-        dest: 'content-zone/mega-menu/top-nav/2022/0414/js/v0/',
+        dest: `content-zone/mega-menu/top-nav/2022/${date}/js/${version}/`,
       }
     },
   },
@@ -51,11 +54,11 @@ module.exports = {
     ftp: {
       css: {
         src: 'default/css/',
-        dest: 'promos/one-offs/2022/0414/css/v2/',
+        dest: `promos/one-offs/2022/${date}/css/${version}/`,
       },
       js: {
         src: 'default/js/jsmin/',
-        dest: 'promos/one-offs/2022/0414/js/v2/',
+        dest: `promos/one-offs/2022/${date}/js/${version}/`,
       }
     },
   }
