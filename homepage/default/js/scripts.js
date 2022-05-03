@@ -12,7 +12,8 @@ import {
 } from './tracking.js';
 
 $(document).ready(function() {
-  alt('.hp .promo1 img', 'babies');
+  alt('.hp .promo1 img', 'friends & family event 25% off sitewide');
+  alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'kids on the beach');
   alt('.hp .c2 .first img', 'family at the pool');
   alt('.hp .c2 .second img', 'kids in special occasion clothes');

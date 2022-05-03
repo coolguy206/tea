@@ -1,6 +1,6 @@
 @import "var.less";
-@promo2-cta1-color: #DEED88;
-@promo2-cta1-background: #545456;
+@promo2-cta1-color: #31AB9D;
+@promo2-cta1-background: #fff;
 @promo2-cta2-color: #fff;
 @promo2-cta2-background: #D8EBDD;
 @promo2-cta3-color: #fff;
@@ -26,7 +26,7 @@
       @media screen and (max-width: 1024px) {}
       @media screen and (max-width: 810px) {}
       @media screen and (max-width: 428px) {
-        top: 56%;
+        top: 64%;
         width: 100%;
         left: 0;
         transform: translateX(0%);
@@ -37,6 +37,19 @@
       transform: translate(0%, -50%);
       width: 13%;
       left: 71%;
+
+      div {
+        @media screen and (max-width: 428px) {
+          // row-gap: 21%;
+          // column-gap: 6%;
+          // grid-template-rows: repeat(2, 1fr);
+          // grid-template-columns: repeat(2, 1fr);
+        }
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(1, 1fr);
+        // row-gap: 0;
+        // column-gap: 3%;
+      }
 
       a {
         @media screen and (max-width: 1679px) {}

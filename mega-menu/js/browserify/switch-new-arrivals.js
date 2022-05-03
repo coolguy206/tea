@@ -21,8 +21,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.girl; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -33,8 +33,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.boy; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -44,8 +44,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.baby.girl; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -55,8 +55,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.baby.boy; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -67,8 +67,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.toddler.girl; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -79,8 +79,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.toddler.boy; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
@@ -91,8 +91,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       clearance = _urls.urls.promo1.baby.newborn; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').show();
-      // $('.clearance-url').hide();
+
+      $('.promo2-url').hide(); // $('.clearance-url').hide();
 
       break;
 
