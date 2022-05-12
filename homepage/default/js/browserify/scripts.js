@@ -105,7 +105,8 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c4 .first img', 'girl in watermelon graphic dress');
   (0, _alt.alt)('.hp .c4 .second img', 'kids in summer graphic clothes');
   (0, _alt.alt)('.hp .c4 .third img', 'girl in beach clothes');
-  (0, _alt.alt)('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
+  (0, _alt.alt)('.hp .c5 .first img', '$10 & under warehouse sale'); // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
+
   (0, _alt.alt)('.hp .c5 .second img', 'girl in floral graphic dress');
   (0, _alt.alt)('.hp .c5 .third img', 'baby in floral romper');
   (0, _alt.alt)('.hp .c5 .fourth img', 'baby in flower and rabbit pjs');

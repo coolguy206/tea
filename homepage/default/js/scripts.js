@@ -24,7 +24,8 @@ $(document).ready(function() {
   alt('.hp .c4 .first img', 'girl in watermelon graphic dress');
   alt('.hp .c4 .second img', 'kids in summer graphic clothes');
   alt('.hp .c4 .third img', 'girl in beach clothes');
-  alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
+  alt('.hp .c5 .first img', '$10 & under warehouse sale');
+  // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
   alt('.hp .c5 .second img', 'girl in floral graphic dress');
   alt('.hp .c5 .third img', 'baby in floral romper');
   alt('.hp .c5 .fourth img', 'baby in flower and rabbit pjs');
