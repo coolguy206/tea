@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/20th-sweeps'
+    name: 'about/catalogs'
   },
   zone: {
     name: 'mega-menu/top-nav',
