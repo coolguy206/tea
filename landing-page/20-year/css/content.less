@@ -1,0 +1,75 @@
+@import 'vars.less';
+@cta-background-color: #444E7F;
+@cta-font-color: #fff;
+
+.content-wrap {
+	@media screen and (max-width:428px) {}
+	// display: none;
+	h1 {
+		@media screen and (max-width:1679px) {
+			font-size: 4.3vw;
+			line-height: 3.2vw;
+		}
+		@media screen and (max-width:428px) {
+			font-size: 11vw;
+			line-height: 12.5vw;
+			margin: 8vw 0;
+		}
+		font-size: 72px;
+		line-height: 53px;
+		font-family: @souv;
+		text-align: center;
+		color: #47363D;
+		margin: 0 0 2vw;
+	}
+
+	p {
+		@media screen and (max-width:1679px) {
+			font-size: 1.5vw;
+			line-height: 2vw;
+		}
+		@media screen and (max-width:428px) {
+			font-size: 5.6vw;
+			line-height: 8vw;
+			margin: 0 0 9vw;
+		}
+		font-family: @souv;
+		font-size: 24px;
+		line-height: 32px;
+		text-align: center;
+		color: #43484B;
+		margin: 0 0 2vw;
+	}
+
+	div {
+		text-align: center;
+
+		&.the-ctas {
+			@media screen and (max-width:1679px) {
+				gap: 4.5vw;
+			}
+			@media screen and (max-width:428px) {
+				flex-wrap: wrap;
+				gap: 0;
+			}
+			display: flex;
+			gap: 76px;
+			justify-content: center;
+			margin: 0 0 4vw;
+
+			a {
+				@media screen and (max-width:1679px) {
+					width: 14.7vw;
+				}
+				@media screen and (max-width:428px) {
+					width: 58vw;
+					margin: 0 0 7vw;
+				}
+				width: 246px;
+				background: @cta-background-color;
+				color: @cta-font-color;
+			}
+		}
+	}
+	@import 'articles.less';
+}

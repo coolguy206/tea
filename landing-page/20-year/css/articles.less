@@ -1,0 +1,65 @@
+@import 'vars.less';
+@cta-background-color: #444E7F;
+@cta-font-color: #fff;
+
+.articles {
+	@media screen and (max-width:1679px) {
+		gap: 3vw;
+	}
+	@media screen and (max-width:428px) {
+		flex-wrap: wrap;
+		gap: 0;
+	}
+	display: flex;
+	flex-wrap: wrap;
+	gap: 52px;
+
+	article {
+		@media screen and (max-width:428px) {
+			flex-basis: 100%;
+		}
+		flex-basis: 48%;
+		position: relative;
+		visibility: hidden;
+
+		.the-content {
+			@media screen and (max-width:428px) {
+				bottom: 9%;
+			}
+			position: absolute;
+			bottom: 6%;
+			width: 100%;
+
+			h2 {
+				@media screen and (max-width:1679px) {
+					font-size: 3vw;
+					line-height: 3vw;
+					margin: 0 0 2.5vw;
+				}
+				@media screen and (max-width:428px) {
+					font-size: 11.7vw;
+					line-height: 11.7vw;
+					margin: 0 0 7vw;
+				}
+				font-family: @gilroyb;
+				font-size: 50px;
+				line-height: 50px;
+				text-align: center;
+				color: #fff;
+				margin: 0 0 41px;
+			}
+
+			a {
+				@media screen and (max-width:1679px) {
+					width: 14.7vw;
+				}
+				@media screen and (max-width:428px) {
+					width: 53vw;
+				}
+				background: @cta-background-color;
+				color: @cta-font-color;
+				width: 246px;
+			}
+		}
+	}
+}

@@ -1,17 +1,20 @@
 var Client = require('ftp');
 var fs = require('fs');
+const util = require('util');
+const writeFileContent = util.promisify(fs.writeFile);
+const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/0506/images/v0/`;
+// var category = `promos/one-offs/2022/0506/images/v0/`;
 // var category = `homepage/2022/0401/v0/`;
-// var category = `landing-pages/newborn/2022/0408/v0/`;
+var category = `landing-pages/20-year/2022/0507/v1/greece/`;
 var url = `${baseURL}${category}`
-var readFilePath = `Site/`;
-var writeFilePath = `promos/default/dev/images/`;
+var readFilePath = `handoff/20-year/greece/`;
+var writeFilePath = `landing-page/20-year/dev/images/greece/`;
 
 // console.log(url)
-console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);
+// console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);
 
 var c = new Client();
 c.on('ready', function() {
@@ -89,9 +92,26 @@ c.on('ready', function() {
           }
 
           //make the html file
-          fs.writeFile(`${writeFilePath}/${name}.html`, html, (err) => {
-            if (err) throw err;
+          writeFileContent(`${writeFilePath}/${name}.html`, html).then((data) => {
             console.log(`File written successfully. ${name}.html`);
+          }).catch((err) => {
+            console.log(err);
+            if (err.code == `ENOENT`) {
+              console.log(`let's mkdir`);
+              mkDir(writeFilePath, true).then((data) => {
+                  console.log('Directory created successfully!');
+                  console.log(writeFilePath);
+
+                  writeFileContent(`${writeFilePath}/${name}.html`, html).then((data) => {
+                    console.log(`File written successfully. ${name}.html`);
+                  }).catch((err) => {
+                    console.log(err);
+                  })
+                })
+                .catch((err) => {
+                  console.log(err);
+                })
+            }
           });
           c.end();
         });

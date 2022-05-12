@@ -14,7 +14,7 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/05 May/050622 $25 Pajamas/04 Handoff/Site`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/022422 Global Shop LP/Handoff`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 

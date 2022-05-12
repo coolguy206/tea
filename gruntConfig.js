@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'about/catalogs'
+    name: '20-year'
   },
   zone: {
     name: 'mega-menu/top-nav',
