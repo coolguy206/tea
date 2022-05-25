@@ -36,7 +36,7 @@ $(document).ready(function () {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
+          "MASTER_CONTACTS_LIST": 1,
           "20Years_Sweeps": 1
         },
         "vars": {
@@ -60,20 +60,45 @@ $(document).ready(function () {
           var sig = md5("".concat(_api.keys.secret).concat(_api.keys.api, "json").concat(pdpObj)); // console.log(sig);
 
           var baseUrl = "https://api.sailthru.com/user";
-          var data = new FormData();
-          data.append("api_key", _api.keys.api);
-          data.append("format", "json");
-          data.append("json", pdpObj);
-          data.append("sig", sig);
-          var xhr = new XMLHttpRequest();
-          xhr.withCredentials = true;
-          xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === 4) {
-              console.log(this.responseText);
-            }
-          });
-          xhr.open("POST", baseUrl);
-          xhr.send(data);
+          /*
+                    var payload = {
+                      api_key: keys.api,
+                      sig: sig,
+                      format: 'json',
+                      json: pdpObj
+                    }
+                      fetch(baseUrl, {
+                      method: `POST`,
+                      headers: {
+                        'Access-Control-Allow-Origin': 'https://www.teacollection.com',
+                        'credentials': 'include'
+                      },
+                      body: JSON.stringify(payload),
+                      }).then((data) => {
+                      console.log(`submitted`);
+                      console.log(data);
+                    }).catch((err) => {
+                      console.log(`something went wrong`);
+                      console.log(err);
+                    })
+          */
+
+          /*
+                    var data = new FormData();
+                    data.append("api_key", keys.api);
+                    data.append("format", "json");
+                    data.append("json", pdpObj);
+                    data.append("sig", sig);
+                      var xhr = new XMLHttpRequest();
+                    xhr.withCredentials = true;
+                      xhr.addEventListener("readystatechange", function() {
+                      if (this.readyState === 4) {
+                        console.log(this.responseText);
+                      }
+                    });
+                      xhr.open("POST", baseUrl);
+                      xhr.send(data);
+          */
         }
       });
     } else {

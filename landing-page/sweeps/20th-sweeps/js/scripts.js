@@ -41,7 +41,7 @@ $(document).ready(function() {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
+          "MASTER_CONTACTS_LIST": 1,
           "20Years_Sweeps": 1
         },
         "vars": {
@@ -69,25 +69,50 @@ $(document).ready(function() {
           // console.log(sig);
 
           var baseUrl = `https://api.sailthru.com/user`;
+          /*
+                    var payload = {
+                      api_key: keys.api,
+                      sig: sig,
+                      format: 'json',
+                      json: pdpObj
+                    }
 
-          var data = new FormData();
-          data.append("api_key", keys.api);
-          data.append("format", "json");
-          data.append("json", pdpObj);
-          data.append("sig", sig);
+                    fetch(baseUrl, {
+                      method: `POST`,
+                      headers: {
+                        'Access-Control-Allow-Origin': 'https://www.teacollection.com',
+                        'credentials': 'include'
+                      },
+                      body: JSON.stringify(payload),
 
-          var xhr = new XMLHttpRequest();
-          xhr.withCredentials = true;
+                    }).then((data) => {
+                      console.log(`submitted`);
+                      console.log(data);
+                    }).catch((err) => {
+                      console.log(`something went wrong`);
+                      console.log(err);
+                    })
+          */
+          /*
+                    var data = new FormData();
+                    data.append("api_key", keys.api);
+                    data.append("format", "json");
+                    data.append("json", pdpObj);
+                    data.append("sig", sig);
 
-          xhr.addEventListener("readystatechange", function() {
-            if (this.readyState === 4) {
-              console.log(this.responseText);
-            }
-          });
+                    var xhr = new XMLHttpRequest();
+                    xhr.withCredentials = true;
 
-          xhr.open("POST", baseUrl);
+                    xhr.addEventListener("readystatechange", function() {
+                      if (this.readyState === 4) {
+                        console.log(this.responseText);
+                      }
+                    });
 
-          xhr.send(data);
+                    xhr.open("POST", baseUrl);
+
+                    xhr.send(data);
+          */
         }
       });
 
