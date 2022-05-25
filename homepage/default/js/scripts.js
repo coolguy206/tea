@@ -12,9 +12,9 @@ import {
 } from './tracking.js';
 
 $(document).ready(function() {
-  alt('.hp .promo1 img', 'take an extra 25% off sale items');
+  alt('.hp .promo1 img', 'dive into this 50% off all swim ');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
-  alt('.hp .c1 img', 'kids on the beach');
+  alt('.hp .c1 img', 'kids sitting by a blue door');
   alt('.hp .c2 .first img', 'family at the pool');
   alt('.hp .c2 .second img', 'kids in special occasion clothes');
   alt('.hp .c2 .third img', 'baby girl in holiday outfit');
