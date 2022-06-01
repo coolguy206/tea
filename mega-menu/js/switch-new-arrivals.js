@@ -15,7 +15,7 @@ export const switchNewArrivals = (href) => {
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -27,8 +27,8 @@ export const switchNewArrivals = (href) => {
       clearance = urls.promo1.boy;
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      $('.promo1-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -40,7 +40,7 @@ export const switchNewArrivals = (href) => {
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -52,7 +52,7 @@ export const switchNewArrivals = (href) => {
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -65,7 +65,7 @@ export const switchNewArrivals = (href) => {
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -77,8 +77,8 @@ export const switchNewArrivals = (href) => {
       clearance = urls.promo1.toddler.boy;
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      $('.promo2-url').hide();
+      $('.promo1-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;

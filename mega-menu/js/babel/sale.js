@@ -9,12 +9,22 @@ var _inview = require("./inview.js");
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
   (0, _inview.inview)('.mega-img-container');
-  $('.dept-girl, .dept-boy').hover(function () {
+  $('.dept-girl').hover(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo2-url').show();
 
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
     $('.promo2-url').hide(); // $('.clearance-url').hide();
+  }, function () {
+    // $('.promo2-url').hide();
+    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+  });
+  $('.dept-boy').hover(function () {
+    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo2-url').show();
+    // $('.promo1-url, .promo2-url, .clearance-url').show();
+
+    $('.promo1-url').hide(); // $('.promo2-url').hide();
+    // $('.clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();

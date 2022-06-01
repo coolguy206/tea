@@ -6,7 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `promos/memorial-day/2022/0524/v1/`;
+var category = `promos/one-offs/2022/0602/v0/`;
 // var category = `homepage/2022/0519/v0/`;
 // var category = `landing-pages/20th-sweeps/2022/0310/v0/`;
 var url = `${baseURL}${category}`
