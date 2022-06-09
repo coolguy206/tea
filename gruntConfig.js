@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/20th-sweeps/'
+    name: 'help/contact-us/'
   },
   zone: {
     name: 'mega-menu/top-nav',

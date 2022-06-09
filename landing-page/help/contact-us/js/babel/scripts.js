@@ -108,7 +108,7 @@ $(document).ready(function () {
         $('.holiday-closure').hide();
       } else if (day >= 3) {
         var month = month + 1;
-        message = "<h3>Father's Day ".concat(month, "/19/").concat(year, " </h3> <h3>Independence Day ").concat(month, "/4/").concat(year, " </h3>");
+        message = "<h3>Father's Day 6/19/".concat(year, " </h3> <h3>Independence Day ").concat(month, "/4/").concat(year, " </h3>");
         $('.holiday-closure p').html(message);
         $('.holiday-closure').show();
       }
