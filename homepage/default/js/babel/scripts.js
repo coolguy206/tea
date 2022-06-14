@@ -10,7 +10,7 @@ var _tracking = require("./tracking.js");
 // const inview = require('./inview.js');
 // const addTracking = require('./tracking.js');
 $(document).ready(function () {
-  (0, _alt.alt)('.hp .promo1 img', 'dresses, leggings, & rompers $10 & Up');
+  (0, _alt.alt)('.hp .promo1 img', 'tees, shorts, & skirts $10 & Up');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');

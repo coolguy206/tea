@@ -8,7 +8,7 @@ var urls = {
   promo1: {
     Promo: "/select-styles",
     girl: "/girls-clothing/favorites/limited-time-sale",
-    boy: "/boys-clothes",
+    boy: "/boys-clothing/favorites/limited-time-sale",
     baby: {
       girl: "/baby-girl-clothes/favorites/limited-time-sale",
       boy: "/baby-boy-clothes/favorites/limited-time-sale",
@@ -16,7 +16,7 @@ var urls = {
     },
     toddler: {
       girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
-      boy: "/toddler-boys-clothes"
+      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
     },
     sale: {
       girl: "/sale/girls-clothing/",
