@@ -13,25 +13,25 @@ $(document).ready(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo2-url').show();
 
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-
-    $('.promo2-url').hide(); // $('.clearance-url').hide();
+    // $('.promo2-url').hide();
+    // $('.clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-boy').hover(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo2-url').show();
-    // $('.promo1-url, .promo2-url, .clearance-url').show();
 
-    $('.promo1-url').hide(); // $('.promo2-url').hide();
+    $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+    // $('.promo2-url').hide();
     // $('.clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-sale').hover(function () {
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo1-url').show();
-
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url').show();
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
     // $('.promo2-url').hide();
     // $('.clearance-url').hide();
@@ -40,11 +40,11 @@ $(document).ready(function () {
     $('.promo1-url, .promo2-url, .clearance-url').hide();
   });
   $('.dept-baby').hover(function () {
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo1-url').show();
-
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url').show();
     $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-
-    $('.promo2-url').hide(); // $('.clearance-url').hide();
+    // $('.promo2-url').hide();
+    // $('.clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
     $('.promo1-url, .promo2-url, .clearance-url').hide();

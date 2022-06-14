@@ -25,7 +25,7 @@ var urls = {
       baby: {
         girl: "/sale/baby-girl-clothes/",
         boy: "/sale/baby-boy-clothes/",
-        newborn: "/sale/newborn-clothing/"
+        newborn: "/sale/newborn-clothing/view-all"
       },
       toddler: {
         girl: "/sale/toddler-girls-clothing/",
