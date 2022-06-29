@@ -7,10 +7,6 @@ const {
   refreshAccessToken
 } = require('./dropbox-access-token.js');
 
-var writeFilePath = `handoff/hp/0623/`;
-writeFilePath = resolve(writeFilePath);
-// console.log(writeFilePath);
-
 refreshAccessToken((data) => {
 
   var access_token = data;
@@ -19,9 +15,14 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/062322 Fall 1 HP/handoff`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/062322 Dress LP/Handoff`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
+
+  var writeFilePath = `handoff/dresses/`;
+  writeFilePath = resolve(writeFilePath);
+  // console.log(writeFilePath);
+
 
   //GET USER
   /*
