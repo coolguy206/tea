@@ -14,7 +14,7 @@
     "dropbox": "^10.26.1",
     "extract-zip": "^2.0.1",
     "ftp": "^0.3.10",
-    "grunt": "^1.4.1",
+    "grunt": "^1.5.3",
     "grunt-contrib-concat": "^1.0.1",
     "grunt-contrib-cssmin": "^4.0.0",
     "grunt-contrib-less": "^2.0.0",
