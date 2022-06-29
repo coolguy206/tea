@@ -6,7 +6,7 @@
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
     "@types/node-fetch": "^2.6.1",
-    "async": "^2.6.3",
+    "async": "^2.6.4",
     "axios": "^0.26.1",
     "cloudinary": "^1.28.1",
     "cssunminifier": "0.0.2",
