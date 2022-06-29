@@ -6,10 +6,18 @@ var _inview = require("./inview.js");
 
 var _tracking = require("./tracking.js");
 
+var _glide = _interopRequireDefault(require("@glidejs/glide"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
 // const addAlt = require('./alt.js');
 // const inview = require('./inview.js');
 // const addTracking = require('./tracking.js');
 $(document).ready(function () {
+  new _glide["default"]('.glide', {
+    type: 'carousel' //autoplay: 2000,
+
+  }).mount();
   (0, _alt.alt)('.hp .promo1 img', '3 day splash sale all swim $20 & under');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');

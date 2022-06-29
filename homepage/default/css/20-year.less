@@ -1,8 +1,10 @@
 @import "var.less";
-@year-20-font-color: #47363D;
-@year-20-cta-color: #FDF5F2;
-@year-20-cta-background: @year-20-font-color;
-@year-20-background: @year-20-cta-color;
+@year-20-color1: #47363D;
+@year-20-color2: #FDF5F2;
+@year-20-font-color: @year-20-color2;
+@year-20-cta-color: @year-20-color1;
+@year-20-cta-background: @year-20-color2;
+@year-20-background: @year-20-color1;
 
 .year-20 {
   @media screen and (max-width:428px) {}
@@ -72,7 +74,7 @@
       @media screen and (max-width: 1679px) {
         font-size: 2.6vw;
         line-height: 2.5vw;
-        letter-spacing: 0.2vw;
+        letter-spacing: 0.15vw;
       }
       @media screen and (max-width:428px) {
         font-size: 10vw;
@@ -84,8 +86,7 @@
       font-size: 43px;
       line-height: 39px;
       letter-spacing: 4px;
-      text-transform: capitalize;
-
+      // text-transform: capitalize;
       span {
         @media screen and (max-width: 1679px) {
           font-size: 1vw;

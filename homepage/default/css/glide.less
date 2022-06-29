@@ -1,0 +1,70 @@
+@import (less) "../../../node_modules/@glidejs/glide/dist/css/glide.core.min.css";
+@graphics-cta-color: #2967B0;
+
+.glide {
+  // top: 50%;
+  // transform: translate(0,-57%);
+  position: unset;
+
+  .glide__track {
+    // height: 7vw;
+    .glide__slides {
+      @media screen and (max-width: 428px) {
+        position: relative;
+      }
+      position: absolute;
+
+      .glide__slide {
+        // padding: 4.2vw;
+        text-align: center;
+
+        img {
+          @media screen and (max-width: 1679px) {
+            width: 37vw;
+          }
+          @media screen and (max-width: 428px) {
+            width: 76vw;
+          }
+          width: 620px;
+        }
+
+        span {
+          @media screen and (max-width: 1679px) {
+            margin: 7% 0 0;
+          }
+          color: @graphics-cta-color;
+          margin: 5% 0 0;
+
+          &.mobile {
+            @media screen and (max-width: 428px) {
+              display: inline-block;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  div[data-glide-el="controls"] {
+    span {
+      @media screen and (max-width: 1679px) {
+        width: 2vw;
+      }
+      @media screen and (max-width: 428px) {
+        width: 5vw;
+      }
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+      width: 33px;
+      // width: 1.3vw;
+      &.lt-arrow {
+        left: 4%;
+      }
+
+      &.rt-arrow {
+        right: 4%;
+      }
+    }
+  }
+}

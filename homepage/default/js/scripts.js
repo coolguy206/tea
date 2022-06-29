@@ -10,8 +10,15 @@ import {
 import {
   tracking
 } from './tracking.js';
+import Glide from '@glidejs/glide'
 
 $(document).ready(function() {
+
+  new Glide('.glide', {
+    type: 'carousel',
+    //autoplay: 2000,
+  }).mount()
+
   alt('.hp .promo1 img', '3 day splash sale all swim $20 & under');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'girl in pineapple graphic outfit');

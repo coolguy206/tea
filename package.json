@@ -4,6 +4,7 @@
   "description": "",
   "main": "Gruntfile.js",
   "dependencies": {
+    "@glidejs/glide": "^3.5.2",
     "@types/node-fetch": "^2.6.1",
     "async": "^2.6.3",
     "axios": "^0.26.1",
