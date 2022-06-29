@@ -12,7 +12,7 @@ import {
 } from './tracking.js';
 
 $(document).ready(function() {
-  alt('.hp .promo1 img', 'tees, shorts, & skirts $10 & Up');
+  alt('.hp .promo1 img', '3 day splash sale all swim $20 & under');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'girl in pineapple graphic outfit');
   alt('.hp .c2 .first img', 'family at the pool');

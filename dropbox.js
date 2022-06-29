@@ -14,7 +14,7 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/06 June/061422 $10 Tees Shorts & Skirts/04 Handoff/Site`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/06 June/061822 Swim Flash Sale/04 Handoff/Site`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
