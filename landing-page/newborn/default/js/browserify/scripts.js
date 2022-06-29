@@ -100,7 +100,7 @@ $(document).ready(function () {
   (0, _alt.alt)('.content-wrap .c3 .cell4 img', 'baby in flower graphic dress');
   (0, _alt.alt)('.content-wrap .c4 > a img', 'graphic baby outfits');
   (0, _alt.alt)('.content-wrap .c4 .the-content img', 'flower');
-  (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5');
+  (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8, .content-wrap .c9');
 });
 
 

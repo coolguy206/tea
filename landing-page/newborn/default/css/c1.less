@@ -17,16 +17,18 @@
   .the-content {
     @media screen and (max-width:428px) {
       width: 100%;
-      top: 5%;
+      top: 1%;
       left: 0;
       //position: relative;
       padding: 0 0 9%;
+      transform: translate(0);
     }
     position: absolute;
-    top: 12%;
-    left: 39%;
-    width: 22%;
+    top: 50%;
+    left: 50%;
+    width: 50%;
     text-align: center;
+    transform: translate(-50%,-50%);
 
     img {
       margin: 0 0 10%;
@@ -34,19 +36,30 @@
     }
 
     h2 {
+      @media screen and (max-width:1679px) {
+        font-size: 2.6vw;
+        line-height: 3.3vw;
+      }
       @media screen and (max-width:428px) {
         // display: none;
         margin: 0 0 6%;
-        color: @c1-color-m;
+        color: #fff;
+        font-size: 9vw;
+        line-height: 11vw;
       }
       color: @c1-color;
+      font-family: @gilroyb;
+      font-size: 44px;
+      line-height: 53px;
     }
 
     p {
       @media screen and (max-width:428px) {
         margin: 4% auto 0;
         // width: 66%;
-        color: @c1-color-m;
+        color: #fff;
+        font-size: 4.7vw;
+        line-height: 6vw;
       }
       margin: 6% auto 0;
       // width: 79%;

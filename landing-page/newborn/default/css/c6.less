@@ -1,0 +1,103 @@
+@import 'var.less';
+@c6-color: #6D8995;
+@c6-color-m: #FAF3E1;
+@c6-cta-color: #fff;
+@c6-cta-background-color: #F7AB98;
+
+.c6 {
+  @media screen and (max-width:428px) {
+    //background: @background;
+  }
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+  .the-content {
+    @media screen and (max-width:428px) {
+      width: 100%;
+      top: 19%;
+      left: 0;
+      //position: relative;
+      padding: 0 0 9%;
+      transform: translate(0);
+    }
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    text-align: center;
+    transform: translate(-50%, -24%);
+
+    img {
+      margin: 0 0 10%;
+      width: 43%;
+    }
+
+    h2 {
+      @media screen and (max-width:428px) {
+        // display: none;
+        margin: 0 0 6%;
+        // color: @c6-color-m;
+      }
+      color: @c6-color;
+      font-family: @gilroyb;
+    }
+
+    p {
+      @media screen and (max-width:428px) {
+        margin: 4% auto 0;
+        // width: 66%;
+        // color: @c6-color-m;
+      }
+      margin: 6% auto 0;
+      // width: 79%;
+      color: @c6-color;
+    }
+
+    div {
+      @media screen and (max-width: 1679px) {
+        margin: 5% 0 0;
+      }
+      @media screen and (max-width:428px) {
+        margin: 7% 0 0;
+        text-align: center;
+      }
+      margin: 7% 0 0;
+
+      span {
+        @media screen and (max-width: 1679px) {
+          width: 18vw;
+        }
+        @media screen and (max-width:428px) {
+          width: 69vw;
+        }
+        color: @c6-cta-color;
+        background: @c6-cta-background-color;
+        width: 296px;
+      }
+
+      a {
+        @media screen and (max-width: 1679px) {
+          width: 11.4vw;
+        }
+        @media screen and (max-width:428px) {
+          width: 44.7vw;
+        }
+        color: @c6-cta-color;
+        background: @c6-cta-background-color;
+        position: relative;
+        width: 191px;
+
+        &.cta1 {}
+
+        &.cta2 {}
+
+        &.cta3 {}
+
+        &.cta4 {}
+      }
+    }
+  }
+}
