@@ -15,11 +15,11 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/062322 Newborn LP/handoff`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/06 June/062422 Up To 75% Off Sale/04 Handoff/Site`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/newborn/`;
+  var writeFilePath = ``;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

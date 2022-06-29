@@ -18,7 +18,7 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', '3 day splash sale all swim $20 & under');
+  (0, _alt.alt)('.hp .promo1 img', 'the summer clearance event take up to 75% off sale items');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');
