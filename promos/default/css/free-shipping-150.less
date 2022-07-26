@@ -1,4 +1,4 @@
-@freeShippingBg: #F9F2E0;
+@freeShippingBg: #FFF4F0;
 @freeShippingColor1: #47363D;
 
 .free-shipping-150 {
@@ -15,17 +15,27 @@
   z-index: 9999;
   display: none;
 
+  a {
+    text-decoration:none;
+  }
+
   h2 {
     @media screen and (max-width: 428px) {
-      font-size: 10px;
-      line-height: 12px;
+      font-size: 14px;
+      line-height: 17px;
     }
-    font-size: 12px;
-    line-height: 15px;
+    font-size: 18px;
+    line-height: 22px;
     text-align: center;
     letter-spacing: 0.2em;
     text-transform: uppercase;
     color: @freeShippingColor1;
+
+    span {
+      @media screen and (max-width: 810px){
+        display:block;
+      }
+    }
   }
 }
 //zendesk
