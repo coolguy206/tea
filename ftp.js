@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2022/0720/v0/`;
-var category = `homepage/2022/0720/v0/`;
+var category = `promos/one-offs/2022/0725/v0/`;
+// var category = `homepage/2022/0720/v0/`;
 // var category = `landing-pages/hello-kitty/2022/0720/v1/`;
 
 //EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //NEEDS ENDING SLASH
-var readFilePath = `handoff/hp/handoff/`;
-var writeFilePath = `homepage/default/dev/images/`;
+var readFilePath = `Site/`;
+var writeFilePath = `promos/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
@@ -39,6 +39,7 @@ var c = new Client();
 c.on('ready', function() {
 
   //UPLOAD SINGLE FILE TO DIRECTORY
+  /*
   c.put(`${readFilePath}${fileName}${ext}`, `${url}${fileName}${ext}`, (err) => {
     if (err) throw err;
     console.log(`successfully uploaded file: ${fileName}${ext}`);
@@ -65,6 +66,7 @@ c.on('ready', function() {
     });
     c.end();
   });
+  */
 
   //UPLOAD FILES TO DIRECTORY
   /*
@@ -108,7 +110,7 @@ c.on('ready', function() {
   */
 
   //MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
-  /*
+
     c.mkdir(url, true, (err) => {
       if (err) throw err;
       console.log(`successfully made dir: ${url}`);
@@ -171,7 +173,7 @@ c.on('ready', function() {
       })
       // c.end();
     });
-  */
+  
 
   //GET LIST OF FILES THEN COMPILE HTML FILES
   /*
