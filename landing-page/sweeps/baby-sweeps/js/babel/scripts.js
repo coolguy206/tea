@@ -1,12 +1,11 @@
 "use strict";
 
-// import {
-//   keys
-// } from './api.js';
-// console.log(keys);
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
+  (0, _inview.inview)('.content-wrap');
   var url = window.location.href;
-  var ac = "baby giveaway";
+  var ac = "Baby_Giveaway_2022";
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -18,6 +17,7 @@ $(document).ready(function () {
     var fname = $('.this-form input[name="fname"]').val();
     var lname = $('.this-form input[name="lname"]').val();
     var email = $('.this-form input[name="email"]').val();
+    var phone = $('.this-form input[name="phone"]').val();
     var checkbox = $('.this-form input[type=checkbox]').prop('checked');
     var valid = emailIsValid(email); // console.log(`
     //   fname: ${fname}
@@ -33,13 +33,15 @@ $(document).ready(function () {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
-          "Baby_giveaway_sept_2021": 1
+          "MASTER_CONTACTS_LIST": 1,
+          // "20Years_Sweeps": 1
+          "Sweet_Everything_Giveaway2022": 1
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,
           "first_name": fname,
-          "last_name": lname
+          "last_name": lname,
+          "phone": phone
         },
         "source": ac,
         "onSuccess": function onSuccess() {
@@ -50,32 +52,7 @@ $(document).ready(function () {
             'theUrl': url,
             'sailthruEmail': email,
             'sailthruSource': ac
-          }); // var pdpObj = `{"id": "${email}", "optout_email": "none"}`;
-          // // console.log(pdpObj);
-          //
-          // var sig = md5(`${keys.secret}${keys.api}json${pdpObj}`);
-          // // console.log(sig);
-          //
-          // var baseUrl = `https://api.sailthru.com/user`;
-          //
-          // var data = new FormData();
-          // data.append("api_key", keys.api);
-          // data.append("format", "json");
-          // data.append("json", pdpObj);
-          // data.append("sig", sig);
-          //
-          // var xhr = new XMLHttpRequest();
-          // xhr.withCredentials = true;
-          //
-          // xhr.addEventListener("readystatechange", function() {
-          //   if (this.readyState === 4) {
-          //     console.log(this.responseText);
-          //   }
-          // });
-          //
-          // xhr.open("POST", baseUrl);
-          //
-          // xhr.send(data);
+          });
         }
       });
     } else {
