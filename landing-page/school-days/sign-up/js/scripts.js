@@ -9,30 +9,6 @@ $(document).ready(function() {
 
   });
 
-  //add the states
-  $.getJSON("https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json", function(result) {
-    // console.log(result);
-    $.each(result, function(i, val) {
-      // console.log(val.name);
-      switch (val.name) {
-        case 'American Samoa':
-        case 'Federated States Of Micronesia':
-        case 'Guam':
-        case 'Marshall Islands':
-        case 'Northern Mariana Islands':
-        case 'Palau':
-        case 'Puerto Rico':
-        case 'Virgin Islands':
-          console.log('nope');
-          break;
-        default:
-          var option = `<option value="${val.abbreviation}">${val.name}</option>`;
-          $('.states').append(option);
-      }
-
-    });
-  });
-
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
@@ -89,9 +65,7 @@ $(document).ready(function() {
           },
           "source": ac,
           "onSuccess": function() {
-            console.log(`successfully sent to sailthru!
-              email: ${email},
-              source: ${ac}`)
+            console.log(`successfully sent to sailthru! email: ${email} source: ${ac}`);
             // $('.signup .the-form').hide();
             // $('.signup .thanks').show();
 
@@ -104,7 +78,7 @@ $(document).ready(function() {
               'theUrl': url,
               'sailthruEmail': email,
               'sailthruSource': ac
-            })
+            });
 
           }
         });
@@ -132,9 +106,7 @@ $(document).ready(function() {
           },
           "source": ac,
           "onSuccess": function() {
-            console.log(`successfully sent to sailthru!
-              email: ${email},
-              source: ${ac}`)
+            console.log(`successfully sent to sailthru! email: ${email} source: ${ac}`);
             // $('.signup .the-form').hide();
             // $('.signup .thanks').show();
 
@@ -159,7 +131,7 @@ $(document).ready(function() {
     } else {
       $('.forms .error').show();
     }
-  });
 
+  });
 
 });

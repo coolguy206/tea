@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/0725/v0/`;
+// var category = `promos/one-offs/2022/0725/v0/`;
 // var category = `homepage/2022/0720/v0/`;
-// var category = `landing-pages/hello-kitty/2022/0720/v1/`;
+var category = `landing-pages/school-days-sign-up/2022/0726/v0/`;
 
 //EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //NEEDS ENDING SLASH
 var readFilePath = `Site/`;
-var writeFilePath = `promos/default/dev/images/`;
+var writeFilePath = `landing-page/school-days/sign-up/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
@@ -111,69 +111,69 @@ c.on('ready', function() {
 
   //MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
 
-    c.mkdir(url, true, (err) => {
+  c.mkdir(url, true, (err) => {
+    if (err) throw err;
+    console.log(`successfully made dir: ${url}`);
+    //read the files on local machine
+    fs.readdir(`${readFilePath}`, (err, files) => {
       if (err) throw err;
-      console.log(`successfully made dir: ${url}`);
-      //read the files on local machine
-      fs.readdir(`${readFilePath}`, (err, files) => {
-        if (err) throw err;
-        // console.log("\nCurrent directory filenames:");
-        // console.log(files);
-        files.map((file, i) => {
-          // console.log(`${readFilePath}${file}`);
-          // console.log(`${url}${file}`)
-          // console.log(file);
+      // console.log("\nCurrent directory filenames:");
+      // console.log(files);
+      files.map((file, i) => {
+        // console.log(`${readFilePath}${file}`);
+        // console.log(`${url}${file}`)
+        // console.log(file);
 
-          //upload the file
-          c.put(`${readFilePath}${file}`, `${url}${file}`, (err) => {
-            if (err) throw err;
-            console.log(`successfully uploaded file: ${file}`);
+        //upload the file
+        c.put(`${readFilePath}${file}`, `${url}${file}`, (err) => {
+          if (err) throw err;
+          console.log(`successfully uploaded file: ${file}`);
 
-            var name = file.split('.')[0];
-            var html = ``;
-            if (name.indexOf(`-`) !== -1) {
-              // console.log(name);
-              if (name.indexOf(`d`) !== -1) {
-                html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-              } else if (name.indexOf(`m`) !== -1) {
-                html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
-              } else {
-                html = `<img data-src="/mas_assets${url}${file}">`;
-              }
+          var name = file.split('.')[0];
+          var html = ``;
+          if (name.indexOf(`-`) !== -1) {
+            // console.log(name);
+            if (name.indexOf(`d`) !== -1) {
+              html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+            } else if (name.indexOf(`m`) !== -1) {
+              html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
             } else {
               html = `<img data-src="/mas_assets${url}${file}">`;
             }
+          } else {
+            html = `<img data-src="/mas_assets${url}${file}">`;
+          }
 
-            //make the html file
-            writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
-              console.log(`File written successfully. ${name}.html`);
-            }).catch((err) => {
-              console.log(err);
-              if (err.code == `ENOENT`) {
-                console.log(`let's mkdir`);
-                mkDir(writeFilePath, true).then((data) => {
-                    console.log('Directory created successfully!');
-                    console.log(writeFilePath);
+          //make the html file
+          writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
+            console.log(`File written successfully. ${name}.html`);
+          }).catch((err) => {
+            console.log(err);
+            if (err.code == `ENOENT`) {
+              console.log(`let's mkdir`);
+              mkDir(writeFilePath, true).then((data) => {
+                  console.log('Directory created successfully!');
+                  console.log(writeFilePath);
 
-                    writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
-                      console.log(`File written successfully. ${name}.html`);
-                    }).catch((err) => {
-                      console.log(err);
-                    })
-                  })
-                  .catch((err) => {
+                  writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
+                    console.log(`File written successfully. ${name}.html`);
+                  }).catch((err) => {
                     console.log(err);
                   })
-              }
-            });
-            c.end();
+                })
+                .catch((err) => {
+                  console.log(err);
+                })
+            }
           });
-
+          c.end();
         });
-      })
-      // c.end();
-    });
-  
+
+      });
+    })
+    // c.end();
+  });
+
 
   //GET LIST OF FILES THEN COMPILE HTML FILES
   /*

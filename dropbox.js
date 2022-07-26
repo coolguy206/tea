@@ -15,8 +15,8 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/07 July/072522 Back To School/04 Handoff/Site/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/072122 Fall 2 HP/handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/07 July/072522 Back To School/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/101722 School Days/03 Handoff/Site/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 

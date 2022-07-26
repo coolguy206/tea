@@ -8,29 +8,6 @@ $(document).ready(function () {
     var id = $(this).attr('href');
     $('.forms div').hide();
     $(id).show();
-  }); //add the states
-
-  $.getJSON("https://gist.githubusercontent.com/mshafrir/2646763/raw/8b0dbb93521f5d6889502305335104218454c2bf/states_titlecase.json", function (result) {
-    // console.log(result);
-    $.each(result, function (i, val) {
-      // console.log(val.name);
-      switch (val.name) {
-        case 'American Samoa':
-        case 'Federated States Of Micronesia':
-        case 'Guam':
-        case 'Marshall Islands':
-        case 'Northern Mariana Islands':
-        case 'Palau':
-        case 'Puerto Rico':
-        case 'Virgin Islands':
-          console.log('nope');
-          break;
-
-        default:
-          var option = "<option value=\"".concat(val.abbreviation, "\">").concat(val.name, "</option>");
-          $('.states').append(option);
-      }
-    });
   });
 
   function emailIsValid(email) {
@@ -84,7 +61,7 @@ $(document).ready(function () {
           },
           "source": ac,
           "onSuccess": function onSuccess() {
-            console.log("successfully sent to sailthru!\n              email: ".concat(email, ",\n              source: ").concat(ac)); // $('.signup .the-form').hide();
+            console.log("successfully sent to sailthru! email: ".concat(email, " source: ").concat(ac)); // $('.signup .the-form').hide();
             // $('.signup .thanks').show();
 
             $('.forms .error, .forms .join-today').hide();
@@ -120,7 +97,7 @@ $(document).ready(function () {
           },
           "source": ac,
           "onSuccess": function onSuccess() {
-            console.log("successfully sent to sailthru!\n              email: ".concat(email, ",\n              source: ").concat(ac)); // $('.signup .the-form').hide();
+            console.log("successfully sent to sailthru! email: ".concat(email, " source: ").concat(ac)); // $('.signup .the-form').hide();
             // $('.signup .thanks').show();
 
             $('.forms .error, .forms .refer-org').hide();

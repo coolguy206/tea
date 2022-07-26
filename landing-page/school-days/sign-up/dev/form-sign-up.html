@@ -1,0 +1,61 @@
+<div class="join-today" id="join-today">
+  <form>
+    <fieldset>
+      <legend>
+        sign up now
+      </legend>
+
+      <span class="error">required</span>
+      <label>Official Name of School or Non-Profit Organization*</label>
+      <input type="text" name="org-name" required />
+
+      <span class="error">required</span>
+      <label>Organization Address*</label>
+      <input type="text" name="org-address" required />
+
+      <span class="error">required</span>
+      <label>City*</label>
+      <input type="text" name="org-city" required />
+
+      <span class="error">required</span>
+      <label>State*</label>
+      <select class="states">
+        <option>please choose</option>
+        include "option.html"
+      </select>
+
+      <span class="error">required</span>
+      <label>Please provide your organization EIN number*</label>
+      <input type="text" name="org-ein" required />
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Primary Contact
+      </legend>
+
+      <span class="error">required</span>
+      <label>First name*</label>
+      <input type="text" name="user-fname" required />
+
+      <span class="error">required</span>
+      <label>Last name*</label>
+      <input type="text" name="user-lname" required />
+
+      <label>Phone number</label>
+      <input type="text" name="user-phone" />
+
+      <span class="error">required</span>
+      <label>Email address*</label>
+      <input type="email" name="user-email" required />
+
+      <label>What is your affiliation with the organization?</label>
+      <input type="text" name="user-affiliation" />
+
+      <label>How did you hear about this program?</label>
+      <input type="text" name="user-how" />
+    </fieldset>
+
+    <button data-list="school days sign up">submit</button>
+  </form>
+</div>

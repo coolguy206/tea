@@ -1,0 +1,53 @@
+<div class="refer-org" id="refer-org">
+  <form>
+    <fieldset>
+      <legend>
+        submit a referral
+      </legend>
+
+      <span class="error">required</span>
+      <label>Official Name of School or Non-Profit Organization*</label>
+      <input type="text" name="org-name" required />
+
+      <span class="error">required</span>
+      <label>City*</label>
+      <input type="text" name="org-city" required />
+
+      <span class="error">required</span>
+      <label>State*</label>
+      <select class="states">
+        <option>please choose</option>
+        include "option.html"
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>
+        Primary Contact
+      </legend>
+
+      <span class="error">required</span>
+      <label>First name*</label>
+      <input type="text" name="user-fname" required />
+
+      <span class="error">required</span>
+      <label>Last name*</label>
+      <input type="text" name="user-lname" required />
+
+      <label>Phone number</label>
+      <input type="text" name="user-phone" />
+
+      <span class="error">required</span>
+      <label>Email address*</label>
+      <input type="email" name="user-email" required />
+
+      <label>Your first & last name</label>
+      <input type="text" name="user-refer-name" />
+
+      <label>What is your affiliation with the organization?</label>
+      <input type="text" name="user-affiliation" />
+    </fieldset>
+
+    <button data-list="school days referral">submit</button>
+  </form>
+</div>
