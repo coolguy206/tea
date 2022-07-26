@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/baby-sweeps/'
+    name: 'hello-kitty/category-header/'
   },
   zone: {
     name: 'mega-menu/sub-nav',

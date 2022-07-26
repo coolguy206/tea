@@ -76,6 +76,7 @@ var _api = require("./api.js");
 var _inview = require("./inview.js");
 
 // console.log(keys);
+window.location.href = "https://www.teacollection.com/teaxsanrio";
 $(document).ready(function () {
   (0, _inview.inview)('.content-wrap');
   var url = window.location.href;

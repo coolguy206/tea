@@ -5,13 +5,30 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
+//NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2022/0713/v0/`;
+// var category = `promos/one-offs/2022/0712/v0/`;
 // var category = `homepage/2022/0623/v0/`;
-var category = `landing-pages/baby-sweeps/2022/0718/v1/`;
+var category = `landing-pages/hello-kitty/2022/0720/v1/`;
+
+//EXCEPT THIS ONE
 var url = `${baseURL}${category}`
-var readFilePath = `handoff/babysweeps/Site`;
-var writeFilePath = `landing-page/sweeps/baby-sweeps/dev/images`;
+
+//NEEDS ENDING SLASH
+var readFilePath = `handoff/hello-kitty/072122/`;
+var writeFilePath = `landing-page/hello-kitty/category-header/dev/images/`;
+
+// fs.readdir(`${readFilePath}`, (err, files) => {
+//   // console.log(files);
+//   files.map((file, i) => {
+//     // console.log(file);
+//     fs.readFile(`${readFilePath}/${file}`, function(err, data) {
+//       console.log(data);
+//     });
+//   });
+//
+// });
+
 
 // console.log(url)
 // console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);
@@ -48,7 +65,7 @@ c.on('ready', function() {
           }
 
           //make the html file
-          fs.writeFile(`${writeFilePath}/${name}.html`, html, (err) => {
+          fs.writeFile(`${writeFilePath}${name}.html`, html, (err) => {
             if (err) throw err;
             console.log(`File written successfully. ${name}.html`);
           });
@@ -67,9 +84,11 @@ c.on('ready', function() {
     fs.readdir(`${readFilePath}`, (err, files) => {
       if (err) throw err;
       // console.log("\nCurrent directory filenames:");
-      files.forEach(file => {
+      // console.log(files);
+      files.map((file, i) => {
         // console.log(`${readFilePath}${file}`);
         // console.log(`${url}${file}`)
+        // console.log(file);
 
         //upload the file
         c.put(`${readFilePath}${file}`, `${url}${file}`, (err) => {
@@ -92,7 +111,7 @@ c.on('ready', function() {
           }
 
           //make the html file
-          writeFileContent(`${writeFilePath}/${name}.html`, html).then((data) => {
+          writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
             console.log(`File written successfully. ${name}.html`);
           }).catch((err) => {
             console.log(err);
@@ -102,7 +121,7 @@ c.on('ready', function() {
                   console.log('Directory created successfully!');
                   console.log(writeFilePath);
 
-                  writeFileContent(`${writeFilePath}/${name}.html`, html).then((data) => {
+                  writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
                     console.log(`File written successfully. ${name}.html`);
                   }).catch((err) => {
                     console.log(err);
@@ -145,7 +164,7 @@ c.on('ready', function() {
         }
 
         //make the html file
-        writeFileContent(`${writeFilePath}/${name}.html`, html).then((data) => {
+        writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
           console.log(`File written successfully. ${name}.html`);
         }).catch((err) => {
           console.log(err);
@@ -193,6 +212,7 @@ c.on('ready', function() {
   */
 });
 //CONNECT FTP
+
 c.connect({
   host: process.env.FTP_HOST,
   user: process.env.FTP_USER,

@@ -1,48 +1,27 @@
-@c2-color: #E28D8A;
-@c2-cta-color: #437282;
+@import 'var.less';
 
 .c2 {
-  @media screen and (max-width:428px) {
-    padding: 8% 0 18%;
-  }
-  padding: 4% 5%;
-  flex-basis: 100%;
+  @media screen and (max-width:428px) {}
+  background: @color1;
   text-align: center;
+  padding: 5% 0;
 
   h2 {
-    @media screen and (max-width: 1679px) {
-      font-size: 1.7vw;
-    }
-    @media screen and (max-width:428px) {
-      font-size: 5vw;
-    }
-    text-transform: uppercase;
-    font-family: gilroy-bold;
-    font-size: 30px;
-    line-height: 30px;
-    text-align: center;
-    letter-spacing: 0.25em;
-    color: @c2-color;
+    @media screen and (max-width: 1679px) {}
+    @media screen and (max-width:428px) {}
   }
 
-  div {
-    display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+  p {}
 
-    a {
-      @media screen and (max-width:428px) {
-        flex-basis: 50%;
-      }
-      flex-basis: 25%;
-      color: @c2-cta-color;
-
-      span {
-        @media screen and (max-width:428px) {
-          margin: 7% 0 0;
-        }
-        margin: 3% 0 0;
-      }
+  a {
+    @media screen and (max-width: 1679px) {
+      width: 22.6vw;
     }
+    @media screen and (max-width:428px) {
+      width: 65.6vw;
+    }
+    background: @color3;
+    color: @color1;
+    width: 380px;
   }
 }

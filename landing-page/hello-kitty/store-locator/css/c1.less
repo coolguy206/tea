@@ -1,0 +1,30 @@
+@import 'var.less';
+
+.c1 {
+  @media screen and (max-width:428px) {
+    padding: 10% 0;
+  }
+  text-align: center;
+  background: @color1;
+  padding: 4% 0;
+
+  h2 {
+    text-transform: capitalize;
+    color: #47363d;
+    letter-spacing: 0;
+  }
+
+  select {
+    @media screen and (max-width:428px) {
+      width: 80%;
+    }
+    width: 370px;
+    height: 55px;
+    background: #EDEBEC;
+    border: none;
+    box-sizing: border-box;
+    font-family: @gilroyb;
+    text-align: center;
+    text-transform: capitalize;
+  }
+}
