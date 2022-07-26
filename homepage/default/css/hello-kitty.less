@@ -1,0 +1,176 @@
+@import "var.less"; // @import "promo1.less";
+@hello-kitty-font-color: #fff;
+@hello-kitty-h2-color: #fff;
+@hello-kitty-p-color: #fff;
+@hello-kitty-cta-color: #fff;
+@hello-kitty-cta-background: #D05F9A;
+
+.hello-kitty {
+  position: relative;
+  width: 100%;
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 428px) {
+        width: 84%;
+        // left: 0;
+        top: 3%;
+        transform: translate(-50%, 0);
+      }
+      position: absolute;
+      top: 50%;
+      width: 26%;
+      left: 50%;
+      text-align: center;
+      transform: translate(-50%, -50%);
+
+      a,
+      a,
+      h2,
+      p {
+        // color: @hello-kitty-font-color;
+        font-family: @souv;
+        margin: 0 auto;
+        font-family: @gilroyr;
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 4.6vw;
+          line-height: 4.3vw;
+        }
+        @media screen and (max-width: 428px) {
+          // font-size: 9vw;
+          // margin: 0;
+          line-height: 9vw;
+          font-size: 35px;
+          // color: #fff;
+          margin: 12% 0 0;
+          // display: none;
+        }
+        margin: 5% 0 0;
+        text-transform: none;
+        color: @hello-kitty-h2-color;
+        line-height: 72px;
+        font-family: @gilroyb;
+        font-size: 60px;
+        letter-spacing: 1px;
+
+        span {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.23vw;
+            letter-spacing: 0.4vw;
+          }
+          @media screen and (max-width:428px) {
+            font-size: 18px;
+            letter-spacing: 1.4vw;
+          }
+          font-family: @gilroyb;
+          font-size: 20px;
+          display: block;
+          letter-spacing: 6px;
+          margin: 0 0 1%;
+        }
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.4vw;
+          line-height: 2vw;
+        }
+        @media screen and (max-width: 428px) {
+          color: @hello-kitty-h2-color;
+          font-size: 4vw;
+          line-height: 6vw;
+          margin: 7% auto 0;
+          // display: none;
+        }
+        margin: 11% auto 0;
+        color: @hello-kitty-p-color;
+        text-transform: none;
+        // letter-spacing: 1px;
+        width: 100%;
+        font-size: 24px;
+        line-height: 34px;
+      }
+
+      div {
+        @media screen and (max-width: 428px) {
+          margin: 8% 0 0;
+          //margin: 3% 0 0;
+        }
+        margin: 12% 0 0;
+        text-align: center;
+
+        div {
+          @media screen and (max-width: 428px) {
+            margin: 0 0 5%;
+          }
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 14.5vw;
+          }
+          @media screen and (max-width: 428px) {
+            width: 57%;
+            // margin: 93% 0 0;
+            // color: #3862AA;
+          }
+          font-family: @gilroyb;
+          color: @hello-kitty-cta-color;
+          background: @hello-kitty-cta-background;
+          width: 245px;
+
+          span {
+            @media screen and (max-width: 428px) {
+              display: none;
+            }
+          }
+
+          &.cta1 {
+            @media screen and (max-width: 428px) {
+              // left: -2%;
+            }
+            // left: -4%;
+          }
+
+          &.cta2 {
+            @media screen and (max-width: 428px) {
+              // left: 2%;
+            }
+            // left: 3%;
+          }
+
+          &.cta3 {
+            @media screen and (max-width: 428px) {
+              // left: -2%;
+            }
+            // left: -4%;
+          }
+
+          &.cta4 {
+            @media screen and (max-width: 428px) {
+              // left: 2%;
+            }
+            // left: 0;
+          }
+
+          &.cta5 {
+            @media screen and (max-width: 428px) {
+              // left: -2%;
+            }
+            // left: -3%;
+          }
+
+          &.cta6 {
+            @media screen and (max-width: 428px) {
+              // left: 2%;
+            }
+            // left: 3%;
+          }
+        }
+      }
+    }
+  }
+}
