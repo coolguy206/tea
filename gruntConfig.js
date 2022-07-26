@@ -34,10 +34,10 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'newborn/default/'
+    name: 'sweeps/20th-sweeps/'
   },
   zone: {
-    name: 'mega-menu/top-nav',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
