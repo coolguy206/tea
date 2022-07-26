@@ -19,7 +19,7 @@ $(document).ready(function () {
 
   }).mount();
   (0, _alt.alt)('.hp .promo1 img', '3 days only! $12 Summer tees & shorts');
-  (0, _alt.alt)('.hp .promo2 img', '20% off new arrivals & an extra 30% off sale items');
+  (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');
   (0, _alt.alt)('.hp .c2 .second img', 'kids in special occasion clothes');

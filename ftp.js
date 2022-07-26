@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2022/0712/v0/`;
+var category = `promos/one-offs/2022/0720/v0/`;
 // var category = `homepage/2022/0623/v0/`;
-var category = `landing-pages/hello-kitty/2022/0720/v1/`;
+// var category = `landing-pages/hello-kitty/2022/0720/v1/`;
 
 //EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //NEEDS ENDING SLASH
-var readFilePath = `handoff/hello-kitty/072122/`;
-var writeFilePath = `landing-page/hello-kitty/category-header/dev/images/`;
+var readFilePath = `Site/`;
+var writeFilePath = `promos/default/dev/images/`;
 
 // fs.readdir(`${readFilePath}`, (err, files) => {
 //   // console.log(files);
