@@ -15,11 +15,12 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/06 June/062422 Up To 75% Off Sale/04 Handoff/Site`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/07 July/070722 Summer PJ Event/04 Handoff/Site`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/072122 Sanrio/04 Handoff/Site/Sign Up Page/070422`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = ``;
+  var writeFilePath = `handoff/hello-kitty/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

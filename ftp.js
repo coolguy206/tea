@@ -6,12 +6,12 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/0624/v0/`;
+// var category = `promos/one-offs/2022/0707/v0/`;
 // var category = `homepage/2022/0623/v0/`;
-// var category = `landing-pages/20th-sweeps/2022/0310/v0/`;
+var category = `landing-pages/hello-kitty/2022/0705/v3/`;
 var url = `${baseURL}${category}`
-var readFilePath = `Site/`;
-var writeFilePath = `promos/default/dev/images`;
+var readFilePath = `handoff/hello-kitty/070422`;
+var writeFilePath = `landing-page/hello-kitty/default/dev/images`;
 
 // console.log(url)
 // console.log(process.env.FTP_HOST, process.env.FTP_USER, process.env.FTP_PASSWORD);

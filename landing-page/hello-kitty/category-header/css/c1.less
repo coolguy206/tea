@@ -1,0 +1,88 @@
+@import 'var.less';
+@c1-color: #6D8995;
+@c1-color-m: #FAF3E1;
+@c1-cta-color: #fff;
+@c1-cta-background-color: #F7AB98;
+
+.c1 {
+  @media screen and (max-width:428px) {
+    //background: @background;
+  }
+  position: relative;
+
+  a {
+    text-decoration: none;
+  }
+
+  .the-content {
+    @media screen and (max-width:428px) {
+      width: 100%;
+      top: 5%;
+      left: 0;
+      //position: relative;
+      padding: 0 0 9%;
+    }
+    position: absolute;
+    top: 12%;
+    left: 39%;
+    width: 22%;
+    text-align: center;
+
+    img {
+      margin: 0 0 10%;
+      width: 43%;
+    }
+
+    h2 {
+      @media screen and (max-width:428px) {
+        // display: none;
+        margin: 0 0 6%;
+        color: @c1-color-m;
+      }
+      color: @c1-color;
+    }
+
+    p {
+      @media screen and (max-width:428px) {
+        margin: 4% auto 0;
+        // width: 66%;
+        color: @c1-color-m;
+      }
+      margin: 6% auto 0;
+      // width: 79%;
+      color: @c1-color;
+    }
+
+    div {
+      @media screen and (max-width: 1679px) {
+        margin: 5% 0 0;
+      }
+      @media screen and (max-width:428px) {
+        margin: 7% 0 0;
+        text-align: center;
+      }
+      margin: 7% 0 0;
+
+      a {
+        @media screen and (max-width: 1679px) {
+          width: 11.4vw;
+        }
+        @media screen and (max-width:428px) {
+          width: 44.7vw;
+        }
+        color: @c1-cta-color;
+        background: @c1-cta-background-color;
+        position: relative;
+        width: 191px;
+
+        &.cta1 {}
+
+        &.cta2 {}
+
+        &.cta3 {}
+
+        &.cta4 {}
+      }
+    }
+  }
+}

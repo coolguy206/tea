@@ -1,0 +1,63 @@
+@import 'var.less';
+@c4-color: #6D8995;
+@c4-cta-color: #fff;
+@c4-cta-background-color: #F7AB98;
+
+.c4 {
+  position: relative;
+
+  .the-content {
+    @media screen and (max-width: 428px) {
+      width: 100%;
+      top: 6%;
+      left: 0;
+      transform: translate(0);
+    }
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 33%;
+    text-align: center;
+    transform: translate(0, -50%);
+
+    img {
+      margin: 0 0 10%;
+      width: 32.8%;
+    }
+
+    h2 {
+      @media screen and (max-width: 428px) {
+        width: 100%;
+        margin: 0 auto;
+        //color: @ctaColor;
+      }
+      width: 90%;
+      margin: 0 auto;
+      color: #fff;
+      color: @c4-color;
+    }
+
+    p {
+      @media screen and (max-width: 428px) {
+        // margin: 120% auto 0;
+        // width: 67%;
+      }
+      margin: 6% auto 0;
+      // width: 79%;
+      color: @c4-color;
+    }
+
+    div {
+      @media screen and (max-width: 428px) {
+        margin: 6% 0 0;
+        text-align: center;
+      }
+      margin: 11% 0 0;
+
+      span {
+        color: @c4-cta-color;
+        background: @c4-cta-background-color;
+      }
+    }
+  }
+}

@@ -1,0 +1,41 @@
+@import 'vars.less';
+
+.content-wrap {
+	@media screen and (max-width:428px) {
+		// padding: 11% 0;
+		// flex-wrap: wrap;
+	}
+	// display: flex;
+	// flex-wrap: wrap;
+	background: @color1;
+	padding: 4% 0;
+
+	.the-content {
+		text-align: center;
+
+		img {
+			@media screen and (max-width:1679px) {
+				width: 45.5vw;
+			}
+			@media screen and (max-width:428px) {
+				width: 46.2vw;
+				display: inline;
+			}
+			width: 763px;
+		}
+
+		p {
+			@media screen and (max-width:1679px) {
+				font-size: 1.7vw;
+				line-height: 2.1vw;
+			}
+			@media screen and (max-width:428px) {
+				font-size: 6.5vw;
+				line-height: 8vw;
+			}
+			color: @color2;
+			font-size: 28px;
+			line-height: 34px;
+		}
+	}
+}
