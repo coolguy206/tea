@@ -43,7 +43,8 @@ $(document).ready(function () {
           "id": email,
           "email": email,
           "lists": {
-            "school days sign up": 1 // "test list": 1
+            "school days sign up": 1,
+            "MASTER_CONTACTS_LIST": 1 // "test list": 1
 
           },
           "vars": {
@@ -81,7 +82,8 @@ $(document).ready(function () {
           "id": email,
           "email": email,
           "lists": {
-            "school days referral": 1 // "test list": 1
+            "school days referral": 1,
+            "MASTER_CONTACTS_LIST": 1 // "test list": 1
 
           },
           "vars": {
