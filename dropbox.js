@@ -15,12 +15,12 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/07 July/072522 Back To School/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/101722 School Days/03 Handoff/Site/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/08 August/080522 Category Price Points/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/080422 Colugo Sweeps/04 Handoff/Site/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = ``;
+  var writeFilePath = `colugo-sweeps/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

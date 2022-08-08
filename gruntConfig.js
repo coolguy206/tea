@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'school-days/sign-up/'
+    name: 'sweeps/colugo-sweeps/'
   },
   zone: {
     name: 'mega-menu/sub-nav',

@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2022/0725/v0/`;
+// var category = `promos/one-offs/2022/0805/v0/`;
 // var category = `homepage/2022/0720/v0/`;
-var category = `landing-pages/school-days-sign-up/2022/0726/v0/`;
+var category = `landing-pages/colugo-sweeps/2022/0804/v0/`;
 
 //EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //NEEDS ENDING SLASH
-var readFilePath = `Site/`;
-var writeFilePath = `landing-page/school-days/sign-up/dev/images/`;
+var readFilePath = `handoff/colugo-sweeps/Site/`;
+var writeFilePath = `landing-page/sweeps/colugo-sweeps/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 

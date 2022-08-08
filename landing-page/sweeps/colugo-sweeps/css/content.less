@@ -1,0 +1,132 @@
+@import 'vars.less';
+
+.content-wrap {
+	@media screen and (max-width:428px) {
+		// padding: 11% 0;
+		flex-wrap: wrap;
+	}
+	display: flex;
+	// flex-wrap: wrap;
+	background: @color1;
+	// padding: 4% 0;
+	div {
+		text-align: center;
+
+		&.first,
+		&.second,
+		&.third {
+			@media screen and (max-width: 428px) {
+				flex-basis: 100% !important;
+			}
+			flex-basis: 34%;
+			position: relative;
+		}
+
+		&.first {
+			@media screen and (max-width: 428px) {}
+			// flex-basis: 39%;
+			order: 2;
+
+			.the-content {
+				@media screen and (max-width: 428px) {
+					position: relative;
+					width: 100%;
+					top: 0;
+					left: 0;
+					transform: translate(0);
+					padding: 12vw 0;
+				}
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%,-50%);
+				width: 100%;
+
+				img {
+					@media screen and (max-width: 1679px) {
+						width: 23.3vw;
+					}
+					@media screen and (max-width: 428px) {
+						width: 68.3vw;
+					}
+				}
+
+				h1 {
+					@media screen and (max-width: 1679px) {
+						line-height: 4vw;
+						font-size: 3.3vw;
+					}
+					@media screen and (max-width: 428px) {
+						line-height: 13vw;
+						font-size: 11vw;
+					}
+					// letter-spacing: 0.2rem;
+					font-family: @souv;
+					color: @color2;
+					font-size: 56px;
+					line-height: 67px;
+
+					span {
+						font-family: @gilroyb;
+						letter-spacing: 0.35em;
+					}
+				}
+
+				p {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.1vw;
+						line-height: 1.4vw;
+					}
+					@media screen and (max-width: 428px) {
+						font-size: 4vw;
+						line-height: 5vw;
+					}
+					font-family: @gilroyr;
+					font-size: 18px;
+					line-height: 24px;
+					color: @color4;
+					margin: 0 0 5%;
+					letter-spacing: 0.02em;
+
+					span {
+						color: @color2;
+						text-transform: uppercase;
+						font-family: @gilroyb;
+						letter-spacing: 0.35em;
+
+						a {
+							text-decoration: none;
+							color: @color2;
+							text-transform: uppercase;
+							font-family: @gilroyb;
+							letter-spacing: 0.35em;
+						}
+					}
+				}
+
+				a {
+					@media screen and (max-width: 1679px) {}
+					@media screen and (max-width: 428px) {}
+
+					&.enter-to-win {
+						color: #fff;
+						background: @color3;
+						margin: 0 0 5%;
+					}
+				}
+			}
+		}
+
+		&.second {
+			@media screen and (max-width: 428px) {
+				display: none;
+			}
+			order: 1;
+		}
+
+		&.third {
+			@media screen and (max-width:428px) {}
+			order: 3;
+		}
+	}
+}
