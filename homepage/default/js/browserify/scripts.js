@@ -101,7 +101,7 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', 'summer cyber sale $100s of styles $10 & Up');
+  (0, _alt.alt)('.hp .promo1 img', 'the stock up event get up to 25% off sitewide');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');

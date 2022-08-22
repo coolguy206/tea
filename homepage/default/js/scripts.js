@@ -19,7 +19,7 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', 'summer cyber sale $100s of styles $10 & Up');
+  alt('.hp .promo1 img', 'the stock up event get up to 25% off sitewide');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'girl in pineapple graphic outfit');
   alt('.hp .c2 .first img', 'family at the pool');
