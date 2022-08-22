@@ -4,23 +4,69 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.keys = void 0;
-var keys = {
-  api: "8379ab7deccf4e4aa16a01990e0f4fa2",
-  secret: "a05b94dd5722b409a097f77b14795d05"
-};
-exports.keys = keys;
+exports.inview = void 0;
+
+var inview = function inview(elem) {
+  // console.log(`from inview.js`);
+  $(elem).on('inview', function (event, isInView) {
+    if (isInView) {
+      // element is now visible in the viewport
+      // console.log('in view');
+      var imgs = $(this).find('img'); // let width = $(window).width();
+      // console.log(imgs);
+      // console.log(width);
+
+      $.each(imgs, function (i, val) {
+        var src = $(val).attr('data-src'); // console.log(src);
+
+        if (src) {
+          $(val).attr('src', src);
+        }
+
+        $(val).removeAttr('data-src');
+      });
+      $(this).css('visibility', 'visible');
+    }
+  });
+}; // module.exports = function(elem) {
+//   // console.log(`from inview.js`);
+//   $(elem).on('inview', function(event, isInView) {
+//     if (isInView) {
+//       // element is now visible in the viewport
+//       // console.log('in view');
+//       let imgs = $(this).find('img');
+//       // let width = $(window).width();
+//       // console.log(imgs);
+//       // console.log(width);
+//       $.each(imgs, function(i, val) {
+//         let src = $(val).attr('data-src');
+//         // console.log(src);
+//         if (src) {
+//           $(val).attr('src', src);
+//         }
+//         $(val).removeAttr('data-src');
+//       });
+//     }
+//   });
+// };
+
+
+exports.inview = inview;
 
 
 },{}],2:[function(require,module,exports){
 "use strict";
 
-var _api = require("./api.js");
+var _inview = require("./inview.js");
 
-// console.log(keys);
 $(document).ready(function () {
+  (0, _inview.inview)('.content-wrap'); //force phone to only be numbers
+
+  $("#this-form form input[name='the-phone']").on('input', function (e) {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
   var url = window.location.href;
-  var ac = "Sweepstakes_Aug2020";
+  var ac = "BTS Sweeps 2022";
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -32,6 +78,7 @@ $(document).ready(function () {
     var fname = $('.this-form input[name="fname"]').val();
     var lname = $('.this-form input[name="lname"]').val();
     var email = $('.this-form input[name="email"]').val();
+    var phone = $('.this-form input[name="phone"]').val();
     var checkbox = $('.this-form input[type=checkbox]').prop('checked');
     var valid = emailIsValid(email); // console.log(`
     //   fname: ${fname}
@@ -47,13 +94,14 @@ $(document).ready(function () {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
-          "Sweepstakes-Aug2020": 1
+          "MASTER_CONTACTS_LIST": 1,
+          "BTS_Sweeps_2022": 1
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,
           "first_name": fname,
-          "last_name": lname
+          "last_name": lname,
+          "phone": phone
         },
         "source": ac,
         "onSuccess": function onSuccess() {
@@ -65,25 +113,6 @@ $(document).ready(function () {
             'sailthruEmail': email,
             'sailthruSource': ac
           });
-          var pdpObj = "{\"id\": \"".concat(email, "\", \"optout_email\": \"none\"}"); // console.log(pdpObj);
-
-          var sig = md5("".concat(_api.keys.secret).concat(_api.keys.api, "json").concat(pdpObj)); // console.log(sig);
-
-          var baseUrl = "https://api.sailthru.com/user";
-          var data = new FormData();
-          data.append("api_key", _api.keys.api);
-          data.append("format", "json");
-          data.append("json", pdpObj);
-          data.append("sig", sig);
-          var xhr = new XMLHttpRequest();
-          xhr.withCredentials = true;
-          xhr.addEventListener("readystatechange", function () {
-            if (this.readyState === 4) {
-              console.log(this.responseText);
-            }
-          });
-          xhr.open("POST", baseUrl);
-          xhr.send(data);
         }
       });
     } else {
@@ -97,4 +126,4 @@ $(document).ready(function () {
 });
 
 
-},{"./api.js":1}]},{},[2]);
+},{"./inview.js":1}]},{},[2]);

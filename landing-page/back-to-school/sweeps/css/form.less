@@ -1,7 +1,7 @@
 @import 'vars.less';
 
 .this-form {
-	@media screen and (max-width: 414px) {
+	@media screen and (max-width: 428px) {
 		padding: 17.5% 0;
 	}
 	background: #F8F8F8;
@@ -16,10 +16,10 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 1.8vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 5vw;
 			}
-			font-family: gilroy-regular;
+			font-family: @gilroyb;
 			font-size: 1.25rem;
 		}
 
@@ -30,7 +30,7 @@
 	}
 
 	form {
-		@media screen and (max-width: 414px) {
+		@media screen and (max-width: 428px) {
 			width: 100%;
 			left: 0;
 			transform: translateX(0);
@@ -45,7 +45,7 @@
 		padding: 0 0 0 1.9%;
 
 		div {
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				flex-basis: 100%;
 				margin: 0 0 9%;
 			}
@@ -53,7 +53,7 @@
 			margin: 0 0 3.9%;
 
 			&.button-box {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 12% 0 0;
 				}
 				flex-basis: 100%;
@@ -67,25 +67,25 @@
 				font-size: 1.1vw;
 				line-height: 1.1vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 3.9vw;
 				line-height: 4.1vw;
 			}
-			font-family: gilroy-regular;
+			font-family: @gilroyr;
 			font-size: 16px;
 			line-height: 21px;
 			flex-basis: 100%;
 			letter-spacing: 0.04em;
 			// color: #47363D;
 			&.by-entering {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 7% 0 0;
 				}
 				margin: 3% 0 0;
 			}
 
 			&.required {
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					margin: 13% 0 1%;
 				}
 				margin: 3% 0 1%;
@@ -96,10 +96,10 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 0.7vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 3vw;
 			}
-			font-family: gilroy-regular;
+			font-family: @gilroyr;
 			font-size: 12px;
 			line-height: 28px;
 			letter-spacing: 1px;
@@ -108,7 +108,7 @@
 		}
 
 		input {
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				width: 100%;
 			}
 			background: #EDEBEC;
@@ -116,7 +116,7 @@
 			padding: 4.5% 6%;
 			display: block;
 			width: 91%;
-			font-family: gilroy-regular;
+			font-family: @gilroyr;
 			border-radius: 0;
 			letter-spacing: 0.04em;
 
@@ -138,20 +138,20 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 1.2vw;
 			}
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				font-size: 4.7vw;
 				margin: 0;
-				padding: 3% 9% !important;
+				// padding: 3% 9% !important;
 			}
 			font-family: gilroy-bold !important;
 			font-size: 20px;
 			line-height: 24px;
 			letter-spacing: 0.2em !important;
-			color: #F7FF8F !important;
-			background: #3C6591!important;
+			color: #fff !important;
+			background: @color3 !important;
 			text-transform: uppercase !important;
-			padding: 2% 5% 1.5% 5% !important;
 			border: none !important;
+			padding: 0 !important;
 		}
 	}
 }

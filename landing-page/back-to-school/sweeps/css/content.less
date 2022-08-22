@@ -3,6 +3,7 @@
 .content-wrap {
 	display: flex;
 	flex-wrap: wrap;
+	visibility: hidden;
 
 	div {
 		text-align: center;
@@ -10,50 +11,57 @@
 		&.first,
 		&.second,
 		&.third {
-			@media screen and (max-width: 414px) {
+			@media screen and (max-width: 428px) {
 				flex-basis: 100% !important;
 			}
 		}
 
 		&.first {
-			@media screen and (max-width: 414px) {
-				order: 2;
+			@media screen and (max-width: 810px) {
+				flex-basis: 35%;
 			}
-			flex-basis: 32%;
-			background: #B9DCC6;
+			@media screen and (max-width: 428px) {
+				display: none;
+			}
+			flex-basis: 33%;
+			text-align: right;
 		}
 
 		&.second {
-			@media screen and (max-width: 414px) {
-				order: 1;
+			@media screen and (max-width: 810px) {
+				flex-basis: 30%;
+			}
+			@media screen and (max-width: 428px) {
 				padding: 3%;
 			}
-			flex-basis: 36%;
-			padding: 1% 0 0;
+			flex-basis: 34%;
+			background: @color3;
 
 			h1 {
+				margin: 7% 0 0;
+
 				span {
 					@media screen and (max-width:1679px) {
-						font-size: 3.6vw;
-						line-height: 4.5vw;
+						font-size: 3.5vw;
+						line-height: 4vw;
 					}
-					@media screen and (max-width: 414px) {
-						font-size: 12vw;
-						line-height: 15vw;
+					@media screen and (max-width: 428px) {
+						font-size: 11vw;
+						line-height: 13vw;
 					}
 					font-style: normal;
-					font-size: 60px;
-					line-height: 72px;
+					font-size: 56px;
+					line-height: 67px;
 					display: block;
 					// letter-spacing: 0.2em;
 					&.back {
-						font-family: souvenirstd-light;
-						color: @yellow;
+						font-family: @souv;
+						color: @color1;
 					}
 
 					&.giveaway {
-						font-family: gilroy-bold;
-						color: @green;
+						font-family: @gilroyb;
+						color: @color2;
 						letter-spacing: 0.2em;
 					}
 				}
@@ -62,18 +70,18 @@
 			p {
 				@media screen and (max-width: 1679px) {
 					font-size: 1.1vw;
-					line-height: 1.1vw;
+					line-height: 1.4vw;
 				}
-				@media screen and (max-width: 414px) {
-					font-size: 3.9vw;
-					line-height: 3.1vw;
+				@media screen and (max-width: 428px) {
+					font-size: 3.5vw;
+					line-height: 6vw;
 					margin: 0 0 5%;
 				}
-				font-family: gilroy-regular;
+				font-family: @gilroyr;
 				font-size: 18px;
-				line-height: 21px;
+				line-height: 24px;
 				color: #FFFFFF;
-				margin: 0 0 3.5%;
+				margin: 0 0 4%;
 				letter-spacing: 0.04em;
 
 				span {
@@ -81,27 +89,27 @@
 						font-size: 1.1vw;
 						// line-height: 1.1vw;
 					}
-					@media screen and (max-width: 414px) {
+					@media screen and (max-width: 428px) {
 						font-size: 3.9vw;
 					}
-					color: @yellow;
-					font-family: gilroy-bold;
+					color: @color1;
+					font-family: @gilroyb;
 					font-size: 18px;
 					line-height: 21px;
 					text-decoration: none;
 				}
 
 				&.prep {
-					@media screen and (max-width: 414px) {
+					@media screen and (max-width: 428px) {
 						margin: 11% 0 0;
 					}
-					margin: 7% 0 0;
+					margin: 4% 0 0;
 				}
 
 				&.official {
 					a {
-						color: @green;
-						font-family: gilroy-bold;
+						color: @color2;
+						font-family: @gilroyb;
 						letter-spacing: 0.2em;
 						text-decoration: none;
 					}
@@ -113,49 +121,48 @@
 					font-size: 1.1vw;
 					// line-height: 1.1vw;
 				}
-				@media screen and (max-width: 414px) {
+				@media screen and (max-width: 428px) {
 					font-size: 3.9vw;
 				}
-				color: @yellow;
-				font-family: gilroy-bold;
+				color: @color1;
+				font-family: @gilroyb;
 				font-size: 18px;
-				line-height: 21px;
+				line-height: 24px;
 				text-decoration: none;
 				letter-spacing: 0.2em;
+				text-transform: uppercase;
 
 				&.enter-to-win {
 					@media screen and (max-width: 1679px) {
 						font-size: 1.2vw;
 					}
-					@media screen and (max-width: 414px) {
+					@media screen and (max-width: 428px) {
 						font-size: 4.7vw;
 						margin: 11% 0;
-						padding: 3% 9%;
+						// padding: 3% 9%;
 					}
 					font-family: gilroy-bold;
 					font-size: 20px;
 					line-height: 24px;
 					letter-spacing: 0.2em;
-					color: @blue;
-					background: @yellow;
+					color: #fff;
+					background: @color4;
 					text-transform: uppercase;
-					padding: 2% 5% 1.5%;
-					margin: 7% 0 8%;
-					display: inline-block;
+					margin: 7% 0;
 				}
 			}
 		}
 
 		&.third {
-			@media screen and (max-width: 414px) {
-				order: 3;
+			@media screen and (max-width: 810px) {
+				flex-basis: 35%;
 			}
-			flex-basis: 32%;
+			@media screen and (max-width: 428px) {}
+			flex-basis: 33%;
+			text-align: left;
 		}
 
 		&.second,
-		&.third {
-			background: @blue;
-		}
+		&.third {}
 	}
 }

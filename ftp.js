@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/0811/v2/`;
+// var category = `promos/one-offs/2022/0805/v0/`;
 // var category = `homepage/2022/0720/v0/`;
-// var category = `landing-pages/school-days-sign-up/2022/0726/v0/`;
+var category = `landing-pages/back-to-school/sweeps/2022/0822/v0/`;
 
 //EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //NEEDS ENDING SLASH
 var readFilePath = `Site/`;
-var writeFilePath = `promos/default/dev/images/`;
+var writeFilePath = `landing-page/back-to-school/sweeps/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
@@ -233,16 +233,16 @@ c.on('ready', function() {
 
   //LIST DIRECTORIES
   /*
-    c.list(url, function(err, list) {
-      if (err) throw err;
-      list.map((val, i) => {
-        // if (val.type == 'd') {
-        console.log(val);
-        // }
-      })
-      // console.dir(list);
-      c.end();
-    });
+      c.list(url, function(err, list) {
+        if (err) throw err;
+        list.map((val, i) => {
+          // if (val.type == 'd') {
+          console.log(val);
+          // }
+        })
+        // console.dir(list);
+        c.end();
+      });
   */
 });
 //CONNECT FTP

@@ -1,11 +1,19 @@
 import {
-  keys
-} from './api.js';
-// console.log(keys);
+  inview
+} from './inview.js';
+
 
 $(document).ready(function() {
+
+  inview('.content-wrap');
+
+  //force phone to only be numbers
+  $("#this-form form input[name='the-phone']").on('input', function(e) {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
+
   const url = window.location.href;
-  const ac = "Sweepstakes_Aug2020";
+  const ac = "BTS Sweeps 2022";
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
@@ -17,6 +25,7 @@ $(document).ready(function() {
     var fname = $('.this-form input[name="fname"]').val();
     var lname = $('.this-form input[name="lname"]').val();
     var email = $('.this-form input[name="email"]').val();
+    var phone = $('.this-form input[name="phone"]').val();
     var checkbox = $('.this-form input[type=checkbox]').prop('checked');
     var valid = emailIsValid(email);
     // console.log(`
@@ -34,13 +43,14 @@ $(document).ready(function() {
         "id": email,
         "email": email,
         "lists": {
-          // "MASTER_CONTACTS_LIST": 1
-          "Sweepstakes-Aug2020": 1
+          "MASTER_CONTACTS_LIST": 1,
+          "BTS_Sweeps_2022": 1
         },
         "vars": {
           "ACQUISITION_SOURCE": ac,
           "first_name": fname,
-          "last_name": lname
+          "last_name": lname,
+          "phone": phone
         },
         "source": ac,
         "onSuccess": function() {
@@ -54,32 +64,7 @@ $(document).ready(function() {
             'sailthruSource': ac
           });
 
-          var pdpObj = `{"id": "${email}", "optout_email": "none"}`;
-          // console.log(pdpObj);
 
-          var sig = md5(`${keys.secret}${keys.api}json${pdpObj}`);
-          // console.log(sig);
-
-          var baseUrl = `https://api.sailthru.com/user`;
-
-          var data = new FormData();
-          data.append("api_key", keys.api);
-          data.append("format", "json");
-          data.append("json", pdpObj);
-          data.append("sig", sig);
-
-          var xhr = new XMLHttpRequest();
-          xhr.withCredentials = true;
-
-          xhr.addEventListener("readystatechange", function() {
-            if (this.readyState === 4) {
-              console.log(this.responseText);
-            }
-          });
-
-          xhr.open("POST", baseUrl);
-
-          xhr.send(data);
         }
       });
 

@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/colugo-sweeps/'
+    name: 'back-to-school/sweeps/'
   },
   zone: {
     name: 'mega-menu/sub-nav',
