@@ -18,28 +18,28 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', 'the stock up event get up to 25% off sitewide');
+  (0, _alt.alt)('.hp .promo1 img', 'end of season sale take up to 70% off sale items');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
-  (0, _alt.alt)('.hp .c1 img', 'girl in pineapple graphic outfit');
+  (0, _alt.alt)('.hp .c1 img', 'kids in Japanese inspired clothes');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');
-  (0, _alt.alt)('.hp .c2 .second img', 'kids in special occasion clothes');
+  (0, _alt.alt)('.hp .c2 .second img', 'baby in outfit');
   (0, _alt.alt)('.hp .c2 .third img', 'baby girl in holiday outfit');
-  (0, _alt.alt)('.hp .c3 .first img', 'baby girl in monkey graphic romper');
-  (0, _alt.alt)('.hp .c3 .second img', 'baby boy in jungle graphic tee');
-  (0, _alt.alt)('.hp .c3 .second img', 'baby girl in orange slices graphic dress');
-  (0, _alt.alt)('.hp .c4 .first img', 'girl in banana graphic dress');
-  (0, _alt.alt)('.hp .c4 .second img', 'kids in animal graphic clothes');
-  (0, _alt.alt)('.hp .c4 .third img', 'girl in butterfly graphic dress');
+  (0, _alt.alt)('.hp .c3 .first img', 'baby girl in romper');
+  (0, _alt.alt)('.hp .c3 .second img', 'baby boy in outfit');
+  (0, _alt.alt)('.hp .c3 .second img', 'baby girl in dress');
+  (0, _alt.alt)('.hp .c4 .first img', 'kids in clothes');
+  (0, _alt.alt)('.hp .c4 .second img', 'girl in dress');
+  (0, _alt.alt)('.hp .c4 .third img', 'girl in outfit');
   (0, _alt.alt)('.hp .hello-kitty img', 'girl in Hello Kitty x TEA clothes');
-  (0, _alt.alt)('.hp .c5 .first img', 'girl in ice cream graphic PJs'); // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
+  (0, _alt.alt)('.hp .c5 .first img', 'kids in PJs'); // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
 
-  (0, _alt.alt)('.hp .c5 .second img', 'girl in floral graphic dress');
-  (0, _alt.alt)('.hp .c5 .third img', 'baby in floral romper');
+  (0, _alt.alt)('.hp .c5 .second img', 'girl in graphic dress');
+  (0, _alt.alt)('.hp .c5 .third img', 'baby in romper');
   (0, _alt.alt)('.hp .c5 .fourth img', 'baby in flower and rabbit pjs');
   (0, _alt.alt)('.hp .c6 .first img', 'baby in fish and jelly fish outfit');
-  (0, _alt.alt)('.hp .c6 .second img', 'girls in striped dress and top');
+  (0, _alt.alt)('.hp .c6 .second img', 'kids in Japnaese inspired clothes');
   (0, _alt.alt)('.hp .c7 .first img', 'tea rewear');
-  (0, _alt.alt)('.hp .c7 .second img', 'floral graphic');
+  (0, _alt.alt)('.hp .c7 .second img', 'kids in Japnaese inspired clothes');
   (0, _alt.alt)('.hp .c7 .third img', 'learn how #teagivesback');
   (0, _alt.alt)('.hp .c7 .fourth img', 'girl in floral graphic dress');
   (0, _alt.alt)('.hp .swim img', 'watermelon graphic swimwear');
