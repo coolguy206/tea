@@ -110,9 +110,9 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c3 .first img', 'baby girl in romper');
   (0, _alt.alt)('.hp .c3 .second img', 'baby boy in outfit');
   (0, _alt.alt)('.hp .c3 .second img', 'baby girl in dress');
-  (0, _alt.alt)('.hp .c4 .first img', 'kids in clothes');
-  (0, _alt.alt)('.hp .c4 .second img', 'girl in dress');
-  (0, _alt.alt)('.hp .c4 .third img', 'girl in outfit');
+  (0, _alt.alt)('.hp .c4 .first img', 'girl in dress');
+  (0, _alt.alt)('.hp .c4 .second img', 'girls in outfits');
+  (0, _alt.alt)('.hp .c4 .third img', 'boys in outfits');
   (0, _alt.alt)('.hp .hello-kitty img', 'girl in Hello Kitty x TEA clothes');
   (0, _alt.alt)('.hp .c5 .first img', 'kids in PJs'); // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
 
@@ -124,7 +124,7 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c7 .first img', 'tea rewear');
   (0, _alt.alt)('.hp .c7 .second img', 'kids in Japnaese inspired clothes');
   (0, _alt.alt)('.hp .c7 .third img', 'learn how #teagivesback');
-  (0, _alt.alt)('.hp .c7 .fourth img', 'girl in floral graphic dress');
+  (0, _alt.alt)('.hp .c7 .fourth img', 'girl in panda outfit');
   (0, _alt.alt)('.hp .swim img', 'watermelon graphic swimwear');
   (0, _inview.inview)('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .hello-kitty');
 
