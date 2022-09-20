@@ -19,7 +19,7 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', 'the fall forward sale 100s of styles $16 & Up');
+  alt('.hp .promo1 img', 'the sweetest sale  25% off all baby styles');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'kids in Japanese inspired clothes');
   alt('.hp .c2 .first img', 'family at the pool');

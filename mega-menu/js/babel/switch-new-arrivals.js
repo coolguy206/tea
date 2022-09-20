@@ -18,9 +18,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.girl;
       promo2 = _urls.urls.promo2.girl;
       clearance = _urls.urls.promo1.girl; // $('.promo1-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -30,9 +30,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo1 = _urls.urls.promo1.boy;
       promo2 = _urls.urls.promo2.boy;
       clearance = _urls.urls.promo1.boy; // $('.promo1-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -89,8 +89,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo2.baby.newborn;
       clearance = _urls.urls.promo1.baby.newborn; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide(); // $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
