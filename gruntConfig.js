@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/dresses-shop/default/'
+    name: 'supersecretsale/'
   },
   zone: {
     name: 'mega-menu/top-nav',
