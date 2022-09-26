@@ -6,7 +6,7 @@ import {
 } from './inview.js';
 // console.log(keys);
 
-window.location.href = "https://www.teacollection.com/teaxsanrio";
+// window.location.href = "https://www.teacollection.com/teaxsanrio";
 
 $(document).ready(function() {
 
