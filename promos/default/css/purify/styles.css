@@ -12,7 +12,7 @@ html {
 
 .promos {
   display: none;
-  background: #2C7F83;
+  background: #5B2245;
 }
 
 .promos .promos-wrap {
@@ -23,12 +23,18 @@ html {
 
 .promos .hp-promo,.promos .the-promo {
   text-align: center;
-  padding: .8% 0;
+  height: 65px;
 }
 
-@media screen and (max-width:810px) {
+@media screen and (max-width:1679px) {
   .promos .hp-promo,  .promos .the-promo {
-    padding: 2% 0;
+    height: 3.9vw;
+  }
+}
+
+@media screen and (max-width:428px) {
+  .promos .hp-promo,  .promos .the-promo {
+    height: 19vw;
   }
 }
 
@@ -92,31 +98,38 @@ html {
 }
 
 .promos .hp-promo span.details,.promos .the-promo span.details {
-  left: 90%;
+  left: 91%;
+  top: 50%;
+  transform: translate(0, -50%);
   position: absolute;
-}
-
-@media screen and (max-width:810px) {
-  .promos .hp-promo span.details,  .promos .the-promo span.details {
-    left: 86%;
-  }
 }
 
 @media screen and (max-width:428px) {
   .promos .hp-promo span.details,  .promos .the-promo span.details {
-    left: 0;
-    position: relative;
-    display: block;
-    margin: 2% 0 0;
+    left: 46%;
+    top: 70%;
+    transform: translate(-50%, 0);
   }
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #2C7F83;
+  background: #5B2245;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #fff;
+  color: #F7CCC6;
+}
+
+@media screen and (max-width:1679px) {
+  .promos .hp-promo.promo1 span.first,  .promos .the-promo.promo1 span.first {
+    font-size: 1.2vw;
+  }
+}
+
+@media screen and (max-width:428px) {
+  .promos .hp-promo.promo1 span.first,  .promos .the-promo.promo1 span.first {
+    font-size: 2.8vw;
+  }
 }
 
 .promos .hp-promo.promo2,.promos .the-promo.promo2,.promos .hp-promo.promo3,.promos .the-promo.promo3 {
