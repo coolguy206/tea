@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'hello-kitty/default/'
+    name: 'order/shipping-info/'
   },
   zone: {
     name: 'mega-menu/top-nav',
