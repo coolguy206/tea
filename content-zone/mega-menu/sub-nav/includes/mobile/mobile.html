@@ -4,81 +4,27 @@
 		<li>
 			<h2 style="color:#FF1744 !important">Black Friday <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> GIRL <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/girl"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> BOY <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/boy"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title|replace:'Boy':''}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> BABY GIRL <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/baby-girl"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title|replace:'Baby Girl':''}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> BABY BOY <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/baby-boy"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title|replace:'Baby Boy':''}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> NEWBORN <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/newborn"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
-				<h3 style="color:#FF1744 !important"><span class="fas fa-chevron-left"></span> SHOP ALL <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/shop-all"}
-				      <li><a style="color:#FF1744 !important" href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu black friday categories" >{$cat.title}</a></li>
-				    {/sub_cats}
-
-				  </ul>
-
-				</div>
-
+				<!-- include "../black-friday/mobile/girl-m.html" -->
+				<!-- include "../black-friday/mobile/boy-m.html" -->
+				<!-- include "../black-friday/mobile/baby-girl-m.html" -->
+				<!-- include "../black-friday/mobile/baby-boy-m.html" -->
+				<!-- include "../black-friday/mobile/newborn-m.html" -->
+				<!-- include "../black-friday/mobile/shop-all-m.html" -->
 			</div>
 		</li>
 		*}
+
+		<li>
+			<h2 style="color:#436FC1 !important;"><!--<a href="/new-arrivals" style="color:#436FC1 !important;">-->NEW ARRIVALS<!--</a>--> <span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				{sub_cats name="cat" category="new-arrivals"}
+				<!-- <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu new-arrivals" >{$cat.title}</a></li> -->
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu new-arrivals" >{$cat.title}</a></h3>
+				{/sub_cats}
+			</div>
+		</li>
+
 		<li>
 			<h2>Girl <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -103,7 +49,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="toddler-girls-clothes/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl favorites" >{$cat.title}</a></li>
@@ -138,7 +84,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="girls-clothing/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl favorites" >{$cat.title}</a></li>
@@ -152,7 +98,6 @@
 
 				</div>
 
-				<!-- include "tween-m.html" -->
 			</div>
 		</li>
 
@@ -180,7 +125,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="toddler-boys-clothes/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy favorites" >{$cat.title}</a></li>
@@ -215,7 +160,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="boys-clothing/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu boy favorites" >{$cat.title}</a></li>
@@ -256,7 +201,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="baby-girl-clothes/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl favorites" >{$cat.title}</a></li>
@@ -291,7 +236,7 @@
 				    <li>Shop by Collection</li>
 				      <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
-				      <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
+				      <!-- <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li> -->
 
 				    {sub_cats name="cat" category="baby-boy-clothes/favorites"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy favorites" >{$cat.title}</a></li>
@@ -342,16 +287,52 @@
 			</div>
 		</li>
 
+	
 		<li>
-			<h2><a href="/dresses">Dresses</a></h2>
-			{*
+			<h2><a href="/dresses" data="mobile top nav">Dresses</a> </span></h2>
 			<div class="sub">
-				<h3><a style="font-size: .875rem;" href="/girl-dresses" class="girl dresses" data="mobile mega menu dresses categories" >GIRL DRESSES</a></h3>
-
-				<h3><a style="font-size: .875rem;" href="/baby-girl-dresses" class="baby girl dresses" data="mobile mega menu dresses categories" >BABY GIRL DRESSES</a></h3>
-
+				{*
+					<!-- include "../dress/sub-dresses-m.html" -->
+				*}
 			</div>
-			*}
+		</li>
+
+		<li>
+			<h2>Tees<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				{sub_cats name="cat" category="tee-shop"}
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees" >{$cat.title}</a></h3>
+				{/sub_cats}
+			</div>
+		</li>
+
+		<li>
+			<h2>Pjs<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				{sub_cats name="cat" category="pajamas"}
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu pajamas" >{$cat.title}</a></h3>
+				{/sub_cats}
+			</div>
+		</li>
+
+		<li>
+			<h2>Family<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				{sub_cats name="cat" category="family-outfitting"}
+				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu family" >{$cat.title}</a></h3>
+				{/sub_cats}
+			</div>
+		</li>
+
+		<!-- <li>
+			<h2><a href="/sibling-shop">SIBLING</a></h2>
+		</li> -->
+
+		<li>
+			<h2><a href="#" class="kidizen-url">PRELOVED</a></h2>
 		</li>
 
 		<li>
@@ -562,17 +543,13 @@
 		</li>
 
 
-		<li>
-			<h2><a href="/new-arrivals" style="color:#436FC1 !important;">NEW ARRIVALS</a></h2>
-		</li>
+		
 
 		<!-- <li>
 			<h2><a href="/sale/clearance" style="color:#FF1744 !important">CLEARANCE</a></h2>
 		</li> -->
 
-		<!-- <li>
-			<h2><a href="#" class="kidizen-url">PRELOVED</a></h2>
-		</li> -->
+		
 
 		<li>
 			<h2><a href="{category_url category='about/the-tea-story'}" data="mobile mega menu about tea">About Tea</a></h2>
