@@ -1,10 +1,10 @@
 @import "var.less";
-@c6-first-font-color: #0187A2;
+@c6-first-font-color: #fff;
 @c6-first-cta-color: #fff;
-@c6-first-cta-background: #E5BF16;
+@c6-first-cta-background: #2D82A1;
 @c6-second-font-color: #fff;
 @c6-second-cta-color: #fff;
-@c6-second-cta-background: #B45A90;
+@c6-second-cta-background: #C95D5A;
 @c6-third-font-color: #fff;
 @c6-third-cta-color: #fff;
 @c6-third-cta-background: #ED5052;
@@ -63,7 +63,7 @@
         }
         margin: 0;
         position: absolute;
-        bottom: 6%;
+        bottom: 10%;
         width: 100%;
 
         h2 {
@@ -158,11 +158,16 @@
           }
           @media screen and (max-width: 375px) {}
 
+          &.the-grid {
+            grid-template-rows: repeat(1, 1fr);
+          }
+
           a {
             @media screen and (max-width:1024px) {}
             @media screen and (max-width: 428px) {}
             color: @c6-first-cta-color;
             background: @c6-first-cta-background;
+            
 
             &.cta1 {
               @media screen and (max-width:428px) {}

@@ -3,7 +3,7 @@
 @c1-h2-color: #fff;
 @c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #6A3E5C;
+@c1-cta-background: #BF9353;
 
 .c1 {
   position: relative;
@@ -106,7 +106,24 @@
 
       div {
         @media screen and (max-width: 428px) {
-          margin: 8vw 0 0;
+          margin: 2vw 0 0;
+        }
+
+        &.special-div {
+          @media screen and (max-width: 428px) {
+            margin: 9vw 0 0;
+          }
+          margin: 5% 0 0;
+
+          a {
+            @media screen and (max-width: 1679px){
+              width: 17vw;
+            }
+            @media screen and (max-width: 428px){
+              width: 65vw;
+            }
+            width: 275px;
+          }
         }
 
         a {

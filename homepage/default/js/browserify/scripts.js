@@ -101,7 +101,7 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', 'take an extra 25% off sale & Clearance');
+  (0, _alt.alt)('.hp .promo1 img', '192 new fall markdowns take an extra 25% off sale items & an extra 40% off clearance');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'kids in Japanese inspired clothes');
   (0, _alt.alt)('.hp .c2 .first img', 'family at the pool');

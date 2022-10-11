@@ -19,7 +19,7 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', 'take an extra 25% off sale & Clearance');
+  alt('.hp .promo1 img', '192 new fall markdowns take an extra 25% off sale items & an extra 40% off clearance');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'kids in Japanese inspired clothes');
   alt('.hp .c2 .first img', 'family at the pool');
