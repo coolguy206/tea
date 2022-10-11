@@ -9,14 +9,14 @@ require('dotenv').config()
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2022/0923/v1/`;
 // var category = `homepage/2022/0829/v0/`;
-var category = `landing-pages/dresses-shop/2022/1004/v1/`;
+var category = `landing-pages/hello-kitty/2022/1004/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/dresses/handoff/`;
-var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/`;
+var readFilePath = `handoff/hello-kitty/100422/`;
+var writeFilePath = `landing-page/hello-kitty/category-header/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 

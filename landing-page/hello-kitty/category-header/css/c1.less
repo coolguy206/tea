@@ -4,6 +4,7 @@
   @media screen and (max-width:428px) {
     flex-wrap: wrap;
   }
+
   position: relative;
   display: flex;
   // flex-wrap: wrap;
@@ -15,6 +16,7 @@
     @media screen and (max-width:428px) {
       flex-basis: 100%;
     }
+
     flex-basis: 34%;
   }
 
@@ -22,6 +24,7 @@
     @media screen and (max-width:428px) {
       padding: 14% 0;
     }
+
     order: 2;
     text-align: center;
     position: relative;
@@ -31,6 +34,7 @@
     @media screen and (max-width:428px) {
       display: none;
     }
+
     order: 1;
   }
 
@@ -38,8 +42,20 @@
     @media screen and (max-width:428px) {
       order: 1;
     }
+
     order: 3;
     text-align: right;
+    position:relative;
+
+    img {
+      &[src="/mas_assets/media/tea_collection/landing-pages/hello-kitty/2022/1004/v0/logo-m.png"] {
+        position: absolute;
+        top: 2%;
+        width: 76%;
+        left: 50%;
+        transform: translate(-50%, 0);
+      }
+    }
   }
 
   .the-content {
@@ -50,11 +66,12 @@
       position: relative;
       transform: translate(0);
     }
+
     position: absolute;
     top: 50%;
     left: 50%;
     width: 100%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
     text-align: center;
 
     img {
@@ -67,12 +84,15 @@
       @media screen and (max-width:428px) {
         display: none;
       }
+
       margin: 0 0 3%;
     }
 
     p {
-      @media screen and (max-width:428px) {}
-      margin: 3% 0 0;
+      @media screen and (max-width:428px) {
+        margin: 0;
+      }
+      margin: 10% 0 0;
     }
   }
 }

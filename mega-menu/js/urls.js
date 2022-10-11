@@ -1,16 +1,16 @@
 export const urls = {
   promo1: {
-    Promo: `/clothing-sale`,
-    girl: `/girls-clothes/`,
-    boy: `/boys-clothes/`,
+    promo: `/teaxsanrio`,
+    girl: `/girls-clothing/favorites/limited-time-sale`,
+    boy: `/boys-clothing/favorites/limited-time-sale`,
     baby: {
-      girl: `/baby-girl-clothes/`,
-      boy: `/baby-boy-clothes/`,
-      newborn: `/newborn-clothing/`,
+      girl: `/baby-girl-clothes`,
+      boy: `/baby-boy-clothes`,
+      newborn: `/newborn-clothing`,
     },
     toddler: {
-      girl: `/toddler-girls-clothes/`,
-      boy: `/toddler-boys-clothes/`,
+      girl: `/toddler-girls-clothes?size_girl%5B%5D=2t&size_girl%5B%5D=3t&size_girl%5B%5D=4t&store_price%5B%5D=`,
+      boy: `/toddler-boys-clothes?size_girl%5B%5D=2t&size_girl%5B%5D=3t&size_girl%5B%5D=4t&store_price%5B%5D=`,
     },
     sale: {
       girl: `/sale/girls-clothing/view-all `,
