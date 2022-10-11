@@ -126,7 +126,7 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c7 .third img', 'learn how #teagivesback');
   (0, _alt.alt)('.hp .c7 .fourth img', 'girl in panda outfit');
   (0, _alt.alt)('.hp .swim img', 'watermelon graphic swimwear');
-  (0, _inview.inview)('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .hello-kitty');
+  (0, _inview.inview)('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .hello-kitty, .hp .hello-kitty-full');
 
   for (var i = 1; i < 8; i++) {
     (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);

@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2022/0923/v1/`;
-// var category = `homepage/2022/0829/v0/`;
-var category = `landing-pages/special-occasion/2022/1004/v0/`;
+// var category = `promos/one-offs/2022/1011/v0/`;
+var category = `homepage/2022/1004/v2/`;
+// var category = `landing-pages/hello-kitty/2022/1004/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/special-occasion/`;
-var writeFilePath = `landing-page/shops/special-occasion-shop/default/dev/images/`;
+var readFilePath = `handoff/hp/handoff/`;
+var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
