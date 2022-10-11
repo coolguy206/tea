@@ -1,1 +1,2 @@
+/*** uncss> filename: landing-page/warehouse/default/css/styles.css ***/
 .mobile{display:none !important}@media screen and (max-width:428px){.mobile{display:inline-block !important}}@media screen and (max-width:428px){.desktop{display:none !important}}.warehouse-container img{max-width:100%}
