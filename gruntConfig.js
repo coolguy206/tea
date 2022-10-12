@@ -37,7 +37,7 @@ module.exports = {
     name: 'order/shipping-info/'
   },
   zone: {
-    name: 'mega-menu/top-nav',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
