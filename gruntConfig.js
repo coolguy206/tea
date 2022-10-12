@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'hello-kitty/default/'
+    name: 'about/catalogs/'
   },
   zone: {
     name: 'mega-menu/sub-nav',
