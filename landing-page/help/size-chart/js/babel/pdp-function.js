@@ -22,7 +22,7 @@ $('.size-chart').click(function (e) {
     dept = 'baby boy';
   }
 
-  if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1 || dept.indexOf('unisex') !== -1) {
+  if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1) {
     dept = 'newborn';
     cat = 'all categories';
   }
@@ -66,78 +66,82 @@ $('.size-chart').click(function (e) {
 
 
   setCats(); // console.log('after setCats: ',cat);
-  // for dev
+  //set the <a> to open in a new window with the URL parameters
+
+  $(this).attr('target', '_blank');
+  $(this).attr('href', '/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat);
+  /*
+  ! THIS CODE DOESN'T WORK AND NEEDS FIXING
+    ! FOR DEV
   // var dept = 'girl';
   // var cat = 'dresses';
-  //the size chart url
-
-  var url = '/cms/size-chart/size-chart-tea-collection/1.html'; //append the parameters at the end of the url
-
+    ! THE SIZE CHART URL 
+  var url = '/cms/size-chart/size-chart-tea-collection/1.html';
+    ! APPEND THE PARAMETERS AT THE END OF THE URL
   var params = encodeURI('selectedDept=' + dept + '&selectedCat=' + cat);
-  var thisUrl = window.location.href; //check if have parameters already
-
+  var thisUrl = window.location.href;
+  
+  !CHECK IF HAVE PARAMETERS ALREADY
   if (thisUrl.indexOf('?') !== -1) {
     window.location.href = thisUrl + '&' + params;
   } else {
     window.location.href = thisUrl + '?' + params;
-  } //make the get call
-
-
-  $.get(url, function (data) {
-    //find the size chart
-    var sizeChart = $(data).find('#size-chart-section').html(); //console.log(sizeChart);
-    //desktop
-
+  }
+    !MAKE THE GET CALL
+  $.get(url, function(data) {
+      !FIND THE SIZE CHART
+    var sizeChart = $(data).find('#size-chart-section').html();
+    //console.log(sizeChart);
+      //desktop
     if ($(window).width() > 737) {
-      //make the overlay element
-      var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>'; //make the content element
-
-      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>'); //prepend overlay element to body
-
-      $('body').prepend(overlay); //prepend overlay content element to body
-
-      $('body').prepend(overlayContent); //append sizeChart to overlayContent
-
+      ! MAKE THE OVERLAY ELEMENT 
+      var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>';
+        ! MAKE THE CONTENT ELEMENT
+      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
+        //prepend overlay element to body
+      $('body').prepend(overlay);
+        //prepend overlay content element to body
+      $('body').prepend(overlayContent);
+        //append sizeChart to overlayContent
       $('.overlay-content').append(sizeChart);
-    } //mobile
+    }
+      //mobile
     else if ($(window).width() < 737) {
-        //make the content element
-        var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>'); //prepend overlay content element to body
-
-        $('body').prepend(overlayContent); //append sizeChart to overlayContent
-
-        $('.overlay-content').append(sizeChart);
-      } //hide the h1 in overlayContent
+        !MAKE THE CONTENT ELEMENT
+      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
+        //prepend overlay content element to body
+      $('body').prepend(overlayContent);
+        //append sizeChart to overlayContent
+      $('.overlay-content').append(sizeChart);
+    }
+      //hide the h1 in overlayContent
     // $('.size-chart-container h1').text('');
-    //add h1 background image of the x
-
-
+      //add h1 background image of the x
     $('.size-chart-container h1').css({
       background: "url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 24px center",
       padding: "17px 0"
-    }); //add css for hover h1 and overlay
-
-    $('.size-chart-container h1, .overlay').hover(function () {
+    });
+      //add css for hover h1 and overlay
+    $('.size-chart-container h1, .overlay').hover(function() {
       $(this).css('cursor', 'pointer');
-    }, function () {
+    }, function() {
       $(this).css('cursor', 'none');
-    }); //close the lightbox
-
-    $('.overlay, .size-chart-container h1').click(function () {
+    });
+      ! CLOSE THE LIGHTBOX
+    $('.overlay, .size-chart-container h1').click(function() {
       //remove the url parameters
       var theUrl = window.location.href;
       var newUrl;
-
       if (theUrl.indexOf('?' + params) !== -1) {
         newUrl = theUrl.replace('?' + params, '');
       } else {
         newUrl = theUrl.replace('&' + params, '');
       }
-
-      window.location.href = newUrl; //remove the elements
-
+      window.location.href = newUrl;
+        //remove the elements
       $('.overlay, .overlay-content').remove();
     });
   });
+  */
 });
 //# sourceMappingURL=pdp-function.js.map
