@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'about/catalogs/'
+    name: 'sweeps/light-up-with-love/'
   },
   zone: {
     name: 'mega-menu/sub-nav',
