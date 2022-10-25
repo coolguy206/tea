@@ -90,7 +90,7 @@ export const switchNewArrivals = (href) => {
       clearance = urls.promo2.baby.newborn;
       // $('.promo1-url').show();
       $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
+      $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 

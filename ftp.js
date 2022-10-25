@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/1013/v0/`;
+var category = `promos/one-offs/2022/1024/v0/`;
 // var category = `homepage/2022/1004/v2/`;
 // var category = `landing-pages/hello-kitty/2022/1004/v0/`;
 
