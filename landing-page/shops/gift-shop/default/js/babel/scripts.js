@@ -1,11 +1,8 @@
 "use strict";
 
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
-  /*const baseUrl = `https://www.teacollection.com`;
-  var imgArr = $('.content-wrap').find('img');
-  $.each(imgArr, function(i, val) {
-      var src = $(val).attr('src');
-      $(val).attr('src', baseUrl + src);
-  });*/
+  (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8');
 });
 //# sourceMappingURL=scripts.js.map

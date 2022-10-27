@@ -7,6 +7,7 @@
 @import 'c5.less';
 @import 'c6.less';
 @import 'c7.less';
+@import 'c8.less';
 
 .content-wrap {
   display: flex;
@@ -17,10 +18,12 @@
       font-size: 3.2vw;
       line-height: 3.6vw;
     }
+
     @media screen and (max-width:428px) {
       font-size: 9vw;
       line-height: 11vw;
     }
+
     // font-family: @souv;
     font-size: 54px;
     line-height: 60px;
@@ -34,6 +37,7 @@
       font-size: 0.9vw;
       line-height: 1.3vw;
     }
+
     font-family: @souv;
     font-size: 16px;
     line-height: 23px;
@@ -53,17 +57,21 @@
     @media screen and (max-width: 428px) {
       flex-basis: 100%;
     }
+
     flex-basis: 50%;
   }
 
+  .c1,
   .c2,
   .c3,
   .c4,
   .c5,
   .c6,
-  .c7 {
+  .c7,
+  .c8 {
     position: relative;
     display: flex;
     flex-wrap: wrap;
+    visibility: hidden;
   }
 }

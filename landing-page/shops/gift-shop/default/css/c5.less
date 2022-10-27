@@ -1,6 +1,6 @@
 @import 'var.less';
 @c5-cta-color: #fff;
-@c5-cta-background-color: #2D82A1;
+@c5-cta-background-color: #2C7F82;
 @c5-font-color: #fff;
 @c5-h2-color: #fff;
 @c5-background: #fff;
@@ -10,7 +10,7 @@
     padding: 0 0 4%;
   }
   padding: 0 6% 4%;
-  background: #FDF5F2;
+  // background: #FDF5F2;
 
   .top {
     flex-basis: 100%;
@@ -57,9 +57,12 @@
       text-align: center;
 
       img {
-        margin: 0 0 2%;
-        left: 10%;
-        position: relative;
+        @media screen and (max-width: 1679px){
+          width: 21vw;
+        }
+        @media screen and (max-width:428px) {
+          width: 52vw;
+        }
       }
 
       h2 {
