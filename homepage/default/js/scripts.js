@@ -21,31 +21,32 @@ $(document).ready(function() {
 
   alt('.hp .promo1 img', '192 new fall markdowns take an extra 25% off sale items & an extra 40% off clearance');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
-  alt('.hp .c1 img', 'kids in Japanese inspired clothes');
-  alt('.hp .c2 .first img', 'family at the pool');
+  alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
+  alt('.hp .c2 .first img', 'Baby Essentials');
   alt('.hp .c2 .second img', 'baby in outfit');
   alt('.hp .c2 .third img', 'baby girl in holiday outfit');
-  alt('.hp .c3 .first img', 'baby girl in romper');
-  alt('.hp .c3 .second img', 'baby boy in outfit');
-  alt('.hp .c3 .second img', 'baby girl in dress');
-  alt('.hp .c4 .first img', 'girl in dress');
-  alt('.hp .c4 .second img', 'girls in outfits');
-  alt('.hp .c4 .third img', 'boys in outfits');
-  alt('.hp .hello-kitty img', 'girl in Hello Kitty x TEA clothes');
-  alt('.hp .c5 .first img', 'kids in PJs');
+  alt('.hp .c3 .first img', 'baby girl in Party & Play');
+  alt('.hp .c3 .second img', 'baby boy in romper');
+  alt('.hp .c3 .third img', 'baby boy in Cute & Cuddly');
+  alt('.hp .c4 .first img', 'girls in Twirl Famous');
+  alt('.hp .c4 .second img', 'girl in Mix, Match, Relax');
+  alt('.hp .c4 .third img', 'boy in Winning Combos');
+  alt('.hp .hello-kitty .first img', 'girl in Hello Kitty x TEA clothes');
+  alt('.hp .hello-kitty .second img', 'siblings in Happy Together');
+  alt('.hp .c5 .first img', 'sweaters in Cozy Time');
   // alt('.hp .c5 .first img', 'kids in shark and whale graphic PJs');
-  alt('.hp .c5 .second img', 'girl in graphic dress');
-  alt('.hp .c5 .third img', 'baby in romper');
+  alt('.hp .c5 .second img', 'baby girl in graphic dress');
+  alt('.hp .c5 .third img', 'girl in graphic dress');
   alt('.hp .c5 .fourth img', 'baby in flower and rabbit pjs');
-  alt('.hp .c6 .first img', 'baby in fish and jelly fish outfit');
-  alt('.hp .c6 .second img', 'kids in Japnaese inspired clothes');
+  alt('.hp .c6 .first img', 'girls in Light Up with Love');
+  alt('.hp .c6 .second img', 'family in Slumber Party');
   alt('.hp .c7 .first img', 'tea rewear');
-  alt('.hp .c7 .second img', 'kids in Japnaese inspired clothes');
+  alt('.hp .c7 .second img', 'clothes in make an origami bat');
   alt('.hp .c7 .third img', 'learn how #teagivesback');
-  alt('.hp .c7 .fourth img', 'girl in panda outfit');
+  alt('.hp .c7 .fourth img', 'follow us on instagram');
   alt('.hp .swim img', 'watermelon graphic swimwear');
 
-  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .hello-kitty, .hp .hello-kitty-full' );
+  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .gift-guide, .hp .hello-kitty, .hp .hello-kitty-full' );
 
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);

@@ -1,0 +1,172 @@
+@import "var.less";
+@gift-guide-font-color: #fff;
+@gift-guide-h2-color: #513F7A;
+@gift-guide-p-color: #fff;
+@gift-guide-cta-color: #fff;
+@gift-guide-cta-background: #2C7F82;
+
+.gift-guide {
+  position: relative;
+  width: 100%;
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 428px) {
+        width: 100%;
+        left: 0;
+        top: 50%;
+        transform: translate(0, -50%);
+      }
+      position: absolute;
+      top: 50%;
+      width: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      a,
+      a,
+      h2,
+      p {
+        // color: @gift-guide-font-color;
+        font-family: @souv;
+        margin: 0 auto;
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 4.8vw;
+          line-height: 4.8vw;
+        }
+        @media screen and (max-width: 428px) {
+          // font-size: 9vw;
+          // margin: 0;
+          line-height: 11vw;
+          font-size: 35px;
+          // color: #FB6F60;
+          margin: 3% 0;
+          // display: none;
+        }
+        @media screen and (max-width:320px) {
+          // margin: 4% 0 0;
+        }
+        // margin: 5% 0 0;
+        text-transform: none;
+        color: @gift-guide-h2-color;
+        line-height: 76px;
+        // font-family: @souv;
+        font-family: @gilroyb;
+        font-size: 70px;
+        margin: 0 0 1vw;
+        // letter-spacing: 0.25em;
+        span {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.23vw;
+            letter-spacing: 0.4vw;
+          }
+          @media screen and (max-width:428px) {
+            font-size: 18px;
+            letter-spacing: 1.4vw;
+          }
+          font-family: @gilroyb;
+          font-size: 20px;
+          display: block;
+          letter-spacing: 6px;
+          margin: 0 0 1%;
+        }
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.4vw;
+          line-height: 2vw;
+        }
+        @media screen and (max-width: 428px) {
+          font-size: 4vw;
+          line-height: 6vw;
+          width: 100%;
+          margin: 7% auto;
+          // display: none;
+          text-shadow: none;
+          // color: #FB6F60;
+        }
+        @media screen and (max-width: 320px) {
+          font-size: 15px;
+          line-height: 17px;
+        }
+        margin: 4% auto;
+        color: @gift-guide-p-color;
+        text-transform: none;
+        font-size: 24px;
+        line-height: 34px;
+        width: 100%;
+        font-family: @gilroyr;
+        text-shadow: 0 0 14px rgba(0,0,0,0.15);
+      }
+
+      div {
+        @media screen and (max-width: 428px) {
+          margin: 7vw 0 0;
+        }
+
+        &.special-div {
+          @media screen and (max-width: 428px) {
+            margin: 9vw 0 0;
+          }
+          margin: 5% 0 0;
+
+          a {
+            @media screen and (max-width: 1679px){
+              width: 17vw;
+            }
+            @media screen and (max-width: 428px){
+              width: 65vw;
+            }
+            width: 275px;
+          }
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 17vw;
+            // width: 23vw;
+          }
+          @media screen and (max-width: 428px) {
+            // background: #F19C01;
+            width: 65vw;
+            // width: 90vw;
+          }
+          font-family: @gilroyb;
+          color: @gift-guide-cta-color;
+          background: @gift-guide-cta-background;
+          width: 275px;
+          // width: 383px;
+          &.cta1 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta2 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta3 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta4 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta5 {
+            @media screen and (max-width: 1679px) {}
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta6 {
+            @media screen and (max-width: 428px) {}
+          }
+        }
+      }
+    }
+  }
+}

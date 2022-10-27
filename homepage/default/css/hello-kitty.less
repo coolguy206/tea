@@ -1,13 +1,13 @@
 @import "var.less"; // @import "promo1.less";
 @hello-kitty-font-color: #fff;
 @hello-kitty-h2-color: #fff;
-@hello-kitty-p-color: #47363D;
+@hello-kitty-p-color: #fff;
 @hello-kitty-cta-color: #fff;
-@hello-kitty-cta-background: #D05F9A;
+@hello-kitty-cta-background: #D83E40;
 @hello-kitty-background2: #4765A1;
-@hello-kitty-cta-color2: @hello-kitty-background2;
-@hello-kitty-cta-background2: @hello-kitty-h2-color2;
-@hello-kitty-h2-color2: #E2E12A;
+@hello-kitty-cta-color2: @hello-kitty-cta-color;
+@hello-kitty-cta-background2: #24624F;
+@hello-kitty-h2-color2: #fff;
 @hello-kitty-h3-color: #A3D8C2;
 @hello-kitty-p-color2: #fff;
 
@@ -15,32 +15,56 @@
   @media screen and (max-width: 428px) {
     flex-wrap: wrap;
   }
+
   position: relative;
   width: 100%;
   display: flex;
 
+  .first,
+  .second {
+    .the-content {
+      div {
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 14.5vw;
+          }
+
+          @media screen and (max-width: 428px) {
+            width: 57%;
+          }
+
+          font-family: @gilroyb;
+          width: 245px;
+        }
+      }
+    }
+  }
+
   .first {
     position: relative;
+    order: 2;
 
     div {
       &.the-content {
         @media screen and (max-width: 428px) {
-          width: 84%;
-          // left: 0;
+          width: 75%;
+          left: 50%;
           top: 3%;
           transform: translate(-50%, 0);
         }
+
         position: absolute;
         top: 50%;
         width: 100%;
-        left: 50%;
+        left: 19%;
         text-align: center;
-        transform: translate(-50%, -50%);
+        transform: translate(0%, -50%);
 
         img.desktop {
           @media screen and (max-width: 1679px) {
             width: 21.1vw;
           }
+
           width: 354px;
         }
 
@@ -59,6 +83,7 @@
             font-size: 4.6vw;
             line-height: 4.3vw;
           }
+
           @media screen and (max-width: 428px) {
             // font-size: 9vw;
             // margin: 0;
@@ -68,6 +93,7 @@
             margin: 12% 0 0;
             // display: none;
           }
+
           margin: 5% 0 0;
           text-transform: none;
           color: @hello-kitty-h2-color;
@@ -81,10 +107,12 @@
               font-size: 1.23vw;
               letter-spacing: 0.4vw;
             }
+
             @media screen and (max-width:428px) {
               font-size: 18px;
               letter-spacing: 1.4vw;
             }
+
             font-family: @gilroyb;
             font-size: 20px;
             display: block;
@@ -98,6 +126,7 @@
             font-size: 1.4vw;
             line-height: 2vw;
           }
+
           @media screen and (max-width: 428px) {
             color: @hello-kitty-h2-color;
             font-size: 4vw;
@@ -105,6 +134,7 @@
             margin: 7% auto 0;
             // display: none;
           }
+
           margin: 4% auto 0;
           color: @hello-kitty-p-color;
           text-transform: none;
@@ -119,6 +149,7 @@
             margin: 8% 0 0;
             //margin: 3% 0 0;
           }
+
           margin: 4% 0 0;
           text-align: center;
 
@@ -132,11 +163,13 @@
             @media screen and (max-width: 1679px) {
               width: 14.5vw;
             }
+
             @media screen and (max-width: 428px) {
               width: 57%;
               // margin: 93% 0 0;
               // color: #3862AA;
             }
+
             font-family: @gilroyb;
             color: @hello-kitty-cta-color;
             background: @hello-kitty-cta-background;
@@ -152,6 +185,7 @@
               @media screen and (max-width: 428px) {
                 // left: -2%;
               }
+
               // left: -4%;
             }
 
@@ -159,6 +193,7 @@
               @media screen and (max-width: 428px) {
                 // left: 2%;
               }
+
               // left: 3%;
             }
 
@@ -166,6 +201,7 @@
               @media screen and (max-width: 428px) {
                 // left: -2%;
               }
+
               // left: -4%;
             }
 
@@ -173,6 +209,7 @@
               @media screen and (max-width: 428px) {
                 // left: 2%;
               }
+
               // left: 0;
             }
 
@@ -180,6 +217,7 @@
               @media screen and (max-width: 428px) {
                 // left: -2%;
               }
+
               // left: -3%;
             }
 
@@ -187,6 +225,7 @@
               @media screen and (max-width: 428px) {
                 // left: 2%;
               }
+
               // left: 3%;
             }
           }
@@ -196,39 +235,46 @@
   }
 
   .second {
-    @media screen and (max-width: 428px) {
-      height: 147vw;
-    }
-    background: @hello-kitty-background2;
+    @media screen and (max-width: 428px) {}
+
+    // background: @hello-kitty-background2;
     position: relative;
+    order: 1;
 
     .the-content {
+      @media screen and (max-width: 428px) {
+        margin: 10% 0 0 !important;
+      }
+
+      margin: 0;
       position: absolute;
-      top: 50%;
-      left: 50%;
+      bottom: 10%;
       width: 100%;
-      transform: translate(-50%, -50%);
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 5.4vw;
-          line-height: 6vw;
+          font-size: 3.6vw;
+          // line-height: 1.6vw;
         }
-        @media screen and (max-width: 428px) {
-          font-size: 9.5vw;
-          line-height: 12vw;
-          margin: 0;
-        }
-        color: @hello-kitty-h2-color2;
-        font-family: @gilroyb;
-        font-size: 90px;
-        letter-spacing: 0.2em;
-        margin: 0 0 4%;
-        line-height: 100px;
 
-        span {
-          letter-spacing: 0;
+        @media screen and (max-width:428px) {
+          font-size: 40px;
+          line-height: 44px;
         }
+
+        @media screen and (max-width:320px) {
+          font-size: 36px;
+        }
+
+        font-family: @gilroyb;
+        font-size: 60px;
+        line-height: 60px;
+        letter-spacing: 0.1rem;
+        text-transform: capitalize;
+        color: @hello-kitty-h2-color2;
+        margin: 0 0 3%;
+        // left: 50%;
+        // transform: translateX(-50%);
       }
 
       h3 {
@@ -236,11 +282,13 @@
           font-size: 2.4vw;
           line-height: 3.5vw;
         }
+
         @media screen and (max-width: 428px) {
           font-size: 5.7vw;
           line-height: 14vw;
           margin: 0;
         }
+
         color: @hello-kitty-h3-color;
         font-family: @gilroyb;
         font-size: 40px;
@@ -255,10 +303,12 @@
           font-size: 1.4vw;
           line-height: 2vw;
         }
+
         @media screen and (max-width: 428px) {
           font-size: 4.2vw;
           line-height: 6vw;
         }
+
         color: @hello-kitty-p-color2;
         font-family: @souv;
         font-size: 24px;

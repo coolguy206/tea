@@ -5,7 +5,7 @@
 @c2-first-cta-background: #00ACD0;
 @c2-second-font-color: #fff;
 @c2-second-cta-color: #fff;
-@c2-second-cta-background: #24624F;
+@c2-second-cta-background: #2D82A1;
 @c2-third-font-color: #fff;
 @c2-third-cta-color: #fff;
 @c2-third-cta-background: #FFB499;
@@ -102,7 +102,7 @@
 
       flex-basis: 50% !important;
       overflow: hidden;
-      order:2;
+      // order:2;
 
       h2 {
         @media screen and (max-width: 1679px) {
@@ -163,7 +163,7 @@
       }
 
       flex-basis: 50% !important;
-      order:1;
+      // order:1;
 
       .the-content {
         h2 {
@@ -174,18 +174,18 @@
           grid-template-rows: 1%;
 
           a {
-            @media screen and (max-width:1679px) {
-              width: 23vw;
+            @media screen and (max-width: 1679px) {
+              width: 14.5vw;
             }
-
-            @media screen and (max-width:428px) {
-              width: 89vw;
+            @media screen and (max-width: 429px) {
+              width: 45vw;
             }
-
+            font-family: @gilroyb;
+            width: 245px;
             color: @c2-second-cta-color;
             background: @c2-second-cta-background;
 
-            width: 383px;
+
             &.cta1 {
               @media screen and (max-width: 428px) {}
             }

@@ -16,11 +16,11 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/10 October/102422 $25 PJs/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/102422 Light Up With Love Sweeps/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/102722 Winter 2 HP/handoff/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/light-up/`;
+  var writeFilePath = `handoff/hp/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

@@ -8,15 +8,15 @@ require('dotenv').config()
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2022/1024/v0/`;
-// var category = `homepage/2022/1004/v2/`;
-var category = `landing-pages/light-up-sweeps/2022/1024/v0/`;
+var category = `homepage/2022/1027/v0/`;
+// var category = `landing-pages/light-up-sweeps/2022/1024/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/light-up/Site/`;
-var writeFilePath = `landing-page/sweeps/light-up-with-love/dev/images/`;
+var readFilePath = `handoff/hp/handoff/`;
+var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
@@ -48,9 +48,9 @@ c.on('ready', function () {
     var html = ``;
     if (name.indexOf(`-`) !== -1) {
       // console.log(name);
-      if (name.indexOf(`d`) !== -1) {
+      if (name.indexOf(`-d`) !== -1) {
         html = `<img class="desktop" data-src="/mas_assets${url}${fileName}${ext}">`;
-      } else if (name.indexOf(`m`) !== -1) {
+      } else if (name.indexOf(`-m`) !== -1) {
         html = `<img class="mobile" data-src="/mas_assets${url}${fileName}${ext}">`;
       } else {
         html = `<img data-src="/mas_assets${url}${fileName}${ext}">`;
@@ -86,9 +86,9 @@ c.on('ready', function () {
           var html = ``;
           if (name.indexOf(`-`) !== -1) {
             // console.log(name);
-            if (name.indexOf(`d`) !== -1) {
+            if (name.indexOf(`-d`) !== -1) {
               html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-            } else if (name.indexOf(`m`) !== -1) {
+            } else if (name.indexOf(`-m`) !== -1) {
               html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
             } else {
               html = `<img data-src="/mas_assets${url}${file}">`;
@@ -134,9 +134,9 @@ c.on('ready', function () {
           var html = ``;
           if (name.indexOf(`-`) !== -1) {
             // console.log(name);
-            if (name.indexOf(`d`) !== -1) {
+            if (name.indexOf(`-d`) !== -1) {
               html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-            } else if (name.indexOf(`m`) !== -1) {
+            } else if (name.indexOf(`-m`) !== -1) {
               html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
             } else {
               html = `<img data-src="/mas_assets${url}${file}">`;
@@ -187,9 +187,9 @@ c.on('ready', function () {
         var html = ``;
         if (name.indexOf(`-`) !== -1) {
           // console.log(name);
-          if (name.indexOf(`d`) !== -1) {
+          if (name.indexOf(`-d`) !== -1) {
             html = `<img class="desktop" data-src="/mas_assets${url}${val.name}">`;
-          } else if (name.indexOf(`m`) !== -1) {
+          } else if (name.indexOf(`-m`) !== -1) {
             html = `<img class="mobile" data-src="/mas_assets${url}${val.name}">`;
           } else {
             html = `<img data-src="/mas_assets${url}${val.name}">`;
