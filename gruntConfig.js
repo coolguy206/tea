@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'order/shipping-info/'
+    name: 'about/catalogs/'
   },
   zone: {
     name: 'mega-menu/sub-nav',
