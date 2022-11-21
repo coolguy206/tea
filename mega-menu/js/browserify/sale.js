@@ -79,8 +79,8 @@ $(document).ready(function () {
   $('.dept-boy').hover(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide(); // $('.promo2-url').show();
 
-    $('.promo1-url, .promo2-url, .clearance-url').show();
-    $('.promo1-url').hide(); // $('.promo2-url').hide();
+    $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+    // $('.promo2-url').hide();
 
     $('.clearance-url').hide();
   }, function () {
@@ -156,8 +156,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo2.boy;
       clearance = _urls.urls.promo2.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide(); // $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
 
       $('.clearance-url').hide();
       break;
@@ -202,8 +202,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo2.toddler.boy;
       clearance = _urls.urls.promo2.toddler.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide(); // $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
 
       $('.clearance-url').hide();
       break;
@@ -267,8 +267,8 @@ var switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo2.boy;
       clearance = _urls.urls.promo1.sale.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide(); // $('.promo2-url').show();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      // $('.promo2-url').show();
       // $('.clearance-url').hide();
 
       break;
@@ -313,8 +313,8 @@ var switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo2.toddler.boy;
       clearance = _urls.urls.promo1.sale.toddler.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide(); // $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;

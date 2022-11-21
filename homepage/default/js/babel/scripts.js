@@ -18,7 +18,7 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', '12 days of tea $25 dresses, $15 leggings, & $15 rompers');
+  (0, _alt.alt)('.hp .promo1 img', '12 days of tea $15 tees & $20 pants');
   (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
   (0, _alt.alt)('.hp .c1 img', 'kids in cuddly sherpa jackets');
   (0, _alt.alt)('.hp .c2 .first img', 'Baby Essentials');
