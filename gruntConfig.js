@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'black-friday/preview/'
+    name: 'black-friday/'
   },
   zone: {
     name: 'mega-menu/sub-nav',

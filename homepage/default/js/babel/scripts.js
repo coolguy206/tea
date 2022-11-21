@@ -18,8 +18,8 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', '12 days of tea $15 tees & $20 pants');
-  (0, _alt.alt)('.hp .promo2 img', 'one day only $5 flash sale');
+  (0, _alt.alt)('.hp .promo1 img', 'black friday 277 styles now $10, $12, $15, & $18');
+  (0, _alt.alt)('.hp .promo2 img', 'black friday 277 styles now $10, $12, $15, & $18');
   (0, _alt.alt)('.hp .c1 img', 'kids in cuddly sherpa jackets');
   (0, _alt.alt)('.hp .c2 .first img', 'Baby Essentials');
   (0, _alt.alt)('.hp .c2 .second img', 'baby in outfit');

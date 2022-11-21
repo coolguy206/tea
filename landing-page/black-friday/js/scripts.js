@@ -13,7 +13,7 @@ $(document).ready(function() {
   var theCtas = ``;
 
   if (url == '/black-friday') {
-
+    console.log('black friday page');
     //banner ctas
     subCats = $('.category-page .nav .side-nav ul li .links ul li a');
     $.each(subCats, function(i, val) {
@@ -21,6 +21,8 @@ $(document).ready(function() {
       var num = ``;
       var href = $(val).attr('href');
       var str = $(val).text();
+      // console.log(`str`);
+      // console.log(str);
       switch (str) {
         case `Girl`:
           num = 1;
@@ -39,8 +41,9 @@ $(document).ready(function() {
           break;
       }
       // console.log(str);
-      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday`) {
-        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
+      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday` && str !== `$10` && str !== `$12 & Under` && str !== `$15 & Under` && str !== `$18 & Under` && str !== `Shop All`) {
+        str = str.replace(/& Under/g, '');
+        theCtas = `${theCtas} <a class="cta-border a cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
       }
     });
 
@@ -49,19 +52,24 @@ $(document).ready(function() {
       //add subcats to sidebar
       var theHTML = `<ul class="sub">
       <li class="">
-        <a href="/black-friday/10" title="$10 Styles">$10 Styles</a>
+        <a href="/black-friday/10" title="$10">$10</a>
       </li>
       <li class="">
-        <a href="/black-friday/12" title="$12 Styles">$12 Styles</a>
+        <a href="/black-friday/12" title="$12 & Under">$12 & Under</a>
       </li>
       <li class="">
-        <a href="/black-friday/15" title="$15 Styles">$15 Styles</a>
+        <a href="/black-friday/15" title="$15 & Under">$15 & Under</a>
       </li>
       <li class="">
-        <a href="/black-friday/18" title="$18 Styles">$18 Styles</a>
+        <a href="/black-friday/18" title="$18 & Under">$18 & Under</a>
       </li>
+      <!--
       <li class="">
-        <a href="/black-friday/20" title="$20 Styles">$20 Styles</a>
+        <a href="/black-friday/20" title="$20 & Under">$20 & Under</a>
+      </li>
+      -->
+      <li class="">
+        <a href="/black-friday/shopall" title="$18 & Under">Shop All</a>
       </li>
     </ul>`;
       $($('.category-page .nav .side-nav ul li .links ul li a')[0]).after(theHTML);
@@ -76,6 +84,8 @@ $(document).ready(function() {
       var num = ``;
       var href = $(val).attr('href');
       var str = $(val).text();
+      // console.log(`str`);
+      // console.log(str);
       switch (str) {
         case `Girl`:
           num = 1;
@@ -94,8 +104,9 @@ $(document).ready(function() {
           break;
       }
       // console.log(str);
-      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday`) {
-        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
+      if (str !== `$10 Styles` && str !== `$12 Styles` && str !== `$15 Styles` && str !== `$18 Styles` && str !== `$20 Styles` && str !== `Toddler Girl` && str !== `Toddler Boy` && str !== `Shop All Black Friday` && str !== `$10` && str !== `$12 & Under` && str !== `$15 & Under` && str !== `$18 & Under` && str !== `$20 & Under` && str !== `Shop All`) {
+        str = str.replace(/& Under/g, '');
+        theCtas = `${theCtas} <a class="cta-border a cta${num}" href="${href}"><span>shop</span> ${str}</a> `;
       }
     });
 
@@ -111,13 +122,13 @@ $(document).ready(function() {
       var color = ``;
       var href = $(val).attr('href');
       var str = $(val).text();
-      str = str.replace(/Styles/g, '').replace(/ /g, '');
-      str = str.replace(/Girl/g, '').replace(/Boy/g, '').replace(/Baby/g, '').replace(/Newborn/g, '').replace(/Toddler/g, '');
+      str = str.replace(/Styles/g, '').replace(/ /g, '').replace(/Girl/g, '').replace(/Boy/g, '').replace(/Baby/g, '').replace(/Newborn/g, '').replace(/Toddler/g, '').replace(/&Under/g, '');
+      // console.log(`str`);
       // console.log(str);
       if (str == `ShopAll`) {
-        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}">shop all</a> `;
+        theCtas = `${theCtas} <a class="cta-border a cta${num}" href="${href}">shop all</a> `;
       } else if (str !== `$20`) {
-        theCtas = `${theCtas} <a class="cta-border cta${num}" href="${href}">shop ${str}</a> `;
+        theCtas = `${theCtas} <a class="cta-border a cta${num}" href="${href}">shop ${str}</a> `;
       }
     });
 

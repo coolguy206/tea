@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2022/1119/v0/`;
+var category = `promos/black-friday/2022/1121/mega-menu/v1/newborn/`;
 // var category = `homepage/2022/1027/v0/`;
 // var category = `landing-pages/gift-shop/2022/1027/v0/`;
 
@@ -15,7 +15,7 @@ var category = `promos/one-offs/2022/1119/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/221119/`;
+var readFilePath = `handoff/black-friday/Site/mega-menu/newborn/`;
 var writeFilePath = `promos/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -233,7 +233,7 @@ c.on('ready', function () {
   */
 
   //?LIST DIRECTORIES
-  /*
+/*  
       c.list(url, function(err, list) {
         if (err) throw err;
         list.map((val, i) => {
@@ -244,7 +244,7 @@ c.on('ready', function () {
         // console.dir(list);
         c.end();
       });
-  */
+*/  
 });
 
 //?CONNECT FTP

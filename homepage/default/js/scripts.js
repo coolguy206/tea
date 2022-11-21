@@ -19,8 +19,8 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', '12 days of tea $15 tees & $20 pants');
-  alt('.hp .promo2 img', 'one day only $5 flash sale');
+  alt('.hp .promo1 img', 'black friday 277 styles now $10, $12, $15, & $18');
+  alt('.hp .promo2 img', 'black friday 277 styles now $10, $12, $15, & $18');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
   alt('.hp .c2 .first img', 'Baby Essentials');
   alt('.hp .c2 .second img', 'baby in outfit');
