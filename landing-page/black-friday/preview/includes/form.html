@@ -1,0 +1,42 @@
+<div class="this-form" id="this-form">
+  <form>
+    <div>
+      <label for="">First Name*</label>
+      <span class="this-error">required</span>
+      <input name="fname" type="text" required>
+    </div>
+
+    <div>
+      <label for="">Last Name*</label>
+      <span class="this-error">required</span>
+      <input name="lname" type="text" required>
+    </div>
+
+    <div>
+      <label for="">Email*</label>
+      <span class="this-error">required</span>
+      <input name="email" type="email" required>
+    </div>
+
+    <div>
+      <label for="">Phone Number*</label>
+      <span class="this-error">required 10 digit phone number</span>
+      <input name="the-phone" type="tel" pattern="[0-9]{10,10}" maxlength="10" minlength="10" placeholder="1234567890" title="Please enter your 10 digit phone number" required>
+    </div>
+
+    <div class="button-box">
+      <button class="a cta-border">sign me up</button>
+    </div>
+  </form>
+
+  <div class="sending">
+    <h2>Sending...</h2>
+  </div>
+
+  <div class="successfully-sent">
+    <h2>
+      Thanks for signing up! Shop our <a href="/clothing-sale">sale</a> and <a href="/sale/clearance">clearance</a> sections for great deals<br class="desktop"> or check out our <a href="/new-arrivals">new arrivals</a> for the latest and greatest Tea!
+    </h2>
+  </div>
+
+</div>

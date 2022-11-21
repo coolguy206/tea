@@ -1,0 +1,48 @@
+@media screen and (max-width:414px) {
+  .desktop {
+    display: none;
+  }
+}
+
+.mobile {
+  display: none;
+}
+
+@media screen and (max-width:414px) {
+  .mobile {
+    display: block;
+  }
+}
+
+.container-black-friday {
+  position: relative;
+}
+
+.container-black-friday div {
+  position: absolute;
+  top: 39%;
+  width: 76%;
+  left: 29%;
+}
+
+@media screen and (max-width:414px) {
+  .container-black-friday div {
+    position: absolute;
+    top: 17%;
+    width: 100%;
+    left: 0;
+    text-align: center;
+  }
+}
+
+.container-black-friday div a {
+  margin: 0 1% 0 0;
+  padding: 1% 2%;
+}
+
+@media screen and (max-width:414px) {
+  .container-black-friday div a {
+    margin: 0 0 4%;
+    padding: 3%;
+  }
+}
