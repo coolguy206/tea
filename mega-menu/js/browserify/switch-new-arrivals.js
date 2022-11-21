@@ -90,8 +90,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo2.baby.newborn;
       clearance = _urls.urls.promo2.baby.newborn; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
       $('.clearance-url').hide();
       break;
