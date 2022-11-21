@@ -2,8 +2,8 @@
 @promo-h2-color: #5FA26F;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
-@promo-cta1-color: #065B54;
-@promo-cta1-background: #FDB599;
+@promo-cta1-color: #fff;
+@promo-cta1-background:  #5B2246;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #547190;
 @promo-cta3-color: @promo-cta1-color;
@@ -30,7 +30,7 @@
       @media screen and (max-width: 1024px) {}
       @media screen and (max-width: 810px) {}
       @media screen and (max-width: 428px) {
-        top: 69%;
+        top: 59%;
         width: 100%;
         left: 0;
         transform: translate(0%);
@@ -137,16 +137,17 @@
 
       div {
         @media screen and (max-width: 428px) {
-          // grid-template-columns: repeat(2, 1fr);
-          // grid-template-rows: repeat(2, 1fr);
-          // column-gap: 6%;
-          // row-gap: 19%;
+          grid-template-columns: repeat(2, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          column-gap: 6%;
+          row-gap: 19%;
         }
-        // grid-template-rows: repeat(1, 1fr);
-        // grid-template-columns: repeat(6, 1fr);
+        grid-template-rows: repeat(1, 1fr);
+        grid-template-columns: repeat(4, 1fr);
         // grid-template-rows: repeat(2, 1fr);
-        // column-gap: 2%;
-        // row-gap: 19%;
+        column-gap: 2%;
+        row-gap: 19%;
+        
         a {
           @media screen and (max-width: 1679px) {
             // width: 13.2vw;

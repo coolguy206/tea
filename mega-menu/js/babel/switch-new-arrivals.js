@@ -21,8 +21,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/boys-clothing/new-arrivals':
@@ -33,8 +33,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/baby-girl-clothes/new-arrivals':
@@ -44,8 +44,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/baby-boy-clothes/new-arrivals':
@@ -55,8 +55,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/toddler-girls-clothes/favorites/new-arrivals':
@@ -67,8 +67,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/toddler-boys-clothes/favorites/new-arrivals':
@@ -79,8 +79,8 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
       // $('.promo2-url').hide();
-      // $('.clearance-url').hide();
 
+      $('.clearance-url').hide();
       break;
 
     case '/newborn-clothes/favorites/new-arrivals':
