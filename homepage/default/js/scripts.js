@@ -19,7 +19,7 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', 'the dressy event 30% off special occasion');
+  alt('.hp .promo1 img', '12 days of tea $25 dresses, $15 leggings, & $15 rompers');
   alt('.hp .promo2 img', 'one day only $5 flash sale');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
   alt('.hp .c2 .first img', 'Baby Essentials');
