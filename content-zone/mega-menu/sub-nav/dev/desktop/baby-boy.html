@@ -15,11 +15,6 @@
       <ul class="category first">
         <li>Shop by Category</li>
 
-        <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-        {sub_cats name="cat" category="black-friday/baby-boy"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-        {/sub_cats}
-
         {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
         {if $i && $i % 8 eq 0}
           </ul>
