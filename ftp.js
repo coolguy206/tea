@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/black-friday/2022/1121/mega-menu/v1/newborn/`;
+var category = `promos/cyber-monday/2022/1128/v0/`;
 // var category = `homepage/2022/1027/v0/`;
 // var category = `landing-pages/gift-shop/2022/1027/v0/`;
 
@@ -15,7 +15,7 @@ var category = `promos/black-friday/2022/1121/mega-menu/v1/newborn/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/black-friday/Site/mega-menu/newborn/`;
+var readFilePath = `handoff/cyber-monday/Site/`;
 var writeFilePath = `promos/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
