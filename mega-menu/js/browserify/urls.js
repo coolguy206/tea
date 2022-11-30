@@ -7,17 +7,17 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo1: {
-    Promo: "/black-friday/",
-    girl: "/black-friday/girl/",
-    boy: "/black-friday/boy/",
+    Promo: "/new-arrivals",
+    girl: "/girls-clothes",
+    boy: "/boys-clothes",
     baby: {
-      girl: "/black-friday/baby-girl/",
-      boy: "/black-friday/baby-boy/",
-      newborn: "/black-friday/newborn/"
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
+      newborn: "/newborn-clothing"
     },
     toddler: {
-      girl: "/black-friday/toddler-girl/",
-      boy: "/black-friday/toddler-boy/"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
     },
     sale: {
       girl: "/sale/girls-clothing/view-all ",
