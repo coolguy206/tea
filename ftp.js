@@ -9,14 +9,14 @@ require('dotenv').config()
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2022/1205/v0/`;
 // var category = `homepage/2022/1205/v0/`;
-var category = `landing-pages/newborn/2022/1205/v0/`;
+var category = `landing-pages/new-parents-sweeps/2022/1205/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/landing-pages/newborn/handoff/`;
-var writeFilePath = `landing-page/shops/pajamas-shop/default/dev/images/`;
+var readFilePath = `handoff/sweeps/new-parents/Site/`;
+var writeFilePath = `landing-page/sweeps/new-parents-sweeps/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
@@ -130,20 +130,33 @@ c.on('ready', function () {
           if (err) throw err;
           console.log(`successfully uploaded file: ${file}`);
 
-          var name = file.split('.')[0];
           var html = ``;
-          if (name.indexOf(`-`) !== -1) {
-            // console.log(name);
-            if (name.indexOf(`-d`) !== -1) {
-              html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
-            } else if (name.indexOf(`-m`) !== -1) {
-              html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+          var name = file.split('.')[0];
+          var ext = file.split('.')[1];
+          // console.log(ext);
+
+          if(ext == 'pdf') {
+            // console.log(`it is a pdf`);
+            var html = `<a class="the-official-rules" href="/mas_assets${url}${file}" target="_blank">official rules</a>`;
+          } else {
+            // console.log(`it is not a pdf`);
+            if (name.indexOf(`-`) !== -1) {
+              // console.log(name);
+              if (name.indexOf(`-d`) !== -1) {
+                html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+              } else if (name.indexOf(`-m`) !== -1) {
+                html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+              } else {
+                html = `<img data-src="/mas_assets${url}${file}">`;
+              }
             } else {
               html = `<img data-src="/mas_assets${url}${file}">`;
             }
-          } else {
-            html = `<img data-src="/mas_assets${url}${file}">`;
+
           }
+
+          // console.log(`the html`);
+          // console.log(html);
 
           //*make the html file
           writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {

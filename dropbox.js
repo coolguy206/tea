@@ -16,11 +16,11 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/12 December/120522 Buy 2 Get 1 Free/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/120522 Adult PJ Launch/handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Campaign/120522 Small But Mighty Sweeps/04 Handoff/Site/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/landing-pages/newborn/`;
+  var writeFilePath = `handoff/sweeps/new-parents/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
