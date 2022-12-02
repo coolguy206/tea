@@ -1,0 +1,53 @@
+.pj-container {
+	@media screen and (max-width: 428px) {
+		flex-wrap: wrap;
+	}
+
+	display: flex;
+
+	div {
+
+		&.first,
+		&.second,
+		&.third {
+			@media screen and (max-width: 428px) {
+				flex-basis: 100%;
+			}
+
+			flex-basis: 34%;
+		}
+
+		&.first,
+		&.third {
+			img {
+				width: 100%;
+			}
+		}
+
+		&.second {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.3vw;
+				line-height: 1.7vw;
+			}
+
+			@media screen and (max-width: 428px) {
+				font-size: 5vw;
+				line-height: 7vw;
+				padding: 5vw 3vw;
+			}
+
+			text-align: center;
+			background: #FFF4F0;
+			color: #ED686E;
+			font-size: 22px;
+			line-height: 28px;
+			display: flex;
+			justify-content: center;
+			align-content: center;
+			flex-wrap: wrap;
+			padding: 0 1vw;
+		}
+
+		&.third {}
+	}
+}

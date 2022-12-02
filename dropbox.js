@@ -15,12 +15,12 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/12 December/120522 Buy 2 Get 1 Free/04 Handoff/Site/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/102722 Gift Guide/handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Promotions/12 December/120522 Buy 2 Get 1 Free/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2022/Site/120522 Adult PJ Launch/handoff/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = ``;
+  var writeFilePath = `handoff/landing-pages/newborn/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
