@@ -1,5 +1,6 @@
 // @freeShippingBg: #4765A1;
-@freeShippingBg: #FFF4F0;
+// @freeShippingBg: #FFF4F0;
+@freeShippingBg: #D03543;
 @freeShippingColor1: #47363D;
 
 .free-shipping-150 {
@@ -16,6 +17,22 @@
   z-index: 9999;
   display: none;
 
+  .promos {
+    background: @freeShippingBg;
+    display: block !important;
+
+    .promos-wrap {
+      .promo2 {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+      }
+
+    }
+  }
+
   a {
     text-decoration: none;
   }
@@ -25,6 +42,7 @@
       font-size: 12px;
       line-height: 15px;
     }
+
     font-size: 18px;
     line-height: 22px;
     text-align: center;
