@@ -1,0 +1,63 @@
+<div class="catalog-wrap">
+  <h1>Unsubscribe from our Print Catalog</h1> 
+
+  <p>Please note that you might get one or two additional catalogs after unsubscribing as it takes time for your request
+    to take effect!</p>
+
+  <p>Please fill in the fields below exactly as you see them on your catalog:</p>
+
+  <p class="italic">* Required Fields</p>
+
+  <h2 class="success">successfully unsubscribed!!!</h2>
+
+  <p class="processing">Processing...</p>
+
+  <form class="sailthru">
+    <input type="hidden" name="email" value="">
+
+    <div>
+      <label>first name*</label>
+      <input type="text" name="FIRST_NAME" placeholder="First Name*" required>
+    </div>
+
+    <div>
+      <label>last name*</label>
+      <input type="text" name="LAST_NAME" placeholder="Last Name*" required>
+    </div>
+
+    <div>
+      <label>address 1*</label>
+      <input type="text" name="POSTAL_STREET_1_" placeholder="Address 1*" required>
+    </div>
+
+    <div>
+      <label>address 2</label>
+      <input type="text" name="POSTAL_STREET_2_" placeholder="Address 2">
+    </div>
+
+    <div>
+      <label>city*</label>
+      <input type="text" name="CITY_" placeholder="City*" required>
+    </div>
+
+    <div>
+      <label>State/Province*</label>
+      <select name="STATE_" required id="states">
+        <option>Please Select*</option>
+
+        include "option.html"
+
+      </select>
+    </div>
+
+    <div>
+      <label>ZIP/Postal Code*</label>
+      <input type="text" name="POSTAL_CODE_" placeholder="ZIP/Postal Code*" required>
+    </div>
+
+    <div>
+      <input type="submit" value="Submit">
+    </div>
+
+  </form>
+</div>

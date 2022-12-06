@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/new-parents-sweeps/'
+    name: 'about/unsubscribe-catalog'
   },
   zone: {
     name: 'mega-menu/sub-nav',
