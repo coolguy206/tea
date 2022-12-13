@@ -1,11 +1,11 @@
 @import "var.less";
-@gift-guide-font-color: #fff;
-@gift-guide-h2-color: #513F7A;
-@gift-guide-p-color: #fff;
-@gift-guide-cta-color: #fff;
-@gift-guide-cta-background: #0076B3;
+@furoshiki-font-color: #fff;
+@furoshiki-h2-color: #fff;
+@furoshiki-p-color: #fff;
+@furoshiki-cta-color: #fff;
+@furoshiki-cta-background:  #47363D;
 
-.gift-guide {
+.furoshiki {
   position: relative;
   width: 100%;
 
@@ -19,16 +19,16 @@
       }
       position: absolute;
       top: 50%;
-      width: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      // width: 50%;
+      left: 62%;
+      transform: translate(0%, -50%);
       text-align: center;
 
       a,
       a,
       h2,
       p {
-        // color: @gift-guide-font-color;
+        // color: @furoshiki-font-color;
         font-family: @souv;
         margin: 0 auto;
       }
@@ -52,7 +52,7 @@
         }
         // margin: 5% 0 0;
         text-transform: none;
-        color: @gift-guide-h2-color;
+        color: @furoshiki-h2-color;
         line-height: 76px;
         // font-family: @souv;
         font-family: @gilroyb;
@@ -95,7 +95,7 @@
           line-height: 17px;
         }
         margin: 4% auto;
-        color: @gift-guide-p-color;
+        color: @furoshiki-p-color;
         text-transform: none;
         font-size: 24px;
         line-height: 34px;
@@ -128,18 +128,18 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            width: 17vw;
+            // width: 17vw;
             // width: 23vw;
           }
           @media screen and (max-width: 428px) {
             // background: #F19C01;
-            width: 65vw;
+            // width: 65vw;
             // width: 90vw;
           }
           font-family: @gilroyb;
-          color: @gift-guide-cta-color;
-          background: @gift-guide-cta-background;
-          width: 275px;
+          color: @furoshiki-cta-color;
+          background: @furoshiki-cta-background;
+          // width: 275px;
           // width: 383px;
           &.cta1 {
             @media screen and (max-width: 428px) {}
