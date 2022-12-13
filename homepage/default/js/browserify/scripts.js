@@ -101,8 +101,8 @@ $(document).ready(function () {
     type: 'carousel' //autoplay: 2000,
 
   }).mount();
-  (0, _alt.alt)('.hp .promo1 img', 'cyber week take 30% off everything & an extra 50% off Clearance');
-  (0, _alt.alt)('.hp .promo2 img', 'cyber week take 30% off everything & an extra 50% off Clearance');
+  (0, _alt.alt)('.hp .promo1 img', '4 days only $15 flash sale ');
+  (0, _alt.alt)('.hp .promo2 img', '');
   (0, _alt.alt)('.hp .c1 img', 'kids in cuddly sherpa jackets');
   (0, _alt.alt)('.hp .c2 .first img', 'Baby Essentials');
   (0, _alt.alt)('.hp .c2 .second img', 'baby in outfit');

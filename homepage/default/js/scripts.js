@@ -19,8 +19,8 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', 'cyber week take 30% off everything & an extra 50% off Clearance');
-  alt('.hp .promo2 img', 'cyber week take 30% off everything & an extra 50% off Clearance');
+  alt('.hp .promo1 img', '4 days only $15 flash sale ');
+  alt('.hp .promo2 img', '');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
   alt('.hp .c2 .first img', 'Baby Essentials');
   alt('.hp .c2 .second img', 'baby in outfit');
