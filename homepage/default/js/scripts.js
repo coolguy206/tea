@@ -19,7 +19,7 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
-  alt('.hp .promo1 img', '4 days only $15 flash sale ');
+  alt('.hp .promo1 img', 'the winter wonders sale take 25% off everything');
   alt('.hp .promo2 img', '');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
   alt('.hp .c2 .first img', 'Baby Essentials');
@@ -46,7 +46,7 @@ $(document).ready(function() {
   alt('.hp .c7 .fourth img', 'follow us on instagram');
   alt('.hp .swim img', 'watermelon graphic swimwear');
 
-  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .gift-guide, .hp .hello-kitty, .hp .hello-kitty-full' );
+  inview('.hp .promo1, .hp .promo2, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .swim, .hp .graphics, .hp .new-arrivals, .hp .refer-friend, .hp .rewear, .hp .year-20, .hp .give-back, .hp .gift-guide, .hp .furoshiki, .hp .hello-kitty, .hp .hello-kitty-full' );
 
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);

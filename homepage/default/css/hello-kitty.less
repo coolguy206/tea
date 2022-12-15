@@ -6,10 +6,10 @@
 @hello-kitty-cta-background: #D83E40;
 @hello-kitty-background2: #4765A1;
 @hello-kitty-cta-color2: @hello-kitty-cta-color;
-@hello-kitty-cta-background2: #24624F;
-@hello-kitty-h2-color2: #fff;
+@hello-kitty-cta-background2: #0076B3;
+@hello-kitty-h2-color2: #513F7A;
 @hello-kitty-h3-color: #A3D8C2;
-@hello-kitty-p-color2: #fff;
+@hello-kitty-p-color2: #513F7A;
 
 .hello-kitty {
   @media screen and (max-width: 428px) {
@@ -243,18 +243,20 @@
 
     .the-content {
       @media screen and (max-width: 428px) {
-        margin: 10% 0 0 !important;
+        // margin: 10% 0 0 !important;
       }
 
       margin: 0;
       position: absolute;
-      bottom: 10%;
+      // bottom: 10%;
+      top: 50%;
       width: 100%;
+      transform: translate(0, -50%);
 
       h2 {
         @media screen and (max-width: 1679px) {
           font-size: 3.6vw;
-          // line-height: 1.6vw;
+          line-height: 3.6vw;
         }
 
         @media screen and (max-width:428px) {
@@ -310,13 +312,17 @@
         }
 
         color: @hello-kitty-p-color2;
-        font-family: @souv;
+        font-family: @gilroyr;
         font-size: 24px;
         margin: 0 auto 4%;
         line-height: 34px;
+       
       }
 
       div {
+        @media screen and (max-width: 428px){
+          margin: 8% 0 0;
+        }
         text-align: center;
 
         a {
