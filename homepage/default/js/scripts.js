@@ -19,6 +19,12 @@ $(document).ready(function() {
     //autoplay: 2000,
   }).mount()
 
+  $('.furoshiki .see-details').fancybox({
+    helpers: {
+      overlay: null
+    }
+  });
+
   alt('.hp .promo1 img', 'the winter wonders sale take 25% off everything');
   alt('.hp .promo2 img', '');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
