@@ -1369,6 +1369,20 @@ module.exports = [{
     leftP: '',
     rightH2: '',
     rightP: ''
+  }, {
+    name: 'pajamas',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
+  }, {
+    name: 'dresses',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
 },
 /*-----------------------------------------------------------------------------------------*/
