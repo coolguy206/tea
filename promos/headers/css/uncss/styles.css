@@ -1,0 +1,2 @@
+/*** uncss> filename: promos/headers/css/styles.css ***/
+.container-promo-header{position:relative}.container-promo-header div.the-content{position:absolute;top:50%;width:100%;left:32%;transform:translate(0, -50%);display:flex}@media screen and (max-width:428px){.container-promo-header div.the-content{width:100%;left:50%;transform:translate(-50%, 0%);flex-wrap:wrap;justify-content:center;align-items:center;top:36%}}

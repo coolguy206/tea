@@ -25,8 +25,8 @@ $(document).ready(function() {
     }
   });
 
-  alt('.hp .promo1 img', 'the winter wonders sale take 25% off everything');
-  alt('.hp .promo2 img', '');
+  alt('.hp .promo1 img', 'the all good things sale over 400 styles starting at $10');
+  alt('.hp .promo2 img', 'the all good things sale over 400 styles starting at $10');
   alt('.hp .c1 img', 'kids in cuddly sherpa jackets');
   alt('.hp .c2 .first img', 'Baby Essentials');
   alt('.hp .c2 .second img', 'baby in outfit');

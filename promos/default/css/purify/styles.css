@@ -12,7 +12,7 @@ html {
 
 .promos {
   display: none;
-  background: #2B5579;
+  background: #8F4786;
 }
 
 .promos .promos-wrap {
@@ -113,7 +113,7 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #2B5579;
+  background: #8F4786;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
@@ -149,7 +149,7 @@ html {
 }
 
 .free-shipping-150 {
-  background: #D03543;
+  background: #4765A1;
   margin: 0 auto;
   position: fixed;
   padding: .1% 0;
@@ -161,7 +161,7 @@ html {
 }
 
 .free-shipping-150 .promos {
-  background: #D03543;
+  background: #4765A1;
   display: block !important;
 }
 
