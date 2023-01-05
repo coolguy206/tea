@@ -106,8 +106,8 @@ $(document).ready(function () {
       overlay: null
     }
   });
-  (0, _alt.alt)('.hp .promo1 img', 'the all good things sale over 400 styles starting at $10');
-  (0, _alt.alt)('.hp .promo2 img', 'the all good things sale over 400 styles starting at $10');
+  (0, _alt.alt)('.hp .promo1 img', 'end of season sale Up to 65% off off sale styles');
+  (0, _alt.alt)('.hp .promo2 img', 'end of season sale Up to 65% off off sale styles');
   (0, _alt.alt)('.hp .c1 img', 'kids in cuddly sherpa jackets');
   (0, _alt.alt)('.hp .c2 .first img', 'Baby Essentials');
   (0, _alt.alt)('.hp .c2 .second img', 'baby in outfit');
