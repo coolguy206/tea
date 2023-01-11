@@ -5,34 +5,40 @@
 
 .graphics {
   @media screen and (max-width:428px) {
-    padding: 8% 0 0;
+    padding: 8% 0;
     background: #FDF5F2;
   }
+
   padding: 3% 0;
 
   h2 {
     @media screen and (max-width: 1679px) {
-      font-size: 3vw;
+      font-size: 2.4vw;
     }
+
     @media screen and (max-width:428px) {
-      font-size: 40px;
-      line-height: 44px;
+      font-size: 7.5vw;
+      line-height: 9vw;
       margin: 0 0 6%;
     }
+
     @media screen and (max-width:320px) {
       font-size: 36px;
     }
+
     font-family: @gilroyb;
     color: @graphics-font-color;
     font-size: 40px;
     line-height: 44px;
     margin: 0 0 3%;
+
     // letter-spacing: 0.25em;
     // text-transform: capitalize;
     span {
       @media screen and (max-width:428px) {
         display: block;
       }
+
       position: relative;
 
       a {
@@ -40,6 +46,7 @@
           left: 0;
           top: 0;
         }
+
         color: @graphics-font-color;
         left: 3%;
         //top: -20%;
@@ -50,10 +57,16 @@
 
   div {
     @media screen and (max-width: 428px) {
-      flex-wrap: wrap;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 6%;
+      row-gap: 1%;
     }
-    display: flex;
+
+    // display: flex;
     text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
 
     a {
       @media screen and (max-width: 428px) {
@@ -61,8 +74,9 @@
         padding: 0 4%;
         margin: 0 0 10%;
       }
+
       flex-basis: 25%;
-      padding: 0 2%;
+      // padding: 0 2%;
       text-decoration: none;
 
       img {}

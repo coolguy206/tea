@@ -1,10 +1,10 @@
 @import "var.less";
 @c3-first-font-color: #fff;
 @c3-first-cta-color: #fff;
-@c3-first-cta-background: #FA8180;
+@c3-first-cta-background: #8CD0BF;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #fff;
-@c3-second-cta-background: #BF9353;
+@c3-second-cta-background: #E16968;
 @c3-third-font-color: #fff;
 @c3-third-cta-color: #fff;
 @c3-third-cta-background: #24624F;
@@ -55,11 +55,11 @@
       .the-content {
         @media screen and (max-width: 428px) {
           margin: 10% 0 0 !important;
-          bottom: 10%;
+          bottom: 7%;
         }
         margin: 0;
         position: absolute;
-        bottom: 12%;
+        bottom: 8%;
         width: 100%;
 
         h2 {
@@ -97,6 +97,7 @@
         flex-wrap: wrap;
         padding: 0;
       }
+      flex-basis: 50%;
 
       & > a {
         @media screen and (max-width:428px) {
@@ -167,6 +168,7 @@
       @media screen and (max-width: 428px) {
         padding: 0;
       }
+      flex-basis:50%;
 
       h2 {
         @media screen and (max-width:428px) {}
@@ -182,9 +184,15 @@
           }
 
           a {
-            @media screen and (max-width: 428px) {}
+            @media screen and (max-width:1679px) {
+              width: 17vw;
+            }
+            @media screen and (max-width: 428px) {
+              width: 68vw;
+            }
             color: @c3-second-cta-color;
             background: @c3-second-cta-background;
+            width: 290px;
 
             &.cta1 {
               @media screen and (max-width: 428px) {}
