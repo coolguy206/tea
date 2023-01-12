@@ -38,8 +38,8 @@ $(document).ready(function () {
   //   }
   // });
 
-  alt('.hp .promo1 img', 'end of season sale Up to 65% off off sale styles');
-  alt('.hp .promo2 img', 'end of season sale Up to 65% off off sale styles');
+  alt('.hp .promo1 img', 'end of season sale take an extra 40% off sale styles');
+  alt('.hp .promo2 img', '');
   alt('.hp .c1 .content-1 img', 'girl in swimwear');
   alt('.hp .c1 .content-2 img', 'kids in swimwear');
   alt('.hp .c1 .content-3 img', 'girls in dresses');
