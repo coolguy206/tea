@@ -15,7 +15,7 @@ module.exports = {
   promos: {
     files: [{
       expand: true,
-      cwd: 'promos/' + config.promo.name + '/js/',
+      cwd: 'promos/' + config.promo.name + '/js/babel/',
       src: '*.js',
       dest: 'promos/' + config.promo.name + '/js/browserify/'
     }]

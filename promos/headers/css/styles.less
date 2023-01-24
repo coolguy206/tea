@@ -1,5 +1,29 @@
+@import 'var.less';
+
 .container-promo-header {
 	position: relative;
+	background: #F9EBE5;
+
+	h2 {
+		@media screen and (max-width: 1679px){
+			font-size: 1.1vw;
+			letter-spacing: .3vw;
+		}
+		@media screen and (max-width: 428px){
+			font-size: 4vw;
+			letter-spacing: 1vw;
+			padding: 8vw 0 0;
+		}
+		font-size: 18px;
+		line-height: 28px;
+		font-family: @gilroyb;
+		color: #A291B9;
+		text-align: center;
+		text-transform: uppercase;
+		letter-spacing: 4px;
+		padding: 1vw 0 0;
+		display:none;
+	}
 
 	div {
 
@@ -12,22 +36,44 @@
 				justify-content: center;
 				align-items: center;
 				top: 36%;
+				flex-wrap:wrap;
 			}
 
 			@media screen and (max-width:320px) {
 				// top: 0;
 			}
 
-			position: absolute;
+			// position: absolute;
 			top: 50%;
-			width: 100%;
-			left: 32%;
-			transform: translate(0, -50%);
+			width: 81%;
+			left: 50%;
+			transform: translate(-50%, 0%);
 			display: flex;
+			position:relative;
 			// column-gap: 2%;
-			// justify-content: space-evenly;
+			justify-content: center;
 
 			.the-grid {}
+
+			a {
+				@media screen and (max-width: 428px){
+					flex-basis: 33%;
+				}
+				flex-basis: 25%;
+			}
+
+			&.boys {
+				a {
+					@media screen and (max-width: 428px){
+						flex-basis: 33%;
+					}
+					flex-basis: 20%;
+				}
+			}
+
+			&.baby-girl {
+				width: 97%;
+			}
 		}
 	}
 }

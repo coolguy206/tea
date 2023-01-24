@@ -1,4 +1,4 @@
-export const urls = {
+const urls = {
   num10: [{
     url: 'girl',
     text: 'girl'

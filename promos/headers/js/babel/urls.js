@@ -1,9 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.urls = void 0;
 var urls = {
   num10: [{
     url: 'girl',
@@ -71,5 +67,4 @@ var urls = {
     boy: [10, 12, 15]
   }
 };
-exports.urls = urls;
 //# sourceMappingURL=urls.js.map

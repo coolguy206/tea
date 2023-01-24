@@ -39,7 +39,7 @@ module.exports = {
   promos: {
     //dynamic files
     expand: true,
-    cwd: 'promos/' + config.promo.name + '/js/babel/',
+    cwd: 'promos/' + config.promo.name + '/js/browserify/',
     src: ['*.js'],
     dest: 'promos/' + config.promo.name + '/js/jsmin/',
     ext: '.min.js',

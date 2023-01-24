@@ -1,4 +1,4 @@
-export const makeLinks = (arr, baseURL, cat) => {
+const makeLinks = (arr, baseURL, cat) => {
   // console.log(cat);
   var theURLs = ``;
   $.each(arr, function(i, val) {

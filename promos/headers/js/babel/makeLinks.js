@@ -1,10 +1,5 @@
 "use strict";
 
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.makeLinks = void 0;
-
 var makeLinks = function makeLinks(arr, baseURL, cat) {
   // console.log(cat);
   var theURLs = "";
@@ -68,6 +63,4 @@ var makeLinks = function makeLinks(arr, baseURL, cat) {
     $('.container-black-friday div').append("<a class=\"cta-border cta-last cta-".concat(cat, "\" href=\"/").concat(baseURL, "/").concat(cat, "\"><span>shop</span> ").concat(text, "</a>"));
   }
 };
-
-exports.makeLinks = makeLinks;
 //# sourceMappingURL=makeLinks.js.map
