@@ -7,16 +7,16 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/0126/v0/`;
-// var category = `homepage/2023/0110/v1/`;
+// var category = `promos/one-offs/2023/0126/v0/`;
+var category = `homepage/2023/0126/v1/`;
 // var category = `landing-pages/new-parents-sweeps/2022/1205/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0126/`;
-var writeFilePath = `promos/default/dev/images/`;
+var readFilePath = `handoff/hp/0126/handoff/`;
+var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 

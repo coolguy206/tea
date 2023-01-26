@@ -1,10 +1,10 @@
 @import "var.less";
 @c3-first-font-color: #fff;
-@c3-first-cta-color: #fff;
-@c3-first-cta-background: #8CD0BF;
+@c3-first-cta-color: #6C6694;
+@c3-first-cta-background: #FAC9CE;
 @c3-second-font-color: #FFF;
-@c3-second-cta-color: #fff;
-@c3-second-cta-background: #E16968;
+@c3-second-cta-color: #6C6694;
+@c3-second-cta-background: #F1FF50;
 @c3-third-font-color: #fff;
 @c3-third-cta-color: #fff;
 @c3-third-cta-background: #24624F;
@@ -98,6 +98,7 @@
         padding: 0;
       }
       flex-basis: 50%;
+      order: 2;
 
       & > a {
         @media screen and (max-width:428px) {
@@ -169,6 +170,7 @@
         padding: 0;
       }
       flex-basis:50%;
+      order: 1;
 
       h2 {
         @media screen and (max-width:428px) {}
@@ -185,14 +187,14 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: 17vw;
+              // width: 17vw;
             }
             @media screen and (max-width: 428px) {
-              width: 68vw;
+              // width: 68vw;
             }
             color: @c3-second-cta-color;
             background: @c3-second-cta-background;
-            width: 290px;
+            // width: 290px;
 
             &.cta1 {
               @media screen and (max-width: 428px) {}
