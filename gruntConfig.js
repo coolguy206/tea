@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'about/unsubscribe-catalog'
+    name: 'help/contact-us/'
   },
   zone: {
     name: 'mega-menu/sub-nav',
