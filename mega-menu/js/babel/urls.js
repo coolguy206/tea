@@ -5,18 +5,31 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.urls = void 0;
 var urls = {
-  promo1: {
-    Promo: "/clothing-sale",
-    girl: "/girls-clothing/favorites/limited-time-sale",
-    boy: "/boys-clothing/favorites/limited-time-sale",
+  promo: {
+    promo: "/select-styles",
+    girl: "/girls-clothing",
+    boy: "/boys-clothing",
     baby: {
-      girl: "/baby-girl-clothes/favorites/limited-time-sale",
-      boy: "/baby-boy-clothes/favorites/limited-time-sale",
+      girl: "/baby-girl-clothes",
+      boy: "/baby-boy-clothes",
       newborn: "/newborn-clothing"
     },
     toddler: {
-      girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
-      boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
+      girl: "/toddler-girls-clothes",
+      boy: "/toddler-boys-clothes"
+    },
+    select: {
+      girl: "/girls-clothing/favorites/limited-time-sale",
+      boy: "/boys-clothing/favorites/limited-time-sale",
+      baby: {
+        girl: "/baby-girl-clothes/favorites/limited-time-sale",
+        boy: "/baby-boy-clothes/favorites/limited-time-sale",
+        newborn: "/newborn-clothing"
+      },
+      toddler: {
+        girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
+        boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
+      }
     },
     sale: {
       girl: "/sale/girls-clothing/view-all ",
@@ -30,19 +43,19 @@ var urls = {
         girl: "/sale/toddler-girls-clothing/view-all",
         boy: "/sale/toddler-boys-clothing/view-all"
       }
-    }
-  },
-  promo2: {
-    girl: "/sale/girls-clothing/clearance",
-    boy: "/sale/boys-clothing/clearance",
-    baby: {
-      girl: "/sale/baby-girl-clothes/clearance",
-      boy: "/sale/baby-boy-clothes/clearance",
-      newborn: "/sale/newborn-clothing/clearance"
     },
-    toddler: {
-      girl: "/sale/toddler-girls-clothing/clearance",
-      boy: "/sale/toddler-boys-clothing/clearance"
+    clearance: {
+      girl: "/sale/girls-clothing/clearance",
+      boy: "/sale/boys-clothing/clearance",
+      baby: {
+        girl: "/sale/baby-girl-clothes/clearance",
+        boy: "/sale/baby-boy-clothes/clearance",
+        newborn: "/sale/newborn-clothing/clearance"
+      },
+      toddler: {
+        girl: "/sale/toddler-girls-clothing/clearance",
+        boy: "/sale/toddler-boys-clothing/clearance"
+      }
     }
   }
 };

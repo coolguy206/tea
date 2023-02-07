@@ -62,7 +62,31 @@
 				flex-basis: 25%;
 			}
 
+			&.sale {
+				@media screen and (max-width: 428px){
+					width: 100%;
+				}
+				width: 67.5%;
+			}
+
+			&.select-styles {
+				@media screen and (max-width: 428px){
+					width: 100%;
+				}
+				width: 54%;
+
+				a {
+					@media screen and (max-width: 428px){
+						flex-basis: 34%;
+					}
+				}
+			}
+
 			&.boys {
+				@media screen and (max-width: 428px){
+					width: 100%;
+				}
+				width: 67.5%;
 				a {
 					@media screen and (max-width: 428px){
 						flex-basis: 33%;
@@ -72,7 +96,10 @@
 			}
 
 			&.baby-girl {
-				width: 97%;
+				@media screen and (max-width: 428px){
+					width: 100%;
+				}
+				width: 81%;
 			}
 		}
 	}

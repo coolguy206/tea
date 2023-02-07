@@ -118,7 +118,7 @@ $(document).ready(function () {
   //   }
   // });
 
-  (0, _alt.alt)('.hp .promo1 img', 'take an extra 25% off sale & Clearance styles');
+  (0, _alt.alt)('.hp .promo1 img', 'the sunshine sale take 25% off select styles');
   (0, _alt.alt)('.hp .promo2 img', '');
   (0, _alt.alt)('.hp .c1 .content-1 img', 'girl in swimwear');
   (0, _alt.alt)('.hp .c1 .content-2 img', 'kids in swimwear');
