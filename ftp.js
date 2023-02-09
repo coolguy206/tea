@@ -8,15 +8,15 @@ require('dotenv').config()
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2023/0202/v1/`;
-// var category = `homepage/2023/0126/v1/`;
-var category = `landing-pages/swim-shop/2023/0202/v0/`;
+var category = `homepage/2023/0209/v0/`;
+// var category = `landing-pages/swim-shop/2023/0202/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/landing-pages/swim-shop/handoff/`;
-var writeFilePath = `landing-page/shops/swim-shop/default/dev/images/`;
+var readFilePath = `handoff/hp/0209/handoff/`;
+var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
 
