@@ -1,0 +1,97 @@
+@import "var.less";
+@reviews-font-color: #47363D;
+@reviews-span-color1: #D62471;
+@reviews-span-color2: #008E70;
+@reviews-span-color3: #5C9FB3;
+
+
+.reviews {
+  @media screen and (max-width:428px) {}
+
+  .the-content {
+    @media screen and (max-width: 428px) {
+      padding: 10vw 0;
+    }
+
+    text-align: center;
+    padding: 3vw 0;
+
+    .quotes {
+      @media screen and (max-width: 1679px){
+        font-size: 4vw;
+      }
+      @media screen and (max-width: 428px){
+        font-size: 10vw;
+      }
+      font-family: @gilroyb;
+      font-size: 70px;
+      font-style: italic;
+      color: @reviews-font-color;
+    }
+
+
+    p {
+      @media screen and (max-width: 1679px) {
+        font-size: 2.6vw;
+        line-height: 3.1vw;
+      }
+
+      @media screen and (max-width: 428px) {
+        font-size: 6vw;
+        line-height: 8vw;
+        margin: 0 0 8vw;
+      }
+
+      font-size: 44px;
+      line-height: 53px;
+      text-align: center;
+      color: @reviews-font-color;
+      margin: 0vw 0vw 1vw;
+      font-style: italic;
+      font-family: @souv;
+
+      &.name {
+        @media screen and (max-width: 1679px) {
+          font-size: 1vw;
+        }
+
+        @media screen and (max-width:428px) {
+          font-size: 3.8vw;
+        }
+
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: @reviews-font-color;
+        font-family: gilroy-bold;
+        margin: 0 0 1vw;
+        font-style: normal;
+        font-weight:bold;
+      }
+
+      span {
+        font-family: @gilroyb;
+        text-transform: uppercase;
+        font-style: normal;
+        letter-spacing: 4px;
+
+        &.color-1 {
+          color: @reviews-span-color1;
+        }
+
+        &.color-2 {
+          color: @reviews-span-color2;
+        }
+
+        &.color-3 {
+          color: @reviews-span-color3;
+        }
+      }
+
+    }
+  }
+
+
+}

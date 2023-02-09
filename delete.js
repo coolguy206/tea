@@ -5,7 +5,7 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/hp/handoff/`;
+var readFilePath = `handoff/landing-pages/dresses/handoff/`;
 
 fs.readdir(`${readFilePath}`, (err, files) => {
     //   console.log(files);

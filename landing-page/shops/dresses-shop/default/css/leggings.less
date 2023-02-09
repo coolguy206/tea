@@ -1,0 +1,96 @@
+@import "var.less";
+@leggings-cta1-color: #F8CF5B;
+@leggings-cta1-background: #67825F;
+@leggings-cta2-color: #fff;
+@leggings-cta2-background: #EF3C25;
+@leggings-cta3-color: #fff;
+@leggings-cta3-background: #EA94CD;
+@leggings-cta4-color: #fff;
+@leggings-cta4-background: #3862AA;
+@leggings-cta5-color: #fff;
+@leggings-cta5-background: #3862AA;
+@leggings-cta6-color: #fff;
+@leggings-cta6-background: #E8B2AB;
+
+.leggings {
+  @media screen and (max-width: 428px) {
+   
+  }
+  position: relative;
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 1679px) {
+      
+      }
+
+      @media screen and (max-width: 428px) {
+        display: block;
+        bottom: 8%;
+      }
+
+      position: absolute;
+      bottom: 7%;
+      width: 100%;
+      left: 0%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 2.6vw;
+          line-height: 3vw;
+        }
+        @media screen and (max-width:428px){
+          font-size: 9vw;
+          margin: 0 0 8%;
+        }
+
+        text-align: center;
+        color: #EC5152;
+        flex-basis: 39%;
+        font-size: 44px;
+        line-height: 50px;
+        font-family: @gilroyb;
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.9vw;
+          line-height: 2.5vw;
+        }
+        @media screen and (max-width: 428px){
+          margin: 0 0 8vw;
+          font-size: 4vw;
+          line-height: 8vw;
+        }
+        text-align: center;
+        color: #47363D;
+        flex-basis: 60%;
+        font-size: 32px;
+        line-height: 38px;
+        font-family: @gilroyr;
+      }
+
+      div {
+        flex-basis: 39%;
+        text-align: center;
+
+        a {
+          @media screen and (max-width:1679px){
+            width: 13vw;
+          }
+          @media screen and (max-width: 428px){
+            width: 52vw;
+          }
+          background: #EC5152;
+          color: #fff;
+          width: 222px;
+        }
+      }
+
+
+    }
+  }
+}
