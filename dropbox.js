@@ -16,11 +16,11 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/02 February/020223 25% Off Select Styles/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/020923 Dresses LP/Handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/020923 Swim LP/handoff/`;
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/landing-pages/dresses/handoff/`;
+  var writeFilePath = `handoff/landing-pages/swim-shop/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

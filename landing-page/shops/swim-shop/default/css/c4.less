@@ -8,9 +8,11 @@
 @c4-second-cta-background: #59BF98;
 
 .c4 {
-  @media screen and (max-width: 428px) {}
+  @media screen and (max-width: 428px) {
+    flex-wrap:wrap;
+  }
   display: flex;
-  flex-wrap: wrap;
+  // flex-wrap: wrap;
 
   div {
     &.first,
@@ -52,12 +54,16 @@
             width: 83.6vw;
           }
           width: 358px;
+          color: @c4-first-cta-color;
+          background: @c4-first-cta-background;
         }
       }
     }
 
     &.first {
       @media screen and (max-width: 428px) {}
+      order:2;
+      flex-basis: 67%;
 
       .the-content {
         @media screen and (max-width: 428px) {}
@@ -72,8 +78,8 @@
 
           a {
             @media screen and (max-width:428px) {}
-            color: @c4-first-cta-color;
-            background: @c4-first-cta-background;
+            // color: @c4-first-cta-color;
+            // background: @c4-first-cta-background;
 
             &.cta1 {}
 
@@ -85,6 +91,8 @@
 
     &.second {
       @media screen and (max-width: 428px) {}
+      order: 1;
+      flex-basis:33.5%;
 
       .the-content {
         @media screen and (max-width: 428px) {}
@@ -101,8 +109,8 @@
 
           a {
             @media screen and (max-width: 428px) {}
-            color: @c4-second-cta-color;
-            background: @c4-second-cta-background;
+            // color: @c4-second-cta-color;
+            // background: @c4-second-cta-background;
 
             &.cta1 {}
           }

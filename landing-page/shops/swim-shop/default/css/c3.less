@@ -1,7 +1,7 @@
 @import "var.less";
 @c3-first-font-color: #fff;
 @c3-first-cta-color: #fff;
-@c3-first-cta-background: #E061B9;
+@c3-first-cta-background:  #EC5053;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #FFF;
 @c3-second-cta-background: #3862AA;
@@ -53,6 +53,8 @@
               width: 61.6vw;
             }
             width: 347px;
+            color: @c3-first-cta-color;
+            background: @c3-first-cta-background;
           }
         }
       }
@@ -68,6 +70,8 @@
         flex-wrap: wrap;
         padding: 0;
       }
+      order: 2;
+      flex-basis: 67%;
       // padding: 1.7% 1% 0;
       // flex-basis: 67%;
       & > a {
@@ -87,8 +91,8 @@
 
           a {
             @media screen and (max-width: 428px) {}
-            color: @c3-first-cta-color;
-            background: @c3-first-cta-background;
+            // color: @c3-first-cta-color;
+            // background: @c3-first-cta-background;
 
             &.cta1 {
               @media screen and (max-width:428px) {}
@@ -112,6 +116,8 @@
 
     &.second {
       @media screen and (max-width: 428px) {}
+      order: 1;
+      flex-basis:33.5%;
 
       .the-content {
         @media screen and (max-width: 428px) {}
@@ -120,8 +126,8 @@
           @media screen and (max-width: 428px) {}
 
           a {
-            color: @c3-second-cta-color;
-            background: @c3-second-cta-background;
+            // color: @c3-second-cta-color;
+            // background: @c3-second-cta-background;
 
             &.cta1 {
               @media screen and (max-width: 428px) {}
@@ -153,7 +159,7 @@
           @media screen and (max-width: 428px) {}
 
           a {
-            color: @c3-third-cta-color;
+            // color: @c3-third-cta-color;
 
             &.cta1 {}
 
