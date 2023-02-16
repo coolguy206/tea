@@ -11,7 +11,7 @@ export const switchSale = (href) => {
 
     case '/sale/girls-clothing/view-all':
       // promo1 = urls.promo.girl;
-      promo1 = urls.promo.select.girl;
+      promo1 = urls.promo.girl;
       promo2 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
       // $('.promo1-url').show();
@@ -24,7 +24,7 @@ export const switchSale = (href) => {
 
     case '/sale/boys-clothing/view-all':
       // promo1 = urls.promo.boy;
-      promo1 = urls.promo.select.boy;
+      promo1 = urls.promo.boy;
       promo2 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
       // $('.promo1-url').show();
@@ -37,7 +37,7 @@ export const switchSale = (href) => {
 
     case '/sale/baby-girl-clothes/view-all':
        // promo1 = urls.promo.baby.girl;
-      promo1 = urls.promo.select.baby.girl;
+      promo1 = urls.promo.baby.girl;
       promo2 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
       // $('.promo1-url').show();
@@ -50,7 +50,7 @@ export const switchSale = (href) => {
 
     case '/sale/baby-boy-clothes/view-all':
          // promo1 = urls.promo.baby.boy;
-      promo1 = urls.promo.select.baby.boy;
+      promo1 = urls.promo.baby.boy;
       promo2 = urls.promo.sale.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
       // $('.promo1-url').show();
@@ -63,7 +63,7 @@ export const switchSale = (href) => {
 
     case '/sale/toddler-girls-clothing/view-all':
       // promo1 = urls.promo.toddler.girl;
-      promo1 = urls.promo.select.toddler.girl;
+      promo1 = urls.promo.toddler.girl;
       promo2 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
       // $('.promo1-url').show();
@@ -76,7 +76,7 @@ export const switchSale = (href) => {
 
     case '/sale/toddler-boys-clothing/view-all':
        // promo1 = urls.promo.toddler.boy;
-      promo1 = urls.promo.select.toddler.boy;
+      promo1 = urls.promo.toddler.boy;
       promo2 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
       // $('.promo1-url').show();
@@ -89,7 +89,7 @@ export const switchSale = (href) => {
 
     case '/sale/newborn-clothing/view-all':
        // promo1 = urls.promo.baby.newborn;
-      promo1 = urls.promo.select.baby.newborn;
+      promo1 = urls.promo.baby.newborn;
       promo2 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
       // $('.promo1-url').show();
