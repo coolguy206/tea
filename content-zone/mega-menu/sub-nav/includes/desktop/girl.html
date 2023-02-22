@@ -1,67 +1,41 @@
 <div>
-  <a href="/girls-clothing/new-arrivals" data="mega menu girl">Girl (5&#8211;16)</a>
+  <a href="/privatesale/girls-clothing" data="mega menu girl">Girls</a>
   <span class="line"></span>
+
   <div class="menu flex-menu">
-    <div class="panel panel-1">
-      {assign var=i value=0}
-{*
-      <ul class="category">
-        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-        {sub_cats name="cat" category="black-friday/girl"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-        {/sub_cats}
-      </ul>
-*}
-      <ul class="category first">
-        <li>Shop by Category</li>
-
-        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
-        {if $i && $i % 8 eq 0}
-          </ul>
-          <ul class="category">
-            <li class="spacer">Spacer</li>
-        {/if}
-          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl categories" >{$cat.title}</a></li>
-        {math equation="x + y" x=$i y=1 assign=i}
-        {/sub_cats}
-          <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
-          <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
-        </ul>
-      </ul>
-    </div>
-
-    <div class="panel panel-2">
+    <div class="panel panel-1 col-s-4 col-xs-4 col-xxs-4">
       <ul class="category">
         <li>Shop by Collection</li>
-        <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
-
-        <li><a href="/valentines-day-print-shop" class="" data="mega menu Valentines Day Shop"> Valentine's Day Shop</a></li>
-
-        <li><a href="/teaxsanrio" class="" data="mega menu hello kitty"> Tea x Hello Kitty® and Friends</a></li>
-
-        <li><a href="/sibling-shop" class="" data="mega menu Sibling Shop"> Sibling Shop</a></li>
-
-        {sub_cats name="cat" category="girls-clothing/favorites"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl favorites">{$cat.title}</a></li>
+        {sub_cats name="cat" category="privatesale/girls-clothing/shop-by-collection"}
+        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl collections">{$cat.title}</a></li>
         {/sub_cats}
       </ul>
     </div>
 
-    <div class="panel panel-4">
-      <ul class="category">
-        <li>Tea REWEAR</li>
-        <li>
-          <!-- <a href="https://teacollection.kidizen.com/" target="_blank">Trade In & Shop Preloved Tea</a> -->
-          <a href="#" class="kidizen-url" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&utm_medium=Web+-+girl+dropdown&utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea
-            for Rewards</a>
+    <div class="panel panel-2 col-s-4 col-xs-4 col-xxs-4">
+      {assign var=i value=0}
+      <ul class="category first">
+        <li>Shop by Category</li>
+        <li><a href="{$secure_html_url}privatesale/girls-clothing/view-all" data="mega menu girl view all">View All</a>
         </li>
+        {sub_cats name="cat" category="privatesale/girls-clothing/shop-by-category"}
+        {if $i && $i % 6 eq 0}
       </ul>
+
+      <ul class="category">
+        <li class="spacer">Spacer</li>
+        {/if}
+        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl categories">{$cat.title}</a></li>
+        {math equation="x + y" x=$i y=1 assign=i}
+        {/sub_cats}
+      </ul>
+      </ul>
+
     </div>
 
-    <div class="panel panel-3">
-      <div class="da-rennab-zone" data-zone="mega_girl"></div>
-    </div>
+    <div class="panel panel-3 col-s-4 col-xs-4 col-xxs-4"></div>
 
+    <div class="clear"></div>
 
   </div>
 </div>

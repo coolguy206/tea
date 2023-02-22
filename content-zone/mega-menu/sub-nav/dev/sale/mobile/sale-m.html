@@ -1,26 +1,24 @@
-<li>
-  <h2>Sale <span class="fas fa-plus"></span></h2>
-  <div class="sub">
-    <h3><a style="font-size: .875rem;" href="/clothing-sale" class="sale-view-all" data="mobile mega menu dresses categories" >VIEW ALL</a></h3>
+<h3>
+  <span class="fas fa-chevron-left"></span>
+  Sale
+  <span class="fas fa-chevron-right"></span>
+</h3>
 
-    include "sale-girl-m.html"
+<div class="links">
 
-    include "sale-boy-m.html"
+  <ul>
+    <!-- <li>Shop by Category</li> -->
+    <li><a href="/sale-passport" data="mobile mega menu sale view all">View All</a></li>
+    {sub_cats name="cat" category="sale-passport"}
+    <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tween categories">{$cat.title}</a></li>
+    {/sub_cats}
+  </ul>
 
-    <!-- include "sale-tween-m.html" -->
+  <!-- <ul>
+    <li>Shop by Collection</li>
+    {sub_cats name="cat" category="privatesale/tween-girls-clothing/shop-by-collection"}
+    <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tween collections">{$cat.title}</a></li>
+    {/sub_cats}
+  </ul> -->
 
-    include "sale-toddler-girl-m.html"
-
-    include "sale-toddler-boy-m.html"
-
-    include "sale-baby-girl-m.html"
-
-    include "sale-baby-boy-m.html"
-
-    include "sale-newborn-m.html"
-
-    {* clearance cat is inactive for now
-    include "sale-clearance-m.html"
-    *}
-    <div>
-</li>
+</div>
