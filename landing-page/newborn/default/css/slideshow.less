@@ -1,0 +1,308 @@
+@import "var.less";
+@slideshow-font-color: #47363D;
+
+@slideshow-1-h2-color: #E2908C;
+@slideshow-1-cta-background: @slideshow-1-h2-color;
+
+@slideshow-2-h2-color: #6D8995;
+@slideshow-2-cta-background: @slideshow-2-h2-color;
+
+@slideshow-3-h2-color: #E2908C;
+@slideshow-3-cta-background: @slideshow-3-h2-color;
+
+@slideshow-4-h2-color: #6D8995;
+@slideshow-4-cta-background: @slideshow-4-h2-color;
+
+@slideshow-5-h2-color: #008E70;
+@slideshow-5-cta-background: @slideshow-5-h2-color;
+
+@slideshow-h3-color: @slideshow-font-color;
+
+@slideshow-p-color: @slideshow-font-color;
+
+@slideshow-cta-color: #fff;
+@slideshow-cta-background: #F1FF50;
+
+.slideshow {
+  @media screen and (max-width: 428px){
+    background: #FDF5F2;
+  }
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .glide__bullets {
+    @media screen and (max-width: 428px) {
+      bottom: 9vw;
+    }
+
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+
+    button {
+      @media screen and (max-width: 428px){
+        // background-color: #FA8180 !important;
+      }
+      background: #A36452 !important;
+
+      &:hover, &.glide__bullet--active {
+        @media screen and (max-width:428px){
+          // background-color: #F1FF50 !important;
+          // border: none !important;
+        }
+        background: #47363D !important;
+        border: none !important;
+      }
+    }
+  }
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 428px) {
+        width: 100%;
+        left: 0;
+        top: 0;
+        transform: translateX(0);
+        position:relative;
+        order: 1;
+      }
+
+      top: 50%;
+      width: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      text-align: center;
+
+      position: absolute;
+
+      div {
+
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 22vw;
+          }
+
+          @media screen and (max-width: 428px) {
+            width: 77vw;
+          }
+
+          width: 328px;
+          background: @slideshow-1-cta-background;
+          color: @slideshow-cta-color;
+        }
+      }
+
+
+      &.content-1 {
+        @media screen and (max-width: 428px) {}
+
+        h2, p {
+
+          color: @slideshow-1-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @slideshow-1-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+      &.content-2 {
+        @media screen and (max-width: 428px) {}
+
+        h2, p {
+
+          color: @slideshow-2-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @slideshow-2-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+      &.content-3 {
+        @media screen and (max-width: 428px) {}
+
+
+        h2, p {
+
+          color: @slideshow-3-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @slideshow-3-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+      &.content-4 {
+        @media screen and (max-width: 428px) {}
+
+
+        h2, p {
+
+          color: @slideshow-4-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @slideshow-4-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+      &.content-5 {
+        @media screen and (max-width: 428px) {}
+
+
+        h2 {
+
+          color: @slideshow-5-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @slideshow-5-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+      a,
+      h3,
+      h2,
+      p {}
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 2.7vw;
+          line-height: 2vw;
+        }
+
+        @media screen and (max-width: 428px) {
+          font-size: 8vw;
+          margin: 0 0 8vw;
+        }
+
+        @media screen and (max-width:320px) {
+          // margin: 4% 0 0;
+        }
+
+        text-align: center;
+        // letter-spacing: 4px;
+        // text-transform: uppercase;
+        color: @slideshow-font-color;
+        font-size: 54px;
+        line-height: 28px;
+        font-family: @gilroyb;
+        margin: 0 0 1vw;
+      }
+
+      h3 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1vw;
+          // line-height: 2vw;
+        }
+
+        @media screen and (max-width: 428px) {
+          font-size: 4.2vw;
+          margin: 0 0 8vw;
+        }
+
+        color: @slideshow-h3-color;
+        font-family: @gilroyb;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0 0 1vw;
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 2vw;
+          line-height: 2.4vw;
+        }
+
+        @media screen and (max-width: 428px) {
+          font-size: 5vw;
+          line-height: 7vw;
+          margin: 0 0 4vw;
+        }
+
+        text-align: center;
+        margin: 10% auto;
+        color: @slideshow-p-color;
+        text-transform: none;
+        font-size: 32px;
+        line-height: 42px;
+        width: 100%;
+        font-family: @souv;
+        // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+      }
+
+      div {
+        @media screen and (max-width: 428px) {
+          margin: 2vw 0 0;
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {
+            // width: 23vw;
+          }
+
+          @media screen and (max-width: 428px) {
+            // background: #F19C01;
+            // width: 90vw;
+          }
+
+          font-family: @gilroyb;
+          color: @slideshow-cta-color;
+          background: @slideshow-cta-background;
+
+          // width: 383px;
+          &.cta1 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta2 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta3 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta4 {
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta5 {
+            @media screen and (max-width: 1679px) {}
+
+            @media screen and (max-width: 428px) {}
+          }
+
+          &.cta6 {
+            @media screen and (max-width: 428px) {}
+          }
+        }
+      }
+    }
+  }
+}

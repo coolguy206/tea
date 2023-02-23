@@ -1,12 +1,13 @@
 @import 'var.less';
-@c1-color: #6D8995;
-@c1-color-m: #FAF3E1;
+@c1-color: #594b51;
+@c1-color-m: #47363D;
 @c1-cta-color: #fff;
-@c1-cta-background-color: #F7AB98;
+@c1-cta-background-color: #A36452;
 
 .c1 {
   @media screen and (max-width:428px) {
     //background: @background;
+    padding: 0 0 41%;
   }
   position: relative;
 
@@ -17,18 +18,20 @@
   .the-content {
     @media screen and (max-width:428px) {
       width: 100%;
-      top: 1%;
+      top: 0%;
       left: 0;
       //position: relative;
-      padding: 0 0 9%;
+      padding: 9% 0 9%;
       transform: translate(0);
+      display:flex;
+      flex-wrap:wrap;
     }
     position: absolute;
     top: 50%;
-    left: 50%;
-    width: 50%;
+    left: 0%;
+    width: 40%;
     text-align: center;
-    transform: translate(-50%,-50%);
+    transform: translate(0%,-50%);
 
     img {
       margin: 0 0 10%;
@@ -37,33 +40,43 @@
 
     h2 {
       @media screen and (max-width:1679px) {
-        font-size: 2.6vw;
-        line-height: 3.3vw;
+        font-size: 3.3vw;
+        line-height: 3.9vw;
       }
       @media screen and (max-width:428px) {
         // display: none;
-        margin: 0 0 6%;
-        color: #fff;
+        margin: 0 0 131%;
+        // color: #fff;
         font-size: 9vw;
         line-height: 11vw;
+        order: 1;
+        flex-basis: 100%;
       }
       color: @c1-color;
       font-family: @gilroyb;
-      font-size: 44px;
-      line-height: 53px;
+      font-size: 54px;
+      line-height: 65px;
     }
 
     p {
+      @media screen and (max-width: 1679px){
+        font-size: 2.2vw;
+        line-height: 2.6vw;
+      }
       @media screen and (max-width:428px) {
         margin: 4% auto 0;
         // width: 66%;
-        color: #fff;
+        // color: #fff;
         font-size: 4.7vw;
         line-height: 6vw;
+        order: 3;
+        flex-basis: 100%;
       }
       margin: 6% auto 0;
       // width: 79%;
       color: @c1-color;
+      font-size: 36px;
+      line-height: 43px;
     }
 
     div {
@@ -73,6 +86,8 @@
       @media screen and (max-width:428px) {
         margin: 7% 0 0;
         text-align: center;
+        order: 2;
+        flex-basis: 100%;
       }
       margin: 7% 0 0;
 

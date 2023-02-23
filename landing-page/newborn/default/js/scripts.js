@@ -4,8 +4,19 @@ import {
 import {
   inview
 } from './inview.js';
+import Glide from '@glidejs/glide'
 
 $(document).ready(function() {
+
+  new Glide('.slideshow .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration:2000,
+    perView: 1,
+    hoverpause:true,
+    gap:0
+  }).mount()
+
   alt('.content-wrap .c1 > a img', 'babies');
   alt('.content-wrap .c1 .the-content img', 'rainbow');
   alt('.content-wrap .c2 a[data-num="1"] img', 'rainbow romper');
@@ -19,5 +30,5 @@ $(document).ready(function() {
   alt('.content-wrap .c4 > a img', 'graphic baby outfits');
   alt('.content-wrap .c4 .the-content img', 'flower');
 
-  inview('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8, .content-wrap .c9');
+  inview('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8, .content-wrap .c9, .content-wrap .slideshow');
 });

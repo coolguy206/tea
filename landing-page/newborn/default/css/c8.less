@@ -1,11 +1,15 @@
 @import 'var.less';
 @c8-h2-font-color: #E2908C;
+@c8-h3-font-color: #E2908C;
 @c8-p-font-color: #6D8995;
+@c8-cta-background-color: @c8-h2-font-color;
+@c8-cta-font-color: #fff;
 
 .c8 {
   @media screen and (max-width: 428px) {
     padding: 20% 0;
   }
+
   text-align: center;
   padding: 7% 0;
   display: flex;
@@ -13,17 +17,43 @@
   justify-content: center;
   align-content: center;
 
+  h3 {
+    @media screen and (max-width: 1679px) {
+      font-size: 1.1vw;
+      // line-height: 1.6vw;
+    }
+
+    @media screen and (max-width:428px) {
+      font-size: 4vw;
+      // line-height: 14vw;
+      // margin: 0 0 9%;
+    }
+
+    font-family: @gilroyb;
+    font-size: 18px;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color: @c8-h2-font-color;
+    margin: 0 0 2%;
+    flex-basis: 100%;
+    // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+
+  }
+
   h2 {
     @media screen and (max-width: 1679px) {
       font-size: 3.3vw;
       // line-height: 1.6vw;
     }
+
     @media screen and (max-width:428px) {
       font-size: 11vw;
       line-height: 14vw;
-      margin: 0 0 9%;
+      // margin: 0 0 9%;
     }
-    font-family: @souv;
+
+    font-family: @gilroyb;
     font-size: 54px;
     line-height: 60px;
     letter-spacing: 0.1rem;
@@ -31,39 +61,39 @@
     margin: 0 0 2%;
     flex-basis: 100%;
     // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-    span {
-      @media screen and (max-width: 1679px) {
-        font-size: 1.3vw;
-        line-height: 2vw;
-      }
-      @media screen and (max-width:428px) {
-        font-size: 5vw;
-        line-height: 7vw;
-      }
-      color: @c8-h2-font-color;
-      font-size: 22px;
-      line-height: 28px;
-      font-family: @gilroyb;
-      display: block;
-      text-transform: uppercase;
-      letter-spacing: 0.2em;
-      margin: 0 0 1%;
-    }
+
   }
 
   p {
     @media screen and (max-width: 1679px) {
-      font-size: 1.3vw;
-      line-height: 1.6vw;
+      font-size: 2.2vw;
+      line-height: 2.5vw;
     }
+
     @media screen and (max-width:428px) {
-      font-size: 5vw;
+      font-size: 5.6vw;
       line-height: 7vw;
     }
-    font-size: 22px;
-    line-height: 28px;
+
+    font-size: 36px;
+    line-height: 43px;
     flex-basis: 100%;
     color: @c8-p-font-color;
     font-family: @souv;
+    margin: 0 0 2%;
+  }
+
+  div {
+    a {
+      @media screen and (max-width: 1679px){
+        width: 18.5vw;
+      }
+      @media screen and (max-width: 428px){
+        width: 69.5vw;
+      }
+      background: @c8-cta-background-color;
+      color: @c8-cta-font-color;
+      width: 296px;
+    }
   }
 }
