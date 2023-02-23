@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'policy/terms-of-use'
+    name: 'sweeps/spread-the-love'
   },
   zone: {
     name: 'mega-menu/sub-nav',
