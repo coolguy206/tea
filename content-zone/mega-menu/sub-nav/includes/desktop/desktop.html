@@ -254,12 +254,12 @@
 
 			<div class="menu flex-menu">
 
-				<div class="panel panel-1 col-s-4 col-xs-4 col-xxs-4">
+				<div class="panel panel-1 col-s-4 col-xs-4 col-xxs-4" style="border:none;">
 					<ul class="category">
-						<!-- <li>Shop by Collection</li> -->
-						<li><a href="/sale-passport" data="mega menu sale">View All</a></li>
+						<li style="text-align:right;">Shop by Category</li>
+						<li style="text-align:right;"><a href="/sale-passport" data="mega menu sale">View All</a></li>
 						{sub_cats name="cat" category="sale-passport"}
-						<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale">{$cat.title}</a></li>
+						<li style="text-align:right;"><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale">{$cat.title}</a></li>
 						{/sub_cats}
 					</ul>
 				</div>
