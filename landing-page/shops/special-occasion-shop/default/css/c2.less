@@ -7,81 +7,45 @@
 
 .c2 {
   @media screen and (max-width: 428px) {
-    padding: 4% 0;
+    // padding: 4% 0;
     flex-wrap: wrap !important;
   }
-  // padding: 2% 6% 4%;
-  padding: 4%;
-  background: @c2-background;
+
   flex-wrap: nowrap !important;
-  gap: 1vw;
 
-  .first {
+
+
+  .the-content {
     @media screen and (max-width: 428px) {
-      padding: 0 4%;
-      flex-basis: 100% !important;
+      bottom: 9%;
+      left: 0;
+      flex-wrap:wrap;
+      justify-content: center;
+      // transform: translateX(-50%);
     }
-    position: relative;
-    // padding: 1% 1% 0 0;
-    .the-content {
-      @media screen and (max-width: 428px) {
-        bottom: 9%;
-        left: 0;
-        width: 100%;
-        // transform: translateX(-50%);
-      }
-      position: absolute;
-      bottom: 13%;
-      left: 5%;
-      width: 54%;
-      text-align: center;
 
-      h2 {
-        @media screen and (max-width:428px) {
-          font-size: 12vw;
-        }
-        color: @c2-h2-color;
+    position: absolute;
+    bottom: 4%;
+    left: 7%;
+    width: 100%;
+    display:flex;
+    align-items:center;
+
+    h2 {
+      @media screen and (max-width:1679px){
+        font-size: 3.8vw;
+      }
+      @media screen and (max-width:428px) {
+        font-size: 12vw;
+        flex-basis:100%;
       }
 
-      .cta-border {
-        @media screen and (max-width:428px) {}
-        color: @c2-cta-color;
-        margin: 6% 0 0;
-        background: @c2-cta-background-color;
-
-        &.mobile {
-          position: absolute;
-          bottom: 11%;
-          width: 55%;
-          left: 50%;
-          transform: translateX(-50%);
-        }
-      }
+      color: @c2-h2-color;
+      margin: 0 3% 0 0;
+      font-size: 60px;
+      line-height: 60px;
     }
-  }
 
-  .second {
-    @media screen and (max-width: 428px) {
-      margin: 4% 0 0;
-      padding: 0 4%;
-      flex-basis: 100% !important;
-      gap: 3vw;
-    }
-    display: flex;
-    flex-wrap: wrap;
-    // padding: 0.5% 0 0;
-    gap: 1vw;
 
-    a {
-      @media screen and (max-width: 428px) {
-        padding: 0;
-        // flex-basis: 48%;
-      }
-      flex-basis: 48%;
-      // padding: 1%;
-      &:hover {
-        // cursor: default;
-      }
-    }
   }
 }

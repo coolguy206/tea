@@ -1,7 +1,7 @@
 @import 'var.less';
-@c1-cta-color: #fff;
-@c1-cta-background-color: #E4BD3C;
-@c1-h2-color: #fff;
+@c1-cta-color: #CC5364;
+@c1-cta-background-color: #FAFFBC;
+@c1-h2-color: #FAFFBC;
 @c1-font-color: #fff;
 
 .c1 {
@@ -16,27 +16,58 @@
       // position: relative;
       padding: 9% 0 0;
     }
+
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 31%;
+    left: 9%;
+    transform: translate(0%, -50%);
+    width: 30%;
     text-align: center;
 
     img {
       @media screen and (max-width: 1679px) {
-        width: 9.3vw;
+        // width: 9.3vw;
       }
-      margin: 0 0 9%;
+
+      // margin: 0 0 9%;
+    }
+
+    h3 {
+      @media screen and (max-width: 1679px) {
+        font-size: 1vw;
+      }
+      @media screen and (max-width:428px){
+        font-size: 4vw;
+      }
+      font-family: @gilroyb;
+      font-size: 18px;
+      line-height: 28px;
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: @c1-font-color;
+      margin:0 0 4%;
     }
 
     h2 {
-      @media screen and (max-width:428px) {
-        margin: 0 0 4%;
-        font-size: 11vw;
-        line-height: 11vw;
+      @media screen and (max-width: 1679px) {
+        font-size: 3vw;
+        line-height: 4vw;
       }
+      @media screen and (max-width:428px) {
+        margin: 0 0 9vw;
+        font-size: 9vw;
+        // line-height: 11vw;
+      }
+
       color: @c1-h2-color;
+      font-family: @gilroyb;
+      font-size: 54px;
+      line-height: 65px;
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      margin:0 0 4%;
     }
 
     p {
@@ -45,6 +76,7 @@
         font-size: 1.4vw;
         line-height: 1.9vw;
       }
+
       @media screen and (max-width: 428px) {
         // display: none;
         font-size: 4.7vw;
@@ -52,6 +84,7 @@
         width: 100%;
         margin: 0 0 5%;
       }
+
       margin: 5% auto;
       font-size: 24px;
       line-height: 32px;
@@ -62,9 +95,16 @@
       @media screen and (max-width: 428px) {}
 
       a {
-        @media screen and (max-width:428px) {}
+        @media screen and (max-width: 1679px){
+          width: 17.2vw;
+        }
+        @media screen and (max-width:428px) {
+          width: 67vw;
+        }
+
         color: @c1-cta-color;
         background: @c1-cta-background-color;
+        width: 288px;
 
         &.cta1 {
           @media screen and (max-width:428px) {}
