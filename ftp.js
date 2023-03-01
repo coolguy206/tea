@@ -9,16 +9,16 @@ require('dotenv').config()
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2023/0220/v0/`;
 // var category = `homepage/2023/0228/v0/`;
-var category = `landing-pages/special-occasion/2023/0228/v0/`;
+var category = `landing-pages/iconic-tea-styles/2023/0301/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/0220/`;
-var readFilePath = `handoff/landing-pages/special-occasion/0228/handoff/`;
+var readFilePath = `handoff/landing-pages/iconic-tea-styles/Handoff/`;
 // var writeFilePath = `promos/headers/dev/images/promo/`;
-var writeFilePath = `landing-page/shops/special-occasion-shop/default/dev/images/`;
+var writeFilePath = `landing-page/iconic-tea-styles/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

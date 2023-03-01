@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/special-occasion-shop/default'
+    name: 'iconic-tea-styles'
   },
   zone: {
     name: 'mega-menu/sub-nav',

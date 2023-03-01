@@ -16,12 +16,12 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/02 February/022023 The Spring Break Event/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/022823 Special Occasion LP/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/021623 $20 Iconic Tea Styles LP/Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Campaign/021323 Spread The Love Giveaway/04 Handoff/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/landing-pages/special-occasion/0228/`;
+  var writeFilePath = `handoff/landing-pages/iconic-tea-styles/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
