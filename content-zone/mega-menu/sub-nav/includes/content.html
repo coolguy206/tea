@@ -208,6 +208,46 @@
 	</div>
 </div>
 
+<div class="site-nav-submenu swim">
+	<div class="bar">
+		<div>
+		  <a href="#" data="mega menu Swim">Swim</a>
+		  <span class="line"></span>
+
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      {assign var=i value=0}
+
+		      <ul class="category first">
+		        <li>Shop by Department</li>
+		        <li><a href="/swim-shop" data="mega menu swim view all" >View All</a></li>
+
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Shop by Category</li>
+		        <!-- include "../shop-by-collection.html" -->
+		        
+		        {sub_cats name="cat" category="swim-shop/shop-by-category"}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu swim">{$cat.title}</a></li>
+		        {/sub_cats}
+		        
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-3">
+		      <!-- <div class="da-rennab-zone" data-zone="mega_girl"></div> -->
+		    </div>
+
+
+		  </div>
+		</div>
+
+	</div>
+</div>
+
 <div class="site-nav-submenu girl">
 	<div class="bar">
 		<div>
@@ -1392,7 +1432,26 @@
 		</li>
 
 		 <li>
-			<h2><a href="/swim-shop">&#127754; SWIM &#127754;</a></h2>
+			<h2>&#127754; SWIM &#127754; <span class="fas fa-plus"></span></h2>
+			<div class="sub">	
+				<h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3>
+				<div class="links">
+				  <ul>
+				    <li>Shop by Department</li>
+				    <li><a href="/swim-shop" data="mega menu swim view all" >View All</a></li>
+				  <ul>
+				    <li>Shop by Category</li>
+				    <!-- include "../shop-by-collection.html" -->
+				    
+				    {sub_cats name="cat" category="swim-shop/shop-by-category"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim" >{$cat.title}</a></li>
+				    {/sub_cats}
+				    
+				  </ul>
+
+				</div>
+
+			</div>
 		</li>
 
 		<li>

@@ -102,7 +102,26 @@
 		</li>
 
 		 <li>
-			<h2><a href="/swim-shop">&#127754; SWIM &#127754;</a></h2>
+			<h2>&#127754; SWIM &#127754; <span class="fas fa-plus"></span></h2>
+			<div class="sub">	
+				<h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3>
+				<div class="links">
+				  <ul>
+				    <li>Shop by Department</li>
+				    <li><a href="/swim-shop" data="mega menu swim view all" >View All</a></li>
+				  <ul>
+				    <li>Shop by Category</li>
+				    <!-- include "../shop-by-collection.html" -->
+				    
+				    {sub_cats name="cat" category="swim-shop/shop-by-category"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim" >{$cat.title}</a></li>
+				    {/sub_cats}
+				    
+				  </ul>
+
+				</div>
+
+			</div>
 		</li>
 
 		<li>
