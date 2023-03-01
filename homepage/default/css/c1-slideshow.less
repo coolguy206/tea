@@ -3,8 +3,12 @@
 @c1-h2-color: #F1FF50;
 @c1-h3-color: #fff;
 @c1-p-color: #fff;
-@c1-cta-color: #6C6694;
-@c1-cta-background: #F1FF50;
+@c1-2-cta-color: #CC5364;
+@c1-2-cta-background: #FAFFBC;
+@c1-1-cta-color: #2967B0;
+@c1-1-cta-background: #F1FF50;
+@c1-3-cta-color: #fff;
+@c1-3-cta-background: #039777;
 
 .c1 {
   position: relative;
@@ -70,9 +74,13 @@
 
         h3, p {
           @media screen and (max-width: 428px){
-            color:#fff;
+            // color:#fff;
           }
-            color: #2967B0;
+            // color: #2967B0;
+        }
+
+        h2 {
+          color: @c1-1-cta-background;
         }
 
         div {
@@ -83,7 +91,9 @@
               @media screen and (max-width: 428px) {
                 // width: 54vw;
               }
-            //   width: 238px;
+              // width: 288px;
+            color: @c1-1-cta-color;
+            background: @c1-1-cta-background;
             }
           }
       }
@@ -101,15 +111,21 @@
         transform: translate(0%, -50%);
         text-align: center;
 
+        h2 {
+            color: @c1-2-cta-background;
+        }
+
         div {
           a{
             @media screen and (max-width: 1679px) {
-            //   width: 14vw;
+              width: 18vw;
             }
             @media screen and (max-width: 428px) {
-              width: 44vw;
+              width: 67vw;
             }
-            // width: 238px;
+            width: 288px;
+            color: @c1-2-cta-color;
+            background: @c1-2-cta-background;
           }
         }
       }
@@ -131,7 +147,7 @@
           @media screen and (max-width: 428px){
             // font-size: 9vw;
           }
-        //   color: #FAC9CE !important;
+            color: @c1-3-cta-background;
         }
 
         div {
@@ -144,8 +160,8 @@
             //   width: 84vw;
             }
             // width: 359px;
-            // background: #FAC9CE;
-            // color: #B8483D;
+            color: @c1-3-cta-color;
+            background: @c1-3-cta-background;
           }
         }
       }
@@ -159,8 +175,8 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4.8vw;
-          line-height: 4.8vw;
+          font-size: 4vw;
+          line-height: 4vw;
         }
 
         @media screen and (max-width: 428px){
@@ -241,8 +257,8 @@
           }
 
           font-family: @gilroyb;
-          color: @c1-cta-color;
-          background: @c1-cta-background;
+          color: @c1-1-cta-color;
+          background: @c1-1-cta-background;
 
           // width: 383px;
           &.cta1 {

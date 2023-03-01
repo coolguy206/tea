@@ -16,12 +16,12 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/02 February/022023 The Spring Break Event/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/022323 HP Update/handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/022823 Spring 2 HP/handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Campaign/021323 Spread The Love Giveaway/04 Handoff/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `handoff/hp/0223/`;
+  var writeFilePath = `handoff/hp/0228/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
