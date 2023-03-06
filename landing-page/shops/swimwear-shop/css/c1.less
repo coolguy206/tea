@@ -1,0 +1,139 @@
+@import 'var.less';
+@div-color2: #2E64AA;
+@div-color1: #F9EBE5;
+@div-color3: #47363D;
+
+
+.the-container {
+  @media screen and (max-width: 1679px){
+    height: 11.5vw;
+  }
+  @media screen and (max-width: 428px){
+    height: 64.5vw;
+  }
+  position: relative;
+  background: @div-color1;
+  height: 190px;
+
+  img {
+    width: 100%;
+  }
+
+  .the-content {
+    @media screen and (max-width:428px) {
+      // position: relative;
+      // top: 0;
+      // left: 0;
+      // transform: translate(0);
+      // padding: 7% 0;
+      width: 100%;
+    }
+
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -60%);
+    width: 70%;
+    text-align:center;
+
+    h2 {
+      @media screen and (max-width: 1679px) {
+        font-size: 3vw;
+      }
+
+      @media screen and (max-width: 428px) {
+        font-size: 8vw;
+      }
+
+      font-family: @souv;
+      font-size: 48px;
+      // line-height: 70px;
+      text-align: center;
+      text-transform: capitalize;
+      color: @div-color2;
+      margin:0 0 3%;
+    }
+
+    p {
+      @media screen and (max-width: 1679px) {
+        font-size: 1.1vw;
+        line-height: 1.5vw;
+      }
+
+      @media screen and (max-width: 428px) {
+        font-size: 4vw;
+        line-height: 6.5vw;
+      }
+
+      font-family: @souv;
+      font-size: 18px;
+      line-height: 27px;
+      text-align: center;
+      color: @div-color3;
+      margin: 0 0 3%;
+
+      &.the-code {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.3vw;
+        }
+
+        @media screen and (max-width: 428px) {
+          font-size: 3.5vw;
+          line-height: 4vw;
+        }
+
+        font-family:@gilroyb;
+        font-size: 18px;
+        // line-height: 15px;
+        text-align: center;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        color: @div-color3;
+        margin:0;
+      }
+    }
+
+    h3 {
+      @media screen and (max-width: 1679px) {
+        font-size: 1vw;
+      }
+
+      @media screen and (max-width: 428px) {
+        font-size: 3.8vw;
+        line-height: 4.4vw;
+      }
+
+      font-family: @gilroyb;
+      font-size: 16px;
+      line-height: 19px;
+      text-align: center;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: @div-color2;
+      margin: 0 0 3%;
+    }
+  }
+
+  .the-grid {
+    @media screen and (max-width:428px){
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 1fr);
+      column-gap: 5%;
+      row-gap: 20%;
+    
+    }
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    column-gap: 3%;
+    margin: 4% 0 0;
+
+    a {
+      background: @div-color2;
+
+      &:hover {
+        color: #fff;
+      }
+    }
+  }
+
+}

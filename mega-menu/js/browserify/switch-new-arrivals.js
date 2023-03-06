@@ -32,9 +32,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -56,9 +56,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo.sale.baby.boy;
       clearance = _urls.urls.promo.clearance.baby.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -80,9 +80,9 @@ var switchNewArrivals = function switchNewArrivals(href) {
       promo2 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy; // $('.promo1-url').show();
 
-      $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide(); // $('.promo2-url').hide();
 
-      $('.promo2-url').hide();
       $('.clearance-url').hide();
       break;
 
@@ -92,6 +92,18 @@ var switchNewArrivals = function switchNewArrivals(href) {
 
       promo2 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn; // $('.promo1-url').show();
+
+      $('.promo1-url, .promo2-url, .clearance-url').show();
+      $('.promo1-url').hide();
+      $('.promo2-url').hide();
+      $('.clearance-url').hide();
+      break;
+
+    case '/swim-shop':
+      promo1 = _urls.urls.promo.promo; // promo1 = urls.promo.girl;
+
+      promo2 = _urls.urls.promo.sale.girl;
+      clearance = _urls.urls.promo.clearance.girl; // $('.promo1-url').show();
 
       $('.promo1-url, .promo2-url, .clearance-url').show(); // $('.promo1-url').hide();
 
@@ -121,7 +133,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo: {
-    promo: "/select-styles",
+    promo: "/swim-shop",
     girl: "/girls-clothing",
     boy: "/boys-clothing",
     baby: {
