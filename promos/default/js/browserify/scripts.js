@@ -15,18 +15,15 @@ jQuery(document).ready(function () {
           $('.the-promo').show();
       }
     */
-  var url = window.location.pathname;
-
-  if (url !== '/') {
-    $('.promos').show();
-    $('.free-shipping-150').show();
-  }
-
-  if (url == '/') {
-    $('.header-banner').css('max-width', '100%');
-    $('.free-shipping-150').css('position', 'relative');
-    $('.free-shipping-150').show();
-  }
+  var url = window.location.pathname; // if (url !== '/') {
+  //   $('.promos').show();
+  //   $('.free-shipping-150').show();
+  // }
+  // if (url == '/') {
+  //   $('.header-banner').css('max-width', '100%');
+  //   $('.free-shipping-150').css('position', 'relative');
+  //   $('.free-shipping-150').show();
+  // }
 
   $('.the-promo .see-details').fancybox({
     helpers: {

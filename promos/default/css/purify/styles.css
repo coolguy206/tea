@@ -11,8 +11,7 @@ html {
 }
 
 .promos {
-  display: none;
-  background: #7583BB;
+  background: #2FAB9D;
 }
 
 .promos .promos-wrap {
@@ -113,7 +112,7 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #7583BB;
+  background: #2FAB9D;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
@@ -157,7 +156,6 @@ html {
   left: 0;
   width: 100%;
   z-index: 9999;
-  display: none;
 }
 
 .free-shipping-150 .promos {

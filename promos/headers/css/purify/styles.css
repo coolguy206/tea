@@ -1,0 +1,49 @@
+.cta-border {
+  display: inline-block;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  position: relative;
+  font-family: gilroy-bold;
+  font-size: 15px;
+  line-height: 18px;
+  letter-spacing: .2em;
+  color: #FFFFFF;
+}
+
+@media screen and (max-width:1679px) {
+  .cta-border {
+    font-size: .9vw;
+  }
+}
+
+@media screen and (max-width:428px) {
+  .cta-border {
+    font-size: 3vw;
+  }
+}
+
+.a {
+  width: 180px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (max-width:1679px) {
+  .a {
+    width: 10.7vw;
+    height: 2.7vw;
+  }
+}
+
+@media screen and (max-width:428px) {
+  .a {
+    width: 38.5vw;
+    height: 11vw;
+    padding: 0;
+  }
+}
