@@ -7,18 +7,18 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/0303/v0/`;
+// var category = `promos/one-offs/2023/0303/v0/`;
 // var category = `homepage/2023/0228/v0/`;
-// var category = `landing-pages/iconic-tea-styles/2023/0301/v0/`;
+var category = `landing-pages/swim-shop/2023/0306/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0303/Site/`;
-// var readFilePath = `handoff/landing-pages/iconic-tea-styles/Handoff/`;
-var writeFilePath = `promos/default/dev/images/`;
-// var writeFilePath = `landing-page/iconic-tea-styles/dev/images/`;
+// var readFilePath = `Site/0303/Site/`;
+var readFilePath = `handoff/landing-pages/swim-shop/handoff/`;
+// var writeFilePath = `promos/default/dev/images/`;
+var writeFilePath = `landing-page/shops/swim-shop/default/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

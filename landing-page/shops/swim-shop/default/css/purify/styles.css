@@ -12,8 +12,36 @@
   }
 }
 
-.swim {
+.hp {
   background: #fff;
+}
+
+.new-arrivals {
+  position: relative;
+  width: 100%;
+  background: #FDF5F2;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 0 4%;
+}
+
+@media screen and (max-width:414px) {
+  .new-arrivals {
+    padding: 10% 0;
+  }
+}
+
+.give-back {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  padding: 2% 0;
+}
+
+@media screen and (max-width:414px) {
+  .give-back {
+    padding: 10% 0;
+  }
 }
 
 .c1 {
@@ -23,7 +51,10 @@
 
 .c2 {
   display: flex;
+  flex-wrap: wrap;
+  padding: 2% 0;
   text-align: center;
+  background: #FDF5F2;
 }
 
 @media screen and (max-width:414px) {
@@ -42,32 +73,53 @@
 @media screen and (max-width:414px) {
   .c3 {
     flex-wrap: wrap;
-    background: #E8C3CA;
     padding: 0;
   }
 }
 
 .c4 {
   display: flex;
-  flex-wrap: wrap;
+  padding: 0;
+  text-align: center;
 }
 
 @media screen and (max-width:414px) {
   .c4 {
+    flex-wrap: wrap;
+    background: #E8C3CA;
     padding: 0;
   }
 }
 
 .c5 {
-  display: flex;
-  padding: 0;
   text-align: center;
 }
 
 @media screen and (max-width:414px) {
   .c5 {
     flex-wrap: wrap;
-    background: #E8C3CA;
     padding: 0;
+  }
+}
+
+.graphics {
+  padding: 2% 0;
+  background: #FDF5F2;
+}
+
+@media screen and (max-width:414px) {
+  .graphics {
+    padding: 4% 0;
+  }
+}
+
+.graphics div {
+  display: flex;
+  text-align: center;
+}
+
+@media screen and (max-width:414px) {
+  .graphics div {
+    flex-wrap: wrap;
   }
 }

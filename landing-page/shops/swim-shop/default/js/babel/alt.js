@@ -11,7 +11,14 @@ var alt = function alt(elem, _alt) {
   $.each(img, function (i, val) {
     $(val).attr('alt', _alt);
   });
-};
+}; // module.exports = function(elem, alt) {
+//   // console.log(`from alt.js`);
+//   let img = $(elem);
+//   $.each(img, function(i, val) {
+//     $(val).attr('alt', alt);
+//   });
+// };
+
 
 exports.alt = alt;
 //# sourceMappingURL=alt.js.map

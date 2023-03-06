@@ -1,13 +1,17 @@
-@import "var.less"; // @import "promo1.less";
+@import "var.less";
 @c1-font-color: #fff;
 @c1-h2-color: #fff;
 @c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #DAB53F;
+@c1-cta-background: #F48080;
 
 .c1 {
+  @media screen and (max-width: 428px) {
+ 
+  }
   position: relative;
   width: 100%;
+
 
   div {
     &.the-content {
@@ -15,13 +19,14 @@
         width: 100%;
         left: 0;
         top: 0;
-        transform: translate(0);
+        transform: translateX(0);
+       
       }
       position: absolute;
       top: 50%;
       width: 50%;
       left: 50%;
-      transform: translate(-50%, -50%);
+      transform: translate(-50%,-50%);
       text-align: center;
 
       a,
@@ -35,24 +40,26 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4.8vw;
-          line-height: 4.8vw;
+          font-size: 4.2vw;
+          line-height: 4.3vw;
         }
         @media screen and (max-width: 428px) {
-          // font-size: 9vw;
-          // margin: 0;
-          line-height: 11vw;
-          font-size: 8.5vw;
-          color: #fff;
-          margin: 12% 0 0;
-          // display: none;
+          line-height: 9vw;
+          font-size: 10vw;
+          margin: 10% 0;
+         
         }
-        margin: 0;
-        text-transform: none;
+        @media screen and (max-width:320px) {
+          margin: 4% 0 0;
+        }
+        // margin: 5% 0 0;
+        text-transform: capitalize;
         color: @c1-h2-color;
-        line-height: 76px;
+        line-height: 70px;
+        // font-family: @souv;
         font-family: @gilroyb;
         font-size: 70px;
+        margin: 0;
         // letter-spacing: 0.25em;
       }
 
@@ -61,55 +68,69 @@
           font-size: 1.4vw;
           line-height: 2vw;
         }
-        @media screen and (max-width: 428px) {}
+        @media screen and (max-width: 428px) {
+          font-size: 4vw;
+          line-height: 6vw;
+          width: 100%;
+          margin: 5% auto;
+          text-shadow: none;
+          color: @c1-p-color;
+          display:none;
+        }
         @media screen and (max-width: 320px) {
-          // font-size: 17px;
+          // font-size: 15px;
+          // line-height: 17px;
         }
         margin: 4% auto;
-        color: @c1-p-color;
+        color: #fff;
         text-transform: none;
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 33px;
         // letter-spacing: 1px;
         width: 100%;
-        font-family: @gilroyr;
+        font-family: @souv;
         // text-shadow: 4px 4px 4px rgba(0, 0, 0, 0.2);
       }
 
       div {
         @media screen and (max-width: 428px) {
-          margin: 108vw 0 0;
+          margin: 0 0 5%;
         }
+        text-align: center;
+        margin: 0 0 2%;
 
         a {
-          @media screen and (max-width: 1679px) {}
-          @media screen and (max-width: 1024px) {}
-          @media screen and (max-width: 428px) {}
+          @media screen and (max-width: 1679px) {
+            width: 12.8vw;
+          }
+          @media screen and (max-width: 428px) {
+            // width: 44%;
+            // padding: 3.3% 2.5%;
+            // margin: 93% 0 0;
+            //color: @c1-h2-color;
+            width: 42.5vw;
+            background:#2fab9d; 
+          }
           font-family: @gilroyb;
           color: @c1-cta-color;
           background: @c1-cta-background;
+          width: 215px;
 
           &.cta1 {
-            @media screen and (max-width: 428px) {}
+            @media screen and (max-width: 428px) {
+              // left: -3%;
+            }
+            // left: -1%;
           }
 
           &.cta2 {
-            @media screen and (max-width: 428px) {}
+            @media screen and (max-width: 428px) {
+              // left: 2%;
+            }
+            // left: 1%;
           }
 
           &.cta3 {
-            @media screen and (max-width: 428px) {}
-          }
-
-          &.cta4 {
-            @media screen and (max-width: 428px) {}
-          }
-
-          &.cta5 {
-            @media screen and (max-width: 428px) {}
-          }
-
-          &.cta6 {
             @media screen and (max-width: 428px) {}
           }
         }

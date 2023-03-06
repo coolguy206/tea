@@ -5,3 +5,11 @@ export const alt = function(elem, alt) {
     $(val).attr('alt', alt);
   });
 };
+
+// module.exports = function(elem, alt) {
+//   // console.log(`from alt.js`);
+//   let img = $(elem);
+//   $.each(img, function(i, val) {
+//     $(val).attr('alt', alt);
+//   });
+// };
