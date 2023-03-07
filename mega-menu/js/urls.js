@@ -12,6 +12,19 @@ export const urls = {
       girl: `/toddler-girls-clothes`,
       boy: `/toddler-boys-clothes`,
     },
+    thePromo: {
+      girl: `/girls-swimwear`,
+      boy: `/boys-swimwear`,
+      baby: {
+        girl: `/baby-girl-swimwear`,
+        boy: `/baby-boy-swimwear`,
+        newborn: `/newborn-clothing`,
+      },
+      toddler: {
+        girl: `/toddler-girls-clothes/swim`,
+        boy: `/toddler-boys-clothes/swim`,
+      }
+    },
     select: {
       girl: `/girls-clothing/favorites/limited-time-sale`,
       boy: `/boys-clothing/favorites/limited-time-sale`,
