@@ -28,6 +28,9 @@ var x = function x(data, parent) {
         title = title.replace(/Tea Collection/, '');
       }
 
+      var inventory = Number(val.inventory);
+      console.log(inventory);
+      console.log(val);
       var originalPrice = "";
       var vars = val.vars;
 
@@ -52,7 +55,7 @@ var x = function x(data, parent) {
 
       if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
         // console.log('tea pdp');
-        if (img !== undefined && price !== undefined && title !== undefined) {
+        if (img !== undefined && price !== undefined && title !== undefined && inventory > 0) {
           var elem = "\n            <li>\n              <a href=\"".concat(url, "\">\n                <img src=\"").concat(img, "\" alt=\"").concat(title, "\">\n              </a>\n              <h3>\n                <a href=\"").concat(url, "\">").concat(title, "</a>\n              </h3>\n              ").concat(priceElem, "\n            </li>");
           $(parent + ' .sailthru-list').append(elem);
         } //end of if(img...)

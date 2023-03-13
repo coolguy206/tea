@@ -28,6 +28,11 @@ var x = (data, parent) => {
       if (title !== undefined) {
         title = title.replace(/Tea Collection/, '');
       }
+
+      var inventory = Number(val.inventory);
+      console.log(inventory);
+      console.log(val);
+
       var originalPrice = ``;
       var vars = val.vars;
       if (vars !== undefined) {
@@ -51,7 +56,7 @@ var x = (data, parent) => {
       // console.log(url, img, price, title);
       if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
         // console.log('tea pdp');
-        if (img !== undefined && price !== undefined && title !== undefined) {
+        if (img !== undefined && price !== undefined && title !== undefined && inventory > 0) {
           var elem = `
             <li>
               <a href="${url}">
