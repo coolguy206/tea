@@ -1,9 +1,9 @@
 @import "var.less";
 @furoshiki-font-color: #fff;
 @furoshiki-h2-color: #fff;
-@furoshiki-p-color: #fff;
+@furoshiki-p-color: #47363D;
 @furoshiki-cta-color: #fff;
-@furoshiki-cta-background:  #47363D;
+@furoshiki-cta-background:  #5777A7;
 
 .furoshiki {
   position: relative;
@@ -14,14 +14,14 @@
       @media screen and (max-width: 428px) {
         width: 100%;
         left: 0;
-        top: 82%;
+        top: 55%;
         transform: translate(0, 0%);
       }
       position: absolute;
-      top: 69%;
-      // width: 50%;
-      left: 80%;
-      transform: translate(0%, 0%);
+      top: 50%;
+      width: 100%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
 
       &.content-fine-print {
@@ -39,6 +39,16 @@
           color:#47363D;
         }
         
+      }
+
+      img {
+        @media screen and (max-width:1679px){
+          width: 28vw;
+        }
+        @media screen and (max-width:428px){
+          width: 83vw;
+        }
+        width: 460px;
       }
 
       a,
@@ -95,7 +105,7 @@
 
       p {
         @media screen and (max-width: 1679px) {
-          font-size: 1.4vw;
+          font-size: 1.3vw;
           line-height: 2vw;
         }
         @media screen and (max-width: 428px) {
@@ -111,14 +121,14 @@
           font-size: 15px;
           line-height: 17px;
         }
-        margin: 4% auto;
+        margin: 2% 0;
         color: @furoshiki-p-color;
         text-transform: none;
-        font-size: 24px;
-        line-height: 34px;
+        font-size: 22px;
+        line-height: 33px;
         width: 100%;
-        font-family: @gilroyr;
-        text-shadow: 0 0 14px rgba(0,0,0,0.15);
+        font-family: @souv;
+        // text-shadow: 0 0 14px rgba(0,0,0,0.15);
       }
 
       div {
@@ -145,18 +155,18 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            // width: 17vw;
+            width: 14vw;
             // width: 23vw;
           }
           @media screen and (max-width: 428px) {
             // background: #F19C01;
-            // width: 65vw;
+            width: 52vw;
             // width: 90vw;
           }
           font-family: @gilroyb;
           color: @furoshiki-cta-color;
           background: @furoshiki-cta-background;
-          // width: 275px;
+          width: 236px;
           // width: 383px;
           &.cta1 {
             @media screen and (max-width: 428px) {}
