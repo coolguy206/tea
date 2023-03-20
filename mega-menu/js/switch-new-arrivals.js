@@ -8,9 +8,9 @@ export const switchNewArrivals = (href) => {
 
   switch (href) {
     case '/girls-clothing/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.girl;
-      promo2 = urls.promo.thePromo.girl;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.girl;
+      promo2 = urls.promo.select.girl;
       clearance = urls.promo.clearance.girl;
       $('.promo1-url.girl').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -21,9 +21,9 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/boys-clothing/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.boy;
-      promo2 = urls.promo.thePromo.boy;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.boy;
+      promo2 = urls.promo.select.boy;
       clearance = urls.promo.clearance.boy;
       $('.promo1-url.boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -34,9 +34,9 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-girl-clothes/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.baby.girl;
-      promo2 = urls.promo.thePromo.baby.girl;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.baby.girl;
+      promo2 = urls.promo.select.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
       $('.promo1-url.baby-girl').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -47,9 +47,9 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-boy-clothes/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.baby.boy;
-      promo2 = urls.promo.thePromo.baby.boy;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.baby.boy;
+      promo2 = urls.promo.select.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
       $('.promo1-url.baby-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -60,9 +60,9 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-girls-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.toddler.girl;
-      promo2 = urls.promo.thePromo.toddler.girl;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.toddler.girl;
+      promo2 = urls.promo.select.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
       $('.promo1-url.baby-girl').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -73,11 +73,11 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-boys-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.toddler.boy;
-      promo2 = urls.promo.thePromo.toddler.boy;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.toddler.boy;
+      promo2 = urls.promo.select.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
-      $('.promo1-url.baby-boy').show();
+      $('.promo1-url.boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
@@ -87,9 +87,9 @@ export const switchNewArrivals = (href) => {
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      // promo1 = urls.promo.thePromo.promo;
-      promo1 = urls.promo.thePromo.baby.newborn;
-      promo2 = urls.promo.thePromo.baby.newborn;
+      // promo1 = urls.promo.select.promo;
+      promo1 = urls.promo.select.baby.newborn;
+      promo2 = urls.promo.select.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -101,10 +101,10 @@ export const switchNewArrivals = (href) => {
 
     case '/swim-shop':
       promo1 = urls.promo.promo;
-      // promo1 = urls.promo.thePromo.girl;
-      promo2 = urls.promo.thePromo.girl;
+      // promo1 = urls.promo.select.girl;
+      promo2 = urls.promo.select.family;
       clearance = urls.promo.clearance.girl;
-      $('.promo1-url.girl').show();
+      // $('.promo1-url.family').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();

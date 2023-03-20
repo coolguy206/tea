@@ -3,11 +3,12 @@
 
 &.select-styles {
     @media screen and (max-width:428px) {
-        padding: 12% 0;
+        // padding: 12% 0;
     }
 
-    background: #FDF5F2;
-    padding: 4% 0 0;
+    // background: #FDF5F2;
+    // padding: 4% 0 0;
+    // display: flex;
 
     h2 {
         @media screen and (max-width: 1679px) {
@@ -59,12 +60,44 @@
     .the-content.select-styles {
         @media screen and (max-width: 428px) {
             // width: 100%;
+            flex-wrap:wrap;
         }
 
         top:0;
         width:100%;
         left:0;
         transform: translate(0);
+        // display: flex;
+
+        a {
+            @media screen and (max-width:428px){
+                flex-basis: 33%;
+                padding: .5%;
+                margin: 0 0 4%;
+            }
+            flex-basis: 20%;
+            position: relative;
+            padding: 0 .3%;
+
+            &.cta2 {
+                @media screen and (max-width: 428px){
+                    margin: 0 2% 4% 0;
+                }
+            }
+
+            .the-cta {
+                position: absolute;
+                bottom: 5%;
+                width: 100%;
+                text-align: center;
+
+                span {
+                    color: #fff;
+                }
+            }
+        }
+
+
 
         // width: 54%;
 

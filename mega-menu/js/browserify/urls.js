@@ -33,6 +33,7 @@ var urls = {
       }
     },
     select: {
+      family: "/select-styles/family",
       girl: "/girls-clothing/favorites/limited-time-sale",
       boy: "/boys-clothing/favorites/limited-time-sale",
       baby: {

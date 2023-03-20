@@ -11,7 +11,7 @@ html {
 }
 
 .promos {
-  background: #2E64AA;
+  background: #6C6694;
 }
 
 .promos .promos-wrap {
@@ -112,11 +112,11 @@ html {
 }
 
 .promos .hp-promo.promo1,.promos .the-promo.promo1 {
-  background: #2E64AA;
+  background: #6C6694;
 }
 
 .promos .hp-promo.promo1 span.first,.promos .the-promo.promo1 span.first {
-  color: #F1FF50;
+  color: #ECE06D;
 }
 
 @media screen and (max-width:1679px) {
