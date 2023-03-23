@@ -4,7 +4,7 @@
 @c4-first-cta-background: #6D8995;
 @c4-second-font-color: #fff;
 @c4-second-cta-color: #fff;
-@c4-second-cta-background: #E2908C;
+@c4-second-cta-background: #2967B0;
 @c4-third-font-color: #FFF;
 @c4-third-cta-color: #fff;
 @c4-third-cta-background: #BF9353;
@@ -93,14 +93,14 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: 14vw;
+              // width: 14vw;
             }
 
             @media screen and(max-width: 428px) {
-              width: 57vw;
+              // width: 57vw;
             }
 
-            width: 242px;
+            // width: 242px;
           }
         }
       }
@@ -117,6 +117,7 @@
       }
 
       flex-basis: 50%;
+      order:2;
 
       &>a {
         @media screen and (max-width:428px) {
@@ -197,6 +198,7 @@
       }
 
       flex-basis: 50%;
+      order:1;
 
       h2 {
         @media screen and (max-width:428px) {}
@@ -207,17 +209,35 @@
       .the-content {
         @media screen and (max-width: 428px) {}
 
-        top: 9%;
+        // top: 9%;
+
+        // h2 {
+        //   @media screen and (max-width: 1679px){
+        //     font-size: 3vw;
+        //   }
+        //   @media screen and (max-width: 428px){
+        //     font-size: 8.5vw;
+        //   }
+        //   font-size: 48px;
+        // }
 
         h2 {
-          @media screen and (max-width: 1679px){
+          @media screen and (max-width:1679px) {
             font-size: 3vw;
+            line-height: 4.5vw;
           }
-          @media screen and (max-width: 428px){
-            font-size: 8.5vw;
+
+          @media screen and (max-width:428px) {
+            font-size: 6vw;
+            line-height: 8vw;
           }
-          font-size: 48px;
+
+          font-size: 50px;
+          line-height: 74px;
+          color: @c4-second-font-color;
+          text-shadow: 1px 1px 13px #7f7f7f;
         }
+
 
         p {
           @media screen and (max-width: 1679px){
@@ -240,15 +260,15 @@
 
           a {
             @media screen and (max-width: 1679px) {
-              width: 19.5vw;
+              // width: 19.5vw;
             }
             @media screen and (max-width: 428px) {
-              width: 53.5vw;
+              // width: 53.5vw;
             }
 
             color: @c4-second-cta-color;
             background: @c4-second-cta-background;
-            width: 328px;
+            // width: 328px;
 
             // width: 243px;
             &.cta1 {

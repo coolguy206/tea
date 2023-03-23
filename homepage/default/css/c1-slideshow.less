@@ -1,14 +1,16 @@
 @import "var.less";
 @c1-font-color: #fff;
-@c1-h2-color: #F1FF50;
-@c1-h3-color: #47363D;
+@c1-h2-color: #fff;
+@c1-h3-color: #fff;
 @c1-p-color: #fff;
 @c1-2-cta-color: #fff;
-@c1-2-cta-background: #6C6694;
+@c1-2-cta-background: #584F92;
 @c1-1-cta-color: #fff;
 @c1-1-cta-background:#0B8897;
 @c1-3-cta-color: #fff;
-@c1-3-cta-background: #039777;
+@c1-3-cta-background: #FA8180;
+@c1-4-cta-color: #fff;
+@c1-4-cta-background: #2967B0;
 
 .c1 {
   position: relative;
@@ -107,7 +109,7 @@
         }
         top: 50%;
         width: 50%;
-        left: 50%;
+        left: -5%;
         transform: translate(0%, -50%);
         text-align: center;
 
@@ -139,7 +141,7 @@
         }
         top: 50%;
         width: 50%;
-        left: -1%;
+        left: -6%;
         transform: translate(0%, -50%);
         text-align: center;
 
@@ -147,7 +149,7 @@
           @media screen and (max-width: 428px){
             // font-size: 9vw;
           }
-            color: @c1-3-cta-background;
+            // color: @c1-3-cta-background;
         }
 
         div {
@@ -166,6 +168,42 @@
         }
       }
 
+      &.content-4 {
+        @media screen and (max-width: 428px) {
+          width: 100%;
+          left: 0;
+          top: 11vw;
+          transform: translateX(0);
+        }
+        top: 50%;
+        width: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        h2 {
+          @media screen and (max-width: 428px){
+            // font-size: 9vw;
+          }
+            color: @c1-4-cta-background;
+        }
+
+        div {
+          
+          a{
+            @media screen and (max-width: 1679px) {
+              width: 17vw;
+            }
+            @media screen and (max-width: 428px) {
+              width: 84vw;
+            }
+            width: 276px;
+            color: @c1-4-cta-color;
+            background: @c1-4-cta-background;
+          }
+        }
+      }
+
       a,
       h3,
       h2,
@@ -175,12 +213,12 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4vw;
+          font-size: 3.2vw;
           line-height: 4vw;
         }
 
         @media screen and (max-width: 428px){
-          font-size: 10vw;
+          font-size: 7vw;
           margin: 0 0 8vw;
         }
 
@@ -193,7 +231,7 @@
         text-transform: uppercase;
         color: @c1-h2-color;
         font-size: 54px;
-        line-height: 28px;
+        line-height: 65px;
         font-family: @gilroyb;
         margin: 0 0 1vw;
       }
