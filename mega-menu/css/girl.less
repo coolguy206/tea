@@ -1,5 +1,6 @@
 @red: #FF1744;
 @pink: #ee696d;
+@bluish: #00A5B6;
 
 .panel.panel-3 {
     align-items: center;
@@ -17,6 +18,17 @@
 
   img {
     width: 346px;
+  }
+}
+
+.off.select.tees {
+  color: @bluish !important;
+  font-family: gilroy-bold !important;
+
+  &:hover {
+    &::before {
+      background-color: @bluish !important;
+    }
   }
 }
 
