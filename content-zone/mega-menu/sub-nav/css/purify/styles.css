@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .cta-border {
     font-size: 3vw;
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .a {
     width: 43.5vw;
     height: 11vw;
@@ -79,7 +79,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .kidizen-content {
     width: 100vw;
     height: 116vw;
@@ -110,7 +110,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .kidizen-content img.tea-rewear-logo {
     width: 83vw;
   }
@@ -131,7 +131,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .kidizen-content p {
     font-size: 5.6vw;
     line-height: 8vw;
@@ -150,13 +150,13 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .kidizen-content a {
     width: 51vw;
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .desktop {
     display: none;
   }
@@ -166,7 +166,7 @@
   display: none;
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .mobile {
     display: block;
   }
