@@ -8,8 +8,8 @@ exports.urls = void 0;
 var urls = {
   promo: {
     promo: "/swimwear",
-    girl: "/girls-clothing",
-    boy: "/boys-clothing",
+    girl: "/girls-clothes",
+    boy: "/boys-clothes",
     baby: {
       girl: "/baby-girl-clothes",
       boy: "/baby-boy-clothes",
