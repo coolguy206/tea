@@ -17,7 +17,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .cta-border {
     font-size: 3vw;
   }
@@ -40,7 +40,7 @@
   }
 }
 
-@media screen and (max-width:428px) {
+@media screen and (max-width:430px) {
   .a {
     width: 38.5vw;
     height: 11vw;
