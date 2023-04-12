@@ -1,5 +1,7 @@
-$(document).ready(function() {
-  // jQuery('img[usemap]').rwdImageMaps();
+
+$(document).ready(function () {
+
+  var countryCode = "US";
 
   var date = new Date();
   var month = date.getMonth() + 1;
@@ -7,142 +9,66 @@ $(document).ready(function() {
   var year = date.getFullYear();
   var message;
 
-  //for dev
-  // month = 9;
-  // day = 2;
+  var holidayApi = `https://date.nager.at/api/v3/PublicHolidays`;
+  fetch(`${holidayApi}/${year}/${countryCode}`).then((data) => { return data.json(); }).then((data) => {
 
-  switch (month) {
-    //november
-    case 11:
-      if (day >= 25) {
-        $('.holiday-closure').hide();
-      } else if (day <= 24) {
-        message = `<h3>Thanksgiving Day ${month}/24/${year}</h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //december & january
-    case 12:
-      // if(month == 1 && day >= 2){
-      //     $('.holiday-closure').hide();
-      // } else
+    var nextYear = year + 1;
+    fetch(`${holidayApi}/${nextYear}/${countryCode}`).then((newData) => { return newData.json() }).then((newData) => {
+      console.log(`next year data`);
+      console.log(newData);
+      console.log(`current year data`);
+      console.log(data);
 
-      if (day >= 1) {
-        year = year + 1;
-        // message = `<ul>
-        // <li>Christmas Eve ${month}/24</li>
-        // <li>New Years Day 1/1/${year}</li>
-        // </ul>`;
-        $('.holiday-closure h2').text('CUSTOMER CARE HOLIDAY HOURS')
-        message = `
-        <ul>
-          <li>Christmas Eve CLOSED</li>
-          <li>Christmas Day CLOSED</li>
-          <li>New Year's Eve CLOSED</li>
-          <li>New Years Day CLOSED</li>
-        </ul>
-        `;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //january
-    case 1:
-      if (day >= 3) {
-        $('.holiday-closure').hide();
-      } else if (day <= 2) {
-        message = `
-        <ul>
-          <li>New Years Day </li>
-        </ul>
-        `;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //february
-      // case 2:
-      //     if(day >= 21){
-      //         $('.holiday-closure').hide();
-      //     } else if(day >= 1){
-      //         message = '<h3>President\'s Day '+ month +'/20/'+ year +'</h3>';
-      //         $('.holiday-closure p').html(message);
-      //         $('.holiday-closure').show();
-      //     }
-      //     break;
-      //march & april
-    case 3:
-      var month = month + 1;
-      if (day <= 1) {
-        $('.holiday-closure').hide();
-      } else if (day >= 2) {
-        message = `<h3>Easter ${month}/16/${year}</h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //april
-    case 4:
-      if (day <= 5) {
-        $('.holiday-closure').hide();
-      } else if (day >= 6) {
-        message = `<h3>Easter ${month}/16/${year}</h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //may
-    case 5:
-      if (day <= 2) {
-        $('.holiday-closure').hide();
-      } else if (day >= 3) {
-        message = `<h3>Mother's Day ${month}/8/${year} </h3> <h3>Memorial Day ${month}/30/${year} </h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //june & july
-    case 6:
-      if (day <= 2) {
-        $('.holiday-closure').hide();
-      } else if (day >= 3) {
-        var month = month + 1;
-        message = `<h3>Father's Day 6/19/${year} </h3> <h3>Independence Day ${month}/4/${year} </h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //july
-    case 7:
-      if (day >= 5) {
-        $('.holiday-closure').hide();
-      } else if (day <= 4) {
-        message = `<h3>Independence Day ${month}/4/${year} </h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //august & september
-    case 8:
-      if (day <= 15) {
-        $('.holiday-closure').hide();
-      } else if (day >= 16) {
-        var month = month + 1;
-        message = `<h3>Labor Day ${month}/5/${year}</h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-      //september
-    case 9:
-      if (day >= 6) {
-        $('.holiday-closure').hide();
-      } else if (day <= 5) {
-        message = `<h3>Labor Day ${month}/5/${year}</h3>`;
-        $('.holiday-closure p').html(message);
-        $('.holiday-closure').show();
-      }
-      break;
-  }
+      //? for dev
+      // month = 1;
+      // day = 2;
+
+      var holidays = data;
+
+      holidays.map((val, i) => {
+
+        // console.log(val);
+        var holidayDate = val.date;
+        holidayDate = holidayDate.split('-');
+        var holidayYear = Number(holidayDate[0]);
+        var holidayMonth = Number(holidayDate[1]);
+        var holidayDay = Number(holidayDate[2]);
+        // console.log(month, holidayMonth);
+        // console.log(day, holidayDay);
+
+        //? for new years
+        var nextYearDate = newData[0].date;
+        nextYearDate = nextYearDate.split('-');
+        var nextYearYear = nextYearDate[0];
+        var nextYearMonth = nextYearDate[1];
+        var nextYearDay = nextYearDate[2];
+
+        if (year == holidayYear) {
+          if (val.name !== `Good Friday` && val.name !== `Martin Luther King, Jr. Day` && val.name !== `Washington's Birthday` && val.name !== `Juneteenth` && val.name !== `Columbus Day` && val.name !== `Veterans Day` && val.name !== `Veterans Day`) {
+
+            if (month == 12 && month == holidayMonth) {
+              message = `
+          <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
+          <h3>${newData[0].name} ${nextYearMonth}/${nextYearDay}/${nextYearYear}</h3>
+          `;
+              $('.holiday-closure p').html(message);
+              $('.holiday-closure').show();
+            } else if (month == holidayMonth) {
+              message = `<h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>`;
+              $('.holiday-closure p').html(message);
+              $('.holiday-closure').show();
+            }
+
+          }
+        }
+      });
+
+    });
+
+
+  }).catch((err) => {
+    console.log(`oops something went wrong`);
+    console.log(err);
+  });
+
 });
