@@ -80,6 +80,8 @@
 		</li>
 *}		
 
+		
+
 		<li>
 			<h2 style="color:#436FC1 !important;"><!--<a href="/new-arrivals" style="color:#436FC1 !important;">-->NEW ARRIVALS<!--</a>--> <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -173,7 +175,7 @@
 				    display:none;
 				    
 				  }
-				@media screen and (max-width:428px){
+				@media screen and (max-width:430px){
 				  header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
 				    display:block;
 				    padding-top:0;
@@ -183,6 +185,8 @@
 				{/literal}
 			</div>
 		</li>
+
+		
 
 		<li>
 			<h2>Girl <span class="fas fa-plus"></span></h2>
@@ -553,13 +557,64 @@
 			</div>
 		</li>
 
-	
 		<li>
-			<h2><a href="/dresses" data="mobile top nav">Dresses</a></h2>
+			<h2>Dresses <span class="fas fa-plus"></span></h2>
 			<div class="sub">
+	
 				{*
-					<!-- include "../dress/sub-dresses-m.html" -->
+				{sub_cats name="cat" category="dresses"}
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu dresses">{$cat.title}</a></h3>
+				{/sub_cats}
 				*}
+
+
+				<!-- <h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3> -->
+				<div class="links dress">
+				    <ul>
+				        <li>Shop by Department</li>
+				        <li><a href="/dresses" data="mega menu dresses">Dress Shop</a></li>
+				        <li><a href="/dress-shop/new-arrivals" data="mega menu dresses" class="new arrivals">New Arrivals</a></li>
+				        <li><a href="/girls-dresses" data="mega menu dresses">Girl</a></li>
+				        <li><a href="/baby-girl-dresses" data="mega menu dresses">Baby Girl</a></li>
+				        <li><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Adult</a></li>
+
+				        <ul>
+				            <li>Shop by Silhouette</li>
+				            <li><a href="/wrapneck-dresses" data="mega menu dresses">Wrap Neck</a></li>
+				            <li><a href="/fluttersleeve-dresses" data="mega menu dresses">Flutter Sleeve</a></li>
+				            <li><a href="/empriredresses" data="mega menu dresses">Empire</a></li>
+				            <li><a href="/twirldresses" data="mega menu dresses">Twirl</a></li>
+				            <li><a href="/dropskirt-dresses" data="mega menu dresses">Drop Skirt</a></li>
+				            <li><a href="/mididresses" data="mega menu dresses">Midi</a></li>
+				        </ul>
+
+				        <ul>
+				            <li>Trending</li>
+				            <li><a href="/spring-styles?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Spring Shop</a></li>
+				            <li><a href="/vacation-shop?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Vacation Shop</a></li>
+				            <li><a href="/play-dresses" data="mega menu dresses">Play</a></li>
+				            <li><a href="/occasion-dresses" data="mega menu dresses">Special Occasion</a></li>
+				            <li><a href="/family-outfitting/mommy-and-me?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Mommy & Me</a></li>
+				        </ul>
+
+				</div>
+
+				{literal}
+				<style>
+				    header .site-header-inner .site-nav-mobile ul li .sub .links.dress {
+				        display: none;
+
+				    }
+
+				    @media screen and (max-width:430px) {
+				        header .site-header-inner .site-nav-mobile ul li .sub .links.dress {
+				            display: block;
+				            padding-top: 0;
+				        }
+				    }
+				</style>
+				{/literal}
+		
 			</div>
 		</li>
 

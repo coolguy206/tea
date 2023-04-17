@@ -884,9 +884,74 @@
 
 <div class="site-nav-submenu dress">
 	<div class="bar">
+		
 		{*
-			<!-- include "../dress/sub-dresses-d.html" -->
+		{sub_cats name="cat" category="dresses"}
+		<div>
+		  <a href="{$cat.url}" data="mega menu dresses">{$cat.title}</a>
+		  <span class="line"></span>
+		</div>
+		{/sub_cats}
 		*}
+
+		<div>
+		  <a href="/dresses/" data="mega menu dresses">Dress Shop</a>
+		  <span class="line"></span>
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+
+		      <ul class="category first">
+		        <li>Shop by Department</li>
+
+		          <ul class="category">
+		          
+		            <li><a href="/dress-shop/new-arrivals" data="mega menu dresses" class="new arrivals">New Arrivals</a></li>
+		            <li><a href="/girls-dresses" data="mega menu dresses">Girl</a></li>
+		            <li><a href="/baby-girl-dresses" data="mega menu dresses">Baby Girl</a></li>
+		            <li><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Adult</a></li>
+		          </ul>
+
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Shop by Silhouette</li>
+
+		        <ul class="category">
+		          
+		          <li><a href="/wrapneck-dresses" data="mega menu dresses">Wrap Neck</a></li>
+		          <li><a href="/fluttersleeve-dresses" data="mega menu dresses">Flutter Sleeve</a></li>
+		          <li><a href="/empriredresses" data="mega menu dresses">Empire</a></li>
+		          <li><a href="/twirldresses" data="mega menu dresses">Twirl</a></li>
+		          <li><a href="/dropskirt-dresses" data="mega menu dresses">Drop Skirt</a></li>
+		          <li><a href="/mididresses" data="mega menu dresses">Midi</a></li>
+		        </ul>
+
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2" style="border-right: none;">
+		      <ul class="category">
+		        <li>Trending</li>
+
+		        <ul class="category">
+		          
+		          <li><a href="/spring-styles?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Spring Shop</a></li>
+		          <li><a href="/vacation-shop?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Vacation Shop</a></li>
+		          <li><a href="/play-dresses" data="mega menu dresses">Play</a></li>
+		          <li><a href="/occasion-dresses" data="mega menu dresses">Special Occasion</a></li>
+		          <li><a href="/family-outfitting/mommy-and-me?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Mommy & Me</a></li>
+		        </ul>
+
+		      </ul>
+		    </div>
+
+
+		  </div>
+		</div>
+
+		
 	</div>
 </div>
 
