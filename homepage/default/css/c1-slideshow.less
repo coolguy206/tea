@@ -4,18 +4,28 @@
 @c1-h3-color: #fff;
 @c1-p-color: #fff;
 
+@c1-promo-h2-color: #EB6A69;
+@c1-promo-h3-color: #47363D;
 @c1-promo-cta-color: #fff;
 @c1-promo-cta-background:  #36448C;
 
+@c1-1-h2-color: #fff;
+@c1-1-h3-color: #fff;
 @c1-1-cta-color: #2967B0;
 @c1-1-cta-background: #fff;
 
+@c1-2-h2-color: #fff;
+@c1-2-h3-color: #fff;
 @c1-2-cta-color: #fff;
 @c1-2-cta-background: #584F92;
 
+@c1-3-h2-color: #F1FF50;
+@c1-3-h3-color: #fff;
 @c1-3-cta-color: #fff;
 @c1-3-cta-background: #FA8180;
 
+@c1-4-h2-color: #2967B0;
+@c1-4-h3-color: #fff;
 @c1-4-cta-color: #fff;
 @c1-4-cta-background: #2967B0;
 
@@ -94,11 +104,14 @@
         }
 
         h3 {
-          color: #F3DD4E;
+          @media screen and (max-width: 430px){
+            font-size: 3vw;
+          }
+          color: @c1-promo-h3-color;
         }
 
         h2 {
-          // color: @c1-promo-cta-background;
+          color: @c1-promo-h2-color;
           text-transform:capitalize;
         }
 
@@ -145,8 +158,12 @@
           // color: #2967B0;
         }
 
+        h3 {
+          color: @c1-1-h3-color;
+        }
+
         h2 {
-          color: @c1-1-cta-background;
+          color: @c1-1-h2-color;
         }
 
         div {
@@ -180,8 +197,12 @@
         transform: translate(0%, -50%);
         text-align: center;
 
+        h3 {
+          color: @c1-2-h3-color;
+        }
+
         h2 {
-          color: @c1-2-cta-background;
+          color: @c1-2-h2-color;
         }
 
         div {
@@ -215,14 +236,12 @@
         transform: translate(0%, -50%);
         text-align: center;
 
+        h3 {
+          color: @c1-3-h3-color;
+        }
+
         h2 {
-          @media screen and (max-width: 430px) {
-            // font-size: 9vw;
-          }
-
-          color: #F1FF50;
-
-          // color: @c1-3-cta-background;
+          color: @c1-3-h2-color;
         }
 
         div {
@@ -257,12 +276,12 @@
         transform: translate(-50%, -50%);
         text-align: center;
 
-        h2 {
-          @media screen and (max-width: 430px) {
-            // font-size: 9vw;
-          }
+        h3 {
+          color: @c1-4-h3-color;
+        }
 
-          color: @c1-4-cta-background;
+        h2 {
+          color: @c1-4-h2-color;
         }
 
         div {
@@ -377,33 +396,7 @@
           font-family: @gilroyb;
           color: @c1-1-cta-color;
           background: @c1-1-cta-background;
-
-          // width: 383px;
-          &.cta1 {
-            @media screen and (max-width: 430px) {}
-          }
-
-          &.cta2 {
-            @media screen and (max-width: 430px) {}
-          }
-
-          &.cta3 {
-            @media screen and (max-width: 430px) {}
-          }
-
-          &.cta4 {
-            @media screen and (max-width: 430px) {}
-          }
-
-          &.cta5 {
-            @media screen and (max-width: 1679px) {}
-
-            @media screen and (max-width: 430px) {}
-          }
-
-          &.cta6 {
-            @media screen and (max-width: 430px) {}
-          }
+       
         }
       }
     }
