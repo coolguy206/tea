@@ -79,8 +79,7 @@
 			</div>
 		</li>
 *}		
-
-		
+	
 
 		<li>
 			<h2 style="color:#436FC1 !important;"><!--<a href="/new-arrivals" style="color:#436FC1 !important;">-->NEW ARRIVALS<!--</a>--> <span class="fas fa-plus"></span></h2>
@@ -94,7 +93,8 @@
 			</div>
 		</li>
 
-		{* 
+
+{* 
 		<li>
 			<h2>Special Occasion <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -117,32 +117,10 @@
 
 			</div>
 		</li>
-		*}
+*}
+
 
 		<li>
-			<h2>Family Matching <span class="fas fa-plus"></span></h2>
-			<div class="sub">
-				<!-- 
-				<h3><a href="/special-occasion" data="mega menu special occasion view all" >View All</a></h3>
-				<h3><a href="/girls-clothing/favorites/special-occasion" data="mega menu special occasion girl" >Girl</a></h3>
-				<h3><a href="/boys-clothing/favorites/special-occasion" data="mega menu special occasion boy" >Boy</a></h3>
-				<h3><a href="/baby-girl-clothes/favorites/special-occasion" data="mega menu special occasion baby girl" >Baby Girl</a></h3>
-				<h3><a href="/baby-boy-clothes/favorites/special-occasion" data="mega menu special occasion baby boy" >Baby Boy</a></h3>
-				<h3><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu special occasion adult dresses">Adult Dresses</a></h3> -->
-				<!-- <h3><a href="/select-styles/family" data="mega menu special occasion family" >Family</a></h3> -->
-
-				<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">VIEW ALL</a></h3>
-				<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">SIBLING SHOP</a></h3>
-				<h3><a href="/family-outfitting/mommy-and-me" data="mega menu family matching MOMMY & ME">MOMMY & ME</a></h3>
-				<h3><a href="/special-occasion/sibling" data="mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a></h3>
-				<h3><a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mega menu family matching SWIM">FAMILY SWIM</a></h3>
-				<h3><a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mega menu family matching PJs">FAMILY PJs</a></h3>
-
-
-			</div>
-		</li>
-
-		 <li>
 			<h2>&#127754; SWIM &#127754; <span class="fas fa-plus"></span></h2>
 			<div class="sub">	
 
@@ -186,7 +164,29 @@
 			</div>
 		</li>
 
-		
+
+		<li>
+			<h2>Shorts<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				{*
+				{sub_cats name="cat" category="tee-shop"}
+				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees" >{$cat.title}</a></h3>
+				{/sub_cats}
+				*}
+
+				<h3><a href="/shorts-shop" class="view all" data="mobile mega menu shorts" >view all</a></h3>
+
+				<h3><a href="/girls-shorts" data="mobile mega menu shorts">Girl</a></h3>
+
+				<h3><a href="/boys-shorts" data="mobile mega menu shorts">Boy</a></h3>
+
+				<h3><a href="/baby-girl-shorts" data="mobile mega menu shorts">Baby Girl</a></h3>
+
+				<h3><a href="/baby-boy-shorts" data="mobile mega menu shorts">Baby Boy</a></h3>
+			</div>
+		</li>
+
 
 		<li>
 			<h2>Girl <span class="fas fa-plus"></span></h2>
@@ -300,6 +300,7 @@
 			</div>
 		</li>
 
+
 		<li>
 			<h2>Boy <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -411,6 +412,7 @@
 
 			</div>
 		</li>
+
 
 		<li>
 			<h2>Baby <span class="fas fa-plus"></span></h2>
@@ -557,10 +559,10 @@
 			</div>
 		</li>
 
+
 		<li>
 			<h2>Dresses <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-	
 				{*
 				{sub_cats name="cat" category="dresses"}
 				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu dresses">{$cat.title}</a></h3>
@@ -614,13 +616,12 @@
 				    }
 				</style>
 				{/literal}
-		
 			</div>
 		</li>
 
+
 		<li>
 			<h2><a href="/clothing-sale" data="mobile top nav" style="color:#FF1744">Sale</a></h2>
-			
 			<!-- <div class="sub">
 
 				{*
@@ -632,8 +633,8 @@
 				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees" >{$cat.title}</a></h3>
 				{/sub_cats}
 			</div> -->
-			
 		</li>
+
 
 		<li>
 			<h2>Tees<span class="fas fa-plus"></span></h2>
@@ -650,6 +651,7 @@
 			</div>
 		</li>
 
+
 		<li>
 			<h2>Pjs<span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -662,6 +664,31 @@
 			</div>
 		</li>
 
+
+		<li>
+			<h2>Family Matching <span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				<!-- 
+				<h3><a href="/special-occasion" data="mega menu special occasion view all" >View All</a></h3>
+				<h3><a href="/girls-clothing/favorites/special-occasion" data="mega menu special occasion girl" >Girl</a></h3>
+				<h3><a href="/boys-clothing/favorites/special-occasion" data="mega menu special occasion boy" >Boy</a></h3>
+				<h3><a href="/baby-girl-clothes/favorites/special-occasion" data="mega menu special occasion baby girl" >Baby Girl</a></h3>
+				<h3><a href="/baby-boy-clothes/favorites/special-occasion" data="mega menu special occasion baby boy" >Baby Boy</a></h3>
+				<h3><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu special occasion adult dresses">Adult Dresses</a></h3> -->
+				<!-- <h3><a href="/select-styles/family" data="mega menu special occasion family" >Family</a></h3> -->
+
+				<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">VIEW ALL</a></h3>
+				<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">SIBLING SHOP</a></h3>
+				<h3><a href="/family-outfitting/mommy-and-me" data="mega menu family matching MOMMY & ME">MOMMY & ME</a></h3>
+				<h3><a href="/special-occasion/sibling" data="mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a></h3>
+				<h3><a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mega menu family matching SWIM">FAMILY SWIM</a></h3>
+				<h3><a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mega menu family matching PJs">FAMILY PJs</a></h3>
+
+
+			</div>
+		</li>
+
+
 		<!-- <li>
 			<h2>Family<span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -673,13 +700,16 @@
 			</div>
 		</li> -->
 
+
 		<!-- <li>
 			<h2><a href="/sibling-shop">SIBLING</a></h2>
 		</li> -->
 
+
 		<li>
 			<h2><a href="#" class="kidizen-url">PRELOVED</a></h2>
 		</li>
+
 
 		<!-- <li>
 			<h2>Gifts<span class="fas fa-plus"></span></h2>
@@ -886,21 +916,24 @@
 
 
 		
-
 		<!-- <li>
 			<h2><a href="/sale/clearance" style="color:#FF1744 !important">CLEARANCE</a></h2>
 		</li> -->
 
-		
 
 		<li>
 			<h2><a href="{category_url category='about/the-tea-story'}" data="mobile mega menu about tea">About Tea</a></h2>
 		</li>
+
+
 		<li>
 			<h2><a href="{$secure_html_url}?page=myhistory" data="mobile mega menu my account">My Account</a></h2>
 		</li>
+
+
 		<li>
 			<h2><a href="{$secure_html_url}?page=myorder" data="mobile mega menu track my order">Track My Order</a></h2>
 		</li>
+
 	</ul>
 </div>
