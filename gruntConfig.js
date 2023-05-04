@@ -37,7 +37,7 @@ module.exports = {
     name: 'every-mom'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sailthru/recommended-pdps',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',

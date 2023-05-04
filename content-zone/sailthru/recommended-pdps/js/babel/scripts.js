@@ -30,28 +30,30 @@ var x = function x(data, parent) {
 
       var inventory = Number(val.inventory);
       console.log(inventory);
-      console.log(val);
-      var originalPrice = "";
-      var vars = val.vars;
+      console.log(val); // var originalPrice = ``;
+      // var vars = val.vars;
+      // console.log(vars);
+      // if (vars !== undefined) {
+      //   console.log(vars.variants[0].price);
+      //   if (vars.variants[0].price !== undefined) {
+      //     originalPrice = vars.variants[0].price;
+      //     originalPrice = originalPrice.replace(/ USD/g, '');
+      //     originalPrice = Number(originalPrice).toFixed(2);
+      //     console.log(originalPrice);
+      //   }
+      // }
 
-      if (vars !== undefined) {
-        originalPrice = vars.variants[0].original_price_column;
-        originalPrice = originalPrice.replace(/ USD/g, '');
-        originalPrice = Number(originalPrice).toFixed(2); //console.log(originalPrice);
-      }
+      var priceElem = ""; // if (originalPrice !== ``) {
+      //   if (originalPrice !== price) {
+      //     priceElem = `<p><strike>$${originalPrice}</strike> <span class="sale_price">$${price}</span></p>`;
+      //   } else {
+      //     priceElem = `<p>$${price}</p>`;
+      //   }
+      // } else {
+      //   priceElem = `<p>$${price}</p>`;
+      // }
 
-      var priceElem = "";
-
-      if (originalPrice !== "") {
-        if (originalPrice !== price) {
-          priceElem = "<p><strike>$".concat(originalPrice, "</strike> <span class=\"sale_price\">$").concat(price, "</span></p>");
-        } else {
-          priceElem = "<p>$".concat(price, "</p>");
-        }
-      } else {
-        priceElem = "<p>$".concat(price, "</p>");
-      } // console.log(url, img, price, title);
-
+      priceElem = "<p>$".concat(price, "</p>"); // console.log(url, img, price, title);
 
       if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
         // console.log('tea pdp');

@@ -18,7 +18,7 @@ var x = (data, parent) => {
   // console.log(jsonArr.length);
   // console.log(jsonArr);
   if (jsonArr.length > 0) {
-    $.each(jsonArr, function(i, val) {
+    $.each(jsonArr, function (i, val) {
       var url = val.url;
       var img = val.image;
       var price = val.price;
@@ -33,25 +33,32 @@ var x = (data, parent) => {
       console.log(inventory);
       console.log(val);
 
-      var originalPrice = ``;
-      var vars = val.vars;
-      if (vars !== undefined) {
-        originalPrice = vars.variants[0].original_price_column;
-        originalPrice = originalPrice.replace(/ USD/g, '');
-        originalPrice = Number(originalPrice).toFixed(2);
-        //console.log(originalPrice);
-      }
+      // var originalPrice = ``;
+      // var vars = val.vars;
+      // console.log(vars);
+      // if (vars !== undefined) {
+      //   console.log(vars.variants[0].price);
+      //   if (vars.variants[0].price !== undefined) {
+      //     originalPrice = vars.variants[0].price;
+      //     originalPrice = originalPrice.replace(/ USD/g, '');
+      //     originalPrice = Number(originalPrice).toFixed(2);
+      //     console.log(originalPrice);
+      //   }
+
+      // }
 
       var priceElem = ``;
-      if (originalPrice !== ``) {
-        if (originalPrice !== price) {
-          priceElem = `<p><strike>$${originalPrice}</strike> <span class="sale_price">$${price}</span></p>`;
-        } else {
-          priceElem = `<p>$${price}</p>`;
-        }
-      } else {
-        priceElem = `<p>$${price}</p>`;
-      }
+      // if (originalPrice !== ``) {
+      //   if (originalPrice !== price) {
+      //     priceElem = `<p><strike>$${originalPrice}</strike> <span class="sale_price">$${price}</span></p>`;
+      //   } else {
+      //     priceElem = `<p>$${price}</p>`;
+      //   }
+      // } else {
+      //   priceElem = `<p>$${price}</p>`;
+      // }
+
+      priceElem = `<p>$${price}</p>`;
 
       // console.log(url, img, price, title);
       if (url !== undefined && url.indexOf('teashowroom') == -1 && url.indexOf('sandbox.') == -1) {
@@ -113,13 +120,13 @@ Sailthru.personalize({
     {
       id: id_context,
       selector: '.sailthru-context .sailthru-list',
-      onSuccess: function(data) {
+      onSuccess: function (data) {
         // console.log('sailthru recommended pdps for context');
         // console.log(data);
         x(data, '.sailthru-context');
         $('#pdp-item-suggestions').after($('.sailthru-pdps'));
       },
-      onError: function(err) {
+      onError: function (err) {
         console.log('sailthru recommended pdps context error');
         console.log(err);
       }
