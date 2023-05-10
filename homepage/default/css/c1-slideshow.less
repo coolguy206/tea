@@ -9,6 +9,11 @@
 @c1-promo-cta-color: #fff;
 @c1-promo-cta-background: #2E64AA;
 
+@c1-promo2-h2-color: #fff;
+@c1-promo2-h3-color: #fff;
+@c1-promo2-cta-color: #fff;
+@c1-promo2-cta-background: #99B6D6;
+
 @c1-1-h2-color: #fff;
 @c1-1-h3-color: #fff;
 @c1-1-cta-color: #2967B0;
@@ -139,6 +144,74 @@
             // width: 370px;
             color: @c1-promo-cta-color;
             background: @c1-promo-cta-background;
+          }
+        }
+      }
+
+
+      &.content-promo2 {
+        @media screen and (max-width: 430px) {
+          top: 11vw;
+          width: 100%;
+          left: 0;
+          transform: translate(0);
+        }
+
+        top: 49%;
+        width: auto;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+
+
+        h3,
+        p {
+          @media screen and (max-width: 430px) {
+            // color:#fff;
+          }
+
+          // color: #2967B0;
+        }
+
+        h3 {
+          @media screen and (max-width: 430px) {
+            // font-size: 3vw;
+          }
+
+          color: @c1-promo2-h3-color;
+        }
+
+        h2 {
+          @media screen and (max-width: 430px) {
+            // letter-spacing: 0;
+            line-height: 11vw;
+            font-size: 10vw;
+          }
+
+          color: @c1-promo2-h2-color;
+          text-transform:capitalize;
+          letter-spacing: 0;
+        }
+
+        div {
+
+          &.cta-5th {
+            margin: 8% 0 0 0;
+          }
+
+          a {
+            @media screen and (max-width: 1679px) {
+              // width: 22vw;
+            }
+
+            @media screen and (max-width: 430px) {
+              width: 42vw;
+            }
+
+            // width: 370px;
+            color: @c1-promo2-cta-color;
+            background: @c1-promo2-cta-background;
           }
         }
       }
