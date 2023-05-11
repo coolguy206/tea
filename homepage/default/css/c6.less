@@ -12,10 +12,14 @@
 @c6-third-cta-background: #ED5052;
 
 .c6 {
+  @media screen and (max-width: 1679px){
+    min-height: 46vw !important;
+  }
   @media screen and (max-width: 430px) {
     flex-wrap: wrap;
     // background: #E8C3CA;
     padding: 0;
+    min-height: 208vw !important;
   }
 
   display: flex;
@@ -24,6 +28,7 @@
   background: #FDF5F2;
   position:relative;
   // flex-wrap: wrap;
+  min-height: 822px !important;
 
   .the-content {
     @media screen and (max-width: 430px) {

@@ -7,8 +7,8 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/0510/v0/`;
-// var category = `homepage/2023/0420/v0/`;
+// var category = `promos/one-offs/2023/0510/v0/`;
+var category = `homepage/2023/0511/v0/`;
 // var category = `landing-pages/every-mom/2023/0313/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
 
@@ -16,13 +16,13 @@ var category = `promos/one-offs/2023/0510/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0510/Handoff/`;
-// var readFilePath = `handoff/megamenu/handoff/megamenu/`;
+// var readFilePath = `Site/0510/Handoff/`;
+var readFilePath = `handoff/hp/0511/handoff/0511/`;
 
-var writeFilePath = `promos/landing/dev/images/`;
+// var writeFilePath = `promos/landing/dev/images/`;
 // var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
 // var writeFilePath = `landing-page/every-mom/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/`;
+var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -56,14 +56,14 @@ c.on('ready', function () {
     if (name.indexOf(`-`) !== -1) {
       // console.log(name);
       if (name.indexOf(`-d`) !== -1) {
-        html = `<img class="desktop" data-src="/mas_assets${url}${fileName}${ext}">`;
+        html = `<img class="desktop" data-set="/mas_assets${url}${fileName}${ext}">`;
       } else if (name.indexOf(`-m`) !== -1) {
-        html = `<img class="mobile" data-src="/mas_assets${url}${fileName}${ext}">`;
+        html = `<img class="mobile" data-set="/mas_assets${url}${fileName}${ext}">`;
       } else {
-        html = `<img data-src="/mas_assets${url}${fileName}${ext}">`;
+        html = `<img data-set="/mas_assets${url}${fileName}${ext}">`;
       }
     } else {
-      html = `<img data-src="/mas_assets${url}${fileName}${ext}">`;
+      html = `<img data-set="/mas_assets${url}${fileName}${ext}">`;
     }
 
     //*make the html file
@@ -94,14 +94,14 @@ c.on('ready', function () {
           if (name.indexOf(`-`) !== -1) {
             // console.log(name);
             if (name.indexOf(`-d`) !== -1) {
-              html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+              html = `<img class="desktop" data-set="/mas_assets${url}${file}">`;
             } else if (name.indexOf(`-m`) !== -1) {
-              html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+              html = `<img class="mobile" data-set="/mas_assets${url}${file}">`;
             } else {
-              html = `<img data-src="/mas_assets${url}${file}">`;
+              html = `<img data-set="/mas_assets${url}${file}">`;
             }
           } else {
-            html = `<img data-src="/mas_assets${url}${file}">`;
+            html = `<img data-set="/mas_assets${url}${file}">`;
           }
 
           //*make the html file
@@ -150,14 +150,14 @@ c.on('ready', function () {
             if (name.indexOf(`-`) !== -1) {
               // console.log(name);
               if (name.indexOf(`-d`) !== -1) {
-                html = `<img class="desktop" data-src="/mas_assets${url}${file}">`;
+                html = `<img class="desktop" data-set="/mas_assets${url}${file}">`;
               } else if (name.indexOf(`-m`) !== -1) {
-                html = `<img class="mobile" data-src="/mas_assets${url}${file}">`;
+                html = `<img class="mobile" data-set="/mas_assets${url}${file}">`;
               } else {
-                html = `<img data-src="/mas_assets${url}${file}">`;
+                html = `<img data-set="/mas_assets${url}${file}">`;
               }
             } else {
-              html = `<img data-src="/mas_assets${url}${file}">`;
+              html = `<img data-set="/mas_assets${url}${file}">`;
             }
 
           }
@@ -208,14 +208,14 @@ c.on('ready', function () {
         if (name.indexOf(`-`) !== -1) {
           // console.log(name);
           if (name.indexOf(`-d`) !== -1) {
-            html = `<img class="desktop" data-src="/mas_assets${url}${val.name}">`;
+            html = `<img class="desktop" data-set="/mas_assets${url}${val.name}">`;
           } else if (name.indexOf(`-m`) !== -1) {
-            html = `<img class="mobile" data-src="/mas_assets${url}${val.name}">`;
+            html = `<img class="mobile" data-set="/mas_assets${url}${val.name}">`;
           } else {
-            html = `<img data-src="/mas_assets${url}${val.name}">`;
+            html = `<img data-set="/mas_assets${url}${val.name}">`;
           }
         } else {
-          html = `<img data-src="/mas_assets${url}${val.name}">`;
+          html = `<img data-set="/mas_assets${url}${val.name}">`;
         }
 
         //*make the html file

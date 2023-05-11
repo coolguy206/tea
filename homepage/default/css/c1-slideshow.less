@@ -35,9 +35,16 @@
 @c1-4-cta-background: #2967B0;
 
 .c1 {
+  @media screen and (max-width: 1679px){
+    min-height: 51vw !important;
+  }
+  @media screen and (max-width: 430px){
+    min-height: 210vw !important;
+  }
   position: relative;
   width: 100%;
   overflow: hidden;
+  min-height:880px !important;
 
   .glide__bullets {
     @media screen and (max-width: 430px) {
@@ -336,7 +343,7 @@
             }
 
             @media screen and (max-width: 430px) {
-              width: 42vw;
+              width: 55vw;
             }
 
             // width: 359px;

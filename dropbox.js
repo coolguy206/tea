@@ -16,13 +16,13 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/05 May/050823 Dive In 40% Off Swim Styles/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/050423 Pima Pajamas/Handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/051123 Summer 3 HP/handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Campaign/021323 Spread The Love Giveaway/04 Handoff/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0510/`;
-  // var writeFilePath = `handoff/megamenu/`;
+  // var writeFilePath = `Site/0510/`;
+  var writeFilePath = `handoff/hp/0511/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
