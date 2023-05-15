@@ -10,6 +10,10 @@ html {
   margin: 0;
 }
 
+header.site-header .promos {
+  display: none;
+}
+
 .promos {
   background: #2E64AA;
 }
@@ -25,15 +29,9 @@ html {
   height: 65px;
 }
 
-@media screen and (max-width:1679px) {
-  .promos .hp-promo,  .promos .the-promo {
-    height: 3.9vw;
-  }
-}
-
 @media screen and (max-width:430px) {
   .promos .hp-promo,  .promos .the-promo {
-    height: 22vw;
+    height: 94px;
   }
 }
 

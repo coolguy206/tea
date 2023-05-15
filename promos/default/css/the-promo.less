@@ -24,6 +24,63 @@
   margin: 0;
 }
 
+//? SHOW & HIDE CLONE OF .PROMOS 
+header.site-header {
+  .promos {
+    display: none;
+  }
+
+  &.fixed {
+    // height: auto;
+
+    .promos {
+      @media screen and (max-width: 991px){
+        display:none;
+      }
+      display: block;
+    }
+
+    .site-header-inner.container, .site-header-inner.homepage {
+      background: #fff;
+    }
+  }
+}
+
+//? CHANGE THE TOP OF THE MOBILE FILTERS
+/*
+.category-page .content .mobile-filter-toggle-wrapper.fixed,
+  .search-page .content .mobile-filter-toggle-wrapper.fixed {
+    @media screen and (max-width: 991px){
+      top: 10% !important;
+    }
+    @media screen and (max-width: 768px){
+      // top: 9% !important;
+    }
+    @media screen and (max-width: 600px){
+      top: 12% !important;
+    }
+    @media screen and (max-width: 430px){
+      top: 15% !important;
+    }
+    @media screen and (max-width: 414px){
+      top: 19% !important;
+    }
+    @media screen and (max-width: 411px){
+      top: 17% !important;
+    }
+    @media screen and (max-width: 390px){
+      top: 17% !important;
+    }
+    @media screen and (max-width: 376px){
+      top: 21% !important;
+    }
+    @media screen and (max-width: 320px){
+      top: 25% !important;
+    }
+   
+  }
+*/
+
 .promos {
   // max-width: 1680px;
   // margin: 0 auto;
@@ -40,12 +97,13 @@
   .hp-promo,
   .the-promo {
     @media screen and (max-width: 1679px) {
-      height: 3.9vw;
+      // height: 3.9vw;
     }
 
     @media screen and (max-width: 430px) {
       // padding: 2% 0;
-      height: 22vw;
+      // height: 22vw;
+      height: 94px;
     }
 
     // background: @backgroundColor;
@@ -60,9 +118,10 @@
     //  text-align: center;
     // }
     a {
-      @media screen and (max-width: 430px){
+      @media screen and (max-width: 430px) {
         top: 44%;
       }
+
       text-decoration: none;
       position: absolute;
       top: 50%;
@@ -234,13 +293,20 @@
         }
 
         &.third {
-          a {
-            color: @promo1Color3;
-            
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
           }
 
           color: @promo1Color3;
           text-decoration:underline;
+
+          a {
+            color: @promo1Color3;
+          }
         }
 
         &.shop-now {

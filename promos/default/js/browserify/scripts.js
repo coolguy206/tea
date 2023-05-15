@@ -24,6 +24,14 @@ jQuery(document).ready(function () {
   //   $('.free-shipping-150').css('position', 'relative');
   //   $('.free-shipping-150').show();
   // }
+  //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
+
+  if ($('header.site-header .promos').length == 0) {
+    console.log("cloning .promos");
+    $('header.site-header').prepend($('.promos').clone());
+  } else {
+    console.log(".promos already cloned");
+  }
 
   $('.the-promo .see-details').fancybox({
     helpers: {
