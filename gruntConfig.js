@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'landing',
+    name: 'default',
     ftp: {
       css: {
         src: 'default/css/',

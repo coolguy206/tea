@@ -100,7 +100,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/swim-shop':
-      promo1 = urls.promo.promo;
+      promo1 = urls.promo.swim;
       // promo1 = urls.promo.thePromo.girl;
       promo2 = urls.promo.promo;
       clearance = urls.promo.clearance.girl;

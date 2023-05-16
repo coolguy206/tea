@@ -1,0 +1,225 @@
+@import "var.less";
+@promos-2-cell-first-h2-font-color: #fff;
+@promos-2-cell-first-font-color: #fff;
+@promos-2-cell-first-cta-color: #fff;
+@promos-2-cell-first-cta-background: #5C9FB3;
+@promos-2-cell-second-font-color: #fff;
+@promos-2-cell-second-cta-color: #fff;
+@promos-2-cell-second-cta-background: #F38AAD;
+
+
+.promos-2-cell {
+    @media screen and (max-width: 430px) {
+        flex-wrap: wrap;
+        padding: 0;
+        // background: @background;
+    }
+
+    display: flex;
+    text-align: center;
+    // flex-wrap: wrap;
+    // background: #FDF5F2;
+
+    div {
+
+        &.first,
+        &.second {
+            @media screen and (max-width:430px) {
+                padding: 0;
+            }
+
+            text-align: center;
+            padding: 0;
+            box-sizing: border-box;
+            flex-basis: 33%;
+            position: relative;
+
+            a {
+                text-decoration: none;
+            }
+
+            .the-content {
+                @media screen and (max-width:430px) {
+                    margin: 10% 0 0 !important;
+                    bottom: 10%;
+                }
+
+                // margin: 7% 0 0;
+                position: absolute;
+                bottom: 6%;
+                width: 100%;
+
+                h3 {
+                    @media screen and (max-width: 1679px) {
+                        margin: 0 0 2vw;
+                        font-size: 1.1vw;
+                        // line-height: 28px;
+                    }
+                    @media screen and (max-width: 430px){
+                        font-size: 4vw;
+                        margin: 0 0 4vw;
+                    }
+
+                    font-family: @gilroyb;
+                    font-size: 18px;
+                    line-height: 28px;
+                    text-align: center;
+                    letter-spacing: 4px;
+                    color: @promos-2-cell-first-font-color;
+                    margin: 0 0 27px;
+
+                }
+
+                h2 {
+                    @media screen and (max-width: 1679px) {
+                        font-size: 3.3vw;
+                        // line-height: 1.6vw;
+                    }
+
+                    @media screen and (max-width:430px) {
+                        font-size: 9vw;
+                        line-height: 28px;
+                        // margin: 8% 0 10%;
+                        // margin: 0;
+                    }
+
+                    font-family: @gilroyb;
+                    font-size: 54px;
+                    line-height: 28px;
+                    letter-spacing: 0.1rem;
+                    margin: 0 0 7%;
+                    text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+                    // text-transform: uppercase;
+                }
+
+                div {
+                    @media screen and (max-width:430px) {}
+
+                    margin: 0;
+
+                    a {
+                        @media screen and (max-width: 1679px) {
+                            // width: 17.5vw;
+                        }
+
+                        @media screen and (max-width:430px) {
+                            // width: 68vw;
+                        }
+
+                        // width: 292px;
+                    }
+                }
+            }
+        }
+
+        &.first {
+            @media screen and (max-width:430px) {
+                flex-basis: 100% !important;
+                // padding: 0 0 10vw;
+            }
+
+            flex-basis: 50% !important;
+            overflow: hidden;
+            // order:2;
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 2.5vw;
+                    margin: 2vw 0;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 9vw;
+                    line-height: 10vw;
+                    margin: 6vw 0;
+                }
+
+                color: @promos-2-cell-first-h2-font-color;
+                font-size: 40px;
+                // line-height: 44px;
+                font-family: @gilroyb;
+                margin: 43px 0;
+            }
+
+            .the-content {
+                h2 {
+                    @media screen and (max-width:430px) {}
+
+                    color: @promos-2-cell-first-font-color;
+                }
+
+                div {
+                    a {
+                        @media screen and (max-width:1679px) {
+                            // width: 23vw;
+                        }
+
+                        @media screen and (max-width:430px) {
+                            // width: 89vw;
+                        }
+
+                        color: @promos-2-cell-first-cta-color;
+                        background: @promos-2-cell-first-cta-background;
+                        // width: 383px;
+
+                        &.cta1 {}
+
+                        &.cta2 {}
+
+                        &.cta3 {}
+                    }
+                }
+            }
+        }
+
+        &.second {
+            @media screen and (max-width: 430px) {
+                padding: 0;
+                margin: 0;
+                background: #fff;
+                flex-basis: 100% !important;
+            }
+
+            flex-basis: 50% !important;
+            // order:1;
+
+            .the-content {
+                // bottom: 10%;
+
+                h2 {
+                    color: @promos-2-cell-second-font-color;
+                }
+
+                div {
+                    grid-template-rows: 1%;
+
+                    a {
+                        @media screen and (max-width: 1679px) {
+                            width: 17vw;
+                        }
+
+                        @media screen and (max-width: 430px) {
+                            width: 66vw;
+                        }
+
+                        font-family: @gilroyb;
+                        width: 284px;
+                        color: @promos-2-cell-second-cta-color;
+                        background: @promos-2-cell-second-cta-background;
+
+
+                        &.cta1 {
+                            @media screen and (max-width: 430px) {}
+                        }
+
+                        &.cta2 {
+                            @media screen and (max-width: 430px) {}
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+}

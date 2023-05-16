@@ -16,13 +16,13 @@ var inview = function inview(elem) {
       // console.log(width);
 
       $.each(imgs, function (i, val) {
-        var src = $(val).attr('data-src'); // console.log(src);
+        var src = $(val).attr('data-set'); // console.log(src);
 
         if (src) {
           $(val).attr('src', src);
         }
 
-        $(val).removeAttr('data-src');
+        $(val).removeAttr('data-set');
       });
     }
   });

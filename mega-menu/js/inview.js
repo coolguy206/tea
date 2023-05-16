@@ -9,12 +9,12 @@ export const inview = function(elem) {
       // console.log(imgs);
       // console.log(width);
       $.each(imgs, function(i, val) {
-        let src = $(val).attr('data-src');
+        let src = $(val).attr('data-set');
         // console.log(src);
         if (src) {
           $(val).attr('src', src);
         }
-        $(val).removeAttr('data-src');
+        $(val).removeAttr('data-set');
       });
     }
   });

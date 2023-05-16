@@ -100,7 +100,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
       break;
 
     case '/swim-shop':
-      promo1 = _urls.urls.promo.promo; // promo1 = urls.promo.thePromo.girl;
+      promo1 = _urls.urls.promo.swim; // promo1 = urls.promo.thePromo.girl;
 
       promo2 = _urls.urls.promo.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -133,7 +133,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo: {
-    promo: "/swimwear",
+    swim: "/swimwear",
     girl: "/girls-clothes",
     boy: "/boys-clothes",
     baby: {
@@ -146,16 +146,16 @@ var urls = {
       boy: "/toddler-boys-clothes"
     },
     thePromo: {
-      girl: "/girls-swimwear",
-      boy: "/boys-swimwear",
+      girl: "/girls-pajamas-sleepwear",
+      boy: "/boys-pajamas-sleepwear",
       baby: {
-        girl: "/baby-girl-swimwear",
-        boy: "/baby-boy-swimwear",
+        girl: "/baby-girl-pajamas",
+        boy: "/baby-boy-pajamas",
         newborn: "/newborn-clothing"
       },
       toddler: {
-        girl: "/toddler-girls-clothes/swim",
-        boy: "/toddler-boys-clothes/swim"
+        girl: "/toddler-girls-clothes/pajamas",
+        boy: "/toddler-boys-clothes/pajamas"
       }
     },
     select: {

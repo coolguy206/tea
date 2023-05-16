@@ -99,7 +99,7 @@ var switchNewArrivals = function switchNewArrivals(href) {
       break;
 
     case '/swim-shop':
-      promo1 = _urls.urls.promo.promo; // promo1 = urls.promo.thePromo.girl;
+      promo1 = _urls.urls.promo.swim; // promo1 = urls.promo.thePromo.girl;
 
       promo2 = _urls.urls.promo.promo;
       clearance = _urls.urls.promo.clearance.girl;
