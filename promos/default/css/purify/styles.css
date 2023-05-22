@@ -15,7 +15,7 @@ header.site-header .promos {
 }
 
 .promos {
-  background: #5C9FB3;
+  background: #F48080;
 }
 
 .promos .promos-wrap {
@@ -110,11 +110,11 @@ header.site-header .promos {
 }
 
 .promos .the-promo.promo1 {
-  background: #5C9FB3;
+  background: #F48080;
 }
 
 .promos .the-promo.promo1 span.first {
-  color: #E3EBA4;
+  color: #F3DD4E;
 }
 
 @media screen and (max-width:1679px) {
