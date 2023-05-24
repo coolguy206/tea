@@ -17,20 +17,41 @@ $(document).ready(function () {
   new Glide('.c1 .glide', {
     type: 'carousel',
     autoplay: 4000,
-    animationDuration:2000,
+    animationDuration: 2000,
     perView: 1,
-    hoverpause:true,
-    gap:0
+    hoverpause: true,
+    gap: 0
+  }).mount()
+
+  new Glide('.memorial-day-shop .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 2000,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      430: {
+        perView: 2
+      },
+    }
   }).mount()
 
   new Glide('.c6 .glide', {
     type: 'carousel',
     autoplay: 4000,
-    animationDuration:2000,
+    animationDuration: 2000,
     perView: 1,
-    hoverpause:true,
-    gap:0
+    hoverpause: true,
+    gap: 0
   }).mount()
+
+  var imgs = $('.memorial-day-shop').find('img');
+  imgs.map(function (i, val) {
+    var href = $(val).closest('span').attr('data-href');
+    $(val).addClass('memorial-day').attr('data-href', href);
+    $(val).next().addClass('memorial-day').attr('data-alt', $(val).attr('alt')).attr('data-href', href);
+  });
 
   // $('.furoshiki .see-details').fancybox({
   //   helpers: {
@@ -38,7 +59,7 @@ $(document).ready(function () {
   //   }
   // });
 
-  alt('.hp .promo1 img', 'the sunshine sale take 25% off select styles');
+  alt('.hp .promo1 img', 'take 25% off sitewide + extra 30% off all sale shop nows');
   alt('.hp .promo2 img', '');
   alt('.hp .c1 .content-1 img', 'girl in swimwear');
   alt('.hp .c1 .content-2 img', 'kids in swimwear');
@@ -68,7 +89,7 @@ $(document).ready(function () {
   alt('.hp .c7 .fourth img', 'follow us on instagram');
   alt('.hp .swim img', 'watermelon graphic swimwear');
 
-  inview('.hp .promo1, .hp .promo2, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .graphics, .hp .refer-friend, .hp .rewear');
+  inview('.hp .promo1, .hp .promo2, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .memorial-day-shop');
 
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);

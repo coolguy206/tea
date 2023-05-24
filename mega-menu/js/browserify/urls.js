@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = {
   promo: {
-    swim: "/clothing-sale",
+    swim: "/new-arrivals",
     girl: "/girls-clothes",
     boy: "/boys-clothes",
     baby: {

@@ -22,6 +22,19 @@ $(document).ready(function () {
     hoverpause: true,
     gap: 0
   }).mount();
+  new _glide["default"]('.memorial-day-shop .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 2000,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      430: {
+        perView: 2
+      }
+    }
+  }).mount();
   new _glide["default"]('.c6 .glide', {
     type: 'carousel',
     autoplay: 4000,
@@ -29,13 +42,19 @@ $(document).ready(function () {
     perView: 1,
     hoverpause: true,
     gap: 0
-  }).mount(); // $('.furoshiki .see-details').fancybox({
+  }).mount();
+  var imgs = $('.memorial-day-shop').find('img');
+  imgs.map(function (i, val) {
+    var href = $(val).closest('span').attr('data-href');
+    $(val).addClass('memorial-day').attr('data-href', href);
+    $(val).next().addClass('memorial-day').attr('data-alt', $(val).attr('alt')).attr('data-href', href);
+  }); // $('.furoshiki .see-details').fancybox({
   //   helpers: {
   //     overlay: null
   //   }
   // });
 
-  (0, _alt.alt)('.hp .promo1 img', 'the sunshine sale take 25% off select styles');
+  (0, _alt.alt)('.hp .promo1 img', 'take 25% off sitewide + extra 30% off all sale shop nows');
   (0, _alt.alt)('.hp .promo2 img', '');
   (0, _alt.alt)('.hp .c1 .content-1 img', 'girl in swimwear');
   (0, _alt.alt)('.hp .c1 .content-2 img', 'kids in swimwear');
@@ -64,7 +83,7 @@ $(document).ready(function () {
   (0, _alt.alt)('.hp .c7 .third img', 'learn how #teagivesback');
   (0, _alt.alt)('.hp .c7 .fourth img', 'follow us on instagram');
   (0, _alt.alt)('.hp .swim img', 'watermelon graphic swimwear');
-  (0, _inview.inview)('.hp .promo1, .hp .promo2, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .graphics, .hp .refer-friend, .hp .rewear');
+  (0, _inview.inview)('.hp .promo1, .hp .promo2, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .memorial-day-shop');
 
   for (var i = 1; i < 8; i++) {
     (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);
