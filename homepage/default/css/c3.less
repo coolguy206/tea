@@ -1,10 +1,10 @@
 @import "var.less";
 @c3-first-font-color: #fff;
 @c3-first-cta-color: #fff;
-@c3-first-cta-background: #FFA267;
+@c3-first-cta-background: #60A6C5;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #fff;
-@c3-second-cta-background: #61C3A9;
+@c3-second-cta-background: #FFA267;
 @c3-third-font-color: #fff;
 @c3-third-cta-color: #fff;
 @c3-third-cta-background: #24624F;
@@ -139,11 +139,15 @@
           @media screen and (max-width: 375px) {}
 
           a {
-            @media screen and (max-width:1024px) {}
-            @media screen and (max-width: 430px) {}
+            @media screen and (max-width:1679px) {
+              width: 17.1vw;
+            }
+            @media screen and (max-width: 430px) {
+              width: 67.1vw;
+            }
             color: @c3-first-cta-color;
             background: @c3-first-cta-background;
-            // width: 242px;
+            width: 288px;
             // margin: 0 0 20%;
             &.cta1 {
               @media screen and (max-width:430px) {}

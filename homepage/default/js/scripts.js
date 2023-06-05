@@ -23,19 +23,19 @@ $(document).ready(function () {
     gap: 0
   }).mount()
 
-  new Glide('.memorial-day-shop .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      430: {
-        perView: 2
-      },
-    }
-  }).mount()
+  // new Glide('.memorial-day-shop .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     430: {
+  //       perView: 2
+  //     },
+  //   }
+  // }).mount()
 
   new Glide('.c6 .glide', {
     type: 'carousel',
@@ -46,12 +46,12 @@ $(document).ready(function () {
     gap: 0
   }).mount()
 
-  var imgs = $('.memorial-day-shop').find('img');
-  imgs.map(function (i, val) {
-    var href = $(val).closest('span').attr('data-href');
-    $(val).addClass('memorial-day').attr('data-href', href);
-    $(val).next().addClass('memorial-day').attr('data-alt', $(val).attr('alt')).attr('data-href', href);
-  });
+  // var imgs = $('.memorial-day-shop').find('img');
+  // imgs.map(function (i, val) {
+  //   var href = $(val).closest('span').attr('data-href');
+  //   $(val).addClass('memorial-day').attr('data-href', href);
+  //   $(val).next().addClass('memorial-day').attr('data-alt', $(val).attr('alt')).attr('data-href', href);
+  // });
 
   // $('.furoshiki .see-details').fancybox({
   //   helpers: {
