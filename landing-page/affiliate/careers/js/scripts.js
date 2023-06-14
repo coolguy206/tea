@@ -1,30 +1,31 @@
-$(document).ready(function() {
-  var apiUrl = 'https://api.lever.co/v0/postings/teacollection';
-  //get all the job listings
-  $.get(apiUrl + '?mode=json', function(data) {
-    console.log('all jobs');
-    console.log(data);
+import {
+  jobs
+} from './job-listing.js';
 
-    var jobs = data;
-    $(jobs).each(function(i, val) {
-      var jobId = val.id;
-      var jobTitle = val.text;
-      var jobUrl = jobTitle.replace(',', '');
-      jobUrl = jobUrl.replace(/ /g, '-');
-      var jobType = val.categories.commitment;
-      var jobLocation = val.categories.location;
-      var jobTeam = val.categories.team;
+import {
+  dutiesQualifications
+} from './duties-qualifications.js';
 
-      $('.jobs-list').append('<li><h4><a href="#' + jobUrl + '" data="' + jobId + '"><span>' + jobTitle + ' - ' + jobType + '</span><span>' + jobLocation + '</span></a></h4></li>');
-    }); //end of loop
+$(document).ready(function () {
 
-    //onclick show the job
-    $('.jobs-list li a').click(function(e) {
-      window.scrollTo(0, 0);
-      // e.preventDefault();
-      var jobId = $(this).attr('data');
-      //get the clicked job
-      $.get(apiUrl + '/' + jobId, function(job) {
+  console.log(jobs);
+
+  $(jobs).each(function (i, val) {
+    var jobId = i;
+    var jobTitle = val.title;
+    $('.jobs-list').append(`<li><h4><a href="#${jobTitle}" data="${jobId}"><span>${jobTitle}</span></a></h4></li>`);
+  });
+
+  //onclick show the job
+  $('.jobs-list li a').click(function (e) {
+    window.scrollTo(0, 0);
+    // e.preventDefault();
+    var jobId = $(this).attr('data');
+
+    //get the clicked job
+    $(jobs).each(function (i, job) {
+
+      if (jobId == i) {
         console.log('single job');
         console.log(job);
 
@@ -33,46 +34,34 @@ $(document).ready(function() {
 
         //show the clicked job content
         var backTo = '<p class="all-jobs"><a href="#">Back to All Jobs</a></p>';
-        var jobTitle = '<h2>' + job.text + '</h2>';
-        var jobApply = '<h2 style="margin: 10px 0"><a href="' + job.applyUrl + '" target="_blank">apply</a></h2>';
-        var jobLocation = '<p>' + job.categories.location + '<br> ' + job.categories.team + '<br> ' + job.categories.commitment + '</p>' + jobApply;
-        var jobDesc = job.description;
-        var jobFooter = job.additional;
-
-
-        var jobContent = backTo + jobTitle + jobLocation + jobDesc;
+        var jobTitle = `<h2>${job.title}</h2>`;
+        var jobApply = `<h2 style="margin: 10px 0"><a href="mailto:hr@teacollection.com" target="_blank">apply</a></h2>`;
+        var jobHeader = `<div>${job.header}</div>`;
+        var jobPay = `<div>${job.pay}</div>`;
+        var jobFooter = `<div>${job.footer}</div>`;
+        var jobContent = `${backTo} ${jobTitle} ${jobApply} ${jobHeader} ${jobPay} ${jobFooter}`;
 
         // show the title, location, description
         $('.the-job').append(jobContent);
 
         //show the responsibilities & qualifications
-        var lists = job.lists;
-        $(lists).each(function(j, arr) {
-          var listTitle = '<h3>' + arr.text + '</h3>';
-          var list = '<ul>' + arr.content + '</ul>';
-          var listContent = listTitle + list;
-          $('.the-job').append(listContent);
-        });
+        dutiesQualifications(job.duties, `Duties & Responsibilities`);
+        dutiesQualifications(job.qualifications, `Qualifications`);
 
         //show the footer and apply
         $('.the-job').append(jobFooter + jobApply);
 
         //on click return to all jobs
-        $('.all-jobs').click(function(e) {
+        $('.all-jobs').click(function (e) {
           window.scrollTo(0, 0);
-          // e.preventDefault();
-
-          //remove the single job
           $('.the-job').children().remove();
-
-          //show the original page content
           $('.careers-welcome').show();
-        }); // end of .all-jobs click
+        });
 
-      }); // end of $.get single job
+      }
 
-    }); //end of .jobs-list li a click
+    });
 
-  }); //end of $.get all jobs
+  });
 
-}); //end of document .ready
+}); 

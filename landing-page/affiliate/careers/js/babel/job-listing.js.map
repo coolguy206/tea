@@ -1,0 +1,1 @@
+{"version":3,"sources":["../job-listing.js"],"names":["jobs","accountingManager"],"mappings":";;;;;;;AAAA;;AAIO,IAAIA,IAAI,GAAG,CAACC,oCAAD,CAAX","sourcesContent":["import {\r\n  accountingManager\r\n  } from './accounting-manager.js';\r\n\r\nexport var jobs = [accountingManager];\r\n\r\n\r\n"],"file":"job-listing.js"}
