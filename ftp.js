@@ -7,8 +7,8 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2023/0611/v0/`;
-var category = `homepage/2023/0611/v0/`;
+var category = `promos/one-offs/2023/0618/v0/`;
+// var category = `homepage/2023/0611/v0/`;
 // var category = `landing-pages/every-mom/2023/0313/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
 
@@ -16,13 +16,13 @@ var category = `homepage/2023/0611/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0611/Site/hp/`;
+var readFilePath = `Site/0618/site/btn/`;
 // var readFilePath = `handoff/hp/0520/`;
 
-// var writeFilePath = `promos/default/dev/images/`;
-// var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
+var writeFilePath = `promos/bubble/dev/images/`;
+// var writeFilePath = `promos/headers/dev/images/baby-warehouse/`;
 // var writeFilePath = `landing-page/every-mom/dev/images/`;
-var writeFilePath = `homepage/default/dev/images/`;
+// var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

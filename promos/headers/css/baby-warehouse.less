@@ -1,0 +1,83 @@
+@import 'var.less';
+@import 'classes.less';
+
+&.baby-warehouse {
+    @media screen and (max-width: 1679px) {
+        min-height: 32vw;
+    }
+
+    @media screen and (max-width:430px) {
+        min-height: 170vw;
+    }
+
+    position: relative;
+    background: #ECB3DF;
+    text-align: center;
+    min-height: 536px;
+
+
+    .the-content.baby-warehouse {
+        @media screen and (max-width: 430px) {
+        
+        }
+
+        top: 50%;
+        width: 100%;
+        left: 0;
+        transform: translate(0%, -50%);
+        position: absolute;
+        display:block;
+
+        .the-header {
+            img {
+                @media screen and (max-width: 1679px) {
+                    width: 49vw;
+                }
+                @media screen and (max-width: 430px){
+                    width: 100%;
+                }
+            }
+        }
+
+        .the-links {
+            @media screen and (max-width: 1679px) {
+                margin: 2vw 0 0;
+            }
+            @media screen and (max-width:430px) {
+                   flex-wrap:wrap;
+                   justify-content: center;
+            }
+
+            display: flex;
+            margin: 28px 0 0 0;
+
+            a {
+                @media screen and (max-width:430px) {
+                   
+                    flex-basis: 33%;
+                    margin: 0 0 7vw;
+                }
+
+                flex-basis: 20%;
+                color: #fff;
+
+                img {
+                    @media screen and (max-width: 1679px) {
+                        width: 12vw;
+                        margin: 0 0 1vw;
+                    }
+                    @media screen and (max-width:430px) {
+                   
+                        width: 29vw;
+                        // margin: 0 0 1vw;
+                    }
+
+                    width: 200px;
+                    margin: 0 0 20px;
+                }
+            }
+
+        }
+
+    }
+}

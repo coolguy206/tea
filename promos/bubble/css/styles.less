@@ -1,0 +1,31 @@
+// @import 'var.less';
+// @import 'classes.less';
+
+.bubble {
+	@media screen and (max-width: 1679px) {
+		bottom: 36px;
+	}
+	@media screen and (max-width: 430px) {
+		bottom: 50px;
+	}
+	position: fixed;
+	bottom: 26px;
+	left: 2vw;
+	padding: 1vw;
+	display: none;
+
+	a {
+		text-decoration: none;
+
+		img {
+			@media screen and (max-width: 1679px) {
+				width: 17.5vw;
+			}
+			@media screen and (max-width: 430px) {
+				width: 35vw;
+			}
+
+			width: 300px;
+		}
+	}
+}

@@ -14,12 +14,7 @@ header.site-header .promos {
   display: none;
 }
 
-.promos {
-  background: #F68B57;
-}
-
 .promos .promos-wrap {
-  max-width: 1680px;
   margin: 0 auto;
   position: relative;
 }
@@ -27,6 +22,7 @@ header.site-header .promos {
 .promos .the-promo {
   text-align: center;
   height: 65px;
+  position: relative;
 }
 
 @media screen and (max-width:430px) {
@@ -130,11 +126,11 @@ header.site-header .promos {
 }
 
 .promos .the-promo.promo2 {
-  background: #D03543;
+  background: #ECB3DF;
 }
 
 .promos .the-promo.promo2 span.first {
-  color: #fff;
+  color: #FDFD85;
 }
 
 .promos .the-promo.promo3 {

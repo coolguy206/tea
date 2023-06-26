@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'affiliate/careers'
+    name: 'sweeps/baby-warehouse'
   },
   zone: {
     name: 'mega-menu/sub-nav',
@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
+    name: 'bubble',
     ftp: {
       css: {
         src: 'default/css/',

@@ -30,12 +30,12 @@ jQuery(document).ready(function() {
   // }
 
   //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
-  if($('header.site-header .promos').length == 0) {
-    console.log(`cloning .promos`);
-    $('header.site-header').prepend($('.promos').clone());
-  } else {
-    console.log(`.promos already cloned`);
-  }
+  // if($('header.site-header .promos').length == 0) {
+  //   console.log(`cloning .promos`);
+  //   $('header.site-header').prepend($('.promos').clone());
+  // } else {
+  //   console.log(`.promos already cloned`);
+  // }
   
 
   $('.the-promo .see-details').fancybox({
@@ -50,13 +50,15 @@ jQuery(document).ready(function() {
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //     auto: true,
-  //     autoHover: true,
-  //     mode: 'fade',
-  //     onSliderLoad:function(){
-  //         $('.promos.promo2, .promos.promo3').show();
-  //     }
-  // });
+  $('.promos-wrap').bxSlider({
+      auto: true,
+      autoHover: true,
+      mode: 'fade',
+      controls: false,
+      pager: false,
+      // onSliderLoad:function(){
+      //     $('.promos.promo2, .promos.promo3').show();
+      // }
+  });
 
 });
