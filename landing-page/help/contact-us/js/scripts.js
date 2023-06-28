@@ -8,6 +8,7 @@ $(document).ready(function () {
   var day = date.getDate();
   var year = date.getFullYear();
   var message;
+  var weekdays = [`Monday`, `Tuesday`, `Wednesday`, `Thursday`, `Friday`, `Saturday`, `Sunday`];
 
   var holidayApi = `https://date.nager.at/api/v3/PublicHolidays`;
   fetch(`${holidayApi}/${year}/${countryCode}`).then((data) => { return data.json(); }).then((data) => {
@@ -20,7 +21,7 @@ $(document).ready(function () {
       console.log(data);
 
       //? for dev
-      // month = 1;
+      // month = 12;
       // day = 2;
 
       var holidays = data;
@@ -51,6 +52,18 @@ $(document).ready(function () {
           <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
           <h3>${newData[0].name} ${nextYearMonth}/${nextYearDay}/${nextYearYear}</h3>
           `;
+              $('.holiday-closure p').html(message);
+              $('.holiday-closure').show();
+            } else if (month == 7 && month == holidayMonth) {
+
+              var theDay = new Date(`${holidayMonth}/${holidayDay-1}/${holidayYear}`).getDay();
+              theDay = weekdays[theDay -1];
+
+              // console.log(theDay);
+              message = `
+              <h3>${theDay} ${holidayMonth}/${holidayDay-1}/${holidayYear}</h3>
+              <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
+              `;
               $('.holiday-closure p').html(message);
               $('.holiday-closure').show();
             } else if (month == holidayMonth) {

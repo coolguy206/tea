@@ -7,6 +7,7 @@ $(document).ready(function () {
   var day = date.getDate();
   var year = date.getFullYear();
   var message;
+  var weekdays = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
   var holidayApi = "https://date.nager.at/api/v3/PublicHolidays";
   fetch("".concat(holidayApi, "/").concat(year, "/").concat(countryCode)).then(function (data) {
     return data.json();
@@ -19,7 +20,7 @@ $(document).ready(function () {
       console.log(newData);
       console.log("current year data");
       console.log(data); //? for dev
-      // month = 1;
+      // month = 12;
       // day = 2;
 
       var holidays = data;
@@ -43,6 +44,13 @@ $(document).ready(function () {
           if (val.name !== "Good Friday" && val.name !== "Martin Luther King, Jr. Day" && val.name !== "Washington's Birthday" && val.name !== "Juneteenth" && val.name !== "Columbus Day" && val.name !== "Veterans Day" && val.name !== "Veterans Day") {
             if (month == 12 && month == holidayMonth) {
               message = "\n          <h3>".concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n          <h3>").concat(newData[0].name, " ").concat(nextYearMonth, "/").concat(nextYearDay, "/").concat(nextYearYear, "</h3>\n          ");
+              $('.holiday-closure p').html(message);
+              $('.holiday-closure').show();
+            } else if (month == 7 && month == holidayMonth) {
+              var theDay = new Date("".concat(holidayMonth, "/").concat(holidayDay - 1, "/").concat(holidayYear)).getDay();
+              theDay = weekdays[theDay - 1]; // console.log(theDay);
+
+              message = "\n              <h3>".concat(theDay, " ").concat(holidayMonth, "/").concat(holidayDay - 1, "/").concat(holidayYear, "</h3>\n              <h3>").concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n              ");
               $('.holiday-closure p').html(message);
               $('.holiday-closure').show();
             } else if (month == holidayMonth) {
