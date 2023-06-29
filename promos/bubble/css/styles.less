@@ -5,9 +5,11 @@
 	@media screen and (max-width: 1679px) {
 		bottom: 36px;
 	}
+
 	@media screen and (max-width: 430px) {
 		bottom: 50px;
 	}
+
 	position: fixed;
 	bottom: 26px;
 	left: 2vw;
@@ -21,11 +23,47 @@
 			@media screen and (max-width: 1679px) {
 				width: 17.5vw;
 			}
+
 			@media screen and (max-width: 430px) {
 				width: 35vw;
 			}
 
-			width: 300px;
+			width: 200px;
+		}
+
+		span {
+			background: lightgray;
+			padding: 1vw;
+			border-radius: 3vw;
+			position: absolute;
+			top: 0;
+			width: 193px;
+			text-align: center;
+			font-family: gilroy-bold;
+			font-size: 24px;
+			// border: 1px solid;
+
+			&::after {
+				@media screen and (max-width: 1679px){
+					left: -.2vw;
+					top: 3vw;
+				}
+				@media screen and (max-width: 430px){
+					rotate: 45deg;
+					left: -3vw;
+					top: 5vw;
+				}
+				content: '';
+				display: inline-block;
+				width: 40px;
+				height: 40px;
+				position: absolute;
+				background: lightgray;
+				rotate: 12deg;
+				left: -5px;
+				top: 63px;
+				z-index: -1;
+			}
 		}
 	}
 }

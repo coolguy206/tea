@@ -4,6 +4,10 @@ import {
 
 $(document).ready(function () {
   inview('.bubble');
+  console.log(`subTotalVar:`);
+  console.log(subTotalVar);
+
+  // localStorage.removeItem("bubble");
 
   var url = window.location.href;
   if (url.indexOf('?') !== -1) {
@@ -12,7 +16,7 @@ $(document).ready(function () {
 
     url.map(function (val, i) {
       console.log(val, i);
-      if (val == `utm_campaign=babywarehousebubble`) {
+      if (val == `utm_campaign=free-tshirt`) {
         localStorage.setItem("bubble", "true")
         console.log("localstorage set");
       }
@@ -23,6 +27,15 @@ $(document).ready(function () {
   if (bubble) {
     console.log("found localstorage bubble");
     $(".bubble").css("display", "block");
+
+
+    // if(subTotalVar >= 150){
+    //   console.log(`sub total is greater than or equal to 150`);
+    //   $(".bubble").css("display", "block");
+    // } else {
+    //   console.log(`sub total is not greater than or equal to 150`);
+    // }
+    
   }
 
   var theUrl = window.location.pathname;

@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/swim-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'mega-menu/top-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
+    name: 'bubble',
     ftp: {
       css: {
         src: 'default/css/',
