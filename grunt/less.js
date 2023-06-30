@@ -57,7 +57,7 @@ module.exports = {
     promos: {
         expand: true,
         cwd: 'promos/' + config.promo.name + '/css/',
-        src: ['*.less'],
+        src: ['**/*.less'],
         dest: 'promos/' + config.promo.name + '/css/',
         ext: '.css',
     },

@@ -6,22 +6,20 @@ var _inview = require("./inview.js");
 
 var _tracking = require("./tracking.js");
 
-var _glide = _interopRequireDefault(require("@glidejs/glide"));
-
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 // const addAlt = require('./alt.js');
 // const inview = require('./inview.js');
 // const addTracking = require('./tracking.js');
+// import Glide from '@glidejs/glide'
 $(document).ready(function () {
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount(); // new Glide('.memorial-day-shop .glide', {
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount()
+  // new Glide('.memorial-day-shop .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 2000,
@@ -34,15 +32,15 @@ $(document).ready(function () {
   //     },
   //   }
   // }).mount()
-
-  new _glide["default"]('.c6 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount(); // var imgs = $('.memorial-day-shop').find('img');
+  // new Glide('.c6 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount()
+  // var imgs = $('.memorial-day-shop').find('img');
   // imgs.map(function (i, val) {
   //   var href = $(val).closest('span').attr('data-href');
   //   $(val).addClass('memorial-day').attr('data-href', href);
@@ -53,7 +51,6 @@ $(document).ready(function () {
   //     overlay: null
   //   }
   // });
-
   (0, _alt.alt)('.hp .promo1 img', 'take 25% off sitewide + extra 30% off all sale shop nows');
   (0, _alt.alt)('.hp .promo2 img', '');
   (0, _alt.alt)('.hp .c1 .content-1 img', 'girl in swimwear');

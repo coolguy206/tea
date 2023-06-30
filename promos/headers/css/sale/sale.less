@@ -1,0 +1,76 @@
+@import '../var.less';
+@import '../classes.less';
+@sale-cta-color: #fff;
+@sale-cta1-background: #EDB2E0;
+@sale-cta2-background: #A2655C;
+@sale-cta3-background: #FFAB99;
+@sale-cta4-background: #2E64AA;
+@sale-cta5-background: #ED686E;
+@sale-cta6-background: #47363D;
+
+.container-promo-header {
+    .the-content {
+        @media screen and (max-width:430px) {
+            // padding: 12% 0;
+        }
+
+        .the-grid {
+            @media screen and (max-width: 430px) {
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: 6%;
+            }
+
+            grid-template-columns: repeat(5, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            column-gap: 3%;
+
+        }
+
+        div {
+            @media screen and (max-width: 430px) {
+                column-gap: 4%;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            display:flex;
+            column-gap: 1%;
+        }
+
+        a {
+            @media screen and (max-width:430px) {
+                flex-basis: 45%;
+                margin: 0 0 4%;
+            }
+            color: @sale-cta-color;
+            width: 255px;
+
+            &.cta1 {
+                background: @sale-cta1-background;
+            }
+
+            &.cta2 {
+                background: @sale-cta2-background;
+            }
+
+            &.cta3 {
+                background: @sale-cta3-background;
+            }
+
+            &.cta4 {
+                background: @sale-cta4-background;
+            }
+
+            &.cta5 {
+                background: @sale-cta5-background;
+            }
+
+            &.cta6 {
+                background: @sale-cta6-background;
+            }
+
+
+        }
+
+
+    }
+}

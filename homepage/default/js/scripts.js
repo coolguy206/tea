@@ -10,18 +10,18 @@ import {
 import {
   tracking
 } from './tracking.js';
-import Glide from '@glidejs/glide'
+// import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount()
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount()
 
   // new Glide('.memorial-day-shop .glide', {
   //   type: 'carousel',
@@ -37,14 +37,14 @@ $(document).ready(function () {
   //   }
   // }).mount()
 
-  new Glide('.c6 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount()
+  // new Glide('.c6 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount()
 
   // var imgs = $('.memorial-day-shop').find('img');
   // imgs.map(function (i, val) {

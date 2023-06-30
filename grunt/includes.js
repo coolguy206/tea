@@ -86,7 +86,7 @@ module.exports = {
       // promo toolkit
       {
         cwd: 'promos/' + config.promo.name + '/dev',
-        src: ['*.html'],
+        src: ['**/*.html'],
         dest: 'promos/' + config.promo.name + '/includes/',
       },
     ]

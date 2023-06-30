@@ -1,10 +1,10 @@
 @import "var.less";
 @c5-first-font-color: #fff;
 @c5-first-cta-color: #fff;
-@c5-first-cta-background: #2967B0;
+@c5-first-cta-background: #2CAC96;
 @c5-second-font-color: #fff;
 @c5-second-cta-color: #fff;
-@c5-second-cta-background: #00A5B6;
+@c5-second-cta-background: #2CAC96;
 @c5-third-font-color: #fff;
 @c5-third-cta-color: #FFF;
 @c5-third-cta-background: #2D82A1;
@@ -26,12 +26,15 @@
     &.first,
     &.second,
     &.third {
+      @media screen and (max-width:1679px) {
+        padding: 3.7vw;
+      }
       @media screen and (max-width:430px) {
         padding: 0;
       }
 
       text-align: center;
-      padding: 0;
+      padding: 2.4vw;
       box-sizing: border-box;
       flex-basis: 34%;
       position: relative;
@@ -46,9 +49,9 @@
           bottom: 10%;
         }
 
-        margin: 7% 0 0;
+        // margin: 7% 0 0;
         position: absolute;
-        bottom: 9%;
+        bottom: 16%;
         width: 100%;
 
         h2 {
@@ -90,7 +93,7 @@
             @media screen and (max-width:430px) {
               // width: 57vw;
             }
-
+            left: -2vw;
             // width: 310px;
           }
         }
@@ -154,15 +157,15 @@
         div {
           a {
             @media screen and (max-width:1679px) {
-              width: 13.3vw;
+              // width: 13.3vw;
             }
 
             @media screen and (max-width:430px) {
-              width: 43.5vw;
+              // width: 43.5vw;
             }
             color: @c5-second-cta-color;
             background: @c5-second-cta-background;
-            width: 224px;
+            // width: 224px;
 
             &.cta1 {
               @media screen and (max-width: 430px) {}

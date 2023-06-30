@@ -2,10 +2,10 @@
 @c2-first-h2-font-color: #fff;
 @c2-first-font-color: #fff;
 @c2-first-cta-color: #fff;
-@c2-first-cta-background: #2FAB9D;
+@c2-first-cta-background: #2CAC96;
 @c2-second-font-color: #fff;
 @c2-second-cta-color: #fff;
-@c2-second-cta-background: #EC5152;
+@c2-second-cta-background: #2CAC96;
 @c2-third-font-color: #fff;
 @c2-third-cta-color: #fff;
 @c2-third-cta-background: #FFB499;
@@ -27,12 +27,15 @@
     &.first,
     &.second,
     &.third {
+      @media screen and (max-width:1679px) {
+        padding: 2vw 1vw 1vw;
+      }
       @media screen and (max-width:430px) {
         padding: 0;
       }
 
       text-align: center;
-      padding: 0;
+      padding: 2vw 1vw;
       box-sizing: border-box;
       flex-basis: 33%;
       position: relative;
@@ -49,7 +52,7 @@
 
         // margin: 7% 0 0;
         position: absolute;
-        bottom: 6%;
+        bottom: 13%;
         width: 100%;
 
         h2 {
@@ -87,6 +90,8 @@
             @media screen and (max-width:430px) {
               // width: 68vw;
             }
+
+            // left: -2vw;
 
             // width: 292px;
           }
@@ -135,16 +140,16 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: 13.3vw;
+              // width: 13.3vw;
             }
 
             @media screen and (max-width:430px) {
-              width: 43.5vw;
+              // width: 43.5vw;
             }
 
             color: @c2-first-cta-color;
             background: @c2-first-cta-background;
-            width: 224px;
+            // width: 224px;
 
             &.cta1 {}
 
@@ -179,13 +184,13 @@
 
           a {
             @media screen and (max-width: 1679px) {
-              width: 17.1vw;
+              // width: 17.1vw;
             }
             @media screen and (max-width: 430px) {
-              width: 67.1vw;
+              // width: 67.1vw;
             }
             font-family: @gilroyb;
-            width: 288px;
+            // width: 288px;
             color: @c2-second-cta-color;
             background: @c2-second-cta-background;
 
