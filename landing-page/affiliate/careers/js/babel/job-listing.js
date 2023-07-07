@@ -7,6 +7,8 @@ exports.jobs = void 0;
 
 var _accountingManager = require("./accounting-manager.js");
 
-var jobs = [_accountingManager.accountingManager];
+var _associateBusinessSystemsAnalyst = require("./associate-business-systems-analyst.js");
+
+var jobs = [_accountingManager.accountingManager, _associateBusinessSystemsAnalyst.associateBusinessSystemsAnalyst];
 exports.jobs = jobs;
 //# sourceMappingURL=job-listing.js.map
