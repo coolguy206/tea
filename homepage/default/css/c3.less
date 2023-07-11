@@ -1,7 +1,7 @@
 @import "var.less";
 @c3-first-font-color: #fff;
 @c3-first-cta-color: #fff;
-@c3-first-cta-background: #2CAC96;
+@c3-first-cta-background: #65C2A9;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #fff;
 @c3-second-cta-background: #2CAC96;
@@ -10,7 +10,7 @@
 @c3-third-cta-background: #24624F;
 
 .c3 {
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 431px) {
     flex-wrap: wrap;
     // background: #E8C3CA;
     padding: 0;
@@ -18,8 +18,10 @@
   display: flex;
   padding: 0;
   text-align: center;
+
   // flex-wrap: wrap;
   div {
+
     &.first,
     &.second,
     &.third {
@@ -40,38 +42,41 @@
       h2 {
         @media screen and (max-width: 1679px) {
           font-size: 3.3vw;
-          // line-height: 1.6vw;
+          line-height: 4vw;
         }
-        @media screen and (max-width:430px) {
+
+        @media screen and (max-width:431px) {
           font-size: 8.5vw;
           line-height: 10.5vw;
         }
-        font-family: @gilroyb;
+        font-family: @souv;
         font-size: 54px;
-        line-height: 44px;
+        line-height: 64px;
         letter-spacing: 0.1rem;
         color: @c3-first-font-color;
         margin: 0 0 7%;
         text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+        text-align:left;
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {
+        @media screen and (max-width: 431px) {
           margin: 10% 0 0 !important;
           bottom: 7%;
         }
         margin: 0;
         position: absolute;
-        bottom: 13%;
+        bottom: 16%;
         width: 100%;
 
         h2 {
           @media screen and (max-width: 1679px) {}
-          @media screen and (max-width:430px) {}
+
+          @media screen and (max-width:431px) {}
         }
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
@@ -84,7 +89,8 @@
 
           a {
             @media screen and (max-width:1679px) {}
-            @media screen and(max-width: 430px) {}
+
+            @media screen and(max-width: 431px) {}
 
             // left: -2vw;
           }
@@ -93,104 +99,101 @@
     }
 
     &.first {
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 431px) {
         // padding: 10% 0 0;
         // background: #FDF5F2;
         position: relative;
         text-align: center;
         display: flex;
         flex-wrap: wrap;
-        padding: 0;
+        padding: 6vw;
       }
       flex-basis: 50%;
+      padding: 2.4vw;
       // order: 2;
 
-      & > a {
-        @media screen and (max-width:430px) {
-          width: 100%;
-          display: inline-block;
-          order: 2;
-        }
-
-        img {
-          &.mobile {
-            @media screen and (max-width:430px) {
-              display: inline;
-            }
-          }
-        }
-      }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
+        @media screen and (max-width: 431px) {
+          left: 0;
+          width: 100%;
+          bottom: 10%;
+        }
+        bottom: 16%;
+        width: auto;
+        text-align:left;
+        left: 12%;
 
         h2 {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0 0 4%;
+            text-align:center;
           }
           @media screen and (max-width: 375px) {
-            width: 100%;
+            // width: 100%;
           }
           @media screen and (max-width: 321px) {
-            margin: 22% 0 3%;
+            // margin: 22% 0 3%;
           }
           color: @c3-first-font-color;
         }
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0;
           }
           @media screen and (max-width: 375px) {}
-
           a {
             @media screen and (max-width:1679px) {
               // width: 17.1vw;
             }
-            @media screen and (max-width: 430px) {
+            @media screen and (max-width: 431px) {
               // width: 67.1vw;
             }
             color: @c3-first-cta-color;
             background: @c3-first-cta-background;
             // width: 288px;
             // margin: 0 0 20%;
-            &.cta1 {
-              @media screen and (max-width:430px) {}
-            }
 
-            &.cta2 {
-              @media screen and (max-width:430px) {}
-            }
-
-            &.cta3 {
-              @media screen and (max-width:430px) {}
-            }
-
-            &.cta4 {
-              @media screen and (max-width:430px) {}
-            }
           }
         }
       }
     }
 
     &.second {
-      @media screen and (max-width: 430px) {
-        padding: 0;
+      @media screen and (max-width: 431px) {
+        padding: 0 6vw 6vw;
       }
       flex-basis:50%;
+      padding: 3vw;
+      display:flex;
+      flex-wrap:wrap;
       // order: 1;
 
+      .thumb-grid.item {
+        width: 50%;
+
+        .img {
+          @media screen and (max-width: 821px){
+            width: 73%;
+          }
+        }
+
+        .size {
+          text-align: left;
+        }
+      }
+
       h2 {
-        @media screen and (max-width:430px) {}
+        @media screen and (max-width:431px) {}
         color: @c3-second-font-color;
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
+        @media screen and (max-width: 431px) {}
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0;
           }
 
@@ -198,47 +201,31 @@
             @media screen and (max-width:1679px) {
               // width: 17vw;
             }
-            @media screen and (max-width: 430px) {
+            @media screen and (max-width: 431px) {
               // width: 68vw;
             }
             color: @c3-second-cta-color;
             background: @c3-second-cta-background;
             // width: 290px;
 
-            &.cta1 {
-              @media screen and (max-width: 430px) {}
-            }
-
-            &.cta2 {
-              @media screen and (max-width: 430px) {}
-            }
-
-            &.cta3 {
-              @media screen and (max-width: 430px) {}
-            }
-
-            &.cta4 {
-              @media screen and (max-width: 430px) {}
-            }
           }
         }
       }
     }
 
     &.third {
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 431px) {
         background: @background;
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
-
+        @media screen and (max-width: 431px) {}
         h2 {
           color: @c3-third-font-color;
         }
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 5% 0 0;
           }
 
@@ -246,13 +233,6 @@
             color: @c3-third-cta-color;
             background: @c3-third-cta-background;
 
-            &.cta1 {
-              @media screen and (max-width: 430px) {}
-            }
-
-            &.cta2 {
-              @media screen and (max-width: 430px) {}
-            }
           }
         }
       }

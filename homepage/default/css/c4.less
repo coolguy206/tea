@@ -1,4 +1,7 @@
 @import "var.less";
+@c4-font-color: #47363D;
+@c4-cta-color: #fff;
+@c4-cta-background: #2967B0;
 @c4-first-font-color: #fff;
 @c4-first-cta-color: #fff;
 @c4-first-cta-background: #2CAC96;
@@ -10,18 +13,67 @@
 @c4-third-cta-background: #BF9353;
 
 .c4 {
-  @media screen and (max-width: 430px) {
+  @media screen and (max-width: 431px) {
     flex-wrap: wrap;
     // background: #E8C3CA;
     padding: 0;
+    min-height: auto !important;
   }
 
-  display: flex;
+  // display: flex;
   padding: 0;
   text-align: center;
+  position: relative;
 
   // flex-wrap: wrap;
   div {
+
+    &.the-content {
+      @media screen and (max-width: 431px) {
+        width: 100%;
+        top: 76%;
+        left: 0;
+        transform: translate(0);
+      }
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      h3 {
+        @media screen and (max-width:431px) {
+          font-size: 4vw;
+          margin: 0 0 8vw;
+        }
+
+        color: @c4-font-color;
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 5vw;
+          line-height: 5vw;
+        }
+        @media screen and (max-width:431px) {
+          font-size: 9vw;
+          margin: 0 0 8vw;
+        }
+
+        font-size: 80px;
+        line-height: 80px;
+        color: @c4-font-color;
+        margin: 0 0 1vw;
+      }
+
+      a {
+        background: @c4-cta-background;
+
+        &:hover {
+          color: #fff;
+        }
+      }
+    }
 
     &.first,
     &.second,
@@ -29,6 +81,7 @@
       @media screen and (max-width:1679px) {
         padding: 1vw;
       }
+
       text-align: center;
       box-sizing: border-box;
       flex-basis: 34%;
@@ -46,7 +99,7 @@
           // line-height: 1.6vw;
         }
 
-        @media screen and (max-width:430px) {
+        @media screen and (max-width:431px) {
           font-size: 8.5vw;
           line-height: 10.5vw;
         }
@@ -61,7 +114,7 @@
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {
+        @media screen and (max-width: 431px) {
           bottom: 10%;
         }
 
@@ -76,7 +129,7 @@
             // line-height: 1.6vw;
           }
 
-          @media screen and (max-width:430px) {}
+          @media screen and (max-width:431px) {}
 
           // font-family: @gilroyb;
           // font-size: 30px;
@@ -87,7 +140,7 @@
         }
 
         div {
-          @media screen and (max-width: 430px) {}
+          @media screen and (max-width: 431px) {}
 
           @media screen and (max-width: 376px) {}
 
@@ -99,9 +152,10 @@
               // width: 14vw;
             }
 
-            @media screen and(max-width: 430px) {
+            @media screen and(max-width: 431px) {
               // width: 57vw;
             }
+
             // left: -2vw;
             // width: 242px;
           }
@@ -110,7 +164,7 @@
     }
 
     &.first {
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 431px) {
         // background: #FDF5F2;
         position: relative;
         text-align: center;
@@ -123,7 +177,7 @@
       // order:2;
 
       &>a {
-        @media screen and (max-width:430px) {
+        @media screen and (max-width:431px) {
           width: 100%;
           display: inline-block;
           order: 2;
@@ -131,7 +185,7 @@
 
         img {
           &.mobile {
-            @media screen and (max-width:430px) {
+            @media screen and (max-width:431px) {
               display: inline;
             }
           }
@@ -139,10 +193,10 @@
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
+        @media screen and (max-width: 431px) {}
 
         h2 {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0 0 4%;
           }
 
@@ -158,7 +212,7 @@
         }
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0;
           }
 
@@ -169,26 +223,26 @@
 
             @media screen and (max-width:1024px) {}
 
-            @media screen and (max-width: 430px) {}
+            @media screen and (max-width: 431px) {}
 
             color: @c4-first-cta-color;
             background: @c4-first-cta-background;
 
             // width: 243px;
             &.cta1 {
-              @media screen and (max-width:430px) {}
+              @media screen and (max-width:431px) {}
             }
 
             &.cta2 {
-              @media screen and (max-width:430px) {}
+              @media screen and (max-width:431px) {}
             }
 
             &.cta3 {
-              @media screen and (max-width:430px) {}
+              @media screen and (max-width:431px) {}
             }
 
             &.cta4 {
-              @media screen and (max-width:430px) {}
+              @media screen and (max-width:431px) {}
             }
           }
         }
@@ -196,7 +250,7 @@
     }
 
     &.second {
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 431px) {
         padding: 0;
       }
 
@@ -204,13 +258,13 @@
       // order:1;
 
       h2 {
-        @media screen and (max-width:430px) {}
+        @media screen and (max-width:431px) {}
 
         color: @c4-second-font-color;
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
+        @media screen and (max-width: 431px) {}
 
         // top: 9%;
 
@@ -218,7 +272,7 @@
         //   @media screen and (max-width: 1679px){
         //     font-size: 3vw;
         //   }
-        //   @media screen and (max-width: 430px){
+        //   @media screen and (max-width: 431px){
         //     font-size: 8.5vw;
         //   }
         //   font-size: 48px;
@@ -230,7 +284,7 @@
             line-height: 4.5vw;
           }
 
-          @media screen and (max-width:430px) {
+          @media screen and (max-width:431px) {
             font-size: 6vw;
             line-height: 8vw;
           }
@@ -243,21 +297,23 @@
 
 
         p {
-          @media screen and (max-width: 1679px){
+          @media screen and (max-width: 1679px) {
             font-size: 2.2vw;
             line-height: 2.6vw;
           }
-          @media screen and (max-width: 430px){
+
+          @media screen and (max-width: 431px) {
             font-size: 4.8vw;
             line-height: 6vw;
           }
+
           font-size: 36px;
           line-height: 43px;
           margin: 0 0 50%;
         }
 
         div {
-          @media screen and (max-width: 430px) {
+          @media screen and (max-width: 431px) {
             margin: 0;
           }
 
@@ -265,7 +321,8 @@
             @media screen and (max-width: 1679px) {
               // width: 19.5vw;
             }
-            @media screen and (max-width: 430px) {
+
+            @media screen and (max-width: 431px) {
               // width: 53.5vw;
             }
 
@@ -275,19 +332,19 @@
 
             // width: 243px;
             &.cta1 {
-              @media screen and (max-width: 430px) {}
+              @media screen and (max-width: 431px) {}
             }
 
             &.cta2 {
-              @media screen and (max-width: 430px) {}
+              @media screen and (max-width: 431px) {}
             }
 
             &.cta3 {
-              @media screen and (max-width: 430px) {}
+              @media screen and (max-width: 431px) {}
             }
 
             &.cta4 {
-              @media screen and (max-width: 430px) {}
+              @media screen and (max-width: 431px) {}
             }
           }
         }
@@ -295,24 +352,24 @@
     }
 
     &.third {
-      @media screen and (max-width: 430px) {
+      @media screen and (max-width: 431px) {
         background: @background;
       }
 
       .the-content {
-        @media screen and (max-width: 430px) {}
+        @media screen and (max-width: 431px) {}
 
         h2 {
           color: @c4-third-font-color;
         }
 
         div {
-          @media screen and (max-width: 430px) {}
+          @media screen and (max-width: 431px) {}
 
           a {
             @media screen and (max-width:1679px) {}
 
-            @media screen and (max-width:430px) {}
+            @media screen and (max-width:431px) {}
 
             color: @c4-third-cta-color;
             background-color: @c4-third-cta-background;
