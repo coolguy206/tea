@@ -1,4 +1,5 @@
 @import "var.less";
+@leggings-h2-color: #fff;
 @leggings-cta1-color: #F8CF5B;
 @leggings-cta1-background: #67825F;
 @leggings-cta2-color: #fff;
@@ -13,7 +14,7 @@
 @leggings-cta6-background: #E8B2AB;
 
 .leggings {
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 431px) {
    
   }
   position: relative;
@@ -24,35 +25,38 @@
       
       }
 
-      @media screen and (max-width: 428px) {
-        display: block;
-        bottom: 8%;
+      @media screen and (max-width: 431px) {
+        // display: block;
+        // bottom: 8%;
+        width:100%;
       }
 
       position: absolute;
-      bottom: 7%;
-      width: 100%;
-      left: 0%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      top: 50%;
+      width: auto;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      // display: flex;
+      // align-items: center;
+      // justify-content: center;
 
       h2 {
         @media screen and (max-width: 1679px) {
           font-size: 2.6vw;
           line-height: 3vw;
         }
-        @media screen and (max-width:428px){
+        @media screen and (max-width:431px){
           font-size: 9vw;
           margin: 0 0 8%;
         }
 
         text-align: center;
-        color: #EC5152;
+        color: @leggings-h2-color;
         flex-basis: 39%;
         font-size: 44px;
         line-height: 50px;
-        font-family: @gilroyb;
+        font-family: @souv;
+        margin: 0 0 8%;
       }
 
       p {
@@ -60,7 +64,7 @@
           font-size: 1.9vw;
           line-height: 2.5vw;
         }
-        @media screen and (max-width: 428px){
+        @media screen and (max-width: 431px){
           margin: 0 0 8vw;
           font-size: 4vw;
           line-height: 8vw;
@@ -81,7 +85,7 @@
           @media screen and (max-width:1679px){
             width: 13vw;
           }
-          @media screen and (max-width: 428px){
+          @media screen and (max-width: 431px){
             width: 52vw;
           }
           background: #EC5152;
