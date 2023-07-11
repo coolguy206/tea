@@ -1,5 +1,5 @@
 <div class="catalog-wrap">
-  <h1>Unsubscribe from our Print Catalog</h1> 
+  <h1>Unsubscribe from our Print Catalog</h1>
 
   <p>Please note that you might get one or two additional catalogs after unsubscribing as it takes time for your request
     to take effect!</p>
@@ -13,7 +13,12 @@
   <p class="processing">Processing...</p>
 
   <form class="sailthru">
-    <input type="hidden" name="email" value="">
+    <div>
+      
+      <label>email*</label>
+      <span class="error">please enter a valid email</span>
+      <input id="email" type="text" name="email" value="" placeholder="Email*" required>
+    </div>
 
     <div>
       <label>first name*</label>
