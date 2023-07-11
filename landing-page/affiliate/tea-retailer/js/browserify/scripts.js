@@ -1,6 +1,41 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.phoneConvert = void 0;
+
+var phoneConvert = function phoneConvert(string) {
+  var newString = string.match(/[0-9]{0,14}/g);
+
+  if (newString === null) {
+    return '';
+  } // Join parts returned from RegEx match
+
+
+  newString = newString.join(''); // Start number with "+"
+  // newString = '+' + newString;
+
+  if (newString[0].includes('1')) {
+    newString = '+' + newString;
+  } else {
+    newString = '+1' + newString;
+  } // Limit length to 15 characters
+
+
+  newString = newString.substring(0, 15);
+  return newString;
+};
+
+exports.phoneConvert = phoneConvert;
+
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+var _phone = require("./phone.js");
+
 $(document).ready(function () {
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -8,6 +43,9 @@ $(document).ready(function () {
 
   $('.content-wrap form').submit(function (e) {
     e.preventDefault();
+    var companyId = "RAd6JR";
+    var list = "YmWmN9";
+    var custom_source = "";
     var firstName = $('#first_name').val();
     var lastName = $('#last_name').val();
     var email = $('#email').val();
@@ -20,27 +58,47 @@ $(document).ready(function () {
     var valid = emailIsValid(email);
 
     if (valid) {
-      console.log(firstName, lastName, email, phone, company, website, city, state);
       $('.content-wrap form .processing').show();
       $('.content-wrap form button').hide();
-      Sailthru.integration("userSignUp", {
-        "id": email,
-        "email": email,
-        "lists": {
-          "WHOLESALE_LEADS": 1
+      var theData = {
+        data: {
+          type: "subscription",
+          attributes: {
+            list_id: list,
+            custom_source: custom_source,
+            email: email,
+            properties: {
+              first_name: firstName,
+              last_name: lastName,
+              store_type: type,
+              company: company,
+              website: website,
+              city: city,
+              country: "United States",
+              region: state
+            }
+          }
+        }
+      };
+
+      if (phone !== "") {
+        phone = (0, _phone.phoneConvert)(phone);
+        theData.data.attributes.phone_number = phone;
+      }
+
+      console.log(theData);
+      theData = JSON.stringify(theData);
+      $.ajax({
+        url: "https://a.klaviyo.com/client/subscriptions/?company_id=".concat(companyId),
+        type: 'post',
+        data: theData,
+        headers: {
+          revision: '2023-02-22',
+          'content-type': 'application/json'
         },
-        "vars": {
-          "first name": firstName,
-          "last name": lastName,
-          "phone": phone,
-          "store type": type,
-          "company": company,
-          "website": website,
-          "city": city,
-          "state": state
-        },
-        "onSuccess": function onSuccess() {
-          console.log('sailthru tea retailer sucess');
+        success: function success(data, status, xhr) {
+          console.log('klaviyo success register'); // jQuery(document).trigger('klaviyoSuccess', data);
+
           $('span.error').hide();
           $('.content-wrap form .processing').hide();
           $('.content-wrap form .sent').show(); // $('#emailField').val('')
@@ -49,9 +107,6 @@ $(document).ready(function () {
             $('.content-wrap form .sent').fadeOut();
             $('.content-wrap form button').fadeIn();
           }, 2000);
-        },
-        "onError": function onError() {
-          console.log('sailthru footer error');
         }
       });
     } else {
@@ -63,4 +118,4 @@ $(document).ready(function () {
 });
 
 
-},{}]},{},[1]);
+},{"./phone.js":1}]},{},[2]);
