@@ -54,7 +54,9 @@
     <div>
       <label for="">Phone Number</label>
       <!-- <span class="this-error">required</span> -->
-      <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+      {literal}
+      <input name="the-phone" type="tel" pattern="[0-9]{10,10}" maxlength="10" minlength="10" placeholder="1234567890" title="Please enter your 10 digit phone number">
+      {/literal}
     </div>
 
     <p class="by-entering">
