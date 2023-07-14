@@ -1,7 +1,16 @@
-$(document).ready(function() {
+import {
+  phoneConvert
+} from './phone.js';
+
+$(document).ready(function () {
   const url = window.location.href;
 
-  $('.main-content a').click(function(e) {
+  var companyId = `RAd6JR`;
+  var list1 = `VXJMcN`;
+  var list2 = `VXJMcN`;
+  var custom_source = ``;
+
+  $('.main-content a').click(function (e) {
     // e.preventDefault();
     var id = $(this).attr('href');
     $('.forms div').hide();
@@ -9,11 +18,16 @@ $(document).ready(function() {
 
   });
 
+  //? force phone to only be numbers
+  $('.this-form input[name="the-phone"]').on('input', function (e) {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
+
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
-  $('.forms button').click(function(e) {
+  $('.forms button').click(function (e) {
     // console.log(e.target);
     e.preventDefault();
     var ac = $(this).attr('data-list');
@@ -22,7 +36,7 @@ $(document).ready(function() {
     var email = $(thisForm).find('input[name="user-email"]').val();
     var fname = $(thisForm).find('input[name="user-fname"]').val();
     var lname = $(thisForm).find('input[name="user-lname"]').val();
-    var phone = $(thisForm).find('input[name="user-phone"]').val();
+    var phone = $(thisForm).find('input[name="the-phone"]').val();
     var affiliation = $(thisForm).find('input[name="user-affiliation"]').val();
     var how = $(thisForm).find('input[name="user-how"]').val();
     var refer = $(thisForm).find('input[name="user-refer-name"]').val();
@@ -41,90 +55,99 @@ $(document).ready(function() {
       // $('.signup .form').hide();
       // $('.signup .sending').show();
 
+      var theData = {
+        data: {
+          type: "subscription",
+          attributes: {
+            email: email,
+            properties: {
+              first_name: fname,
+              last_name: lname,
+              organization: orgName,
+              affiliation: affiliation,
+              organization_city: city,
+              organization_region: state,
+              organization_country: "United States",
+            },
+
+          }
+        }
+      }
+
+      if (phone !== `` && phone.length == 10) {
+        phone = phoneConvert(phone);
+        theData.data.attributes.phone_number = phone;
+      }
+
       if (ac == "school days sign up" && orgEIN !== "") {
 
-        Sailthru.integration("userSignUp", {
-          "id": email,
-          "email": email,
+        theData.data.attributes.custom_source = ac;
+        theData.data.attributes.list_id = list1;
+        theData.data.attributes.org_ein = orgEIN;
+        theData.data.attributes.organization_address =  orgAddress;
+        theData.data.attributes.how = how;
+
+        console.log(theData);
+
+        theData = JSON.stringify(theData);
+
+        $.ajax({
+          url: `https://a.klaviyo.com/client/subscriptions/?company_id=${companyId}`,
+          type: 'post',
+          data: theData,
+          headers: {
+            revision: '2023-02-22',
+            'content-type': 'application/json'
+          },
+          success: function (data, status, xhr) {
+            console.log('klaviyo success register');
+            // jQuery(document).trigger('klaviyoSuccess', data);
+            $('.forms .error, .forms .join-today').hide();
+            $('.forms .success h2').html('Successfully sent! <br> Look out for an email from <br> The School Days team shortly.');
+            $('.forms .success').show();
+          }
+        });
+
+          //! NEED TO MAKE LIST IN KLAVIYO
           "lists": {
             "school days sign up": 1,
             "MASTER_CONTACTS_LIST": 1
             // "test list": 1
-          },
-          "vars": {
-            "ACQUISITION_SOURCE": ac,
-            "school days sign up Organization name": orgName,
-            "school days sign up Organization address": orgAddress,
-            "school days sign up Organization city": city,
-            "school days sign up Organization state": states,
-            "school days sign up Organization EIN": orgEIN,
-            "school days sign up organization affiliation": affiliation,
-            "school days sign up First Name": fname,
-            "school days sign up Last Name": lname,
-            "school days sign up Phone": phone,
-            "School days sign up How did you hear about this program": how,
-          },
-          "source": ac,
-          "onSuccess": function() {
-            console.log(`successfully sent to sailthru! email: ${email} source: ${ac}`);
-            // $('.signup .the-form').hide();
-            // $('.signup .thanks').show();
+          }
 
-            $('.forms .error, .forms .join-today').hide();
-            $('.forms .success h2').html('Successfully sent! <br> Look out for an email from <br> The School Days team shortly.');
+      } else if (ac == "school days referral") {
+
+        theData.data.attributes.custom_source = ac;
+        theData.data.attributes.list_id = list2;
+        theData.data.attributes.refer =  refer;
+
+        console.log(theData);
+
+        theData = JSON.stringify(theData);
+
+        $.ajax({
+          url: `https://a.klaviyo.com/client/subscriptions/?company_id=${companyId}`,
+          type: 'post',
+          data: theData,
+          headers: {
+            revision: '2023-02-22',
+            'content-type': 'application/json'
+          },
+          success: function (data, status, xhr) {
+            console.log('klaviyo success register');
+            // jQuery(document).trigger('klaviyoSuccess', data);
+            $('.forms .error, .forms .refer-org').hide();
+            $('.forms .success h2').html('Successfully sent!');
             $('.forms .success').show();
-
-            window.dataLayer.push({
-              'event': 'sailthru',
-              'theUrl': url,
-              'sailthruEmail': email,
-              'sailthruSource': ac
-            });
-
           }
         });
 
-      } else if (ac == "school days referral") {
-        // console.log(`state: ${states}`)
-        Sailthru.integration("userSignUp", {
-          "id": email,
-          "email": email,
+          //! NEED TO MAKE LIST IN KLAVIYO
           "lists": {
             "school days referral": 1,
             "MASTER_CONTACTS_LIST": 1
             // "test list": 1
           },
-          "vars": {
-            "ACQUISITION_SOURCE": ac,
-            "school days refer Organization name": orgName,
-            "school days refer Organization city": city,
-            "school days refer Organization state": states,
-            "school days refer Organization affiliation": affiliation,
-            "school days refer First Name": fname,
-            "school days refer Last Name": lname,
-            "school days refer Phone": phone,
-            "school days refer Refer Name": refer
-
-          },
-          "source": ac,
-          "onSuccess": function() {
-            console.log(`successfully sent to sailthru! email: ${email} source: ${ac}`);
-            // $('.signup .the-form').hide();
-            // $('.signup .thanks').show();
-
-            $('.forms .error, .forms .refer-org').hide();
-            $('.forms .success h2').html('Successfully sent!');
-            $('.forms .success').show();
-
-            window.dataLayer.push({
-              'event': 'sailthru',
-              'theUrl': url,
-              'sailthruEmail': email,
-              'sailthruSource': ac
-            })
-
-          }
-        });
 
       } else {
         $('.forms .error').show();
