@@ -6,8 +6,8 @@ $(document).ready(function () {
   const url = window.location.href;
 
   var companyId = `RAd6JR`;
-  var list1 = `VXJMcN`;
-  var list2 = `VXJMcN`;
+  var list1 = `XQN7pP`;
+  var list2 = `SGNXSc`;
   var custom_source = ``;
 
   $('.main-content a').click(function (e) {
@@ -18,11 +18,6 @@ $(document).ready(function () {
 
   });
 
-  //? force phone to only be numbers
-  $('.this-form input[name="the-phone"]').on('input', function (e) {
-    $(this).val($(this).val().replace(/[^0-9]/g, ''));
-  });
-
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
@@ -30,8 +25,17 @@ $(document).ready(function () {
   $('.forms button').click(function (e) {
     // console.log(e.target);
     e.preventDefault();
+
     var ac = $(this).attr('data-list');
     var thisForm = $(this).closest('form');
+
+    //? force phone to only be numbers
+    console.log($(thisForm).find('input[name="the-phone"]'));
+
+    $(thisForm).find('input[name="the-phone"]').on('input', function (e) {
+      $(this).val($(this).val().replace(/[^0-9]/g, ''));
+    });
+
     //user info
     var email = $(thisForm).find('input[name="user-email"]').val();
     var fname = $(thisForm).find('input[name="user-fname"]').val();
@@ -45,13 +49,13 @@ $(document).ready(function () {
     var orgName = $(thisForm).find('input[name="org-name"]').val();
     var orgAddress = $(thisForm).find('input[name="org-address"]').val();
     var orgEIN = $(thisForm).find('input[name="org-ein"]').val();
-    var states = $(thisForm).find('.states').val();
+    var state = $(thisForm).find('.states').val();
     var city = $(thisForm).find('input[name="org-city"]').val();
 
     var valid = emailIsValid(email);
     // console.log('valid:' + valid);
 
-    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && states !== "please choose") {
+    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && state !== "please choose") {
       // $('.signup .form').hide();
       // $('.signup .sending').show();
 
@@ -63,11 +67,11 @@ $(document).ready(function () {
             properties: {
               first_name: fname,
               last_name: lname,
-              organization: orgName,
-              affiliation: affiliation,
-              organization_city: city,
-              organization_region: state,
-              organization_country: "United States",
+              school_days_organization_name: orgName,
+              school_days_organization_affiliation: affiliation,
+              school_days_organization_city: city,
+              school_days_organization_region: state,
+              school_days_organization_country: "United States",
             },
 
           }
@@ -83,9 +87,9 @@ $(document).ready(function () {
 
         theData.data.attributes.custom_source = ac;
         theData.data.attributes.list_id = list1;
-        theData.data.attributes.org_ein = orgEIN;
-        theData.data.attributes.organization_address =  orgAddress;
-        theData.data.attributes.how = how;
+        theData.data.attributes.properties.school_days_organization_org_ein = orgEIN;
+        theData.data.attributes.properties.school_days_organization_address = orgAddress;
+        theData.data.attributes.properties.school_days_organization_how = how;
 
         console.log(theData);
 
@@ -108,18 +112,11 @@ $(document).ready(function () {
           }
         });
 
-          //! NEED TO MAKE LIST IN KLAVIYO
-          "lists": {
-            "school days sign up": 1,
-            "MASTER_CONTACTS_LIST": 1
-            // "test list": 1
-          }
-
       } else if (ac == "school days referral") {
 
         theData.data.attributes.custom_source = ac;
         theData.data.attributes.list_id = list2;
-        theData.data.attributes.refer =  refer;
+        theData.data.attributes.properties.school_days_organization_referer = refer;
 
         console.log(theData);
 
@@ -141,13 +138,6 @@ $(document).ready(function () {
             $('.forms .success').show();
           }
         });
-
-          //! NEED TO MAKE LIST IN KLAVIYO
-          "lists": {
-            "school days referral": 1,
-            "MASTER_CONTACTS_LIST": 1
-            // "test list": 1
-          },
 
       } else {
         $('.forms .error').show();
