@@ -34,15 +34,15 @@ $(document).ready(function () {
         perView: 1
       }
     }
-  }).mount(); // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
-  // new Glide('.c6 .glide', {
+  }).mount();
+  new _glide["default"]('.c2 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 2000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount(); // new Glide('.c6 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 2000,
