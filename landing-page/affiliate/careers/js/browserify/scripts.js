@@ -40,6 +40,24 @@ exports.associateBusinessSystemsAnalyst = associateBusinessSystemsAnalyst;
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.directorMarketing = void 0;
+var directorMarketing = {
+  title: "Director of Marketing",
+  header: "We are looking for an experienced and thoughtful Director of Marketing.\n\n    The Director of Marketing will be responsible for all strategic planning and execution of marketing to deliver financial targets including growth and profitability.\n    \n    This position is hybrid; San Francisco Bay Area employees work in the Tea office one day/week. Remote team travels to work in the San Francisco office at least twice/year. The Director of Marketing is required to be accessible via all video and messaging modes during regular business hours of operation Pacific Time.",
+  pay: "Pay Range:\n    $100,000-$150,000USD",
+  duties: ["Demand Forecasting: partner with finance to develop weekly ad budget, demand forecast of sales, traffic, conversion (based on time of year and promotion), UPT, NCA, and retention metrics.", "Partner with Planning and Buying to develop a promotion calendar that supports brand and business objectives.", "Partner with Creative Director to develop elevated and cohesive consumer-facing marketing campaigns that support business objectives. With Creative Director, develops quarterly integrated Brand Marketing presentations that inform seasonal integrated strategy, campaigns, and shotlist.", "Develop full funnel, integrated marketing plan that delivers business results in the near term but also long term brand value.", "Full funnel, integrated marketing plan that drives why Tea: product and brand. Needs to connect closely to our assortment strategy and differentiation. Integrated marketing encompasses all customer touch points including site, email/SMS, social, search, display, and our retailer partners through our wholesale channel.", "Orchestrate all parties to get everyone aligned to deliver results: buyers, finance, site, creative, design.", "Accountability for sales and advertising/marketing budget: traffic, AOV, ROAS. Also accountable for customer metrics: New Customer Acquisition, CPA/CPO, and retention.", "Lead, coach and direct teams. In house teams include performance marketing (2 - paid search/social, affiliates, and email/SMS) and, integrated/brand marketing (2-marketing campaigns, influencers, boutique, organic social. External partners include direct marketing agency (Belardi Wong), customer analytics (CCC), PR (Monique Jones PR), Re-sale platform (Kidizen), Giveback partner (Global Fund for Children), and collaboration partners (Hello Kitty, Green Sprouts swim diapers, Wall Shoppe)."],
+  qualifications: ["6-10 years experience in omni-channel marketing focused on profitable growth. Ideally experience with fashion/apparel, consumer brand and/or marketing agency. Knowledge of children\u2019s apparel is a plus.", "Experience developing and maintaining an omni-channel go-to-market strategy and calendar across all channels (digital marketing, e-commerce, and in-store).", "Excellent brand marketing strategy development and execution experience and skills with proven track record of driving strong business results.", "Ability to translate product, trend and merchandising information/strategies into marketing messages that support the overall brand and business objectives.", "Experience with search (paid and organic), PR, influencers, social (paid and organic), partnership activations, in store marketing\u2014and able to adapt to new, innovative channels as they become available.", "Desire to build a brand and aptitude for original, creative ideas; open-minded to new approaches.", "Strong promotional/traffic-driving ideation/concepting skills.", "Strong leadership, team building, and collaboration skills and ability to form effective partnerships across cross-functional teams.", "Solutions first, creative problem solver. Detail-oriented, organized and self-motivated.", "Experience with creative development and effectively briefing in and working with creative teams.", "Strong project management skills, including demonstrated track record in managing marketing calendars and integrated campaigns, coordinating with all stakeholders to deliver results (creative, merchandising, inventory, ecommerce, stores).", "Comfortable with operating in a fast-paced environment with entrepreneurial spirit and dealing with ambiguity. Tea is a small company without a lot of bureaucracy. Tea team members thrive when they can introduce sufficient processes that facilitate fast decision making."],
+  footer: "Please email a cover letter and resume to hr@teacollection.com for consideration.\n\n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for\n    employment without regard to age, ancestry, color, family or medical care leave, gender identity\n    or expression, genetic information, marital status, medical condition, national origin, physical or\n    mental disability, political affiliation, protected veteran status, race, religion, sex(including\n    pregnancy), sexual orientation, or any other characteristic protected by applicable laws,\n        regulations, and ordinances."
+};
+exports.directorMarketing = directorMarketing;
+
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.dutiesQualifications = void 0;
 
 var dutiesQualifications = function dutiesQualifications(job, str) {
@@ -58,7 +76,7 @@ var dutiesQualifications = function dutiesQualifications(job, str) {
 exports.dutiesQualifications = dutiesQualifications;
 
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -70,11 +88,15 @@ var _accountingManager = require("./accounting-manager.js");
 
 var _associateBusinessSystemsAnalyst = require("./associate-business-systems-analyst.js");
 
-var jobs = [_accountingManager.accountingManager, _associateBusinessSystemsAnalyst.associateBusinessSystemsAnalyst];
+var _directorMarketing = require("./director-marketing.js");
+
+var _srManagerMarketing = require("./sr-manager-marketing.js");
+
+var jobs = [_accountingManager.accountingManager, _associateBusinessSystemsAnalyst.associateBusinessSystemsAnalyst, _directorMarketing.directorMarketing, _srManagerMarketing.srManagerMarketing];
 exports.jobs = jobs;
 
 
-},{"./accounting-manager.js":1,"./associate-business-systems-analyst.js":2}],5:[function(require,module,exports){
+},{"./accounting-manager.js":1,"./associate-business-systems-analyst.js":2,"./director-marketing.js":3,"./sr-manager-marketing.js":7}],6:[function(require,module,exports){
 "use strict";
 
 var _jobListing = require("./job-listing.js");
@@ -127,4 +149,22 @@ $(document).ready(function () {
 });
 
 
-},{"./duties-qualifications.js":3,"./job-listing.js":4}]},{},[5]);
+},{"./duties-qualifications.js":4,"./job-listing.js":5}],7:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.srManagerMarketing = void 0;
+var srManagerMarketing = {
+  title: "Sr Manager of Marketing",
+  header: "We are looking for an experienced and thoughtful Sr Manager of Marketing.\n\n    The Sr Manager of Marketing will be responsible for developing and delivering on full funnel brand and performance marketing plans tied to Tea\u2019s financial and marketing KPIs. The overarching company goal is profitability.\n    \n    This position is hybrid; San Francisco Bay Area employees work in the Tea office one day/week. Remote team travels to work in the San Francisco office at least twice/year. The Sr. Manager of Marketing is required to be accessible via all video and messaging modes during regular business hours of operation Pacific Time. ",
+  pay: "Pay Range:\n    $85,000-$115,000USD",
+  duties: ["Develop Integrated Marketing Plan that delivers business results in the near term but also long term brand value.", "Full funnel, integrated marketing plan that drives why Tea: product and brand. Needs to connect closely to our assortment strategy and differentiation. Integrated marketing encompasses all customer touch points including site, email/SMS, social, search, display, and our retailer partners through our wholesale channel.", "Orchestrate all parties to get everyone aligned to deliver results: buyers, finance, site, creative, design.", "Accountability for sales and advertising/marketing budget: traffic, AOV, ROAS. Also accountable for customer metrics: New Customer Acquisition, CPA/CPO, and retention.", "Manage marketing team. In house teams include performance marketing (2 - paid search/social, affiliates, and email/SMS) and integrated/brand marketing (2- marketing omni-channel campaigns, influencers, boutique, organic social. External partners include direct marketing agency (Belardi Wong), customer analytics (CCC), PR (Monique Jones PR), Re-sale platform (Kidizen), Giveback partner (Global Fund for Children) and collaboration partners (Hello Kitty, Green Sprouts swim diapers, Wall Shoppe)."],
+  qualifications: ["4-8 years experience in omni-channel marketing focused on profitable growth. Ideally experience with fashion/apparel, consumer brand and/or marketing agency. Knowledge of children\u2019s apparel is a plus.", "Experience developing and maintaining an omni-channel go-to-market strategy and calendar across all channels (digital marketing, e-commerce, and in-store).", "Excellent brand marketing strategy development and execution experience and skills with proven track record of driving strong business results.", "Ability to translate product, trend and merchandising information/strategies into marketing messages that support the overall brand and business objectives.", "Experience with search (paid and organic), PR, influencers, social (paid and organic), partnership activations, in store marketing\u2014and able to adapt to new, innovative channels as they become available.", "Desire to build a brand and aptitude for original, creative ideas; open-minded to new approaches.", "Strong promotional/traffic-driving ideation/concepting skills.", "Strong leadership, team building, and collaboration skills and ability to form effective partnerships across cross-functional teams.", "Solutions first, creative problem solver. Detail-oriented, organized and self-motivated.", "Experience with creative development and effectively briefing in and working with creative teams.", "Must have Google Suite experience and familiarity with project management and planning programs, such as Wrike.", "Strong project management skills, including demonstrated track record in managing marketing calendars and integrated campaigns, coordinating with all stakeholders to deliver results (creative, merchandising, inventory, ecommerce, stores).", "Comfortable with operating in a fast-paced environment with entrepreneurial spirit and dealing with ambiguity. Tea is a small company without a lot of bureaucracy. Tea team members thrive when they can introduce sufficient processes that facilitate fast decision making."],
+  footer: "Please email a cover letter and resume to hr@teacollection.com for consideration.\n\n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for\n    employment without regard to age, ancestry, color, family or medical care leave, gender identity\n    or expression, genetic information, marital status, medical condition, national origin, physical or\n    mental disability, political affiliation, protected veteran status, race, religion, sex(including\n    pregnancy), sexual orientation, or any other characteristic protected by applicable laws,\n        regulations, and ordinances."
+};
+exports.srManagerMarketing = srManagerMarketing;
+
+
+},{}]},{},[6]);
