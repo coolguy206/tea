@@ -31,7 +31,7 @@ $(document).ready(function () {
     gap: 0,
     breakpoints: {
       431: {
-        perView: 1
+        perView: 2
       }
     }
   }).mount();
