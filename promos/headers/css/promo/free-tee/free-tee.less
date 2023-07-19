@@ -1,0 +1,181 @@
+@import '../../var.less';
+@import '../../classes.less';
+@h1-color: #4160A8;
+@h2-color: #F58C93;
+@li-color: #47363D;
+@span-color: @h1-color;
+@cta-background-color: #61C3A9;
+@cta-color: #fff;
+
+@font-face {
+    font-family: 'master';
+    src: url('/mas_assets/media/tea_collection/fonts/master/master-works.eot');
+    src: url('/mas_assets/media/tea_collection/fonts/master/master-works.eot?#iefix') format('embedded-opentype'),
+        url('/mas_assets/media/tea_collection/fonts/master/master-works.woff2') format('woff2'),
+        url('/mas_assets/media/tea_collection/fonts/master/master-works.woff') format('woff'),
+        url('/mas_assets/media/tea_collection/fonts/master/master-works.ttf') format('truetype'),
+        url('/mas_assets/media/tea_collection/fonts/master/master-works.svg#youworkforthem') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+.container-promo-header {
+    @media screen and (max-width:430px) {
+        padding: 6vw 0;
+    }
+
+    background: #F9EBE5;
+    padding: 2vw 0;
+
+    h1 {
+        @media screen and (max-width: 1679px) {
+            font-size: 5vw;
+            line-height: 5vw;
+        }
+
+        @media screen and (max-width:430px) {
+            font-size: 9vw;
+            line-height: 9vw;
+            text-align: center;
+        }
+
+        font-family: master;
+        font-size: 80px;
+        line-height: 80px;
+        color: @h1-color;
+        text-transform: uppercase;
+        text-align:right;
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 1.4vw;
+        }
+
+        @media screen and (max-width:430px) {
+            margin: 4% 0;
+            font-size: 6vw;
+            text-align: center;
+        }
+
+        font-family: @gilroyb;
+        font-size: 24px;
+        color: @h2-color;
+        display:block;
+        padding: 0;
+        margin: 2% 0;
+        text-transform: uppercase;
+    }
+
+    p {
+        @media screen and (max-width: 1679px) {
+            font-size: 1.3vw;
+        }
+
+        @media screen and (max-width:430px) {
+            margin: 0 0 8%;
+            font-size: 5vw;
+            line-height: 6vw;
+            text-align: center;
+        }
+
+        font-family: @souv;
+        font-size: 22px;
+        // line-height: 15px;
+        // letter-spacing: 4px;
+        color: #47363D;
+        padding: 0;
+        margin: 0 0 2%;
+
+    }
+
+    ol {
+        @media screen and (max-width: 430px) {
+            display: inline-block;
+            text-align: left;
+        }
+
+        li {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.3vw;
+                line-height: 2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 5vw;
+                line-height: 7vw;
+                margin: 0 0 4vw;
+            }
+
+            font-size: 22px;
+            line-height: 32px;
+            font-family: @souv;
+            color: @li-color;
+
+            span {
+                color: @span-color;
+                font-family: @gilroyb;
+                text-transform: uppercase;
+            }
+        }
+    }
+
+    a {
+        background: @cta-background-color;
+        color: @cta-color;
+    }
+
+    .the-content {
+        @media screen and (max-width: 430px) {}
+
+        display:flex;
+        flex-wrap:wrap;
+
+        div {
+
+            &.first,
+            &.second {
+                @media screen and (max-width: 430px) {
+                    flex-basis: 100%;
+                }
+
+                flex-basis: 50%;
+            }
+
+            &.first {
+                @media screen and (max-width: 430px) {
+                    padding: 0;
+                }
+
+                padding: 0 3vw 0 0;
+            }
+
+            &.second {
+                @media screen and (max-width: 430px) {
+                    text-align: center;
+                }
+
+            }
+
+            &.third {
+                @media screen and (max-width: 1679px) {
+                    margin: 2vw 0 0;
+                }
+
+                @media screen and (max-width:430px) {
+                    flex-wrap: wrap;
+                    column-gap: 5vw;
+                    row-gap: 5vw;
+                }
+
+                text-align: center;
+                display: flex;
+                column-gap: 1vw;
+                justify-content: center;
+                margin: 1vw 0 0;
+                flex-basis: 100%;
+            }
+        }
+
+    }
+}

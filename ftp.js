@@ -7,8 +7,8 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2023/0714/v0/`;
-var category = `homepage/2023/0714/v0/`;
+var category = `promos/one-offs/2023/0718/v0/`;
+// var category = `homepage/2023/0714/v0/`;
 // var category = `landing-pages/dresses-shop/2023/0711/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
 
@@ -16,13 +16,14 @@ var category = `homepage/2023/0714/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/0714/Site/`;
-var readFilePath = `handoff/hp/0714/slideshow/`;
+var readFilePath = `Site/0718/Site/`;
+// var readFilePath = `handoff/hp/0714/slideshow/`;
 
+var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/`;
 // var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/`;
-var writeFilePath = `homepage/default/dev/images/`;
+// var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -142,7 +143,7 @@ c.on('ready', function () {
           var ext = file.split('.')[1];
           // console.log(ext);
 
-          if(ext == 'pdf') {
+          if (ext == 'pdf') {
             // console.log(`it is a pdf`);
             var html = `<a class="the-official-rules" href="/mas_assets${url}${file}" target="_blank">official rules</a>`;
           } else {
@@ -253,18 +254,18 @@ c.on('ready', function () {
   */
 
   //?LIST DIRECTORIES
-/*
-      c.list(url, function(err, list) {
-        if (err) throw err;
-        list.map((val, i) => {
-          // if (val.type == 'd') {
-          console.log(val);
-          // }
-        })
-        // console.dir(list);
-        c.end();
-      });
-*/
+  /*
+        c.list(url, function(err, list) {
+          if (err) throw err;
+          list.map((val, i) => {
+            // if (val.type == 'd') {
+            console.log(val);
+            // }
+          })
+          // console.dir(list);
+          c.end();
+        });
+  */
 });
 
 //?CONNECT FTP

@@ -1,0 +1,109 @@
+@import 'vars.less';
+@h1-color: #4160A8;
+@h2-color: #F58C93;
+@li-color: #47363D;
+@span-color: @h1-color;
+@cta-background-color: #61C3A9;
+@cta-color: #fff;
+
+@font-face {
+	font-family: 'master';
+	src: url('/mas_assets/media/tea_collection/fonts/master/master-works.eot');
+	src: url('/mas_assets/media/tea_collection/fonts/master/master-works.eot?#iefix') format('embedded-opentype'),
+		url('/mas_assets/media/tea_collection/fonts/master/master-works.woff2') format('woff2'),
+		url('/mas_assets/media/tea_collection/fonts/master/master-works.woff') format('woff'),
+		url('/mas_assets/media/tea_collection/fonts/master/master-works.ttf') format('truetype'),
+		url('/mas_assets/media/tea_collection/fonts/master/master-works.svg#youworkforthem') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+.content-wrap {
+	@media screen and (max-width:430px) {
+		padding: 6vw 0;
+	}
+
+	background: #F9EBE5;
+	padding: 2vw 0;
+
+	h1 {
+		@media screen and (max-width: 1679px) {
+			font-size: 6vw;
+			// line-height: 5vw;
+		}
+
+		@media screen and (max-width:430px) {
+			font-size: 9vw;
+			// line-height: 9vw;
+			text-align: center;
+		}
+
+		font-family: master;
+		font-size: 96px;
+		font-weight:bold;
+		// line-height: 96px;
+		color: @h1-color;
+		text-transform: uppercase;
+		text-align:center;
+	}
+
+	h2 {
+		@media screen and (max-width: 1679px) {
+			font-size: 1.4vw;
+		}
+
+		@media screen and (max-width:430px) {
+			margin: 4% 0;
+			font-size: 6vw;
+			text-align: center;
+		}
+
+		font-family: @gilroyb;
+		font-size: 24px;
+		color: @h2-color;
+		display:block;
+		padding: 0;
+		margin: 2% 0;
+		text-transform: uppercase;
+		text-align:center
+	}
+
+
+	ol {
+		@media screen and (max-width: 430px) {
+			width: 88%;
+		}
+
+		display:inline-block;
+		text-align:left;
+
+		li {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.3vw;
+				line-height: 2vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				font-size: 5vw;
+				line-height: 7vw;
+				margin: 0 0 4vw;
+			}
+
+			font-size: 22px;
+			line-height: 32px;
+			font-family: @souv;
+			color: @li-color;
+
+			span {
+				color: @span-color;
+				font-family: @gilroyb;
+				text-transform: uppercase;
+			}
+		}
+	}
+
+
+	.the-content {
+		text-align:center;
+	}
+}
