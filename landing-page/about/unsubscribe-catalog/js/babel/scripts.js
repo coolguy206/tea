@@ -38,20 +38,22 @@ jQuery(document).ready(function () {
       if (valid) {
         var theData = {
           data: {
-            type: "subscription",
+            type: 'profile',
             attributes: {
-              list_id: list,
-              custom_source: ac,
+              // custom_source: ac,
               email: email,
-              properties: {
-                first_name: fname,
-                last_name: lname,
+              first_name: fname,
+              last_name: lname,
+              location: {
                 address1: address1,
                 address2: address2,
                 city: city,
                 country: "United States",
                 region: state,
                 zip: zip
+              },
+              properties: {
+                catalog_optout: 'y'
               }
             }
           }
@@ -59,11 +61,11 @@ jQuery(document).ready(function () {
         console.log(theData);
         theData = JSON.stringify(theData);
         $.ajax({
-          url: "https://a.klaviyo.com/client/subscriptions/?company_id=".concat(companyId),
+          url: "https://a.klaviyo.com/client/profiles/?company_id=".concat(companyId),
           type: 'post',
           data: theData,
           headers: {
-            revision: '2023-02-22',
+            revision: '2023-07-15',
             'content-type': 'application/json'
           },
           success: function success(data, status, xhr) {
