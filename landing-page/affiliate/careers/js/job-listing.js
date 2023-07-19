@@ -1,7 +1,4 @@
 import {
-  accountingManager
-} from './accounting-manager.js';
-import {
   associateBusinessSystemsAnalyst
 } from './associate-business-systems-analyst.js';
 import {
@@ -11,6 +8,6 @@ import {
   srManagerMarketing
 } from './sr-manager-marketing.js';
 
-export var jobs = [accountingManager, associateBusinessSystemsAnalyst, directorMarketing, srManagerMarketing];
+export var jobs = [associateBusinessSystemsAnalyst, directorMarketing, srManagerMarketing];
 
 
