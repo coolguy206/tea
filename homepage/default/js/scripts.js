@@ -25,8 +25,8 @@ $(document).ready(function () {
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
+    autoplay: 500,
+    animationDuration: 500,
     perView: 5,
     hoverpause: true,
     gap: 0,
