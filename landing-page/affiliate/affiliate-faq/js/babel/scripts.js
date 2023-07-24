@@ -21,7 +21,7 @@ $(document).ready(function () {
     a: 'Tea Collection offers an 8% commission rate with increased commissions offered for exceptional performance.'
   }, {
     q: 'What is the cookie duration?',
-    a: 'Tea Collection cookies last for 90 days. This means that you get credit for any referred client who returns to the site within three months, even if they do so directly.'
+    a: 'Tea Collection cookies last for 30 days. This means that you get credit for any referred client who returns to the site within three months, even if they do so directly.'
   }, {
     q: 'What is the average order size?',
     a: 'Tea Collection\'s average order size is more than $100.'

@@ -25,7 +25,7 @@ $(document).ready(function () {
     },
     {
         q: 'What is the cookie duration?',
-        a: 'Tea Collection cookies last for 90 days. This means that you get credit for any referred client who returns to the site within three months, even if they do so directly.'
+        a: 'Tea Collection cookies last for 30 days. This means that you get credit for any referred client who returns to the site within three months, even if they do so directly.'
     },
     {
         q: 'What is the average order size?',
