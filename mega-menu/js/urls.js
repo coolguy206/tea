@@ -32,7 +32,7 @@ export const urls = {
       baby: {
         girl: `/baby-girl-clothes/favorites/limited-time-sale`,
         boy: `/baby-boy-clothes/favorites/limited-time-sale`,
-        newborn: `/newborn-clothing`,
+        newborn: `/select-styles/newborn`,
       },
       toddler: {
         girl: `/select-styles/toddler-girls-clothes/favorites/limited-time-sale`,

@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/swim-shop/default'
+    name: 'about/unsubscribe-catalog'
   },
   zone: {
     name: 'mega-menu/sub-nav',
