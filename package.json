@@ -23,6 +23,7 @@
     "grunt-contrib-watch": "^1.0.0",
     "grunt-ftp-push": "^1.2.1",
     "md5": "^2.3.0",
+    "newline-remove": "^1.0.2",
     "sailthru-client": "^3.0.6"
   },
   "devDependencies": {
