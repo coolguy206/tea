@@ -1,0 +1,195 @@
+@import "../var.less";
+@import "c1-slideshow-vars.less";
+
+.c1 {
+  @media screen and (max-width: 1679px) {
+    min-height: 51vw !important;
+  }
+
+  @media screen and (max-width: 431px) {
+    min-height: 166vw !important;
+    padding: 0 0 12vw;
+  }
+
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  min-height:880px !important;
+
+  .glide__bullets {
+    @media screen and (max-width: 431px) {
+      bottom: 3vw;
+    }
+
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+
+    button {
+      @media screen and (max-width:431px) {
+        background-color: #47363D !important;
+      }
+
+      background-color: @c1-bullets-color !important;
+
+      &.glide__bullet.glide__bullet--active {
+        background-color: @c1-bullets-color-hover !important;
+      }
+
+      &:hover {
+        background: @c1-bullets-color-hover !important;
+        border: none !important;
+      }
+    }
+  }
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 431px) {
+        width: 100%;
+        left: 0 !important;
+        top: 11vw !important;
+        transform: translate(0);
+      }
+
+      position: absolute;
+      width: auto;
+      transform: translate(0%, 0%) !important;
+      text-align: left !important;
+
+      div {
+        @media screen and (max-width: 431px) {
+          width: 100% !important;
+          justify-content: center;
+          text-align: center;
+          position: absolute;
+          top: 113vw;
+        }
+
+        &.the-flex {
+          @media screen and (max-width: 1679px) {
+            row-gap: 1vw;
+            column-gap: 1vw;
+          }
+
+          @media screen and (max-width: 431px) {
+            row-gap: 4vw;
+            column-gap: 4vw;
+          }
+
+          display: flex;
+          row-gap: 20px;
+          column-gap: 20px;
+          flex-wrap: wrap;
+          width: 50%;
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {}
+
+          @media screen and (max-width: 431px) {}
+
+        }
+
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 5vw !important;
+          line-height: 5vw !important;
+        }
+
+        @media screen and (max-width: 431px) {
+          font-size: 7vw;
+          margin: 0 0 8vw;
+          text-align: center !important;
+          font-size: 10vw !important;
+        }
+
+        @media screen and (max-width:320px) {
+          // margin: 4% 0 0;
+        }
+
+        text-align: left !important;
+        // letter-spacing: 4px;
+        text-transform: capitalize;
+        color: @c1-h2-color !important;
+        font-size: 80px !important;
+        line-height: 80px !important;
+        font-family: @souv !important;
+        margin: 0 0 1vw;
+      }
+
+      h3 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.1vw;
+          line-height: 1.6vw;
+        }
+
+        @media screen and (max-width: 431px) {
+          font-size: 4.2vw;
+          margin: 0 0 8vw;
+          color: #fff;
+          text-align: center !important;
+        }
+
+        color: @c1-h3-color !important;
+        font-family: @gilroyb;
+        font-size: 18px;
+        line-height: 28px;
+        text-align: left !important;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        margin: 0 0 1vw;
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.5vw;
+          line-height: 1.7vw;
+        }
+
+        @media screen and (max-width: 431px) {
+          font-size: 6vw;
+          line-height: 7.4vw;
+          margin: 0 0 8vw;
+          display: none;
+        }
+
+        text-align: left;
+        margin: 4% auto;
+        color: @c1-p-color;
+        text-transform: none;
+        font-size: 25px;
+        line-height: 30px;
+        width: 100%;
+        font-family: @souv;
+        text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+      }
+
+      div {
+        @media screen and (max-width: 431px) {
+          margin: 2vw 0 0;
+        }
+
+        a {
+          @media screen and (max-width: 1679px) {}
+
+          @media screen and (max-width: 431px) {}
+
+          font-family: @gilroyb;
+          color: @c1-1-cta-color;
+          background: @c1-1-cta-background;
+
+        }
+      }
+
+      @import "c1-slideshow-content-promo.less";
+      @import "c1-slideshow-content-1.less";
+      @import "c1-slideshow-content-2.less";
+      @import "c1-slideshow-content-3.less";
+      @import "c1-slideshow-content-4.less";
+      @import "c1-slideshow-content-5.less";
+    }
+  }
+}

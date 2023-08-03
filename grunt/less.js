@@ -30,7 +30,7 @@ module.exports = {
     hp: {
         expand: true,
         cwd: 'homepage/' + config.hp.name + '/css/',
-        src: '*.less',
+        src: '**/*.less',
         dest: 'homepage/' + config.hp.name + '/css/',
         ext: '.css',
 

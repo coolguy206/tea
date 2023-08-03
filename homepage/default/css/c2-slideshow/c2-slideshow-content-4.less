@@ -1,0 +1,41 @@
+@import "c2-slideshow-vars.less";
+
+&.content-4 {
+    @media screen and (max-width: 431px) {
+        width: 100%;
+        left: 0;
+        top: 11vw;
+        transform: translateX(0);
+    }
+
+    top: 50%;
+    width: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h3 {
+        color: @c2-4-h3-color;
+    }
+
+    h2 {
+        color: @c2-4-h2-color;
+    }
+
+    div {
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: 17vw;
+            }
+
+            @media screen and (max-width: 431px) {
+                width: 71vw;
+            }
+
+            width: 276px;
+            color: @c2-4-cta-color;
+            background: @c2-4-cta-background;
+        }
+    }
+}

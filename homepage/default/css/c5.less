@@ -1,7 +1,7 @@
 @import "var.less";
 @c5-first-font-color: #fff;
 @c5-first-cta-color: #fff;
-@c5-first-cta-background: #2CAC96;
+@c5-first-cta-background: #65C2A9;
 @c5-second-font-color: #fff;
 @c5-second-cta-color: #fff;
 @c5-second-cta-background: #2CAC96;
@@ -29,6 +29,7 @@
       @media screen and (max-width:1679px) {
         padding: 3.7vw;
       }
+
       @media screen and (max-width:431px) {
         padding: 0;
       }
@@ -64,14 +65,14 @@
           @media screen and (max-width:431px) {
             font-size: 8.5vw;
             line-height: 10.5vw;
-            text-align:center;
+            text-align: center;
             // margin: 0;
           }
 
           font-family: @souv;
           font-size: 54px;
           line-height: 64px;
-          letter-spacing: 0.1rem;
+          // letter-spacing: 0.1rem;
           text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
           text-align:left;
           margin: 0 0 7%;
@@ -84,6 +85,7 @@
 
         div {
           @media screen and (max-width:431px) {}
+
           // margin: 5% 0 0;
           // grid-template-rows: 1%;
 
@@ -101,6 +103,7 @@
         flex-wrap: wrap;
         padding: 6vw;
       }
+
       flex-basis: 50%;
       padding: 2.4vw;
       // order: 2;
@@ -109,13 +112,15 @@
         @media screen and (max-width: 835px) {
           bottom: 30%;
         }
+
         @media screen and (max-width: 431px) {
           left: 0;
           width: 100%;
           bottom: 10%;
-          text-align:center;
+          text-align: center;
         }
-        bottom: 16%;
+
+        bottom: 19%;
         width: auto;
         text-align: left;
         left: 12%;
@@ -123,6 +128,7 @@
         div {
           a {
             @media screen and (max-width:431px) {}
+
             color: @c5-first-cta-color;
             background: @c5-first-cta-background;
           }
@@ -134,6 +140,7 @@
       @media screen and (max-width: 431px) {
         padding: 0 6vw 6vw;
       }
+
       flex-basis: 50%;
       padding: 3vw;
       display:flex;
@@ -144,13 +151,17 @@
         width: 50%;
 
         .img {
-          @media screen and (max-width: 821px){
+          @media screen and (max-width: 821px) {
             width: 73%;
           }
         }
 
         .size {
-          text-align:left;
+          text-align: left;
+
+          .thumb-sizes {
+            display: block;
+          }
         }
       }
 
@@ -164,9 +175,11 @@
             @media screen and (max-width:1679px) {
               // width: 13.3vw;
             }
+
             @media screen and (max-width:431px) {
               // width: 43.5vw;
             }
+
             color: @c5-second-cta-color;
             background: @c5-second-cta-background;
             // width: 224px;
@@ -190,11 +203,13 @@
               width: 10.7vw;
               // height: 2.7vw;
             }
+
             @media screen and (max-width: 431px) {
               width: 43.5vw;
               // height: 11vw;
               // padding: 0;
             }
+
             color: @c5-third-cta-color;
             background: @c5-third-cta-background;
             width: 180px;
