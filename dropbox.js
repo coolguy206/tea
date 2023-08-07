@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/08 August/080623 Back to School event/04 Handoff/Site/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/080323 Fall 2 HP/handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/07 July/071423 Extra 25% Off All Sale/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/080323 Category Pages/Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Campaign/021323 Spread The Love Giveaway/04 Handoff/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0806/`;
+  var writeFilePath = `Site/0803/`;
   // var writeFilePath = `handoff/hp/0803/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
