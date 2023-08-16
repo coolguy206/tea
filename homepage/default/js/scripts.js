@@ -17,7 +17,7 @@ $(document).ready(function () {
   new Glide('.c1 .glide', {
     type: 'carousel',
     autoplay: 4000,
-    animationDuration: 2000,
+    animationDuration: 500,
     perView: 1,
     hoverpause: true,
     gap: 0,
@@ -32,7 +32,8 @@ $(document).ready(function () {
     gap: 0,
     breakpoints: {
       431: {
-        perView: 2
+        perView: 2,
+        perSwipe: '|',
       },
     }
   }).mount();
@@ -40,7 +41,7 @@ $(document).ready(function () {
   new Glide('.c2 .glide', {
     type: 'carousel',
     autoplay: 4000,
-    animationDuration: 2000,
+    animationDuration: 500,
     perView: 1,
     hoverpause: true,
     gap: 0
