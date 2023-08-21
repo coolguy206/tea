@@ -305,15 +305,25 @@ header .site-header-inner .site-nav-submenu div.bar {
 }
 
 header .site-header-inner .site-nav-submenu {
-	@media screen and (max-width: 430px){
+	@media screen and (max-width: 430px) {
 		display: none;
 	}
-   
+
 }
 
 header.fixed {
-	@media screen and (max-width: 430px){
+	@media screen and (max-width: 430px) {
 		height: 70px;
+	}
+}
+
+header .site-header-inner .nav .site-nav-links li {
+	white-space: nowrap;
+}
+
+.nav.col-s-12.col-xs-12.col-xxs-12 {
+	@media screen and (max-width: 834px) {
+		display: none;
 	}
 }
 
