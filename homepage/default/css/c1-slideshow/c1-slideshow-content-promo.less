@@ -10,7 +10,7 @@
 
     top: @c1-promo-top;
     left: @c1-promo-left;
-    width: 38%;
+    width: 30%;
     transform: translate(0%, 0%);
     text-align: center;
 
@@ -22,15 +22,20 @@
     }
 
     h3 {
-        @media screen and (max-width: 431px) {}
+        @media screen and (max-width: 431px) {
+            color: @c1-promo-h3-color-431 !important;
+        }
 
-        color: @c1-promo-h3-color;
+        color: @c1-promo-h3-color !important;
     }
 
     h2 {
-        @media screen and (max-width: 431px) {}
+        @media screen and (max-width: 431px) {
+            margin: 6vw 0 8vw;
+            color: @c1-promo-h2-color-431 !important;
+        }
 
-        color: @c1-promo-h2-color;
+        color: @c1-promo-h2-color !important;
         text-transform:capitalize;
         letter-spacing: 0;
     }
