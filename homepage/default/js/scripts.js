@@ -14,14 +14,14 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 500,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  // }).mount();
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',

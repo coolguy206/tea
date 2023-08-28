@@ -14,14 +14,14 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 // const inview = require('./inview.js');
 // const addTracking = require('./tracking.js');
 $(document).ready(function () {
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 500,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  // }).mount();
   new _glide["default"]('.shop-slideshow .glide', {
     type: 'carousel',
     // autoplay: 500,

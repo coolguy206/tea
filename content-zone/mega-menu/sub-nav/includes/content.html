@@ -208,6 +208,7 @@
 	</div>
 </div>
 
+{*
 <div class="site-nav-submenu special-occasion">
 	<div class="bar">
 		<!-- 
@@ -268,7 +269,10 @@
 		</div>
 	</div>
 </div>
+*}
 
+
+{*
 <div class="site-nav-submenu swim">
 	<div class="bar">
 		<div>
@@ -313,6 +317,8 @@
 
 	</div>
 </div>
+*}
+
 
 <div class="site-nav-submenu girl">
 	<div class="bar">
@@ -1081,17 +1087,18 @@
 	</div>
 </div>
 
+{*
 <div class="site-nav-submenu gifts">
 	<div class="bar">
 
-		{*
-		{sub_cats name="cat" category="pajamas"}
+
+		<!-- {sub_cats name="cat" category="pajamas"}
 		<div>
 		  <a href="{$cat.url}" data="mega menu pajamas">{$cat.title}</a>
 		  <span class="line"></span>
 		</div>
-		{/sub_cats}
-		*}
+		{/sub_cats} -->
+
 
 		<div>
 		  <a href="/girls-clothing/favorites/gift-shop" data="mega menu gifts shop">girl</a>
@@ -1125,6 +1132,8 @@
 
 	</div>
 </div>
+*}
+
 
 <div class="site-nav-submenu sale">
 	<div class="bar">
@@ -1615,8 +1624,6 @@
 		</li>
 *}		
 	
-
-
 		<li>
 			<h2 style="color:#436FC1 !important;"><!--<a href="/new-arrivals" style="color:#436FC1 !important;">-->NEW ARRIVALS<!--</a>--> <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -1629,9 +1636,17 @@
 			</div>
 		</li>
 
+
+		<li>
+			<h2><a href="/clothing-sale" style="color:#FF1744 !important">SALE</a></h2>
+		</li>
+
+
+{*
 		<li>
 			<h2><a href="/select-styles">Fall Faves Event</a></h2>
 		</li>
+*}
 
 
 		<li>
@@ -1662,7 +1677,6 @@
 
 			</div>
 		</li>
-
 
 		<li>
 			<h2>&#127754; Swim &#127754; <span class="fas fa-plus"></span></h2>
@@ -1707,7 +1721,6 @@
 				{/literal}
 			</div>
 		</li>
-
 *}
 
 		<li>
@@ -2124,11 +2137,7 @@
 			</div>
 		</li>
 
-		<li>
-			<h2><a href="/clothing-sale" style="color:#FF1744 !important">SALE</a></h2>
-		</li>
-
-
+		
 		<li>
 			<h2>Dresses <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -2205,16 +2214,16 @@
 		</li>
 
 
-
-		<!-- <li>
+{*
+		<li>
 			<h2>Shorts<span class="fas fa-plus"></span></h2>
 			<div class="sub">
 
-				{*
-				{sub_cats name="cat" category="tee-shop"}
+
+				<!-- {sub_cats name="cat" category="tee-shop"}
 				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees" >{$cat.title}</a></h3>
-				{/sub_cats}
-				*}
+				{/sub_cats} -->
+
 
 				<h3><a href="/shorts-shop" class="view all" data="mobile mega menu shorts" >view all</a></h3>
 
@@ -2226,8 +2235,8 @@
 
 				<h3><a href="/baby-boy-shorts" data="mobile mega menu shorts">Baby Boy</a></h3>
 			</div>
-		</li> -->
-
+		</li>
+*}
 
 
 		<li>
@@ -2266,8 +2275,14 @@
 			</div>
 		</li>
 
+
 		<li>
 			<h2><a href="/sale/clearance" style="color:#FF1744 !important">CLEARANCE</a></h2>
+		</li>
+
+
+		<li>
+			<h2><a href="#" class="kidizen-url">PRELOVED</a></h2>
 		</li>
 
 
@@ -2286,11 +2301,6 @@
 		<!-- <li>
 			<h2><a href="/sibling-shop">SIBLING</a></h2>
 		</li> -->
-
-
-		<li>
-			<h2><a href="#" class="kidizen-url">PRELOVED</a></h2>
-		</li>
 
 
 		<!-- include "../sale/mobile/sale-m.html" -->
