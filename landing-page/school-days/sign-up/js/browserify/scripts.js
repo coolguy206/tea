@@ -4,6 +4,62 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.inview = void 0;
+
+var inview = function inview(elem) {
+  // console.log(`from inview.js`);
+  $(elem).on('inview', function (event, isInView) {
+    if (isInView) {
+      // element is now visible in the viewport
+      // console.log('in view');
+      var imgs = $(this).find('img'); // let width = $(window).width();
+      // console.log(imgs);
+      // console.log(width);
+
+      $.each(imgs, function (i, val) {
+        var src = $(val).attr('data-set'); // console.log(src);
+
+        if (src) {
+          $(val).attr('src', src);
+        }
+
+        $(val).removeAttr('data-set');
+      });
+      $(this).css('visibility', 'visible');
+    }
+  });
+}; // module.exports = function(elem) {
+//   // console.log(`from inview.js`);
+//   $(elem).on('inview', function(event, isInView) {
+//     if (isInView) {
+//       // element is now visible in the viewport
+//       // console.log('in view');
+//       let imgs = $(this).find('img');
+//       // let width = $(window).width();
+//       // console.log(imgs);
+//       // console.log(width);
+//       $.each(imgs, function(i, val) {
+//         let src = $(val).attr('data-src');
+//         // console.log(src);
+//         if (src) {
+//           $(val).attr('src', src);
+//         }
+//         $(val).removeAttr('data-src');
+//       });
+//     }
+//   });
+// };
+
+
+exports.inview = inview;
+
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.phoneConvert = void 0;
 
 var phoneConvert = function phoneConvert(string) {
@@ -31,12 +87,15 @@ var phoneConvert = function phoneConvert(string) {
 exports.phoneConvert = phoneConvert;
 
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _phone = require("./phone.js");
 
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
+  (0, _inview.inview)('.main-content .header .div-2');
   var url = window.location.href;
   var companyId = "RAd6JR";
   var list1 = "XQN7pP";
@@ -77,9 +136,10 @@ $(document).ready(function () {
     var orgEIN = $(thisForm).find('input[name="org-ein"]').val();
     var state = $(thisForm).find('.states').val();
     var city = $(thisForm).find('input[name="org-city"]').val();
+    var zip = $(thisForm).find('input[name="org-zip"]').val();
     var valid = emailIsValid(email); // console.log('valid:' + valid);
 
-    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && state !== "please choose") {
+    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && zip !== "" && state !== "please choose") {
       // $('.signup .form').hide();
       // $('.signup .sending').show();
       var theData = {
@@ -94,6 +154,7 @@ $(document).ready(function () {
               school_days_organization_affiliation: affiliation,
               school_days_organization_city: city,
               school_days_organization_region: state,
+              school_days_organization_zip: zip,
               school_days_organization_country: "United States"
             }
           }
@@ -161,4 +222,4 @@ $(document).ready(function () {
 });
 
 
-},{"./phone.js":1}]},{},[2]);
+},{"./inview.js":1,"./phone.js":2}]},{},[3]);

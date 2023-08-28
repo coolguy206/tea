@@ -2,7 +2,10 @@
 
 var _phone = require("./phone.js");
 
+var _inview = require("./inview.js");
+
 $(document).ready(function () {
+  (0, _inview.inview)('.main-content .header .div-2');
   var url = window.location.href;
   var companyId = "RAd6JR";
   var list1 = "XQN7pP";
@@ -43,9 +46,10 @@ $(document).ready(function () {
     var orgEIN = $(thisForm).find('input[name="org-ein"]').val();
     var state = $(thisForm).find('.states').val();
     var city = $(thisForm).find('input[name="org-city"]').val();
+    var zip = $(thisForm).find('input[name="org-zip"]').val();
     var valid = emailIsValid(email); // console.log('valid:' + valid);
 
-    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && state !== "please choose") {
+    if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && zip !== "" && state !== "please choose") {
       // $('.signup .form').hide();
       // $('.signup .sending').show();
       var theData = {
@@ -60,6 +64,7 @@ $(document).ready(function () {
               school_days_organization_affiliation: affiliation,
               school_days_organization_city: city,
               school_days_organization_region: state,
+              school_days_organization_zip: zip,
               school_days_organization_country: "United States"
             }
           }
