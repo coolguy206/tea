@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'school-days/sign-up'
+    name: 'about/catalogs'
   },
   zone: {
     name: 'mega-menu/top-nav',

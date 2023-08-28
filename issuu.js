@@ -1,9 +1,12 @@
 const fs = require('fs');
 const axios = require('axios');
 const md5 = require('md5');
+const reOrderIssuu = require('./re-order-issuu.js');
 require('dotenv').config()
 
 // console.log(process.env.ISSUU_APIKEY, process.env.ISSUU_SECRET);
+
+// console.log(reOrderIssuu);
 
 const baseUrl = `https://api.issuu.com/1_0`;
 
@@ -111,6 +114,7 @@ axios.get(`${baseUrl}?${access}&${action}&apiKey=${process.env.ISSUU_APIKEY}&${f
         console.log(err);
       else {
         console.log(`File written successfully. li.html`);
+        reOrderIssuu.reOrderIssuu();
       }
     });
 
