@@ -5,12 +5,14 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.jobs = void 0;
 
-var _associateBusinessSystemsAnalyst = require("./associate-business-systems-analyst.js");
-
 var _directorMarketing = require("./director-marketing.js");
 
-var _srManagerMarketing = require("./sr-manager-marketing.js");
-
-var jobs = [_associateBusinessSystemsAnalyst.associateBusinessSystemsAnalyst, _directorMarketing.directorMarketing, _srManagerMarketing.srManagerMarketing];
+// import {
+//   associateBusinessSystemsAnalyst
+// } from './associate-business-systems-analyst.js';
+// import {
+//   srManagerMarketing
+// } from './sr-manager-marketing.js';
+var jobs = [_directorMarketing.directorMarketing];
 exports.jobs = jobs;
 //# sourceMappingURL=job-listing.js.map
