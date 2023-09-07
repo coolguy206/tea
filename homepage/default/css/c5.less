@@ -1,7 +1,7 @@
 @import "var.less";
 @c5-first-font-color: #fff;
 @c5-first-cta-color: #fff;
-@c5-first-cta-background: #65C2A9;
+@c5-first-cta-background: #A36452;
 @c5-second-font-color: #fff;
 @c5-second-cta-color: #fff;
 @c5-second-cta-background: #2CAC96;
@@ -127,8 +127,13 @@
 
         div {
           a {
-            @media screen and (max-width:431px) {}
-
+            @media screen and (max-width:1679px) {
+              width: 14vw;
+            }
+            @media screen and (max-width:431px) {
+              width: 51vw;
+            }
+            width: 229px;
             color: @c5-first-cta-color;
             background: @c5-first-cta-background;
           }

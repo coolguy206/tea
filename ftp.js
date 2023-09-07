@@ -7,8 +7,8 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/0827/v0/`;
-// var category = `homepage/2023/0803/v0/`;
+// var category = `promos/one-offs/2023/0827/v0/`;
+var category = `homepage/2023/0906/v0/`;
 // var category = `landing-pages/school-days-sign-up/2023/0822/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
 
@@ -16,14 +16,14 @@ var category = `promos/one-offs/2023/0827/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0827/site/`;
-// var readFilePath = `handoff/landing-pages/school-days/0822/LP/`;
+// var readFilePath = `Site/0827/site/`;
+var readFilePath = `handoff/hp/0906/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/`;
+// var writeFilePath = `promos/default/dev/images/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/school-days/sign-up/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/`;
+var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -141,6 +141,7 @@ c.on('ready', function () {
           var html = ``;
           var name = file.split('.')[0];
           var ext = file.split('.')[1];
+          var fileName = name.toLowerCase();
           // console.log(ext);
 
           if (ext == 'pdf') {
@@ -148,27 +149,34 @@ c.on('ready', function () {
             var html = `<a class="the-official-rules" href="/mas_assets${url}${file}" target="_blank">official rules</a>`;
           } else {
             // console.log(`it is not a pdf`);
+            var alt = ``;
             if (name.indexOf(`-`) !== -1) {
               // console.log(name);
+              alt = name.split(`-`)[0];
+              alt = alt.replace(/_/g, ' ');
+              // console.log(alt);
               if (name.indexOf(`-d`) !== -1) {
-                html = `<img class="desktop" data-set="/mas_assets${url}${file}">`;
+                html = `<img class="desktop" data-set="/mas_assets${url}${file}" alt="${alt}">`;
               } else if (name.indexOf(`-m`) !== -1) {
-                html = `<img class="mobile" data-set="/mas_assets${url}${file}">`;
+                html = `<img class="mobile" data-set="/mas_assets${url}${file}" alt="${alt}">`;
               } else {
                 html = `<img data-set="/mas_assets${url}${file}">`;
               }
             } else {
-              html = `<img data-set="/mas_assets${url}${file}">`;
+              alt = name.replace(/_/g, ' ');
+              // console.log(alt);
+              html = `<img data-set="/mas_assets${url}${file}" alt="${alt}">`;
             }
 
           }
 
           // console.log(`the html`);
           // console.log(html);
+          // console.log(`${writeFilePath}${fileName}.html`);
 
           //*make the html file
-          writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
-            console.log(`File written successfully. ${name}.html`);
+          writeFileContent(`${writeFilePath}${fileName}.html`, html).then((data) => {
+            console.log(`File written successfully. ${fileName}.html`);
           }).catch((err) => {
             console.log(err);
             if (err.code == `ENOENT`) {
@@ -177,8 +185,8 @@ c.on('ready', function () {
                 console.log('Directory created successfully!');
                 console.log(writeFilePath);
 
-                writeFileContent(`${writeFilePath}${name}.html`, html).then((data) => {
-                  console.log(`File written successfully. ${name}.html`);
+                writeFileContent(`${writeFilePath}${fileName}.html`, html).then((data) => {
+                  console.log(`File written successfully. ${fileName}.html`);
                 }).catch((err) => {
                   console.log(err);
                 })
