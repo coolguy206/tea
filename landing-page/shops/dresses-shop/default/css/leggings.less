@@ -1,7 +1,7 @@
 @import "var.less";
 @leggings-h2-color: #fff;
 @leggings-cta1-color: #F8CF5B;
-@leggings-cta1-background: #67825F;
+@leggings-cta1-background: #748D75;
 @leggings-cta2-color: #fff;
 @leggings-cta2-background: #EF3C25;
 @leggings-cta3-color: #fff;
@@ -29,13 +29,15 @@
         // display: block;
         // bottom: 8%;
         width:100%;
+        left:0;
+        top: 66%;
       }
 
       position: absolute;
-      top: 50%;
+      top: 44%;
       width: auto;
-      left: 50%;
-      transform: translate(-50%, -50%);
+      left: 7%;
+      // transform: translate(-50%, -50%);
       // display: flex;
       // align-items: center;
       // justify-content: center;
@@ -49,44 +51,50 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 2.6vw;
-          line-height: 3vw;
+          font-size: 4.9vw;
+          line-height: 5vw;
         }
         @media screen and (max-width:431px){
           font-size: 9vw;
           margin: 0 0 8%;
+          text-align:center;
         }
 
-        text-align: center;
+        text-align: left;
         color: @leggings-h2-color;
         flex-basis: 39%;
-        font-size: 44px;
-        line-height: 50px;
+        font-size: 80px;
+        line-height: 80px;
         font-family: @souv;
         margin: 0 0 8%;
       }
 
       p {
         @media screen and (max-width: 1679px) {
-          font-size: 1.9vw;
-          line-height: 2.5vw;
+          font-size: 1.3vw;
+          line-height: 2vw;
         }
         @media screen and (max-width: 431px){
           margin: 0 0 8vw;
           font-size: 4vw;
           line-height: 8vw;
+          display:none;
         }
-        text-align: center;
-        color: #47363D;
+        text-align: left;
+        color: #fff;
         flex-basis: 60%;
-        font-size: 32px;
-        line-height: 38px;
-        font-family: @gilroyr;
+        font-size: 22px;
+        line-height: 33px;
+        font-family: @souv;
+        margin: 0 0 8%;
       }
 
       div {
+        @media screen and (max-width:431px){
+          text-align:center;
+        }
         flex-basis: 39%;
-        text-align: center;
+        text-align: left;
 
         a {
           @media screen and (max-width:1679px){
@@ -95,7 +103,7 @@
           @media screen and (max-width: 431px){
             width: 52vw;
           }
-          background: #EC5152;
+          background: @leggings-cta1-background;
           color: #fff;
           width: 222px;
         }

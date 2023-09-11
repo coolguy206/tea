@@ -1,9 +1,10 @@
 @import "var.less";
-@c1-font-color: #fff;
-@c1-h2-color: #fff;
-@c1-p-color: #fff;
+@c1-font-color: #47363D;
+@c1-h2-color: #47363D;
+@c1-h2-color-430: #fff;
+@c1-p-color: #47363D;
 @c1-cta-color: #fff;
-@c1-cta-background: #405FA8;
+@c1-cta-background: #EC5152;
 
 .c1 {
   @media screen and (max-width: 431px) {
@@ -48,6 +49,7 @@
           font-size: 10vw;
           text-align: center;
           margin: 7% 0 106%;
+          color: @c1-h2-color-430;
 
         }
         @media screen and (max-width:320px) {
@@ -88,14 +90,14 @@
         }
 
         margin: 4% auto;
-        color: #fff;
+        color: @c1-p-color;
         text-transform: none;
         font-size: 22px;
         line-height: 33px;
         // letter-spacing: 1px;
         width: 100%;
         font-family: @souv;
-        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+        // text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
         text-align:left;
       }
 
