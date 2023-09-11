@@ -2,7 +2,7 @@
 
 &.content-promo {
     @media screen and (max-width: 431px) {
-        top: 3vw !important;
+        top: @c1-promo-top-431 !important;
         width: 100%;
         left: 0;
         transform: translate(0);
@@ -27,31 +27,38 @@
         }
 
         color: @c1-promo-h3-color !important;
+        margin:0;
     }
 
     h2 {
         @media screen and (max-width: 431px) {
-            margin: 6vw 0 8vw;
+            margin: 1vw 0;
             color: @c1-promo-h2-color-431 !important;
+            font-size: 12vw !important;
+            line-height: 12vw !important;
         }
 
         color: @c1-promo-h2-color !important;
         text-transform:capitalize;
         letter-spacing: 0;
+        font-family: @master !important;
+        margin: 0 0 2vw;
     }
 
     div {
 
         &.the-flex {
-            @media screen and (max-width: 1679px){
+            @media screen and (max-width: 1679px) {
                 column-gap: 1.5vw;
                 row-gap: 1.5vw;
             }
-            @media screen and (max-width: 431px){
+
+            @media screen and (max-width: 431px) {
                 column-gap: 4vw;
                 row-gap: 4vw;
-                top: 122vw;
+                top: 116vw;
             }
+
             display: flex;
             flex-wrap: wrap;
             column-gap: 20px;
