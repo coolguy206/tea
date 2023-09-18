@@ -27,15 +27,15 @@ export const urls = {
     },
     select: {
       family: `/select-styles/family`,
-      girl: `/girls-clothing/favorites/limited-time-sale`,
+      girl: `/sale/girls-clothing/select-styles`,
       boy: `/boys-clothing/favorites/limited-time-sale`,
       baby: {
-        girl: `/baby-girl-clothes/favorites/limited-time-sale`,
+        girl: `/sale/baby-girl-clothes/select-styles`,
         boy: `/baby-boy-clothes/favorites/limited-time-sale`,
-        newborn: `/select-styles/newborn`,
+        newborn: `/sale/newborn-clothing/select-styles`,
       },
       toddler: {
-        girl: `/select-styles/toddler-girls-clothes/favorites/limited-time-sale`,
+        girl: `/sale/toddler-girls-clothing/select-styles`,
         boy: `/select-styles/toddler-boys-clothes/favorites/limited-time-sale`,
       }
     },

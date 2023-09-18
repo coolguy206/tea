@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/0911/v0/`;
+var category = `promos/one-offs/2023/0918/v0/`;
 // var category = `homepage/2023/0906/v0/`;
 // var category = `landing-pages/school-days-sign-up/2023/0822/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
@@ -16,12 +16,12 @@ var category = `promos/one-offs/2023/0911/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0911/Site/`;
+var readFilePath = `Site/0918/Site/`;
 // var readFilePath = `handoff/headers/0906/category-headers/fete/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/`;
-var writeFilePath = `promos/headers/dev/images/warehouse/`;
+var writeFilePath = `promos/default/dev/images/`;
+// var writeFilePath = `promos/headers/dev/images/warehouse/`;
 // var writeFilePath = `landing-page/warehouse/default/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
