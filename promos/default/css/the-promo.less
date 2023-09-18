@@ -3,9 +3,9 @@
 @promo1Color2: #fff;
 @promo1Color3: @promo1Color1;
 @promo1Details: #fff;
-@promo2Bg: #ECB3DF;
-@promo2Color1: #FDFD85;
-@promo2Color2: #FDFD85;
+@promo2Bg: #7EA789;
+@promo2Color1: #FFDBD4;
+@promo2Color2: #fff;
 @promo2Color3: #fff;
 @promo3Bg: #fff0f1;
 @promo3Color1: #f66d67;
@@ -22,6 +22,12 @@
   width: 100%;
   padding: 0;
   margin: 0;
+}
+
+
+//? ON PDP PAGES REMOVING THE MARGIN BOTTOM OF THE SLIDER VERSION OF PROMO
+.site-header .promos .bx-wrapper {
+  margin-bottom: 0;
 }
 
 //? SHOW & HIDE CLONE OF .PROMOS 
@@ -112,6 +118,9 @@ header.site-header {
     text-align: center;
     height: 65px;
     position:relative;
+
+    //? for slideshow
+    width:100% !important;
 
     // padding: 2% 0;
     // padding: 0.8% 0;
@@ -344,6 +353,7 @@ header.site-header {
 
         &.second {
           color: @promo2Color2;
+          text-decoration: underline;
         }
 
         &.third {

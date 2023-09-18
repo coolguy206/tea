@@ -1,0 +1,124 @@
+@import 'vars.less';
+
+.content-wrap {
+	@media screen and (max-width: 1679px) {
+		min-height: 32vw;
+	}
+
+	@media screen and (max-width:430px) {
+		// padding: 11% 0;
+		flex-wrap: wrap;
+	}
+
+	display: flex;
+	// flex-wrap: wrap;
+	background: @color1;
+	visibility: hidden;
+	min-height:545px;
+	position:relative;
+
+	// padding: 4% 0;
+	div {
+		text-align: center;
+
+
+
+		&.first {
+			@media screen and (max-width: 430px) {
+				width: 100%;
+			}
+
+			// flex-basis: 39%;
+			// order: 2;
+
+			.the-content {
+				@media screen and (max-width: 430px) {
+					position: relative;
+					width: 100%;
+					top: 0;
+					left: 0;
+					transform: translate(0);
+					padding: 12vw 0;
+				}
+
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-50%, -50%);
+				width: 100%;
+				padding: 0 1vw;
+
+
+
+				h2 {
+					@media screen and (max-width: 1679px) {
+						font-size: 2.4vw;
+					}
+
+					@media screen and (max-width: 430px) {
+						font-size: 7vw;
+					}
+
+					font-family: gilroy-semibold;
+					font-size: 40px;
+					// line-height: 48px;
+					text-align: center;
+					letter-spacing: 0.2em;
+					text-transform: uppercase;
+					color: @color4;
+				}
+
+				h1 {
+					@media screen and (max-width: 1679px) {
+						line-height: 5vw;
+						font-size: 4vw;
+					}
+
+					@media screen and (max-width: 430px) {
+						line-height: 14vw;
+						font-size: 8vw;
+					}
+
+					// letter-spacing: 0.2rem;
+					font-family: @gilroyb;
+					color: @color2;
+					font-size: 68px;
+					line-height: 83px;
+					text-transform: uppercase;
+					text-align: center;
+					letter-spacing: 0.2em;
+					// margin: 0;
+
+					i {
+						font-style: normal;
+						font-family: gilroy-semibold;
+					}
+
+				}
+
+				p {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.4vw;
+						line-height: 2vw;
+					}
+
+					@media screen and (max-width: 430px) {
+						font-size: 6vw;
+						line-height: 7vw;
+						
+					}
+
+					font-family: @gilroyr;
+					font-size: 24px;
+					line-height: 28px;
+					text-align: center;
+					color: @color4;
+
+				}
+
+			}
+		}
+
+
+	}
+}
