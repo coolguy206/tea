@@ -33,15 +33,15 @@ var urls = {
     },
     select: {
       family: "/select-styles/family",
-      girl: "/sale/girls-clothing/select-styles",
+      girl: "/girls-clothing/favorites/limited-time-sale",
       boy: "/boys-clothing/favorites/limited-time-sale",
       baby: {
-        girl: "/sale/baby-girl-clothes/select-styles",
+        girl: "/baby-girl-clothes/favorites/limited-time-sale",
         boy: "/baby-boy-clothes/favorites/limited-time-sale",
         newborn: "/sale/newborn-clothing/select-styles"
       },
       toddler: {
-        girl: "/sale/toddler-girls-clothing/select-styles",
+        girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
         boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
       }
     },

@@ -33,10 +33,17 @@
       background-color: @c1-bullets-color !important;
 
       &.glide__bullet.glide__bullet--active {
+        @media screen and (max-width:431px) {
+          background-color: #47363D !important;
+        }
+
         background-color: @c1-bullets-color-hover !important;
       }
 
       &:hover {
+        @media screen and (max-width:431px) {
+          background-color: #47363D !important;
+        }
         background: @c1-bullets-color-hover !important;
         border: none !important;
       }
