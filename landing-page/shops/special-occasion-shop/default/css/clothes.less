@@ -1,34 +1,36 @@
 @import "var.less"; // @import "promo1.less";
 @na-font-color: #47363D;
 @na-h2-font-color: #DC6369;
-@na-cta-color: #5C9FB1;
+@na-cta-color: #47363D;
 @na-cta-background: #FDDED6;
 @na-background: #FDF5F2;
 
 .clothes {
-  @media screen and (max-width:428px) {
+  @media screen and (max-width:430px) {
     padding: 7% 0;
   }
+
   position: relative;
   width: 100%;
-  background: @na-background;
+  // background: @na-background;
   display: flex;
   flex-wrap: wrap;
   padding: 4% 0;
 
   p {
     @media screen and (max-width: 1679px) {
-      font-size: 1.5vw !important; 
+      font-size: 1.5vw !important;
       line-height: 2vw !important;
     }
-    @media screen and (max-width: 428px) {
-    
+
+    @media screen and (max-width: 430px) {
+
       line-height: 5.7vw !important;
       font-size: 4.7vw !important;
       margin: 0 0 9% !important;
-    
+
     }
-  
+
     font-family: @gilroyr !important;
     font-size: 25px !important;
     line-height: 30px !important;
@@ -39,21 +41,25 @@
   }
 
   div {
+
     &.first,
     &.fourth,
     &.second,
     &.third,
-    &.fifth {
-      @media screen and (max-width:428px) {
+    &.fifth,
+    &.sixth {
+      @media screen and (max-width:430px) {
         flex-basis: 50% !important;
         margin: 0 0 7%;
       }
-      flex-basis: 25%;
+
+      flex-basis: 16%;
 
       .the-content {
-        @media screen and (max-width: 428px) {
+        @media screen and (max-width: 430px) {
           padding: 0 7%;
         }
+
         position: relative;
         text-align: center;
         display: flex;
@@ -62,17 +68,19 @@
         align-items: baseline;
 
         div {
-          @media screen and (max-width: 428px) {
+          @media screen and (max-width: 430px) {
             margin: 4% 0 0;
           }
+
           margin: 8% 0 0;
           text-align: center;
           flex-basis: 100%;
 
           a {
-            @media screen and (max-width: 428px) {
+            @media screen and (max-width: 430px) {
               font-size: 2.8vw;
             }
+
             font-family: @gilroyb;
             color: @na-cta-color;
             // background: @na-cta-background;
@@ -82,27 +90,27 @@
     }
 
     &.second {
-      @media screen and (max-width:428px){
+      @media screen and (max-width:430px) {
         // order: 3;
       }
     }
 
     &.fourth {
-      @media screen and (max-width:428px){
+      @media screen and (max-width:430px) {
         // order: 2;
       }
     }
 
 
     &.fifth {
-      @media screen and (max-width:428px){
+      @media screen and (max-width:430px) {
         // order: 4;
       }
 
       .the-content {
         div {
           a {
-            @media screen and (max-width: 428px){
+            @media screen and (max-width: 430px) {
               // line-height: 4vw;
             }
           }

@@ -7,7 +7,7 @@
   .glide__track {
 
     .glide__slides {
-      @media screen and (max-width: 428px) {}
+      @media screen and (max-width: 430px) {}
 
       .glide__slide {
         position: relative;
@@ -16,7 +16,7 @@
   }
 
   .glide__bullets {
-    @media screen and (max-width: 428px){
+    @media screen and (max-width: 430px){
       padding: 9%;
     }
     // position: absolute;
@@ -27,7 +27,7 @@
         width: 1.3vw;
         height: 1.3vw;
       }
-      @media screen and (max-width: 428px) {
+      @media screen and (max-width: 430px) {
         width: 5vw;
         height: 5vw;
         border-radius: 3vw;
@@ -45,25 +45,31 @@
   div[data-glide-el="controls"] {
     span {
       @media screen and (max-width: 1679px) {
-        width: 2vw;
+        width: 1.2vw;
       }
 
-      @media screen and (max-width: 428px) {
+      @media screen and (max-width: 430px) {
         width: 5vw;
       }
 
       position: absolute;
       top: 50%;
       transform: translate(0, -50%);
-      width: 33px;
+      width: 20px;
+
+      &.lt-arrow, &.rt-arrow {
+        &:hover {
+          cursor: pointer;
+        }
+      }
 
       // width: 1.3vw;
       &.lt-arrow {
-        left: 4%;
+        left: 0%;
       }
 
       &.rt-arrow {
-        right: 4%;
+        right: 0%;
       }
     }
   }

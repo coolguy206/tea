@@ -1,12 +1,12 @@
 @import 'var.less';
 @c2-background: #fff;
 @c2-cta-color: #fff;
-@c2-cta-background-color: #E4BD3C;
-@c2-font-color: #fff;
-@c2-h2-color: #fff;
+@c2-cta-background-color: #C95D59;
+@c2-font-color: #47363D;
+@c2-h2-color: #47363D;
 
 .c2 {
-  @media screen and (max-width: 428px) {
+  @media screen and (max-width: 430px) {
     // padding: 4% 0;
     flex-wrap: wrap !important;
   }
@@ -16,34 +16,73 @@
 
 
   .the-content {
-    @media screen and (max-width: 428px) {
-      bottom: 9%;
+    @media screen and (max-width: 430px) {
+      bottom: 8%;
       left: 0;
-      flex-wrap:wrap;
-      justify-content: center;
+      text-align:center;
+      // flex-wrap:wrap;
+      // justify-content: center;
+      width: 100%;
       // transform: translateX(-50%);
     }
 
     position: absolute;
-    bottom: 4%;
-    left: 7%;
-    width: 100%;
-    display:flex;
-    align-items:center;
+    bottom: 13%;
+    left: 6%;
+    width: 35%;
+    // display:flex;
+    // align-items:center;
 
     h2 {
-      @media screen and (max-width:1679px){
-        font-size: 3.8vw;
+      @media screen and (max-width:1679px) {
+        font-size: 5vw;
+        line-height: 5vw;
       }
-      @media screen and (max-width:428px) {
-        font-size: 12vw;
-        flex-basis:100%;
+
+      @media screen and (max-width:430px) {
+        font-size: 9vw;
+        text-align: center;
+        color: #fff;
+        margin: 0 0 8vw;
+        // flex-basis:100%;
       }
 
       color: @c2-h2-color;
-      margin: 0 3% 0 0;
-      font-size: 60px;
-      line-height: 60px;
+      // margin: 0 3% 0 0;
+      font-size: 80px;
+      line-height: 80px;
+      font-family: @souv;
+      text-align:left;
+    }
+
+    p {
+      @media screen and (max-width:1679px) {
+        font-size: 1.3vw;
+        line-height: 2vw;
+      }
+
+      @media screen and (max-width: 430px) {
+        display: none;
+      }
+
+      font-size: 22px;
+      line-height: 33px;
+      color: @c2-font-color;
+      text-align:left;
+      margin: 4% 0;
+    }
+
+    span {
+      @media screen and (max-width:1679px) {
+        width: 21vw;
+      }
+
+      @media screen and (max-width: 430px) {
+        width: 85vw;
+      }
+
+      background-color: @c2-cta-background-color;
+      width: 357px;
     }
 
 
