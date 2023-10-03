@@ -33,14 +33,14 @@ $(document).ready(function () {
     }
   }).mount();
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  new Glide('.c2 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 500,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',
