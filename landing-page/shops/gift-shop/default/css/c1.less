@@ -20,18 +20,20 @@
     justify-content: space-evenly;
 
     &.group1 {
-      @media screen and (max-width: 430px){
+      @media screen and (max-width: 430px) {
         top: 33%;
         row-gap: 50vw;
       }
+
       top: 51%;
     }
 
     &.group2 {
-      @media screen and (max-width: 430px){
+      @media screen and (max-width: 430px) {
         top: 72%;
         row-gap: 56vw;
       }
+
       top: 89%;
     }
 
@@ -39,13 +41,42 @@
       @media screen and (max-width:1679px) {
         width: 15vw;
       }
-      @media screen and (max-width: 430px){
+
+      @media screen and (max-width: 430px) {
         width: 44vw;
       }
 
       background-color: @c1-cta-background-color;
       color: @c1-cta-color;
       width: 250px;
+
+      &.cta5 {
+        @media screen and (max-width: 430px) {
+          order: 0;
+        }
+
+      }
+
+      &.cta6 {
+        @media screen and (max-width: 430px) {
+          order: 2;
+        }
+
+      }
+
+      &.cta7 {
+        @media screen and (max-width: 430px) {
+          order: 1;
+        }
+
+      }
+
+      &.cta8 {
+        @media screen and (max-width: 430px) {
+          order: 3;
+        }
+
+      }
     }
   }
 
