@@ -9,6 +9,7 @@
 @import 'c7.less';
 @import 'c8.less';
 
+
 .content-wrap {
   display: flex;
   flex-wrap: wrap;
@@ -19,7 +20,7 @@
       line-height: 3.6vw;
     }
 
-    @media screen and (max-width:428px) {
+    @media screen and (max-width:430px) {
       font-size: 9vw;
       line-height: 11vw;
     }
@@ -54,7 +55,7 @@
 
   .first,
   .second {
-    @media screen and (max-width: 428px) {
+    @media screen and (max-width: 430px) {
       flex-basis: 100%;
     }
 
@@ -68,10 +69,13 @@
   .c5,
   .c6,
   .c7,
-  .c8 {
+  .c8, {
     position: relative;
     display: flex;
     flex-wrap: wrap;
     visibility: hidden;
   }
 }
+
+@import 'glide.less';
+@import 'shop-slideshow.less';

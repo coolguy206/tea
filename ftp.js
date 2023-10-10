@@ -7,22 +7,22 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/1004/v1/`;
+// var category = `promos/one-offs/2023/1004/v1/`;
 // var category = `homepage/2023/1003/v0/`;
-// var category = `landing-pages/special-occasion/2023/1003/v0/`;
+var category = `landing-pages/gift-shop/2023/1008/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1004-mega/mega-menu/`;
-// var readFilePath = `handoff/landing-pages/special-occasion/1003/Handoff/PDPs/Category/`;
+// var readFilePath = `Site/1004-mega/mega-menu/`;
+var readFilePath = `handoff/landing-pages/gift-page/Handoff/assets/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/`;
+// var writeFilePath = `promos/default/dev/images/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
-// var writeFilePath = `landing-page/shops/special-occasion-shop/default/dev/images/`;
+var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;

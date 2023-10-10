@@ -1,0 +1,74 @@
+@import "var.less"; // @import "promo1.less";
+@shop-slideshow-h2-color: #47363D;
+@shop-slideshow-font-color: #4f4243;
+@shop-slideshow-cta-color: #0D75B2;
+@shop-slideshow-background: #D5AC38;
+
+.shop-slideshow {
+    @media screen and (max-width: 1679px) {}
+
+    @media screen and (max-width:431px) {}
+
+    position:relative;
+    overflow:hidden;
+
+    .glide__slides {
+        @media screen and (max-width: 1679px) {
+            white-space: normal;
+        }
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 3.4vw;
+        }
+
+        @media screen and (max-width:431px) {
+            font-size: 9vw;
+            // line-height: 11vw;
+            margin: 0 0 4vw;
+        }
+
+        font-family: @souv;
+        color: @shop-slideshow-h2-color;
+        font-size: 54px;
+        margin: 0 0 1vw;
+
+    }
+
+    .glide__bullets {
+        display: none;
+    }
+
+    img {
+        display: block;
+    }
+
+    span {
+        &:hover {
+            cursor: pointer;
+        }
+    }
+
+    .thumb-grid.item {
+        width: 100%;
+
+        .thumb-content {
+            @media screen and (max-width: 431px) {
+                display: inline-block;
+                left: 50%;
+                position: relative;
+                transform: translate(-50%, 0);
+            }
+        }
+
+        .size {
+            text-align: left;
+
+            .thumb-sizes {
+                display: block;
+            }
+        }
+    }
+
+}
