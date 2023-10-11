@@ -5,8 +5,8 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const pdpPath = `./landing-page/shops/gift-shop/default/js/pdps.js`;
-const writePath = `landing-page/shops/gift-shop/default/dev/shop-slideshow/`;
+const pdpPath = `./landing-page/shops/dresses-shop/default/js/pdp.js`;
+const writePath = `landing-page/shops/dresses-shop/default/dev/images/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -33,7 +33,11 @@ pdps.pdps.map((pdpURL, index) => {
         var url = pdpURL;
         // console.log(url);
 
-        var color = url.split('#')[1].replace(/%20/g, ' ');
+        var color = ``;
+        if(url.indexOf('#') !== -1){
+            color = url.split('#')[1].replace(/%20/g, ' ');
+        }
+     
         // console.log(color);
 
         var imgSrc = $('.product-main-image.js-product-main-image').attr('src');
@@ -68,45 +72,51 @@ pdps.pdps.map((pdpURL, index) => {
 
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
-
-        var elem = `<li>
-    <div class="thumb-grid item">
-        <span class="img">
-            <a href="${url}"
-                data-hash="">
-                <img class="image" src="${imgSrc}"
-              alt="${title}" width="500" height="500">
-            </a>
-            <span
-                data-href="${url}"
-                data-color="${color}" class="js-qv ">Quick View</span>
-        </span>
-        <div class="thumb-content">
-            <a class="name"
-                href="${url}"
-                data-hash="">
-                <span class="model">${title}</span>
-            </a>
-
-            <div class="price-wrap">
-                <div class="price">
-                    <span id="store_price" class="price">$${price}</span>
+        /*
+                var elem = `<li>
+            <div class="thumb-grid item">
+                <span class="img">
+                    <a href="${url}"
+                        data-hash="">
+                        <img class="image" src="${imgSrc}"
+                      alt="${title}" width="500" height="500">
+                    </a>
+                    <span
+                        data-href="${url}"
+                        data-color="${color}" class="js-qv ">Quick View</span>
+                </span>
+                <div class="thumb-content">
+                    <a class="name"
+                        href="${url}"
+                        data-hash="">
+                        <span class="model">${title}</span>
+                    </a>
+        
+                    <div class="price-wrap">
+                        <div class="price">
+                            <span id="store_price" class="price">$${price}</span>
+                        </div>
+                    </div>
+        
+                    <p class="size">
+                        <span class="thumb-sizes" title="${sizesStr}">
+                            Sizes ${sizesArr[0]} to ${sizesArr[sizesArr.length - 1]}
+                        </span>
+                    </p>
+        
                 </div>
             </div>
+        </li>`;
+        */
 
-            <p class="size">
-                <span class="thumb-sizes" title="${sizesStr}">
-                    Sizes ${sizesArr[0]} to ${sizesArr[sizesArr.length - 1]}
-                </span>
-            </p>
-
-        </div>
-    </div>
-</li>`;
+        var elem = `<img data-set="${imgSrc}" alt="${title}">`;
 
         // console.log(elem);
 
-        var fileName = `slide-${index + 1}.html`;
+        // var fileName = `slide-${index + 1}.html`;
+
+        var thisFileTitle = url.split(".html")[0].split("/")[5];
+        var fileName = `pdp-${thisFileTitle}.html`
 
         fs.writeFile(`${writePath}/${fileName}`, elem, (err) => {
             if (err)

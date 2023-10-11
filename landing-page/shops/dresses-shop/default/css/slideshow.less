@@ -1,8 +1,14 @@
 @import "var.less";
 @slideshow-font-color: #47363D;
 
-@tiered-skirted-twirl-h2-color: #006A6D;
+@tiered-skirted-twirl-h2-color: #CF5F99;
 @tiered-skirted-twirl-cta-background: @tiered-skirted-twirl-h2-color;
+
+@ruffle-ballet-h2-color: #B33D47;
+@ruffle-ballet-cta-background: @ruffle-ballet-h2-color;
+
+@drop-waist-h2-color: #815366;
+@drop-waist-cta-background: @drop-waist-h2-color;
 
 @long-sleeve-h2-color: #C77853;
 @long-sleeve-cta-background: @long-sleeve-h2-color;
@@ -10,7 +16,7 @@
 @henley-h2-color: #C95D59;
 @henley-cta-background: @henley-h2-color;
 
-@wrap-neck-h2-color: #815366;
+@wrap-neck-h2-color: #748D75;
 @wrap-neck-cta-background: @wrap-neck-h2-color;
 
 @skirted-ballet-h2-color: #56718E;
@@ -85,6 +91,44 @@
           // width: 346px;
           background: @tiered-skirted-twirl-cta-background;
           color: @slideshow-cta-color;
+        }
+      }
+
+      
+      &.drop-waist {
+        @media screen and (max-width: 431px) {}
+
+
+        h2 {
+
+          color: @drop-waist-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @drop-waist-cta-background;
+            color: @slideshow-cta-color;
+          }
+        }
+      }
+
+
+      &.ruffle-ballet {
+        @media screen and (max-width: 431px) {}
+
+
+        h2 {
+
+          color: @ruffle-ballet-h2-color !important;
+        }
+
+        div {
+
+          a {
+            background: @ruffle-ballet-cta-background;
+            color: @slideshow-cta-color;
+          }
         }
       }
 
