@@ -1,0 +1,66 @@
+@import "c1-slideshow-vars.less";
+
+&.content-promo-2 {
+    @media screen and (max-width: 431px) {
+        top: 11vw;
+        width: 100%;
+        left: 0;
+        transform: translate(0);
+    }
+
+    top: @c1-promo-2-top;
+    right: @c1-promo-2-right;
+    width: 38%;
+    transform: translate(0%, -50%);
+    text-align: center !important;
+
+    h3 {
+        @media screen and (max-width: 430px){
+            color: @c1-promo-2-h3-color-431;
+        }
+        color: @c1-promo-2-h3-color;
+        text-align: center !important;
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px){
+            font-size: @c1-promo-2-h2-font-size-1679;
+        }
+        @media screen and (max-width: 430px){
+            color: @c1-promo-2-h2-color-431;
+            font-size: @c1-promo-2-h2-font-size-431;
+        }
+        color: @c1-promo-2-h2-color;
+        text-align: center !important;
+    }
+
+    p {
+        color: @c1-promo-2-p-color;
+        text-align:center;
+    }
+
+    div {
+
+        &.the-flex {
+            @media screen and (max-width: 1679px) {
+                width: 99%;
+            }
+            justify-content: center;
+            width: 100%;
+        }
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: @c1-promo-2-cta-size-1679;
+            }
+
+            @media screen and (max-width: 431px) {
+                width: @c1-promo-2-cta-size-431;
+            }
+
+            color: @c1-promo-2-cta-color;
+            background: @c1-promo-2-cta-background;
+            width: @c1-promo-2-cta-size;
+        }
+    }
+}
