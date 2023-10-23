@@ -4,15 +4,15 @@
     @media screen and (max-width: 431px) {
         top: @c1-promo-top-431 !important;
         width: 100%;
-        left: 0;
-        transform: translate(0);
+        left: 0 !important;
+        transform: translate(0) !important;
     }
 
     top: @c1-promo-top;
-    left: @c1-promo-left;
-    // right: @c1-promo-right;
+    // left: @c1-promo-left;
+    right: @c1-promo-right;
     width: 37%;
-    transform: translate(0%, 0%);
+    transform: translate(0%, -50%) !important;
     text-align: center;
 
     img {
@@ -37,23 +37,24 @@
     h2 {
         @media screen and (max-width: 1679px) {
             // margin: 3vw 0 8vw;
-            font-size: 6vw !important;
-            
+            // font-size: 6vw !important;
+
         }
+
         @media screen and (max-width: 431px) {
             margin: 4vw 0 0;
             color: @c1-promo-h2-color-431 !important;
-            font-size: @c1-promo-h2-font-size-431 !important;
+            font-size: @c1-promo-h2-font-size-431;
             line-height: @c1-promo-h2-line-height-431 !important;
         }
 
         color: @c1-promo-h2-color !important;
-        // text-transform:capitalize;
-        letter-spacing: 0;
+        text-transform: uppercase;
+        letter-spacing: 4px;
         font-family: @c1-promo-h2-font-family;
-        margin: 0 0 4vw;
+        // margin: 0 0 4vw;
         text-align: center !important;
-        font-size: 110px !important;
+        // font-size: 110px !important;
         // line-height: 0 !important;
     }
 
@@ -68,7 +69,7 @@
             @media screen and (max-width: 431px) {
                 column-gap: 4vw;
                 row-gap: 4vw;
-                top: 116vw;
+                top: 123vw;
             }
 
             display: flex;
@@ -115,13 +116,15 @@
 
             &.cta5 {
                 @media screen and (max-width: 1679px) {
-                    width: 16vw;
+                    // width: 16vw;
                 }
+
                 @media screen and (max-width: 431px) {
-                    width: 62vw;
+                    // width: 62vw;
                 }
-                margin: auto;
-                width: 266px;
+
+                // margin: auto;
+                // width: 266px;
             }
         }
     }
