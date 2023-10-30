@@ -4,25 +4,32 @@
       <a data="promo banner" href="/new-arrivals" class="">
         <span class="span-wrap">
           <span class="first">friends & family event </span>
-          <span class="second">25% off sitewide & extra 30% off all sale </span>
+          <span class="second">25% off sitewide </span>
           <span class="third">SHOP now </span>
-
         </span>
-
-        <!-- <span class="span-wrap mobile">
-          <span class="first">one day only! take an extra 50% off clearance</span>
-          <span class="second"> & an extra 25% off sale items </span>
-        </span> -->
-
-        <!--  <span class="shop-now">
-                <i>SHOP NOW</i>
-            </span> -->
       </a>
+
       <span class="details">
         <a data="promo banner" class="see-details" href="#details-promo1">details</a>
       </span>
     </div>
-    <!-- include "promo2.html" -->
+    <div class="the-promo promo1">
+        <a data="promo banner" href="/new-arrivals">
+            <span class="span-wrap">
+                <span class="first">new markdowns added </span>
+                <span class="second">extra 30% off all sale </span>
+                <span class="third">SHOP sale </span>
+            </span>
+        </a>
+
+        <span class="details">
+            <a data="promo banner" class="see-details" href="#details-promo1">details</a>
+        </span>
+
+        <!-- <span class="details">
+            <a data="promo banner" class="see-details" href="#details-promo2">details</a>
+        </span> -->
+    </div>
     <!-- include "promo3.html" -->
   </div>
 </div>
@@ -77,5 +84,5 @@
 <script src="/mas_assets/media/tea_collection/js/jquery.inview.js"></script>
 
 <script>
-  !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";jQuery(document).ready(function(){window.location.pathname;0==$("header.site-header .promos").length?(console.log("cloning .promos"),$("header.site-header").prepend($(".promos").clone())):console.log(".promos already cloned"),$(".the-promo .see-details").fancybox({helpers:{overlay:null}}),$(".close-fancy").click(function(a){$.fancybox.close()})})},{}]},{},[1]);
+  !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";jQuery(document).ready(function(){window.location.pathname;0==$("header.site-header .promos").length?(console.log("cloning .promos"),$("header.site-header").prepend($(".promos").clone())):console.log(".promos already cloned"),$(".the-promo .see-details").fancybox({helpers:{overlay:null}}),$(".close-fancy").click(function(a){$.fancybox.close()}),$(".promos-wrap").bxSlider({auto:!0,autoHover:!0,mode:"fade",controls:!1,pager:!1,pause:2500})})},{}]},{},[1]);
 </script>
