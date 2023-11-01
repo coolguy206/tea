@@ -342,6 +342,14 @@ module.exports = [{
       leftP: '',
       rightH2: '',
       rightP: '',
+    },
+    {
+      name: 'tops',
+      img: '',
+      leftH2: '',
+      leftP: '',
+      rightH2: '',
+      rightP: '',
     }
   ],
   },
