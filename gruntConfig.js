@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/gift-shop/default'
+    name: 'win-your-love-list'
   },
   zone: {
     name: 'mega-menu/top-nav',

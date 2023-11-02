@@ -1,7 +1,7 @@
 @import "c1-slideshow-vars.less";
 
 &.content-3 {
-    @media screen and (max-width: 431px) {
+    @media screen and (max-width: 430px) {
         width: 100%;
         left: 0;
         top: 11vw;
@@ -10,21 +10,23 @@
 
     top: @c1-3-top;
     left: @c1-3-left;
-    width: 50%;
-    transform: translate(0%, -50%);
+    width: auto;
+    transform: translate(-50%, -50%);
     text-align: center;
 
     h3 {
         color: @c1-3-h3-color;
+        text-align: center;
     }
 
     h2 {
         color: @c1-3-h2-color;
+        text-align: center;
     }
 
     div {
         @media screen and (max-width: 430px){
-            top: @c1-3-top-431;
+            // top: @c1-3-top-431;
         }
 
         a {
@@ -32,7 +34,7 @@
                 width: @c1-3-cta-size-1679;
             }
 
-            @media screen and (max-width: 431px) {
+            @media screen and (max-width: 430px) {
                 width: @c1-3-cta-size-431;
             }
 

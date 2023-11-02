@@ -1,0 +1,120 @@
+@import 'vars.less';
+@background-color: #F8EAE5;
+@li-color: #EC5152;
+@font-color: #4F4243;
+@cta-background-color: #BD9257;
+@cta-font-color: #fff;
+
+.content-wrap {
+	@media screen and (max-width: 430px) {
+		padding: 15vw 0;
+	}
+
+	visibility: hidden;
+	background: @background-color;
+	padding: 4vw;
+
+	.the-content {
+		text-align: center;
+
+		img {
+			@media screen and (max-width: 1679px) {
+				width: 35.5vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				width: 100%;
+			}
+
+			width: 592px;
+		}
+
+		p {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.7vw;
+				line-height: 2vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				font-size: 6vw;
+				line-height: 8vw;
+			}
+
+			font-size: 28px;
+			line-height: 34px;
+			text-align: center;
+			font-family: @souv;
+			color: @font-color;
+			margin: 2vw 0;
+		}
+
+		ol {
+			@media screen and (max-width: 430px) {
+				flex-wrap: wrap;
+				margin: 0 0 8vw;
+			}
+
+			display: inline-flex;
+			gap: 2vw;
+			margin: 0 0 4vw;
+
+			li {
+				@media screen and (max-width: 1679px) {
+					font-size: 3.5vw;
+				}
+
+				@media screen and (max-width: 430px) {
+					flex-basis: 100%;
+					margin: 0 0 4vw;
+					font-size: 13vw;
+				}
+
+				font-family: 'masterworks';
+				font-size: 58px;
+				color: @li-color;
+				text-align: center;
+
+
+				span {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.7vw;
+						line-height: 2vw;
+					}
+
+					@media screen and (max-width: 430px) {
+						font-size: 6vw;
+						line-height: 8vw;
+					}
+
+					display: block;
+					font-size: 28px;
+					line-height: 34px;
+					font-family: @souv;
+					color: @font-color;
+				}
+			}
+		}
+
+		a {
+			@media screen and (max-width: 1679px) {
+				width: 29.7vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				width: 74vw;
+				height: 19vw;
+				font-size: 4.5vw;
+				line-height: 6vw;
+			}
+
+			background: @cta-background-color;
+			width: 498px;
+			color: @cta-font-color;
+
+			&:hover {
+				color: @cta-font-color;
+			}
+		}
+	}
+
+}

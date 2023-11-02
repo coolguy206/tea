@@ -1,8 +1,9 @@
 @import "var.less";
 @c2-first-h2-font-color: #47363D;
+@c2-first-h2-font-color-430: #fff;
 @c2-first-font-color: #47363D;
 @c2-first-cta-color: #fff;
-@c2-first-cta-background: #EC5152;
+@c2-first-cta-background: #BD9251;
 @c2-second-font-color: #fff;
 @c2-second-cta-color: #fff;
 @c2-second-cta-background: #2CAC96;
@@ -145,11 +146,11 @@
           transform: translate(0);
         }
 
-        text-align: center;
+        text-align: left;
         width: auto;
-        left: 50%;
-        top: 50%;
-        transform: translate(-50%, -50%);
+        left: 6%;
+        top: 43%;
+        // transform: translate(-50%, -50%);
 
         h3 {
           @media screen and (max-width: 1679px) {
@@ -158,33 +159,38 @@
 
           @media screen and (max-width: 430px) {
             font-size: 4vw;
+            color: @c2-first-h2-font-color-430;
+            margin: 0;
+            text-align: center;
           }
 
           color: @c2-first-h2-font-color;
-          margin:0;
+          // margin:0;
+          text-align:left;
         }
 
 
         h2 {
           @media screen and (max-width: 1679px) {
-            font-size: 4.8vw;
+            font-size: 5vw;
             // margin: 2vw 0;
-            line-height: 6vw;
+            line-height: 5vw;
           }
 
           @media screen and (max-width: 430px) {
             font-size: 12vw;
             line-height: 15vw;
-            margin: 0 0 122vw;
+            margin: 0 0 132vw;
             text-align: center;
+            color: @c2-first-h2-font-color-430;
           }
 
           font-family: @souv;
           font-size: 80px;
-          line-height: 96px;
+          line-height: 80px;
           color: @c2-first-h2-font-color;
-          text-align:center;
-          margin:0 0 4%;
+          text-align: left;
+          margin:0 0 8%;
 
         }
 

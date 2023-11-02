@@ -1,0 +1,32 @@
+<div class="content-wrap">
+    <div class="the-content">
+        <img data-set="/mas_assets/media/tea_collection/landing-pages/win-your-love-list/2023/1102/v0/win_your_love_list_giveaway.gif" alt="win your love list giveaway">
+        <p>
+            Snag the perfect gift this<br class="mobile"> season when you add items to<br>
+            your love list. From now until<br class="mobile"> November 28th, you could<br>
+            win a $500 gift card to shop<br class="mobile"> Tea when you ❤️ items.
+        </p>
+
+        <ol>
+            <li><span>Create an<br class="desktop"> account & log in.</span></li>
+            <li><span>“Heart” items<br class="desktop"> you love.</span></li>
+            <li><span>We’ll choose 3<br class="desktop"> lucky winners!</span></li>
+        </ol>
+
+        <div>
+            <a href="/gift-shop" class="cta a cta-border">GET STARTED WITH<br class="mobile"> OUR GIFT GUIDE</a>
+        </div>
+    </div>
+</div>
+
+<link rel="stylesheet" href="/mas_assets/media/tea_collection/fonts/master/master-works.css">
+
+{literal}
+<style>
+  .mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}@media screen and (max-width:430px){.desktop{display:none !important}}.cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.cta-border{font-size:.9vw}}@media screen and (max-width:430px){.cta-border{font-size:3vw}}.a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.a{width:43.5vw;height:11vw;padding:0}}.content-wrap{visibility:hidden;background:#F8EAE5;padding:4vw}@media screen and (max-width:430px){.content-wrap{padding:15vw 0}}.content-wrap .the-content{text-align:center}.content-wrap .the-content img{width:592px}@media screen and (max-width:1679px){.content-wrap .the-content img{width:35.5vw}}@media screen and (max-width:430px){.content-wrap .the-content img{width:100%}}.content-wrap .the-content p{font-size:28px;line-height:34px;text-align:center;font-family:souvenirstd-light;color:#4F4243;margin:2vw 0}@media screen and (max-width:1679px){.content-wrap .the-content p{font-size:1.7vw;line-height:2vw}}@media screen and (max-width:430px){.content-wrap .the-content p{font-size:6vw;line-height:8vw}}.content-wrap .the-content ol{display:inline-flex;gap:2vw;margin:0 0 4vw}@media screen and (max-width:430px){.content-wrap .the-content ol{flex-wrap:wrap;margin:0 0 8vw}}.content-wrap .the-content ol li{font-family:'masterworks';font-size:58px;color:#EC5152;text-align:center}@media screen and (max-width:1679px){.content-wrap .the-content ol li{font-size:3.5vw}}@media screen and (max-width:430px){.content-wrap .the-content ol li{flex-basis:100%;margin:0 0 4vw;font-size:13vw}}.content-wrap .the-content ol li span{display:block;font-size:28px;line-height:34px;font-family:souvenirstd-light;color:#4F4243}@media screen and (max-width:1679px){.content-wrap .the-content ol li span{font-size:1.7vw;line-height:2vw}}@media screen and (max-width:430px){.content-wrap .the-content ol li span{font-size:6vw;line-height:8vw}}.content-wrap .the-content a{background:#BD9257;width:498px;color:#fff}@media screen and (max-width:1679px){.content-wrap .the-content a{width:29.7vw}}@media screen and (max-width:430px){.content-wrap .the-content a{width:74vw;height:19vw;font-size:4.5vw;line-height:6vw}}.content-wrap .the-content a:hover{color:#fff}.box-ajax-none{display:none}.site-content .site-content-inner .site-content-bg-wrapper,.site-content-inner.container{padding:0;background:#fff}#simplemodal-container,#simplemodal-overlay,.common-wrap{display:none !important}.content.col-l-10.col-m-9.col-s-12.col-xs-12{width:100% !important;padding:0 !important}.nav.col-l-2.col-m-3.col-s-12.col-xs-12{display:none !important}
+</style>
+
+<script>
+  !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),c.inview=void 0;var d=function(a){$(a).on("inview",function(a,b){if(b){var c=$(this).find("img");$.each(c,function(a,b){var c=$(b).attr("data-set");c&&$(b).attr("src",c),$(b).removeAttr("data-set")}),$(this).css("visibility","visible")}})};c.inview=d},{}],2:[function(a,b,c){"use strict";var d=a("./inview.js");$(document).ready(function(){(0,d.inview)(".content-wrap")})},{"./inview.js":1}]},{},[2]);
+</script>
+{/literal}

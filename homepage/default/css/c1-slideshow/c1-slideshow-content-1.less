@@ -1,7 +1,7 @@
 @import "c1-slideshow-vars.less";
 
 &.content-1 {
-    @media screen and (max-width: 431px) {
+    @media screen and (max-width: 430px) {
         top: 11vw;
         width: 100%;
         left: 0;
@@ -9,27 +9,42 @@
     }
 
     top: @c1-1-top;
-    left: @c1-1-left;
+    // left: @c1-1-left;
+    right: @c1-1-right;
     width: auto;
-    transform: translate(0%, -50%);
+    // transform: translate(0%, -50%);
     text-align: center;
 
     h3 {
-        @media screen and (max-width: 430px){
+        @media screen and (max-width: 430px) {
             color: @c1-1-h3-color-431;
         }
+
         color: @c1-1-h3-color;
     }
 
     h2 {
-        @media screen and (max-width: 430px){
+        @media screen and (max-width: 430px) {
             color: @c1-1-h2-color-431;
         }
+
         color: @c1-1-h2-color;
+    }
+
+    img {
+        @media screen and (max-width: 1679px) {
+            width: 36vw;
+        }
+        @media screen and (max-width: 430px) {
+            width: 83vw;
+        }
+        width: 607px;
     }
 
     p {
         color: @c1-1-p-color;
+        text-align: center;
+        margin: 8% auto;
     }
 
     div {
@@ -38,7 +53,7 @@
                 width: @c1-1-cta-size-1679;
             }
 
-            @media screen and (max-width: 431px) {
+            @media screen and (max-width: 430px) {
                 width: @c1-1-cta-size-431;
             }
 

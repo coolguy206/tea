@@ -5,8 +5,9 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const pdpPath = `./landing-page/shops/dresses-shop/default/js/pdp.js`;
-const writePath = `landing-page/shops/dresses-shop/default/dev/images/`;
+const basePath = `homepage/default`;
+const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
+const writePath = `${basePath}/dev/c5/pdps/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -34,10 +35,10 @@ pdps.pdps.map((pdpURL, index) => {
         // console.log(url);
 
         var color = ``;
-        if(url.indexOf('#') !== -1){
+        if (url.indexOf('#') !== -1) {
             color = url.split('#')[1].replace(/%20/g, ' ');
         }
-     
+
         // console.log(color);
 
         var imgSrc = $('.product-main-image.js-product-main-image').attr('src');
@@ -72,8 +73,8 @@ pdps.pdps.map((pdpURL, index) => {
 
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
-        /*
-                var elem = `<li>
+
+        var elem = `<li>
             <div class="thumb-grid item">
                 <span class="img">
                     <a href="${url}"
@@ -107,16 +108,20 @@ pdps.pdps.map((pdpURL, index) => {
                 </div>
             </div>
         </li>`;
-        */
 
-        var elem = `<img data-set="${imgSrc}" alt="${title}">`;
+
+        // var elem = `<img data-set="${imgSrc}" alt="${title}">`;
 
         // console.log(elem);
 
-        // var fileName = `slide-${index + 1}.html`;
+        //? THIS FOR PDP IMAGES
+        // var thisFileTitle = url.split(".html")[0].split("/")[5];
+        // var fileName = `pdp-${thisFileTitle}.html`
 
-        var thisFileTitle = url.split(".html")[0].split("/")[5];
-        var fileName = `pdp-${thisFileTitle}.html`
+
+        //? THIS FOR SLIDES
+        var fileName = `slide-${index + 1}.html`;
+
 
         fs.writeFile(`${writePath}/${fileName}`, elem, (err) => {
             if (err)
