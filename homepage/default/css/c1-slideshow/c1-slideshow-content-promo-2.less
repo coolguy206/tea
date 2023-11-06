@@ -9,9 +9,10 @@
     }
 
     top: @c1-promo-2-top;
-    right: @c1-promo-2-right;
+    left: @c1-promo-2-left;
+    // right: @c1-promo-2-right;
     width: 38%;
-    transform: translate(0%, -50%);
+    transform: translate(-50%, 0%);
     text-align: center !important;
 
     h3 {
@@ -32,6 +33,7 @@
         }
         color: @c1-promo-2-h2-color;
         text-align: center !important;
+        margin: 0 0 2.5vw;
     }
 
     p {
@@ -44,6 +46,9 @@
         &.the-flex {
             @media screen and (max-width: 1679px) {
                 width: 99%;
+            }
+            @media screen and (max-width: 430px){
+                top: 119vw;
             }
             justify-content: center;
             width: 100%;

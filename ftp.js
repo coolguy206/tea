@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/1102/v0/`;
+var category = `promos/one-offs/2023/1105/v1/select-styles/`;
 // var category = `homepage/2023/1102/v0/`;
 // var category = `landing-pages/win-your-love-list/2023/1102/v0/`;
 // var category = `mega-menu/2023/0420/v0/`;
@@ -16,12 +16,12 @@ var category = `promos/one-offs/2023/1102/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1102/110223 Sale on Sale 15% Off/handoff/`;
+var readFilePath = `Site/1105/04 Handoff/Site/family matching/category hero/`;
 // var readFilePath = `handoff/sweeps/win-your-love-list/110223 Win Your Love List Giveaway/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/`;
-// var writeFilePath = `promos/headers/dev/images/promo/hello-kitty/`;
+// var writeFilePath = `promos/default/dev/images/homepage/`;
+var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/win-your-love-list/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
