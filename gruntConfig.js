@@ -34,10 +34,10 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'win-your-love-list'
+    name: 'shops/gift-shop/default'
   },
   zone: {
-    name: 'mega-menu/top-nav',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',

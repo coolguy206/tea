@@ -5,9 +5,9 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
-const writePath = `${basePath}/dev/c5/pdps/`;
+const basePath = `landing-page/shops/gift-shop/default`;
+const pdpPath = `./${basePath}/js/pdps.js`;
+const writePath = `${basePath}/dev/shop-slideshow/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -54,6 +54,7 @@ pdps.pdps.map((pdpURL, index) => {
             var size = $(val).find('input').attr('value');
             // console.log(size);
             if (size.indexOf(`_`) !== -1) {
+                size = size.replace(`_`, `-`);
                 size = `${size}M`;
             }
             sizesArr.push(size);
@@ -64,6 +65,7 @@ pdps.pdps.map((pdpURL, index) => {
             var size = $(val).find('input').attr('value');
             // console.log(size);
             if (size.indexOf(`_`) !== -1) {
+                size = size.replace(`_`, `-`);
                 size = `${size}M`;
             }
             sizesArr.push(size);
