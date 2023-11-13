@@ -7,12 +7,11 @@ exports.jobs = void 0;
 
 var _directorMarketing = require("./director-marketing.js");
 
+var _officeCoordinator = require("./office-coordinator.js");
+
 // import {
 //   digitalMarketingCoordinator
 // } from './digital-marketing-coordinator.js';
-// import {
-//   srManagerMarketing
-// } from './sr-manager-marketing.js';
-var jobs = [_directorMarketing.directorMarketing];
+var jobs = [_directorMarketing.directorMarketing, _officeCoordinator.officeCoordinator];
 exports.jobs = jobs;
 //# sourceMappingURL=job-listing.js.map

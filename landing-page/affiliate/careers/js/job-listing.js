@@ -4,10 +4,10 @@
 import {
   directorMarketing
 } from './director-marketing.js';
-// import {
-//   srManagerMarketing
-// } from './sr-manager-marketing.js';
+import {
+  officeCoordinator
+} from './office-coordinator.js';
 
-export var jobs = [directorMarketing];
+export var jobs = [directorMarketing, officeCoordinator];
 
 
