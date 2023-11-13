@@ -1,0 +1,230 @@
+@import "../var.less";
+@c5-first-font-color: #fff;
+@c5-first-cta-color: #fff;
+@c5-first-cta-background: #A36452;
+@c5-second-font-color: #fff;
+@c5-second-cta-color: #fff;
+@c5-second-cta-background: #2CAC96;
+@c5-third-font-color: #fff;
+@c5-third-cta-color: #FFF;
+@c5-third-cta-background: #2D82A1;
+
+.c5 {
+  @media screen and (max-width: 430px) {
+    flex-wrap: wrap;
+    padding: 0;
+    // background: @background;
+  }
+
+  display: flex;
+  // padding: 0 0 0.8%;
+  text-align: center;
+
+  // flex-wrap: wrap;
+  div {
+
+    &.first,
+    &.second,
+    &.third {
+      @media screen and (max-width:1679px) {
+        padding: 3.7vw;
+      }
+
+      @media screen and (max-width:430px) {
+        padding: 0;
+      }
+
+      text-align: center;
+      padding: 2.4vw;
+      box-sizing: border-box;
+      flex-basis: 34%;
+      position: relative;
+
+      a {
+        text-decoration: none;
+      }
+
+      .the-content {
+        @media screen and (max-width:430px) {
+          margin: 10% 0 0 !important;
+          bottom: 10%;
+        }
+
+        // margin: 7% 0 0;
+        position: absolute;
+        bottom: 16%;
+        width: 100%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            // font-size: 1.6vw;
+            line-height: 4vw;
+            font-size: 3.3vw;
+          }
+
+          @media screen and (max-width:430px) {
+            font-size: 8.5vw;
+            line-height: 10.5vw;
+            text-align: center;
+            // margin: 0;
+          }
+
+          font-family: @souv;
+          font-size: 54px;
+          line-height: 64px;
+          // letter-spacing: 0.1rem;
+          text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+          text-align:left;
+          margin: 0 0 7%;
+        }
+
+        a,
+        h2 {
+          // margin: 0;
+        }
+
+        div {
+          @media screen and (max-width:430px) {}
+
+          // margin: 5% 0 0;
+          // grid-template-rows: 1%;
+
+        }
+      }
+    }
+
+    &.first {
+      @media screen and (max-width: 430px) {
+        // padding: 10% 0 0;
+        // background: #FDF5F2;
+        position: relative;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        padding: 6vw;
+      }
+
+      flex-basis: 50%;
+      padding: 2.4vw;
+      // order: 2;
+
+      .the-content {
+        @media screen and (max-width: 835px) {
+          bottom: 30%;
+        }
+
+        @media screen and (max-width: 430px) {
+          left: 0;
+          width: 100%;
+          bottom: 10%;
+          text-align: center;
+        }
+
+        bottom: 19%;
+        width: auto;
+        text-align: left;
+        left: 12%;
+
+        div {
+          a {
+            @media screen and (max-width:1679px) {
+              width: 19vw;
+            }
+            @media screen and (max-width:430px) {
+              width: 73vw;
+            }
+            width: 313px;
+            color: @c5-first-cta-color;
+            background: @c5-first-cta-background;
+          }
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 430px) {
+        padding: 0 6vw 6vw;
+      }
+
+      flex-basis: 50%;
+      padding: 3vw;
+      display:flex;
+      flex-wrap:wrap;
+      // order: 1;
+
+      .thumb-grid.item {
+        width: 50%;
+
+        .img {
+          @media screen and (max-width: 821px) {
+            width: 73%;
+          }
+          @media screen and (max-width: 430px) {
+            width: 100%;
+          }
+        }
+
+        .size {
+          text-align: left;
+
+          .thumb-sizes {
+            display: block;
+          }
+        }
+      }
+
+      .the-content {
+        h2 {
+          color: @c5-second-font-color;
+        }
+
+        div {
+          a {
+            @media screen and (max-width:1679px) {
+              // width: 13.3vw;
+            }
+
+            @media screen and (max-width:430px) {
+              // width: 43.5vw;
+            }
+
+            color: @c5-second-cta-color;
+            background: @c5-second-cta-background;
+            // width: 224px;
+
+          }
+        }
+      }
+    }
+
+    &.third {
+      flex-basis: 50%;
+
+      .the-content {
+        h2 {
+          color: @c5-third-font-color;
+        }
+
+        div {
+          a {
+            @media screen and (max-width: 1679px) {
+              width: 10.7vw;
+              // height: 2.7vw;
+            }
+
+            @media screen and (max-width: 430px) {
+              width: 43.5vw;
+              // height: 11vw;
+              // padding: 0;
+            }
+
+            color: @c5-third-cta-color;
+            background: @c5-third-cta-background;
+            width: 180px;
+
+          }
+        }
+      }
+    }
+  }
+}

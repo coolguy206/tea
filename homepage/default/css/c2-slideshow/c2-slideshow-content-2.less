@@ -9,8 +9,8 @@
     }
 
     top: @c2-2-top;
-    width: 50%;
-    left: -5%;
+    width: auto;
+    left: @c2-2-left;
     transform: translate(0%, -50%);
     text-align: center;
 
@@ -20,19 +20,22 @@
 
     h2 {
         color: @c2-2-h2-color;
+        margin: 0 0 2vw;
+        text-align: center;
     }
 
     div {
         a {
             @media screen and (max-width: 1679px) {
-                width: 22vw;
+                // width: 22vw;
             }
 
             @media screen and (max-width: 430px) {
-                width: 86vw;
+                // width: 86vw;
+                width: 43.5vw;
             }
 
-            width: 370px;
+            // width: 370px;
             color: @c2-2-cta-color;
             background: @c2-2-cta-background;
         }

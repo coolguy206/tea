@@ -1,0 +1,120 @@
+@import "../var.less";
+@wt-font-color: #47363D;
+@wt-h2-font-color: #48353E;
+@wt-h3-font-color: #A36452;
+@wt-cta-color: #2967B0;
+@wt-cta-background: #fff;
+@wt-background: #FDF5F2;
+
+.why-tea {
+    @media screen and (max-width:1679px) {
+        min-height: 35vw !important;
+    }
+
+    @media screen and (max-width:430px) {
+        min-height: auto !important;
+    }
+
+    position: relative;
+    width: 100%;
+    background: @wt-background;
+    min-height: 580px !important;
+    margin: 0 0 2vw;
+
+    .the-content {
+        @media screen and (max-width:430px) {
+            position: relative;
+            top: 0;
+            transform: translate(0);
+            padding: 8vw 0;
+        }
+
+        position: absolute;
+        width: 100%;
+        top: 50%;
+        transform: translate(0, -50%);
+    }
+
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 3.3vw;
+            line-height: 4vw;
+            margin: 0 0 2vw;
+            // letter-spacing: 0.2vw;
+        }
+        @media screen and (max-width:430px) {
+            font-size: 9vw;
+            line-height: 10vw;
+            // letter-spacing: 1vw;
+            margin: 0 0 8vw;
+        }
+
+        font-family: @souv;
+        color: @wt-h2-font-color;
+        font-size: 54px;
+        line-height: 64px;
+        // letter-spacing: 4px;
+        text-transform: capitalize;
+        margin: 0 0 0px;
+    }
+
+    .the-display {
+        @media screen and (max-width: 430px){
+            flex-wrap:wrap;
+        }
+        display: flex;
+
+        div {
+            @media screen and (max-width:430px) {
+                flex-basis: 100%;
+                margin: 0 0 10vw;
+            }
+
+            flex-basis: 34%;
+
+            h3 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.5vw;
+                    line-height: 4vw;
+                    // letter-spacing: 0.2vw;
+                    margin: 0;
+                }
+                @media screen and (max-width:430px) {
+                    font-size: 4vw;
+                    line-height: 10vw;
+                    // letter-spacing: 1vw;
+                }
+
+                font-family: @gilroyb;
+                color: @wt-h3-font-color;
+                font-size: 24px;
+                line-height: 99px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+                margin: 0 0 0px;
+            }
+
+            p {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.4vw;
+                    line-height: 2vw;
+                }
+
+                @media screen and (max-width:430px) {
+                    font-size: 4.5vw;
+                    line-height: 7vw;
+                }
+
+                font-family: @souv;
+                color: @wt-font-color;
+                font-size: 24px;
+                line-height: 32px;
+                // letter-spacing: 4px;
+                // text-transform: capitalize;
+            }
+
+        }
+    }
+
+}
