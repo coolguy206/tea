@@ -72,7 +72,7 @@ module.exports = {
       // landing pages toolkit
       {
         cwd: 'landing-page/' + config.landing.name + '/dev',
-        src: ['*.html'],
+        src: ['**/*.html'],
         dest: 'landing-page/' + config.landing.name + '/includes/'
       },
     ],

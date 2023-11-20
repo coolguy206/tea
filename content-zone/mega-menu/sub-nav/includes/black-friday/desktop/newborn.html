@@ -1,21 +1,36 @@
 <div>
-  <a href="/black-friday/newborn" data="mega menu black friday">NEWBORN</a>
+  <a href="/newborn-clothing" data="mega menu black friday">50% OFF NEWBORN</a>
   <span class="line"></span>
   <div class="menu flex-menu">
     <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
       {assign var=i value=0}
       <ul class="category first">
-        <!-- <li>Shop by Category</li> -->
-        <!-- <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li> -->
+        {*
+        <li>Shop by Category</li>
+        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
+        *}
+
+        {*
         {sub_cats name="cat" category="black-friday/newborn"}
         {if $i && $i % 8 eq 0}
           </ul>
           <ul class="category">
             <li class="spacer">Spacer</li>
         {/if}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" style="color:#FF1744 !important">{$cat.title|replace:'Newborn':''}</a></li>
+          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
+        *}
+
+        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mega menu black friday categories" >Rompers</a></li>
+
+        <li><a href="/newborn-dresses" class="dresses menu bf" data="mega menu black friday categories" >Dresses</a></li>
+
+        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf" data="mega menu black friday categories" >2-Piece Outfits</a></li>
+
+        <li><a href="/newborn-accessories" class="accessories menu bf" data="mega menu black friday categories" >Accessories</a></li>
+
+        <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf" data="mega menu black friday categories" >Bodysuits</a></li>
 
         </ul>
       </ul>
@@ -23,20 +38,7 @@
 
     <div class="panel panel-3" style="flex-basis: 100% !important">
       <div class="da-rennab-zone" data-zone="mega_bf_newborn"></div>
-
-      <!-- <ul class="category">
-        <li>Shop by Collection</li>
-
-        {sub_cats name="cat" category="girls-clothing/favorites"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl favorites">{$cat.title}</a></li>
-        {/sub_cats}
-      </ul> -->
     </div>
-
-    <!-- <div class="panel panel-3">
-      <div class="da-rennab-zone" data-zone="mega_bf_girl"></div>
-    </div> -->
-
 
   </div>
 </div>

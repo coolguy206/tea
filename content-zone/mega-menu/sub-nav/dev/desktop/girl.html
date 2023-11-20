@@ -2,28 +2,44 @@
   <a href="/girls-clothing/new-arrivals" data="mega menu girl">Girl (5&#8211;16)</a>
   <span class="line"></span>
   <div class="menu flex-menu">
+
+    {* BLACK FRIDAY *}
     <div class="panel panel-1">
       {assign var=i value=0}
-{*
+
       <ul class="category">
-        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+        
+        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf" >Black Friday</a></li>
+
         {sub_cats name="cat" category="black-friday/girl"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
+          <li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
         {/sub_cats}
+
       </ul>
-*}
+    </div>
+
+    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+    <div class="panel panel-2">
+      {assign var=i value=0}
+
       <ul class="category first">
         <li>Shop by Category</li>
 
+        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
         {sub_cats name="cat" category="girls-clothing/shop-by-category"}
         {if $i && $i % 8 eq 0}
-          </ul>
-          <ul class="category">
-            <li class="spacer">Spacer</li>
+      </ul>
+    </div>
+
+    <div class="panel panel-2">
+        <ul class="category">
+          <li class="spacer">Spacer</li>
+
         {/if}
           <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl categories" >{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
+
           <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
           <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
         </ul>
@@ -34,11 +50,13 @@
       <ul class="category">
         <li>Shop by Collection</li>
         include "../shop-by-collection.html"
+
         {*
         {sub_cats name="cat" category="girls-clothing/favorites"}
           <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu girl favorites">{$cat.title}</a></li>
         {/sub_cats}
         *}
+
       </ul>
     </div>
 

@@ -1,7 +1,7 @@
 @import "../var.less";
 @c3-first-font-color: #fff;
 @c3-first-cta-color: #fff;
-@c3-first-cta-background: #A36452;
+@c3-first-cta-background: #373A49;
 @c3-second-font-color: #FFF;
 @c3-second-cta-color: #fff;
 @c3-second-cta-background: #2CAC96;
@@ -14,259 +14,81 @@
     flex-wrap: wrap;
     // background: #E8C3CA;
     padding: 0;
+    margin: 8vw 0 0 0;
   }
 
-  display: flex;
+  // display: flex;
   padding: 0;
   text-align: center;
+  min-height: auto !important;
+  position: relative;
+  margin: 2vw 0 0 0;
 
-  // flex-wrap: wrap;
-  div {
+  .the-content {
+    @media screen and (max-width: 430px) {}
 
-    &.first,
-    &.second,
-    &.third {
-      @media screen and (max-width:1679px) {
-        padding: 1vw;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    h3 {
+      @media screen and (max-width: 1679px) {
+        font-size: 5vw;
+        line-height: 5vw;
       }
 
-      text-align: center;
-      box-sizing: border-box;
-      flex-basis: 34%;
-      // flex-basis: 50%;
-      padding: 0 1vw;
-      position: relative;
+      @media screen and (max-width: 430px) {
+        font-size: 13vw;
+        line-height: 13vw;
+        display: block;
+        margin: 0 0 4vw 0;
+      }
+
+      display: inline-block;
+      margin: 0 1vw 0 0;
+      font-family: MasterWorks;
+      text-transform: lowercase;
+      letter-spacing: 0;
+      font-size: 75px;
+      line-height: 75px;
+    }
+
+    h2 {
+      @media screen and (max-width: 430px) {
+        font-size: 6vw;
+        line-height: 8vw;
+        margin: 0 0 4vw;
+      }
+
+      display: inline-block;
+      font-family: @gilroybl;
+      text-transform: uppercase;
+      margin: 0 0 1vw;
+      letter-spacing: 4px;
+    }
+
+    // flex-wrap: wrap;
+    div {
 
       a {
-        text-decoration: none;
-      }
-
-      h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 3.3vw;
-          line-height: 4vw;
-        }
-
-        @media screen and (max-width:430px) {
-          font-size: 8.5vw;
-          line-height: 10.5vw;
-        }
-
-        font-family: @souv;
-        font-size: 54px;
-        line-height: 64px;
-        // letter-spacing: 0.1rem;
-        color: @c3-first-font-color;
-        margin: 0 0 7%;
-        text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-        text-align:left;
-      }
-
-      .the-content {
-        @media screen and (max-width: 430px) {
-          margin: 10% 0 0 !important;
-          bottom: 7%;
-        }
-
-        margin: 0;
-        position: absolute;
-        bottom: 16%;
-        width: 100%;
-
-        h2 {
-          @media screen and (max-width: 1679px) {}
-
-          @media screen and (max-width:430px) {}
-        }
-
-        div {
-          @media screen and (max-width: 430px) {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            margin: 110% 0 0;
-          }
-
-          @media screen and (max-width: 376px) {
-            margin: 92% 0 0;
-          }
-
-          margin: 0;
-
-          a {
-            @media screen and (max-width:1679px) {}
-
-            @media screen and(max-width: 430px) {}
-
-            // left: -2vw;
-          }
-        }
-      }
-    }
-
-    &.first {
-      @media screen and (max-width: 430px) {
-        // padding: 10% 0 0;
-        // background: #FDF5F2;
-        position: relative;
-        text-align: center;
-        display: flex;
-        flex-wrap: wrap;
-        padding: 6vw;
-      }
-
-      flex-basis: 50%;
-      padding: 2.4vw;
-      // order: 2;
-
-
-      .the-content {
-        @media screen and (max-width: 835px) {
-          bottom: 30%;
+          width: 23vw;
         }
 
         @media screen and (max-width: 430px) {
-          left: 0;
-          width: 100%;
-          bottom: 10%;
+          width: 86vw;
         }
 
-        bottom: 19%;
-        width: auto;
-        text-align:left;
-        left: 12%;
+        background: @c3-first-cta-background;
+        width: 392px;
 
-        h2 {
-          @media screen and (max-width: 430px) {
-            margin: 0 0 4%;
-            text-align: center;
-          }
-
-          @media screen and (max-width: 375px) {
-            // width: 100%;
-          }
-
-          @media screen and (max-width: 321px) {
-            // margin: 22% 0 3%;
-          }
-
-          color: @c3-first-font-color;
-        }
-
-        div {
-          @media screen and (max-width: 430px) {
-            margin: 0;
-          }
-
-          @media screen and (max-width: 375px) {}
-
-          a {
-            @media screen and (max-width:1679px) {
-              // width: 17.1vw;
-            }
-
-            @media screen and (max-width: 430px) {
-              // width: 67.1vw;
-            }
-
-            color: @c3-first-cta-color;
-            background: @c3-first-cta-background;
-            // width: 288px;
-            // margin: 0 0 20%;
-
-          }
-        }
-      }
-    }
-
-    &.second {
-      @media screen and (max-width: 430px) {
-        padding: 0 6vw 6vw;
-      }
-
-      flex-basis:50%;
-      padding: 3vw;
-      display:flex;
-      flex-wrap:wrap;
-      // order: 1;
-
-      .thumb-grid.item {
-        width: 50%;
-
-        .img {
-          @media screen and (max-width: 821px) {
-            width: 73%;
-          }
-          @media screen and (max-width: 430px) {
-            width: 100%;
-          }
-        }
-
-        .size {
-          text-align: left;
-
-          .thumb-sizes {
-            display: block;
-          }
+        &:hover {
+          color: #fff;
         }
       }
 
-      h2 {
-        @media screen and (max-width:430px) {}
-
-        color: @c3-second-font-color;
-      }
-
-      .the-content {
-        @media screen and (max-width: 430px) {}
-
-        div {
-          @media screen and (max-width: 430px) {
-            margin: 0;
-          }
-
-          a {
-            @media screen and (max-width:1679px) {
-              // width: 17vw;
-            }
-
-            @media screen and (max-width: 430px) {
-              // width: 68vw;
-            }
-
-            color: @c3-second-cta-color;
-            background: @c3-second-cta-background;
-            // width: 290px;
-
-          }
-        }
-      }
-    }
-
-    &.third {
-      @media screen and (max-width: 430px) {
-        background: @background;
-      }
-
-      .the-content {
-        @media screen and (max-width: 430px) {}
-
-        h2 {
-          color: @c3-third-font-color;
-        }
-
-        div {
-          @media screen and (max-width: 430px) {
-            margin: 5% 0 0;
-          }
-
-          a {
-            color: @c3-third-cta-color;
-            background: @c3-third-cta-background;
-
-          }
-        }
-      }
     }
   }
 }

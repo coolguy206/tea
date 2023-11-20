@@ -70,6 +70,19 @@ var urls = {
         girl: "/sale/toddler-girls-clothing/clearance",
         boy: "/sale/toddler-boys-clothing/clearance"
       }
+    },
+    blackFriday: {
+      girl: "/black-friday/girl",
+      boy: "/black-friday/boy",
+      baby: {
+        girl: "/black-friday/baby-girl",
+        boy: "/black-friday/baby-boy",
+        newborn: "/newborn-clothing"
+      },
+      toddler: {
+        girl: "/black-friday/toddler-girl",
+        boy: "/black-friday/toddler-boy"
+      }
     }
   }
 };

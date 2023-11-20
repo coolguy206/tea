@@ -2,28 +2,33 @@
 <div class="links">
   <ul>
     <li>Shop by Category</li>
-    <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mobile mega menu baby girl view all" >Shop All</a></li>
-{*
+  
+    {* BLACK FRIDAY *}
     <li><a href="{$secure_html_url}black-friday/baby-girl" data="mobile mega menu black friday categories" class="bf">Black Friday</a></li>
     {sub_cats name="cat" category="black-friday/baby-girl"}
       <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
     {/sub_cats}
-*}
+
 
     {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories" >{$cat.title}</a></li>
     {/sub_cats}
+
+    <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mobile mega menu baby girl view all" >Shop All</a></li>
     <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mobile mega menu baby girl sale" >Sale</a></li>
     
   </ul>
+
   <ul>
     <li>Shop by Collection</li>
     include "../shop-by-collection.html"
+
     {*
     {sub_cats name="cat" category="baby-girl-clothes/favorites"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl favorites" >{$cat.title}</a></li>
     {/sub_cats}
     *}
+    
   </ul>
 
   include "kidizen-baby.html"

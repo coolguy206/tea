@@ -1,7 +1,11 @@
-.dept-black-friday a,.dept-clearance a,.dept-sale a {
-  color: #FF1744 !important;
+.dept-bf a {
+  color: #D05F9A !important;
+}
+
+.dept-clearance a,.dept-sale a {
+  color: #C1D065 !important;
 }
 
 .dept-new-arrivals a {
-  color: #436FC1 !important;
+  color: #58CCAD !important;
 }

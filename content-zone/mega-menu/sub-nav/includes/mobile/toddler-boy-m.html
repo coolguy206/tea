@@ -2,20 +2,22 @@
 <div class="links">
   <ul>
     <li>Shop by Category</li>
-    <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mobile mega menu toddler boy view all" >Shop All</a></li>
-{*
+   
+    {* BLACK FRIDAY *}
     <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mobile mega menu black friday categories" class="bf">Black Friday</a></li>
     {sub_cats name="cat" category="black-friday/toddler-boy"}
       <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
     {/sub_cats}
-*}
+
 
     {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy categories" >{$cat.title}</a></li>
     {/sub_cats}
+
+    <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mobile mega menu toddler boy view all" >Shop All</a></li>
     <li><a class="sale" href="/sale/toddler-boys-clothing" data="mobile mega menu toddler boy sale" >Sale</a></li>
-   
   </ul>
+
   <ul>
     <li>Shop by Collection</li>
     <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
@@ -47,11 +49,13 @@
     <!-- <li><a href="/vacation-shop" class="" data="mega menu Vacation Shop"> Vacation Shop</a></li> -->
 
     <!-- <li><a href="/sibling-shop" class="" data="mega menu Sibling Shop"> Sibling Shop</a></li> -->
+
     {*
     {sub_cats name="cat" category="toddler-boys-clothes/favorites"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy favorites" >{$cat.title}</a></li>
     {/sub_cats}
     *}
+    
   </ul>
 
   <ul>

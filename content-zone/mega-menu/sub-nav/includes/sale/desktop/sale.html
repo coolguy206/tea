@@ -6,32 +6,47 @@
 					<a href="/sale/girls-clothing/view-all" data="mega menu sale girl">Girl</a>
 					<span class="line"></span>
 					<div class="menu flex-menu">
+
+						{* BLACK FRIDAY *}
 						<div class="panel panel-1">
 							{assign var=i value=0}
-		{*
+
 								<ul class="category-sale">
+
 									<li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
 					        		{sub_cats name="cat" category="black-friday/girl"}
-					          			<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
+					          			<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 					        		{/sub_cats}
+
 								</ul>
-		*}
-								<ul class="category-sale">
-									<li>Shop by Category</li>
+							</div>
+
+						{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+						<div class="panel panel-2">
+							{assign var=i value=0}
 
 
+							<ul class="category-sale">
+								<li>Shop by Category</li>
+
+									{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 									{sub_cats name="cat" category="sale/girls-clothing"}
 									{if $i && $i % 6 eq 0}
-										</ul>
-										<ul class="category-sale">
-											<li class="spacer">Spacer</li>
+							</ul>
+						</div>
+
+						<div class="panel panel-2">
+							<ul class="category-sale">
+								<li class="spacer">Spacer</li>
+
 									{/if}
 										<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale girl categories" >{$cat.title}</a></li>
 									{math equation="x + y" x=$i y=1 assign=i}
 									{/sub_cats}
 
-									<li><a href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu sale girl view all" >View All</a></li>
-								</ul>
+								<li><a href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu sale girl view all" >View All</a></li>
+							</ul>
 						</div>
 
 						<div class="panel panel-4">
@@ -57,32 +72,45 @@
 			<a href="/sale/boys-clothing/view-all" data="mega menu sale boy" >Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
-						<ul class="category-sale">
-							<li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-							{sub_cats name="cat" category="black-friday/boy"}
-								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-							{/sub_cats}
-						</ul>
-		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
-							
 
+					<ul class="category-sale">
+
+						<li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+							{sub_cats name="cat" category="black-friday/boy"}
+								<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
+							{/sub_cats}
+					</ul>
+				</div>
+
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/boys-clothing"}
 							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
+
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale boy categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
 							{/sub_cats}
 
-							<li><a href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu sale boy view all" >View All</a></li>
-						</ul>
+						<li><a href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu sale boy view all" >View All</a></li>
+					</ul>
 				</div>
 
 				<div class="panel panel-4">
@@ -110,32 +138,45 @@
 			<a href="/sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl" >Toddler Girl</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
-						<ul class="category-sale">
-							<li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-							{sub_cats name="cat" category="black-friday/toddler-girl"}
-								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
-							{/sub_cats}
-						</ul>
-		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
-							
 
+					<ul class="category-sale">
+
+						<li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+							{sub_cats name="cat" category="black-friday/toddler-girl"}
+								<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
+							{/sub_cats}
+					</ul>
+				</div>
+
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+							
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/toddler-girls-clothing"}
 							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+							
+				<div class="panel panel-2">
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
+
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale tween categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
 							{/sub_cats}
 
-							<li><a href="{$secure_html_url}sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl view all" >View All</a></li>
-						</ul>
+						<li><a href="{$secure_html_url}sale/toddler-girls-clothing/view-all" data="mega menu sale toddler girl view all" >View All</a></li>
+					</ul>
 				</div>
 
 				<div class="panel panel-4">
@@ -161,32 +202,46 @@
 			<a href="/sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy" >Toddler Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+				
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
-						<ul class="category-sale">
-							<li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+					<ul class="category-sale">
+
+						<li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
 							{sub_cats name="cat" category="black-friday/toddler-boy"}
-								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
+								<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
 							{/sub_cats}
-						</ul>
-		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
 
+					</ul>
+				</div>
 
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/toddler-boys-clothing"}
 							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
+
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale tween categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
 							{/sub_cats}
 
-							<li><a href="{$secure_html_url}sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy view all" >View All</a></li>
-						</ul>
+						<li><a href="{$secure_html_url}sale/toddler-boys-clothing/view-all" data="mega menu sale toddler boy view all" >View All</a></li>
+					</ul>
 				</div>
 
 				<div class="panel panel-4">
@@ -212,25 +267,38 @@
 			<a href="/sale/baby-girl-clothes/view-all" data="mega menu sale baby girl" >Baby Girl</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
-						<ul class="category-sale">
-							<li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+					<ul class="category-sale">
+
+						<li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
 							{sub_cats name="cat" category="black-friday/baby-girl"}
-								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
+								<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
 							{/sub_cats}
-						</ul>
-		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
 
+					</ul>
+				</div>
 
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/baby-girl-clothes"}
 							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale baby girl categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
@@ -263,31 +331,45 @@
 			<a href="/sale/baby-boy-clothes/view-all" data="mega menu sale baby boy">Baby Boy</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
-						<ul class="category-sale">
-							<li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-							{sub_cats name="cat" category="black-friday/baby-boy"}
-								<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-							{/sub_cats}
-						</ul>
-		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
 
+					<ul class="category-sale">
+
+						<li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+							{sub_cats name="cat" category="black-friday/baby-boy"}
+								<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
+							{/sub_cats}
+					</ul>
+				</div>
+
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/baby-boy-clothes"}
 							{if $i && $i % 6 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale baby boy categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
 							{/sub_cats}
 
-							<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu sale baby boy view all" >View All</a></li>
-						</ul>
+						<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu sale baby boy view all" >View All</a></li>
+					</ul>
 				</div>
 
 				<div class="panel panel-4">
@@ -313,33 +395,53 @@
 			<a href="/sale/newborn-clothing/view-all" data="mega menu sale newborn" >Newborn</a>
 			<span class="line"></span>
 			<div class="menu flex-menu">
+
+				{* BLACK FRIDAY *}
 				<div class="panel panel-1">
 					{assign var=i value=0}
-		{*
+
 					<ul class="category-sale">
+		{*				
 						<li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
 						{sub_cats name="cat" category="black-friday/newborn"}
 							<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 						{/sub_cats}
-					</ul>
 		*}
-						<ul class="category-sale">
-							<li>Shop by Category</li>
 
+						<li><a href="/newborn-clothing" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+						<li><a href="/newborn-clothes/shop-by-category/rompers" class="bf" data="mega menu black friday categories" >Rompers</a></li>
+						<li><a href="/newborn-dresses" class="bf" data="mega menu black friday categories" >Dresses</a></li>
+						<li><a href="/newborn-clothes/shop-by-category/outfits" class="bf" data="mega menu black friday categories" >2-Piece Outfits</a></li>
+						<li><a href="/newborn-accessories" class="bf" data="mega menu black friday categories" >Accessories</a></li>
+						<li><a href="/newborn-tops-and-bottoms" class="bf" data="mega menu black friday categories" >Bodysuits</a></li>
+					</ul>
+				</div>
 
+				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+				<div class="panel panel-2">
+					{assign var=i value=0}
+
+					<ul class="category-sale">
+						<li>Shop by Category</li>
+
+							{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 							{sub_cats name="cat" category="sale/newborn-clothing"}
 							{if $i && $i % 4 eq 0}
-								</ul>
-								<ul class="category-sale">
-									<li class="spacer">Spacer</li>
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+					<ul class="category-sale">
+						<li class="spacer">Spacer</li>
+
 							{/if}
 								<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale newborn categories" >{$cat.title}</a></li>
 							{math equation="x + y" x=$i y=1 assign=i}
 							{/sub_cats}
 
-							<li><a href="{$secure_html_url}sale/newborn-clothing/view-all" data="mega menu sale newborn view all" >View All</a></li>
-
-						</ul>
+						<li><a href="{$secure_html_url}sale/newborn-clothing/view-all" data="mega menu sale newborn view all" >View All</a></li>
+					</ul>
 				</div>
 
 				<div class="panel panel-4">

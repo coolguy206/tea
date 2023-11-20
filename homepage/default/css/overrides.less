@@ -1,4 +1,3 @@
-
 header.site-header {
   top: 0 !important;
 }
@@ -7,8 +6,9 @@ header.site-header {
   position: fixed !important;
 }
 
-header .site-header-inner .header-wrapper .header-actions .favorites {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat !important;
+header.site-header.fixed .site-header-inner.container,
+header.site-header.fixed .site-header-inner.homepage {
+  height: auto;
 }
 
 .site-content .site-content-inner .site-content-bg-wrapper {
@@ -20,40 +20,182 @@ body.index header {
     position: relative;
     top: 0 !important;
   }
+
   position:relative;
   z-index: 9;
+  // height: auto;
 }
 
-body.index header .site-header-inner .nav .site-nav-links li a {
-  color: #47363d !important;
+
+
+// body.index header.active .site-header-inner .nav .site-nav-links li a, body.index header.fixed .site-header-inner .nav .site-nav-links li a {
+//   color: #47363d !important;
+// }
+
+//? BLACK FRIDAY EDIT
+body.index header {
+
+  .site-header-inner .nav .site-nav-links li {
+
+    &.dept-bf {
+      a {
+        color: #E894CD !important;
+      }
+
+      &.active {
+        .line {
+          border-color: #E894CD !important;
+        }
+      }
+    }
+
+    a {
+      // color: #47363d !important;
+      color: #fff !important;
+    }
+
+  }
+
+  &.fixed .site-header-inner .nav .site-nav-links li {
+
+    &.dept-bf {
+      a {
+        color: #D05F9A !important;
+      }
+
+      &.active {
+        .line {
+          border-color: #D05F9A !important;
+        }
+      }
+    }
+
+    a {
+      color: #47363d !important;
+    }
+  }
 }
 
+
+
+
+//? BLACK FRIDAY EDIT
+header .site-header-inner.homepage {
+  @media screen and (max-width:430px) {
+    height: auto;
+  }
+
+  background: #373A49;
+  height: 160px;
+}
+
+
+body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+  background-color: #fff !important;
+}
+
+//? TEA LOGO REGULAR
 header .site-header-inner .header-wrapper .logo .logo-placeholder {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
   background-size: contain !important;
 }
 
+//? TEA LOGO BLACK FRIDAY
+body.index header {
+  &.active .site-header-inner .logo .logo-placeholder {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo_white.png") center no-repeat;
+  }
+
+  &.fixed .site-header-inner .logo .logo-placeholder {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat;
+  }
+}
+
+//? SEARCH ICON REGULAR
 header .site-header-inner .header-wrapper .header-actions .search-icon {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
 }
 
+//? SEARCH ICON BLACK FRIDAY
+body.index header {
+  &.active .site-header-inner .header-actions .search-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search_white.png") no-repeat center center/contain;
+  }
+
+  &.fixed .site-header-inner .header-actions .search-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain;
+  }
+}
+
+//? MY ACCOUNT ICON REGULAR
 header .site-header-inner .header-wrapper .header-actions .my-account .my-account-icon {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
 }
 
+//? MY ACCOUNT ICON BLACK FRIDAY
+body.index header {
+  &.active .site-header-inner .header-actions .my-account .my-account-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account_white.png") no-repeat center center/contain;
+  }
+
+  &.fixed .site-header-inner .header-actions .my-account .my-account-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain;
+  }
+}
+
+//? SHOPPING CART ICON REGUALR
 header .site-header-inner .header-wrapper .header-actions .cart-toggle .shopping-cart {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
 }
 
+//? SHOPPING CART BLACK FRIDAY
+body.index header {
+  &.active .site-header-inner .header-actions .cart-toggle .shopping-cart {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag_white.png") no-repeat center center/contain;
+  }
+
+  &.fixed .site-header-inner .header-actions .cart-toggle .shopping-cart {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain;
+  }
+}
+
+//? FAVORITES ICON REGULAR
+header .site-header-inner .header-wrapper .header-actions .favorites {
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat !important;
+}
+
+//? FAVORITES ICON BLACK FRIDAY
+body.index header {
+  &.active .favorites {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px-white.png") no-repeat center center/contain;
+  }
+
+  &.fixed .favorites {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") no-repeat center center/contain;
+  }
+}
+
+//? MOBILE NAV BARS REGULAR
 body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
-  background-color: #47363d !important;
+  // background-color: #47363d !important;
+}
+
+//? MOBILE NAV BARS BLACK FRIDAY 
+body.index header {
+  &.active .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+    background-color: #fff !important;
+  }
+
+  &.fixed .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+    background-color: #47363d !important;
+  }
 }
 
 .thumb-grid .img .js-qv {
-  @media screen and (max-width: 835px){
-    display:block;
+  @media screen and (max-width: 835px) {
+    // display: block;
     opacity: 1;
-    position:relative;
+    position: relative;
   }
 }
 

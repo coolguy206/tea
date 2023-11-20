@@ -2,31 +2,45 @@
 	<a href="/sale/baby-boy-clothes/view-all" data="mega menu sale baby boy">Baby Boy</a>
 	<span class="line"></span>
 	<div class="menu flex-menu">
+
+		{* BLACK FRIDAY *}
 		<div class="panel panel-1">
 			{assign var=i value=0}
-{*
-				<ul class="category-sale">
-					<li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
-					{sub_cats name="cat" category="black-friday/baby-boy"}
-						<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-					{/sub_cats}
-				</ul>
-*}
-				<ul class="category-sale">
-					<li>Shop by Category</li>
 
+			<ul class="category-sale">
+
+				<li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+					{sub_cats name="cat" category="black-friday/baby-boy"}
+						<li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
+					{/sub_cats}
+			</ul>
+		</div>
+
+		{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+		<div class="panel panel-2">
+			{assign var=i value=0}
+
+			<ul class="category-sale">
+				<li>Shop by Category</li>
+
+					{* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 					{sub_cats name="cat" category="sale/baby-boy-clothes"}
 					{if $i && $i % 6 eq 0}
-						</ul>
-						<ul class="category-sale">
-							<li class="spacer">Spacer</li>
+			</ul>
+		</div>
+
+		<div class="panel panel-2">
+
+			<ul class="category-sale">
+				<li class="spacer">Spacer</li>
 					{/if}
 						<li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu sale baby boy categories" >{$cat.title}</a></li>
 					{math equation="x + y" x=$i y=1 assign=i}
 					{/sub_cats}
 
-					<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu sale baby boy view all" >View All</a></li>
-				</ul>
+				<li><a href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu sale baby boy view all" >View All</a></li>
+			</ul>
 		</div>
 
 		<div class="panel panel-4">

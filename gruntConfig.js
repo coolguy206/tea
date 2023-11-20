@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/gift-shop/default'
+    name: 'black-friday/headers'
   },
   zone: {
     name: 'mega-menu/sub-nav',
@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'headers',
+    name: 'default',
     ftp: {
       css: {
         src: 'default/css/',

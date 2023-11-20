@@ -6,8 +6,8 @@ const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
 const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
-const writePath = `${basePath}/dev/c5/pdps/`;
+const pdpPath = `./${basePath}/js/shop-slideshow/pdp.js`;
+const writePath = `${basePath}/dev/shop-slideshow/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -45,7 +45,8 @@ pdps.pdps.map((pdpURL, index) => {
         // console.log(imgSrc);
 
         var price = $('span[itemprop=price]').text();
-        // console.log(price);
+        var strike = $('#store_price strike')[0].outerHTML;
+        // console.log(strike);
 
         var sizesArr = [];
 
@@ -76,7 +77,27 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var elem = `
+        var priceElem = ``;
+        if(strike !== undefined){
+            // console.log(`strike`);
+            priceElem = `
+            <div class="price-wrap">
+                <div class="price">
+                    ${strike}
+                    <span id="store_price" class="price">$${price}</span>
+                </div>
+            </div>`;
+        } else {
+            // console.log(`no strike`);
+            priceElem = `
+            <div class="price-wrap">
+                <div class="price">
+                    <span id="store_price" class="price">$${price}</span>
+                </div>
+            </div>`;
+        }
+
+        var elem = `<li>
             <div class="thumb-grid item">
                 <span class="img">
                     <a href="${url}"
@@ -95,11 +116,7 @@ pdps.pdps.map((pdpURL, index) => {
                         <span class="model">${title}</span>
                     </a>
         
-                    <div class="price-wrap">
-                        <div class="price">
-                            <span id="store_price" class="price">$${price}</span>
-                        </div>
-                    </div>
+                    ${priceElem}
         
                     <p class="size">
                         <span class="thumb-sizes" title="${sizesStr}">
@@ -109,7 +126,7 @@ pdps.pdps.map((pdpURL, index) => {
         
                 </div>
             </div>
-        `;
+        </li>`;
 
 
         // var elem = `<img data-set="${imgSrc}" alt="${title}">`;

@@ -2,7 +2,8 @@
 <div class="links">
   <ul>
     <li>Shop by Category</li>
-    
+
+    {* BLACK FRIDAY *}
 {*
     <li><a href="{$secure_html_url}black-friday/newborn" data="mobile mega menu black friday categories" class="bf">Black Friday</a></li>
     {sub_cats name="cat" category="black-friday/newborn"}
@@ -10,19 +11,34 @@
     {/sub_cats}
 *}
 
+    <li><a href="/newborn-clothing" class="bf" data="mobile mega menu black friday categories" >Rompers</a></li>
+
+    <li><a href="/newborn-clothes/shop-by-category/rompers" class="bf" data="mobile mega menu black friday categories" >Rompers</a></li>
+
+    <li><a href="/newborn-dresses" class="bf" data="mobile mega menu black friday categories" >Dresses</a></li>
+
+    <li><a href="/newborn-clothes/shop-by-category/outfits" class="bf" data="mobile mega menu black friday categories" >2-Piece Outfits</a></li>
+
+    <li><a href="/newborn-accessories" class="bf" data="mobile mega menu black friday categories" >Accessories</a></li>
+
+    <li><a href="/newborn-tops-and-bottoms" class="bf" data="mobile mega menu black friday categories" >Bodysuits</a></li>
+
+
     {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu newborn categories" >{$cat.title}</a></li>
     {/sub_cats}
+
     <li><a class="sale" href="{$secure_html_url}sale/newborn-clothing/view-all" data="mobile mega menu newborn sale" >Sale</a></li>
-{*
-    
-*}
+
   </ul>
+
   <ul>
     <li>Shop by Collection</li>
+
     {sub_cats name="cat" category="newborn-clothes/favorites"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu newborn favorites" >{$cat.title}</a></li>
     {/sub_cats}
+    
   </ul>
 
   include "kidizen-baby.html"

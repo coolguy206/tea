@@ -2,41 +2,60 @@
   <a href="/baby-girl-clothes/new-arrivals" data="mega menu baby girl" >Baby Girl (0&#8211;4T)</a>
   <span class="line"></span>
   <div class="menu flex-menu">
+
+    {* BLACK FRIDAY *}
     <div class="panel panel-1">
       {assign var=i value=0}
-{*
+
       <ul class="category">
-        <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf">Black Friday</a></li>
+
+        <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf" >Black Friday</a></li>
+
         {sub_cats name="cat" category="black-friday/baby-girl"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
+          <li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
         {/sub_cats}
+
       </ul>
-*}
+    </div>
+
+    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+    <div class="panel panel-2">
+      {assign var=i value=0}
+
       <ul class="category first">
         <li>Shop by Category</li>
 
+        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
         {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
         {if $i && $i % 8 eq 0}
-          </ul>
-          <ul class="category">
-            <li class="spacer">Spacer</li>
+      </ul>
+    </div>
+
+    <div class="panel panel-2">
+      <ul class="category">
+        <li class="spacer">Spacer</li>
+
         {/if}
           <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby girl categories" >{$cat.title}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
+
           <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu baby girl sale" >Sale</a></li>
           <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all" >View All</a></li>
         </ul>
       </ul>
     </div>
+
     <div class="panel panel-2">
       <ul class="category">
         <li>Shop by Collection</li>
+
         include "../shop-by-collection.html"
         {*
         {sub_cats name="cat" category="baby-girl-clothes/favorites"}
           <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby girl favorites" >{$cat.title}</a></li>
         {/sub_cats}
+
         *}
       </ul>
     </div>

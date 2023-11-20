@@ -8,11 +8,12 @@ export const switchNewArrivals = (href) => {
 
   switch (href) {
     case '/girls-clothing/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.girl;
-      promo2 = urls.promo.select.girl;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.girl;
+      promo2 = urls.promo.blackFriday.girl;
       clearance = urls.promo.clearance.girl;
-      $('.promo1-url.girl').show();
+      // $('.promo1-url.girl').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -21,11 +22,12 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/boys-clothing/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.boy;
-      promo2 = urls.promo.select.boy;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.boy;
+      promo2 = urls.promo.blackFriday.boy;
       clearance = urls.promo.clearance.boy;
-      $('.promo1-url.boy').show();
+      // $('.promo1-url.boy').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -34,11 +36,12 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-girl-clothes/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.baby.girl;
-      promo2 = urls.promo.select.baby.girl;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.baby.girl;
+      promo2 = urls.promo.blackFriday.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
-      $('.promo1-url.baby-girl').show();
+      // $('.promo1-url.baby-girl').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -47,11 +50,12 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-boy-clothes/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.baby.boy;
-      promo2 = urls.promo.select.baby.boy;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.baby.boy;
+      promo2 = urls.promo.blackFriday.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
-      $('.promo1-url.baby-boy').show();
+      // $('.promo1-url.baby-boy').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -60,11 +64,12 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-girls-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.toddler.girl;
-      promo2 = urls.promo.select.toddler.girl;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.toddler.girl;
+      promo2 = urls.promo.blackFriday.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
-      $('.promo1-url.toddler-girl').show();
+      // $('.promo1-url.toddler-girl').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -73,11 +78,12 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-boys-clothes/favorites/new-arrivals':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.toddler.boy;
-      promo2 = urls.promo.select.toddler.boy;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.toddler.boy;
+      promo2 = urls.promo.blackFriday.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
-      $('.promo1-url.toddler-boy').show();
+      // $('.promo1-url.toddler-boy').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -87,24 +93,25 @@ export const switchNewArrivals = (href) => {
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      // promo1 = urls.promo.select.promo;
-      promo1 = urls.promo.select.baby.newborn;
-      promo2 = urls.promo.select.baby.newborn;
+      // promo1 = urls.promo.blackFriday.promo;
+      promo1 = urls.promo.blackFriday.baby.newborn;
+      promo2 = urls.promo.blackFriday.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
+      $('.promo1-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      $('.promo1-url').hide();
+      // $('.promo1-url').hide();
       $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
 
     case '/swim-shop':
-      promo1 = urls.promo.select.swim;
-      // promo1 = urls.promo.select.girl;
-      promo2 = urls.promo.select.girl;
+      promo1 = urls.promo.swim;
+      // promo1 = urls.promo.blackFriday.girl;
+      promo2 = urls.promo.blackFriday.girl;
       clearance = urls.promo.clearance.girl;
-      $('.promo1-url.swim').show();
+      // $('.promo1-url.swim').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();

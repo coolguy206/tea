@@ -1,6 +1,7 @@
 @import "../var.less";
-@promo2-cta1-color: #fff;
-@promo2-cta1-background: #8F4786;
+@promo2-background-color: #D05F9A;
+@promo2-cta1-color: @promo2-background-color;
+@promo2-cta1-background: #fff;
 @promo2-cta2-color: #fff;
 @promo2-cta2-background: #0D75B2;
 @promo2-cta3-color: #fff;
@@ -13,9 +14,20 @@
 @promo2-cta6-background: #E8B2AB;
 
 .promo2 {
-  @media screen and (max-width: 430px) {}
+  @media screen and (max-width: 1679px) {
+    padding: 4.4vw 0;
+  }
+
+  @media screen and (max-width: 430px) {
+    padding: 36vw 0;
+  }
+
   position: relative;
   display: flex;
+  background: @promo2-background-color;
+  min-height: auto !important;
+  padding: 2.8vw 0;
+
   // flex-wrap: wrap;
   // video {
   //   vertical-align: middle;
@@ -24,40 +36,69 @@
   div {
     &.the-content {
       @media screen and (max-width: 1024px) {}
+
       @media screen and (max-width: 810px) {}
+
       @media screen and (max-width: 430px) {
-        top: 28%;
+        top: 50%;
         width: 100%;
         left: 0;
-        transform: translateX(0%);
+        transform: translate(0, -50%);
         text-align: center;
+        display:block;
       }
+
       position: absolute;
       top: 50%;
-      transform: translate(0%, -50%);
-      // width: 13%;
-      left: 28%;
+      transform: translate(-50%, -50%);
+      width: 84%;
+      left: 50%;
+      align-items: center;
+      display: flex;
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.6vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          font-size: 7vw;
+          margin: 0 0 8vw;
+        }
+
+        font-family: @gilroybl;
+        text-transform: uppercase;
+        display: inline-block;
+        font-size: 28px;
+        margin: 0 1vw 0 0;
+        letter-spacing: 4px;
+      }
 
       div {
         @media screen and (max-width: 430px) {
-          row-gap: 21%;
-          column-gap: 6%;
-          grid-template-rows: repeat(3, 1fr);
-          grid-template-columns: repeat(2, 1fr);
+          // row-gap: 21%;
+          column-gap: 5%;
+          flex-wrap: wrap;
+          text-align: center;
+          justify-content: center;
         }
-        grid-template-rows: repeat(1, 1fr);
-        grid-template-columns: repeat(6, 1fr);
+
         // row-gap: 0;
         column-gap: 2%;
+        display:inline-flex;
       }
 
       a {
         @media screen and (max-width: 1679px) {}
+
         @media screen and (max-width: 1024px) {}
+
         @media screen and (max-width: 810px) {}
+
         @media screen and (max-width: 430px) {
-          // margin: 0 0 4%;
+          margin: 0 0 4vw;
         }
+
         color: @promo2-cta1-color;
         background: @promo2-cta1-background;
 
@@ -95,6 +136,7 @@
 
         span {
           @media screen and (max-width: 1680px) {}
+
           @media screen and (max-width: 430px) {}
         }
       }
