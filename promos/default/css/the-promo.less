@@ -3,8 +3,8 @@
 @promo1Color2: #fff;
 @promo1Color3: @promo1Color1;
 @promo1Details: #fff;
-@promo2Bg: #5C7B76;
-@promo2Color1: #F5D3CC;
+@promo2Bg: #A18CBA;
+@promo2Color1: #373A49;
 @promo2Color2: #fff;
 @promo2Color3: @promo2Color1;
 @promo3Bg: #fff0f1;
@@ -348,15 +348,39 @@ header.site-header {
 
       span {
         &.first {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
+
           color: @promo2Color1;
         }
 
         &.second {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
+
           color: @promo2Color2;
           // text-decoration: underline;
         }
 
         &.third {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
+
           color: @promo2Color3;
           text-decoration:underline;
         }
@@ -369,7 +393,7 @@ header.site-header {
 
         &.details {
           a {
-            color: @promo2Color3;
+            color: @promo1Details;
           }
         }
       }

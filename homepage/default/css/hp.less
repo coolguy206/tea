@@ -21,12 +21,14 @@
   .shop-slideshow2,
   .shop-slideshow3,
   .why-tea {
-    @media screen and (max-width: 1679px){
+    @media screen and (max-width: 1679px) {
       min-height: 58vw;
     }
-    @media screen and (max-width: 430px){
+
+    @media screen and (max-width: 430px) {
       min-height: 237vw;
     }
+
     visibility: hidden;
     min-height: 800px;
   }
@@ -36,6 +38,7 @@
     @media screen and (max-width: 430px) {
       flex-basis: 100% !important;
     }
+
     flex-basis: 50%;
   }
 
@@ -43,6 +46,7 @@
     @media screen and (max-width: 430px) {
       flex-basis: 100% !important;
     }
+
     flex-basis: 33%;
   }
 
@@ -50,6 +54,7 @@
     @media screen and (max-width: 430px) {
       flex-basis: 100% !important;
     }
+
     flex-basis: 24%;
   }
 
@@ -64,9 +69,11 @@
       font-size: 3.1vw;
       line-height: 3.6vw;
     }
+
     @media screen and (max-width: 430px) {
       font-size: 7.7vw;
     }
+
     font-family: @souv;
     font-size: 54px;
     line-height: 60px;
@@ -81,9 +88,11 @@
       font-size: 1.2vw;
       line-height: 1.6vw;
     }
+
     @media screen and (max-width: 430px) {
       font-size: 3.6vw;
     }
+
     font-family: @gilroyb;
     font-size: 18px;
     line-height: 28px;
@@ -99,6 +108,7 @@
       line-height: 1.3vw;
       // letter-spacing: 0.6vw;
     }
+
     // @media screen and (max-width: 810px) {
     //   font-size: 2.9vw;
     //   line-height: 4.1vw;
@@ -107,6 +117,7 @@
       // font-size: 4vw !important;
       // line-height: 6vw !important;
     }
+
     font-family: @souv;
     font-size: 18px;
     line-height: 22px;
@@ -114,4 +125,28 @@
     // letter-spacing: 0.01em;
     color: #FFFFFF;
   }
+
+  // @import "promos/promo1-skinny.less";
+  // @import "promos/promos-2-cell.less";
+  @import "promos/promo1.less";
+  @import "promos/promo2.less";
+  @import "promos/promo3.less";
+  // @import "c1/c1.less";
+  // @import "c1-slideshow/c1-slideshow.less";
+  // @import "c2-slideshow/c2-slideshow.less";
+  @import "c2/c2.less";
+  @import "c3/c3.less";
+  @import "c4/c4.less";
+  // @import "c5/c5.less";
+  // @import "graphics/graphics.less";
+  // @import "c6/c6.less";
+  // @import "refer-friend/refer-friend.less";
+  // @import "rewear/rewear.less";
+  @import "c7/c7.less";
+  @import "glide/glide.less";
+  @import "shop-slideshow/shop-slideshow.less";
+  @import "shop-slideshow2/shop-slideshow2.less";
+  @import "shop-slideshow3/shop-slideshow3.less";
+  @import "why-tea/why-tea.less";
+
 }

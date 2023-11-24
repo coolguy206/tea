@@ -9,6 +9,12 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
+  $("#countdown span").countdown("2023/11/25 23:59:59", function (event) {
+    $(this).text(
+      event.strftime('%D days %H:%M:%S')
+    );
+  });
+
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,

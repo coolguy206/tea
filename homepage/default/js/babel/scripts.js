@@ -9,7 +9,9 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 $(document).ready(function () {
-  // new Glide('.c1 .glide', {
+  $("#countdown span").countdown("2023/11/25 23:59:59", function (event) {
+    $(this).text(event.strftime('%D days %H:%M:%S'));
+  }); // new Glide('.c1 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 500,
@@ -17,6 +19,7 @@ $(document).ready(function () {
   //   hoverpause: true,
   //   gap: 0,
   // }).mount();
+
   new _glide["default"]('.shop-slideshow .glide', {
     type: 'carousel',
     // autoplay: 500,

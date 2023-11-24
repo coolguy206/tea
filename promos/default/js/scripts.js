@@ -1,4 +1,4 @@
-jQuery(document).ready(function() {
+jQuery(document).ready(function () {
   /*
       const first = $('.the-promo').find('.span-wrap').clone();
       const shopNow = $('.the-promo').find('.shop-now').clone();
@@ -15,6 +15,7 @@ jQuery(document).ready(function() {
       }
 
   */
+
 
   const url = window.location.pathname;
 
@@ -33,13 +34,13 @@ jQuery(document).ready(function() {
   }
 
   //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
-  if($('header.site-header .promos').length == 0) {
+  if ($('header.site-header .promos').length == 0) {
     console.log(`cloning .promos`);
     $('header.site-header').prepend($('.promos').clone());
   } else {
     console.log(`.promos already cloned`);
   }
-  
+
 
   $('.the-promo .see-details').fancybox({
     helpers: {
@@ -47,22 +48,22 @@ jQuery(document).ready(function() {
     }
   });
 
-  $('.close-fancy').click(function(e) {
+  $('.close-fancy').click(function (e) {
     // e.preventDefault();
     $.fancybox.close();
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //     auto: true,
-  //     autoHover: true,
-  //     mode: 'fade',
-  //     controls: false,
-  //     pager: false,
-  //     pause: 2500,
-  //     // onSliderLoad:function(){
-  //     //     $('.promos.promo2, .promos.promo3').show();
-  //     // }
-  // });
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 2500,
+    // onSliderLoad:function(){
+    //     $('.promos.promo2, .promos.promo3').show();
+    // }
+  });
 
 });

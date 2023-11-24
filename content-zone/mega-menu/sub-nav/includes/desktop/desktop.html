@@ -2,6 +2,10 @@
 <div class="site-nav-submenu bf">
 	<div class="bar">
 		<div>
+			<a href="/select-styles" data="mega menu">&#10024; Holiday Flash Sale &#10024;</a>
+			<span class="line"></span>
+		</div>
+		<div>
 		  <a href="/black-friday/girl" data="mega menu black friday">GIRL</a>
 		  <span class="line"></span>
 		  <div class="menu flex-menu">
@@ -18,6 +22,8 @@
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
+
+		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
 
 		        </ul>
 		      </ul>
@@ -48,6 +54,8 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
+		        <li><a href="/boys-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+
 		        </ul>
 		      </ul>
 		    </div>
@@ -77,6 +85,8 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
+		        <li><a href="/baby-girl-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+
 		        </ul>
 		      </ul>
 		    </div>
@@ -105,6 +115,8 @@
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Baby Boy':''}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
+
+		            <li><a href="/baby-boy-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
 
 		        </ul>
 		      </ul>
@@ -151,6 +163,8 @@
 
 		        <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf" data="mega menu black friday categories" >Bodysuits</a></li>
 
+		        <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+
 		        </ul>
 		      </ul>
 		    </div>
@@ -166,23 +180,21 @@
 		  <a href="/black-friday/shop-all" data="mega menu black friday">SHOP ALL</a>
 		  <span class="line"></span>
 		  <div class="menu flex-menu">
-
 		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
 		      {assign var=i value=0}
 		      <ul class="category first">
 
 		        {sub_cats name="cat" category="black-friday/shop-all"}
-		        {if $i && $i % 6 eq 0}
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2" style="flex-basis:18% !important; border:none !important">
+		        {if $i && $i % 8 eq 0}
+		          </ul>
 		          <ul class="category">
 		            <li class="spacer">Spacer</li>
 		        {/if}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
+
+		        <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
 
 		        </ul>
 		      </ul>
@@ -195,6 +207,7 @@
 		  </div>
 		</div>
 
+		
 	</div>
 </div>
 

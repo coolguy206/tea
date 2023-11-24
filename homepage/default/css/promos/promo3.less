@@ -15,25 +15,29 @@
 
 .promo3 {
   @media screen and (max-width: 1679px) {
-    padding: 4.4vw 0;
+    // padding: 4.4vw 0;
   }
 
   @media screen and (max-width: 430px) {
-    padding: 24vw 0;
+    // padding: 24vw 0;
+    flex-wrap: wrap;
   }
 
   position: relative;
   display: flex;
   min-height: auto !important;
-  background: @promo3-background;
-  padding: 2.8vw 0;
+  // background: @promo3-background;
+  // padding: 2.8vw 0;
 
   // flex-wrap: wrap;
   // video {
   //   vertical-align: middle;
   //   max-width: 100%;
   // }
+
+
   div {
+
     &.the-content {
       @media screen and (max-width: 1024px) {}
 
@@ -143,5 +147,111 @@
         }
       }
     }
+
+    &.first,
+    &.second {
+      position: relative;
+    }
+
+    &.first {
+      .the-content {
+        @media screen and (max-width: 430px){
+          width: 100%;
+          top: 63%;
+        }
+        width: 70%;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        column-gap: 4%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            font-size: 3vw;
+
+          }
+          @media screen and (max-width: 430px){
+            font-size: 7vw;
+            margin: 0 0 5vw;
+          }
+
+          color: #fff;
+          display: block;
+          margin: 0 0 1vw;
+          text-align: center;
+          font-size: 50px;
+        }
+
+        p {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.4vw;
+            line-height: 2vw;
+          }
+          @media screen and (max-width: 430px){
+            font-size: 4.5vw;
+            line-height: 6vw;
+            margin: 0 0 5vw;
+          }
+
+          color: #fff;
+          display: inline-block;
+          font-size: 24px;
+          line-height: 32px;
+          font-family: @gilroyr;
+        }
+
+        span {
+          background: #fff;
+          color: #A28CBB;
+        }
+      }
+    }
+
+    &.second {
+      @media screen and (max-width: 430px){
+        height: 57vw;
+      }
+      background: @promo3-background;
+
+      .the-content {
+        @media screen and (max-width: 430px){
+          top: 54%;
+        }
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        top: 49%;
+
+        h2 {
+          @media screen and (max-width: 1679px) {
+            font-size: 3vw;
+
+          }
+          @media screen and (max-width: 430px){
+            font-size: 7vw;
+            margin: 0 0 7vw;
+          }
+          margin: 0 0 2vw 0;
+          font-size: 50px;
+        }
+
+        div {
+          @media screen and (max-width: 430px){
+            flex-wrap: wrap;
+            justify-content: center;
+            column-gap: 4%;
+          }
+          display: flex;
+
+          a {
+            @media screen and (max-width: 430px){
+              margin: 0 0 4vw;
+            }
+          }
+        }
+      }
+    }
+
+
   }
 }
