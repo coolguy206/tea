@@ -4,17 +4,18 @@
 	<div class="menu flex-menu">
 
 		{* BLACK FRIDAY *}
+		{*
 		<div class="panel panel-1">
 			{assign var=i value=0}
 
 			<ul class="category-sale">
-{*				
+			
 				<li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 
 				{sub_cats name="cat" category="black-friday/newborn"}
 					<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 				{/sub_cats}
-*}
+
 
 				<li><a href="/newborn-clothing" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 				<li><a href="/newborn-clothes/shop-by-category/rompers" class="bf" data="mega menu black friday categories" >Rompers</a></li>
@@ -24,9 +25,10 @@
 				<li><a href="/newborn-tops-and-bottoms" class="bf" data="mega menu black friday categories" >Bodysuits</a></li>
 			</ul>
 		</div>
+		*}
 
 		{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		<div class="panel panel-2">
+		<div class="panel panel-1">
 			{assign var=i value=0}
 
 			<ul class="category-sale">

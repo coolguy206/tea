@@ -66,8 +66,9 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
 $(document).ready(function () {
-  $("#countdown span").countdown("2023/11/25 23:59:59", function (event) {
-    $(this).text(event.strftime('%D days %H:%M:%S'));
+  //? COUNTDOWN.JS
+  $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
+    $(this).text(event.strftime('%-D days %H:%M:%S'));
   }); // new Glide('.c1 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
@@ -90,35 +91,35 @@ $(document).ready(function () {
         perSwipe: '|'
       }
     }
-  }).mount();
-  new _glide["default"]('.shop-slideshow2 .glide', {
-    type: 'carousel',
-    // autoplay: 500,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
-  new _glide["default"]('.shop-slideshow3 .glide', {
-    type: 'carousel',
-    // autoplay: 500,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount(); // new Glide('.c2 .glide', {
+  }).mount(); // new Glide('.shop-slideshow2 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 500,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
+  // new Glide('.shop-slideshow3 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 500,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
+  // new Glide('.c2 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 500,

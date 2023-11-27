@@ -1,4 +1,5 @@
 
+{*
 <div class="site-nav-submenu bf">
 	<div class="bar">
 		<div>
@@ -136,12 +137,10 @@
 		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
 		      {assign var=i value=0}
 		      <ul class="category first">
-		        {*
+		        
 		        <li>Shop by Category</li>
 		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
-		        *}
-
-		        {*
+		        
 		        {sub_cats name="cat" category="black-friday/newborn"}
 		        {if $i && $i % 8 eq 0}
 		          </ul>
@@ -151,7 +150,7 @@
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
-		        *}
+		        
 
 		        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mega menu black friday categories" >Rompers</a></li>
 
@@ -210,6 +209,7 @@
 		
 	</div>
 </div>
+*}
 
 
 <div class="site-nav-submenu new-arrivals">
@@ -226,7 +226,7 @@
 	</div>
 </div>
 
-{*
+
 <div class="site-nav-submenu special-occasion">
 	<div class="bar">
 		<!-- 
@@ -287,55 +287,6 @@
 		</div>
 	</div>
 </div>
-*}
-
-
-{*
-<div class="site-nav-submenu swim">
-	<div class="bar">
-		<div>
-		  <a href="/swim-shop" data="mega menu Swim">Swim</a>
-		  <span class="line"></span>
-
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
-
-		      <ul class="category first">
-		        <li>Shop by Department</li>
-		        <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
-		        <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
-		        <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
-		        <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
-		        <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
-		        <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
-		        <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Category</li>
-		        <!-- include "../shop-by-collection.html" -->
-		        
-		        {sub_cats name="cat" category="swim-shop/shop-by-category"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu swim">{$cat.title}</a></li>
-		        {/sub_cats}
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-
-		  </div>
-		</div>
-
-	</div>
-</div>
-*}
 
 
 <div class="site-nav-submenu girl">
@@ -346,6 +297,7 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -359,9 +311,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -455,6 +408,7 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -468,9 +422,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -558,6 +513,7 @@
 	</div>
 </div>
 
+
 <div class="site-nav-submenu boy">
 	<div class="bar">
 		<div>
@@ -566,6 +522,7 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -579,9 +536,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -675,6 +633,7 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -687,9 +646,10 @@
 		        {/sub_cats}
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -780,6 +740,7 @@
 	</div>
 </div>
 
+
 <div class="site-nav-submenu baby">
 	<div class="bar">
 		<div>
@@ -788,6 +749,7 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -801,9 +763,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -897,6 +860,7 @@
 		  <div class="menu flex-menu">
 		    
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
@@ -910,9 +874,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -1009,17 +974,18 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
+		    {*
 		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category">
-		{*        
+		      
 		        <li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf" >Black Friday</a></li>
 		        
 		        {sub_cats name="cat" category="black-friday/newborn"}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 		        {/sub_cats}
-		*}
+
 
 		        <li><a href="/newborn-clothing" data="mega menu black friday categories" class="bf" >Black Friday</a></li>
 
@@ -1035,9 +1001,10 @@
 
 		      </ul>
 		    </div>
+		    *}
 
 		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -1096,6 +1063,7 @@
 
 	</div>
 </div>
+
 
 <div class="site-nav-submenu dress">
 	<div class="bar">
@@ -1169,6 +1137,7 @@
 	</div>
 </div>
 
+
 <div class="site-nav-submenu tees">
 	<div class="bar">
 		{*
@@ -1189,39 +1158,6 @@
 	</div>
 </div>
 
-<div class="site-nav-submenu shorts">
-	<div class="bar">
-		{*
-		{sub_cats name="cat" category="tee-shop"}
-		<div>
-		  <a href="{$cat.url}" data="mega menu tees">{$cat.title}</a>
-		  <span class="line"></span>
-		</div>
-		{/sub_cats}
-		*}
-
-		<div>
-		  <a href="/girls-shorts" data="mega menu shorts">Girl</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/boys-shorts" data="mega menu shorts">Boy</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-girl-shorts" data="mega menu shorts">Baby Girl</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-boy-shorts" data="mega menu shorts">Baby Boy</a>
-		  <span class="line"></span>
-		</div>
-
-	</div>
-</div>
 
 <div class="site-nav-submenu pjs">
 	<div class="bar">
@@ -1240,6 +1176,7 @@
 
 	</div>
 </div>
+
 
 <div class="site-nav-submenu family">
 	<div class="bar">
@@ -1329,7 +1266,6 @@
 </div>
 
 
-
 <div class="site-nav-submenu sale">
 	<div class="bar">
 
@@ -1340,6 +1276,7 @@
 					<div class="menu flex-menu">
 
 						{* BLACK FRIDAY *}
+						{*
 						<div class="panel panel-1">
 							{assign var=i value=0}
 
@@ -1353,9 +1290,10 @@
 
 								</ul>
 							</div>
+							*}
 
 						{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-						<div class="panel panel-2">
+						<div class="panel panel-1">
 							{assign var=i value=0}
 
 
@@ -1406,6 +1344,7 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
@@ -1418,9 +1357,10 @@
 							{/sub_cats}
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1472,6 +1412,7 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
@@ -1484,9 +1425,10 @@
 							{/sub_cats}
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1536,6 +1478,7 @@
 			<div class="menu flex-menu">
 				
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
@@ -1549,9 +1492,10 @@
 
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1601,6 +1545,7 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
@@ -1614,9 +1559,10 @@
 
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1665,6 +1611,7 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
@@ -1677,9 +1624,10 @@
 							{/sub_cats}
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1729,17 +1677,18 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
+				{*
 				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
-		{*				
+					
 						<li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 
 						{sub_cats name="cat" category="black-friday/newborn"}
 							<li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mega menu black friday categories">{$cat.title|replace:'Newborn':''}</a></li>
 						{/sub_cats}
-		*}
+
 
 						<li><a href="/newborn-clothing" data="mega menu black friday categories" class="bf">Black Friday</a></li>
 						<li><a href="/newborn-clothes/shop-by-category/rompers" class="bf" data="mega menu black friday categories" >Rompers</a></li>
@@ -1749,9 +1698,10 @@
 						<li><a href="/newborn-tops-and-bottoms" class="bf" data="mega menu black friday categories" >Bodysuits</a></li>
 					</ul>
 				</div>
+				*}
 
 				{* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1835,3 +1785,85 @@
 
 	</div>
 </div>
+
+
+{*
+<div class="site-nav-submenu swim">
+	<div class="bar">
+		<div>
+		  <a href="/swim-shop" data="mega menu Swim">Swim</a>
+		  <span class="line"></span>
+
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      {assign var=i value=0}
+
+		      <ul class="category first">
+		        <li>Shop by Department</li>
+		        <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
+		        <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
+		        <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
+		        <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
+		        <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
+		        <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
+		        <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Shop by Category</li>
+		        <!-- include "../shop-by-collection.html" -->
+		        
+		        {sub_cats name="cat" category="swim-shop/shop-by-category"}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu swim">{$cat.title}</a></li>
+		        {/sub_cats}
+		        
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-3">
+		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
+		    </div>
+
+
+		  </div>
+		</div>
+
+	</div>
+</div>
+	
+<div class="site-nav-submenu shorts">
+	<div class="bar">
+
+		{sub_cats name="cat" category="tee-shop"}
+		<div>
+		  <a href="{$cat.url}" data="mega menu tees">{$cat.title}</a>
+		  <span class="line"></span>
+		</div>
+		{/sub_cats}
+
+
+		<div>
+		  <a href="/girls-shorts" data="mega menu shorts">Girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/boys-shorts" data="mega menu shorts">Boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-girl-shorts" data="mega menu shorts">Baby Girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-boy-shorts" data="mega menu shorts">Baby Boy</a>
+		  <span class="line"></span>
+		</div>
+
+	</div>
+</div>
+*}

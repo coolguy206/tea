@@ -6,8 +6,8 @@ const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
 const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-slideshow/pdp.js`;
-const writePath = `${basePath}/dev/shop-slideshow/`;
+const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
+const writePath = `${basePath}/dev/c5/pdps/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -45,8 +45,7 @@ pdps.pdps.map((pdpURL, index) => {
         // console.log(imgSrc);
 
         var price = $('span[itemprop=price]').text();
-        var strike = $('#store_price strike')[0].outerHTML;
-        // console.log(strike);
+        // console.log(price);
 
         var sizesArr = [];
 
@@ -77,26 +76,6 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var priceElem = ``;
-        if(strike !== undefined){
-            // console.log(`strike`);
-            priceElem = `
-            <div class="price-wrap">
-                <div class="price">
-                    ${strike}
-                    <span id="store_price" class="price">$${price}</span>
-                </div>
-            </div>`;
-        } else {
-            // console.log(`no strike`);
-            priceElem = `
-            <div class="price-wrap">
-                <div class="price">
-                    <span id="store_price" class="price">$${price}</span>
-                </div>
-            </div>`;
-        }
-
         var elem = `<li>
             <div class="thumb-grid item">
                 <span class="img">
@@ -116,7 +95,11 @@ pdps.pdps.map((pdpURL, index) => {
                         <span class="model">${title}</span>
                     </a>
         
-                    ${priceElem}
+                    <div class="price-wrap">
+                        <div class="price">
+                            <span id="store_price" class="price">$${price}</span>
+                        </div>
+                    </div>
         
                     <p class="size">
                         <span class="thumb-sizes" title="${sizesStr}">

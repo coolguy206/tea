@@ -28,8 +28,8 @@ jQuery(document).ready(function () {
     // $('.header-banner').css('max-width', '100%');
     // $('.free-shipping-150').css('position', 'relative');
     // $('.free-shipping-150').show();
-    $('.promos .the-promo.promo1').css('background', '#E493CD');
-    $('.promos .the-promo.promo1 span.first, .promos .the-promo.promo1 span.third').css('color', '#373A49');
+    // $('.promos .the-promo.promo1').css('background', '#E493CD');
+    // $('.promos .the-promo.promo1 span.first, .promos .the-promo.promo1 span.third').css('color', '#373A49');
 
   }
 
@@ -54,16 +54,16 @@ jQuery(document).ready(function () {
 
   });
 
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2500,
-    // onSliderLoad:function(){
-    //     $('.promos.promo2, .promos.promo3').show();
-    // }
-  });
+  // $('.promos-wrap').bxSlider({
+  //   auto: true,
+  //   autoHover: true,
+  //   mode: 'fade',
+  //   controls: false,
+  //   pager: false,
+  //   pause: 2500,
+  //   // onSliderLoad:function(){
+  //   //     $('.promos.promo2, .promos.promo3').show();
+  //   // }
+  // });
 
 });

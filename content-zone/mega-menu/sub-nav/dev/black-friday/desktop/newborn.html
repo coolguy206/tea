@@ -5,12 +5,10 @@
     <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
       {assign var=i value=0}
       <ul class="category first">
-        {*
+        
         <li>Shop by Category</li>
         <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
-        *}
-
-        {*
+        
         {sub_cats name="cat" category="black-friday/newborn"}
         {if $i && $i % 8 eq 0}
           </ul>
@@ -20,7 +18,7 @@
           <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
-        *}
+        
 
         <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mega menu black friday categories" >Rompers</a></li>
 
