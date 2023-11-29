@@ -1,8 +1,8 @@
 const pdps = [
-    `https://www.teacollection.com/product/23w12303/ruffle-shoulder-ballet-dress.html#vintage%20french%20flowers`,
-    `https://www.teacollection.com/product/22w12301/ruffle-shoulder-ballet-dress.html#hanetsuki%20camellia`,
-    `https://www.teacollection.com/product/23f12329/skirted-ballet-dress.html#perfume%20jasmine`,
-    `https://www.teacollection.com/product/23w12313/velour-ballet-dress.html#ink`,
+    `https://www.teacollection.com/product/23w12138/heart-flowers-graphic-top.html#secret%20garden`,
+    `https://www.teacollection.com/product/23w12701/goodnight-pajama-set.html#heartburst`,
+    `https://www.teacollection.com/product/23w11106/full-of-heart-long-cardigan.html#full%20of%20heart`,
+    `https://www.teacollection.com/product/23w22134/puppy-love-graphic-tee.html#scarlet`,
 ];
 
 exports.pdps = pdps;

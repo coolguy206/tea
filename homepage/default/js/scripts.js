@@ -10,20 +10,20 @@ import Glide from '@glidejs/glide'
 $(document).ready(function () {
 
   //? COUNTDOWN.JS
-  $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
-    $(this).text(
-      event.strftime('%-D days %H:%M:%S')
-    );
-  });
+  // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-D days %H:%M:%S')
+  //   );
+  // });
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  // }).mount();
+  new Glide('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+  }).mount();
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',
@@ -70,14 +70,14 @@ $(document).ready(function () {
   //   }
   // }).mount();
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  new Glide('.c2 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',

@@ -76,7 +76,7 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var elem = `<li>
+        var elem = `
             <div class="thumb-grid item">
                 <span class="img">
                     <a href="${url}"
@@ -109,7 +109,7 @@ pdps.pdps.map((pdpURL, index) => {
         
                 </div>
             </div>
-        </li>`;
+        `;
 
 
         // var elem = `<img data-set="${imgSrc}" alt="${title}">`;

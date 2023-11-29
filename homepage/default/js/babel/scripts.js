@@ -10,17 +10,19 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 
 $(document).ready(function () {
   //? COUNTDOWN.JS
-  $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
-    $(this).text(event.strftime('%-D days %H:%M:%S'));
-  }); // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  // }).mount();
-
+  // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-D days %H:%M:%S')
+  //   );
+  // });
+  new _glide["default"]('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount();
   new _glide["default"]('.shop-slideshow .glide', {
     type: 'carousel',
     // autoplay: 500,
@@ -62,15 +64,15 @@ $(document).ready(function () {
   //     },
   //   }
   // }).mount();
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
-  // new Glide('.c6 .glide', {
+
+  new _glide["default"]('.c2 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount(); // new Glide('.c6 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 2000,
