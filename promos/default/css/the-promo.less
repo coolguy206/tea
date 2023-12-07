@@ -3,14 +3,14 @@
 @promo1Color2: #fff;
 @promo1Color3: #fff;
 @promo1Details: #fff;
-@promo2Bg: #4A556B;
+@promo2Bg: #4A556B;;
 @promo2Color1: #fff;
 @promo2Color2: #ACD0DB;
 @promo2Color3: #fff;
-@promo3Bg: #fff0f1;
-@promo3Color1: #f66d67;
-@promo3Color2: #d0a052;
-@promo3Color3: #f66d67;
+@promo3Bg: #98434E;
+@promo3Color1: #fff;
+@promo3Color2: #EEC0D5;
+@promo3Color3: #ffff;
 
 .header-banner.homepage {
   max-width: 100%;
@@ -404,11 +404,38 @@ header.site-header {
 
       span {
         &.first {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
           color: @promo3Color1;
         }
 
         &.second {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
           color: @promo3Color2;
+        }
+
+        &.third {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.2vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 2.8vw;
+          }
+
+          color: @promo3Color3;
+          text-decoration:underline;
         }
 
         &.shop-now {
@@ -419,7 +446,7 @@ header.site-header {
 
         &.details {
           a {
-            color: @promo3Color3;
+            color: @promo1Details;
           }
         }
       }
