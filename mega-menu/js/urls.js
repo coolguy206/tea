@@ -1,6 +1,6 @@
 export const urls = {
   promo: {
-    promo: `/valentines-day-print-shop`,
+    promo: `/free-gift-wrap`,
     swim: `/swimwear`,
     girl: `/girls-clothes`,
     boy: `/boys-clothes`,
