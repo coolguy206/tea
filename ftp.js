@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2023/1212/v0/`;
+var category = `promos/one-offs/2023/1215/v1/`;
 // var category = `homepage/2023/1129/v0/`;
 // var category = `landing-pages/valentines-day-shop/2023/1129/v0/`;
 // var category = `mega-menu/2023/1129/v0/`;
@@ -16,12 +16,12 @@ var category = `promos/one-offs/2023/1212/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1212/04 Handoff/Site/`;
+var readFilePath = `Site/1215/04 Handoff/Site/headers/`;
 // var readFilePath = `handoff/landing-pages/gift-shop/110223 Gift Guide LP/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/1212/`;
-// var writeFilePath = `promos/headers/dev/images/promo/valentines-day-shop/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/1215/`;
+var writeFilePath = `promos/headers/dev/images/pajamas/`;
 // var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/`;
 // var writeFilePath = `mega-menu/dev/images/`;
