@@ -6,8 +6,8 @@ const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
 const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
-const writePath = `${basePath}/dev/c5/pdps/`;
+const pdpPath = `./${basePath}/js/shop-slideshow/pdp.js`;
+const writePath = `${basePath}/dev/shop-slideshow/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -40,6 +40,15 @@ pdps.pdps.map((pdpURL, index) => {
         }
 
         // console.log(color);
+
+        var redText = $(`.promo-teaser`).text();
+        console.log(`red text`);
+        console.log(redText);
+        if(redText == "" || redText == undefined){
+            redtText = "";
+        } else {
+            redText = `<span class="promo-teaser-thumb">${redText}</span>`;
+        }
 
         var imgSrc = $('.product-main-image.js-product-main-image').attr('src');
         // console.log(imgSrc);
@@ -76,7 +85,7 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var elem = `
+        var elem = `<li>
             <div class="thumb-grid item">
                 <span class="img">
                     <a href="${url}"
@@ -106,9 +115,11 @@ pdps.pdps.map((pdpURL, index) => {
                             Sizes ${sizesArr[0]} to ${sizesArr[sizesArr.length - 1]}
                         </span>
                     </p>
+                    ${redText}
         
                 </div>
             </div>
+        </li>
         `;
 
 

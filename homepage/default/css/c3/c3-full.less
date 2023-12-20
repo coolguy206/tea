@@ -1,0 +1,112 @@
+@import "../var.less";
+@c3-font-color: #fff;
+@c3-cta-color: #fff;
+@c3-cta-background: #3B5F7A;
+
+
+.c3 {
+    @media screen and (max-width: 430px) {
+        flex-wrap: wrap;
+        // background: #E8C3CA;
+        padding: 0;
+    }
+
+    padding: 0;
+    text-align: center;
+    position:relative;
+
+    // flex-wrap: wrap;
+    div {
+        @media screen and (max-width:1679px) {
+            padding: 1vw;
+        }
+        @media screen and (max-width:430px) {
+            padding: 0;
+        }
+
+        text-align: center;
+        box-sizing: border-box;
+        flex-basis: 34%;
+        // flex-basis: 50%;
+        padding: 0 1vw;
+        position: relative;
+
+        a {
+            text-decoration: none;
+        }
+
+        h2 {
+            @media screen and (max-width: 1679px) {
+                font-size: 11vw;
+                // line-height: 4vw;
+            }
+
+            @media screen and (max-width:430px) {
+                font-size: 25vw;
+                color: @c3-cta-background;
+                // line-height: 10.5vw;
+            }
+
+            font-family: @kindnesss;
+            font-size: 180px;
+            text-transform: uppercase;
+            // line-height: normal;
+            // letter-spacing: 0.1rem;
+            color: @c3-font-color;
+            margin: 0 0 12%;
+            // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+            // text-align:left;
+        }
+
+        &.the-content {
+            @media screen and (max-width: 430px) {
+                width: 100%;
+                // margin: 10% 0 0 !important;
+                top: 59%;
+            }
+
+            margin: 0;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            width: auto;
+
+            h2 {
+                @media screen and (max-width: 1679px) {}
+
+                @media screen and (max-width:430px) {}
+            }
+
+            div {
+                @media screen and (max-width: 430px) {
+                    // display: flex;
+                    // flex-wrap: wrap;
+                    // justify-content: center;
+                    // margin: 110% 0 0;
+                }
+
+                @media screen and (max-width: 376px) {
+                    // margin: 92% 0 0;
+                }
+
+                margin: 0;
+
+                a {
+                    @media screen and (max-width:1679px) {
+                        width: 19vw;
+                    }
+
+                    @media screen and(max-width: 430px) {
+                        width: 55vw;
+                    }
+
+                    background: @c3-cta-background;
+                    color: @c3-cta-color;   
+                    width: 323px;
+                }
+            }
+        }
+
+    }
+}

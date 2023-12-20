@@ -1,0 +1,118 @@
+@import "../var.less";
+@c4-h2-font-color: #47363D;
+@c4-h2-font-color-430: #fff;
+@c4-font-color: #47363D;
+@c4-cta-color: #fff;
+@c4-cta-background: #BD9251;
+
+.c4 {
+    @media screen and (max-width: 430px) {
+        padding: 0;
+        // background: @background;
+    }
+
+    // text-align: center;
+    position:relative;
+    min-height: auto !important;
+    // flex-wrap: wrap;
+    // background: #FDF5F2;
+
+    div {
+
+        @media screen and (max-width:1679px) {
+            padding: 2vw 1vw 1vw;
+        }
+
+        @media screen and (max-width:430px) {
+            padding: 0;
+        }
+
+        overflow: hidden;
+        padding:0;
+        position: relative;
+
+        a {
+            text-decoration: none;
+        }
+
+        .the-content {
+            @media screen and (max-width:430px) {
+                width: 100%;
+                left: 0;
+                text-align: center;
+                top: 0;
+                transform: translate(0);
+            }
+
+            // margin: 7% 0 0;
+            text-align: left;
+            width: auto;
+            left: 6%;
+            top: 43%;
+
+            h3 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.1vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 4vw;
+                    color: @c4-h2-font-color-430;
+                    margin: 0;
+                    text-align: center;
+                }
+
+                color: @c4-h2-font-color;
+                // margin:0;
+                text-align:left;
+            }
+
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 5vw;
+                    // margin: 2vw 0;
+                    line-height: 5vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 12vw;
+                    line-height: 15vw;
+                    margin: 0 0 132vw;
+                    text-align: center;
+                    color: @c4-h2-font-color-430;
+                }
+
+                font-family: @souv;
+                font-size: 80px;
+                line-height: 80px;
+                color: @c4-h2-font-color;
+                text-align: left;
+                margin:0 0 8%;
+
+            }
+
+            div {
+                // grid-template-rows: repeat(1, 1fr);
+                text-align: center;
+
+                a {
+                    @media screen and (max-width:1679px) {
+                        width: 20vw;
+                    }
+
+                    @media screen and (max-width:430px) {
+                        width: 77vw;
+                    }
+
+                    background: @c4-cta-background;
+                    color: @c4-cta-color;
+                    width: 342px;
+
+                }
+            }
+        }
+
+
+    }
+}
