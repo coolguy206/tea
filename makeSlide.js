@@ -6,8 +6,8 @@ const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
 const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-slideshow/pdp.js`;
-const writePath = `${basePath}/dev/shop-slideshow/`;
+const pdpPath = `./${basePath}/js/shop-slideshow-3/pdp.js`;
+const writePath = `${basePath}/dev/shop-slideshow3/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
