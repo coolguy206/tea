@@ -16,14 +16,14 @@ $(document).ready(function () {
   //   );
   // });
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  // }).mount();
+  new Glide('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+  }).mount();
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',
