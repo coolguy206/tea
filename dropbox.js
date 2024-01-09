@@ -16,12 +16,12 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Promotions/12 December/122023 End of Season Sale/04 Handoff/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Site/112923 Winter 3 HP/handoff/cat header/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/010724 Resort HP/03 Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2023/Campaign/021323 Spread The Love Giveaway/04 Handoff/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0103/headers/`;
+  var writeFilePath = `Site/0109-v2/`;
   // var writeFilePath = `handoff/landing-pages/gift-shop/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);

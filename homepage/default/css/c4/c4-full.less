@@ -1,9 +1,9 @@
 @import "../var.less";
-@c4-h2-font-color: #47363D;
+@c4-h2-font-color: #fff;
 @c4-h2-font-color-430: #fff;
 @c4-font-color: #47363D;
-@c4-cta-color: #fff;
-@c4-cta-background: #BD9251;
+@c4-cta-color: #2967B0;
+@c4-cta-background: #fff;
 
 .c4 {
     @media screen and (max-width: 430px) {
@@ -40,15 +40,17 @@
                 width: 100%;
                 left: 0;
                 text-align: center;
-                top: 0;
+                top: 5vw;
                 transform: translate(0);
             }
 
             // margin: 7% 0 0;
             text-align: left;
             width: auto;
-            left: 6%;
-            top: 43%;
+            left: 65%;
+            top: 50%;
+            transform: translate(0, -50%);
+            position:absolute;
 
             h3 {
                 @media screen and (max-width: 1679px) {
@@ -78,16 +80,16 @@
                 @media screen and (max-width: 430px) {
                     font-size: 12vw;
                     line-height: 15vw;
-                    margin: 0 0 132vw;
+                    margin: 0 0 147vw;
                     text-align: center;
                     color: @c4-h2-font-color-430;
                 }
 
-                font-family: @souv;
+                font-family: @gilroyb;
                 font-size: 80px;
                 line-height: 80px;
                 color: @c4-h2-font-color;
-                text-align: left;
+                text-align: center;
                 margin:0 0 8%;
 
             }
@@ -107,7 +109,7 @@
 
                     background: @c4-cta-background;
                     color: @c4-cta-color;
-                    width: 342px;
+                    width: 308px;
 
                 }
             }

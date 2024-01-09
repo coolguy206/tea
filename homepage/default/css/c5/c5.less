@@ -1,7 +1,7 @@
 @import "../var.less";
 @c5-first-font-color: #fff;
 @c5-first-cta-color: #fff;
-@c5-first-cta-background: #A36452;
+@c5-first-cta-background: #F34F5D;
 @c5-second-font-color: #fff;
 @c5-second-cta-color: #fff;
 @c5-second-cta-background: #2CAC96;
@@ -114,26 +114,44 @@
         }
 
         @media screen and (max-width: 430px) {
-          left: 0;
+          // left: 0;
           width: 100%;
           bottom: 10%;
           text-align: center;
         }
 
-        bottom: 19%;
-        width: auto;
-        text-align: left;
-        left: 12%;
+        bottom: 16%;
+        // width: auto;
+        text-align: center;
+        left: 50%;
+        transform: translate(-50%, 0);
+
+        img {
+          @media screen and (max-width:1679px) {
+            width: 37vw;
+          }
+          @media screen and (max-width: 430px) {
+            width: 70vw;
+          }
+          width: 607px;
+        }
 
         div {
+          @media screen and (max-width: 430px) {
+            margin: 4vw 0 0;
+          }
+          margin: 1vw 0 0;
+
           a {
             @media screen and (max-width:1679px) {
               width: 19vw;
             }
+
             @media screen and (max-width:430px) {
               width: 73vw;
             }
-            width: 313px;
+
+            width: 213px;
             color: @c5-first-cta-color;
             background: @c5-first-cta-background;
           }
@@ -159,6 +177,7 @@
           @media screen and (max-width: 821px) {
             width: 73%;
           }
+
           @media screen and (max-width: 430px) {
             width: 100%;
           }

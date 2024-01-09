@@ -11,7 +11,7 @@
     top: @c1-promo-2-top;
     left: @c1-promo-2-left;
     width: auto;
-    transform: translate(-50%, -50%);
+    transform: @c1-promo-2-transform;
     text-align: center;
 
     h3 {
@@ -25,19 +25,30 @@
     h2 {
         @media screen and (max-width: 430px){
             color: @c1-promo-2-h2-color-431;
+            font-size: 11vw !important;
+            line-height: 11vw !important;
         }
         color: @c1-promo-2-h2-color;
         text-align: center;
+        font-family: @c1-promo-2-h2-font-family;
     }
 
     p {
         text-align: center;
-        margin: 8% auto;
+        margin: 4% auto;
     }
 
     div {
         @media screen and (max-width: 430px){
             // top: @c1-promo-2-top-431;
+        }
+
+        &.the-flex {
+            @media screen and (max-width: 430px){
+                top: @c1-promo-2-top-431;
+            }
+            margin: 0 auto;
+            width: 55%;
         }
         
         a {
