@@ -46,7 +46,7 @@ export const urls = {
       baby: {
         girl: `/baby-girl-clothes/favorites/limited-time-sale`,
         boy: `/baby-boy-clothes/favorites/limited-time-sale`,
-        newborn: `/sale/newborn-clothing/select-styles`,
+        newborn: `/newborn-clothes/favorites/limited-time-sale`,
       },
       toddler: {
         girl: `/select-styles/toddler-girls-clothes/favorites/limited-time-sale`,

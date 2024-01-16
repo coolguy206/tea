@@ -6,7 +6,7 @@
         // padding: 12% 0;
     }
 
-    // background: #FDF5F2;
+   
     // padding: 4% 0 0;
     // display: flex;
 
@@ -52,6 +52,9 @@
         @media screen and (max-width: 430px) {
             // width: 100%;
             flex-wrap: wrap;
+            padding: 12vw 0;
+            row-gap: 7vw;
+            column-gap: 0;
 
             //4 ITEMS IN THE ROW
             // justify-content: space-evenly;
@@ -64,6 +67,10 @@
         left:0;
         transform: translate(0);
         display: flex;
+        background: #E3EFA3;
+        padding: 3.8vw 0;
+        column-gap: 2vw;
+        justify-content: center;
         // margin: 2vw 0 0;
 
         a {
@@ -72,8 +79,9 @@
                 flex-basis: 50%;
                 // padding: 2.5%;
                 padding: 0;
-                margin: 0 0 3vw;
+                // margin: 0 0 3vw;
                 align-self: center;
+                text-align:center;
                 // margin: 0 0 .1%;
 
                 // 5 ITEMS IN THE ROW
@@ -89,12 +97,16 @@
             // flex-basis: 20%;
 
             position: relative;
-            padding: 0 .7%;
+            // padding: 0 .7%;
 
             img {
-                @media screen and (max-width:430px) {
-                    width: 94%;
+                @media screen and (max-width:1679px) {
+                    width: 11.5vw;
                 }
+                @media screen and (max-width:430px) {
+                    width: 89%;
+                }
+                width: 192px;
             }
 
             &.cta1,
@@ -131,18 +143,22 @@
             }
 
             .the-cta {
-                position: absolute;
+                @media screen and (max-width: 430px) {
+                    margin: 5vw 0 0;
+                }
+                // position: absolute;
                 bottom: 10%;
                 width: 100%;
                 text-align: center;
+                margin: 1vw 0 0;
 
                 span {
                     @media screen and (max-width: 430px) {
                         // width: 45vw;
                     }
 
-                    color: #fff;
-                    background: #006A6D;
+                    color: #E3EFA3;
+                    background: #2C8082;
                 }
             }
         }

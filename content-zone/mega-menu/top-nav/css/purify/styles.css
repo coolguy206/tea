@@ -2,6 +2,10 @@
   color: #D05F9A !important;
 }
 
+.dept-warehouse a {
+  color: #FF1744 !important;
+}
+
 .dept-clearance a,.dept-sale a {
   color: #FF1744 !important;
 }

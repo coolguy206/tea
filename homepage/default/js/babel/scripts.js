@@ -15,14 +15,14 @@ $(document).ready(function () {
   //     event.strftime('%-D days %H:%M:%S')
   //   );
   // });
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  // }).mount();
   new _glide["default"]('.shop-slideshow .glide', {
     type: 'carousel',
     // autoplay: 500,

@@ -1,9 +1,9 @@
 @import "../var.less";
-@promo2-background-color: #D05F9A;
-@promo2-cta1-color: @promo2-background-color;
-@promo2-cta1-background: #fff;
-@promo2-cta2-color: #fff;
-@promo2-cta2-background: #0D75B2;
+@promo2-background-color: #E3F0A3;
+@promo2-cta1-color: #E3EFA3;
+@promo2-cta1-background: #2C8082;
+@promo2-cta2-color: #E3EFA3;
+@promo2-cta2-background: #2C8082;
 @promo2-cta3-color: #fff;
 @promo2-cta3-background: #D05E99;
 @promo2-cta4-color: #fff;
@@ -15,18 +15,18 @@
 
 .promo2 {
   @media screen and (max-width: 1679px) {
-    padding: 4.4vw 0;
+    padding: 8.4vw 0;
   }
 
   @media screen and (max-width: 430px) {
-    padding: 36vw 0;
+    padding: 124vw 0;
   }
 
   position: relative;
-  display: flex;
+  // display: flex;
   background: @promo2-background-color;
   min-height: auto !important;
-  padding: 2.8vw 0;
+  padding: 5.5vw 0;
 
   // flex-wrap: wrap;
   // video {
@@ -45,16 +45,21 @@
         left: 0;
         transform: translate(0, -50%);
         text-align: center;
-        display:block;
+        flex-wrap:wrap;
+        row-gap: 15vw;
+        column-gap:0;
+        // display: block;
       }
 
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 84%;
+      width: 99%;
       left: 50%;
       align-items: center;
+      text-align:center;
       display: flex;
+      column-gap: 1vw;
 
       h2 {
         @media screen and (max-width: 1679px) {
@@ -96,11 +101,20 @@
         @media screen and (max-width: 810px) {}
 
         @media screen and (max-width: 430px) {
-          margin: 0 0 4vw;
+          // margin: 0 0 4vw;
         }
 
-        color: @promo2-cta1-color;
-        background: @promo2-cta1-background;
+        // color: @promo2-cta1-color;
+        // background: @promo2-cta1-background;
+
+        span {
+          @media screen and (max-width: 430px) {
+            margin: 8vw 0 0;
+          }
+          color: @promo2-cta1-color;
+          background: @promo2-cta1-background;
+          margin: 1vw 0 0;
+        }
 
         &:hover {}
 
