@@ -16,13 +16,13 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/01 January/011124 Warehouse Sale/04 handoff/Site/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/010724 Resort HP/03 Handoff/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/011724 Go Anywhere Giveaway/04 Handoff/Site/`
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/011824 Swim HP/handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/011724 Go Anywhere Giveaway/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  // var writeFilePath = `Site/0111/`;
-  var writeFilePath = `handoff/landing-pages/go-anywhere/`;
+  var writeFilePath = `Site/0117/`;
+  // var writeFilePath = `handoff/landing-pages/go-anywhere/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

@@ -60,20 +60,24 @@
     .the-content.swim {
         @media screen and (max-width: 430px) {
             // width: 100%;
-            flex-wrap:wrap;
-            
+            flex-wrap: wrap;
+
             //4 ITEMS IN THE ROW
             justify-content: space-evenly;
+
+            column-gap: 3vw;
+            row-gap: 3vw;
         }
 
         top:0;
         width:100%;
         left:0;
         transform: translate(0);
+
         // display: flex;
 
         a {
-            @media screen and (max-width:430px){
+            @media screen and (max-width:430px) {
                 //4 ITEMS IN THE ROW
                 flex-basis: 33%;
                 padding: 1%;
@@ -84,6 +88,7 @@
                 // padding: .5%;
                 // margin: 0 0 4%;
             }
+
             //4 ITEMS IN THE ROW
             flex-basis: 25%;
 
@@ -93,21 +98,47 @@
             position: relative;
             padding: 0 .3%;
 
+            &.girl-one,
+            &.boy-two,
+            &.baby-girl-three,
+            &.baby-boy-four {
+                @media screen and (max-width:430px) {
+                    flex-basis: 48%;
+                    left: 0;
+                    margin: 0;
+                    padding: 0;
+                }
+            }
+
             &.girl-one {
-                @media screen and (max-width:430px){
-                    left: 5%;
+                @media screen and (max-width:430px) {
+                    // left: 5%;
                 }
             }
 
             &.boy-two {
-                @media screen and (max-width:430px){
-                    margin: 0 1% 1%;
-                    left: -5%;
+                @media screen and (max-width:430px) {
+                    // margin: 0 1% 1%;
+                    // left: -5%;
+                }
+            }
+
+            &.baby-boy-four {
+                @media screen and (max-width:430px) {
+                    flex-basis: 49%;
+                }
+            }
+
+            &.family-five {
+                @media screen and (max-width:430px) {
+                    flex-basis: 100%;
+                    padding: 0;
+                    margin: 0;
                 }
             }
 
             &.cta2 {
-                @media screen and (max-width: 430px){
+                @media screen and (max-width: 430px) {
                     // 5 ITEMS IN THE ROW
                     // margin: 0 2% 4% 0;
                 }

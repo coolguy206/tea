@@ -7,23 +7,23 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2024/0111/v0/`;
-// var category = `homepage/2024/0109/v1/`;
-var category = `landing-pages/go-anywhere-sweeps/2024/0117/v0/`;
+var category = `promos/one-offs/2024/0117/v0/`;
+// var category = `homepage/2024/0117/v0/`;
+// var category = `landing-pages/go-anywhere-sweeps/2024/0117/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/0111/Site/megamenu/`;
-var readFilePath = `handoff/sweeps/go-anywhere/Site/`;
+var readFilePath = `Site/0117/handoff/swim LP/`;
+// var readFilePath = `handoff/sweeps/go-anywhere/Site/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0111/`;
-// var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
-var writeFilePath = `landing-page/sweeps/go-anywhere/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/0109/`;
+var writeFilePath = `promos/headers/dev/images/swim/`;
+// var writeFilePath = `landing-page/sweeps/go-anywhere/dev/images/`;
+// var writeFilePath = `homepage/default/dev/images/0117/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
