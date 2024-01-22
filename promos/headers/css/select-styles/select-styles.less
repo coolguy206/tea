@@ -30,7 +30,7 @@
         }
 
         font-size: 48px;
-        margin: 2vw 0 0;
+        margin: 1vw 0 0;
         // line-height: 21px;
     }
 
@@ -52,9 +52,9 @@
         @media screen and (max-width: 430px) {
             // width: 100%;
             flex-wrap: wrap;
-            padding: 12vw 0;
-            row-gap: 7vw;
-            column-gap: 0;
+            // padding: 12vw 0;
+            row-gap: 4vw;
+            column-gap: 4vw;
 
             //4 ITEMS IN THE ROW
             // justify-content: space-evenly;
@@ -67,21 +67,21 @@
         left:0;
         transform: translate(0);
         display: flex;
-        background: #E3EFA3;
-        padding: 3.8vw 0;
-        column-gap: 2vw;
-        justify-content: center;
+        // background: #E3EFA3;
+        // padding: 3.8vw 0;
+        column-gap: 1vw;
+        // justify-content: center;
         // margin: 2vw 0 0;
 
         a {
             @media screen and (max-width:430px) {
                 //4 ITEMS IN THE ROW
-                flex-basis: 50%;
+                flex-basis: 48%;
                 // padding: 2.5%;
                 padding: 0;
                 // margin: 0 0 3vw;
-                align-self: center;
-                text-align:center;
+                // align-self: center;
+                // text-align:center;
                 // margin: 0 0 .1%;
 
                 // 5 ITEMS IN THE ROW
@@ -110,14 +110,16 @@
             }
 
             &.cta1,
-            &.cta4 {
-                @media screen and (max-width: 430px) {}
+            &.cta3 {
+                @media screen and (max-width: 430px) {
+                    text-align: right;
+                }
             }
 
             &.cta2,
-            &.cta5 {
+            &.cta4 {
                 @media screen and (max-width: 430px) {
-                    // text-align: right;
+                    text-align: left;
                 }
             }
 
@@ -144,21 +146,26 @@
 
             .the-cta {
                 @media screen and (max-width: 430px) {
-                    margin: 5vw 0 0;
+                    // margin: 5vw 0 0;
+                    text-align: revert;
                 }
                 // position: absolute;
                 bottom: 10%;
                 width: 100%;
                 text-align: center;
-                margin: 1vw 0 0;
+                // margin: 1vw 0 0;
 
                 span {
+                    @media screen and (max-width: 1679px) {
+                        width: 13vw;
+                    }
                     @media screen and (max-width: 430px) {
-                        // width: 45vw;
+                        width: 42vw;
                     }
 
-                    color: #E3EFA3;
-                    background: #2C8082;
+                    color: #fff;
+                    background: #EC5152;
+                    width: 224px;
                 }
             }
         }
