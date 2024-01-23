@@ -115,22 +115,26 @@
 	            if (valid) {
 	                var theData = {
 	                    data: {
-	                        type: 'profile',
+	                        // type: 'profile',
+	                        type: "subscription",
 	                        attributes: {
-	                            // custom_source: ac,
+	                            custom_source: ac,
+	                            list_id: list,
 	                            email: email,
-	                            first_name: fname,
-	                            last_name: lname,
-	                            location: {
-	                                address1: address1,
-	                                address2: address2,
-	                                city: city,
-	                                country: "United States",
-	                                region: state,
-	                                zip: zip
-	                            },
 	                            properties: {
-	                                catalog_optout: 'y'
+	                                first_name: fname,
+	                                last_name: lname,
+	                                location: {
+	                                    address1: address1,
+	                                    address2: address2,
+	                                    city: city,
+	                                    country: "United States",
+	                                    region: state,
+	                                    zip: zip
+	                                },
+	                                // properties: {
+	                                //     catalog_optout: 'y'
+	                                // },
 	                            },
 
 	                        }
@@ -141,11 +145,12 @@
 	                theData = JSON.stringify(theData);
 
 	                $.ajax({
-	                    url: `https://a.klaviyo.com/client/profiles/?company_id=${companyId}`,
+	                    // url: `https://a.klaviyo.com/client/profiles/?company_id=${companyId}`,
+	                    url: `https://a.klaviyo.com/client/subscriptions/?company_id=${companyId}`,
 	                    type: 'post',
 	                    data: theData,
 	                    headers: {
-	                        revision: '2023-07-15',
+	                        revision: '2023-02-22',
 	                        'content-type': 'application/json'
 	                    },
 	                    success: function (data, status, xhr) {

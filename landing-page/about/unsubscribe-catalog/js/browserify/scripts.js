@@ -41,7 +41,8 @@ jQuery(document).ready(function () {
           data: {
             type: 'profile',
             attributes: {
-              // custom_source: ac,
+              custom_source: ac,
+              list_id: list,
               email: email,
               first_name: fname,
               last_name: lname,
