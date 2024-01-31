@@ -1,0 +1,91 @@
+@import "../var.less";
+
+@c2-font-color: #47363D;
+@c2-h2-color: #47363D;
+@c2-p-color: #47363D;
+@c2-cta-color: #fff;
+@c2-cta-background: #47363D;
+
+.c2 {
+    @media screen and (max-width: 1679px) {
+        padding: 5vw 0 0;
+    }
+
+    position: relative;
+    width: 100%;
+    padding: 90px 0 0;
+
+    div {
+        &.the-content {
+            // position: absolute;
+            // top: 70%;
+            // transform: translate(-50%, 0%);
+            // width: auto;
+            // left: 50%;
+            text-align: center;
+
+            img {}
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 4.5vw;
+                    line-height: 4.5vw;
+                }
+                @media screen and (max-width: 430px) {
+                    font-size: 9vw;
+                    line-height: 9vw;
+                }
+
+                color: @c2-h2-color;
+                text-align: center;
+                font-family: @souv;
+                font-size: 72px;
+                line-height: 72px;
+                margin: 0;
+            }
+
+            p {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.5vw;
+                    line-height: 2vw;
+                    margin: 3vw 0;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 5vw;
+                    line-height: 7vw;
+                    margin: 5vw 0 9vw;
+                }
+
+                color: @c2-p-color;
+                text-align: center;
+                font-family: @souv;
+                font-size: 24px;
+                line-height: 32px;
+                margin: 40px 0;
+            }
+
+            div {
+                @media screen and (max-width: 1679px) {
+                    margin: 0 0 5vw;
+                }
+                @media screen and (max-width: 430px) {
+                    margin: 0 0 10vw;
+                }
+                margin: 0 0 90px;
+
+                a {
+                    @media screen and (max-width: 1679px) {
+                        width: 20.3vw;
+                    }
+                    @media screen and (max-width: 430px) {
+                        width: 80vw;
+                    }
+                    background: @c2-cta-background;
+                    color: @c2-cta-color;
+                    width: 341px;
+                }
+            }
+        }
+    }
+}

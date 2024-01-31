@@ -1,0 +1,15 @@
+@import "var.less";
+@import "classes.less";
+
+.the-container {
+	position: relative;
+
+	.c1, .c2, .c3 {
+		visibility: hidden;
+	}
+
+	@import "c1/c1.less";
+	@import "c2/c2.less";
+	@import "c3/c3.less";
+}
+
