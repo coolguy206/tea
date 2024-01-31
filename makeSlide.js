@@ -5,9 +5,9 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const basePath = `homepage/default`;
-const pdpPath = `./${basePath}/js/shop-slideshow/pdp.js`;
-const writePath = `${basePath}/dev/shop-slideshow/`;
+const basePath = `landing-page/shops/special-occasion-shop/default`;
+const pdpPath = `./${basePath}/js/shop-slideshow-3/pdp.js`;
+const writePath = `${basePath}/dev/slideshow-3/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
