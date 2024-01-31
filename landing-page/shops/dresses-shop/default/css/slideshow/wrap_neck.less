@@ -1,0 +1,20 @@
+@import "../var.less";
+
+@wrap_neck-h2-color: #FD8D92;
+@wrap_neck-cta-background: @wrap_neck-h2-color;
+
+&.wrap_neck {
+    @media screen and (max-width: 431px) {}
+
+
+    h2 {
+        color: @wrap_neck-h2-color !important;
+    }
+
+    div {
+        a {
+            background: @wrap_neck-cta-background;
+            color: @slideshow-cta-color;
+        }
+    }
+}

@@ -1,0 +1,19 @@
+@import "../var.less";
+
+@ruffle_hem-h2-color: #D89839;
+@ruffle_hem-cta-background: @ruffle_hem-h2-color;
+
+&.ruffle_hem {
+    @media screen and (max-width: 431px) {}
+
+    h2 {
+        color: @ruffle_hem-h2-color !important;
+    }
+
+    div {
+        a {
+            background: @ruffle_hem-cta-background;
+            color: @slideshow-cta-color;
+        }
+    }
+}

@@ -1,0 +1,18 @@
+@import "../var.less";
+@short_sleeve_ballet-h2-color: #6A3A7A;
+@short_sleeve_ballet-cta-background: @short_sleeve_ballet-h2-color;
+
+&.short_sleeve_ballet {
+    @media screen and (max-width: 431px) {}
+
+    h2 {
+        color: @short_sleeve_ballet-h2-color !important;
+    }
+
+    div {
+        a {
+            background: @short_sleeve_ballet-cta-background;
+            color: @slideshow-cta-color;
+        }
+    }
+}

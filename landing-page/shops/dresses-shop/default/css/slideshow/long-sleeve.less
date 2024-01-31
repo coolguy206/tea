@@ -1,0 +1,19 @@
+@import "../var.less";
+
+@long-sleeve-h2-color: #C77853;
+@long-sleeve-cta-background: @long-sleeve-h2-color;
+
+&.long-sleeve {
+    @media screen and (max-width: 431px) {}
+
+    h2 {
+        color: @long-sleeve-h2-color !important;
+    }
+
+    div {
+        a {
+            background: @long-sleeve-cta-background;
+            color: @slideshow-cta-color;
+        }
+    }
+}

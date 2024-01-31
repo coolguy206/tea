@@ -1,0 +1,19 @@
+@import "../var.less";
+@flutter_sleeve_pocket-h2-color: #FDA00B;
+@flutter_sleeve_pocket-cta-background: @flutter_sleeve_pocket-h2-color;
+
+
+&.flutter_sleeve_pocket {
+    @media screen and (max-width: 431px) {}
+
+    h2 {
+        color: @flutter_sleeve_pocket-h2-color !important;
+    }
+
+    div {
+        a {
+            background: @flutter_sleeve_pocket-cta-background;
+            color: @slideshow-cta-color;
+        }
+    }
+}
