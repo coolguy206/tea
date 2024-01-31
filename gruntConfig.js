@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'elimu-girls'
+    name: 'shops/special-occasion-shop/default'
   },
   zone: {
     name: 'mega-menu/sub-nav',

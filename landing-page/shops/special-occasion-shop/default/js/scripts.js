@@ -37,18 +37,18 @@ $(document).ready(function () {
     }
   }).mount();
 
-  // new Glide('.slideshow-3 .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 2,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   breakpoints: {
-  //     430: {
-  //       perView: 1
-  //     }
-  //   }
-  // }).mount();
+  new Glide('.slideshow-3 .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 2000,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      430: {
+        perView: 2
+      }
+    }
+  }).mount();
 
 });

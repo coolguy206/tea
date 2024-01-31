@@ -16,13 +16,13 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/01 January/012124 20% Off Select Styles/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/013024 Tea x Elimu Girls LP/03 handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/013024 Special Occasion LP/Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/011724 Go Anywhere Giveaway/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  // var writeFilePath = `Site/0130/03 Handoff/CH/gift-save/`;
-  var writeFilePath = `handoff/landing-pages/elimu-girls/`;
+  // var writeFilePath = `Site/0121/`;
+  var writeFilePath = `handoff/landing-pages/special-occasion/0130/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 

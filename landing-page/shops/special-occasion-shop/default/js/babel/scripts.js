@@ -33,18 +33,19 @@ $(document).ready(function () {
         perView: 2
       }
     }
-  }).mount(); // new Glide('.slideshow-3 .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 2,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   breakpoints: {
-  //     430: {
-  //       perView: 1
-  //     }
-  //   }
-  // }).mount();
+  }).mount();
+  new _glide["default"]('.slideshow-3 .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 2000,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      430: {
+        perView: 2
+      }
+    }
+  }).mount();
 });
 //# sourceMappingURL=scripts.js.map

@@ -7,24 +7,24 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2024/0130/v0/`;
-// var category = `homepage/2024/0130/v0/`;
-var category = `landing-pages/elimu-girls/2024/0130/v0/`;
+// var category = `promos/one-offs/2024/0121/v0/`;
+// var category = `homepage/2024/0117/v0/`;
+var category = `landing-pages/special-occasion/2024/0130/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/0130/03 Handoff/CH/gift-save/Handoff/`;
-var readFilePath = `handoff/landing-pages/elimu-girls/03 handoff/`;
+// var readFilePath = `Site/0121/Site/mega/`;
+var readFilePath = `handoff/landing-pages/special-occasion/0130/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0121/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0121/`;
-// var writeFilePath = `promos/headers/dev/images/promo/gift-save/`;
-var writeFilePath = `landing-page/elimu-girls/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/0130/`;
+// var writeFilePath = `promos/headers/dev/images/swim/`;
+var writeFilePath = `landing-page/shops/special-occasion-shop/default/dev/images/0130/`;
+// var writeFilePath = `homepage/default/dev/images/0117/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -148,15 +148,6 @@ c.on('ready', function () {
           if (ext == 'pdf') {
             // console.log(`it is a pdf`);
             var html = `<a class="the-official-rules" href="/mas_assets${url}${file}" target="_blank">official rules</a>`;
-          } else if (ext == 'mp4') {
-            console.log(`it is a mp4`);
-            var html = `
-              <video poster=""  controls>
-                <source src="${url}${file}" type="video/mp4">
-                Your browser does not support the video tag.
-              </video>
-              `;
-            // console.log(`${url} ${file}`);
           } else {
             // console.log(`it is not a pdf`);
             var alt = ``;

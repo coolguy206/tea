@@ -17,6 +17,16 @@
   flex-wrap: wrap;
   padding: 4% 0;
 
+  .cta-no-border {
+    @media screen and (max-width:1679px) {
+      font-size: .8vw;
+    }
+    @media screen and (max-width:430px) {
+      // padding: 7% 0;
+    }
+    font-size: 13px;
+  }
+
   p {
     @media screen and (max-width: 1679px) {
       font-size: 1.5vw !important;
@@ -92,6 +102,21 @@
     &.second {
       @media screen and (max-width:430px) {
         // order: 3;
+      }
+    }
+
+    &.third {
+      @media screen and (max-width:430px) {
+        // order: 3;
+      }
+      img {
+        @media screen and (max-width:1679px) {
+          height: 16.1vw;
+        }
+        @media screen and (max-width:430px) {
+          height: 56vw;
+        }
+        height: 269px;
       }
     }
 
