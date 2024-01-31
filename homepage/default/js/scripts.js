@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   new Glide('.c1 .glide', {
     type: 'carousel',
-    autoplay: 4000,
+    // autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -102,7 +102,7 @@ $(document).ready(function () {
   // });
 
 
-  inview('.hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
+  inview('.hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
 
   for (var i = 1; i < 8; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);

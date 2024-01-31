@@ -20,13 +20,12 @@ jQuery(document).ready(function () {
   //   $('.free-shipping-150').show();
   // }
 
-  if (url == '/') {
-    // $('.header-banner').css('max-width', '100%');
+  if (url == '/') {// $('.header-banner').css('max-width', '100%');
     // $('.free-shipping-150').css('position', 'relative');
     // $('.free-shipping-150').show();
     // $('.promos .the-promo.promo1').css('background', '#E493CD');
     // $('.promos .the-promo.promo1 span.first, .promos .the-promo.promo1 span.third').css('color', '#373A49');
-    $('.promos')[0].style.display = 'none';
+    // $('.promos')[0].style.display = 'none';
   } //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
 
 

@@ -30,7 +30,7 @@ jQuery(document).ready(function () {
     // $('.free-shipping-150').show();
     // $('.promos .the-promo.promo1').css('background', '#E493CD');
     // $('.promos .the-promo.promo1 span.first, .promos .the-promo.promo1 span.third').css('color', '#373A49');
-    $('.promos')[0].style.display = 'none';
+    // $('.promos')[0].style.display = 'none';
 
   }
 

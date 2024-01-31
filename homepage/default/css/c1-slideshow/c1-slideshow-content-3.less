@@ -11,7 +11,7 @@
     top: @c1-3-top;
     left: @c1-3-left;
     width: auto;
-    transform: translate(-50%, -50%);
+    transform: @c1-3-transform;
     text-align: center;
 
     h3 {
@@ -24,9 +24,32 @@
         text-align: center;
     }
 
+    p {
+        @media screen and (max-width: 430px) {
+            display: block;
+            color: #fff;
+            font-size: 5vw;
+            top: 119vw;
+            position: absolute;
+            line-height: 6vw;
+        }
+        color: @c1-3-p-color;
+    }
+
+    img {
+        @media screen and (max-width: 1679px) {
+            width: 39vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            width: 89vw;
+            margin: 0 auto;
+        }
+    }
+
     div {
-        @media screen and (max-width: 430px){
-            // top: @c1-3-top-431;
+        @media screen and (max-width: 430px) {
+            top: 158vw;
         }
 
         a {

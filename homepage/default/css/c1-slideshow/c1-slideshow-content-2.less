@@ -11,7 +11,7 @@
     top: @c1-2-top;
     left: @c1-2-left;
     width: auto;
-    transform: translate(-50%, -50%);
+    transform: @c1-2-transform;
     text-align: center;
 
     h3 {
@@ -28,11 +28,13 @@
         }
         color: @c1-2-h2-color;
         text-align: center;
+        font-family: @c1-2-h2-font-family;
     }
 
     p {
         text-align: center;
         margin: 8% auto;
+        color: @c1-2-p-color;
     }
 
     div {
@@ -47,6 +49,7 @@
 
             @media screen and (max-width: 430px) {
                 width: @c1-2-cta-size-431;
+                background: @c1-2-cta-background-430;
             }
 
             color: @c1-2-cta-color;

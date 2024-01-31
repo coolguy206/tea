@@ -1,9 +1,9 @@
 @import "../var.less";
-@c4-h2-font-color: #fff;
-@c4-h2-font-color-430: #fff;
+@c4-h2-font-color: #47363D;
+@c4-h2-font-color-430: #47363D;
 @c4-font-color: #47363D;
-@c4-cta-color: #2967B0;
-@c4-cta-background: #fff;
+@c4-cta-color: #fff;
+@c4-cta-background: #47363D;
 
 .c4 {
     @media screen and (max-width: 430px) {
@@ -40,14 +40,15 @@
                 width: 100%;
                 left: 0;
                 text-align: center;
-                top: 5vw;
+                top: 10vw;
                 transform: translate(0);
+                padding: 1vw 0 0;
             }
 
             // margin: 7% 0 0;
             text-align: left;
             width: auto;
-            left: 65%;
+            left: 5%;
             top: 50%;
             transform: translate(0, -50%);
             position:absolute;
@@ -66,7 +67,7 @@
 
                 color: @c4-h2-font-color;
                 // margin:0;
-                text-align:left;
+                text-align:center;
             }
 
 
@@ -80,7 +81,7 @@
                 @media screen and (max-width: 430px) {
                     font-size: 12vw;
                     line-height: 15vw;
-                    margin: 0 0 147vw;
+                    margin: 0 0 7%;
                     text-align: center;
                     color: @c4-h2-font-color-430;
                 }
@@ -100,16 +101,16 @@
 
                 a {
                     @media screen and (max-width:1679px) {
-                        width: 20vw;
+                        // width: 20vw;
                     }
 
                     @media screen and (max-width:430px) {
-                        width: 77vw;
+                        // width: 77vw;
                     }
 
                     background: @c4-cta-background;
                     color: @c4-cta-color;
-                    width: 308px;
+                    // width: 308px;
 
                 }
             }

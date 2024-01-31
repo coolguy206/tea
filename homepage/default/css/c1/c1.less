@@ -1,34 +1,81 @@
 @import "../var.less";
 
-// @c1-font-color: #fff;
-// @c1-h2-color: #fff;
-// @c1-p-color: #fff;
-// @c1-cta-color: #2C7F82;
-// @c1-cta-background: #E3F0A3;
+@c1-font-color: #47363D;
+@c1-h2-color: #47363D;
+@c1-p-color: #47363D;
+@c1-cta-color: #fff;
+@c1-cta-background: #47363D;
 
 
-@import "../c1-slideshow/c1-slideshow.less";
+// @import "../c1-slideshow/c1-slideshow.less";
 
-// .c1 {
-//   position: relative;
-//   width: 100%;
+.c1 {
+    position: relative;
+    width: 100%;
 
-//   div {
-//     &.the-content {
-//       position: absolute;
-//       top: 70%;
-//       transform: translate(-50%, 0%);
-//       width: auto;
-//       left: 50%;
+    div {
+        &.the-content {
+            position: absolute;
+            top: 70%;
+            transform: translate(-50%, 0%);
+            width: auto;
+            left: 50%;
 
-//       div {
-//         flex-wrap: nowrap;
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 4.8vw;
+                    line-height: 4.8vw;
+                }
 
-//         a {
-//           background: @c1-cta-background;
-//           color: @c1-cta-color;
-//         }
-//       }
-//     }
-//   }
-// }
+                @media screen and (max-width:430px) {
+                    font-size: 12vw;
+                    margin: 8vw 0;
+                    // line-height: 10.5vw;
+                }
+
+                font-family: @gilroyb;
+                font-size: 80px;
+                // text-transform: uppercase;
+                line-height: 80px;
+                // letter-spacing: 0.1rem;
+                color: @c1-h2-color;
+                margin: 0 0 8%;
+                // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+                // text-align:left;
+            }
+
+            p {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.5vw;
+                    line-height: 1.7vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 6vw;
+                    line-height: 7.4vw;
+                    margin: 0 0 8vw;
+                    display: none;
+                }
+
+                // text-align: left;
+                margin: 4% auto;
+                color: @c1-p-color;
+                text-transform: none;
+                font-size: 25px;
+                line-height: 30px;
+                width: 100%;
+                font-family: @souv;
+                text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+            }
+
+            div {
+                flex-wrap: nowrap;
+
+                a {
+                    background: @c1-cta-background;
+                    color: @c1-cta-color;
+                }
+            }
+        }
+    }
+}
