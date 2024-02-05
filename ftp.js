@@ -8,7 +8,7 @@ require('dotenv').config()
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/0202/v0/`;
-var category = `homepage/2024/0130/v1/`;
+var category = `homepage/2024/0205/v0/`;
 // var category = `landing-pages/elimu-girls/2024/0130/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
@@ -16,7 +16,7 @@ var category = `homepage/2024/0130/v1/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0202/hp/HP/`;
+var readFilePath = `Site/0202/020524 swim update/`;
 // var readFilePath = `handoff/landing-pages/elimu-girls/03 handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
@@ -24,7 +24,7 @@ var readFilePath = `Site/0202/hp/HP/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0202/`;
 // var writeFilePath = `promos/headers/dev/images/promo/gift-save/`;
 // var writeFilePath = `landing-page/elimu-girls/dev/images/`;
-var writeFilePath = `homepage/default/dev/images/0130/`;
+var writeFilePath = `homepage/default/dev/images/0202/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
