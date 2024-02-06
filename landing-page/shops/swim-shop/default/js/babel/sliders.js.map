@@ -1,1 +1,0 @@
-{"version":3,"sources":["../sliders.js"],"names":[],"mappings":"AAAA;AACA;AACA;AACA","sourcesContent":["// $('.hp .c1').bxSlider({\r\n//   infiniteLoop: true,\r\n//   auto: true\r\n// });"],"file":"sliders.js"}
