@@ -41,28 +41,22 @@ jQuery(document).ready(function () {
             if (valid) {
                 var theData = {
                     data: {
-                        // type: 'profile',
-                        type: "subscription",
+                        type: 'profile',
                         attributes: {
-                            custom_source: ac,
-                            list_id: list,
                             email: email,
-                            properties: {
-                                first_name: fname,
-                                last_name: lname,
-                                location: {
-                                    address1: address1,
-                                    address2: address2,
-                                    city: city,
-                                    country: "United States",
-                                    region: state,
-                                    zip: zip
-                                },
-                                // properties: {
-                                //     catalog_optout: 'y'
-                                // },
+                            first_name: fname,
+                            last_name: lname,
+                            location: {
+                                address1: address1,
+                                address2: address2,
+                                city: city,
+                                country: "United States",
+                                region: state,
+                                zip: zip
                             },
-
+                            properties: {
+                                catalog_optout: 'y'
+                            },
                         }
                     }
                 }
@@ -70,7 +64,7 @@ jQuery(document).ready(function () {
                 console.log(theData);
                 theData = JSON.stringify(theData);
 
-                fetch(`https://a.klaviyo.com/client/subscriptions/?company_id=${companyId}`, {
+                fetch(`https://a.klaviyo.com/client/profiles/?company_id=${companyId}`, {
                     method: "POST",
                     headers: {
                         revision: '2023-12-15',
@@ -98,34 +92,6 @@ jQuery(document).ready(function () {
                     console.log(err);
                 });
 
-                /*
-                $.ajax({
-                    // url: `https://a.klaviyo.com/client/profiles/?company_id=${companyId}`,
-                    url: `https://a.klaviyo.com/client/subscriptions/?company_id=${companyId}`,
-                    type: 'post',
-                    data: theData,
-                    headers: {
-                        revision: '2023-12-15',
-                        'content-type': 'application/json'
-                    },
-                    success: function (data, status, xhr) {
-                        console.log('klaviyo success register');
-                        // jQuery(document).trigger('klaviyoSuccess', data);
-                        $('.catalog-wrap .success').show();
-                        $('.sailthru').show();
-                        $('.processing').hide();
-                        $('span.error').hide();
-
-                        //clear field
-                        $('.sailthru input[name="FIRST_NAME"]').val('');
-                        $('.sailthru input[name="LAST_NAME"]').val('');
-                        $('.sailthru input[name="POSTAL_STREET_1_"]').val('');
-                        $('.sailthru input[name="POSTAL_STREET_2_"]').val('');
-                        $('.sailthru input[name="CITY_"]').val('');
-                        $('.sailthru input[name="POSTAL_CODE_"]').val('');
-                    }
-                });
-                */
 
             } else {
                 console.log(`email not valid`);

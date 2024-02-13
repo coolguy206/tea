@@ -41,8 +41,6 @@ jQuery(document).ready(function () {
           data: {
             type: 'profile',
             attributes: {
-              custom_source: ac,
-              list_id: list,
               email: email,
               first_name: fname,
               last_name: lname,
@@ -62,29 +60,30 @@ jQuery(document).ready(function () {
         };
         console.log(theData);
         theData = JSON.stringify(theData);
-        $.ajax({
-          url: "https://a.klaviyo.com/client/profiles/?company_id=".concat(companyId),
-          type: 'post',
-          data: theData,
+        fetch("https://a.klaviyo.com/client/profiles/?company_id=".concat(companyId), {
+          method: "POST",
           headers: {
-            revision: '2023-07-15',
+            revision: '2023-12-15',
             'content-type': 'application/json'
           },
-          success: function success(data, status, xhr) {
-            console.log('klaviyo success register'); // jQuery(document).trigger('klaviyoSuccess', data);
+          body: theData
+        }).then(function (data) {
+          console.log('klaviyo success register');
+          console.log(data);
+          $('.catalog-wrap .success').show();
+          $('.sailthru').show();
+          $('.processing').hide();
+          $('span.error').hide(); //clear field
 
-            $('.catalog-wrap .success').show();
-            $('.sailthru').show();
-            $('.processing').hide();
-            $('span.error').hide(); //clear field
-
-            $('.sailthru input[name="FIRST_NAME"]').val('');
-            $('.sailthru input[name="LAST_NAME"]').val('');
-            $('.sailthru input[name="POSTAL_STREET_1_"]').val('');
-            $('.sailthru input[name="POSTAL_STREET_2_"]').val('');
-            $('.sailthru input[name="CITY_"]').val('');
-            $('.sailthru input[name="POSTAL_CODE_"]').val('');
-          }
+          $('.sailthru input[name="FIRST_NAME"]').val('');
+          $('.sailthru input[name="LAST_NAME"]').val('');
+          $('.sailthru input[name="POSTAL_STREET_1_"]').val('');
+          $('.sailthru input[name="POSTAL_STREET_2_"]').val('');
+          $('.sailthru input[name="CITY_"]').val('');
+          $('.sailthru input[name="POSTAL_CODE_"]').val('');
+        })["catch"](function (err) {
+          console.log("something went wrong");
+          console.log(err);
         });
       } else {
         console.log("email not valid");
