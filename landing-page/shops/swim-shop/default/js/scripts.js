@@ -14,8 +14,8 @@ $(document).ready(function() {
     perView: 1,
     hoverpause:true,
     gap:0
-  }).mount()
+  }).mount();
 
-  inview('.swim .c1, .swim .c2, .swim .c3, .swim .c4, .swim .c5, .swim .c6, .swim .c7, .swim .clothes, .swim .graphics, .swim .dress-type, .swim .slideshow, .swim .reviews, .swim .leggings');
+  inview('.swim .c1, .swim .c2, .swim .c3, .swim .c4, .swim .c5, .swim .c6, .swim .c7, .swim .clothes, .swim .graphics, .swim .slideshow, .swim .reviews');
 
 });

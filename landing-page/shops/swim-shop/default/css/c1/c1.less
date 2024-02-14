@@ -1,14 +1,13 @@
 @import "var.less";
 @c1-font-color: #fff;
-@c1-h2-color: #F1FF50;
+@c1-h2-color: #fff;
 @c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #0A5478;
+@c1-cta-background: #31AB9D;
 
 .c1 {
-  @media screen and (max-width: 430px) {
- 
-  }
+  @media screen and (max-width: 430px) {}
+
   position: relative;
   width: 100%;
 
@@ -20,13 +19,14 @@
         left: 0;
         top: 11vw;
         transform: translateX(0);
-       
+
       }
+
       position: absolute;
       top: 50%;
-      width: 50%;
-      left: 50%;
-      transform: translate(-50%,-50%);
+      width: 29%;
+      left: 8%;
+      transform: translate(0%, -54%);
       text-align: center;
 
       a,
@@ -62,34 +62,34 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4.2vw;
-          line-height: 4.3vw;
+          font-size: 5vw;
+          line-height: 5vw;
         }
+
         @media screen and (max-width: 430px) {
-          line-height: 9vw;
-          font-size: 7vw;
-          margin: 8% 0;
-         
+          line-height: 12vw;
+          font-size: 12vw;
+          margin: 4% 0;
+
         }
-        @media screen and (max-width:320px) {
-          // margin: 4% 0 0;
-        }
+
         // margin: 5% 0 0;
         text-transform: capitalize;
         color: @c1-h2-color;
-        line-height: 70px;
+        line-height: 80px;
         // font-family: @souv;
         font-family: @gilroyb;
-        font-size: 70px;
+        font-size: 80px;
         margin: 0;
         // letter-spacing: 0.25em;
       }
 
       p {
         @media screen and (max-width: 1679px) {
-          font-size: 1.4vw;
+          font-size: 1.5vw;
           line-height: 2vw;
         }
+
         @media screen and (max-width: 430px) {
           font-size: 4vw;
           line-height: 6vw;
@@ -97,17 +97,14 @@
           margin: 5% auto;
           text-shadow: none;
           color: @c1-p-color;
-          display:none;
+          display: none;
         }
-        @media screen and (max-width: 320px) {
-          // font-size: 15px;
-          // line-height: 17px;
-        }
-        margin: 4% auto;
+
+        margin: 8% auto;
         color: #fff;
         text-transform: none;
-        font-size: 22px;
-        line-height: 33px;
+        font-size: 25px;
+        line-height: 30px;
         // letter-spacing: 1px;
         width: 100%;
         font-family: @souv;
@@ -116,53 +113,44 @@
 
       div {
         @media screen and (max-width: 430px) {
-          margin: 0 0 5%;
+          row-gap: 4vw;
+          column-gap: 4vw;
+          top: 91vw;
+          position: absolute;
         }
+
         text-align: center;
-        margin: 0 0 2%;
-
-        &.the-grid {
-          grid-template-rows: repeat(2, 1fr);
-          column-gap: 5%;
-          row-gap: 25%;
-        }
-
-        &.cta-5th {
-          @media screen and (max-width: 430px) {
-            margin: 5% 0 0;
-          }
-          margin: 3% 0 0;
-        }
+        margin: 0 auto;
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 1vw;
+        column-gap: 1vw;
+        justify-content: center;
 
         a {
           @media screen and (max-width: 1679px) {
-            width: 12.8vw;
+            width: 12vw;
           }
+
           @media screen and (max-width: 430px) {
-            // width: 44%;
-            // padding: 3.3% 2.5%;
-            // margin: 93% 0 0;
-            //color: @c1-h2-color;
             width: 42.5vw;
-            // background:#2fab9d; 
           }
+
           font-family: @gilroyb;
           color: @c1-cta-color;
           background: @c1-cta-background;
-          width: 215px;
+          width: 203px;
+          margin:0;
 
           &.cta1 {
-            @media screen and (max-width: 430px) {
-              // left: -3%;
-            }
-            // left: -1%;
+            @media screen and (max-width: 430px) {}
+
           }
 
           &.cta2 {
-            @media screen and (max-width: 430px) {
-              // left: 2%;
-            }
-            // left: 1%;
+            @media screen and (max-width: 430px) {}
+
+
           }
 
           &.cta3 {

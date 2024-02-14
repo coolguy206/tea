@@ -22,90 +22,98 @@ header.site-header {
   .graphics,
   .reviews,
   .slideshow,
-  .leggings {
-    visibility: hidden;
+  {
+  visibility: hidden;
+}
+
+.first,
+.second {
+  @media screen and (max-width: 430px) {
+    flex-basis: 100% !important;
   }
 
-  .first,
-  .second {
-    @media screen and (max-width: 430px) {
-      flex-basis: 100% !important;
-    }
-    flex-basis: 50%;
+  flex-basis: 50%;
+}
+
+.third {
+  @media screen and (max-width: 430px) {
+    flex-basis: 100% !important;
   }
 
-  .third {
-    @media screen and (max-width: 430px) {
-      flex-basis: 100% !important;
-    }
-    flex-basis: 33%;
+  flex-basis: 33%;
+}
+
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+h2 {
+  @media screen and (max-width: 1679px) {
+    font-size: 3.1vw;
+    line-height: 3.6vw;
   }
 
-  h2,
-  h3,
-  p {
-    margin: 0;
+  @media screen and (max-width: 430px) {
+    font-size: 7.7vw;
   }
 
-  h2 {
-    @media screen and (max-width: 1679px) {
-      font-size: 3.1vw;
-      line-height: 3.6vw;
-    }
-    @media screen and (max-width: 430px) {
-      font-size: 7.7vw;
-    }
-    font-family: @souv;
-    font-size: 54px;
-    line-height: 60px;
-    text-align: center;
-    // letter-spacing: 0.01em;
-    // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
-    color: #FFFFFF;
+  font-family: @souv;
+  font-size: 54px;
+  line-height: 60px;
+  text-align: center;
+  // letter-spacing: 0.01em;
+  // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
+  color: #FFFFFF;
+}
+
+h3 {
+  @media screen and (max-width: 1679px) {
+    font-size: 1.2vw;
+    line-height: 1.6vw;
   }
 
-  h3 {
-    @media screen and (max-width: 1679px) {
-      font-size: 1.2vw;
-      line-height: 1.6vw;
-    }
-    @media screen and (max-width: 430px) {
-      font-size: 3.6vw;
-    }
-    font-family: @gilroyb;
-    font-size: 18px;
-    line-height: 28px;
-    text-align: center;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: #FFFFFF;
+  @media screen and (max-width: 430px) {
+    font-size: 3.6vw;
   }
 
-  p {
-    @media screen and (max-width: 1679px) {
-      font-size: 1.1vw;
-      line-height: 1.3vw;
-      // letter-spacing: 0.6vw;
-    }
-    // @media screen and (max-width: 768px) {
-    //   font-size: 2.9vw;
-    //   line-height: 4.1vw;
-    // }
-    @media screen and (max-width: 430px) {
-      // font-size: 4vw !important;
-      // line-height: 6vw !important;
-    }
-    font-family: @souv;
-    font-size: 18px;
-    line-height: 22px;
-    text-align: center;
-    // letter-spacing: 0.01em;
-    color: #FFFFFF;
+  font-family: @gilroyb;
+  font-size: 18px;
+  line-height: 28px;
+  text-align: center;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+}
+
+p {
+  @media screen and (max-width: 1679px) {
+    font-size: 1.1vw;
+    line-height: 1.3vw;
+    // letter-spacing: 0.6vw;
   }
+
+  // @media screen and (max-width: 768px) {
+  //   font-size: 2.9vw;
+  //   line-height: 4.1vw;
+  // }
+  @media screen and (max-width: 430px) {
+    // font-size: 4vw !important;
+    // line-height: 6vw !important;
+  }
+
+  font-family: @souv;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  // letter-spacing: 0.01em;
+  color: #FFFFFF;
+}
 }
 
 header .site-header-inner .header-wrapper .header-actions .favorites {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat!important;
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat !important;
 }
 
 .site-content .site-content-inner .site-content-bg-wrapper {

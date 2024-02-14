@@ -4,32 +4,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.alt = void 0;
-
-var alt = function alt(elem, _alt) {
-  // console.log(`from alt.js`);
-  var img = $(elem);
-  $.each(img, function (i, val) {
-    $(val).attr('alt', _alt);
-  });
-}; // module.exports = function(elem, alt) {
-//   // console.log(`from alt.js`);
-//   let img = $(elem);
-//   $.each(img, function(i, val) {
-//     $(val).attr('alt', alt);
-//   });
-// };
-
-
-exports.alt = alt;
-
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.inview = void 0;
 
 var inview = function inview(elem) {
@@ -80,10 +54,8 @@ var inview = function inview(elem) {
 exports.inview = inview;
 
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 "use strict";
-
-var _alt = require("./alt.js");
 
 var _inview = require("./inview.js");
 
@@ -100,32 +72,11 @@ $(document).ready(function () {
     hoverpause: true,
     gap: 0
   }).mount();
-  (0, _alt.alt)('.dresses .c1 img', 'kids in pattern swimwear');
-  (0, _alt.alt)('.dresses .c2 .first img', 'girl in flower twirl dress');
-  (0, _alt.alt)('.dresses .c2 .second img', 'girl in fish graphic empire dress');
-  (0, _alt.alt)('.dresses .c2 .third img', 'girl in floral graphic wrap neck dress');
-  (0, _alt.alt)('.dresses .clothes .first img', 'one pieces');
-  (0, _alt.alt)('.dresses .clothes .second img', 'two pieces');
-  (0, _alt.alt)('.dresses .clothes .third img', 'rash guards');
-  (0, _alt.alt)('.dresses .clothes .fourth img', 'swim trunks');
-  (0, _alt.alt)('.dresses .clothes .fifth img', 'baby swim');
-  (0, _alt.alt)('.dresses .clothes .sixth img', 'famiily swim');
-  (0, _alt.alt)('.dresses .c3 .first img', 'girl in stripe graphic short sleeve dress');
-  (0, _alt.alt)('.dresses .c3 .second img', 'girl in flower graphic play dress');
-  (0, _alt.alt)('.dresses .c3 .third img', 'girl in special occasion dress');
-  (0, _alt.alt)('.dresses .c4 .first img', 'girl in floral graphic long sleeve dress');
-  (0, _alt.alt)('.dresses .c4 .second img', 'girl leggings');
-  (0, _alt.alt)('.dresses .c5 .first img', 'girl leggings');
-  (0, _alt.alt)('.dresses .leggings img', 'family swim');
-  (0, _alt.alt)('.dresses .graphics .first img', 'floral prints');
-  (0, _alt.alt)('.dresses .graphics .second img', 'animal prints');
-  (0, _alt.alt)('.dresses .graphics .third img', 'fruit prints');
-  (0, _alt.alt)('.dresses .graphics .fourth img', 'rainbow & stars prints');
-  (0, _inview.inview)('.dresses .c1, .dresses .c2, .dresses .c3, .dresses .c4, .dresses .c5, .dresses .c6, .dresses .c7, .dresses .clothes, .dresses .graphics, .dresses .dress-type, .dresses .slideshow, .dresses .reviews, .dresses .leggings');
+  (0, _inview.inview)('.swim .c1, .swim .c2, .swim .c3, .swim .c4, .swim .c5, .swim .c6, .swim .c7, .swim .clothes, .swim .graphics, .swim .slideshow, .swim .reviews');
 });
 
 
-},{"./alt.js":1,"./inview.js":2,"@glidejs/glide":4}],4:[function(require,module,exports){
+},{"./inview.js":1,"@glidejs/glide":3}],3:[function(require,module,exports){
 /*!
  * Glide.js v3.5.2
  * (c) 2013-2021 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4001,4 +3952,4 @@ $(document).ready(function () {
 
 }));
 
-},{}]},{},[3]);
+},{}]},{},[2]);
