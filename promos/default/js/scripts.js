@@ -55,16 +55,16 @@ jQuery(document).ready(function () {
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   pause: 2500,
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 2500,
     // onSliderLoad:function(){
     //     $('.promos.promo2, .promos.promo3').show();
     // }
-  // });
+  });
 
 });

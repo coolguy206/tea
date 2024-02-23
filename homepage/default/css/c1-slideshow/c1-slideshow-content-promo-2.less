@@ -20,7 +20,8 @@
         }
 
         color: @c1-promo-2-h3-color;
-        text-align: center;
+        text-align: left;
+        padding: 0 0 0 3vw;
     }
 
     h2 {
@@ -46,12 +47,16 @@
         }
 
         &.the-flex {
+            @media screen and (max-width: 1679px) {
+                margin: 15vw 0 0;
+            }
             @media screen and (max-width: 430px) {
                 top: @c1-promo-2-top-431;
+                margin: 0;
             }
 
-            margin: 0 auto;
-            width: 55%;
+            margin: 255px 0 0;
+            width: 50%;
         }
 
         a {
