@@ -1,11 +1,8 @@
 "use strict";
 
 var _inview = require("./inview.js");
-
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 $(document).ready(function () {
   new _glide["default"]('.slideshow .glide', {
     type: 'carousel',
