@@ -18,12 +18,12 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/0218/Site/hp/`;
-var readFilePath = `handoff/headers/0227/new arrivals/`;
+var readFilePath = `handoff/headers/0227/family matching/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0121/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0218/`;
-var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
+var writeFilePath = `promos/headers/dev/images/family/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0227/`;
 // var writeFilePath = `homepage/default/dev/images/0227/`;
 // var writeFilePath = `mega-menu/dev/images/`;
