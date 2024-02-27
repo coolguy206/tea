@@ -5,8 +5,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.tracking = void 0;
-
-var tracking = function tracking(elem, id) {
+var tracking = exports.tracking = function tracking(elem, id) {
   // console.log(`from tracking.js`);
   var a = $(elem);
   $.each(a, function (j, val) {
@@ -15,7 +14,9 @@ var tracking = function tracking(elem, id) {
       'id': id
     });
   });
-}; // module.exports = function(elem, id) {
+};
+
+// module.exports = function(elem, id) {
 //   // console.log(`from tracking.js`);
 //   let a = $(elem);
 //   $.each(a, function(j, val) {
@@ -25,9 +26,6 @@ var tracking = function tracking(elem, id) {
 //     });
 //   });
 // };
-
-
-exports.tracking = tracking;
 
 
 },{}]},{},[1]);

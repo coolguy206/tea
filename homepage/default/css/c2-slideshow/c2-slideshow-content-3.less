@@ -10,9 +10,9 @@
     }
 
     top: @c2-3-top;
-    width: 50%;
+    width: auto;
     left: @c2-3-left;
-    transform: translate(-50%, -50%);
+    transform: @c2-3-transform;
     text-align: center;
 
     h3 {
@@ -21,8 +21,13 @@
 
     h2 {
         color: @c2-3-h2-color;
-        margin: 0 0 2vw;
+        margin: 0;
         text-align: center;
+    }
+
+    p {
+        color: @c2-3-p-color;
+        text-align: @c2-3-p-text-align;
     }
 
     div {
@@ -33,7 +38,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                width: 61vw;
+                // width: 61vw;
             }
 
             // width: 359px;
