@@ -1,11 +1,8 @@
 "use strict";
 
 var _inview = require("./inview.js");
-
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 $(document).ready(function () {
   (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .clothes, .content-wrap .slideshow-1, .content-wrap .slideshow-2, .content-wrap .slideshow-3');
   new _glide["default"]('.slideshow-1 .glide', {
