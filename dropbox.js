@@ -16,13 +16,13 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/02 February/021824 Spring Ready Event/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/022724 Spring 2 HP/handoff/hp/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/022724 Spring 2 HP/handoff/category headers/spring edit/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/011724 Go Anywhere Giveaway/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
   // var writeFilePath = `Site/0218/`;
-  var writeFilePath = `handoff/hp/0227/`;
+  var writeFilePath = `handoff/headers/0227/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
 
