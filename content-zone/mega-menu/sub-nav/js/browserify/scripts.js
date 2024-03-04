@@ -10,7 +10,6 @@ $(document).ready(function () {
     var url = $(this).attr('data-url');
     console.log('clicked rewear');
     $('body').prepend(elem);
-
     if (url !== undefined) {
       $('#tea-rewear-leave').attr('href', url);
     }

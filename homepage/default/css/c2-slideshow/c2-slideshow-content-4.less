@@ -8,10 +8,10 @@
         transform: translateX(0);
     }
 
-    top: 50%;
-    width: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: @c2-4-top;
+    width: @c2-4-width;
+    left: @c2-4-left;
+    transform: @c2-4-transform;
     text-align: center;
 
     h3 {
@@ -20,20 +20,25 @@
 
     h2 {
         color: @c2-4-h2-color;
+        text-align: @c2-4-h2-text-align;
+    }
+
+    p {
+        text-align: @c2-4-p-text-align;
     }
 
     div {
 
         a {
             @media screen and (max-width: 1679px) {
-                width: 17vw;
+                width: @c2-4-cta-size-1679;
             }
 
             @media screen and (max-width: 430px) {
-                width: 71vw;
+                width: @c2-4-cta-size-431;
             }
 
-            width: 276px;
+            width: @c2-4-cta-size;
             color: @c2-4-cta-color;
             background: @c2-4-cta-background;
         }
