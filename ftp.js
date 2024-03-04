@@ -7,9 +7,9 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0303/v0/`;
-// var category = `homepage/2024/0227/v0/`;
-// var category = `headers/2024/0227/v0/`;
+// var category = `promos/one-offs/2024/0303/v0/`;
+var category = `homepage/2024/0304/v1/`;
+// var category = `headers/2024/0304/v0/`;
 // var category = `landing-pages/dresses-shop/2024/0227/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
@@ -17,15 +17,15 @@ var category = `promos/one-offs/2024/0303/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0303/Site/headers/`;
+var readFilePath = `Site/0304/Site/hp/`;
 // var readFilePath = `handoff/headers/0227/family matching/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0303/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0303/`;
-var writeFilePath = `promos/headers/dev/images/select-styles/`;
+// var writeFilePath = `promos/headers/dev/images/promo/green-sprouts/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0227/`;
-// var writeFilePath = `homepage/default/dev/images/0227/`;
+var writeFilePath = `homepage/default/dev/images/0304/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

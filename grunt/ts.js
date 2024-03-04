@@ -22,15 +22,15 @@ module.exports = {
     },
 
     zone: {
-        src: ['content-zone/' + config.zone.name + '/ts/*.ts'],
+        src: ['content-zone/' + config.zone.name + '/**/ts/*.ts'],
     },
 
     landing: {
-        src: ['landing-page/' + config.landing.name + '/ts/**/*.ts'],
+        src: ['landing-page/' + config.landing.name + '/**/ts/**/*.ts'],
     },
 
     promos: {
-        src: ['promos/' + config.promo.name + '/ts/**/*.ts'],
+        src: ['promos/' + config.promo.name + '/**/ts/**/*.ts'],
     },
 
 };
