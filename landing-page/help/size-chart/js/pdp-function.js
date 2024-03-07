@@ -1,6 +1,7 @@
 //on .size-chart click
 $('.size-chart').click(function(e) {
   e.preventDefault();
+  //console.log(e);
 
   //get the department & category
   //var dept = $('#the-dept-cat').attr('data-department').toLowerCase();
@@ -57,10 +58,12 @@ $('.size-chart').click(function(e) {
       } else if (dept == 'boy') {
         // console.log('its boy defaults');
         cat = 'tees + shirts';
-      } else if (dept == 'baby girl' || dept == 'baby boy') {
+      } 
+      
+      // else if (dept == 'baby girl' || dept == 'baby boy') {
         // console.log('its baby girl & baby boy defaults');
-        cat = 'rompers';
-      }
+        // cat = 'rompers';
+      // }
     }
 
     // console.log('results ',cat);
@@ -73,6 +76,7 @@ $('.size-chart').click(function(e) {
   //set the <a> to open in a new window with the URL parameters
   $(this).attr('target', '_blank');
   $(this).attr('href', '/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat);
+  window.open('/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat, '_blank');
 
   /*
   ! THIS CODE DOESN'T WORK AND NEEDS FIXING

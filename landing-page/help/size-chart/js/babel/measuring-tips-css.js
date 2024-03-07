@@ -1,13 +1,16 @@
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function () {
   //function to adjust css for .measure-tips
+
   //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
   // var catVal = $('.size-chart-container .category').val();
+
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); //if mobile change the height of the .measure-tips div
+  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+
+  //if mobile change the height of the .measure-tips div
   // if ($(window).width() < 737) {
   //   //if .measure-tips div has style remove it
   //   $('.measure-tips div').removeAttr('style');
@@ -24,6 +27,7 @@ module.exports = function () {
   //   //set the height
   //   $('.measure-tips div').css('height', mHeight);
   // }
+
   // if (catVal == 'shoes + accessories' || catVal == 'pajamas') {
   //   //desktop
   //   if ($(window).width() > 737) {
@@ -78,6 +82,7 @@ module.exports = function () {
   //     $('.measure-tips div').css('height', '0px');
   //   }
   // }
+
   // else remove the style attribute on .tips and change css on .measure-tips
   // else {
   //   //$('.size-chart-container').find($('.tips')).removeAttr('style');

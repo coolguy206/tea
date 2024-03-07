@@ -208,6 +208,14 @@ module.exports = [{
         rightH2: '',
         rightP: '',
       },
+      {
+        name: 'swim diapers',
+        img: '',
+        leftH2: '',
+        leftP: '',
+        rightH2: '',
+        rightP: '',
+      },
 
     ],
   },
@@ -273,6 +281,14 @@ module.exports = [{
       },
       {
         name: 'shoes + accessories',
+        img: '',
+        leftH2: '',
+        leftP: '',
+        rightH2: '',
+        rightP: '',
+      },
+      {
+        name: 'swim diapers',
         img: '',
         leftH2: '',
         leftP: '',

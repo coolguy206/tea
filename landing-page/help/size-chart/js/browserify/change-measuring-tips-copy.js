@@ -2,9 +2,9 @@
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function (sizeChartArr) {
   //function to change the copy in .measure-tips
+
   //get the value of the selected department and category
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
@@ -41,6 +41,7 @@ module.exports = function (sizeChartArr) {
       //       // console.log(divs);
       //
       //       $('.size-chart-container .measure-tips div p').html(arr.rightP);;
+
       // $.each(divs, function(k, obj) {
       //   if (k == 0) {
       //     //change the h2
@@ -59,6 +60,7 @@ module.exports = function (sizeChartArr) {
       //       } else {
       //         $('.measure-tips div').removeClass('two-rows');
       //       }
+
       //change the h2 .top
       // $(obj).find('.top').find('h2').html(arr.rightH2);
       // //change the p .top
@@ -67,7 +69,9 @@ module.exports = function (sizeChartArr) {
       // $(obj).find('.bottom').find('h2').html(arr.rightH2Bottom);
       // //change the p .bottom
       // $(obj).find('.bottom').find('p').html(arr.rightPBottom);
+
       // }
+
       //mobile
       //     if ($(window).width() < 737) {
       //       //change the h2
@@ -81,23 +85,27 @@ module.exports = function (sizeChartArr) {
       //   });
       //
       // } else {
+
       $.each(val.cat, function (j, arr) {
         //move .top contents out
-        $('.measure-tips div:nth-of-type(2)').append($('.measure-tips .top h2, .measure-tips .top p')); //remove .top & .bottom because of swim
-
-        $('.measure-tips div:nth-of-type(2) .top, .measure-tips div:nth-of-type(2) .bottom').remove(); //remove .swim & .baby-boy-swim from .measure-tips div:first-of-type
-
+        $('.measure-tips div:nth-of-type(2)').append($('.measure-tips .top h2, .measure-tips .top p'));
+        //remove .top & .bottom because of swim
+        $('.measure-tips div:nth-of-type(2) .top, .measure-tips div:nth-of-type(2) .bottom').remove();
+        //remove .swim & .baby-boy-swim from .measure-tips div:first-of-type
         $('.measure-tips div:first-of-type').removeClass('swim');
         $('.measure-tips div:first-of-type').removeClass('baby-boy-swim');
         $('.measure-tips div:nth-of-type(2)').removeClass('two-rows');
-        $('.measure-tips div:nth-of-type(2)').removeClass('baby-boy-swim'); //get the cat that match
+        $('.measure-tips div:nth-of-type(2)').removeClass('baby-boy-swim');
 
+        //get the cat that match
         if (catVal == arr.name) {
           //change the copy
           // console.log(arr);
-          var divs = $('.size-chart-container .measure-tips div'); // console.log(divs);
+          var divs = $('.size-chart-container .measure-tips div');
+          // console.log(divs);
+          divs.find('p').html(arr.rightP);
 
-          divs.find('p').html(arr.rightP); // $.each(divs, function(k, obj) {
+          // $.each(divs, function(k, obj) {
           //   if (k == 0) {
           //change the h2
           // $(obj).find('h2').html(arr.leftH2);
@@ -127,10 +135,12 @@ module.exports = function (sizeChartArr) {
           //   //change the p
           //   $(obj).find('p').html(arr.leftP);
           // }
+
           //   }
           // });
         }
-      }); // }
+      });
+      // }
     }
   });
 };
@@ -141,7 +151,8 @@ module.exports = function (sizeChartArr) {
 
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
-  var Val; //desktop
+  var Val;
+  //desktop
   // if ($(window).width() > 737) {
   //   //get the value of the .department or .category
   //   Val = $(elem1).text();
@@ -149,8 +160,8 @@ module.exports = function (elem1, elem2) {
   //mobile
   // else {
   //get the value of the .department or .category
-
-  Val = $(elem2).val(); // }
+  Val = $(elem2).val();
+  // }
 
   return Val;
 };

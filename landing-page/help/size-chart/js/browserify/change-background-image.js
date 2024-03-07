@@ -2,7 +2,6 @@
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function (sizeChartArr) {
   //function to change the background image
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
@@ -14,11 +13,13 @@ module.exports = function (sizeChartArr) {
         //get the cat that match
         if (catVal == arr.name) {
           //add the background img to the page
+
           //desktop
           // if ($(window).width() > 737) {
           //var img = 'url(../images/'+arr.img+')';
           var img = 'url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/size-chart/2020/v0/' + arr.img + ')';
-          $('.size-chart-container .measure-tips').css('background-image', img); // }
+          $('.size-chart-container .measure-tips').css('background-image', img);
+          // }
           //mobile
           // else if ($(window).width() < 737) {
           //   //add the loading
@@ -45,7 +46,8 @@ module.exports = function (sizeChartArr) {
 
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
-  var Val; //desktop
+  var Val;
+  //desktop
   // if ($(window).width() > 737) {
   //   //get the value of the .department or .category
   //   Val = $(elem1).text();
@@ -53,8 +55,8 @@ module.exports = function (elem1, elem2) {
   //mobile
   // else {
   //get the value of the .department or .category
-
-  Val = $(elem2).val(); // }
+  Val = $(elem2).val();
+  // }
 
   return Val;
 };

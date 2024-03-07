@@ -2,38 +2,38 @@
 
 //on .size-chart click
 $('.size-chart').click(function (e) {
-  e.preventDefault(); //get the department & category
+  e.preventDefault();
+  //console.log(e);
+
+  //get the department & category
   //var dept = $('#the-dept-cat').attr('data-department').toLowerCase();
   //var cat = $('#the-dept-cat').attr('data-category').toLowerCase();
+
   //prod
-
   var dept = $('#the-mpd').attr('data-department').toLowerCase();
-  var cat = $('#the-mpd').attr('data-category').toLowerCase(); //if statements
+  var cat = $('#the-mpd').attr('data-category').toLowerCase();
 
+  //if statements
   if (dept == 'kid girl' || dept == '') {
     dept = 'girl';
   }
-
   if (dept == 'little girl') {
     dept = 'baby girl';
   }
-
   if (dept == 'little boy') {
     dept = 'baby boy';
   }
-
   if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1) {
     dept = 'newborn';
     cat = 'all categories';
   }
-
   var setCats = function setCats() {
     // console.log('function setCats: ', dept,cat);
+
     if (cat == 'hoodies' || cat == 'tops') {
       if (dept == 'girl' || dept == 'baby girl') {
         cat = 'tops';
       }
-
       if (dept == 'boy' || dept == 'baby boy') {
         cat = 'tees + shirts';
       }
@@ -56,20 +56,26 @@ $('.size-chart').click(function (e) {
       } else if (dept == 'boy') {
         // console.log('its boy defaults');
         cat = 'tees + shirts';
-      } else if (dept == 'baby girl' || dept == 'baby boy') {
-        // console.log('its baby girl & baby boy defaults');
-        cat = 'rompers';
       }
-    } // console.log('results ',cat);
 
-  }; //set defautls
+      // else if (dept == 'baby girl' || dept == 'baby boy') {
+      // console.log('its baby girl & baby boy defaults');
+      // cat = 'rompers';
+      // }
+    }
 
+    // console.log('results ',cat);
+  };
 
-  setCats(); // console.log('after setCats: ',cat);
+  //set defautls
+  setCats();
+  // console.log('after setCats: ',cat);
+
   //set the <a> to open in a new window with the URL parameters
-
   $(this).attr('target', '_blank');
   $(this).attr('href', '/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat);
+  window.open('/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat, '_blank');
+
   /*
   ! THIS CODE DOESN'T WORK AND NEEDS FIXING
     ! FOR DEV

@@ -2,10 +2,10 @@
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function () {
   //add class to .tips
-  var onloadDeptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department'); // var onloadDeptVal = $('.size-chart-container .department').val();
+  var onloadDeptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
+  // var onloadDeptVal = $('.size-chart-container .department').val();
 
   $('.size-chart-container').find($('.tips')).attr('data-dept', onloadDeptVal);
 };
@@ -15,7 +15,6 @@ module.exports = function () {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function (sizeChartArr) {
   //function to change the background image
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
@@ -27,11 +26,13 @@ module.exports = function (sizeChartArr) {
         //get the cat that match
         if (catVal == arr.name) {
           //add the background img to the page
+
           //desktop
           // if ($(window).width() > 737) {
           //var img = 'url(../images/'+arr.img+')';
           var img = 'url(https://www.teacollection.com/mas_assets/media/tea_collection/landing-pages/size-chart/2020/v0/' + arr.img + ')';
-          $('.size-chart-container .measure-tips').css('background-image', img); // }
+          $('.size-chart-container .measure-tips').css('background-image', img);
+          // }
           //mobile
           // else if ($(window).width() < 737) {
           //   //add the loading
@@ -59,14 +60,16 @@ module.exports = function (sizeChartArr) {
 module.exports = function (sizeChartArr) {
   //function to change the cats dropdown
   //get the value of the .department
-  var dept; //desktop
+  var dept;
+  //desktop
   // if ($(window).width() > 737) {
   //   dept = $('.size-chart-container ul.department .selected').text();
   // }
   //mobile
   // else if ($(window).width() < 737) {
+  dept = $('.size-chart-container select.department').val();
+  // }
 
-  dept = $('.size-chart-container select.department').val(); // }
   // var deptValD = $('.size-chart-container ul.department .selected').text();
   // var deptValM = $('.size-chart-container select.department').val();
 
@@ -90,16 +93,16 @@ module.exports = function (sizeChartArr) {
 },{}],4:[function(require,module,exports){
 "use strict";
 
-var deptCat = require('./set-dept-cat.js'); //function to change the 1st row of the size chart table
-
-
+var deptCat = require('./set-dept-cat.js');
+//function to change the 1st row of the size chart table
 module.exports = function () {
   var d = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var c = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); // var d = $('.size-chart-container .department').val();
+  var c = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+
+  // var d = $('.size-chart-container .department').val();
   // var c = $('.size-chart-container .category').val();
 
   var str;
-
   if (d == 'newborn') {
     str = d + ' size chart';
   } else if (c == 'sweater + outerwear') {
@@ -111,7 +114,6 @@ module.exports = function () {
   } else {
     str = d + ' ' + c + ' size chart';
   }
-
   $('.size-chart-table table .size-chart-header th').html(str);
 };
 
@@ -120,9 +122,9 @@ module.exports = function () {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function (sizeChartArr) {
   //function to change the copy in .measure-tips
+
   //get the value of the selected department and category
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
@@ -159,6 +161,7 @@ module.exports = function (sizeChartArr) {
       //       // console.log(divs);
       //
       //       $('.size-chart-container .measure-tips div p').html(arr.rightP);;
+
       // $.each(divs, function(k, obj) {
       //   if (k == 0) {
       //     //change the h2
@@ -177,6 +180,7 @@ module.exports = function (sizeChartArr) {
       //       } else {
       //         $('.measure-tips div').removeClass('two-rows');
       //       }
+
       //change the h2 .top
       // $(obj).find('.top').find('h2').html(arr.rightH2);
       // //change the p .top
@@ -185,7 +189,9 @@ module.exports = function (sizeChartArr) {
       // $(obj).find('.bottom').find('h2').html(arr.rightH2Bottom);
       // //change the p .bottom
       // $(obj).find('.bottom').find('p').html(arr.rightPBottom);
+
       // }
+
       //mobile
       //     if ($(window).width() < 737) {
       //       //change the h2
@@ -199,23 +205,27 @@ module.exports = function (sizeChartArr) {
       //   });
       //
       // } else {
+
       $.each(val.cat, function (j, arr) {
         //move .top contents out
-        $('.measure-tips div:nth-of-type(2)').append($('.measure-tips .top h2, .measure-tips .top p')); //remove .top & .bottom because of swim
-
-        $('.measure-tips div:nth-of-type(2) .top, .measure-tips div:nth-of-type(2) .bottom').remove(); //remove .swim & .baby-boy-swim from .measure-tips div:first-of-type
-
+        $('.measure-tips div:nth-of-type(2)').append($('.measure-tips .top h2, .measure-tips .top p'));
+        //remove .top & .bottom because of swim
+        $('.measure-tips div:nth-of-type(2) .top, .measure-tips div:nth-of-type(2) .bottom').remove();
+        //remove .swim & .baby-boy-swim from .measure-tips div:first-of-type
         $('.measure-tips div:first-of-type').removeClass('swim');
         $('.measure-tips div:first-of-type').removeClass('baby-boy-swim');
         $('.measure-tips div:nth-of-type(2)').removeClass('two-rows');
-        $('.measure-tips div:nth-of-type(2)').removeClass('baby-boy-swim'); //get the cat that match
+        $('.measure-tips div:nth-of-type(2)').removeClass('baby-boy-swim');
 
+        //get the cat that match
         if (catVal == arr.name) {
           //change the copy
           // console.log(arr);
-          var divs = $('.size-chart-container .measure-tips div'); // console.log(divs);
+          var divs = $('.size-chart-container .measure-tips div');
+          // console.log(divs);
+          divs.find('p').html(arr.rightP);
 
-          divs.find('p').html(arr.rightP); // $.each(divs, function(k, obj) {
+          // $.each(divs, function(k, obj) {
           //   if (k == 0) {
           //change the h2
           // $(obj).find('h2').html(arr.leftH2);
@@ -245,10 +255,12 @@ module.exports = function (sizeChartArr) {
           //   //change the p
           //   $(obj).find('p').html(arr.leftP);
           // }
+
           //   }
           // });
         }
-      }); // }
+      });
+      // }
     }
   });
 };
@@ -258,42 +270,48 @@ module.exports = function (sizeChartArr) {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function (sizeChartArr) {
   //function to change the order of the tables for shoes + accessories
-  var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); //if shoes + accessories re-order the tables
 
+  var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+
+  //if shoes + accessories re-order the tables
   if (cat == 'shoes + accessories') {
     //hide the .size-chart-table children
-    $('.size-chart-table').children().hide(); //add the loading
+    $('.size-chart-table').children().hide();
 
+    //add the loading
     $('.size-chart-table').prepend('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
     setTimeout(function () {
-      var tables = $('.size-chart-table table'); //loop through and re-order
+      var tables = $('.size-chart-table table');
 
+      //loop through and re-order
       $.each(tables, function (i, val) {
-        var str = $(val).find('.size-chart-header th').text(); // console.log(str);
+        var str = $(val).find('.size-chart-header th').text();
+        // console.log(str);
         //if hat make 1st
-
         if (str.indexOf('hat') !== -1) {
           $('.size-chart-table').prepend($(val));
-        } //if headband make 2nd
+        }
 
-
+        //if headband make 2nd
         if (str.indexOf('headband') !== -1) {
           $('.size-chart-table table:nth-of-type(2)').after($(val));
-        } //if socks make last
+        }
 
-
+        //if socks make last
         if (str.indexOf('socks') !== -1) {
           $('.size-chart-table').append($(val));
         }
-      }); //move the 2T/2 message to the bottom
+      });
 
-      $('.size-chart-table').append($('.align-center')); //remove the loading
+      //move the 2T/2 message to the bottom
+      $('.size-chart-table').append($('.align-center'));
 
-      $('.tables-loading').remove(); //show the .size-chart-table table but not .the-table
+      //remove the loading
+      $('.tables-loading').remove();
 
+      //show the .size-chart-table table but not .the-table
       var children = $('.size-chart-table').children();
       $.each(children, function (i, val) {
         //don't show if has class .the-table
@@ -311,28 +329,31 @@ module.exports = function (sizeChartArr) {
 
 module.exports = function () {
   //function on elem change go to ext url
+
   //collapse ul.brand on .brands click
   $('.brands, table, .measure-tips').click(function () {
     $('ul.brand').removeAttr('style');
-  }); //expand or collapse
-  //desktop dropdown to expand and collapse
+  });
 
+  //expand or collapse
+  //desktop dropdown to expand and collapse
   $('ul.brand').click(function () {
     //check if has style attr remove it
     if ($(this).attr('style') !== undefined) {
       $(this).removeAttr('style');
-    } // if doesn't have style attr add css to expand
+    }
+    // if doesn't have style attr add css to expand
     else {
-        $(this).css('height', 'auto');
-      }
-  }); //on .shoes change
-  //<ul>
+      $(this).css('height', 'auto');
+    }
+  });
 
+  //on .shoes change
+  //<ul>
   $('.size-chart-table').find('ul.brand li').click(function () {
     var txt = $(this).text();
     txt = txt.toLowerCase();
     var brand = $(this).attr('data-url');
-
     if (txt !== 'please select a brand') {
       window.open(brand, '_blank');
     }
@@ -344,312 +365,358 @@ module.exports = function () {
 "use strict";
 
 var shoeBrands = require('./shoe-brands.js');
-
 var sizeChartArr = require('./measuring-tips.js');
-
 var deptCat = require('./set-dept-cat.js');
-
 var changeCats = require('./change-cat.js');
-
 var changeBackground = require('./change-background-image.js');
-
 var adjustMeasureCSS = require('./measuring-tips-css.js');
-
 var adjustTipsCSS = require('./tips-css.js');
-
 var addDataAttr = require('./add-data-dept.js');
-
 var changeRow = require('./change-first-row-table.js');
-
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-
 var changeCopy = require('./change-measuring-tips-copy.js');
-
 var changeOrder = require('./change-order.js');
-
 var brandChange = require('./change-shoe-brand.js');
-
 var makeBrands = require('./make-shoe-brands.js');
-
 var makeTd = require('./make-td.js');
-
 var outputTable = require('./output-table.js');
-
 var makeTableHeader = require('./make-table-header.js');
-
 var makeTable = require('./make-table.js');
-
 var onload = require('./onload.js');
-
 $(document).ready(function () {
-  $('body').prepend($('.bg-ref')); //add sizeChartArr to the page for pdp pages
+  $('body').prepend($('.bg-ref'));
 
-  $('.size-chart-container').prepend('<div id="sizeChartArr"></div>'); //loop through sizeChartArr and add the attribute to #sizeChartArr
-
+  //add sizeChartArr to the page for pdp pages
+  $('.size-chart-container').prepend('<div id="sizeChartArr"></div>');
+  //loop through sizeChartArr and add the attribute to #sizeChartArr
   $.each(sizeChartArr, function (i, val) {
     var cats = [];
     var dept = val.dept;
-    dept = dept.replace(' ', '-'); //loop through the categories and push to cats
+    dept = dept.replace(' ', '-');
 
+    //loop through the categories and push to cats
     $.each(val.cat, function (j, cat) {
       cats.push(cat.name);
-    }); //convert cats to string
+    });
 
-    var theCats = cats.join(); //add data attribute to page
-
+    //convert cats to string
+    var theCats = cats.join();
+    //add data attribute to page
     $('#sizeChartArr').attr('data-' + dept, theCats);
   });
+
   /*-----------------------------------------------------------------------------------------*/
+
   //onload make the department dropdown
   //make the department dropdown
-
   $.each(sizeChartArr, function (i, val) {
     //<ul>
     var deptLi = '<li>' + val.dept + '</li>';
-    $('.size-chart-container ul.department').append(deptLi); //<select>
-
+    $('.size-chart-container ul.department').append(deptLi);
+    //<select>
     var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
     $('.size-chart-container select.department').append(deptOption);
   });
+
   /*-----------------------------------------------------------------------------------------*/
+
   //onload
-
   onload();
-  /*-----------------------------------------------------------------------------------------*/
-  //on .department change
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //on .department change
   $('.size-chart-container select.department').change(function () {
     //remove all the <option> in .category
-    $('.size-chart-container select.category option').remove(); //change the cats dropdown
+    $('.size-chart-container select.category option').remove();
 
-    changeCats(sizeChartArr); //change the background image
+    //change the cats dropdown
+    changeCats(sizeChartArr);
 
-    changeBackground(sizeChartArr); //change the copy
+    //change the background image
+    changeBackground(sizeChartArr);
 
-    changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    //change the copy
+    changeCopy(sizeChartArr);
 
-    adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    adjustMeasureCSS();
 
-    adjustTipsCSS(); //add class to .tips
+    //if baby boy or baby girl adjust css on .tips
+    adjustTipsCSS();
 
-    addDataAttr(); //change <th> of the .size-chart-table table
+    //add class to .tips
+    addDataAttr();
 
-    changeRow(); //make the table
+    //change <th> of the .size-chart-table table
+    changeRow();
 
-    makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+    //make the table
+    makeTable();
 
+    //if shoes + accessories or sweaters + outerwear add the brands drop down
     makeBrands();
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //on .category change
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //on .category change
   $('.size-chart-container select.category').change(function () {
     //change the background image
-    changeBackground(sizeChartArr); //change the copy
+    changeBackground(sizeChartArr);
 
-    changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    //change the copy
+    changeCopy(sizeChartArr);
 
-    adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    adjustMeasureCSS();
 
-    adjustTipsCSS(); //change <th> of the .size-chart-table table
+    //if baby boy or baby girl adjust css on .tips
+    adjustTipsCSS();
 
-    changeRow(); //make the table
+    //change <th> of the .size-chart-table table
+    changeRow();
 
-    makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+    //make the table
+    makeTable();
 
-    makeBrands(); //re-order the tables if shoes + accessories
+    //if shoes + accessories or sweaters + outerwear add the brands drop down
+    makeBrands();
 
+    //re-order the tables if shoes + accessories
     changeOrder();
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //desktop dropdown to expand and collapse
-
   $('ul.department, ul.category').click(function () {
     //check if has style attr remove it
     if ($(this).attr('style') !== undefined) {
       $(this).removeAttr('style');
-    } // if doesn't have style attr add css to expand
+    }
+    // if doesn't have style attr add css to expand
     else {
-        $(this).css('height', 'auto');
-        $(this).find('li.selected').text('please select');
-      }
+      $(this).css('height', 'auto');
+      $(this).find('li.selected').text('please select');
+    }
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //desktop dropdown to select new department
-
   $('ul.department li').click(function () {
     if ($(this).attr('class') !== 'selected') {
       //get the clicked li text
-      var txt = $(this).text(); //change the text of .selected
+      var txt = $(this).text();
+      //change the text of .selected
+      $('ul.department .selected').text(txt);
 
-      $('ul.department .selected').text(txt); //remove all the li in ul.category
+      //remove all the li in ul.category
+      $('ul.category li').remove();
 
-      $('ul.category li').remove(); //change the cats dropdown
+      //change the cats dropdown
+      changeCats(sizeChartArr);
 
-      changeCats(sizeChartArr); //prepend <li class="selected">cat</li> to ul.category
-
+      //prepend <li class="selected">cat</li> to ul.category
       var s = $('ul.category li:first-of-type').text();
-      $('ul.category').prepend('<li class="selected">' + s + '</li>'); //change the background image
+      $('ul.category').prepend('<li class="selected">' + s + '</li>');
 
-      changeBackground(sizeChartArr); //change the copy
+      //change the background image
+      changeBackground(sizeChartArr);
 
-      changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+      //change the copy
+      changeCopy(sizeChartArr);
 
-      adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+      //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+      adjustMeasureCSS();
 
-      adjustTipsCSS(); //add class to .tips
+      //if baby boy or baby girl adjust css on .tips
+      adjustTipsCSS();
 
-      addDataAttr(); //change <th> of the .size-chart-table table
+      //add class to .tips
+      addDataAttr();
 
-      changeRow(); //make the table
+      //change <th> of the .size-chart-table table
+      changeRow();
 
-      makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+      //make the table
+      makeTable();
 
-      makeBrands(); //if user changes the ul.category
+      //if shoes + accessories or sweaters + outerwear add the brands drop down
+      makeBrands();
 
+      //if user changes the ul.category
       catLiChange();
     }
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //function for desktop dropdown to select new category
-
   var catLiChange = function catLiChange() {
     $('ul.category li').click(function () {
       if ($(this).attr('class') !== 'selected') {
         //get the clicked li text
-        var txt = $(this).text(); //change the text of .selected
+        var txt = $(this).text();
+        //change the text of .selected
+        $('ul.category .selected').text(txt);
 
-        $('ul.category .selected').text(txt); //change the background image
+        //change the background image
+        changeBackground(sizeChartArr);
 
-        changeBackground(sizeChartArr); //change the copy
+        //change the copy
+        changeCopy(sizeChartArr);
 
-        changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+        //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+        adjustMeasureCSS();
 
-        adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+        //if baby boy or baby girl adjust css on .tips
+        adjustTipsCSS();
 
-        adjustTipsCSS(); //add class to .tips
+        //add class to .tips
+        addDataAttr();
 
-        addDataAttr(); //change <th> of the .size-chart-table table
+        //change <th> of the .size-chart-table table
+        changeRow();
 
-        changeRow(); //make the table
+        //make the table
+        makeTable();
 
-        makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+        //if shoes + accessories or sweaters + outerwear add the brands drop down
+        makeBrands();
 
-        makeBrands(); //re-order the tables if shoes + accessories
-
+        //re-order the tables if shoes + accessories
         changeOrder();
       }
     });
-  }; //onpage load call this
+  };
 
-
+  //onpage load call this
   catLiChange();
+
   /*-----------------------------------------------------------------------------------------*/
+
   // on click .tips
-
   $('.size-chart-container').find($('.tips')).click(function (e) {
-    e.preventDefault(); //get the data-dept
+    e.preventDefault();
 
-    var dept = $(this).attr('data-dept'); //hide h1
+    //get the data-dept
+    var dept = $(this).attr('data-dept');
 
-    $('.size-chart-container h1').hide(); //add the content to .measure-take-over
+    //hide h1
+    $('.size-chart-container h1').hide();
 
+    //add the content to .measure-take-over
     $.each(sizeChartArr, function (i, val) {
       if (dept == val.dept) {
         //add the image
         //desktop
         if ($(window).width() > 737) {
           $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + val.measure.img);
-        } //mobile
+        }
+        //mobile
         else if ($(window).width() < 737) {
-            var imgSrc = val.measure.img;
-            imgSrc = imgSrc.split('.');
-            imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
-            $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc);
-          } //add the chest text
+          var imgSrc = val.measure.img;
+          imgSrc = imgSrc.split('.');
+          imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
+          $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc);
+        }
 
-
-        $('.measure-content .text .chest p').html(val.measure.chest); //add the hips text
-
-        $('.measure-content .text .hips p').html(val.measure.hips); //add the waist text
-
+        //add the chest text
+        $('.measure-content .text .chest p').html(val.measure.chest);
+        //add the hips text
+        $('.measure-content .text .hips p').html(val.measure.hips);
+        //add the waist text
         $('.measure-content .text .waist p').html(val.measure.waist);
       }
-    }); //hide the other elements
+    });
 
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').hide(); //show .measure-take-over
+    //hide the other elements
+    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').hide();
 
+    //show .measure-take-over
     $('.measure-take-over').show();
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //collapse ul.department & ul.category when click on .measure-tips
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //collapse ul.department & ul.category when click on .measure-tips
   $('.measure-tips').click(function () {
     var dept = $('ul.department');
     var cat = $('ul.category');
     var arr = [dept, cat];
     $.each(arr, function (i, val) {
       var attribute = $(val).attr('style');
-
       if (attribute !== undefined) {
         $(val).removeAttr('style');
       }
     });
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //collapse ul.brand when click on .size-chart-table
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //collapse ul.brand when click on .size-chart-table
   $('.brands h2').click(function () {
     $('ul.brand').removeAttr('style');
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //close the .measure-take-over
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //close the .measure-take-over
   $('.measure-take-over .measure, .measure-take-over .return').click(function () {
     //show h1
-    $('.size-chart-container h1').show(); //hide .measure-take-over
-
-    $('.measure-take-over').hide(); //show the other elements
-
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').show(); //reset the .measure-content
-
+    $('.size-chart-container h1').show();
+    //hide .measure-take-over
+    $('.measure-take-over').hide();
+    //show the other elements
+    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').show();
+    //reset the .measure-content
     $('.measure-content img').attr('src', '');
     $('.measure-content .text .chest p, .measure-content .text .hips p, .measure-content .text .waist p').html('');
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //add the loading
 
-  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
   /*-----------------------------------------------------------------------------------------*/
+
+  //add the loading
+  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
+
+  /*-----------------------------------------------------------------------------------------*/
+
   // var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
   // const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
+
   //test sheet
-
-  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c"; //test sheetId
+  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c";
+  //test sheetId
   // const sheetId = `1Qas_UDmBURDfhwpL64VBS6IJGv3eMBXNoVqQOQLn9fo`;
+
   // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
-
   var hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
-  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true"); // console.log(sheetUrl);
+  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true");
+
+  // console.log(sheetUrl);
+
   //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
-
   if (sheets == undefined) {
-    console.log('no sheets go get sheets'); //make the get call
+    console.log('no sheets go get sheets');
 
+    //make the get call
     $.getJSON(sheetUrl, function (data) {
       // console.log(data.sheets);
-      sheets = data.sheets; //make the table
+      sheets = data.sheets;
 
-      makeTable(); //remove the loading
+      //make the table
+      makeTable();
 
+      //remove the loading
       $('.tables-loading').remove();
     });
   } else {
-    console.log('sheets found'); // console.log(sheets);
+    console.log('sheets found');
+    // console.log(sheets);
+
     //make the table
+    makeTable();
 
-    makeTable(); //remove the loading
-
+    //remove the loading
     $('.tables-loading').remove();
   }
 });
@@ -659,20 +726,18 @@ $(document).ready(function () {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 var brandChange = require('./change-shoe-brand.js');
-
 var sizeChartArr = require('./measuring-tips.js');
-
 var shoeBrands = require('./shoe-brands.js');
-
 module.exports = function () {
   //function to make the brand drop down for shoes or sweaters
+
   //remove .brands
   $('.brands, .brands-dropdown').remove();
   var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); //only execute if sweaters or shoes
+  var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
 
+  //only execute if sweaters or shoes
   if (cat == 'sweater + outerwear' || cat == 'shoes + accessories') {
     //make the element to add to the page
     // var elem = '<div class="brands"></div>';
@@ -682,12 +747,14 @@ module.exports = function () {
     var text = '<p>Please select a brand from the menu below to view the size chart. Size chart will open in a new window.</p>';
     var select = $('<select class="brand" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
     var ul = $('<ul class="brand desktop"><li>Please select a brand</li></ul>');
-    var ol = $('<ol class="mobile"></ol>'); //if shoes + accessories
+    var ol = $('<ol class="mobile"></ol>');
 
+    //if shoes + accessories
     if (cat == 'shoes + accessories') {
-      h2 = '<h2>' + dept + ' shoes size chart</h2>'; //add the <option> and <li>
-      //loop through the .sizeChartArr
+      h2 = '<h2>' + dept + ' shoes size chart</h2>';
 
+      //add the <option> and <li>
+      //loop through the .sizeChartArr
       $.each(sizeChartArr, function (i, val) {
         //find the matched dept
         if (dept == val.dept) {
@@ -698,33 +765,42 @@ module.exports = function () {
               //if match output
               if (shoe == brand.brand) {
                 //<ul>
-                var li = '<li data-url="' + brand.url + '">' + shoe + '</li>'; //<ol>
+                var li = '<li data-url="' + brand.url + '">' + shoe + '</li>';
+                //<ol>
+                var li2 = '<li><a href="' + brand.url + '" target="_blank">' + shoe + '</a></li>';
+                //<select>
+                var option = '<option value="' + brand.url + '">' + shoe + '</option>';
 
-                var li2 = '<li><a href="' + brand.url + '" target="_blank">' + shoe + '</a></li>'; //<select>
-
-                var option = '<option value="' + brand.url + '">' + shoe + '</option>'; // $(ul).append(li);
+                // $(ul).append(li);
                 // $(ol).append(li2);
-
                 $(select).append(option);
               }
             });
           });
         }
       });
-    } //else if sweaters + outerwear
-    else if (cat == 'sweater + outerwear') {
-        h2 = '<h2>' + dept + ' outerwear size chart (other brands)</h2>'; //<ul>
-        // $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>');
-        //<ol>
-        // $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>');
-        //<select>
+    }
 
-        $(select).append('<option value="https://www.patagonia.com/size-boys-girls.html">patagonia</option>');
-      } // console.log(h2, text, select);
+    //else if sweaters + outerwear
+    else if (cat == 'sweater + outerwear') {
+      h2 = '<h2>' + dept + ' outerwear size chart (other brands)</h2>';
+      //<ul>
+      // $(ul).append('<li data-url="https://www.patagonia.com/size-boys-girls.html">patagonia</li>');
+
+      //<ol>
+      // $(ol).append('<li><a href="https://www.patagonia.com/size-boys-girls.html" target="_blank">patagonia</a></li>');
+
+      //<select>
+      $(select).append('<option value="https://www.patagonia.com/size-boys-girls.html">patagonia</option>');
+    }
+
+    // console.log(h2, text, select);
+
     //append the elements into .brands
 
+    var brandsContainer = $(elem1).append(h2, text);
 
-    var brandsContainer = $(elem1).append(h2, text); //because of safari not allowing window.open()
+    //because of safari not allowing window.open()
     //if mobile
     // if ($(window).width() < 737) {
     //   //if safari
@@ -739,18 +815,20 @@ module.exports = function () {
     // //not mobile
     // else {
     // var brandsDropdown = $(elem2).append(select, ul);
+    var brandsDropdown = $(elem2).append(select);
+    // }
 
-    var brandsDropdown = $(elem2).append(select); // }
     //add to page
-
     $('.size-chart-table').append(brandsContainer);
-    $('.size-chart-table').append(brandsDropdown); //because of onload append shoe size chart to .size-chart-table
+    $('.size-chart-table').append(brandsDropdown);
 
+    //because of onload append shoe size chart to .size-chart-table
     setTimeout(function () {
       $('.size-chart-table').append($('.brands'));
       $('.size-chart-table').append($('.brands-dropdown'));
-    }, 1500); //on .brand change
+    }, 1500);
 
+    //on .brand change
     brandChange();
   }
 };
@@ -760,16 +838,17 @@ module.exports = function () {
 "use strict";
 
 var makeTd = require('./make-td.js');
-
 module.exports = function (i, val, dept, subcat) {
   //function to make table header because of shoes + accessories have multiple tables
+
   //add new table
-  $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>'); // console.log('rows: ', val);
-
+  $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
+  // console.log('rows: ', val);
   rows = val.merges[0].endColumnIndex - 1;
-  colspan = val.merges[0].endColumnIndex; // console.log(colspan);
-  //add colspan to .size-chart-header
+  colspan = val.merges[0].endColumnIndex;
+  // console.log(colspan);
 
+  //add colspan to .size-chart-header
   $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
   return rows;
 };
@@ -779,102 +858,110 @@ module.exports = function (i, val, dept, subcat) {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 var makeTableHeader = require('./make-table-header.js');
-
 var outputTable = require('./output-table.js');
-
 module.exports = function () {
   //function to create the tables
   //show .the-table
-  $('.size-chart-table .the-table').show(); //remove all <tr> except the 1st one
+  $('.size-chart-table .the-table').show();
 
+  //remove all <tr> except the 1st one
   var trs = $('.size-chart-table table tr');
   $.each(trs, function (i, val) {
     if ($(val).attr('class') !== 'size-chart-header') {
       $(val).remove();
     }
-  }); //remove all the tables except the .the-table
+  });
 
+  //remove all the tables except the .the-table
   var tables = $('.size-chart-table table');
   $.each(tables, function (i, val) {
     if ($(val).attr('class') !== 'the-table') {
       $(val).remove();
     }
-  }); //the selected values
+  });
 
+  //the selected values
   var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
   var sheet = sheets;
   console.log('from make-table.js');
-  console.log(sheet); //loop through sheet and find the matched table
+  console.log(sheet);
 
+  //loop through sheet and find the matched table
   $.each(sheet, function (i, val) {
     var sheetVal = val.data[0].rowData[2].values[0].formattedValue;
     var sheetArr = sheetVal.split(':');
     var sheetDept = sheetArr[0];
-    var sheetCatArr = sheetArr[1].split(','); // console.log(sheetCatArr);
-    //if baby
+    var sheetCatArr = sheetArr[1].split(',');
+    // console.log(sheetCatArr);
 
+    //if baby
     if (sheetDept == 'baby') {
       sheetDept = ['baby girl', 'baby boy'];
-    } //check if dept matches
+    }
 
-
+    //check if dept matches
     if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
       //check if cat matches
       $.each(sheetCatArr, function (j, category) {
         if (category == cat) {
           // console.log(i,val);
           var rows;
-          var colspan; //if newborn department or category is shoes + accessories
+          var colspan;
 
+          //if newborn department or category is shoes + accessories
           if (dept == 'newborn' || cat == 'shoes + accessories') {
             //hide the top table
             $('.size-chart-container .the-table').hide();
-            var subcat = val.data[0].rowData[2].values[0].formattedValue; //if not newborn
+            var subcat = val.data[0].rowData[2].values[0].formattedValue;
 
+            //if not newborn
             if (dept !== 'newborn') {
               subcat = subcat.split(',')[1];
             } else {
               //this is newborn
               subcat = subcat.split(',');
-
               if (subcat[1] !== undefined) {
                 subcat = subcat[1];
               } else {
                 subcat = 'all categories';
               }
-            } // console.log(subcat);
+            }
+
+            // console.log(subcat);
+
             //if girl
-
-
             if (dept == 'girl') {
               rows = makeTableHeader(i, val, dept, subcat);
-            } //if boy || baby girl || baby baby
+            }
 
-
+            //if boy || baby girl || baby baby
             if (dept == 'boy' || dept == 'baby girl' || dept == 'baby boy') {
               rows = makeTableHeader(i, val, dept, subcat);
-            } //if newborn
+            }
 
-
+            //if newborn
             if (dept == 'newborn') {
               rows = makeTableHeader(i, val, dept, subcat);
-            } //output the table contents
+            }
 
+            //output the table contents
+            outputTable(i, val, rows);
 
-            outputTable(i, val, rows); //stop the function
-
+            //stop the function
             return false;
           } else {
             rows = val.merges[0].endColumnIndex - 1;
-            colspan = val.merges[0].endColumnIndex; //add colspan to .size-chart-header
+            colspan = val.merges[0].endColumnIndex;
 
-            $('.size-chart-header th').attr('colspan', colspan); //output the table contents
+            //add colspan to .size-chart-header
+            $('.size-chart-header th').attr('colspan', colspan);
 
-            outputTable(i, val, rows); //stop the function
+            //output the table contents
+            outputTable(i, val, rows);
 
+            //stop the function
             return false;
           }
         }
@@ -889,37 +976,38 @@ module.exports = function () {
 
 module.exports = function (k, row, rows, tableElem) {
   //function to make th <td>
+
   // console.log(tableElem);
   // console.log(k, row, rows);
+
   //add the data <td>
   $.each(row.values, function (l, td) {
     //loop only to the rows variable
     if (l <= rows) {
       var content;
       var fraction;
-      var theFraction; // console.log(l, rows, row);
+      var theFraction;
+      // console.log(l, rows, row);
 
       if (td.formattedValue !== undefined) {
-        content = td.formattedValue; // console.log(content);
-
+        content = td.formattedValue;
+        // console.log(content);
         content = content.toLowerCase();
         content = content.replace(' - ', '&ndash;');
         content = content.replace('months', 'mos');
         content = content.replace('years', 'yrs');
-
         if (content.indexOf('inches') !== -1 || content.indexOf('pounds') !== -1) {
-          content = content.split('\n'); // console.log(content);
+          content = content.split('\n');
+          // console.log(content);
 
           content = content[0] + '<span>' + content[1] + '</span>';
         }
-
         if (content == 'shoe size') {
           content = '<span class="shoe-size">' + content + '</span>';
         }
-
-        fraction = td.formattedValue; // console.log('the fraction: ',fraction);
+        fraction = td.formattedValue;
+        // console.log('the fraction: ',fraction);
         //for shoes + accessories if not L/XL
-
         if (fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4') {
           //if cell has two fractions example 58 1/2 - 61 1/2
           if (fraction.indexOf('/') !== -1 && fraction.indexOf('-') !== -1) {
@@ -932,46 +1020,57 @@ module.exports = function (k, row, rows, tableElem) {
                   twoFrac.push(num);
                 }
               });
-            }); // console.log(twoFrac);
+            });
+
+            // console.log(twoFrac);
+
             //output
             //example 61 1/2 - 64
-
             if (twoFrac[1].indexOf('/') !== -1 && twoFrac[3] == undefined) {
               var twoFracA = twoFrac[1].split('/');
               twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + '</td>');
-            } //example 61 - 61 1/2
+            }
+
+            //example 61 - 61 1/2
             else if (twoFrac[1].indexOf('/') == -1 && twoFrac[2].indexOf('/') !== -1) {
-                var twoFracA = twoFrac[2].split('/');
-                twoFrac[2] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
-                $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
-              } //example 58 1/2 - 61 1/2
-              else if (twoFrac[1].indexOf('/') !== -1 && twoFrac[1] !== undefined && twoFrac[3].indexOf('/') !== -1 && twoFrac[3] !== undefined) {
-                  var twoFracA = twoFrac[1].split('/');
-                  twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
-                  var twoFracB = twoFrac[3].split('/');
-                  twoFrac[3] = '<sup class="frac">' + twoFracB[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracB[1] + '</span>';
-                  $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] + '</td>');
-                }
-          } //only one fraction
+              var twoFracA = twoFrac[2].split('/');
+              twoFrac[2] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
+            }
+
+            //example 58 1/2 - 61 1/2
+            else if (twoFrac[1].indexOf('/') !== -1 && twoFrac[1] !== undefined && twoFrac[3].indexOf('/') !== -1 && twoFrac[3] !== undefined) {
+              var twoFracA = twoFrac[1].split('/');
+              twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
+              var twoFracB = twoFrac[3].split('/');
+              twoFrac[3] = '<sup class="frac">' + twoFracB[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracB[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] + '</td>');
+            }
+          }
+
+          //only one fraction
           else {
-              fraction = fraction.split(' ');
-              $.each(fraction, function (m, frac) {
-                // console.log(m, frac);
-                if (frac.indexOf('/') !== -1) {
-                  theFraction = frac; // console.log('theFraction: ',theFraction);
-                }
-              }); //output
-
-              if (theFraction !== undefined && theFraction.indexOf('/') !== -1) {
-                theFraction = theFraction.split('/');
-                var htmlFraction = '<sup class="frac">' + theFraction[0] + '</sup>&frasl;<span class="frac denominator">' + theFraction[1] + '</span>';
-                $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction[0] + ' ' + htmlFraction + '</td>');
-              } else {
-                $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + content + '</td>');
+            fraction = fraction.split(' ');
+            $.each(fraction, function (m, frac) {
+              // console.log(m, frac);
+              if (frac.indexOf('/') !== -1) {
+                theFraction = frac;
+                // console.log('theFraction: ',theFraction);
               }
-            } //output sizes 'L/XL','2T/2','3T/3','4T/4'
+            });
 
+            //output
+            if (theFraction !== undefined && theFraction.indexOf('/') !== -1) {
+              theFraction = theFraction.split('/');
+              var htmlFraction = '<sup class="frac">' + theFraction[0] + '</sup>&frasl;<span class="frac denominator">' + theFraction[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction[0] + ' ' + htmlFraction + '</td>');
+            } else {
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + content + '</td>');
+            }
+          }
+
+          //output sizes 'L/XL','2T/2','3T/3','4T/4'
         } else if (fraction == 'L/XL' || fraction == '2T/2' || fraction == '3T/3' || fraction == '4T/4') {
           // console.log('yo buddy: ', fraction);
           $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction + '</td>');
@@ -986,13 +1085,16 @@ module.exports = function (k, row, rows, tableElem) {
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function () {
   //function to adjust css for .measure-tips
+
   //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
   // var catVal = $('.size-chart-container .category').val();
+
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); //if mobile change the height of the .measure-tips div
+  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+
+  //if mobile change the height of the .measure-tips div
   // if ($(window).width() < 737) {
   //   //if .measure-tips div has style remove it
   //   $('.measure-tips div').removeAttr('style');
@@ -1009,6 +1111,7 @@ module.exports = function () {
   //   //set the height
   //   $('.measure-tips div').css('height', mHeight);
   // }
+
   // if (catVal == 'shoes + accessories' || catVal == 'pajamas') {
   //   //desktop
   //   if ($(window).width() > 737) {
@@ -1063,6 +1166,7 @@ module.exports = function () {
   //     $('.measure-tips div').css('height', '0px');
   //   }
   // }
+
   // else remove the style attribute on .tips and change css on .measure-tips
   // else {
   //   //$('.size-chart-container').find($('.tips')).removeAttr('style');
@@ -1138,8 +1242,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -1194,8 +1297,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'baby girl',
   shoes: ['yosi samra', 'vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
@@ -1263,9 +1365,15 @@ module.exports = [{
     leftP: '',
     rightH2: '',
     rightP: ''
+  }, {
+    name: 'swim diapers',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'baby boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -1326,9 +1434,15 @@ module.exports = [{
     leftP: '',
     rightH2: '',
     rightP: ''
+  }, {
+    name: 'swim diapers',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'newborn',
   cat: [{
@@ -1339,8 +1453,7 @@ module.exports = [{
     rightH2: 'Romper Rules',
     rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!'
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'adult unisex',
   cat: [{
@@ -1358,8 +1471,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'women',
   cat: [{
@@ -1391,8 +1503,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'men',
   cat: [{
@@ -1410,64 +1521,56 @@ module.exports = [{
 "use strict";
 
 var shoeBrands = require('./shoe-brands.js');
-
 var sizeChartArr = require('./measuring-tips.js');
-
 var deptCat = require('./set-dept-cat.js');
-
 var changeCats = require('./change-cat.js');
-
 var changeBackground = require('./change-background-image.js');
-
 var adjustMeasureCSS = require('./measuring-tips-css.js');
-
 var adjustTipsCSS = require('./tips-css.js');
-
 var addDataAttr = require('./add-data-dept.js');
-
 var changeRow = require('./change-first-row-table.js');
-
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-
 var changeCopy = require('./change-measuring-tips-copy.js');
-
 var changeOrder = require('./change-order.js');
-
 var brandChange = require('./change-shoe-brand.js');
-
 var makeBrands = require('./make-shoe-brands.js');
-
 var makeTd = require('./make-td.js');
-
 var outputTable = require('./output-table.js');
-
 var makeTableHeader = require('./make-table-header.js');
-
 var makeTable = require('./make-table.js');
-
 module.exports = function () {
   //onload select Dept based on url params
-  selectDeptCat('selectedDept', '.size-chart-container ul.department li', '.size-chart-container select.department'); //onload change the cats dropdown
+  selectDeptCat('selectedDept', '.size-chart-container ul.department li', '.size-chart-container select.department');
+
+  //onload change the cats dropdown
   //make the category dropdown
+  changeCats(sizeChartArr);
 
-  changeCats(sizeChartArr); //onload select Cat based on url params
+  //onload select Cat based on url params
+  selectDeptCat('selectedCat', '.size-chart-container ul.category li', '.size-chart-container select.category');
 
-  selectDeptCat('selectedCat', '.size-chart-container ul.category li', '.size-chart-container select.category'); //onload change the background image
+  //onload change the background image
+  changeBackground(sizeChartArr);
 
-  changeBackground(sizeChartArr); //onload change the copy
+  //onload change the copy
+  changeCopy(sizeChartArr);
 
-  changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+  //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+  adjustMeasureCSS();
 
-  adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+  //if baby boy or baby girl adjust css on .tips
+  adjustTipsCSS();
 
-  adjustTipsCSS(); //add class to .tips
+  //add class to .tips
+  addDataAttr();
 
-  addDataAttr(); //change <th> of the .size-chart-table table
+  //change <th> of the .size-chart-table table
+  changeRow();
 
-  changeRow(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+  //if shoes + accessories or sweaters + outerwear add the brands drop down
+  makeBrands();
 
-  makeBrands(); //re-order the tables if shoes + accessories
-
+  //re-order the tables if shoes + accessories
   changeOrder();
 };
 
@@ -1476,33 +1579,40 @@ module.exports = function () {
 "use strict";
 
 var makeTd = require('./make-td.js');
-
 module.exports = function (i, val, rows) {
   //function to output the table contents
+
   //output the table
   $.each(val.data[0].rowData, function (k, row) {
     //add the row <tr>
     if (k > 2) {
-      var tableLength = $('.size-chart-table table').length; // console.log(tableLength);
+      var tableLength = $('.size-chart-table table').length;
+      // console.log(tableLength);
+
       //check if the number of rows is even or odd then add class
+      var tableNum = val.data[0].rowData.length - 4;
 
-      var tableNum = val.data[0].rowData.length - 4; //if only one table (not shoes + accessories)
-
+      //if only one table (not shoes + accessories)
       if (tableLength == 1) {
-        $('.size-chart-container .the-table').append('<tr data-num="' + k + '"></tr>'); //add the data <td>
+        $('.size-chart-container .the-table').append('<tr data-num="' + k + '"></tr>');
 
+        //add the data <td>
         makeTd(k, row, rows, '.size-chart-container .the-table');
-      } //if multiple tables (shoes + accessories)
+      }
+      //if multiple tables (shoes + accessories)
       else if (tableLength > 1) {
-          // console.log(row.values[0].formattedValue);
-          //only make a row if the 1st td of the row has data
-          if (row.values[0].formattedValue !== undefined) {
-            $('.size-chart-table table[data-num="' + i + '"]').append('<tr data-num="' + k + '"></tr>'); // console.log('more then one table\n this is the index\n' + i);
-            //add the data <td>
+        // console.log(row.values[0].formattedValue);
 
-            makeTd(k, row, rows, '.size-chart-table table[data-num="' + i + '"]');
-          }
+        //only make a row if the 1st td of the row has data
+        if (row.values[0].formattedValue !== undefined) {
+          $('.size-chart-table table[data-num="' + i + '"]').append('<tr data-num="' + k + '"></tr>');
+
+          // console.log('more then one table\n this is the index\n' + i);
+
+          //add the data <td>
+          makeTd(k, row, rows, '.size-chart-table table[data-num="' + i + '"]');
         }
+      }
     }
   });
 };
@@ -1513,27 +1623,30 @@ module.exports = function (i, val, rows) {
 
 module.exports = function (urlpara, elem1, elem2) {
   //function to select the department & category based  url params
+
   //onload check if parameters in url for department and category
   var urlParam = window.location.href;
   var ul = elem1;
-  ul = ul.replace('li', ''); //check if parameters
+  ul = ul.replace('li', '');
 
+  //check if parameters
   if (urlParam.indexOf('?') !== -1) {
-    var paramArr = urlParam.split('?'); //split the parameters into an array
-
-    paramArr = paramArr[1].split('&'); //loop through the array to find selectedDept & selectedCat then change the selected values from the dropdown
-
+    var paramArr = urlParam.split('?');
+    //split the parameters into an array
+    paramArr = paramArr[1].split('&');
+    //loop through the array to find selectedDept & selectedCat then change the selected values from the dropdown
     $.each(paramArr, function (i, val) {
       var param = val.split('=');
-
       if (param[0] == urlpara) {
-        var dept = param[1]; //if 20% in variable change to ' '
+        var dept = param[1];
+        //if 20% in variable change to ' '
+        dept = String(dept.replace(/%20/g, ' '));
 
-        dept = String(dept.replace(/%20/g, ' ')); //change the value selected from the dropdown
+        //change the value selected from the dropdown
         //<ul>
+        $(ul).prepend('<li class="selected">' + dept + '</li>');
 
-        $(ul).prepend('<li class="selected">' + dept + '</li>'); //<select>
-
+        //<select>
         $(elem2).val(dept);
       }
     });
@@ -1550,7 +1663,8 @@ module.exports = function (urlpara, elem1, elem2) {
 
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
-  var Val; //desktop
+  var Val;
+  //desktop
   // if ($(window).width() > 737) {
   //   //get the value of the .department or .category
   //   Val = $(elem1).text();
@@ -1558,8 +1672,8 @@ module.exports = function (elem1, elem2) {
   //mobile
   // else {
   //get the value of the .department or .category
-
-  Val = $(elem2).val(); // }
+  Val = $(elem2).val();
+  // }
 
   return Val;
 };
@@ -1620,11 +1734,13 @@ module.exports = [{
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function () {
   //function to adjust css for .tips
+
   var deptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category'); // var deptVal = $('.size-chart-container .department').val();
+  var catVal = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+  // var deptVal = $('.size-chart-container .department').val();
+
   // if (deptVal == 'baby girl' || deptVal == 'baby boy') {
   //   //desktop
   //   if ($(window).width() > 737) {

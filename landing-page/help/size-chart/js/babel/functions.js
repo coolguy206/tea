@@ -1,312 +1,358 @@
 "use strict";
 
 var shoeBrands = require('./shoe-brands.js');
-
 var sizeChartArr = require('./measuring-tips.js');
-
 var deptCat = require('./set-dept-cat.js');
-
 var changeCats = require('./change-cat.js');
-
 var changeBackground = require('./change-background-image.js');
-
 var adjustMeasureCSS = require('./measuring-tips-css.js');
-
 var adjustTipsCSS = require('./tips-css.js');
-
 var addDataAttr = require('./add-data-dept.js');
-
 var changeRow = require('./change-first-row-table.js');
-
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-
 var changeCopy = require('./change-measuring-tips-copy.js');
-
 var changeOrder = require('./change-order.js');
-
 var brandChange = require('./change-shoe-brand.js');
-
 var makeBrands = require('./make-shoe-brands.js');
-
 var makeTd = require('./make-td.js');
-
 var outputTable = require('./output-table.js');
-
 var makeTableHeader = require('./make-table-header.js');
-
 var makeTable = require('./make-table.js');
-
 var onload = require('./onload.js');
-
 $(document).ready(function () {
-  $('body').prepend($('.bg-ref')); //add sizeChartArr to the page for pdp pages
+  $('body').prepend($('.bg-ref'));
 
-  $('.size-chart-container').prepend('<div id="sizeChartArr"></div>'); //loop through sizeChartArr and add the attribute to #sizeChartArr
-
+  //add sizeChartArr to the page for pdp pages
+  $('.size-chart-container').prepend('<div id="sizeChartArr"></div>');
+  //loop through sizeChartArr and add the attribute to #sizeChartArr
   $.each(sizeChartArr, function (i, val) {
     var cats = [];
     var dept = val.dept;
-    dept = dept.replace(' ', '-'); //loop through the categories and push to cats
+    dept = dept.replace(' ', '-');
 
+    //loop through the categories and push to cats
     $.each(val.cat, function (j, cat) {
       cats.push(cat.name);
-    }); //convert cats to string
+    });
 
-    var theCats = cats.join(); //add data attribute to page
-
+    //convert cats to string
+    var theCats = cats.join();
+    //add data attribute to page
     $('#sizeChartArr').attr('data-' + dept, theCats);
   });
+
   /*-----------------------------------------------------------------------------------------*/
+
   //onload make the department dropdown
   //make the department dropdown
-
   $.each(sizeChartArr, function (i, val) {
     //<ul>
     var deptLi = '<li>' + val.dept + '</li>';
-    $('.size-chart-container ul.department').append(deptLi); //<select>
-
+    $('.size-chart-container ul.department').append(deptLi);
+    //<select>
     var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
     $('.size-chart-container select.department').append(deptOption);
   });
+
   /*-----------------------------------------------------------------------------------------*/
+
   //onload
-
   onload();
-  /*-----------------------------------------------------------------------------------------*/
-  //on .department change
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //on .department change
   $('.size-chart-container select.department').change(function () {
     //remove all the <option> in .category
-    $('.size-chart-container select.category option').remove(); //change the cats dropdown
+    $('.size-chart-container select.category option').remove();
 
-    changeCats(sizeChartArr); //change the background image
+    //change the cats dropdown
+    changeCats(sizeChartArr);
 
-    changeBackground(sizeChartArr); //change the copy
+    //change the background image
+    changeBackground(sizeChartArr);
 
-    changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    //change the copy
+    changeCopy(sizeChartArr);
 
-    adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    adjustMeasureCSS();
 
-    adjustTipsCSS(); //add class to .tips
+    //if baby boy or baby girl adjust css on .tips
+    adjustTipsCSS();
 
-    addDataAttr(); //change <th> of the .size-chart-table table
+    //add class to .tips
+    addDataAttr();
 
-    changeRow(); //make the table
+    //change <th> of the .size-chart-table table
+    changeRow();
 
-    makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+    //make the table
+    makeTable();
 
+    //if shoes + accessories or sweaters + outerwear add the brands drop down
     makeBrands();
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //on .category change
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //on .category change
   $('.size-chart-container select.category').change(function () {
     //change the background image
-    changeBackground(sizeChartArr); //change the copy
+    changeBackground(sizeChartArr);
 
-    changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    //change the copy
+    changeCopy(sizeChartArr);
 
-    adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    adjustMeasureCSS();
 
-    adjustTipsCSS(); //change <th> of the .size-chart-table table
+    //if baby boy or baby girl adjust css on .tips
+    adjustTipsCSS();
 
-    changeRow(); //make the table
+    //change <th> of the .size-chart-table table
+    changeRow();
 
-    makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+    //make the table
+    makeTable();
 
-    makeBrands(); //re-order the tables if shoes + accessories
+    //if shoes + accessories or sweaters + outerwear add the brands drop down
+    makeBrands();
 
+    //re-order the tables if shoes + accessories
     changeOrder();
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //desktop dropdown to expand and collapse
-
   $('ul.department, ul.category').click(function () {
     //check if has style attr remove it
     if ($(this).attr('style') !== undefined) {
       $(this).removeAttr('style');
-    } // if doesn't have style attr add css to expand
+    }
+    // if doesn't have style attr add css to expand
     else {
-        $(this).css('height', 'auto');
-        $(this).find('li.selected').text('please select');
-      }
+      $(this).css('height', 'auto');
+      $(this).find('li.selected').text('please select');
+    }
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //desktop dropdown to select new department
-
   $('ul.department li').click(function () {
     if ($(this).attr('class') !== 'selected') {
       //get the clicked li text
-      var txt = $(this).text(); //change the text of .selected
+      var txt = $(this).text();
+      //change the text of .selected
+      $('ul.department .selected').text(txt);
 
-      $('ul.department .selected').text(txt); //remove all the li in ul.category
+      //remove all the li in ul.category
+      $('ul.category li').remove();
 
-      $('ul.category li').remove(); //change the cats dropdown
+      //change the cats dropdown
+      changeCats(sizeChartArr);
 
-      changeCats(sizeChartArr); //prepend <li class="selected">cat</li> to ul.category
-
+      //prepend <li class="selected">cat</li> to ul.category
       var s = $('ul.category li:first-of-type').text();
-      $('ul.category').prepend('<li class="selected">' + s + '</li>'); //change the background image
+      $('ul.category').prepend('<li class="selected">' + s + '</li>');
 
-      changeBackground(sizeChartArr); //change the copy
+      //change the background image
+      changeBackground(sizeChartArr);
 
-      changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+      //change the copy
+      changeCopy(sizeChartArr);
 
-      adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+      //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+      adjustMeasureCSS();
 
-      adjustTipsCSS(); //add class to .tips
+      //if baby boy or baby girl adjust css on .tips
+      adjustTipsCSS();
 
-      addDataAttr(); //change <th> of the .size-chart-table table
+      //add class to .tips
+      addDataAttr();
 
-      changeRow(); //make the table
+      //change <th> of the .size-chart-table table
+      changeRow();
 
-      makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+      //make the table
+      makeTable();
 
-      makeBrands(); //if user changes the ul.category
+      //if shoes + accessories or sweaters + outerwear add the brands drop down
+      makeBrands();
 
+      //if user changes the ul.category
       catLiChange();
     }
   });
+
   /*-----------------------------------------------------------------------------------------*/
   //function for desktop dropdown to select new category
-
   var catLiChange = function catLiChange() {
     $('ul.category li').click(function () {
       if ($(this).attr('class') !== 'selected') {
         //get the clicked li text
-        var txt = $(this).text(); //change the text of .selected
+        var txt = $(this).text();
+        //change the text of .selected
+        $('ul.category .selected').text(txt);
 
-        $('ul.category .selected').text(txt); //change the background image
+        //change the background image
+        changeBackground(sizeChartArr);
 
-        changeBackground(sizeChartArr); //change the copy
+        //change the copy
+        changeCopy(sizeChartArr);
 
-        changeCopy(sizeChartArr); //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+        //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+        adjustMeasureCSS();
 
-        adjustMeasureCSS(); //if baby boy or baby girl adjust css on .tips
+        //if baby boy or baby girl adjust css on .tips
+        adjustTipsCSS();
 
-        adjustTipsCSS(); //add class to .tips
+        //add class to .tips
+        addDataAttr();
 
-        addDataAttr(); //change <th> of the .size-chart-table table
+        //change <th> of the .size-chart-table table
+        changeRow();
 
-        changeRow(); //make the table
+        //make the table
+        makeTable();
 
-        makeTable(); //if shoes + accessories or sweaters + outerwear add the brands drop down
+        //if shoes + accessories or sweaters + outerwear add the brands drop down
+        makeBrands();
 
-        makeBrands(); //re-order the tables if shoes + accessories
-
+        //re-order the tables if shoes + accessories
         changeOrder();
       }
     });
-  }; //onpage load call this
+  };
 
-
+  //onpage load call this
   catLiChange();
+
   /*-----------------------------------------------------------------------------------------*/
+
   // on click .tips
-
   $('.size-chart-container').find($('.tips')).click(function (e) {
-    e.preventDefault(); //get the data-dept
+    e.preventDefault();
 
-    var dept = $(this).attr('data-dept'); //hide h1
+    //get the data-dept
+    var dept = $(this).attr('data-dept');
 
-    $('.size-chart-container h1').hide(); //add the content to .measure-take-over
+    //hide h1
+    $('.size-chart-container h1').hide();
 
+    //add the content to .measure-take-over
     $.each(sizeChartArr, function (i, val) {
       if (dept == val.dept) {
         //add the image
         //desktop
         if ($(window).width() > 737) {
           $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + val.measure.img);
-        } //mobile
+        }
+        //mobile
         else if ($(window).width() < 737) {
-            var imgSrc = val.measure.img;
-            imgSrc = imgSrc.split('.');
-            imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
-            $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc);
-          } //add the chest text
+          var imgSrc = val.measure.img;
+          imgSrc = imgSrc.split('.');
+          imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
+          $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc);
+        }
 
-
-        $('.measure-content .text .chest p').html(val.measure.chest); //add the hips text
-
-        $('.measure-content .text .hips p').html(val.measure.hips); //add the waist text
-
+        //add the chest text
+        $('.measure-content .text .chest p').html(val.measure.chest);
+        //add the hips text
+        $('.measure-content .text .hips p').html(val.measure.hips);
+        //add the waist text
         $('.measure-content .text .waist p').html(val.measure.waist);
       }
-    }); //hide the other elements
+    });
 
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').hide(); //show .measure-take-over
+    //hide the other elements
+    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').hide();
 
+    //show .measure-take-over
     $('.measure-take-over').show();
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //collapse ul.department & ul.category when click on .measure-tips
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //collapse ul.department & ul.category when click on .measure-tips
   $('.measure-tips').click(function () {
     var dept = $('ul.department');
     var cat = $('ul.category');
     var arr = [dept, cat];
     $.each(arr, function (i, val) {
       var attribute = $(val).attr('style');
-
       if (attribute !== undefined) {
         $(val).removeAttr('style');
       }
     });
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //collapse ul.brand when click on .size-chart-table
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //collapse ul.brand when click on .size-chart-table
   $('.brands h2').click(function () {
     $('ul.brand').removeAttr('style');
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //close the .measure-take-over
 
+  /*-----------------------------------------------------------------------------------------*/
+
+  //close the .measure-take-over
   $('.measure-take-over .measure, .measure-take-over .return').click(function () {
     //show h1
-    $('.size-chart-container h1').show(); //hide .measure-take-over
-
-    $('.measure-take-over').hide(); //show the other elements
-
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').show(); //reset the .measure-content
-
+    $('.size-chart-container h1').show();
+    //hide .measure-take-over
+    $('.measure-take-over').hide();
+    //show the other elements
+    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').show();
+    //reset the .measure-content
     $('.measure-content img').attr('src', '');
     $('.measure-content .text .chest p, .measure-content .text .hips p, .measure-content .text .waist p').html('');
   });
-  /*-----------------------------------------------------------------------------------------*/
-  //add the loading
 
-  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
   /*-----------------------------------------------------------------------------------------*/
+
+  //add the loading
+  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
+
+  /*-----------------------------------------------------------------------------------------*/
+
   // var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
   // const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
+
   //test sheet
-
-  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c"; //test sheetId
+  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c";
+  //test sheetId
   // const sheetId = `1Qas_UDmBURDfhwpL64VBS6IJGv3eMBXNoVqQOQLn9fo`;
+
   // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
-
   var hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
-  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true"); // console.log(sheetUrl);
+  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true");
+
+  // console.log(sheetUrl);
+
   //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
-
   if (sheets == undefined) {
-    console.log('no sheets go get sheets'); //make the get call
+    console.log('no sheets go get sheets');
 
+    //make the get call
     $.getJSON(sheetUrl, function (data) {
       // console.log(data.sheets);
-      sheets = data.sheets; //make the table
+      sheets = data.sheets;
 
-      makeTable(); //remove the loading
+      //make the table
+      makeTable();
 
+      //remove the loading
       $('.tables-loading').remove();
     });
   } else {
-    console.log('sheets found'); // console.log(sheets);
+    console.log('sheets found');
+    // console.log(sheets);
+
     //make the table
+    makeTable();
 
-    makeTable(); //remove the loading
-
+    //remove the loading
     $('.tables-loading').remove();
   }
 });

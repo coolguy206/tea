@@ -61,8 +61,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -117,8 +116,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'baby girl',
   shoes: ['yosi samra', 'vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
@@ -186,9 +184,15 @@ module.exports = [{
     leftP: '',
     rightH2: '',
     rightP: ''
+  }, {
+    name: 'swim diapers',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'baby boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -249,9 +253,15 @@ module.exports = [{
     leftP: '',
     rightH2: '',
     rightP: ''
+  }, {
+    name: 'swim diapers',
+    img: '',
+    leftH2: '',
+    leftP: '',
+    rightH2: '',
+    rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'newborn',
   cat: [{
@@ -262,8 +272,7 @@ module.exports = [{
     rightH2: 'Romper Rules',
     rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!'
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'adult unisex',
   cat: [{
@@ -281,8 +290,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'women',
   cat: [{
@@ -314,8 +322,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }]
-},
-/*-----------------------------------------------------------------------------------------*/
+}, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'men',
   cat: [{

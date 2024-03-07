@@ -2,10 +2,10 @@
 "use strict";
 
 var deptCat = require('./set-dept-cat.js');
-
 module.exports = function () {
   //add class to .tips
-  var onloadDeptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department'); // var onloadDeptVal = $('.size-chart-container .department').val();
+  var onloadDeptVal = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
+  // var onloadDeptVal = $('.size-chart-container .department').val();
 
   $('.size-chart-container').find($('.tips')).attr('data-dept', onloadDeptVal);
 };
@@ -16,7 +16,8 @@ module.exports = function () {
 
 module.exports = function (elem1, elem2) {
   //function to set the selected department and category for desktop or mobile
-  var Val; //desktop
+  var Val;
+  //desktop
   // if ($(window).width() > 737) {
   //   //get the value of the .department or .category
   //   Val = $(elem1).text();
@@ -24,8 +25,8 @@ module.exports = function (elem1, elem2) {
   //mobile
   // else {
   //get the value of the .department or .category
-
-  Val = $(elem2).val(); // }
+  Val = $(elem2).val();
+  // }
 
   return Val;
 };
