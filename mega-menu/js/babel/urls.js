@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.urls = void 0;
-var urls = {
+var urls = exports.urls = {
   promo: {
     promo: "/free-gift-wrap",
     swim: "/swimwear",
@@ -100,5 +100,4 @@ var urls = {
     }
   }
 };
-exports.urls = urls;
 //# sourceMappingURL=urls.js.map
