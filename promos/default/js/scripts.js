@@ -54,7 +54,7 @@ jQuery(document).ready(function () {
     $.fancybox.close();
 
   });
-/*
+
   $('.promos-wrap').bxSlider({
     auto: true,
     autoHover: true,
@@ -66,5 +66,5 @@ jQuery(document).ready(function () {
     //     $('.promos.promo2, .promos.promo3').show();
     // }
   });
-*/
+
 });
