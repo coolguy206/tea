@@ -1293,12 +1293,35 @@
 <div class="site-nav-submenu pjs">
 	<div class="bar">
 
+		<div>
+		  <a href="/girls-pajamas-sleepwear" data="mega menu pajamas">Girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/boys-pajamas-sleepwear" data="mega menu pajamas">Boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-girl-pajamas" data="mega menu pajamas">Baby Girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-boy-pajamas" data="mega menu pajamas">Baby Boy</a>
+		  <span class="line"></span>
+		</div>
+
 		{sub_cats name="cat" category="pajamas"}
+		{if $cat.title != 'Girl' && $cat.title != 'Boy' && $cat.title != 'Baby Girl' && $cat.title != 'Baby Boy'}
 		<div>
 		  <a href="{$cat.url}" data="mega menu pajamas">{$cat.title}</a>
 		  <span class="line"></span>
 		</div>
+		{/if}
 		{/sub_cats}
+
 		<div>
 		  <a href="/family-outfitting/pajamas" data="mega menu pajamas">Family Pajamas</a>
 		  <span class="line"></span>
