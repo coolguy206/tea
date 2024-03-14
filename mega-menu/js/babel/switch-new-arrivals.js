@@ -17,6 +17,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.girl;
       // $('.promo1-url.girl').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -30,6 +31,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.boy;
       // $('.promo1-url.boy').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -43,6 +45,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.girl;
       // $('.promo1-url.baby-girl').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -56,6 +59,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.boy;
       // $('.promo1-url.baby-boy').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -69,6 +73,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.toddler.girl;
       // $('.promo1-url.toddler-girl').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -82,6 +87,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.toddler.boy;
       // $('.promo1-url.toddler-boy').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -96,6 +102,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
       $('.promo1-url').show();
+      $('.promo3-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
       $('.promo2-url').hide();
@@ -119,7 +126,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   }
   $('.promo1-url').attr('href', promo1);
   $('.promo2-url').attr('href', promo2);
-  $('.promo3-url').attr('href', promo1);
+  // $('.promo3-url').attr('href', promo1);
   $('.clearance-url').attr('href', clearance);
 };
 //# sourceMappingURL=switch-new-arrivals.js.map

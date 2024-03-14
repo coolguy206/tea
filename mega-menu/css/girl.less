@@ -15,8 +15,12 @@
 
 .mega-img-container {
   display: flex !important;
+  flex-wrap:wrap;
 
   img {
+    @media screen and (max-width: 1679px){
+      width: 18vw;
+    }
     width: 346px;
   }
 }

@@ -17,7 +17,7 @@ var category = `promos/one-offs/2024/0321/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0314/Site/032124/`;
+var readFilePath = `Site/0314/v2/Site/032124/`;
 // var readFilePath = `handoff/headers/0227/family matching/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
