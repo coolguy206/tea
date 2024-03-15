@@ -10,8 +10,8 @@
 
     top: @c1-5-top;
     left: @c1-5-left;
-    width: 30%;
-    transform: translate(0%, -50%);
+    width: @c1-5-width;
+    transform: @c1-5-transform;
     text-align: center;
 
     h3 {
@@ -21,6 +21,16 @@
 
         color: @c1-5-h3-color;
         margin: 0 0 1vw;
+
+        &:last-of-type {
+            @media screen and (max-width: 430px) {
+                position: absolute;
+                left: 50%;
+                transform: translate(-50%, 0);
+                width: 100%;
+                top: 144vw;
+            }
+        }
     }
 
     h2 {
@@ -31,16 +41,26 @@
         }
 
         color: @c1-5-h2-color;
-        text-transform:capitalize;
+        // text-transform:capitalize;
         letter-spacing: 0;
+        font-family: @c1-5-font-family;
+        
+
+        span {
+            @media screen and (max-width: 430px) {
+                letter-spacing: 3vw;
+            }
+            letter-spacing: 1vw;
+        }
     }
 
     div {
 
         &.the-flex {
-            @media screen and (max-width: 430px){
+            @media screen and (max-width: 430px) {
                 top: 152vw;
             }
+
             margin: 2vw 0 0;
             width: 100%;
             text-align: center;
