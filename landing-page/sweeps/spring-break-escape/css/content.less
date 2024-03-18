@@ -1,0 +1,238 @@
+@import 'vars.less';
+
+.content-wrap {
+	@media screen and (max-width:430px) {
+		// padding: 11% 0;
+		flex-wrap: wrap;
+	}
+	display: flex;
+	// flex-wrap: wrap;
+	background: @background;
+	visibility: hidden;
+	// padding: 4% 0;
+	div {
+		text-align: center;
+
+		&.first,
+		&.second,
+		&.third {
+			@media screen and (max-width: 430px) {
+				flex-basis: 100% !important;
+			}
+			flex-basis: 34%;
+			position: relative;
+		}
+
+		&.first {
+			@media screen and (max-width: 430px) {}
+			// flex-basis: 39%;
+			order: 2;
+
+			.the-content {
+				@media screen and (max-width: 430px) {
+					position: relative;
+					width: 100%;
+					top: 0;
+					left: 0;
+					transform: translate(0);
+					// padding: 12vw 0;
+				}
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				transform: translate(-53%,-50%);
+				width: 100%;
+
+				img {
+					@media screen and (max-width: 1679px) {
+						width: 9vw;
+					}
+					@media screen and (max-width: 430px) {
+						width: 40vw;
+					}
+					width: 149px;
+				}
+
+				h1 {
+					@media screen and (max-width: 1679px) {
+						line-height: 4vw;
+						font-size: 4vw;
+					}
+					@media screen and (max-width: 430px) {
+						line-height: 13vw;
+						font-size: 14vw;
+					}
+					margin: 5.5% 0 0;
+					letter-spacing: 0.2rem;
+					font-family: @gilroyb;
+					color: @h1-font-color;
+					font-size: 68px;
+					line-height: 70px;
+
+					span {
+						@media screen and (max-width: 1679px) {
+							// line-height: 4vw;
+							font-size: 2vw;
+						}
+						@media screen and (max-width: 430px) {
+							// line-height: 15vw;
+							font-size: 9vw;
+						}
+						font-size: 55px;
+						font-family: @souv;
+					}
+				}
+
+				h2 {
+					@media screen and (max-width: 1679px) {
+						font-size: 1.1vw;
+					}
+					@media screen and (max-width: 430px) {
+						font-size: 4vw;
+					}
+					color: @h1-font-color;
+					text-transform: uppercase;
+					font-size: 18px;
+					line-height: 24px;
+					letter-spacing: 0.2em;
+					margin: 0;
+				}
+
+				p {
+					@media screen and (max-width: 1679px) {
+						font-size: .9vw;
+						line-height: 1.4vw;
+					}
+					@media screen and (max-width: 430px) {
+						// font-size: 3.9vw;
+						// line-height: 3.1vw;
+						// margin: 0 0 6%;
+						font-size: 4vw;
+						line-height: 6vw;
+					}
+					font-family: @gilroyr;
+					font-size: 17px;
+					line-height: 24px;
+					color: @p-font-color;
+					margin: 4% 0;
+					letter-spacing: 0.04em;
+
+					span {
+						@media screen and (max-width: 1679px){
+							letter-spacing: .3vw;
+						}
+						@media screen and (max-width: 430px){
+							letter-spacing: 1vw;
+						}
+						font-family: @gilroyb;
+						text-transform: uppercase;
+						color: @span-font-color;
+						letter-spacing: 2px;
+
+						a {
+							color: @span-font-color;
+							text-decoration: none;
+							font-family: @gilroyb;
+						}
+					}
+
+					&.prep {
+						@media screen and (max-width: 430px) {
+							// margin: 11% 0 0;
+						}
+						margin: 4.5% auto 0;
+					}
+
+					&.official {
+						// color: @h1-font-color;
+						// margin: 7% 0 0;
+						a {
+							@media screen and (max-width:1679px) {
+								font-size: 1.2vw;
+							}
+							@media screen and (max-width: 430px) {
+								// font-size: 20px;
+								font-size: 4vw;
+							}
+							color: @official-rules-font-color;
+							font-family: @gilroyb;
+							letter-spacing: 0.2em;
+							text-decoration: none;
+							font-size: 14px;
+							text-transform: uppercase;
+						}
+					}
+				}
+
+				a {
+					@media screen and (max-width: 1679px) {}
+					@media screen and (max-width: 430px) {}
+
+					&.enter-to-win {
+						color: @cta-font-color;
+						background: @cta-background-color;
+						margin: 4% 0;
+					}
+				}
+			}
+		}
+
+		&.second {
+			@media screen and (max-width: 430px) {
+				padding: 11% 5% 0;
+				display: none;
+			}
+			// flex-basis: 61%;
+			padding: 0;
+			display: flex;
+			flex-wrap: wrap;
+			order: 1;
+
+			div {
+				&:first-of-type {
+					@media screen and (max-width: 430px) {
+						flex-basis: 100%;
+						margin: 0 0 7%;
+					}
+					flex-basis: 36%;
+				}
+
+				&:last-of-type {
+					@media screen and (max-width: 430px) {
+						flex-basis: 100%;
+						padding: 0;
+					}
+					flex-basis: 64%;
+					padding: 0 3.6%;
+
+					img {
+						&.desktop {
+							&:first-of-type {
+								display: inline-block;
+								margin: 0 0 6%;
+							}
+						}
+
+						&.mobile {
+							&.this-margin {
+								margin: 0 0 6%;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&.third {
+			@media screen and (max-width:430px) {
+				// display: none;
+			}
+			order: 3;
+			text-align: right;
+
+			img {
+				width: 100%;
+			}
+		}
+	}
+}

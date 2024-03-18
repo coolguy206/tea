@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/special-occasion-shop/default'
+    name: 'sweeps/spring-break-escape'
   },
   zone: {
     name: 'mega-menu/top-nav',
