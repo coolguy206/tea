@@ -17,13 +17,13 @@ var category = `headers/2024/0326/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0326/vacation-shop/`;
+var readFilePath = `Site/0326/new-arrivals/`;
 // var readFilePath = `handoff/hp/0326/homepage/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0314/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0323/`;
-var writeFilePath = `promos/headers/dev/images/promo/vacation-shop/`;
+var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0227/`;
 // var writeFilePath = `homepage/default/dev/images/0326/`;
 // var writeFilePath = `mega-menu/dev/images/`;
