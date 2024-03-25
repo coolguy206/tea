@@ -15,10 +15,18 @@
     text-align: center;
 
     h3 {
+        @media screen and (max-width: 430px) {
+            margin: 0 0 5vw;
+        }
+
         color: @c2-2-h3-color;
     }
 
     h2 {
+        @media screen and (max-width: 430px) {
+            line-height: 12vw
+        }
+
         color: @c2-2-h2-color;
         margin: 0;
         text-align: center;
@@ -29,17 +37,20 @@
     }
 
     div {
+        @media screen and (max-width: 430px) {
+            margin: 5vw 0 0;
+        }
+
         a {
             @media screen and (max-width: 1679px) {
-                // width: 22vw;
+                width: @c2-2-cta-size-1679;
             }
 
             @media screen and (max-width: 430px) {
-                // width: 86vw;
-                // width: 43.5vw;
+                width: @c2-2-cta-size-431;
             }
 
-            // width: 370px;
+            width: @c2-2-cta-size;
             color: @c2-2-cta-color;
             background: @c2-2-cta-background;
         }

@@ -1,10 +1,8 @@
 const pdps = [
-
-    `https://www.teacollection.com/product/24s12301/short-sleeve-twirl-dress.html#painted%20kenyan%20butterflies`,
-    `https://www.teacollection.com/product/24s12319/trapeze-dress.html#mariposas%20pintadas`,
-    `https://www.teacollection.com/product/24s12303/flutter-sleeve-pocket-dress.html#rainbow%20gradient`,
-    // `https://www.teacollection.com/product/24s12315/flutter-sleeve-twirl-dress.html#african%20jewel%20floral`,
-    `https://www.teacollection.com/product/24s12316/mighty-mini-dress.html#tropical%20hibiscus%20floral`,
+    `https://www.teacollection.com/product/24m12301/trapeze-dress.html#tropical%20fruits`,
+    `https://www.teacollection.com/product/24m12302/tie-shoulder-tiered-dress.html#lamu%20sunset%20stripe`,
+    `https://www.teacollection.com/product/24m12305/sleeveless-ballet-dress.html#wavy%20plumeria`,
+    `https://www.teacollection.com/product/24m12313/sleeveless-ruffle-a-line-dress.html#tropical%20floral`
 
 ];
 

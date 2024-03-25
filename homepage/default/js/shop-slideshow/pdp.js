@@ -1,15 +1,15 @@
 const pdps = [
 
-    `https://www.teacollection.com/product/24s12318/trapeze-dress.html#turaco%20palm`,
-    `https://www.teacollection.com/product/24s12112/kenyan-butterfly-graphic-tee.html#paisley%20purple`,
-    `https://www.teacollection.com/product/24s12211/pom-pom-gym-shorts.html#enamel%20blue`,
-    `https://www.teacollection.com/product/24s22121/tree-chameleon-graphic-tee.html#twilight`,
-    `https://www.teacollection.com/product/24s22205/sporty-ringer-shorts.html#imperial`,
-    `https://www.teacollection.com/product/24m33500/peek-a-boo-back-baby-romper.html#kalavathi%20blockprint`,
-    `https://www.teacollection.com/product/24s42506/pop-pocket-shortie-baby-romper.html#canal%20blue`,
-    `https://www.teacollection.com/product/24m13302/sleeveless-button-front-dress.html#elimu%20leso`,
-    `https://www.teacollection.com/product/24s23102/striped-button-up-woven-shirt.html#bay%20leaf`,
-    `https://www.teacollection.com/product/24s23204/chambray-sport-shorts.html#indigo`,
+    `https://www.teacollection.com/product/24m12304/sleeveless-ballet-dress.html#malindi%20wildflowers`,
+    `https://www.teacollection.com/product/24m12100/rainbow-octopus-graphic-tee.html#rosita`,
+    `https://www.teacollection.com/product/24m12200/pom-pom-gym-shorts.html#viridis`,
+    `https://www.teacollection.com/product/24m22102/lionfish-graphic-tee.html#coronet%20blue`,
+    `https://www.teacollection.com/product/24m22201/vacation-shorts.html#cosmic%20blue`,
+    `https://www.teacollection.com/product/24m32501/tie-shoulder-baby-romper.html#lamu%20sunset%20stripe`,
+    `https://www.teacollection.com/product/24m42500/sleeveless-baby-romper.html#blockprint%20shells`,
+    `https://www.teacollection.com/product/24m12300/trapeze-dress.html#desert%20rose`,
+    `https://www.teacollection.com/product/24m22103/croc-double-sided-graphic-tee.html#viridis`,
+    `https://www.teacollection.com/product/24m22200/knit-shortie.html#flame`
 
 ];
 
