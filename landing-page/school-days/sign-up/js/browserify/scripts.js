@@ -5,30 +5,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.inview = void 0;
-
-var inview = function inview(elem) {
+var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
   $(elem).on('inview', function (event, isInView) {
     if (isInView) {
       // element is now visible in the viewport
       // console.log('in view');
-      var imgs = $(this).find('img'); // let width = $(window).width();
+      var imgs = $(this).find('img');
+      // let width = $(window).width();
       // console.log(imgs);
       // console.log(width);
-
       $.each(imgs, function (i, val) {
-        var src = $(val).attr('data-set'); // console.log(src);
-
+        var src = $(val).attr('data-set');
+        // console.log(src);
         if (src) {
           $(val).attr('src', src);
         }
-
         $(val).removeAttr('data-set');
       });
       $(this).css('visibility', 'visible');
     }
   });
-}; // module.exports = function(elem) {
+};
+
+// module.exports = function(elem) {
 //   // console.log(`from inview.js`);
 //   $(elem).on('inview', function(event, isInView) {
 //     if (isInView) {
@@ -51,9 +51,6 @@ var inview = function inview(elem) {
 // };
 
 
-exports.inview = inview;
-
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -61,39 +58,35 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.phoneConvert = void 0;
-
-var phoneConvert = function phoneConvert(string) {
+var phoneConvert = exports.phoneConvert = function phoneConvert(string) {
   var newString = string.match(/[0-9]{0,14}/g);
-
   if (newString === null) {
     return '';
-  } // Join parts returned from RegEx match
+  }
 
+  // Join parts returned from RegEx match
+  newString = newString.join('');
 
-  newString = newString.join(''); // Start number with "+"
+  // Start number with "+"
   // newString = '+' + newString;
 
   if (newString[0].includes('1')) {
     newString = '+' + newString;
   } else {
     newString = '+1' + newString;
-  } // Limit length to 15 characters
+  }
 
-
+  // Limit length to 15 characters
   newString = newString.substring(0, 15);
   return newString;
 };
-
-exports.phoneConvert = phoneConvert;
 
 
 },{}],3:[function(require,module,exports){
 "use strict";
 
 var _phone = require("./phone.js");
-
 var _inview = require("./inview.js");
-
 $(document).ready(function () {
   (0, _inview.inview)('.main-content .header .div-2');
   var url = window.location.href;
@@ -107,41 +100,44 @@ $(document).ready(function () {
     $('.forms div').hide();
     $(id).show();
   });
-
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-
   $('.forms button').click(function (e) {
     // console.log(e.target);
     e.preventDefault();
     var ac = $(this).attr('data-list');
-    var thisForm = $(this).closest('form'); //? force phone to only be numbers
+    var thisForm = $(this).closest('form');
 
+    //? force phone to only be numbers
     console.log($(thisForm).find('input[name="the-phone"]'));
     $(thisForm).find('input[name="the-phone"]').on('input', function (e) {
       $(this).val($(this).val().replace(/[^0-9]/g, ''));
-    }); //user info
+    });
 
+    //user info
     var email = $(thisForm).find('input[name="user-email"]').val();
     var fname = $(thisForm).find('input[name="user-fname"]').val();
     var lname = $(thisForm).find('input[name="user-lname"]').val();
     var phone = $(thisForm).find('input[name="the-phone"]').val();
     var affiliation = $(thisForm).find('input[name="user-affiliation"]').val();
     var how = $(thisForm).find('input[name="user-how"]').val();
-    var refer = $(thisForm).find('input[name="user-refer-name"]').val(); //org info
+    var refer = $(thisForm).find('input[name="user-refer-name"]').val();
 
+    //org info
     var orgName = $(thisForm).find('input[name="org-name"]').val();
     var orgAddress = $(thisForm).find('input[name="org-address"]').val();
     var orgEIN = $(thisForm).find('input[name="org-ein"]').val();
     var state = $(thisForm).find('.states').val();
     var city = $(thisForm).find('input[name="org-city"]').val();
     var zip = $(thisForm).find('input[name="org-zip"]').val();
-    var valid = emailIsValid(email); // console.log('valid:' + valid);
+    var valid = emailIsValid(email);
+    // console.log('valid:' + valid);
 
     if (valid && fname !== "" && lname !== "" && orgName !== "" && orgAddress !== "" && city !== "" && zip !== "" && state !== "please choose") {
       // $('.signup .form').hide();
       // $('.signup .sending').show();
+
       var theData = {
         data: {
           type: "subscription",
@@ -160,12 +156,10 @@ $(document).ready(function () {
           }
         }
       };
-
       if (phone !== "" && phone.length == 10) {
         phone = (0, _phone.phoneConvert)(phone);
         theData.data.attributes.phone_number = phone;
       }
-
       if (ac == "school days sign up" && orgEIN !== "") {
         theData.data.attributes.custom_source = ac;
         theData.data.attributes.list_id = list1;
@@ -183,8 +177,8 @@ $(document).ready(function () {
             'content-type': 'application/json'
           },
           success: function success(data, status, xhr) {
-            console.log('klaviyo success register'); // jQuery(document).trigger('klaviyoSuccess', data);
-
+            console.log('klaviyo success register');
+            // jQuery(document).trigger('klaviyoSuccess', data);
             $('.forms .error, .forms .join-today').hide();
             $('.forms .success h2').html('Successfully sent! <br> Look out for an email from <br> The School Days team shortly.');
             $('.forms .success').show();
@@ -205,8 +199,8 @@ $(document).ready(function () {
             'content-type': 'application/json'
           },
           success: function success(data, status, xhr) {
-            console.log('klaviyo success register'); // jQuery(document).trigger('klaviyoSuccess', data);
-
+            console.log('klaviyo success register');
+            // jQuery(document).trigger('klaviyoSuccess', data);
             $('.forms .error, .forms .refer-org').hide();
             $('.forms .success h2').html('Successfully sent!');
             $('.forms .success').show();

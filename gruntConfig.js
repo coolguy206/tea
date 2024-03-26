@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/spring-break-escape'
+    name: 'school-days/sign-up'
   },
   zone: {
     name: 'mega-menu/top-nav',
