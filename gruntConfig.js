@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'school-days/sign-up'
+    name: 'shops/swim-shop/default'
   },
   zone: {
     name: 'mega-menu/top-nav',
@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
+    name: 'headers',
     ftp: {
       css: {
         src: 'default/css/',
