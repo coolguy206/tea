@@ -1,9 +1,9 @@
 const pdps = [
 
-    `https://www.teacollection.com/product/24s12211/pom-pom-gym-shorts.html#carousel%20pink`,
-    `https://www.teacollection.com/product/24s22205/sporty-ringer-shorts.html#imperial`,
-    `https://www.teacollection.com/product/23w12217/tie-waist-shorts.html#rainbow%20gradient`,
-    `https://www.teacollection.com/product/24s23201/ripstop-cargo-shorts.html#dark%20maple`,
+    `https://www.teacollection.com/product/24m12200/pom-pom-gym-shorts.html#perennial%20pink`,
+    `https://www.teacollection.com/product/24m12201/paperbag-high-waist-shorts.html#tropical%20fruits`,
+    `https://www.teacollection.com/product/23w23205/make-tracks-shorts.html#coronet%20blue`,
+    `https://www.teacollection.com/product/24m22200/knit-shortie.html#flame`,
 
 ];
 

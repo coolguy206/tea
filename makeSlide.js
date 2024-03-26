@@ -5,9 +5,9 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const basePath = `landing-page/shops/special-occasion-shop/default/`;
-const pdpPath = `./${basePath}/js/shop-slideshow-3/pdp.js`;
-const writePath = `${basePath}/dev/slideshow-3/`;
+const basePath = `homepage/default/`;
+const pdpPath = `./${basePath}/js/shop-c5/pdp.js`;
+const writePath = `${basePath}/dev/c5/pdps/`;
 const pdps = require(pdpPath);
 
 // console.log(pdps);
@@ -86,7 +86,7 @@ pdps.pdps.map((pdpURL, index) => {
         // console.log(sizesStr);
 
         var elem = `
-        <li>
+        
             <div class="thumb-grid item">
                 <span class="img">
                     <a href="${url}"
@@ -120,7 +120,7 @@ pdps.pdps.map((pdpURL, index) => {
         
                 </div>
             </div>
-        </li>
+        
         `;
 
 

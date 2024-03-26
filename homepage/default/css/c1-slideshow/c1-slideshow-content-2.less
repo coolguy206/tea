@@ -33,13 +33,22 @@
 
     p {
         text-align: center;
-        margin: 8% auto;
+        // margin: 8% auto;
         color: @c1-2-p-color;
     }
 
     div {
         @media screen and (max-width: 430px){
             // top: @c1-2-top-431;
+        }
+
+        &.the-flex {
+            @media screen and (max-width: 430px){
+                top: 138vw;
+            }
+            margin: 0 auto;
+            width: 53%;
+            justify-content: center;
         }
         
         a {

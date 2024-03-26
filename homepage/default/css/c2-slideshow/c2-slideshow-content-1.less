@@ -15,19 +15,35 @@
     text-align: center;
 
     h3 {
+        @media screen and (max-width: 430px) {
+            margin: 0 0 5vw;
+        }
+
         color: @c2-1-h3-color;
+        text-shadow: none;
     }
 
     h2 {
+        @media screen and (max-width: 430px) {
+            line-height: 12vw;
+        }
+
         color: @c2-1-h2-color;
         margin: 0;
+        text-align: center;
+        text-shadow: none;
     }
 
     p {
-        text-align : @c2-1-p-text-align;
+        text-align: @c2-1-p-text-align;
+        text-shadow: none;
     }
 
     div {
+        @media screen and (max-width: 430px) {
+            margin: 5vw 0 0;
+        }
+
         a {
             @media screen and (max-width: 1679px) {
                 // width: 14vw;
