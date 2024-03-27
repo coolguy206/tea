@@ -11,8 +11,8 @@ $(document).ready(function () {
   inview('.content-wrap');
 
   var companyId = `RAd6JR`;
-  var list = `TPCPhP`;
-  var custom_source = `SBEscape_Giveaway24`;
+  var list = `RCPHzH`;
+  var custom_source = `GreenSprouts0324`;
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)

@@ -10,7 +10,7 @@ var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/0323/v0/`;
 // var category = `homepage/2024/0326/v0/`;
 // var category = `headers/2024/0304/v0/`;
-var category = `landing-pages/green-sprouts/2024/0404/v0/`;
+var category = `landing-pages/green-sprouts/2024/0404/v1/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
