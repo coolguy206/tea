@@ -10,7 +10,7 @@ var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/0323/v0/`;
 // var category = `homepage/2024/0326/v0/`;
 // var category = `headers/2024/0304/v0/`;
-var category = `landing-pages/dresses-shop/2024/0326/v0/`;
+var category = `landing-pages/swim-shop/2024/0326/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
@@ -18,13 +18,13 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/0314/v2/Site/032324/`;
-var readFilePath = `handoff/landing-pages/dresses/0326/Handoff/`;
+var readFilePath = `handoff/landing-pages/swim/0326/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0314/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0323/`;
 // var writeFilePath = `promos/headers/dev/images/promo/green-sprouts/`;
-var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0326/`;
+var writeFilePath = `landing-page/shops/swim-shop/default/dev/images/0326/`;
 // var writeFilePath = `homepage/default/dev/images/0326/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
