@@ -18,7 +18,7 @@ $(document).ready(function () {
 
   new Glide('.c1 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   new Glide('.c2 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,

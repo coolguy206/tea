@@ -37,6 +37,29 @@
     p {
         text-align: @c2-1-p-text-align;
         text-shadow: none;
+        color: @c2-1-p-color;
+
+        &.seaside {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.1vw;
+                line-height: 1.8vw;
+            }
+
+            font-family: @gilroyb;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            font-size:18px;
+            line-height: 28px;
+            margin:3vw 0 0;
+        }
+
+        i {
+            font-style: normal;
+            font-family: @souv;
+            color: @c2-1-p-color;
+            letter-spacing: 0;
+            text-transform: none;
+        }
     }
 
     div {

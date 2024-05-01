@@ -1,6 +1,10 @@
 @import "c1-slideshow-vars.less";
 
 &.content-2 {
+    @media screen and (max-width: 1679px) {
+        width: @c1-2-width-1678;
+    }
+
     @media screen and (max-width: 430px) {
         width: 100%;
         left: 0;
@@ -10,22 +14,31 @@
 
     top: @c1-2-top;
     left: @c1-2-left;
-    width: auto;
+    width: @c1-2-width;
     transform: @c1-2-transform;
     text-align: center;
 
     h3 {
-        @media screen and (max-width: 430px){
+        @media screen and (max-width: 430px) {
             color: @c1-2-h3-color-431;
         }
+
         color: @c1-2-h3-color;
         text-align: center;
     }
 
     h2 {
-        @media screen and (max-width: 430px){
-            color: @c1-2-h2-color-431;
+        @media screen and (max-width: 1679px) {
+            font-size: 4vw !important;
+            line-height: 4vw !important;
         }
+
+        @media screen and (max-width: 430px) {
+            color: @c1-2-h2-color-431;
+            font-size: 10vw !important;
+            line-height: 10vw !important;
+        }
+
         color: @c1-2-h2-color;
         text-align: center;
         font-family: @c1-2-h2-font-family;
@@ -38,19 +51,20 @@
     }
 
     div {
-        @media screen and (max-width: 430px){
+        @media screen and (max-width: 430px) {
             // top: @c1-2-top-431;
         }
 
         &.the-flex {
-            @media screen and (max-width: 430px){
+            @media screen and (max-width: 430px) {
                 top: 138vw;
             }
+
             margin: 0 auto;
-            width: 53%;
+            width: @c1-2-the-flex-width;
             justify-content: center;
         }
-        
+
         a {
             @media screen and (max-width: 1679px) {
                 width: @c1-2-cta-size-1679;
