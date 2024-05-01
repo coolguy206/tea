@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.associateBusinessSystemsAnalyst = void 0;
-var associateBusinessSystemsAnalyst = {
+var associateBusinessSystemsAnalyst = exports.associateBusinessSystemsAnalyst = {
   title: "Associate Business Systems Analyst",
   header: "We are looking for an experienced and thoughtful Associate Business Systems Analyst. \n    \n    Core responsibilities are to assist in monitoring & maintaining Tea\u2019s business operations systems, from XML and EDI transmissions reporting to Style Data Management \u2013 and everything in between. Together with your teammates, you\u2019ll prioritize business goals and information needs, monitor system components, perform system diagnostics and conduct preventative maintenance. You\u2019ll work in an individual contributor role, responsible for managing problems for the organization that have anything from a low to critical impact on the business.\n    Managing system upgrades and being a valued thought partner with end users and teams is an essential part of this role.\n    \n    Ideal candidates can be remote from one of the following states: NY, VA, KY, ID, CA, TX, FL",
   pay: "Pay Range:\n    $55,000-70,000USD",
@@ -13,7 +13,6 @@ var associateBusinessSystemsAnalyst = {
   qualifications: ["Experience monitoring and maintaining day-to-day system processes and reporting to support daily business operations, preferably with an ERP system", "2+ years of XML and EDI file processing and troubleshooting, preferable", "2+ years of problem management, ideally using ticketing systems and reporting\npreferable", "Excellent Microsoft Excel skills", "Works well with others, including cross-functional teams", "Excellent attention to detail", "Strong time management skills", "Technical Bachelor's degree, preferred", "Exposure to BlueCherry ERP and Threadvine or B2B software, a plus", "Product Life Management (PLM) experience, a plus", "Helpdesk or tech support experience, a plus", "Apparel ecommerce experience, a plus"],
   footer: "Please email a cover letter and resume to hr@teacollection.com for consideration.\n\n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for employment without regard to age, ancestry, color, family or medical care leave, gender identity or expression, genetic information, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran status, race, religion, sex(including\n    pregnancy), sexual orientation, or any other characteristic protected by applicable laws, regulations, and ordinances."
 };
-exports.associateBusinessSystemsAnalyst = associateBusinessSystemsAnalyst;
 
 
 },{}]},{},[1]);

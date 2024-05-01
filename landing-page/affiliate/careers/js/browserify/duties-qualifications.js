@@ -5,8 +5,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.dutiesQualifications = void 0;
-
-var dutiesQualifications = function dutiesQualifications(job, str) {
+var dutiesQualifications = exports.dutiesQualifications = function dutiesQualifications(job, str) {
   var duties = job;
   var dutiesLi = "";
   var dutiesTitle = "<h3>".concat(str, "</h3>");
@@ -21,14 +20,14 @@ var dutiesQualifications = function dutiesQualifications(job, str) {
       var list = "<li>".concat(arr, "</li>");
       dutiesLi = dutiesLi + list;
     }
-  }); // console.log(dutiesLi);
+  });
+
+  // console.log(dutiesLi);
 
   var dutiesList = "<ul>".concat(dutiesLi, "</ul>");
   var dutiesContent = dutiesTitle + dutiesList;
   $('.the-job').append(dutiesContent);
 };
-
-exports.dutiesQualifications = dutiesQualifications;
 
 
 },{}]},{},[1]);

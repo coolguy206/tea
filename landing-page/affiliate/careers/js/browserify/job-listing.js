@@ -14,8 +14,8 @@ exports.jobs = void 0;
 // import {
 //   officeCoordinator
 // } from './office-coordinator.js';
-var jobs = [];
-exports.jobs = jobs;
+
+var jobs = exports.jobs = [];
 
 
 },{}]},{},[1]);

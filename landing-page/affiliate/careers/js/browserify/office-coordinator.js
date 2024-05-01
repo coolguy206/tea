@@ -5,7 +5,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.officeCoordinator = void 0;
-var officeCoordinator = {
+var officeCoordinator = exports.officeCoordinator = {
   title: " Office and Community Coordinator",
   header: "We are looking for an Office and Community Coordinator to join our team. \n    Please email a cover letter and resume to hr@teacollection.com for consideration. We would like to hear how you learned about the position, why you are interested, and how you can contribute in this role.\n    About the Role: \n    This position is an in person position. 20 hours a week. Typical schedule: 9am-12pm (M, T, Th, F) and 9am-5pm (W). Specific hours are flexible based on availability and business needs. The role is non-exempt, reporting into the Director of Finance & Accounting.",
   pay: "Pay Range:\n    $22-28 USD / hour, 20 hours/week",
@@ -22,7 +22,6 @@ var officeCoordinator = {
   qualifications: ["Exceptional attention to detail, organizational skills, and affinity for order and accuracy", "Physically able to move and maintain sample bins, boxes and racks", "Ability to work independently with minimal instruction and supervision", "Must have excellent time management skills, be self-sufficient and ability to adapt as needed", "Exceptional at creating and maintaining calendars and tracking documents/items", "Creative problem-solver", "Expert in video conferencing tools, Excel, Slack & Google Docs", "Experience in hospitality to create warm, welcoming environment"],
   footer: "Expectations for All Employees\n    Supports the organization\u2019s mission, vision, and values by exhibiting the following behaviors: excellence and competence, collaboration, innovation, respect, personalization, commitment to our community, and accountability and ownership. \n    \n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for employment without regard to age, ancestry, color, family or medical care leave, gender identity or expression, genetic information, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran status, race, religion, sex(including pregnancy), sexual orientation, or any other characteristic protected by applicable laws, regulations, and ordinances.\n    Please email a cover letter and resume to hr@teacollection.com for consideration. We would like to hear how you learned about the position, why you are interested, and how you can contribute in this role."
 };
-exports.officeCoordinator = officeCoordinator;
 
 
 },{}]},{},[1]);
