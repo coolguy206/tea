@@ -7,24 +7,24 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0428/v0/`;
+// var category = `promos/one-offs/2024/0428/v0/`;
 // var category = `homepage/2024/0425/v0/`;
 // var category = `headers/2024/0304/v0/`;
-// var category = `landing-pages/dresses-shop/2024/0326/v0/`;
+var category = `landing-pages/mothers-day-giveaway/2024/0502/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0428/Site/headers/`;
-// var readFilePath = `handoff/hp/0425/042524 Summer 2 HP/handoff/`;
+// var readFilePath = `Site/0428/Site/headers/`;
+var readFilePath = `handoff/sweeps/mothers-day-giveaway/Site/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0428/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0428/`;
-var writeFilePath = `promos/headers/dev/images/select-styles/`;
-// var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0326/`;
+// var writeFilePath = `promos/headers/dev/images/select-styles/`;
+var writeFilePath = `landing-page/sweeps/mothers-day-giveaway/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/0425/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
