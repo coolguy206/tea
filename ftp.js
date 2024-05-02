@@ -10,7 +10,7 @@ var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/0428/v0/`;
 // var category = `homepage/2024/0425/v0/`;
 // var category = `headers/2024/0304/v0/`;
-var category = `landing-pages/mothers-day-giveaway/2024/0502/v0/`;
+var category = `landing-pages/mothers-day-giveaway/2024/0502/v1/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE

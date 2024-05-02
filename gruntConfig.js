@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/dresses-shop/default'
+    name: 'sweeps/mothers-day-giveaway'
   },
   zone: {
     name: 'mega-menu/top-nav',
