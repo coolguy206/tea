@@ -1,6 +1,6 @@
 const pdps = [
 
-    `https://www.teacollection.com/product/24m12312/strappy-back-skirted-dress.html#bird%20of%20paradise`,
+    `https://www.teacollection.com/product/24m12301/trapeze-dress.html#tropical%20fruits`,
     `https://www.teacollection.com/product/24m12102/floral-turaco-tank-top.html#perennial%20pink`,
     `https://www.teacollection.com/product/24m12203/twirl-skort.html#passion%20fruit%20wax%20print`,
     `https://www.teacollection.com/product/24m22100/turtle-discovery-graphic-tee.html#indigo`,
