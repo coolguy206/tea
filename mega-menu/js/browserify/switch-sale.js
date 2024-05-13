@@ -20,10 +20,10 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.girl;
       // $('.promo1-url.girl').show();
       // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.promo2-url.girl').show();
-      $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -37,8 +37,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.boy;
       // $('.promo1-url.boy').show();
       // $('.promo1-url').show();
-      // $('.promo2-url').show();
-      $('.promo3-url').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
       // $('.promo2-url.boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
@@ -54,10 +54,10 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.baby.girl;
       // $('.promo1-url.baby-girl').show();
       // $('.promo1-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.promo2-url.baby-girl').show();
-      // $('.promo2-url').show();
-      $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -71,8 +71,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.baby.boy;
       // $('.promo1-url.baby-boy').show();
       // $('.promo1-url').show();
-      // $('.promo2-url').show();
-      $('.promo3-url').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
       // $('.promo2-url.baby-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
@@ -88,10 +88,10 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.toddler.girl;
       // $('.promo1-url.toddler-girl').show();
       // $('.promo1-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.promo2-url.toddler-girl').show();
-      // $('.promo2-url').show();
-      $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
       // $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
@@ -105,8 +105,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.toddler.boy;
       // $('.promo1-url.toddler-boy').show();
       // $('.promo1-url').show();
-      // $('.promo2-url').show();
-      $('.promo3-url').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
       // $('.promo2-url.toddler-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
@@ -122,8 +122,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
       // $('.promo1-url').show();
-      // $('.promo2-url').show();
-      $('.promo3-url').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
       //  $('.promo2-url.newborn').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.promo1-url').hide();
@@ -150,7 +150,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = exports.urls = {
   promo: {
-    promo: "/new-arrivals",
+    promo: "/select-styles",
     swim: "/swimwear",
     girl: "/girls-clothes",
     boy: "/boys-clothes",
@@ -190,6 +190,7 @@ var urls = exports.urls = {
       }
     },
     select: {
+      promo: "/select-styles",
       family: "/select-styles/family",
       girl: "/girls-clothing/favorites/limited-time-sale",
       boy: "/boys-clothing/favorites/limited-time-sale",

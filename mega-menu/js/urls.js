@@ -1,6 +1,6 @@
 export const urls = {
   promo: {
-    promo: `/new-arrivals`,
+    promo: `/select-styles`,
     swim: `/swimwear`,
     girl: `/girls-clothes`,
     boy: `/boys-clothes`,
@@ -40,6 +40,7 @@ export const urls = {
       }
     },
     select: {
+      promo: `/select-styles`,
       family: `/select-styles/family`,
       girl: `/girls-clothing/favorites/limited-time-sale`,
       boy: `/boys-clothing/favorites/limited-time-sale`,
