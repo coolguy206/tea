@@ -1,0 +1,79 @@
+@import "var.less";
+@c3-cta-color: #47363D;
+@c3-background: #FDF5F2;
+
+.c3{
+  @media screen and (max-width:430px) {
+    flex-wrap: wrap;
+    padding: 6% 0 5%;
+  }
+  display: flex;
+  // background: @c3-background;
+  padding: 4.2% 0 5%;
+  justify-content: center;
+
+  div {
+    &.first,
+    &.second,
+    &.third {
+      @media screen and (max-width:1679px) {
+        padding: 0 3%;
+      }
+      @media screen and (max-width:430px) {
+        padding: 0 5%;
+        margin: 0 0 15%;
+      }
+      display: flex;
+      flex-basis: 33%;
+      text-align: center;
+      padding: 0 1%;
+      justify-content: center;
+      padding: 0 3%;
+
+      a {
+        .the-content {
+          @media screen and (max-width:430px) {
+            margin: 10% 0 0;
+          }
+          margin: 9% 0 0;
+
+          span {
+            @media screen and (max-width:430px) {
+              font-size: 3vw !important;
+            }
+            color: @c3-cta-color;
+
+            .desktop-copy {
+              @media screen and (max-width:430px) {
+                display: none;
+              }
+            }
+
+            .mobile-copy {
+              @media screen and (max-width:430px) {
+                display: inline;
+              }
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    &.first {
+      a {
+        .the-content {
+          span {
+            @media screen and (max-width:430px) {
+              letter-spacing: 0.1em;
+            }
+          }
+        }
+      }
+    }
+
+    &.second {}
+
+    &.third {}
+  }
+}

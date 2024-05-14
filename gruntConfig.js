@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/upcoming-sample-sales'
+    name: 'shops/global-shop/default'
   },
   zone: {
     name: 'mega-menu/top-nav',
