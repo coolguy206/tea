@@ -7,9 +7,9 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0512/v0/`;
-// var category = `homepage/2024/0506/v0/`;
-// var category = `headers/2024/0304/v0/`;
+// var category = `promos/one-offs/2024/0512/v0/`;
+// var category = `homepage/2024/0514/v0/`;
+var category = `headers/2024/0514/new-arrials/v0/`;
 // var category = `landing-pages/mothers-day-giveaway/2024/0502/v1/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
@@ -17,15 +17,15 @@ var category = `promos/one-offs/2024/0512/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0512/Site/headers/`;
-// var readFilePath = `handoff/sweeps/mothers-day-giveaway/Site/`;
+// var readFilePath = `Site/0512/Site/headers/`;
+var readFilePath = `handoff/hp/0514/Handoff/Updated/headers/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0512/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0512/`;
-var writeFilePath = `promos/headers/dev/images/select-styles/`;
+var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
 // var writeFilePath = `landing-page/sweeps/mothers-day-giveaway/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/0506/`;
+// var writeFilePath = `homepage/default/dev/images/0514/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

@@ -18,25 +18,25 @@ $(document).ready(function () {
 
   new Glide('.c1 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
     gap: 0,
   }).mount();
 
-  new Glide('.c2 .glide', {
-    type: 'carousel',
+  // new Glide('.c2 .glide', {
+  //   type: 'carousel',
     // autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount();
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',
-    // autoplay: 500,
+    // autoplay: 4000,
     animationDuration: 500,
     perView: 5,
     hoverpause: true,

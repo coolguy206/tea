@@ -1,0 +1,122 @@
+@import "../var.less";
+@c4-h2-font-color: #47363D;
+@c4-h2-font-color-430: @c4-h2-font-color;
+@c4-font-color: @c4-h2-font-color;
+@c4-cta-color: @c4-h2-font-color;
+@c4-cta-background: #FF6A4F;
+
+.c4 {
+    @media screen and (max-width: 430px) {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    position:relative;
+    min-height: auto !important;
+    display: flex;
+    // flex-wrap: wrap;
+
+    div {
+        @media screen and (max-width:1679px) {}
+
+        @media screen and (max-width:430px) {}
+
+        overflow: hidden;
+        padding:0;
+        position: relative;
+
+        &.first,
+        &.second,
+        &.third,
+        &.fourth {
+            @media screen and (max-width: 430px) {
+                flex-basis: 50% !important;
+            }
+
+            flex-basis: 25%;
+        }
+
+        &.second,
+        &.fourth {
+            @media screen and (max-width: 430px) {
+                text-align: right;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            @media screen and (max-width: 1679px) {
+                width: 24vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: 48vw;
+            }
+
+            width: 401px;
+        }
+
+        .the-content {
+            @media screen and (max-width:430px) {
+                width: 100%;
+                padding: 4vw;
+
+            }
+
+            text-align: left;
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 2vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 6vw;
+                    color: @c4-h2-font-color-430;
+                }
+
+                font-family: @gilroyb;
+                font-size: 32px;
+                line-height: normal;
+                color: @c4-h2-font-color;
+                text-align: left;
+                margin:1vw 0 .3vw;
+
+            }
+
+            i {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.4vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 3vw;
+                }
+
+                font-size: 24px;
+                color: @c4-h2-font-color;
+                margin: 0 0 .3vw;
+            }
+
+            div {
+                text-align: left;
+
+                a {
+                    @media screen and (max-width:1679px) {}
+
+                    @media screen and (max-width:430px) {}
+
+                    // background: @c4-cta-background;
+                    color: @c4-cta-color;
+                    // width: 308px;
+
+                }
+            }
+        }
+
+
+    }
+}

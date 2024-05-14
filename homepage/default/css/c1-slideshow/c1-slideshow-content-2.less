@@ -18,6 +18,10 @@
     transform: @c1-2-transform;
     text-align: center;
 
+    h3, h2, p {
+        text-shadow: none;
+    }
+
     h3 {
         @media screen and (max-width: 430px) {
             color: @c1-2-h3-color-431;
@@ -57,7 +61,7 @@
 
         &.the-flex {
             @media screen and (max-width: 430px) {
-                top: 138vw;
+                top: 123vw;
             }
 
             margin: 0 auto;
@@ -73,6 +77,17 @@
             @media screen and (max-width: 430px) {
                 width: @c1-2-cta-size-431;
                 background: @c1-2-cta-background-430;
+            }
+
+            &.cta5 {
+                @media screen and (max-width: 1679px) {
+                    width: 17vw;
+                }
+    
+                @media screen and (max-width: 430px) {
+                    width: 69vw;
+                }
+                width: 297px;
             }
 
             color: @c1-2-cta-color;
