@@ -9,9 +9,9 @@
 @promo2Color2: #A3CFC9;
 @promo2Color3: @promo2Color1;
 
-@promo3Bg: #E894CD;
+@promo3Bg: #F16165;
 @promo3Color1: #fff;
-@promo3Color2: #87397A;
+@promo3Color2: #F6D4CB;
 @promo3Color3: #ffff;
 
 @shipping-promoBg: #00A5B6;
@@ -138,7 +138,7 @@ header.site-header {
     // }
     a {
       @media screen and (max-width: 430px) {
-        top: 44%;
+        // top: 44%;
       }
 
       text-decoration: none;
@@ -192,7 +192,7 @@ header.site-header {
       &.first {
         @media screen and (max-width: 430px) {
           left: 0;
-          display: block;
+          display: none;
         }
 
         // left: -1%;
@@ -207,12 +207,24 @@ header.site-header {
         }
 
         // color: @fontColor2;
+        i {
+          @media screen and (max-width: 430px){
+            &:first-of-type {
+              color: @promo3Color1;
+            }
+
+            &.mobile {
+              display: inline;
+            }
+          }
+          font-style: normal;
+        }
       }
 
       &.third {
         @media screen and (max-width: 430px) {
           // left: 0;
-          // display: inline;
+          display: none;
         }
 
         // left: 0;
@@ -251,7 +263,7 @@ header.site-header {
           // left: 78%;
           left: 50%;
           // top: 74%;
-          top: 80%;
+          top: 70%;
           transform: translate(-50%, 0);
           // position: relative;
           // display: block;

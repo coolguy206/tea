@@ -31,6 +31,12 @@ jQuery(document).ready(function () {
     // $('.promos .the-promo.promo1').css('background', '#E493CD');
     // $('.promos .the-promo.promo1 span.first, .promos .the-promo.promo1 span.third').css('color', '#373A49');
     // $('.promos')[0].style.display = 'none';
+    $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
+
+    if (window.innerWidth < 431) {
+      $(`.promos .the-promo`).css('height', '46px');
+    }
+
 
   }
 
@@ -62,9 +68,9 @@ jQuery(document).ready(function () {
   //   controls: false,
   //   pager: false,
   //   pause: 2500,
-    // onSliderLoad:function(){
-    //     $('.promos.promo2, .promos.promo3').show();
-    // }
+  // onSliderLoad:function(){
+  //     $('.promos.promo2, .promos.promo3').show();
+  // }
   // });
 
 });
