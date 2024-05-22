@@ -20,7 +20,7 @@ pdps.pdps.map((pdpURL, index) => {
     console.log(pdpURL);
 
 
-    puppeteer.launch({ headless: true, executablePath: executablePath() }).then(async browser => {
+    puppeteer.launch({ headless: 'new', executablePath: executablePath() }).then(async browser => {
         const page = await browser.newPage()
         await page.goto(pdpURL);
         await page.waitForTimeout(2000)

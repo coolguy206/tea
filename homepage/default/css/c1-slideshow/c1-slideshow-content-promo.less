@@ -2,7 +2,7 @@
 
 &.content-promo {
     @media screen and (max-width: 430px) {
-        // top: @c1-promo-top-431 !important;
+        // top: @c1-promo-top-430 !important;
         width: 100%;
         left: 0 !important;
         transform: translate(0) !important;
@@ -23,10 +23,13 @@
     }
 
     h3 {
+        @media screen and (max-width: 1679px) {
+            font-size: @c1-promo-h3-font-size-1679;
+        }
         @media screen and (max-width: 430px) {
-            color: @c1-promo-h3-color-431 !important;
-            line-height: @c1-promo-h3-line-height-431;
-            font-size: 3.5vw;
+            color: @c1-promo-h3-color-430 !important;
+            line-height: @c1-promo-h3-line-height-430;
+            font-size: @c1-promo-h3-font-size-430;
             // margin: 0 0 6vw;
             // margin: 60vw 0 6vw;
         }
@@ -35,6 +38,7 @@
         margin:0 0 1vw;
         text-align: center !important;
         text-shadow: none;
+        font-size: @c1-promo-h3-font-size;
     }
 
     h2 {
@@ -46,9 +50,9 @@
 
         @media screen and (max-width: 430px) {
             margin: 4vw 0 0;
-            color: @c1-promo-h2-color-431 !important;
-            font-size: @c1-promo-h2-font-size-431;
-            line-height: @c1-promo-h2-line-height-431 !important;
+            color: @c1-promo-h2-color-430 !important;
+            font-size: @c1-promo-h2-font-size-430;
+            line-height: @c1-promo-h2-line-height-430 !important;
         }
 
         color: @c1-promo-h2-color !important;
@@ -57,7 +61,7 @@
         font-family: @c1-promo-h2-font-family;
         // margin: 0 0 4vw;
         text-align: center !important;
-        // text-shadow: none;
+        text-shadow: none;
         // font-size: 110px !important;
         // line-height: 0 !important;
     }
@@ -73,7 +77,7 @@
             @media screen and (max-width: 430px) {
                 column-gap: 4vw;
                 row-gap: 4vw;
-                top: @c1-promo-the-flex-431;
+                top: @c1-promo-the-flex-430;
             }
 
             display: flex;
@@ -109,9 +113,10 @@
             }
 
             @media screen and (max-width: 430px) {
-                width: @c1-promo-cta-size-431;
-                color: @c1-promo-cta-color-431;
-                background: @c1-promo-cta-background-431;
+                width: @c1-promo-cta-size-430;
+                color: @c1-promo-cta-color-430;
+                background: @c1-promo-cta-background-430;
+                height: @c1-promo-cta-height-430;
             }
 
             color: @c1-promo-cta-color;
