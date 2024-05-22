@@ -22,7 +22,7 @@ pdps.pdps.map((pdpURL, index) => {
 
     puppeteer.launch({ headless: 'new', executablePath: executablePath() }).then(async browser => {
         const page = await browser.newPage()
-        await page.goto(pdpURL);
+        await page.goto(pdpURL.url);
         await page.waitForTimeout(2000)
         const html = await page.content();
         // console.log(html);
@@ -33,7 +33,7 @@ pdps.pdps.map((pdpURL, index) => {
         // console.log(title);
 
         // var url = pdps.pdps[0];
-        var url = pdpURL;
+        var url = pdpURL.url;
         // console.log(url);
 
         var color = ``;
@@ -100,7 +100,7 @@ pdps.pdps.map((pdpURL, index) => {
 
 
         //? THIS FOR SLIDES
-        var fileName = `slide-${index + 1}.html`;
+        var fileName = `slide-${pdpURL.num}.html`;
 
 
         fs.writeFile(`${vars.writePath}/${fileName}`, elem, (err) => {
