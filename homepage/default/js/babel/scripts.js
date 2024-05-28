@@ -5,6 +5,10 @@ var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 $(document).ready(function () {
+  if (window.innerWidth < 431) {
+    $(".hp .promo1").insertBefore(".hp .c1");
+  }
+
   //? COUNTDOWN.JS
   // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
   //   $(this).text(

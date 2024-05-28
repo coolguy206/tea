@@ -49,25 +49,28 @@ jQuery(document).ready(function () {
   $('.the-promo .see-details').fancybox({
     helpers: {
       overlay: null
+    },
+  });
+
+  $('.close-fancy, .fancybox-close-small').on('click', function (e) {
+    // e.preventDefault();
+    // console.log(`fancy closed clicked`);
+    $.fancybox.close();
+    $('.fancybox-container').hide()
+
+  });
+
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 2500,
+
+    onSliderLoad: function () {
+      $('.promos.promo2, .promos.promo3').show();
     }
   });
-
-  $('.close-fancy').click(function (e) {
-    // e.preventDefault();
-    $.fancybox.close();
-
-  });
-
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   pause: 2500,
-  // onSliderLoad:function(){
-  //     $('.promos.promo2, .promos.promo3').show();
-  // }
-  // });
 
 });

@@ -9,6 +9,10 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
+  if (window.innerWidth < 431) {
+    $(`.hp .promo1`).insertBefore(`.hp .c1`);
+  }
+
   //? COUNTDOWN.JS
   // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
   //   $(this).text(
