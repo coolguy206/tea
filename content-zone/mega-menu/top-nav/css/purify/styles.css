@@ -10,6 +10,10 @@
   color: #FF1744 !important;
 }
 
+.dept-clearance:hover .line,.dept-sale:hover .line {
+  border-color: #FF1744 !important;
+}
+
 .dept-new-arrivals a {
   color: #436FC1 !important;
 }

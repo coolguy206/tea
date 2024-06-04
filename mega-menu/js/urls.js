@@ -55,6 +55,7 @@ export const urls = {
       }
     },
     sale: {
+      promo: `/clothing-sale`,
       girl: `/sale/girls-clothing/view-all `,
       boy: `/sale/boys-clothing/view-all`,
       baby: {
@@ -68,6 +69,7 @@ export const urls = {
       }
     },
     clearance: {
+      promo: `/sale/clearance`,
       girl: `/sale/girls-clothing/clearance`,
       boy: `/sale/boys-clothing/clearance`,
       baby: {
