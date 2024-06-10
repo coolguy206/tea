@@ -59,9 +59,9 @@ var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 $(document).ready(function () {
-  if (window.innerWidth < 431) {
-    $(".hp .promo1").insertBefore(".hp .c1");
-  }
+  // if (window.innerWidth < 431) {
+  //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
+  // }
 
   //? COUNTDOWN.JS
   // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
   new _glide["default"]('.c1 .glide', {
     type: 'carousel',
-    autoplay: 4000,
+    // autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -102,21 +102,20 @@ $(document).ready(function () {
       }
     }
   }).mount();
-
-  // new Glide('.shop-slideshow2 .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 500,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   breakpoints: {
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  new _glide["default"]('.shop-slideshow2 .glide', {
+    type: 'carousel',
+    // autoplay: 500,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   // new Glide('.shop-slideshow3 .glide', {
   //   type: 'carousel',

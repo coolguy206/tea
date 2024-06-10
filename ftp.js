@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0601/v1/`;
+var category = `promos/one-offs/2024/0608/v0/`;
 // var category = `homepage/2024/0601/v0/`;
 // var category = `headers/2024/0514/global-shop/v0/boy/`;
 // var category = `landing-pages/global-shop/2024/0514/v0/`;
@@ -17,12 +17,12 @@ var category = `promos/one-offs/2024/0601/v1/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0601/04 Handoff/Site/mega/`;
+var readFilePath = `Site/0608/Site/hp/`;
 // var readFilePath = `handoff/landing-pages/global-shop/Handoff/headers/boy/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/0526/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/0601/`;
+var writeFilePath = `promos/default/dev/images/homepage/0608/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/0608/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/shops/global-shop/default/dev/images/0514/`;
 // var writeFilePath = `homepage/default/dev/images/0601/`;
@@ -151,12 +151,28 @@ c.on('ready', function () {
             var html = `<a class="the-official-rules" href="/mas_assets${url}${file}" target="_blank">official rules</a>`;
           } else if (ext == 'mp4') {
             console.log(`it is a mp4`);
+            if (name.indexOf(`-d`) !== -1) {
             var html = `
-              <video poster=""  controls>
-                <source src="${url}${file}" type="video/mp4">
+              <video poster="" class="desktop" muted autoplay loop>
+                <source src="/mas_assets${url}${file}" type="video/mp4">
                 Your browser does not support the video tag.
               </video>
               `;
+            } else if (name.indexOf(`-m`) !== -1) {
+              var html = `
+              <video poster="" class="mobile" muted autoplay loop playsinline> 
+                <source src="/mas_assets${url}${file}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              `;
+            } else {
+              var html = `
+              <video poster="" muted autoplay loop>
+                <source src="/mas_assets${url}${file}" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+              `;
+            }
             // console.log(`${url} ${file}`);
           } else {
             // console.log(`it is not a pdf`);

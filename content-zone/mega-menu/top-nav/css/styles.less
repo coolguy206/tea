@@ -27,13 +27,16 @@
 }
 
 
-.dept-clearance, .dept-sale {
+.dept-clearance,
+.dept-sale,
+.dept-select-styles {
 	a {
 		color: #FF1744 !important;
 		// color: #C1D065 !important;
 	}
 
-	&.active, &:hover {
+	&.active,
+	&:hover {
 		.line {
 			border-color: #FF1744 !important;
 			// border-color: #C1D065 !important;
@@ -85,4 +88,8 @@ header .site-header-inner .nav .site-nav-links li a {
 
 header .site-header-inner .nav .site-nav-links li.dept-bf.active span.line {
 	// border-color: #FF1744 !important;
+}
+
+header .site-header-inner .nav .site-nav-links li span.line {
+	width: 100%;
 }

@@ -1,13 +1,13 @@
 @import "../var.less";
 @promo-background: #F9EBE5;
 @promo-h2-color: #fff;
-@promo-h2-color-430: #4A556B;
+@promo-h2-color-430: @promo-h2-color;
 @promo-h3-color: #fff;
 @promo-h3-color-430: #4A556B;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
-@promo-cta1-color: #2C7F82;
-@promo-cta1-background: #E3F0A3;
+@promo-cta1-color: #fff;
+@promo-cta1-background: #3E7C9F;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #2FAB9D;
 @promo-cta3-color: @promo-cta1-color;
@@ -22,11 +22,11 @@
 
 .promo1 {
   @media screen and (max-width: 1679px) {
-    min-height: 28vw;
+    // min-height: 28vw;
   }
 
   @media screen and (max-width: 430px) {
-    min-height: 154vw;
+    // min-height: 154vw;
     // padding: 14vw 0;
   }
 
@@ -34,7 +34,7 @@
   display: flex;
   width: 100%;
   // background: @promo-background;
-  min-height: 476px;
+  // min-height: 476px;
   // flex-wrap: wrap;
 
   // video {
@@ -42,29 +42,29 @@
   //   max-width: 100%;
   // }
 
-  #countdown {
-    @media screen and (max-width: 1679px) {
-      font-size: 1.1vw;
-    }
+  // #countdown {
+  //   @media screen and (max-width: 1679px) {
+  //     font-size: 1.1vw;
+  //   }
 
-    @media screen and (max-width: 430px) {
-      width: 100%;
-      text-align: center;
-      font-size: 4vw;
-      top: 6%;
-      left: 0;
-    }
+  //   @media screen and (max-width: 430px) {
+  //     width: 100%;
+  //     text-align: center;
+  //     font-size: 4vw;
+  //     top: 6%;
+  //     left: 0;
+  //   }
 
-    position: absolute;
-    font-family: gilroy-black;
-    color: #fff;
-    top: 24%;
-    left: 65%;
-    transform: translate(0%, 0);
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    font-size: 18px;
-  }
+  //   position: absolute;
+  //   font-family: gilroy-black;
+  //   color: #fff;
+  //   top: 24%;
+  //   left: 65%;
+  //   transform: translate(0%, 0);
+  //   letter-spacing: 4px;
+  //   text-transform: uppercase;
+  //   font-size: 18px;
+  // }
 
   div {
     &.the-content {
@@ -73,18 +73,18 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 65%;
+        // top: 65%;
         // position: relative;
-        width: 100%;
+        // width: 100%;
         // left: 0;
         // transform: translate(0%);
         // text-align: center;
       }
 
       position: absolute;
-      top: 70%;
-      transform: translate(-50%, 0%);
-      width: auto;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
       left: 50%;
       // text-align: center;
 
@@ -99,32 +99,32 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 5vw;
-          line-height: 5vw;
+          font-size: 8vw;
+          margin: 0 0 5vw;
+          // line-height: 5vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 9vw;
+          font-size: 19vw;
           // margin: 0;
           // line-height: 17vw;
           // font-size: 15vw;
           color: @promo-h2-color-430;
-          margin: 0 0 8vw;
+          margin: 0 0 14vw;
           // display: none;
           // color: #fff;
           text-align: center;
         }
 
         // margin: 5% 0 0;
-        text-transform: uppercase;
+        // text-transform: uppercase;
         color: @promo-h2-color;
-        line-height: 80px;
-        // font-family: @souv;
-        font-family: @gilroyb;
-        font-size: 80px;
-        margin: 0 0 1vw;
-        text-align: left;
-        letter-spacing: .2em;
+        line-height: normal;
+        font-family: @kalakala;
+        font-size: 138px;
+        margin: 0 0 84px;
+        text-align: center;
+        // letter-spacing: .2em;
       }
 
       h3 {
@@ -199,6 +199,7 @@
         // flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 20px;
+        justify-content: center;
 
 
         a {
@@ -252,7 +253,7 @@
           &.cta5 {
             &.desktop-only {
               @media screen and (max-width: 430px) {
-                display: none;
+                // display: none;
               }
             }
 
