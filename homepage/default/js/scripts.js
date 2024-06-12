@@ -27,6 +27,8 @@ $(document).ready(function () {
     perView: 1,
     hoverpause: true,
     gap: 0,
+    swipeThreshold: false,
+    dragThreshold: false,
   }).mount();
 
   // new Glide('.c2 .glide', {
