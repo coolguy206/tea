@@ -1,19 +1,19 @@
 @import "../var.less";
 @promo-background: #F9EBE5;
-@promo-h2-color: #fff;
+@promo-h2-color: #47363D;
 @promo-h2-color-430: @promo-h2-color;
-@promo-h3-color: #fff;
-@promo-h3-color-430: #4A556B;
+@promo-h3-color: #47363D;
+@promo-h3-color-430: @promo-h3-color;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
 @promo-cta1-color: #fff;
-@promo-cta1-background: #3E7C9F;
+@promo-cta1-background: #9F88CC;
 @promo-cta2-color: @promo-cta1-color;
-@promo-cta2-background: #2FAB9D;
+@promo-cta2-background: #4261A6;
 @promo-cta3-color: @promo-cta1-color;
-@promo-cta3-background: #A291B9;
+@promo-cta3-background: #CF5F99;
 @promo-cta4-color: @promo-cta1-color;
-@promo-cta4-background: #6C6694;
+@promo-cta4-background: #31AB9D;
 @promo-cta5-color: @promo-cta1-color;
 @promo-cta5-background: #2B5579;
 @promo-cta6-color: @promo-cta1-color;
@@ -75,7 +75,7 @@
       @media screen and (max-width: 430px) {
         // top: 65%;
         // position: relative;
-        // width: 100%;
+        width: 100%;
         // left: 0;
         // transform: translate(0%);
         // text-align: center;
@@ -84,7 +84,7 @@
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
+      width: 55%;
       left: 50%;
       // text-align: center;
 
@@ -99,18 +99,18 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 8vw;
-          margin: 0 0 5vw;
-          // line-height: 5vw;
+          font-size: 5vw;
+          margin: 0 0 2vw;
+          line-height: 5vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 19vw;
+          font-size: 9vw;
           // margin: 0;
-          // line-height: 17vw;
+          line-height: 12vw;
           // font-size: 15vw;
           color: @promo-h2-color-430;
-          margin: 0 0 14vw;
+          margin: 0 0 4vw;
           // display: none;
           // color: #fff;
           text-align: center;
@@ -119,36 +119,38 @@
         // margin: 5% 0 0;
         // text-transform: uppercase;
         color: @promo-h2-color;
-        line-height: normal;
-        font-family: @kalakala;
-        font-size: 138px;
-        margin: 0 0 84px;
+        line-height: 80px;
+        font-family: @souv;
+        font-size: 80px;
+        margin: 0 0 45px;
         text-align: center;
         // letter-spacing: .2em;
       }
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 1.2vw;
+          font-size: 1.5vw;
           line-height: 1.5vw;
+          margin: 0 0 1vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 5vw;
+          font-size: 4.7vw;
           line-height: 6vw;
-          margin: 0 0 8vw;
+          margin: 0 0 3vw;
           color: @promo-h3-color-430;
           text-align: center;
+          letter-spacing: .8vw;
         }
 
-        font-size: 20px;
-        line-height: 24px;
-        text-align: left;
-        // letter-spacing: 0.2em;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center;
+        letter-spacing: 4.8px;
         text-transform: uppercase;
         font-family: @gilroyb;
         color: @promo-h3-color;
-        margin: 0 0 1vw;
+        margin: 0 0 17px;
       }
 
       p {
@@ -204,20 +206,20 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            // width: 12vw;
+            width: 12vw;
           }
 
           @media screen and (max-width: 810px) {}
 
           @media screen and (max-width: 430px) {
             // margin: 0 0 4%;
-            // width: 43vw;
+            width: 37vw;
             // background: #2FAB9D !important;
           }
 
           color: @promo-cta1-color;
           background: @promo-cta1-background;
-          // width: 203px;
+          width: 203px;
           margin: 0;
 
           &:hover {}
@@ -231,22 +233,22 @@
           }
 
           &.cta1 {
-            // background: @promo-cta1-background;
+            background: @promo-cta1-background;
             // color: @promo-cta1-color;
           }
 
           &.cta2 {
-            // background: @promo-cta2-background;
+            background: @promo-cta2-background;
             // color: @promo-cta2-color;
           }
 
           &.cta3 {
-            // background: @promo-cta3-background;
+            background: @promo-cta3-background;
             // color: @promo-cta3-color;
           }
 
           &.cta4 {
-            // background: @promo-cta4-background;
+            background: @promo-cta4-background;
             // color: @promo-cta4-color;
           }
 

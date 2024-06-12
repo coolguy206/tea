@@ -2,8 +2,8 @@ var basePath = `./homepage/default/`;
 
 module.exports =  { 
     basePath: basePath, 
-    pdpPath: `${basePath}js/shop-slideshow-2/pdp.js`,
-    writePath:  `${basePath}dev/shop-slideshow2/`
+    pdpPath: `${basePath}js/shop-slideshow/pdp.js`,
+    writePath:  `${basePath}dev/shop-slideshow/`
 }
 
 // module.exports =  { 

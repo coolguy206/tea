@@ -151,14 +151,6 @@
 
 
 		<li>
-			<h2><!--&#127754;--> <a href="/select-styles" style="color:#FF1744 !important">50% off all Swim</a> <!--&#127754;--> </h2>
-			<div class="sub">
-				{*include "../swim/shop-by-collection-m.html"*}
-			</div>
-		</li>
-
-
-		<li>
 			<h2>
 				<a href="/global-shop" class="">&#127757; Global Shop &#127757;</a>
 			</h2>
@@ -751,12 +743,12 @@
 		</li> -->
 
 
-		 <!-- <li>
+		 <li>
 			<h2>&#127754; Swim &#127754; <span class="fas fa-plus"></span></h2>
-			<div class="sub"> -->
+			<div class="sub">
 				{*include "../swim/shop-by-collection-m.html"*}
-			<!-- </div>
-		</li>  -->
+			</div>
+		</li> 
 
 		
 		<li>
@@ -908,6 +900,51 @@
 
 
 		{*
+
+			<li>
+				<h2><!--&#127754;--> <a href="/select-styles" style="color:#FF1744 !important">50% off all Swim</a> <!--&#127754;--> </h2>
+				<div class="sub">
+
+					<!-- <h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3> -->
+					<div class="links swim">
+					  <ul>
+					    <li>Shop by Department</li>
+					    <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
+					    <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
+					    <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
+					    <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
+					    <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
+					    <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
+					    <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
+					  <ul>
+					    <li>Shop by Category</li>
+					    <!-- include "../shop-by-collection.html" -->
+					 
+					    {sub_cats name="cat" category="swim-shop/shop-by-category"}
+					      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim" >{$cat.title}</a></li>
+					    {/sub_cats}
+					    
+					    <li><a href="/teaxgreensprouts" class="" data="mega menu swim">Tea x Green Sprouts</a></li>
+					  </ul>
+
+					</div>
+
+					{literal}
+					<style>
+					    header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
+					    display:none;
+					    
+					  }
+					@media screen and (max-width:430px){
+					  header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
+					    display:block;
+					    padding-top:0;
+					  }
+					}
+					</style>
+					{/literal}
+				</div>
+			</li>
 
 		<li>
 			<h2><a href="/select-styles" style="color: #FF1744 !important;">Warehouse Sale</a></h2>
