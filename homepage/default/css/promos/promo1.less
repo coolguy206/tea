@@ -67,6 +67,55 @@
   // }
 
   div {
+    &.the-pdps {
+      display: flex;
+      flex-wrap:wrap;
+
+      &> div {
+        position: relative;
+        perspective: 600px;
+        flex-basis: 25%;
+
+        &.stuff {
+          flex-basis: 50%;
+          background: #FAEBE6;
+
+          .the-content {
+            width: 90%;
+          }
+        }
+
+        &:hover {
+          .the-model {
+            transform: rotatey(180deg);
+          }
+
+          .thumb-grid.item {
+            transform: rotatey(0deg);
+          }
+        }
+
+        .the-model {
+          position: absolute;
+          backface-visibility: hidden;
+          transition: all 1s ease;
+          width:100%;
+          height:100%;
+          background-size: cover;
+          background-position: center;
+        }
+
+        .thumb-grid.item {
+          width: 100%;
+          padding: 2vw;
+          transform: rotatey(-180deg);
+          backface-visibility: hidden;
+          transition: all 1s ease;
+        }
+      }
+    }
+
+
     &.the-content {
       @media screen and (max-width: 1024px) {}
 

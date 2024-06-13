@@ -1,9 +1,15 @@
 var basePath = `./homepage/default/`;
 
+// module.exports =  { 
+//     basePath: basePath, 
+//     pdpPath: `${basePath}js/shop-slideshow/pdp.js`,
+//     writePath:  `${basePath}dev/shop-slideshow/`
+// }
+
 module.exports =  { 
     basePath: basePath, 
-    pdpPath: `${basePath}js/shop-slideshow/pdp.js`,
-    writePath:  `${basePath}dev/shop-slideshow/`
+    pdpPath: `${basePath}js/promos/pdp.js`,
+    writePath:  `${basePath}dev/promos/pdps/`
 }
 
 // module.exports =  { 

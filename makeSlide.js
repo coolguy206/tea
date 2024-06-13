@@ -53,7 +53,8 @@ pdps.pdps.map((pdpURL, index) => {
         }
 
         var imgSrc = $('.product-main-image.js-product-main-image').attr('src');
-        // console.log(imgSrc);
+        var onModel = $($('.img-slide')[2]).find('img').attr('data-original');
+        console.log(onModel);
 
         var price = $('span[itemprop=price]').text();
         // console.log(price);
@@ -87,7 +88,7 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var elem = theElem.elem(url, imgSrc, title, color, price, sizesStr, sizesArr, redText);
+        var elem = theElem.elem(url, imgSrc, onModel, title, color, price, sizesStr, sizesArr, redText);
         // console.log(elem);
 
         // var elem = `<img data-set="${imgSrc}" alt="${title}">`;

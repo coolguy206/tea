@@ -1,6 +1,9 @@
-var elem = (url, imgSrc, title, color, price, sizesStr, sizesArr, redText) => {
+var elem = (url, imgSrc, onModel, title, color, price, sizesStr, sizesArr, redText) => {
     var str = `
-<li>
+<div>
+    <div class="the-model" style="background-image:url(${onModel})">
+        <!--<img src="${onModel}" alt="${title}">-->
+    </div>
     <div class="thumb-grid item">
         <span class="img">
             <a href="${url}"
@@ -34,7 +37,7 @@ var elem = (url, imgSrc, title, color, price, sizesStr, sizesArr, redText) => {
 
         </div>
     </div>
-</li>
+</div>
 `;
 
     return str;
