@@ -30,7 +30,7 @@ pdps.pdps.map((pdpURL, index) => {
         const $ = cheerio.load(html);
 
         var title = $('h1').text();
-        // console.log(title);
+        console.log(title);
 
         // var url = pdps.pdps[0];
         var url = pdpURL.url;
@@ -55,8 +55,17 @@ pdps.pdps.map((pdpURL, index) => {
         var imgSrc = $('.product-main-image.js-product-main-image').attr('src');
         // console.log(imgSrc);
 
+        var promoClass = "";
         var price = $('span[itemprop=price]').text();
-        // console.log(price);
+        var strike = $('#store_price strike').text();
+        console.log(`price: ${price}`);
+        console.log(`strike: ${strike}`);
+        if(strike == undefined){
+            strike = "";
+        } else {
+            promoClass = "promo-teaser-thumb";
+        }
+        console.log(`promoClass: ${promoClass}`);
 
         var sizesArr = [];
 
@@ -87,7 +96,7 @@ pdps.pdps.map((pdpURL, index) => {
         var sizesStr = sizesArr.toString().replace(/,/g, ', ');
         // console.log(sizesStr);
 
-        var elem = theElem.elem(url, imgSrc, title, color, price, sizesStr, sizesArr, redText);
+        var elem = theElem.elem(url, imgSrc, title, color, price, strike, promoClass, sizesStr, sizesArr, redText);
         // console.log(elem);
 
         // var elem = `<img data-set="${imgSrc}" alt="${title}">`;
