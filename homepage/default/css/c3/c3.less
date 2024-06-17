@@ -84,6 +84,38 @@
 
       // order: 2;
 
+      &:before {
+        content: "";
+        background: url(https://media1.giphy.com/media/RY1CTdRQP7XceZla4z/giphy.gif) no-repeat;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 6vw;
+        background-size: contain;
+        right: 0;
+        transition: all .5s;
+        transform: scale(0) rotate(45deg);
+      }
+
+      &:after {
+        content: "";
+        background: url(https://media4.giphy.com/media/9DeFJ56Mw4DCgeXuoq/giphy.gif) no-repeat;
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        position: absolute;
+        top: -1vw;
+        left: -1vw;
+        transition: all .5s;
+        transform: scale(0) rotate(-45deg);
+      }
+
+      &:hover {
+        &:before, &:after {
+          transform:scale(1.5);
+        }
+      }
+
       .the-content {
         @media screen and (max-width: 1679px) {}
 
@@ -127,6 +159,37 @@
       @media screen and (max-width: 430px) {}
 
       // order: 1;
+      &:before {
+        content: "";
+        background: url(https://i.gifer.com/origin/20/209a6bafa4fdc5285713a69a7c6f705b_w200.gif) no-repeat;
+        width: 200px;
+        height: 200px;
+        position: absolute;
+        bottom: 6vw;
+        background-size: contain;
+        left: 0;
+        transition: all .5s;
+        transform: scale(0) rotate(45deg);
+      }
+
+      &:after {
+        content: "";
+        background: url(https://i6.glitter-graphics.org/pub/2520/2520396ex9leioafx.gif) no-repeat;
+        width: 200px;
+        height: 200px;
+        background-size: contain;
+        position: absolute;
+        top: 3vw;
+        right: 1vw;
+        transition: all .5s;
+        transform: scale(0) rotate(-45deg);
+      }
+
+      &:hover {
+        &:before, &:after {
+          transform:scale(1.5);
+        }
+      }
 
       .thumb-grid.item {
         width: 50%;

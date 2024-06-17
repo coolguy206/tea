@@ -194,7 +194,7 @@
           row-gap: 4vw;
           column-gap: 4vw;
           justify-content: center;
-          flex-wrap:wrap;
+          flex-wrap: wrap;
         }
 
         display: flex;
@@ -221,8 +221,31 @@
           background: @promo-cta1-background;
           width: 203px;
           margin: 0;
+          transition: all .3s;
+          position:relative;
 
-          &:hover {}
+          &:before {
+            content: "";
+            background: url(https://i.pinimg.com/originals/ff/29/f5/ff29f5033d893f5d75575c56e9ab50e6.gif) no-repeat;
+            width: 100px;
+            height: 100px;
+            background-size: contain;
+            position: absolute;
+            top: -2vw;
+            left: 5vw;
+            transition: all .5s;
+            transform: scale(0);
+          }
+
+          &:hover {
+            box-shadow: -5px 5px 0px #000;
+            border: 2px solid #000;
+            text-shadow: -2px 2px 0px #000;
+
+            &:before {
+              transform:scale(.8) rotate(-25deg);
+            }
+          }
 
           &.mobile-cta {
             @media screen and (max-width: 430px) {

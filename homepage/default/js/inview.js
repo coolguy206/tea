@@ -17,7 +17,7 @@ export const inview = function(elem) {
         $(val).removeAttr('data-set');
       });
 
-      $(this).css('visibility', 'visible');
+      $(this).css({'visibility': 'visible', 'opacity': 1});
     }
   });
 };
