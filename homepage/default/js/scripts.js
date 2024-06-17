@@ -20,16 +20,16 @@ $(document).ready(function () {
   //   );
   // });
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    // autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    swipeThreshold: false,
-    dragThreshold: false,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
@@ -55,20 +55,20 @@ $(document).ready(function () {
     }
   }).mount();
 
-  new Glide('.shop-slideshow2 .glide', {
-    type: 'carousel',
-    // autoplay: 500,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
+  // new Glide('.shop-slideshow2 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 500,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   // new Glide('.shop-slideshow3 .glide', {
   //   type: 'carousel',

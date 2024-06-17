@@ -1,4 +1,4 @@
-var elem = (url, imgSrc, title, color, price, sizesStr, sizesArr, redText) => {
+var elem = (url, imgSrc, title, color, price, strike, promoClass, sizesStr, sizesArr, redText) => {
     var str = `
 <li>
     <div class="thumb-grid item">
@@ -21,7 +21,8 @@ var elem = (url, imgSrc, title, color, price, sizesStr, sizesArr, redText) => {
 
             <div class="price-wrap">
                 <div class="price">
-                    <span id="store_price" class="price">$${price}</span>
+                    <strike>${strike}</strike>
+                    <span id="store_price" class="price ${promoClass}">$${price}</span>
                 </div>
             </div>
 
