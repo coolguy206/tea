@@ -13,3 +13,4 @@ movie-rest.js
 schema.graphql
 handoff/**
 Site/**
+.vscode
