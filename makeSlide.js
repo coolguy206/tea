@@ -60,9 +60,9 @@ pdps.pdps.map((pdpURL, index) => {
         var strike = $('#store_price strike').text();
         console.log(`price: ${price}`);
         console.log(`strike: ${strike}`);
-        if(strike == undefined){
+        if(strike == undefined && strike == ""){
             strike = "";
-        } else {
+        } else if(strike !== undefined && strike !== "") {
             promoClass = "promo-teaser-thumb";
         }
         console.log(`promoClass: ${promoClass}`);

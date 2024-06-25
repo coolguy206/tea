@@ -23,7 +23,7 @@ var inview = exports.inview = function inview(elem) {
         }
         $(val).removeAttr('data-set');
       });
-      $(this).css('visibility', 'visible');
+      $(this).css('opacity', '1');
     }
   });
 };

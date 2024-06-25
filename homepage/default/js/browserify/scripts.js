@@ -23,7 +23,7 @@ var inview = exports.inview = function inview(elem) {
         }
         $(val).removeAttr('data-set');
       });
-      $(this).css('visibility', 'visible');
+      $(this).css('opacity', '1');
     }
   });
 };
@@ -72,7 +72,7 @@ $(document).ready(function () {
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
-  //   // autoplay: 4000,
+  //   autoplay: 4000,
   //   animationDuration: 1000,
   //   perView: 1,
   //   hoverpause: true,

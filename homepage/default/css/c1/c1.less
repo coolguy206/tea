@@ -1,10 +1,13 @@
 @import "../var.less";
 
 @c1-font-color: #47363D;
-@c1-h2-color: #47363D;
+@c1-h2-color: #4261A6;
+@c1-h2-color-430: #fff;
+@c1-h3-color: @c1-h2-color;
+@c1-h3-color-430: @c1-h2-color-430;
 @c1-p-color: #47363D;
 @c1-cta-color: #fff;
-@c1-cta-background: #47363D;
+@c1-cta-background: @c1-h2-color;
 
 
 // @import "../c1-slideshow/c1-slideshow.less";
@@ -15,11 +18,35 @@
 
     div {
         &.the-content {
+            @media screen and (max-width: 430px) {
+                width: 100%;
+                left: 0;
+                top: 10vw;
+                transform: translate(0);
+            }
+
             position: absolute;
-            top: 70%;
-            transform: translate(-50%, 0%);
-            width: auto;
-            left: 50%;
+            top: 50%;
+            transform: translate(0%, -50%);
+            width: 40%;
+            left: 60%;
+
+            h3 {
+                @media screen and (max-width: 1679px) {
+                    letter-spacing: .3vw;
+                    margin: 0 0 1vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    color: @c1-h3-color-430;
+                    text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+                    letter-spacing: 3px;
+                }
+
+                color: @c1-h2-color;
+                letter-spacing: 4px;
+                margin: 0 0 20px;
+            }
 
             h2 {
                 @media screen and (max-width: 1679px) {
@@ -30,6 +57,8 @@
                 @media screen and (max-width:430px) {
                     font-size: 12vw;
                     margin: 8vw 0;
+                    color: @c1-h2-color-430;
+                    text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
                     // line-height: 10.5vw;
                 }
 
@@ -39,7 +68,7 @@
                 line-height: 80px;
                 // letter-spacing: 0.1rem;
                 color: @c1-h2-color;
-                margin: 0 0 8%;
+                margin: 0 0 4%;
                 // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
                 // text-align:left;
             }
@@ -47,12 +76,12 @@
             p {
                 @media screen and (max-width: 1679px) {
                     font-size: 1.5vw;
-                    line-height: 1.7vw;
+                    // line-height: 1.7vw;
                 }
 
                 @media screen and (max-width: 430px) {
                     font-size: 6vw;
-                    line-height: 7.4vw;
+                    // line-height: 7.4vw;
                     margin: 0 0 8vw;
                     display: none;
                 }
@@ -62,18 +91,31 @@
                 color: @c1-p-color;
                 text-transform: none;
                 font-size: 25px;
-                line-height: 30px;
+                line-height: normal;
                 width: 100%;
                 font-family: @souv;
-                text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+                // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
             }
 
             div {
-                flex-wrap: nowrap;
+                // flex-wrap: nowrap;
+
+                &.the-flex {
+                    display: flex;
+                    justify-content: center;
+                }
 
                 a {
+                    @media screen and (max-width: 1679px) {
+                        width: 15vw;
+                    }
+                    @media screen and (max-width: 430px){
+                        width: 64vw;
+                    }
+
                     background: @c1-cta-background;
                     color: @c1-cta-color;
+                    width: 244px;
                 }
             }
         }
