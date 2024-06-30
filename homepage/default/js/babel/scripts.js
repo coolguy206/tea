@@ -50,36 +50,34 @@ $(document).ready(function () {
       }
     }
   }).mount();
-
-  // new Glide('.shop-slideshow2 .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 500,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   breakpoints: {
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
-
-  // new Glide('.shop-slideshow3 .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 500,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   breakpoints: {
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  new _glide["default"]('.shop-slideshow2 .glide', {
+    type: 'carousel',
+    // autoplay: 500,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
+  new _glide["default"]('.shop-slideshow3 .glide', {
+    type: 'carousel',
+    // autoplay: 500,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    breakpoints: {
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',

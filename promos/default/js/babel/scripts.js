@@ -25,9 +25,10 @@ jQuery(document).ready(function () {
   if (url == '/') {
     // $('.header-banner').css('max-width', '100%');
     // $('.promos')[0].style.display = 'none'
-    $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
+    // $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
+
     if (window.innerWidth < 431) {
-      $(".promos .the-promo").css('height', '46px');
+      // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
     }
   }

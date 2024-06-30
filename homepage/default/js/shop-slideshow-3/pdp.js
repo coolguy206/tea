@@ -1,12 +1,14 @@
 const pdps = [
-    `https://www.teacollection.com/product/23f32501/ruffle-shoulder-baby-romper.html#monet's%20garden`,
-    `https://www.teacollection.com/product/23w42504/long-sleeve-pocket-baby-romper.html#wooly%20mammoth%20stamp`,
-    `https://www.teacollection.com/product/23f32511/print-mix-baby-romper.html#perfume%20jasmine`,
-    `https://www.teacollection.com/product/23f32513/ruffle-shoulder-baby-romper.html#folk%20floral`,
-    `https://www.teacollection.com/product/22w42502/shawl-collar-baby-romper.html#edo%20plaid`,
-    `https://www.teacollection.com/product/22f32522/ruffle-sleeve-baby-romper.html#freyja%20floral%20in%20green`,
-    `https://www.teacollection.com/product/23f42507/layered-sleeve-baby-romper.html#paris%20metro%20cars`,
-    `https://www.teacollection.com/product/23w42504/long-sleeve-pocket-baby-romper.html#french%20alps%20scenic`,
+    // { url: `https://www.teacollection.com/product/24s13300/full-sweep-wrap-dress.html#batik%20butterfly`, num: 1 },
+    // { url: `https://www.teacollection.com/product/24s22139/printed-tee.html#a%20dazzle%20of%20zebras`, num: 2 },
+    // { url: `https://www.teacollection.com/product/24m12203/twirl-skort.html#passion%20fruit%20wax%20print`, num: 3 },
+    // { url: `https://www.teacollection.com/product/24s23603/shortie-swim-trunks.html#macaw%20march%20in%20blue`, num: 4 },
+    // { url: `https://www.teacollection.com/product/24m12701/summer-nights-tank-pajama-set.html#colorful%20cats`, num: 5 },
+    // { url: `https://www.teacollection.com/product/24m42501/pocket-shortie-baby-romper.html#nile%20crocodiles`, num: 6 },
+    // { url: `https://www.teacollection.com/product/24m32502/flutter-shoulder-baby-romper.html#painted%20cosmo%20floral`, num: 7 },
+    // { url: `https://www.teacollection.com/product/24m22700/in-your-dreams-pajama-set.html#snake%20&%20shake`, num: 8 },
+    { url: `https://www.teacollection.com/product/23w32600/rash-guard-baby-swim-set.html#watermelons`, num: 9 },
+    { url: `https://www.teacollection.com/product/23w42600/rash-guard-baby-swimsuit.html#nesting%20sea%20turtles`, num: 10 },
 ];
 
 exports.pdps = pdps;

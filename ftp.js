@@ -7,9 +7,9 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2024/0617/v0/`;
+var category = `promos/one-offs/2024/0628/v2/`;
 // var category = `homepage/2024/0625/v0/`;
-var category = `headers/2024/0625/v0/summer-games/`;
+// var category = `headers/2024/0625/v0/summer-games/`;
 // var category = `landing-pages/global-shop/2024/0514/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
@@ -17,13 +17,13 @@ var category = `headers/2024/0625/v0/summer-games/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/0617/nav/nav/`;
-var readFilePath = `handoff/hp/0625/handoff/summer games/`;
+var readFilePath = `Site/0628/Site/062824-070324/nav/`;
+// var readFilePath = `handoff/hp/0625/handoff/summer games/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/0617/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/0617/`;
-var writeFilePath = `promos/headers/dev/images/landing-pages/summer-games/`;
+// var writeFilePath = `promos/default/dev/images/homepage/0628/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/0628/`;
+// var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/shops/global-shop/default/dev/images/0514/`;
 // var writeFilePath = `homepage/default/dev/images/0625/`;
 // var writeFilePath = `mega-menu/dev/images/`;
