@@ -13,12 +13,14 @@ $(document).ready(function () {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
   // }
 
+  // 23:59:59
+
   //? COUNTDOWN.JS
-  // $("#countdown span").countdown("2023/11/27 23:59:59", function (event) {
-  //   $(this).text(
-  //     event.strftime('%-D days %H:%M:%S')
-  //   );
-  // });
+  $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
+    $(this).text(
+      event.strftime('%-D days %H:%M:%S')
+    );
+  });
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
