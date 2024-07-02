@@ -19,7 +19,9 @@ $(document).ready(function () {
       console.log("next year data");
       console.log(newData);
       console.log("current year data");
-      console.log(data); //? for dev
+      console.log(data);
+
+      //? for dev
       // month = 12;
       // day = 2;
 
@@ -30,16 +32,16 @@ $(document).ready(function () {
         holidayDate = holidayDate.split('-');
         var holidayYear = Number(holidayDate[0]);
         var holidayMonth = Number(holidayDate[1]);
-        var holidayDay = Number(holidayDate[2]); // console.log(month, holidayMonth);
+        var holidayDay = Number(holidayDate[2]);
+        // console.log(month, holidayMonth);
         // console.log(day, holidayDay);
-        //? for new years
 
+        //? for new years
         var nextYearDate = newData[0].date;
         nextYearDate = nextYearDate.split('-');
         var nextYearYear = nextYearDate[0];
         var nextYearMonth = nextYearDate[1];
         var nextYearDay = nextYearDate[2];
-
         if (year == holidayYear) {
           if (val.name !== "Good Friday" && val.name !== "Martin Luther King, Jr. Day" && val.name !== "Washington's Birthday" && val.name !== "Juneteenth" && val.name !== "Columbus Day" && val.name !== "Veterans Day" && val.name !== "Veterans Day") {
             if (month == 12 && month == holidayMonth) {
@@ -48,9 +50,10 @@ $(document).ready(function () {
               $('.holiday-closure').show();
             } else if (month == 7 && month == holidayMonth) {
               var theDay = new Date("".concat(holidayMonth, "/").concat(holidayDay - 1, "/").concat(holidayYear)).getDay();
-              theDay = weekdays[theDay - 1]; // console.log(theDay);
+              theDay = weekdays[theDay - 1];
 
-              message = "\n              <h3>".concat(theDay, " ").concat(holidayMonth, "/").concat(holidayDay - 1, "/").concat(holidayYear, "</h3>\n              <h3>").concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n              ");
+              // console.log(theDay);
+              message = "\n              <!-- <h3>".concat(theDay, " ").concat(holidayMonth, "/").concat(holidayDay - 1, "/").concat(holidayYear, "</h3> -->\n              <h3>").concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n              ");
               $('.holiday-closure p').html(message);
               $('.holiday-closure').show();
             } else if (month == holidayMonth) {

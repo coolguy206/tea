@@ -61,7 +61,7 @@ $(document).ready(function () {
 
               // console.log(theDay);
               message = `
-              <h3>${theDay} ${holidayMonth}/${holidayDay-1}/${holidayYear}</h3>
+              <!-- <h3>${theDay} ${holidayMonth}/${holidayDay-1}/${holidayYear}</h3> -->
               <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
               `;
               $('.holiday-closure p').html(message);
