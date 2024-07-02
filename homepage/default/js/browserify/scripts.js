@@ -67,7 +67,9 @@ $(document).ready(function () {
 
   //? COUNTDOWN.JS
   $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
-    $(this).text(event.strftime('%-D days %H:%M:%S'));
+    $(this).text(event.strftime('%-D days %H:%M:%S')
+    // event.strftime('%-D %H:%M:%S')
+    );
   });
 
   // new Glide('.c1 .glide', {
