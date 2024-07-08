@@ -1,0 +1,1 @@
+{"version":3,"file":"api.js","names":["keys","exports","api","secret"],"sources":["../api.js"],"sourcesContent":["export\r\nconst keys = {\r\n  api: `8379ab7deccf4e4aa16a01990e0f4fa2`,\r\n  secret: `a05b94dd5722b409a097f77b14795d05`\r\n}"],"mappings":";;;;;;AACA,IAAMA,IAAI,GAAAC,OAAA,CAAAD,IAAA,GAAG;EACXE,GAAG,oCAAoC;EACvCC,MAAM;AACR,CAAC"}
