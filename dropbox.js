@@ -16,7 +16,7 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/06 June/062824 End of Season Sale/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/071124 Fall 1 Site/071124 HP/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/071124 Fall 1 Site/Category Heroes/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/050324 Mothers Day Giveaway/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
