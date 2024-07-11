@@ -1,13 +1,13 @@
 @import "../var.less";
 
-@c1-font-color: #47363D;
-@c1-h2-color: #4261A6;
-@c1-h2-color-430: #fff;
+@c1-font-color: #fff;
+@c1-h2-color: #fff;
+@c1-h2-color-430: #47363D;
 @c1-h3-color: @c1-h2-color;
 @c1-h3-color-430: @c1-h2-color-430;
-@c1-p-color: #47363D;
+@c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: @c1-h2-color;
+@c1-cta-background: #4261A6;
 
 
 // @import "../c1-slideshow/c1-slideshow.less";
@@ -27,9 +27,9 @@
 
             position: absolute;
             top: 50%;
-            transform: translate(0%, -50%);
-            width: 40%;
-            left: 60%;
+            transform: translate(-50%, -50%);
+            width: 35%;
+            left: 50%;
 
             h3 {
                 @media screen and (max-width: 1679px) {
@@ -45,7 +45,7 @@
 
                 color: @c1-h2-color;
                 letter-spacing: 4px;
-                margin: 0 0 20px;
+                margin: 0 0 4%;
             }
 
             h2 {
@@ -62,7 +62,7 @@
                     // line-height: 10.5vw;
                 }
 
-                font-family: @gilroyb;
+                font-family: @souv;
                 font-size: 80px;
                 // text-transform: uppercase;
                 line-height: 80px;
@@ -101,21 +101,32 @@
                 // flex-wrap: nowrap;
 
                 &.the-flex {
+                    @media screen and (max-width: 1679px) {
+                        row-gap: 1.4vw;
+                        column-gap: 1.4vw;
+                    }
+                    @media screen and (max-width: 430px){
+                        row-gap: 4vw;
+                        column-gap: 4vw;
+                    }
                     display: flex;
                     justify-content: center;
+                    flex-wrap: wrap;
+                    row-gap: 22px;
+                    column-gap: 22px;
                 }
 
                 a {
                     @media screen and (max-width: 1679px) {
-                        width: 15vw;
+                        width: 12vw;
                     }
                     @media screen and (max-width: 430px){
-                        width: 64vw;
+                        width: 37vw;
                     }
 
                     background: @c1-cta-background;
                     color: @c1-cta-color;
-                    width: 244px;
+                    width: 203px;
                 }
             }
         }

@@ -1,8 +1,8 @@
 @import "../var.less";
 @c2-font-color: #fff;
 @c2-cta-color: #fff;
-@c2-cta-background: #47363D;
-@c2-h3-color-430: #47363D;
+@c2-cta-background: #66B88F;
+@c2-h3-color-430: @c2-font-color;
 
 
 .c2 {
@@ -37,9 +37,14 @@
         }
 
         h3 {
-            @media screen and (max-width:430px) {
-                color: @c2-h3-color-430;
+            @media screen and (max-width: 1679px) {
+                letter-spacing: .2vw;
             }
+            @media screen and (max-width:430px) {
+                // color: @c2-h3-color-430;
+                letter-spacing: 1vw;
+            }
+            letter-spacing: 4px;
         }
 
         h2 {
@@ -50,7 +55,7 @@
 
             @media screen and (max-width:430px) {
                 font-size: 12vw;
-                color: @c2-cta-background;
+                // color: @c2-cta-background;
                 margin: 8vw 0;
                 // line-height: 10.5vw;
             }
@@ -61,7 +66,7 @@
             line-height: 80px;
             // letter-spacing: 0.1rem;
             color: @c2-font-color;
-            margin: 0 0 8%;
+            margin: 4% 0;
             // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
             // text-align:left;
         }
@@ -69,41 +74,41 @@
         p {
             @media screen and (max-width: 1679px) {
                 font-size: 1.5vw;
-                line-height: 1.7vw;
+                // line-height: 1.7vw;
             }
 
             @media screen and (max-width: 430px) {
                 font-size: 6vw;
-                line-height: 7.4vw;
+                // line-height: 7.4vw;
                 margin: 0 0 8vw;
                 display: none;
             }
 
             // text-align: left;
-            margin: 8% auto;
+            margin: 4% auto;
             color: @c2-font-color;
             text-transform: none;
             font-size: 25px;
-            line-height: 30px;
-            width: 100%;
+            line-height: normal;
+            // width: 100%;
             font-family: @souv;
-            text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+            // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
         }
 
         &.the-content {
             @media screen and (max-width: 430px) {
                 width: 100%;
                 // margin: 10% 0 0 !important;
-                top: 16vw;
+                top: 122vw;
                 left:0;
             }
 
             margin: 0;
             position: absolute;
-            transform: translate(0%, 0%);
-            top: 40%;
-            left: 69%;
-            width: auto;
+            transform: translate(0%, -50%);
+            top: 50%;
+            left: 55%;
+            width: 40%;
 
             h2 {
                 @media screen and (max-width: 1679px) {}
@@ -129,16 +134,16 @@
 
                 a {
                     @media screen and (max-width:1679px) {
-                        // width: 19vw;
+                        width: 16vw;
                     }
 
                     @media screen and(max-width: 430px) {
-                        // width: 55vw;
+                        width: 48vw;
                     }
 
                     background: @c2-cta-background;
                     color: @c2-cta-color;   
-                    // width: 323px;
+                    width: 265px;
                 }
             }
         }

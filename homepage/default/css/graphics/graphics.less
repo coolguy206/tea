@@ -1,15 +1,16 @@
 @import "../var.less"; // @import "promo1.less";
-@graphics-font-color: #3862AA;
-@graphics-cta-color: #2967B0;
+@graphics-font-color: #47363D;
+@graphics-cta-color: @graphics-font-color;
 @graphics-background: #D5AC38;
 
 .graphics {
-  @media screen and (max-width: 1679px){
+  @media screen and (max-width: 1679px) {
     min-height: 35vw !important;
   }
+
   @media screen and (max-width:430px) {
     padding: 8% 0;
-    background: #FDF5F2;
+    // background: #FDF5F2;
     min-height: 169vw !important;
   }
 
@@ -18,7 +19,7 @@
 
   h2 {
     @media screen and (max-width: 1679px) {
-      font-size: 2.4vw;
+      font-size: 3.3vw;
     }
 
     @media screen and (max-width:430px) {
@@ -27,15 +28,11 @@
       margin: 0 0 6%;
     }
 
-    @media screen and (max-width:320px) {
-      font-size: 36px;
-    }
-
-    font-family: @gilroyb;
+    font-family: @souv;
     color: @graphics-font-color;
-    font-size: 40px;
-    line-height: 44px;
-    margin: 0 0 3%;
+    font-size: 54px;
+    line-height: normal;
+    margin: 0 0 4%;
 
     // letter-spacing: 0.25em;
     // text-transform: capitalize;
@@ -61,23 +58,26 @@
   }
 
   div {
-    @media screen and (max-width: 430px) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      column-gap: 6%;
-      row-gap: 1%;
+    @media screen and (max-width: 1679px) {
+      column-gap: 3vw;
     }
 
-    // display: flex;
+    @media screen and (max-width: 430px) {
+      flex-wrap: wrap;
+      column-gap: 6vw;
+      row-gap: 6vw;
+      justify-content: center;
+    }
+
+    display: flex;
     text-align: center;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(1, 1fr);
+    column-gap: 44px;
 
     a {
       @media screen and (max-width: 430px) {
-        flex-basis: 50%;
-        padding: 0 4%;
-        margin: 0 0 10%;
+        flex-basis: 42%;
+        // padding: 0 4%;
+        // margin: 0 0 10%;
       }
 
       flex-basis: 25%;
@@ -87,8 +87,16 @@
       img {}
 
       span {
-        color: @graphics-cta-color;
+        color: #47363D;
         margin: 10% 0 0;
+
+        i {
+          @media screen and (max-width: 430px) {
+            display: none;
+          }
+
+          font-style: normal;
+        }
 
         &.mobile {
           @media screen and (max-width: 430px) {

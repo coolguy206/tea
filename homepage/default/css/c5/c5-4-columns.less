@@ -1,0 +1,135 @@
+@import "../var.less";
+@c5-h2-font-color: #47363D;
+@c5-h2-font-color-430: @c5-h2-font-color;
+@c5-font-color: @c5-h2-font-color;
+@c5-cta-color: @c5-h2-font-color;
+@c5-cta-background: #FF6A4F;
+
+.c5 {
+    @media screen and (max-width:1679px) {
+        column-gap: 1.7vw;
+        padding: 0 0 4%;
+    }
+    @media screen and (max-width: 430px) {
+        padding: 0;
+        flex-wrap: wrap;
+    }
+
+    position:relative;
+    min-height: auto !important;
+    display: flex;
+    padding: 0 0 60px;
+    column-gap: 30px;
+    // padding: 0 .5vw;
+    // flex-wrap: wrap;
+
+    div {
+        @media screen and (max-width:1679px) {}
+
+        @media screen and (max-width:430px) {}
+
+        overflow: hidden;
+        padding:0;
+        position: relative;
+
+        &.first,
+        &.second,
+        &.third,
+        &.fourth {
+            @media screen and (max-width: 430px) {
+                flex-basis: 50% !important;
+            }
+
+            flex-basis: 34%;
+        }
+
+        &.second,
+        &.fourth {
+            @media screen and (max-width: 430px) {
+                text-align: right;
+            }
+        }
+
+        &.first {
+            .the-content {
+                padding: 0 0 0 2vw;
+            }
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        img {
+            @media screen and (max-width: 1679px) {
+                // width: 24vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                // width: 48vw;
+            }
+
+            // width: 401px;
+        }
+
+        .the-content {
+            @media screen and (max-width:430px) {
+                width: 100%;
+                padding: 4vw !important;
+
+            }
+
+            text-align: left;
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 2vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 6vw;
+                    color: @c5-h2-font-color-430;
+                }
+
+                font-family: @gilroyb;
+                font-size: 32px;
+                line-height: normal;
+                color: @c5-h2-font-color;
+                text-align: left;
+                margin:1vw 0 .3vw;
+
+            }
+
+            i {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.4vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    font-size: 3vw;
+                }
+
+                font-size: 24px;
+                color: @c5-h2-font-color;
+                margin: 0 0 .3vw;
+            }
+
+            div {
+                text-align: left;
+
+                a {
+                    @media screen and (max-width:1679px) {}
+
+                    @media screen and (max-width:430px) {}
+
+                    // background: @c5-cta-background;
+                    color: @c5-cta-color;
+                    // width: 308px;
+
+                }
+            }
+        }
+
+
+    }
+}

@@ -12,11 +12,12 @@ $(document).ready(function () {
   // 23:59:59
 
   //? COUNTDOWN.JS
-  $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
-    $(this).text(event.strftime('%-D days %H:%M:%S')
-    // event.strftime('%-D %H:%M:%S')
-    );
-  });
+  // $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-D days %H:%M:%S')
+  //     // event.strftime('%-D %H:%M:%S')
+  //   );
+  // });
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
@@ -52,34 +53,36 @@ $(document).ready(function () {
       }
     }
   }).mount();
-  new _glide["default"]('.shop-slideshow2 .glide', {
-    type: 'carousel',
-    // autoplay: 500,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
-  new _glide["default"]('.shop-slideshow3 .glide', {
-    type: 'carousel',
-    // autoplay: 500,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
+
+  // new Glide('.shop-slideshow2 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 500,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
+
+  // new Glide('.shop-slideshow3 .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 500,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',

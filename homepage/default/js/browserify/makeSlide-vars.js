@@ -4,8 +4,8 @@
 var basePath = "./homepage/default/";
 module.exports = {
   basePath: basePath,
-  pdpPath: "".concat(basePath, "js/shop-slideshow-3/pdp.js"),
-  writePath: "".concat(basePath, "dev/shop-slideshow3/")
+  pdpPath: "".concat(basePath, "js/shop-slideshow/pdp.js"),
+  writePath: "".concat(basePath, "dev/shop-slideshow/")
 };
 
 // module.exports =  { 
