@@ -2,6 +2,7 @@
 "use strict";
 
 // const vars = require('./vars.js');
+
 module.exports = function (name, width, desc) {
   var url = name;
   url = "https://issuu.com/teacollection/docs/".concat(url);

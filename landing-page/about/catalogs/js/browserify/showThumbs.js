@@ -11,7 +11,6 @@ module.exports = {
 "use strict";
 
 var vars = require('./vars.js');
-
 module.exports = function () {
   var thumbs = $('.navigation-catalog ul li');
   $(thumbs).each(function (i, val) {
@@ -30,7 +29,6 @@ module.exports = function () {
 "use strict";
 
 var key = require('./key.js');
-
 module.exports = {
   baseUrl: "https://api.issuu.com/1_0",
   access: "access=public",

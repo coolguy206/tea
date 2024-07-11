@@ -1,7 +1,6 @@
 "use strict";
 
 var vars = require('./vars.js');
-
 module.exports = function () {
   var thumbs = $('.navigation-catalog ul li');
   $(thumbs).each(function (i, val) {

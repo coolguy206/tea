@@ -11,7 +11,6 @@ module.exports = {
 "use strict";
 
 var key = require('./key.js');
-
 module.exports = {
   baseUrl: "https://api.issuu.com/1_0",
   access: "access=public",
