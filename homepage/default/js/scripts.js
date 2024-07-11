@@ -19,6 +19,7 @@ $(document).ready(function () {
   $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
     $(this).text(
       event.strftime('%-D days %H:%M:%S')
+      // event.strftime('%-D %H:%M:%S')
     );
   });
 
