@@ -89,6 +89,20 @@ var urls = exports.urls = {
         boy: "/sale/toddler-boys-clothing/clearance"
       }
     },
+    warehouse: {
+      promo: "/warehousesale",
+      girl: "/warehousesale-girls",
+      boy: "/warehousesale-boys",
+      baby: {
+        girl: "/warehousesale-baby-girl",
+        boy: "/warehousesale-baby-boy",
+        newborn: "/warehousesale-newborn"
+      },
+      toddler: {
+        girl: "/warehousesale-toddler-girls",
+        boy: "/warehousesale-toddler-boys"
+      }
+    },
     blackFriday: {
       girl: "/black-friday/girl",
       boy: "/black-friday/boy",

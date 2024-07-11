@@ -32,7 +32,9 @@
 
   position: relative;
   display: flex;
-  width: 100%;
+  // width: 100%;
+  // width: 50%;
+  // display: inline-flex !important;
   // background: @promo-background;
   // min-height: 476px;
   // flex-wrap: wrap;
@@ -73,7 +75,7 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        // top: 65%;
+        top: 47%;
         // position: relative;
         width: 100%;
         // left: 0;
@@ -82,8 +84,8 @@
       }
 
       position: absolute;
-      top: 50%;
-      transform: translate(-50%, -50%);
+      top: 64%;
+      transform: translate(-50%, 0%);
       width: 90%;
       left: 50%;
       // text-align: center;
@@ -99,59 +101,61 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 6vw;
+          font-size: 5vw;
           margin: 0 0 3vw;
-          line-height: 5vw;
-          letter-spacing: 1.2vw;
+          line-height: 6vw;
+          letter-spacing: 1vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 13vw;
+          font-size: 14vw;
           // margin: 0;
-          line-height: 13vw;
+          line-height: 17vw;
           // font-size: 15vw;
           color: @promo-h2-color-430;
           margin: 0 0 4vw;
           // display: none;
           // color: #fff;
           text-align: center;
+          letter-spacing: 1vw;
         }
 
         // margin: 5% 0 0;
         text-transform: uppercase;
         color: @promo-h2-color;
-        line-height: 80px;
-        font-family: @gilroyb;
-        font-size: 100px;
+        line-height: 94px;
+        font-family: @gilroybl;
+        font-size: 88px;
         margin: 0 0 50px;
         text-align: center;
-        letter-spacing: 20px;
+        letter-spacing: 17px;
       }
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 3vw;
+          font-size: 2.1vw;
           line-height: 1.5vw;
           margin: 0 0 3vw;
         }
 
         @media screen and (max-width: 430px) {
           font-size: 6vw;
-          line-height: 6vw;
+          // line-height: 6vw;
+          line-height: normal;
           margin: 0 0 3vw;
           color: @promo-h3-color-430;
           text-align: center;
-          letter-spacing: .8vw;
+          letter-spacing: 1vw;
         }
 
-        font-size: 50px;
-        line-height: 28px;
+        font-size: 35px;
+        line-height: 38px;
         text-align: center;
         text-transform: uppercase;
-        font-family: @gilroyb;
+        font-family: @gilroybl;
         color: @promo-h3-color;
         margin: 0 0 50px;
-        letter-spacing: 10px;
+        letter-spacing: 7px;
       }
 
       p {
@@ -199,10 +203,12 @@
         }
 
         display: flex;
-        // flex-wrap: wrap;
+        flex-wrap: wrap;
         row-gap: 20px;
         column-gap: 16px;
         justify-content: center;
+        // width: 80%;
+        margin: 0 auto;
 
 
         a {
