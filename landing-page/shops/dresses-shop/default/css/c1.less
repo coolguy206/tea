@@ -1,10 +1,10 @@
 @import "var.less";
 @c1-font-color: #fff;
 @c1-h2-color: #fff;
-@c1-h2-color-430: #fff;
+@c1-h2-color-430: #47363D;
 @c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #F28AAC;
+@c1-cta-background: #DA3B26;
 
 .c1 {
   @media screen and (max-width: 430px) {
@@ -27,8 +27,8 @@
       position: absolute;
       top: 50%;
       width: 40%;
-      left: 4%;
-      transform: translate(0, -50%);
+      left: 50%;
+      transform: translate(-50%, -50%);
       text-align: center;
 
       a,
@@ -41,23 +41,30 @@
       }
 
       h3 {
+        @media screen and (max-width: 1679px) {
+          letter-spacing: .3vw;
+        }
         @media screen and (max-width: 430px) {
-          margin: 8vw 0 6vw;
-          font-size: 4vw;
+          margin: 6vw 0 3vw;
+          font-size: 5vw;
+          letter-spacing: 1vw;
+          color: @c1-h2-color-430;
         }
 
         margin: 0 0 1vw;
+        letter-spacing: 4px;
+        color: @c1-h2-color;
       }
 
       h2 {
         @media screen and (max-width: 1679px) {
           font-size: 5vw;
-          // line-height: 4.2vw;
+          line-height: 5vw;
         }
 
         @media screen and (max-width: 430px) {
-          line-height: 10vw;
-          font-size: 11vw;
+          line-height: 12vw;
+          font-size: 9vw;
           text-align: center;
           color: @c1-h2-color-430;
 
@@ -68,11 +75,11 @@
         }
 
         // margin: 5% 0 0;
-        text-transform: none;
+        text-transform: capitalize;
         color: @c1-h2-color;
-        // line-height: 70px;
+        line-height: 80px;
         // font-family: @souv;
-        font-family: @gilroyb;
+        font-family: @souv;
         font-size: 80px;
         margin: 0;
         text-align:center;
@@ -82,12 +89,12 @@
       p {
         @media screen and (max-width: 1679px) {
           font-size: 1.4vw;
-          line-height: 2vw;
+          // line-height: 2vw;
         }
 
         @media screen and (max-width: 430px) {
           font-size: 4vw;
-          line-height: 6vw;
+          // line-height: 6vw;
           width: 100%;
           margin: 5% auto;
           text-shadow: none;
@@ -103,8 +110,8 @@
         margin: 4% auto;
         color: @c1-p-color;
         text-transform: none;
-        font-size: 22px;
-        line-height: 33px;
+        font-size: 25px;
+        line-height: normal;
         // letter-spacing: 1px;
         width: 100%;
         font-family: @souv;
@@ -117,11 +124,12 @@
           text-align: center;
           width: 89%;
           position: absolute;
-          top: 121vw;
+          top: 32vw;
           column-gap: 4vw;
           row-gap: 4vw;
           left: 50%;
           transform: translate(-50%, 0);
+          justify-content: center;
         }
 
         display: flex;
@@ -137,8 +145,9 @@
           }
 
           @media screen and (max-width: 430px) {
-            width: 42vw;
+            width: 37vw;
             margin:0;
+            height: 7vw;
           }
 
           font-family: @gilroyb;
