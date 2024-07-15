@@ -9,9 +9,9 @@
 @promo2Color2: #F3DD4F;
 @promo2Color3: @promo2Color1;
 
-@promo3Bg: #EEDC78;
-@promo3Color1: #13879F;
-@promo3Color2: #FE8C59;
+@promo3Bg: #DE737B;
+@promo3Color1: #fff;
+@promo3Color2: #F6D3CB;
 @promo3Color3: #ffff;
 
 @shipping-promoBg: #00A5B6;
@@ -233,7 +233,7 @@ header.site-header {
           }
 
           &.mobile {
-            display: inline !important;
+            // display: inline !important;
           }
 
           font-style: normal;
@@ -452,6 +452,7 @@ header.site-header {
 
           @media screen and (max-width: 430px) {
             font-size: 2.8vw;
+            display: none;
           }
 
           color: @promo3Color1;
@@ -470,29 +471,32 @@ header.site-header {
 
             &:first-of-type {
               @media screen and (max-width: 430px) {
-                // color: @promo3Color2;
-                display: block;
+                color: @promo3Color1;
+                display: inline;
               }
   
-              color: @promo3Color1;
+              color: @promo3Color2;
             }
   
             &:nth-of-type(2) {
               @media screen and (max-width: 430px) {
-                // color: @promo3Color1;
+                // color: @promo3Color2;
               }
   
               color: @promo3Color2;
             }
   
             &:last-of-type {
-              @media screen and (max-width: 430px) {}
+              @media screen and (max-width: 430px) {
+                display: inline;
+                color: @promo3Color2;
+              }
   
               color: @promo3Color3;
             }
   
             &.mobile {
-              display: inline !important;
+              // display: inline !important;
             }
   
             font-style: normal;
