@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/dresses-shop/default'
+    name: 'shops/back-to-school/default'
   },
   zone: {
     name: 'mega-menu/sub-nav',

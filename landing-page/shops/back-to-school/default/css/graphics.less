@@ -1,0 +1,67 @@
+@import "var.less"; // @import "promo1.less";
+@graphics-font-color: #3862AA;
+@graphics-h2-font-color: #47363D;
+@graphics-cta-color: #47363D;
+@graphics-background: #D5AC38;
+
+.graphics {
+  @media screen and (max-width:431px) {
+    padding: 10% 0;
+    // background: #FDF5F2;
+  }
+  padding: 4% 0;
+  // background: @background;
+
+  h2 {
+    @media screen and (max-width: 1679px) {
+      font-size: 3.2vw;
+    }
+    @media screen and (max-width:431px) {
+      font-size: 7.5vw;
+      line-height: 8vw;
+      margin: 0 0 10%;
+    }
+    @media screen and (max-width:320px) {
+      // font-size: 36px;
+    }
+    font-family: @souv;
+    color: @graphics-h2-font-color;
+    font-size: 54px;
+    // line-height: 65px;
+    margin: 0 0 4%;
+    // letter-spacing: 0.25em;
+    // text-transform: capitalize;
+  }
+
+  div {
+    @media screen and (max-width: 431px) {
+      flex-wrap: wrap;
+    }
+    display: flex;
+    text-align: center;
+
+    a {
+      @media screen and (max-width: 431px) {
+        flex-basis: 50%;
+        padding: 0 4%;
+        margin: 0 0 10%;
+      }
+      flex-basis: 25%;
+      padding: 0 2%;
+      text-decoration: none;
+
+      img {}
+
+      span {
+        color: #47363D;
+        margin: 5% 0 0;
+
+        &.mobile {
+          @media screen and (max-width: 431px) {
+            display: inline-block;
+          }
+        }
+      }
+    }
+  }
+}

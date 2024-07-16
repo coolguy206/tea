@@ -7,24 +7,24 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0714/v0/`;
+// var category = `promos/one-offs/2024/0714/v0/`;
 // var category = `homepage/2024/0711/v0/`;
 // var category = `headers/2024/0711/v0/`;
-// var category = `landing-pages/dresses-shop/2024/0711/v0/`;
+var category = `landing-pages/back-to-school/2024/shops/0711/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0714/Site/`;
+var readFilePath = `Site/0711/back-to-school/`;
 // var readFilePath = `handoff/hp/0625/handoff/summer games/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0705/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/0714/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/0714/`;
 // var writeFilePath = `promos/headers/dev/images/promo/istanbul/`;
-// var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/0711/`;
+var writeFilePath = `landing-page/shops/back-to-school/default/dev/images/0711/`;
 // var writeFilePath = `homepage/default/dev/images/0711/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;

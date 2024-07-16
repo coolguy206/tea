@@ -1,0 +1,153 @@
+@import "var.less";
+
+header.site-header {
+  top: 0 !important;
+}
+
+.site-header.fixed {
+  position: fixed !important;
+}
+
+.bts {
+  background: #fff;
+
+  .c1,
+  .c2,
+  .c3,
+  .c4,
+  .c5,
+  .c6,
+  .c7,
+  .clothes,
+  .graphics,
+  .shop-slideshow,
+  .shop-slideshow-2, {
+    visibility: hidden;
+  }
+
+  .first,
+  .second {
+    @media screen and (max-width: 431px) {
+      flex-basis: 100% !important;
+    }
+    flex-basis: 50%;
+  }
+
+  .third {
+    @media screen and (max-width: 431px) {
+      flex-basis: 100% !important;
+    }
+    flex-basis: 33%;
+  }
+
+  h2,
+  h3,
+  p {
+    margin: 0;
+  }
+
+  h2 {
+    @media screen and (max-width: 1679px) {
+      font-size: 3.1vw;
+      line-height: 3.6vw;
+    }
+    @media screen and (max-width: 431px) {
+      font-size: 7.7vw;
+    }
+    font-family: @souv;
+    font-size: 54px;
+    line-height: 60px;
+    text-align: center;
+    // letter-spacing: 0.01em;
+    // text-shadow: 0 4px 4px rgba(0, 0, 0, 0.45);
+    color: #FFFFFF;
+  }
+
+  h3 {
+    @media screen and (max-width: 1679px) {
+      font-size: 1.2vw;
+      line-height: 1.6vw;
+    }
+    @media screen and (max-width: 431px) {
+      font-size: 3.6vw;
+    }
+    font-family: @gilroyb;
+    font-size: 18px;
+    line-height: 28px;
+    text-align: center;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+  }
+
+  p {
+    @media screen and (max-width: 1679px) {
+      font-size: 1.1vw;
+      line-height: 1.3vw;
+      // letter-spacing: 0.6vw;
+    }
+    // @media screen and (max-width: 768px) {
+    //   font-size: 2.9vw;
+    //   line-height: 4.1vw;
+    // }
+    @media screen and (max-width: 431px) {
+      // font-size: 4vw !important;
+      // line-height: 6vw !important;
+    }
+    font-family: @souv;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
+    // letter-spacing: 0.01em;
+    color: #FFFFFF;
+  }
+}
+
+header .site-header-inner .header-wrapper .header-actions .favorites {
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat!important;
+}
+
+.site-content .site-content-inner .site-content-bg-wrapper {
+  padding: 0;
+}
+
+.nav.col-l-2.col-m-3.col-s-12.col-xs-12 {
+  display: none;
+}
+
+.subcategories-list.visible-xxs.visible-xs.visible-s {
+  display: none !important;
+}
+
+.content.col-l-10.col-m-9.col-s-12.col-xs-12 {
+  width: 100% !important;
+}
+
+body.index header {
+  position: relative !important;
+}
+
+body.index header .site-header-inner .nav .site-nav-links li a {
+  color: #47363d !important;
+}
+
+header .site-header-inner .header-wrapper .logo .logo-placeholder {
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
+  background-size: contain !important;
+}
+
+header .site-header-inner .header-wrapper .header-actions .search-icon {
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
+}
+
+header .site-header-inner .header-wrapper .header-actions .my-account .my-account-icon {
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
+}
+
+header .site-header-inner .header-wrapper .header-actions .cart-toggle .shopping-cart {
+  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
+}
+
+body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+  background-color: #47363d !important;
+}
