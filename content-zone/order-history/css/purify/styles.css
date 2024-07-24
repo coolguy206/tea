@@ -1,0 +1,135 @@
+.buy-again {
+  background: #fff;
+  opacity: 0;
+  transition: all 1s;
+  position: relative;
+}
+
+.buy-again .mobile {
+  display: none;
+}
+
+@media screen and (max-width:430px) {
+  .buy-again .mobile {
+    display: block;
+  }
+}
+
+.buy-again .a {
+  width: 180px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (max-width:1679px) {
+  .buy-again .a {
+    width: 10.7vw;
+    height: 2.7vw;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .buy-again .a {
+    width: 43.5vw;
+    height: 7vw;
+    padding: 0;
+  }
+}
+
+.buy-again .glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.buy-again .glide * {
+  box-sizing: inherit;
+}
+
+.buy-again .glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.buy-again .glide {
+  position: unset;
+}
+
+.buy-again .glide div[data-glide-el="controls"] span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 20px;
+}
+
+@media screen and (max-width:1679px) {
+  .buy-again .glide div[data-glide-el="controls"] span {
+    width: 1.2vw;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .buy-again .glide div[data-glide-el="controls"] span {
+    width: 5vw;
+  }
+}
+
+.buy-again .glide div[data-glide-el="controls"] span:hover {
+  cursor: pointer;
+}
+
+.buy-again img {
+  display: block;
+}
+
+.buy-again span:hover {
+  cursor: pointer;
+}
+
+.buy-again li {
+  position: relative;
+}
+
+.buy-again .thumb-grid.item {
+  width: 100%;
+}
+
+@media screen and (max-width:430px) {
+  .buy-again .thumb-grid.item .thumb-content {
+    display: inline-block;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+  }
+}
+
+.buy-again .thumb-grid.item .price-wrap #store_price {
+  display: inline;
+}
+
+.buy-again .thumb-grid.item {
+  width: 100%;
+  padding: 0;
+}
+
+.buy-again .width-300 {
+  justify-content: center;
+}
+
+.buy-again .width-300 li {
+  width: 300px;
+}
+
+@media screen and (max-width:1679px) {
+  .buy-again .width-300 li {
+    width: 18vw;
+  }
+}
+
+.buy-again .width-300 li .thumb-grid.item {
+  padding: 0;
+}
