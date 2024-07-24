@@ -1,0 +1,67 @@
+@h1-font-color: #DAED8C;
+@h2-font-color: #DAED8C;
+@cta-background-color: #2C519F;
+@cta-font-color: #fff;
+@p-font-color: #fff;
+@span-font-color: @h1-font-color;
+@official-rules-font-color: @p-font-color;
+@background: #008E70;
+@souv: souvenirstd-light;
+@gilroyb: gilroy-bold;
+@gilroyr: gilroy-regular;
+
+.mobile {
+	@media screen and(max-width: 430px) {
+		display: block;
+	}
+	display: none;
+}
+
+.desktop {
+	@media screen and (max-width: 430px) {
+		display: none !important;
+	}
+}
+
+.cta-border {
+	@media screen and (max-width: 1679px) {
+		font-size: 0.9vw;
+	}
+	@media screen and (max-width: 430px) {
+		font-size: 3vw;
+		// padding: 3% 0;
+		// width: 36%;
+	}
+	display: inline-block;
+	text-align: center;
+	text-transform: uppercase !important;
+	text-decoration: none;
+	position: relative;
+	// padding: 2.5% 4%;
+	font-family: @gilroyb !important;
+	font-size: 20px;
+	line-height: 24px;
+	letter-spacing: 0.2em !important;
+	color: #FFFFFF;
+	// width: 14%;
+}
+
+.a {
+	@media screen and (max-width: 1679px) {
+		font-size: 1.2vw;
+		width: 15vw;
+		height: 3vw;
+	}
+	@media screen and (max-width: 430px) {
+		font-size: 2.4vw;
+		width: 44vw;
+		height: 8vw;
+	}
+	width: 252px;
+	height: 50px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 0;
+	position: relative;
+}
