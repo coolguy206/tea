@@ -7,25 +7,25 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2024/0714/v0/`;
-// var category = `homepage/2024/0711/v0/`;
+// var category = `promos/one-offs/2024/0726/v0/`;
+var category = `homepage/2024/0726/v0/`;
 // var category = `headers/2024/0711/v0/`;
-var category = `landing-pages/back-to-school/sweeps/2024/0722/v1/`;
+// var category = `landing-pages/back-to-school/sweeps/2024/0722/v1/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0722/04 Handoff/Site/`;
+var readFilePath = `Site/0726/Site/HP/hp/`;
 // var readFilePath = `handoff/hp/0625/handoff/summer games/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/0705/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/0714/`;
-// var writeFilePath = `promos/headers/dev/images/promo/istanbul/`;
-var writeFilePath = `landing-page/sweeps/back-to-school/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/0711/`;
+// var writeFilePath = `promos/default/dev/images/homepage/0726/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/0726/`;
+// var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+// var writeFilePath = `landing-page/sweeps/back-to-school/dev/images/`;
+var writeFilePath = `homepage/default/dev/images/0726/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

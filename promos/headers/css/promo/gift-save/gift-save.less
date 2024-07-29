@@ -71,9 +71,16 @@
 
 
     .the-content.gift-save {
+        @media screen and (max-width:1679px) {
+            column-gap: 1vw;
+            row-gap: 1vw;
+        }
+
         @media screen and (max-width: 430px) {
             // width: 100%;
             flex-wrap: wrap;
+            column-gap: 3vw;
+            row-gap: 3vw;
 
             //4 ITEMS IN THE ROW
             // justify-content: space-evenly;
@@ -86,15 +93,18 @@
         left:0;
         transform: translate(0);
         display: flex;
+        flex-wrap:wrap;
+        column-gap: 15px;
+        row-gap: 15px;
         // margin: 2vw 0 0;
 
         a {
             @media screen and (max-width:430px) {
                 //4 ITEMS IN THE ROW
-                flex-basis: 50%;
+                flex-basis: 48%;
                 // padding: 2.5%;
                 padding: 0;
-                margin: 0 0 3vw;
+                // margin: 0 0 3vw;
                 align-self: center;
                 text-align: center;
                 // margin: 0 0 .1%;
@@ -112,11 +122,13 @@
             // flex-basis: 20%;
 
             position: relative;
-            padding: 0 .7%;
+            // padding: 0 .7%;
+            padding: 0;
+            flex-basis: 32%;
 
             img {
                 @media screen and (max-width:430px) {
-                    width: 94%;
+                    // width: 94%;
                     display: inline;
                 }
             }
@@ -142,7 +154,7 @@
 
             &.cta4 {
                 @media screen and (max-width: 430px) {
-                    display: none;
+                    // display: none;
                 }
             }
 
@@ -216,6 +228,7 @@
                         @media screen and (max-width: 1679px) {
                             font-size: .8vw;
                         }
+
                         @media screen and (max-width: 430px) {
                             font-size: 2.5vw;
                         }
@@ -232,28 +245,5 @@
             }
         }
 
-
-
-        // width: 54%;
-
-        .the-grid {
-            @media screen and (max-width: 430px) {
-                grid-template-columns: repeat(2, 1fr);
-                column-gap: 6%;
-            }
-
-            grid-template-columns: repeat(4, 1fr);
-            grid-template-rows: repeat(2, 1fr);
-            column-gap: 3%;
-
-            a {
-                @media screen and (max-width: 430px) {
-                    // flex-basis: 34%;
-                }
-
-                background: #fff;
-                color: #5A2346;
-            }
-        }
     }
 }
