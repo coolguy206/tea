@@ -107,6 +107,14 @@
   }
 }
 
+@media screen and (max-width:835px) {
+  .buy-again .thumb-grid.item .img .js-qv {
+    display: block;
+    opacity: 1;
+    position: relative;
+  }
+}
+
 .buy-again .thumb-grid.item .price-wrap #store_price {
   display: inline;
 }

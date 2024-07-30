@@ -5,7 +5,9 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 $(document).ready(function () {
   var orderHistory = window.localStorage.getItem('orderHistory');
-  if (orderHistory !== null) {
+  var orderHistoryLength = $('.buy-again li').length;
+  console.log("orderHistoryLength: ".concat(orderHistoryLength));
+  if (orderHistory !== null && orderHistoryLength == 0) {
     orderHistory = JSON.parse(orderHistory);
     // console.log(orderHistory);
     var num = "";
@@ -32,7 +34,7 @@ $(document).ready(function () {
       //   qv = "";
       // }
 
-      var qv = "";
+      var qv = "<span data-href=\"".concat(url, "\" data-color=\"").concat(color, "\" class=\"js-qv \">Quick View</span>");
       var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(url, "\"\n                                        data-hash=\"\">\n                                        <img class=\"image\" src=\"").concat(val.img, "\" alt=\"").concat(val.name, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                  \n                                <div class=\"thumb-content\">\n                                    <a class=\"name\"\n                                        href=\"").concat(url, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val.name, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <span id=\"store_price\" class=\"price\">$").concat(price, "</span>\n                                        </div>\n                                    </div>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
       $('.buy-again ul').append(elem);
     });
@@ -61,6 +63,8 @@ $(document).ready(function () {
       $('.buy-again div[data-glide-el="controls"]').hide();
       $('.buy-again ul').addClass('width-300');
     }
+  } else {
+    $('.buy-again').hide();
   }
   (0, _inview.inview)('.buy-again');
 });

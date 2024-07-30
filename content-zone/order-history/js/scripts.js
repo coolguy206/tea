@@ -8,7 +8,10 @@ $(document).ready(function () {
 
   var orderHistory = window.localStorage.getItem('orderHistory');
 
-  if (orderHistory !== null) {
+  var orderHistoryLength = $('.buy-again li').length;
+  console.log(`orderHistoryLength: ${orderHistoryLength}`)
+
+  if (orderHistory !== null && orderHistoryLength == 0) {
 
     orderHistory = JSON.parse(orderHistory);
     // console.log(orderHistory);
@@ -40,7 +43,7 @@ $(document).ready(function () {
       //   qv = "";
       // }
       
-      var qv = "";
+      var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
 
       var elem = `
                         <li>
@@ -103,6 +106,8 @@ $(document).ready(function () {
 
    
 
+  } else {
+    $('.buy-again').hide();
   }
 
   inview('.buy-again');

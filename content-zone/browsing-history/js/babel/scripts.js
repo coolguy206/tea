@@ -5,7 +5,9 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 $(document).ready(function () {
   var browsingHistory = window.localStorage.getItem('__kla_viewed');
-  if (browsingHistory !== null) {
+  var browsingHistoryLength = $('.browsing-history li').length;
+  console.log("browsingHistoryLength: ".concat(browsingHistoryLength));
+  if (browsingHistory !== null && browsingHistoryLength == 0) {
     browsingHistory = JSON.parse(browsingHistory);
     // console.log(browsingHistory);
 
@@ -28,8 +30,8 @@ $(document).ready(function () {
       // if(thisPageUrl.indexOf('product') !== -1){
       //   qv = "";
       // }
-      var qv = "";
-      var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val[0].Url, "\"\n                                        data-hash=\"\">\n                                        <img class=\"image\" src=\"").concat(val[0].ImageUrl, "\" alt=\"").concat(val[0].Title, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name\"\n                                        href=\"").concat(val[0].Url, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val[0].Title, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike>").concat(strike, "</strike>\n                                            <span id=\"store_price\" class=\"price ").concat(promoClass, "\">$").concat(val[0].Metadata.Price, "</span>\n                                        </div>\n                                    </div>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
+      var qv = "<span data-href=\"".concat(val[0].Url, "\" data-color=\"").concat(color, "\" class=\"js-qv \">Quick View</span>");
+      var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val[0].Url, "\"\n                                        data-hash=\"\" class=\"browsing-history\">\n                                        <img class=\"image\" src=\"").concat(val[0].ImageUrl, "\" alt=\"").concat(val[0].Title, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name\"\n                                        href=\"").concat(val[0].Url, "\"\n                                        data-hash=\"\" class=\"browsing-history\">\n                                        <span class=\"model\">").concat(val[0].Title, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike>").concat(strike, "</strike>\n                                            <span id=\"store_price\" class=\"price ").concat(promoClass, "\">$").concat(val[0].Metadata.Price, "</span>\n                                        </div>\n                                    </div>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
       $('.browsing-history ul').append(elem);
     });
     $('.browsing-history').css('opacity', 1);
@@ -57,6 +59,8 @@ $(document).ready(function () {
       $('.browsing-history div[data-glide-el="controls"]').hide();
       $('.browsing-history ul').addClass('width-300');
     }
+  } else {
+    $('.browsing-history').hide();
   }
   (0, _inview.inview)('.browsing-history');
 });

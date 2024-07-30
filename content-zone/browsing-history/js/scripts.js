@@ -8,7 +8,10 @@ $(document).ready(function () {
 
   var browsingHistory = window.localStorage.getItem('__kla_viewed');
 
-  if (browsingHistory !== null) {
+  var browsingHistoryLength = $('.browsing-history li').length;
+  console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
+
+  if (browsingHistory !== null && browsingHistoryLength == 0) {
 
     browsingHistory = JSON.parse(browsingHistory);
     // console.log(browsingHistory);
@@ -33,14 +36,14 @@ $(document).ready(function () {
       // if(thisPageUrl.indexOf('product') !== -1){
       //   qv = "";
       // }
-      var qv = "";
+      var qv = `<span data-href="${val[0].Url}" data-color="${color}" class="js-qv ">Quick View</span>`;
 
       var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
                                     <a href="${val[0].Url}"
-                                        data-hash="">
+                                        data-hash="" class="browsing-history">
                                         <img class="image" src="${val[0].ImageUrl}" alt="${val[0].Title}" width="500" height="500">
                                     </a>
                                     ${qv}
@@ -48,7 +51,7 @@ $(document).ready(function () {
                                 <div class="thumb-content">
                                     <a class="name"
                                         href="${val[0].Url}"
-                                        data-hash="">
+                                        data-hash="" class="browsing-history">
                                         <span class="model">${val[0].Title}</span>
                                     </a>
                         
@@ -94,6 +97,8 @@ $(document).ready(function () {
       $('.browsing-history ul').addClass('width-300');
     }
 
+  } else {
+    $('.browsing-history').hide();
   }
 
   inview('.browsing-history');
