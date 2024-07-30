@@ -49,9 +49,9 @@ $(document).ready(function () {
                                     ${qv}
                                 </span>
                                 <div class="thumb-content">
-                                    <a class="name"
+                                    <a class="name browsing-history"
                                         href="${val[0].Url}"
-                                        data-hash="" class="browsing-history">
+                                        data-hash="">
                                         <span class="model">${val[0].Title}</span>
                                     </a>
                         
