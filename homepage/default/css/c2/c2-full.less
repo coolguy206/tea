@@ -1,7 +1,7 @@
 @import "../var.less";
 @c2-font-color: #fff;
 @c2-cta-color: #fff;
-@c2-cta-background: #66B88F;
+@c2-cta-background: #4261A6;
 @c2-h3-color-430: @c2-font-color;
 
 
@@ -54,7 +54,8 @@
             }
 
             @media screen and (max-width:430px) {
-                font-size: 12vw;
+                font-size: 9vw;
+                line-height: 9vw;
                 // color: @c2-cta-background;
                 margin: 8vw 0;
                 // line-height: 10.5vw;
@@ -62,7 +63,7 @@
 
             font-family: @souv;
             font-size: 80px;
-            // text-transform: uppercase;
+            text-transform: capitalize;
             line-height: 80px;
             // letter-spacing: 0.1rem;
             color: @c2-font-color;
@@ -99,16 +100,16 @@
             @media screen and (max-width: 430px) {
                 width: 100%;
                 // margin: 10% 0 0 !important;
-                top: 122vw;
-                left:0;
+                top: 26vw;
+                // left:0;
             }
 
             margin: 0;
             position: absolute;
-            transform: translate(0%, -50%);
+            transform: translate(-50%, -50%);
             top: 50%;
-            left: 55%;
-            width: 40%;
+            left: 50%;
+            width: auto;
 
             h2 {
                 @media screen and (max-width: 1679px) {}
@@ -124,11 +125,9 @@
                     // flex-wrap: wrap;
                     // justify-content: center;
                     // margin: 110% 0 0;
+                    top: 93vw;
                 }
 
-                @media screen and (max-width: 376px) {
-                    // margin: 92% 0 0;
-                }
 
                 margin: 0;
 
