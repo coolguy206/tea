@@ -5,8 +5,8 @@
   <div class="the-content gift-save">
 
     <a href="/promo-code/dresses" class="cta1">
-      <img class="desktop" data-set="/mas_assets/media/tea_collection/promos/one-offs/2024/0726/v0/15_off_dresses-d.jpg" alt="15 off dresses">
-      <img class="mobile" data-set="/mas_assets/media/tea_collection/promos/one-offs/2024/0726/v0/15_off_dresses-m.jpg" alt="15 off dresses">
+      <img class="desktop" data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/15_off_dresses-d.jpg" alt="15 off dresses">
+      <img class="mobile" data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/15_off_dresses-m.jpg" alt="15 off dresses">
       <div class="the-cta">
         <span class="a cta-border">
           <div>
@@ -37,8 +37,8 @@
     <a href="/tee-shop/promo" class="cta3">
       <!-- include "../../images/promo/gift-save/tees-d.html" -->
       <!-- include "../../images/promo/gift-save/tees-m.html" -->
-      <img class="desktop" data-set="/mas_assets/media/tea_collection/promos/one-offs/2024/0726/v0/22_select_tees-d.jpg" alt="22 select tees">
-      <img class="mobile" data-set="/mas_assets/media/tea_collection/promos/one-offs/2024/0726/v0/22_select_tees-m.jpg" alt="22 select tees">
+      <img class="desktop" data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/22_select_tees-d.jpg" alt="22 select tees">
+      <img class="mobile" data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/22_select_tees-m.jpg" alt="22 select tees">
       <div class="the-cta">
         <span class="a cta-border">
           <div>
@@ -124,6 +124,17 @@
   @media screen and (max-width:430px){.site-content-bg-wrapper{padding:0 !important}}.main-title{display:none !important;padding:2vw 0}
 </style>
 
- <script>
+<script>
   !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),c.inview=void 0;c.inview=function(a){$(a).on("inview",function(a,b){if(b){var c=$(this).find("img");$.each(c,function(a,b){var c=$(b).attr("data-set");c&&$(b).attr("src",c),$(b).removeAttr("data-set")}),$(this).css("visibility","visible")}})}},{}],2:[function(a,b,c){"use strict";var d=a("./inview.js");$(document).ready(function(){(0,d.inview)(".container-promo-header");var a=$(".container-promo-header a");a.map(function(a,b){$(b).addClass("sale-category-header")});var b=$(".category-page .nav .side-nav ul li .links ul li a");b.map(function(a,b){console.log($(b).text());var c=$(b).text();"Warehouse Sale: Up to 75% Off "==c&&$(b).hide()})})},{"./inview.js":1}]},{},[2]);
+
+  $(document).ready(function () {
+    var a = $('.the-content.gift-save a');
+
+    a.map((i, val) => {
+      var str = $(val).find('span').text();
+      str = str.replace(/ /g, '_');
+      str = `img ${str}`;
+      $(val).addClass(str);
+    });
+  });
 </script>

@@ -5,46 +5,53 @@
   <div class="the-content select-styles">
 
     <a href="/girls-clothing/new-arrivals" class="cta1">
-      <img data-set="/mas_assets/media/tea_collection/headers/2024/0711/v0/girl.jpg" alt="girl">
+      <img data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/girl.jpg" alt="girl">
       <div class="the-cta">
         <span class="a cta-border">shop girl</span>
       </div>
     </a>
 
     <a href="/boys-clothing/new-arrivals" class="cta2">
-      <img data-set="/mas_assets/media/tea_collection/headers/2024/0711/v0/boy.jpg" alt="boy">
+      <img data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/boy.jpg" alt="boy">
       <div class="the-cta">
         <span class="a cta-border">shop boy</span>
       </div>
     </a>
 
     <a href="/baby-girl-clothes/new-arrivals" class="cta3">
-      <img data-set="/mas_assets/media/tea_collection/headers/2024/0711/v0/baby_girl.jpg" alt="baby girl">
+      <img data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/baby_girl.jpg" alt="baby girl">
       <div class="the-cta">
         <span class="a cta-border">shop baby girl</span>
       </div>
     </a>
 
     <a href="/baby-boy-clothes/new-arrivals" class="cta4">
-      <img data-set="/mas_assets/media/tea_collection/headers/2024/0711/v0/baby_boy.jpg" alt="baby boy">
+      <img data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/baby_boy.jpg" alt="baby boy">
       <div class="the-cta">
         <span class="a cta-border">shop baby boy</span>
       </div>
     </a>
 
-    <a href="/family-outfitting/adult" class="cta5">
-      <img data-set="/mas_assets/media/tea_collection/headers/2024/0711/v0/adult.jpg" alt="adult">
+    <a href="/newborn-clothing" class="cta5">
+      <img data-set="/mas_assets/media/tea_collection/headers/2024/0805/v0/newborn.jpg" alt="newborn">
       <div class="the-cta">
-        <span class="a cta-border">shop adult</span>
+        <span class="a cta-border">shop newborn</span>
       </div>
     </a>
+
+    <!-- <a href="/family-outfitting/adult" class="cta5"> -->
+      <!-- include "../../images/new-arrivals/adult.html" -->
+      <!-- <div class="the-cta">
+        <span class="a cta-border">shop adult</span>
+      </div>
+    </a> -->
 
   </div>
 
   <h1>New Arrivals</h1>
-  <p>
+  <!-- <p>
     Freshen those fall wardrobes with styles inspired by Istanbul and the shores of the Bosphorus. Exciting new colors, prints, and patterns.
-  </p>
+  </p> -->
   
 </div>
 
@@ -53,6 +60,18 @@
   @media screen and (max-width:430px){.site-content-bg-wrapper{padding:0 !important}}.main-title{display:none !important;padding:2vw 0}
 </style>
 
- <script>
+<script>
   !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";Object.defineProperty(c,"__esModule",{value:!0}),c.inview=void 0;c.inview=function(a){$(a).on("inview",function(a,b){if(b){var c=$(this).find("img");$.each(c,function(a,b){var c=$(b).attr("data-set");c&&$(b).attr("src",c),$(b).removeAttr("data-set")}),$(this).css("visibility","visible")}})}},{}],2:[function(a,b,c){"use strict";var d=a("./inview.js");$(document).ready(function(){(0,d.inview)(".container-promo-header");var a=$(".container-promo-header a");a.map(function(a,b){$(b).addClass("sale-category-header")});var b=$(".category-page .nav .side-nav ul li .links ul li a");b.map(function(a,b){console.log($(b).text());var c=$(b).text();"Warehouse Sale: Up to 75% Off "==c&&$(b).hide()})})},{"./inview.js":1}]},{},[2]);
+  
+  $(document).ready(function () {
+    var a = $('.the-content.select-styles a');
+
+    a.map((i, val) => {
+      var str = $(val).find('span').text();
+      str = str.replace(/ /g, '_');
+      str = `img ${str}`;
+      $(val).addClass(str);
+    });
+
+  });
 </script>
