@@ -1,0 +1,60 @@
+@shipping-promoBg: #00A5B6;
+@shipping-promoColor1: #F3DD4E;
+@shipping-promoColor2: #fff;
+@shipping-promoColor3: #ffff;
+
+
+&.shipping-promo {
+    background: @shipping-promoBg;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+            }
+
+            color: @shipping-promoColor1;
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+            }
+
+            color: @shipping-promoColor2;
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+            }
+
+            color: @shipping-promoColor3;
+            // text-decoration:underline;
+        }
+
+        &.shop-now {
+            i {
+                color: @shipping-promoColor2;
+            }
+        }
+
+        &.details {
+            a {
+                color: @shipping-promoColor3;
+            }
+        }
+    }
+}

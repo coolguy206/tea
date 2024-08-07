@@ -27,8 +27,13 @@ jQuery(document).ready(function () {
     // $('.promos')[0].style.display = 'none'
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
     if (window.innerWidth < 431) {
-      $(".promos .the-promo").css('height', '46px');
-      $(".promos .the-promo span.third, .promos .the-promo span > a.third").hide();
+      // $(`.promos .the-promo`).css('height', '46px');
+      // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
+    }
+  } else {
+    //? NOT HOME PAGE
+    if (window.innerWidth < 431) {
+      $(".promos .the-promo").css('height', '100px');
     }
   }
 
@@ -50,16 +55,18 @@ jQuery(document).ready(function () {
     $.fancybox.close();
     $('.fancybox-container').hide();
   });
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2500,
-    onSliderLoad: function onSliderLoad() {
-      $('.promos.promo2, .promos.promo3').show();
-    }
-  });
+
+  // $('.promos-wrap').bxSlider({
+  //   auto: true,
+  //   autoHover: true,
+  //   mode: 'fade',
+  //   controls: false,
+  //   pager: false,
+  //   pause: 2500,
+
+  //   onSliderLoad: function () {
+  //     $('.promos.promo2, .promos.promo3').show();
+  //   }
+  // });
 });
 //# sourceMappingURL=scripts.js.map
