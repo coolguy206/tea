@@ -7,9 +7,9 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/2024/0726/v0/`;
+var category = `promos/one-offs/2024/0809/v0/`;
 // var category = `homepage/2024/0805/v0/`;
-var category = `headers/2024/0805/v0/`;
+// var category = `headers/2024/0805/v0/`;
 // var category = `landing-pages/back-to-school/sweeps/2024/0722/v1/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
@@ -17,13 +17,13 @@ var category = `headers/2024/0805/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/0726/Site/HP/hp/`;
-var readFilePath = `handoff/headers/0805/Category Headers & Visual Nav/Playwear/`;
+var readFilePath = `Site/0809/Site/mega/`;
+// var readFilePath = `handoff/headers/0805/Category Headers & Visual Nav/Playwear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/0726/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/0726/`;
-var writeFilePath = `promos/headers/dev/images/promo/playwear-pants/`;
+// var writeFilePath = `promos/default/dev/images/homepage/0809/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/0809/`;
+// var writeFilePath = `promos/headers/dev/images/promo/playwear-pants/`;
 // var writeFilePath = `landing-page/sweeps/back-to-school/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/0805/`;
 // var writeFilePath = `mega-menu/dev/images/`;

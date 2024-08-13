@@ -1,23 +1,7 @@
-@promo1Bg: #F5968A;
-@promo1Color1: #FFF;
-@promo1Color2: #4F4344;
-@promo1Color3: @promo1Color1;
-@promo1Details: #fff;
-
-@promo2Bg: #98C9C6;
-@promo2Color1: #455F81;
-@promo2Color2: #fff;
-@promo2Color3: @promo2Color2;
-
-@promo3Bg: #ECB5A8;
-@promo3Color1: #8F4D4F;
-@promo3Color2: #fff;
-@promo3Color3: #ffff;
-
-@shipping-promoBg: #00A5B6;
-@shipping-promoColor1: #F3DD4E;
-@shipping-promoColor2: #fff;
-@shipping-promoColor3: #ffff;
+@defaultPromoBg: #9AC1CD;
+@defaultPromoColor1: #fff;
+@defaultPromoColor2: #22364A;
+@defaultPromoColor3: @defaultPromoColor1;
 
 .header-banner.homepage {
   max-width: 100%;
@@ -132,10 +116,12 @@ header.site-header {
     // padding: 2% 0;
     // padding: 0.8% 0;
     // display:none;
+
     // .see-details {
     //  display: block;
     //  text-align: center;
     // }
+
     a {
       @media screen and (max-width: 430px) {
         // top: 44%;
@@ -215,7 +201,7 @@ header.site-header {
               // color: @promo2Color2;
             }
 
-            color: @promo2Color1;
+            // color: @defaultPromoColor1;
           }
 
           &:nth-of-type(2) {
@@ -223,13 +209,13 @@ header.site-header {
               // color: @promo2Color1;
             }
 
-            color: @promo2Color2;
+            // color: @defaultPromoColor2;
           }
 
           &:last-of-type {
             @media screen and (max-width: 430px) {}
 
-            color: @promo2Color3;
+            // color: @defaultPromoColor3;
           }
 
           &.mobile {
@@ -316,275 +302,11 @@ header.site-header {
       max-width: 100%;
     }
 
-    &.promo1 {
-      background: @promo1Bg;
-
-      span {
-        &.first {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo1Color1;
-
-          a {
-            color: @promo1Color1;
-          }
-        }
-
-        &.second {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo1Color2;
-          // text-decoration:underline;
-
-          a {
-            color: @promo1Color2;
-          }
-        }
-
-        &.third {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo1Color3;
-          // text-decoration:underline;
-
-          a {
-            color: @promo1Color3;
-          }
-        }
-
-        &.shop-now {
-          i {
-            color: @promo1Color2;
-          }
-        }
-
-        &.details {
-          a {
-            color: @promo1Details;
-          }
-        }
-      }
-    }
+    // @import 'promo1.less';
+    @import 'promo2.less';
+    // @import 'promo3.less';
+    // @import 'promo-shipping.less';
 
 
-    &.promo2 {
-      background: @promo2Bg;
-
-      span {
-        &.first {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo2Color1;
-        }
-
-        &.second {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo2Color2;
-          // text-decoration: underline;
-        }
-
-        &.third {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo2Color3;
-          // text-decoration:underline;
-        }
-
-        &.shop-now {
-          i {
-            color: @promo2Color2;
-          }
-        }
-
-        &.details {
-          a {
-            color: @promo1Details;
-          }
-        }
-      }
-    }
-
-    &.promo3 {
-      background: @promo3Bg;
-
-      span {
-        &.first {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-            display: none;
-          }
-
-          color: @promo3Color1;
-        }
-
-        &.second {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.5vw;
-          }
-
-          i {
-
-            &:first-of-type {
-              @media screen and (max-width: 430px) {
-                color: @promo3Color1;
-                display: inline;
-              }
-  
-              color: @promo3Color1;
-            }
-  
-            &:nth-of-type(2) {
-              @media screen and (max-width: 430px) {
-                // color: @promo3Color2;
-              }
-  
-              color: @promo3Color2;
-            }
-  
-            &:last-of-type {
-              @media screen and (max-width: 430px) {
-                display: inline;
-                color: @promo3Color2;
-              }
-  
-              color: @promo3Color3;
-            }
-  
-            &.mobile {
-              // display: inline !important;
-            }
-  
-            font-style: normal;
-          }
-
-          color: @promo3Color2;
-        }
-
-        &.third {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @promo3Color3;
-          // text-decoration:underline;
-        }
-
-        &.shop-now {
-          i {
-            color: @promo3Color2;
-          }
-        }
-
-        &.details {
-          a {
-            color: @promo1Details;
-          }
-        }
-      }
-    }
-
-    &.shipping-promo {
-      background: @shipping-promoBg;
-
-      span {
-        &.first {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @shipping-promoColor1;
-        }
-
-        &.second {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @shipping-promoColor2;
-        }
-
-        &.third {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.2vw;
-          }
-
-          @media screen and (max-width: 430px) {
-            font-size: 2.8vw;
-          }
-
-          color: @shipping-promoColor3;
-          // text-decoration:underline;
-        }
-
-        &.shop-now {
-          i {
-            color: @shipping-promoColor2;
-          }
-        }
-
-        &.details {
-          a {
-            color: @promo1Details;
-          }
-        }
-      }
-    }
   }
 }
