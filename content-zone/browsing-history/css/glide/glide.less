@@ -10,7 +10,9 @@
       @media screen and (max-width: 1679px) {
         column-gap: 2vw;
       }
+
       @media screen and (max-width: 430px) {}
+
       column-gap: 30px;
 
       .glide__slide {
@@ -20,11 +22,13 @@
   }
 
   .glide__bullets {
-    @media screen and (max-width: 430px){
+    @media screen and (max-width: 430px) {
       position: relative;
       padding: 6vw 0;
       bottom: 0;
+      text-align: center;
     }
+
     position: absolute;
 
     button {
@@ -32,17 +36,28 @@
         width: 1.3vw;
         height: 1.3vw;
       }
+
       @media screen and (max-width: 430px) {
-        width: 5vw;
-        height: 5vw;
-        border-radius: 3vw;
+        // width: 5vw;
+        // height: 5vw;
+        // border-radius: 3vw;
+        width: 10px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: #666 !important;
+        margin: 0 5px;
       }
+
       border-radius: 1vw;
       width: 21px;
       height: 21px;
       display: inline-block;
       padding: 0 !important;
       border: none !important;
+
+      &.glide__bullet.glide__bullet--active {
+        background-color: #000 !important;
+      }
     }
   }
 

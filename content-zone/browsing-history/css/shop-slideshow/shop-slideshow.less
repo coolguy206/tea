@@ -9,16 +9,18 @@
     }
 }
 
+
+
 h2 {
     @media screen and (max-width: 1679px) {
-        font-size: 3.4vw;
+        // font-size: 3.4vw;
     }
 
     @media screen and (max-width:430px) {
         // font-size: 11vw;
         // line-height: 11vw;
-        font-size: 8vw;
-        line-height: normal;
+        // font-size: 8vw;
+        // line-height: normal;
         // margin: 0 0 6%;
     }
 
@@ -26,17 +28,21 @@ h2 {
         // font-size: 36px;
     }
 
-    font-family: @souv;
+    font-family: @gilroyr;
     color: @browsing-history-font-color;
-    font-size: 54px;
+    font-size: 1.625rem;
     text-align: center;
+    letter-spacing: 4px;
     // line-height: 70px;
-    // text-transform: uppercase;
-    // margin: 0 0 3%;
+    text-transform: uppercase;
+    margin: 20px 0;
 
 }
 
 .glide__bullets {
+    @media screen and (max-width:430px) {
+        display: block;
+    }
     display: none;
 }
 
@@ -74,7 +80,7 @@ li {
         }
 
         @media screen and (max-width: 430px) {
-            // display: none;
+            display: none;
         }
     }
 

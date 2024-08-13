@@ -105,6 +105,12 @@
   }
 }
 
+@media screen and (max-width:430px) {
+  .browsing-history .thumb-grid.item .img .js-qv {
+    display: none;
+  }
+}
+
 .browsing-history .thumb-grid.item .price-wrap #store_price {
   display: inline;
 }
@@ -112,6 +118,17 @@
 .browsing-history .thumb-grid.item .promo-teaser-thumb {
   white-space: wrap;
   display: inline;
+}
+
+.browsing-history .glide {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history div[data-glide-el="controls"] {
+    display: none;
+  }
 }
 
 .browsing-history .thumb-grid.item {

@@ -68,6 +68,9 @@ $(document).ready(function () {
                         `;
 
       $('.browsing-history ul').append(elem);
+
+      var btn = `<button class="glide__bullet" data-glide-dir="=${i}"></button>`;
+      $('div[data-glide-el="controls[nav]"]').append(btn);
     })
 
 
@@ -79,14 +82,18 @@ $(document).ready(function () {
         type: 'slider',
         // autoplay: 4000,
         animationDuration: 500,
-        perView: 5,
+        perView: 4,
         hoverpause: true,
         gap: 0,
         bound: true,
         rewind: false,
         breakpoints: {
+          821: {
+            perView: 3,
+            perSwipe: '|',
+          },
           431: {
-            perView: 2,
+            perView: 1,
             perSwipe: '|',
           },
         }
