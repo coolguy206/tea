@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'school-days/sign-up'
+    name: 'sweeps/curious-kids'
   },
   zone: {
     name: 'browsing-history',
