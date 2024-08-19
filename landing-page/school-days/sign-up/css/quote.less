@@ -1,5 +1,75 @@
+@import 'var.less';
+
 .quote {
   @media screen and (max-width:430px) {
-    display: none;
+    // display: none;
+    padding: 8vw 0;
+  }
+
+  background: @blue-color;
+  padding: 2vw 0;
+  text-align: center;
+  position: relative;
+
+  p {
+    @media screen and (max-width:1679px) {
+      font-size: 2vw;
+    }
+    @media screen and (max-width:430px) {
+      font-size: 5.5vw;
+    }
+    color: #fff;
+    font-size: 32px;
+    line-height: normal;
+
+    .quotation-mark {
+      @media screen and (max-width:1679px) {
+        font-size: 4vw;
+      }
+      @media screen and (max-width:430px) {
+        font-size: 10vw;
+      }
+      font-size: 70px;
+      font-family: @gilroyb;
+      display: block;
+      line-height: normal;
+    }
+
+    .colored-font{
+      @media screen and (max-width:1679px) {
+        letter-spacing: .4vw;
+      }
+      @media screen and (max-width:430px) {
+        letter-spacing: 1vw;
+      }
+      letter-spacing: 6.4px;
+      text-transform: uppercase;
+      font-family: @gilroyb;
+    }
+
+    .yellow-font {
+      color: @yellow-color;
+    
+    }
+
+    .green-font {
+      color: @green-color;
+    }
+
+    &.school {
+      @media screen and (max-width:1679px) {
+        font-size: 1.1vw;
+        letter-spacing: .2vw;
+      }
+      @media screen and (max-width:430px) {
+        letter-spacing: 1vw;
+        font-size: 3.5vw;
+      }
+      font-size: 18px;
+      font-family: @gilroyb;
+      text-transform: uppercase;
+      letter-spacing: 4px;
+      line-height: normal;
+    }
   }
 }

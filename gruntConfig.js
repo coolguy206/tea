@@ -34,10 +34,10 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/back-to-school'
+    name: 'school-days/sign-up'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'browsing-history',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
