@@ -68,7 +68,21 @@
 		}
 
 		&.div-4 {
-			// padding: 0 9% 0 0;
+			order: 4;
+			
+			a {
+				@media screen and (max-width: 1679px) {
+					width: 29vw;
+				}
+		
+				@media screen and (max-width: 430px) {
+					width: 77vw;
+				}
+		
+				background: @blue-color;
+				color: #fff;
+				width: 479px;
+			}
 		}
 
 		h3 {
