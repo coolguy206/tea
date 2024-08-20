@@ -17,11 +17,11 @@ refreshAccessToken((data) => {
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/08 August/080924 Back to School Event/04 Handoff/Site/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/080524 Fall 2 HP/03 Handoff/Category Headers & Visual Nav/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/092324 School Days/04 Handoff/Site/`
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/082024 KiwiCo Giveaway/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0814/`;
+  var writeFilePath = `Site/0820/`;
   // var writeFilePath = `handoff/headers/0805/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
