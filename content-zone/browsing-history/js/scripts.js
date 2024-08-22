@@ -19,26 +19,28 @@ $(document).ready(function () {
     var items = browsingHistory.reverse();
 
     items.map((val, i) => {
+      console.log(i);
       // console.log(val[0]);
-      var color = val[0].Url;
-      color = color.split('#')[1];
-      var promoClass = "promo-teaser-thumb";
-      var strike = val[0].Metadata.CompareAtPrice;
-      if (strike == val[0].Metadata.Price) {
-        strike = "";
-        promoClass = "";
-      }
+      if (i < 15) {
+        var color = val[0].Url;
+        color = color.split('#')[1];
+        var promoClass = "promo-teaser-thumb";
+        var strike = val[0].Metadata.CompareAtPrice;
+        if (strike == val[0].Metadata.Price) {
+          strike = "";
+          promoClass = "";
+        }
 
-      //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
-      // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
-      // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
-      // var thisPageUrl = window.location.pathname;
-      // if(thisPageUrl.indexOf('product') !== -1){
-      //   qv = "";
-      // }
-      var qv = `<span data-href="${val[0].Url}" data-color="${color}" class="js-qv ">Quick View</span>`;
+        //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
+        // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
+        // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
+        // var thisPageUrl = window.location.pathname;
+        // if(thisPageUrl.indexOf('product') !== -1){
+        //   qv = "";
+        // }
+        var qv = `<span data-href="${val[0].Url}" data-color="${color}" class="js-qv ">Quick View</span>`;
 
-      var elem = `
+        var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
@@ -67,10 +69,11 @@ $(document).ready(function () {
                         </li>
                         `;
 
-      $('.browsing-history ul').append(elem);
+        $('.browsing-history ul').append(elem);
 
-      var btn = `<button class="glide__bullet" data-glide-dir="=${i}"></button>`;
-      $('div[data-glide-el="controls[nav]"]').append(btn);
+        var btn = `<button class="glide__bullet" data-glide-dir="=${i}"></button>`;
+        $('div[data-glide-el="controls[nav]"]').append(btn);
+      }
     })
 
 

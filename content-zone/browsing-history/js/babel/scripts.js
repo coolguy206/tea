@@ -13,28 +13,31 @@ $(document).ready(function () {
 
     var items = browsingHistory.reverse();
     items.map(function (val, i) {
+      console.log(i);
       // console.log(val[0]);
-      var color = val[0].Url;
-      color = color.split('#')[1];
-      var promoClass = "promo-teaser-thumb";
-      var strike = val[0].Metadata.CompareAtPrice;
-      if (strike == val[0].Metadata.Price) {
-        strike = "";
-        promoClass = "";
-      }
+      if (i < 15) {
+        var color = val[0].Url;
+        color = color.split('#')[1];
+        var promoClass = "promo-teaser-thumb";
+        var strike = val[0].Metadata.CompareAtPrice;
+        if (strike == val[0].Metadata.Price) {
+          strike = "";
+          promoClass = "";
+        }
 
-      //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
-      // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
-      // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
-      // var thisPageUrl = window.location.pathname;
-      // if(thisPageUrl.indexOf('product') !== -1){
-      //   qv = "";
-      // }
-      var qv = "<span data-href=\"".concat(val[0].Url, "\" data-color=\"").concat(color, "\" class=\"js-qv \">Quick View</span>");
-      var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val[0].Url, "\"\n                                        data-hash=\"\" class=\"browsing-history\">\n                                        <img class=\"image\" src=\"").concat(val[0].ImageUrl, "\" alt=\"").concat(val[0].Title, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name browsing-history\"\n                                        href=\"").concat(val[0].Url, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val[0].Title, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike>").concat(strike, "</strike>\n                                            <span id=\"store_price\" class=\"price ").concat(promoClass, "\">$").concat(val[0].Metadata.Price, "</span>\n                                        </div>\n                                    </div>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
-      $('.browsing-history ul').append(elem);
-      var btn = "<button class=\"glide__bullet\" data-glide-dir=\"=".concat(i, "\"></button>");
-      $('div[data-glide-el="controls[nav]"]').append(btn);
+        //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
+        // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
+        // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
+        // var thisPageUrl = window.location.pathname;
+        // if(thisPageUrl.indexOf('product') !== -1){
+        //   qv = "";
+        // }
+        var qv = "<span data-href=\"".concat(val[0].Url, "\" data-color=\"").concat(color, "\" class=\"js-qv \">Quick View</span>");
+        var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val[0].Url, "\"\n                                        data-hash=\"\" class=\"browsing-history\">\n                                        <img class=\"image\" src=\"").concat(val[0].ImageUrl, "\" alt=\"").concat(val[0].Title, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name browsing-history\"\n                                        href=\"").concat(val[0].Url, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val[0].Title, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike>").concat(strike, "</strike>\n                                            <span id=\"store_price\" class=\"price ").concat(promoClass, "\">$").concat(val[0].Metadata.Price, "</span>\n                                        </div>\n                                    </div>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
+        $('.browsing-history ul').append(elem);
+        var btn = "<button class=\"glide__bullet\" data-glide-dir=\"=".concat(i, "\"></button>");
+        $('div[data-glide-el="controls[nav]"]').append(btn);
+      }
     });
     $('.browsing-history').css('opacity', 1);
 
