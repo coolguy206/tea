@@ -1,0 +1,122 @@
+@import "var.less";
+@import "classes.less";
+
+.get-started {
+	@media screen and (max-width: 1679px) {
+		column-gap: 14vw;
+	}
+
+	@media screen and (max-width: 430px) {
+		padding: 10vw 0;
+		column-gap: 0;
+	}
+
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 4% 0;
+	background: #FDF5F2;
+	justify-content: center;
+	column-gap: 237px;
+
+	h2 {
+		@media screen and (max-width: 1679px) {
+			font-size: 2.5vw;
+			letter-spacing: .6vw;
+		}
+
+		@media screen and (max-width: 430px) {
+			font-size: 7vw;
+			letter-spacing: 2vw;
+			margin: 0 0 10vw;
+		}
+
+		font-family: @gilroyb;
+		line-height: normal;
+		text-align: center;
+		font-size: 40px;
+		// line-height: 40px;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		flex-basis: 100%;
+		margin: 0 0 4%;
+		
+	}
+
+	div {
+		@media screen and (max-width: 430px) {
+			flex-basis: 100%;
+			padding: 0 !important;
+			margin: 0 0 10%;
+		}
+
+		// flex-basis: 50%;
+		align-content: center;
+		margin: 0 0 2%;
+
+		&.div-1 {
+			// padding: 0 0 0 9%;
+		}
+
+		&.div-2 {
+			// padding: 0 9% 0 0;
+		}
+
+		h3 {
+			@media screen and (max-width: 1679px) {
+				font-size: 2vw;
+			}
+
+			@media screen and (max-width:430px) {
+				font-size: 8vw;
+				margin: 0 0 6%;
+			}
+
+			font-family: @souv;
+			font-size: 33px;
+			line-height: normal;
+			text-align: center;
+			margin: 0 0 1.5vw;
+		}
+
+		p {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.5vw;
+				line-height: 2vw;
+			}
+
+			@media screen and (max-width:430px) {
+				font-size: 5vw;
+				line-height: 7vw;
+				margin: 0 0 8%;
+			}
+
+			font-family: @gilroyr;
+			font-size: 24px;
+			line-height: 30px;
+			// width: 67%;
+			margin: 0 0 1.5vw;
+		}
+
+		a.cta-border {
+			@media screen and (max-width: 1679px) {
+				width: 15vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				// left: 0;
+				// padding: 4% 0;
+				width: 38vw;
+			}
+
+			background: @brown-color;
+			color: #fff;
+			// padding: 2% 6%;
+			width: 245px;
+
+			&.cta1 {}
+
+			&.cta2 {}
+		}
+	}
+}

@@ -1,0 +1,155 @@
+@import "var.less";
+@import "classes.less";
+
+.how-it-works {
+	@media screen and (max-width: 1679px) {
+		// column-gap: 2vw;
+	}
+
+	@media screen and (max-width: 430px) {
+		padding: 10vw 0;
+		// column-gap: 0;
+	}
+
+	display: flex;
+	flex-wrap: wrap;
+	text-align: center;
+	padding: 5% 0 2.9%;
+	justify-content: center;
+	// column-gap: 33px;
+	align-items: flex-start;
+
+	h2 {
+		@media screen and (max-width: 1679px) {
+			font-size: 2vw;
+			letter-spacing: .6vw;
+			margin: 0 0 1.5vw;
+		}
+
+		@media screen and (max-width: 430px) {
+			font-size: 7vw;
+			letter-spacing: 2vw;
+			margin: 0 0 10vw;
+		}
+
+		font-family: @gilroyb;
+		line-height: normal;
+		text-align: center;
+		font-size: 40px;
+		letter-spacing: 10px;
+		text-transform: uppercase;
+		margin: 0 0 25px;
+	}
+
+	p {
+		@media screen and (max-width: 1679px) {
+			font-size: 2vw;
+			line-height: 2.5vw;
+		}
+
+		@media screen and (max-width: 430px) {
+			font-size: 7vw;
+			line-height: 10vw;
+			margin: 0 0 14%;
+		}
+
+		flex-basis: 100%;
+		font-size: 30px;
+		line-height: 40px;
+		font-family: @souv;
+		color: @brown-color;
+		margin: 0 0 6%;
+	}
+
+	div {
+		@media screen and (max-width: 430px) {
+			flex-basis: 100%;
+			padding: 0 !important;
+			margin: 0 0 14%;
+		}
+
+		// flex-basis: 50%;
+		align-content: center;
+		margin: 0 0 6%;
+		flex-basis: 50%;
+
+		img {
+			@media screen and (max-width: 430px) {
+				width: 50px;
+				margin: 0 0 25px;
+			}
+
+			margin: 0 0 38px;
+		}
+
+		&.div-1 {
+			// padding: 0 0 0 9%;
+		}
+
+		&.div-2 {
+			// padding: 0 9% 0 0;
+		}
+
+		&.div-3 {
+			// padding: 0 0 0 9%;
+		}
+
+		&.div-4 {
+			// padding: 0 9% 0 0;
+		}
+
+		span {
+			@media screen and (max-width: 1679px) {
+				font-size: 2.3vw;
+			}
+
+			@media screen and (max-width:430px) {
+				font-size: 10vw;
+				padding: 2% 8%;
+				margin: 0 0 8%;
+			}
+
+			background: @yellow-color;
+			font-family: @gilroyb;
+			border-radius: 50%;
+			font-size: 40px;
+			padding: 1% 4%;
+			margin: 0 0 5%;
+			display: inline-block;
+		}
+
+		h3 {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.9vw;
+			}
+
+			@media screen and (max-width:430px) {
+				font-size: 8vw;
+				margin: 0 0 6%;
+			}
+
+			font-family: @souv;
+			font-size: 33px;
+			line-height: normal;
+			text-align: center;
+			margin: 0 0 3%;
+		}
+
+		p {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.5vw;
+				line-height: 2vw;
+			}
+
+			@media screen and (max-width:430px) {
+				font-size: 5vw;
+				line-height: 7vw;
+			}
+
+			font-family: @gilroyr;
+			font-size: 24px;
+			line-height: 30px;
+			margin: 0 auto;
+		}
+	}
+}

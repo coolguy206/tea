@@ -1,20 +1,124 @@
+@import 'var.less';
+@import 'classes.less';
+@h1-color: #4F4243;
+@h2-color: @h1-color;
+@p-color: @h1-color;
+@cta-background-color: @h1-color;
+@bg-color: #FDF5F2;
+
 .site-content .site-content-inner .site-content-bg-wrapper {
   padding: 0;
 }
 
 .wrap-content {
-  ul {
-    list-style-type: none;
-    display: flex;
-    flex-wrap: wrap;
+  @media screen and (max-width: 1679px) {
+    column-gap: 3vw;
+    padding: 5vw 0;
+  }
 
-    li {
-      @media screen and (max-width:414px) {
-        flex-basis: 100%;
+  @media screen and (max-width: 430px) {
+    row-gap: 12vw;
+    padding: 18vw 0;
+    column-gap: 0;
+  }
+
+  background: @bg-color;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 50px;
+  padding: 80px 0;
+
+  h1 {
+    @media screen and (max-width: 1679px) {
+      font-size: 2.4vw;
+      letter-spacing: .6vw;
+      margin: 0 0 3vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 10vw;
+      letter-spacing: 2vw;
+    }
+
+    font-family: @gilroyb;
+    font-size: 40px;
+    letter-spacing: 10px;
+    text-transform: uppercase;
+    flex-basis: 100%;
+    color: @h1-color;
+    text-align: center;
+    margin: 0 0 50px;
+  }
+
+  div {
+    @media screen and (max-width: 430px) {
+      flex-basis: 100%;
+    }
+
+    text-align: center;
+    flex-basis: 24%;
+
+    h2 {
+      @media screen and (max-width: 1679px) {
+        font-size: 2vw;
       }
-      flex-basis: 33%;
-      box-sizing: border-box;
-      padding: 1rem;
+
+      @media screen and (max-width: 430px) {
+        font-size: 8vw;
+      }
+
+      font-family: @souv;
+      font-size: 33px;
+      color: @h2-color;
+    }
+
+    p {
+      @media screen and (max-width: 1679px) {
+        font-size: 1.4vw;
+        line-height: 2vw;
+      }
+
+      @media screen and (max-width: 430px) {
+        font-size: 5.5vw;
+        line-height: 7vw;
+      }
+
+      font-family: @gilroyr;
+      font-size: 24px;
+      line-height: 30px;
+      color: @p-color;
+    }
+
+    a {
+      background: @cta-background-color;
+      color: #fff;
+
+      &.careers {}
+
+      &.affiliate-program {
+        @media screen and (max-width: 1679px) {
+          width: 16vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          width: 61vw;
+        }
+
+        width: 263px;
+      }
+
+      &.retailer {
+        @media screen and (max-width: 1679px) {
+          width: 13vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          width: 52vw;
+        }
+
+        width: 223px;
+      }
     }
   }
 }

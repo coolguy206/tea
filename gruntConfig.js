@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'sweeps/curious-kids'
+    name: 'affiliate/affiliate-program'
   },
   zone: {
     name: 'browsing-history',
