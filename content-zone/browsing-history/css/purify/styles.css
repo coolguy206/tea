@@ -115,6 +115,14 @@
   display: inline;
 }
 
+.browsing-history .thumb-grid.item .size {
+  text-align: left;
+}
+
+.browsing-history .thumb-grid.item .size .thumb-sizes {
+  display: block;
+}
+
 .browsing-history .thumb-grid.item .promo-teaser-thumb {
   white-space: wrap;
   display: inline;

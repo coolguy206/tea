@@ -37,7 +37,7 @@ module.exports = {
     name: 'sweeps/back-to-school'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'browsing-history',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',

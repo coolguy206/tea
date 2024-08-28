@@ -6,7 +6,8 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
-  var browsingHistory = window.localStorage.getItem('__kla_viewed');
+  var browsingHistory = window.localStorage.getItem('browseHistory');
+  console.log(browsingHistory);
 
   var browsingHistoryLength = $('.browsing-history li').length;
   console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
@@ -14,7 +15,7 @@ $(document).ready(function () {
   if (browsingHistory !== null && browsingHistoryLength == 0) {
 
     browsingHistory = JSON.parse(browsingHistory);
-    // console.log(browsingHistory);
+    console.log(browsingHistory);
 
     var items = browsingHistory.reverse();
 
@@ -22,14 +23,15 @@ $(document).ready(function () {
       console.log(i);
       // console.log(val[0]);
       if (i < 15) {
-        var color = val[0].Url;
-        color = color.split('#')[1];
-        var promoClass = "promo-teaser-thumb";
-        var strike = val[0].Metadata.CompareAtPrice;
-        if (strike == val[0].Metadata.Price) {
-          strike = "";
-          promoClass = "";
-        }
+        // var color = val[0].Url;
+        // color = color.split('#')[1];
+      
+        // var promoClass = "promo-teaser-thumb";
+        // var strike = val[0].Metadata.CompareAtPrice;
+        // if (strike == val[0].Metadata.Price) {
+        //   strike = "";
+        //   promoClass = "";
+        // }
 
         //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
         // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
@@ -38,31 +40,37 @@ $(document).ready(function () {
         // if(thisPageUrl.indexOf('product') !== -1){
         //   qv = "";
         // }
-        var qv = `<span data-href="${val[0].Url}" data-color="${color}" class="js-qv ">Quick View</span>`;
+        var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv ">Quick View</span>`;
 
         var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
-                                    <a href="${val[0].Url}"
+                                    <a href="${val.pdpURL}"
                                         data-hash="" class="browsing-history">
-                                        <img class="image" src="${val[0].ImageUrl}" alt="${val[0].Title}" width="500" height="500">
+                                        <img class="image" src="${val.pdpImgURL}" alt="${val.pdpName}" width="500" height="500">
                                     </a>
                                     ${qv}
                                 </span>
                                 <div class="thumb-content">
                                     <a class="name browsing-history"
-                                        href="${val[0].Url}"
+                                        href="${val.pdpURL}"
                                         data-hash="">
-                                        <span class="model">${val[0].Title}</span>
+                                        <span class="model">${val.pdpName}</span>
                                     </a>
                         
                                     <div class="price-wrap">
                                         <div class="price">
-                                            <strike>${strike}</strike>
-                                            <span id="store_price" class="price ${promoClass}">$${val[0].Metadata.Price}</span>
+                                            <strike></strike>
+                                            <span id="store_price" class="price ">${val.pdpPrice}</span>
                                         </div>
                                     </div>
+
+                                    <p class="size">
+                                      <span class="thumb-sizes">
+                                        ${val.pdpSizes}
+                                      </span>
+                                    </p>
                         
                                 </div>
                             </div>
