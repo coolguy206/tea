@@ -56,19 +56,17 @@ jQuery(document).ready(function () {
     $.fancybox.close();
     $('.fancybox-container').hide();
   });
-
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   pause: 2500,
-
-  //   onSliderLoad: function () {
-  //     $('.promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 2500,
+    onSliderLoad: function onSliderLoad() {
+      $('.promos.promo2, .promos.promo3').show();
+    }
+  });
 });
 
 

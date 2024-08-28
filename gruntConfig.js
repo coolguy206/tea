@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'affiliate/affiliate-program'
+    name: 'school-days/sign-up'
   },
   zone: {
     name: 'browsing-history',

@@ -6,8 +6,8 @@
 @promo-h3-color-430: @promo-h3-color;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
-@promo-cta1-color: #22364A;
-@promo-cta1-background: #9AC1CD;
+@promo-cta1-color: #fff;
+@promo-cta1-background: #B23C46;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #4261A6;
 @promo-cta3-color: @promo-cta1-color;
@@ -82,10 +82,10 @@
       }
 
       position: absolute;
-      top: 44%;
-      transform: translate(0%, 0%);
-      width: auto;
-      left: 52%;
+      top: 50%;
+      transform: translate(0%, -50%);
+      width: 40%;
+      left: 2%;
       // text-align: center;
 
       img {
@@ -107,59 +107,54 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 7vw;
+          font-size: 4vw;
           margin: 0 0 1vw;
-          line-height: 7vw;
-          // letter-spacing: 1vw;
+          line-height: 4vw;
+          letter-spacing: .9vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 16vw;
-          line-height: 16vw;
+
           margin: 0 0 3vw;
           color: @promo-h2-color-430;
           // display: none;
           text-align: center;
-          // letter-spacing: 1vw;
+          line-height: normal;
+          font-size: 9vw;
+          letter-spacing: 1.1vw;
         }
 
-        // margin: 5% 0 0;
-        // text-transform: capitalize;
         color: @promo-h2-color;
-        line-height: 100px;
-        font-family: @souv;
-        font-size: 100px;
-        margin: 0 0 15px;
-        text-align: center;
-        // letter-spacing: 17px;
+        font-family: @gilroybl;
+        font-size: 65.295px;
+        line-height: 75.873px;
+        letter-spacing: 13.059px;
+        text-transform: uppercase;
       }
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 1.1vw;
+          font-size: 1.8vw;
           // line-height: 1.5vw;
-          margin: 0 0 3vw;
-          letter-spacing: .3vw;
+          // margin: 0 0 3vw;
+          letter-spacing: .4vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 3.2vw;
-          // line-height: 6vw;
-          line-height: normal;
           margin: 0 0 1vw;
           color: @promo-h3-color-430;
           text-align: center;
-          letter-spacing: .7vw;
+          line-height: normal;
+          font-size: 5vw;
+          letter-spacing: 1vw;
         }
 
-        font-size: 19px;
-        line-height: normal;
-        text-align: center;
-        text-transform: uppercase;
         font-family: @gilroyb;
         color: @promo-h3-color;
-        margin: 0 0 50px;
-        letter-spacing: 4px;
+        font-size: 28.611px;
+        line-height: normal;
+        letter-spacing: 5.722px;
+        text-transform: uppercase;
       }
 
       p {
@@ -213,7 +208,7 @@
         column-gap: 20px;
         justify-content: center;
         width: 75%;
-        margin: 4% auto;
+        margin: 6% auto;
 
 
         a {
