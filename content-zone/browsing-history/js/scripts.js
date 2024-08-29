@@ -7,21 +7,22 @@ import Glide from '@glidejs/glide'
 $(document).ready(function () {
 
   var browsingHistory = window.localStorage.getItem('browseHistory');
-  console.log(browsingHistory);
+  // console.log(browsingHistory);
 
   var browsingHistoryLength = $('.browsing-history li').length;
-  console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
+  // console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
 
   if (browsingHistory !== null && browsingHistoryLength == 0) {
 
     browsingHistory = JSON.parse(browsingHistory);
-    console.log(browsingHistory);
+    // console.log(browsingHistory);
 
     var items = browsingHistory.reverse();
 
     items.map((val, i) => {
-      console.log(i);
+      // console.log(i);
       // console.log(val[0]);
+      
       if (i < 15) {
         // var color = val[0].Url;
         // color = color.split('#')[1];
@@ -40,6 +41,7 @@ $(document).ready(function () {
         // if(thisPageUrl.indexOf('product') !== -1){
         //   qv = "";
         // }
+
         var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv ">Quick View</span>`;
 
         var elem = `

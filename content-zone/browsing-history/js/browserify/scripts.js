@@ -59,16 +59,20 @@ var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 $(document).ready(function () {
   var browsingHistory = window.localStorage.getItem('browseHistory');
-  console.log(browsingHistory);
+  // console.log(browsingHistory);
+
   var browsingHistoryLength = $('.browsing-history li').length;
-  console.log("browsingHistoryLength: ".concat(browsingHistoryLength));
+  // console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
+
   if (browsingHistory !== null && browsingHistoryLength == 0) {
     browsingHistory = JSON.parse(browsingHistory);
-    console.log(browsingHistory);
+    // console.log(browsingHistory);
+
     var items = browsingHistory.reverse();
     items.map(function (val, i) {
-      console.log(i);
+      // console.log(i);
       // console.log(val[0]);
+
       if (i < 15) {
         // var color = val[0].Url;
         // color = color.split('#')[1];
@@ -87,6 +91,7 @@ $(document).ready(function () {
         // if(thisPageUrl.indexOf('product') !== -1){
         //   qv = "";
         // }
+
         var qv = "<span data-href=\"".concat(val.pdpURL, "\" data-color=\"").concat(val.pdpColor, "\" class=\"js-qv \">Quick View</span>");
         var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val.pdpURL, "\"\n                                        data-hash=\"\" class=\"browsing-history\">\n                                        <img class=\"image\" src=\"").concat(val.pdpImgURL, "\" alt=\"").concat(val.pdpName, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name browsing-history\"\n                                        href=\"").concat(val.pdpURL, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val.pdpName, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike></strike>\n                                            <span id=\"store_price\" class=\"price \">").concat(val.pdpPrice, "</span>\n                                        </div>\n                                    </div>\n\n                                    <p class=\"size\">\n                                      <span class=\"thumb-sizes\">\n                                        ").concat(val.pdpSizes, "\n                                      </span>\n                                    </p>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
         $('.browsing-history ul').append(elem);
