@@ -6,14 +6,22 @@
   color: #FF1744 !important;
 }
 
-.dept-clearance a,.dept-sale a,.dept-select-styles a {
+.dept-clearance a,.dept-sale a {
   color: #FF1744 !important;
 }
 
-.dept-clearance:hover .line,.dept-sale:hover .line,.dept-select-styles:hover .line {
+.dept-clearance:hover .line,.dept-sale:hover .line {
   border-color: #FF1744 !important;
 }
 
 .dept-new-arrivals a {
   color: #436FC1 !important;
+}
+
+.dept-select-styles a {
+  color: #0088A2 !important;
+}
+
+.dept-select-styles:hover .line {
+  border-color: #0088A2 !important;
 }

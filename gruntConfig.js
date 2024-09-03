@@ -37,7 +37,7 @@ module.exports = {
     name: 'school-days/sign-up'
   },
   zone: {
-    name: 'browsing-history',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
