@@ -29,7 +29,7 @@ axios.get(`${baseUrl}?${state}`, {
       "authorization": `Bearer ${process.env.ISSUU_TOKEN}`
     }
   }).then((data) => {
-    console.log(data.data.results[0]);
+    // console.log(data.data.results[0]);
     var catalogs = data.data.results;
 
     catalogs.map((val, i) => {
@@ -37,13 +37,17 @@ axios.get(`${baseUrl}?${state}`, {
       title = title.replace('Tea Collection - ', '');
       title = title.replace(/\(|\)/gi, '');
 
-      var name = val.fileInfo.name;
-      name = name.replace('.pdf', '');
-      name = name.toLowerCase();
+      // var name = val.fileInfo.name;
+      // name = name.replace('.pdf', '');
+      // name = name.toLowerCase();
+
+      var name = val.publicLocation;
+      name = name.split('docs/')[1];
+      // console.log(name);
 
       var imgUrl = val.cover.large.url;
 
-      li = `${li}\n<li data-name="${name}" data-desc="${val.description}"><img src="${imgUrl}" alt="${title}"><h4>${title}</h4></li>\n`;
+      li = `${li}\n<li data-name="${name}" data-desc="${val.description}" data-title="${title}"><img src="${imgUrl}" alt="${title}"><h4>${title}</h4></li>\n`;
 
     });
 
