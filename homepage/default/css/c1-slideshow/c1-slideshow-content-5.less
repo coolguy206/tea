@@ -15,22 +15,45 @@
     text-align: center;
 
     h3 {
+        @media screen and (max-width: 1679px) {
+            font-size: @c1-5-h3-font-size-1679;
+            letter-spacing: @c1-5-h3-letter-spacing-1679;
+        }
+
         @media screen and (max-width: 430px) {
-            margin: 0 0 4vw;
+            margin: 0 0 4vw !important;
         }
 
         color: @c1-5-h3-color;
-        margin: 0 0 1vw;
+        margin: 0 0 1.5vw;
+        text-shadow: @c1-5-text-shadow;
+        font-size: @c1-5-h3-font-size;
+        letter-spacing: @c1-5-h3-letter-spacing;
 
-        &:last-of-type {
-            @media screen and (max-width: 430px) {
-                position: absolute;
-                left: 50%;
-                transform: translate(-50%, 0);
-                width: 100%;
-                top: @c1-5-h3-top-430;
+        &.shop-tea-at {
+            @media screen and (max-width: 1679px) {
+                font-size: 2.4vw;
             }
+
+            @media screen and (max-width: 430px) {
+                font-size: 6.5vw !important;
+            }
+
+            text-transform: capitalize;
+            letter-spacing: 0;
+            font-size: 40px;
+            line-height: normal;
         }
+
+        // &:last-of-type {
+        //     @media screen and (max-width: 430px) {
+        //         position: absolute;
+        //         left: 50%;
+        //         transform: translate(-50%, 0);
+        //         width: 100%;
+        //         top: @c1-5-h3-top-430;
+        //     }
+        // }
     }
 
     h2 {
@@ -38,20 +61,29 @@
             // letter-spacing: 0;
             line-height: 14vw !important;
             font-size: 12vw !important;
+            margin: 0 0 8vw !important;
         }
 
         color: @c1-5-h2-color;
         // text-transform:capitalize;
         letter-spacing: 0;
-        font-family: @c1-5-font-family;
-        
+        font-family: @c1-5-h2-font-family;
+        text-shadow: @c1-5-text-shadow;
+        margin: 0 0 1.5vw;
+
 
         span {
             @media screen and (max-width: 430px) {
                 letter-spacing: 3vw;
             }
+
             letter-spacing: 1vw;
         }
+    }
+
+    p {
+        color: @c1-5-p-color;
+        text-shadow: @c1-5-text-shadow;
     }
 
     div {
