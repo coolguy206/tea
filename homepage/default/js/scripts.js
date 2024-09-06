@@ -25,7 +25,7 @@ $(document).ready(function () {
 
   new Glide('.c1 .glide', {
     type: 'carousel',
-    autoplay: 4000,
+    // autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -34,14 +34,14 @@ $(document).ready(function () {
     dragThreshold: false,
   }).mount();
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
+  new Glide('.c2 .glide', {
+    type: 'carousel',
     // autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount();
 
   new Glide('.shop-slideshow .glide', {
     type: 'carousel',
@@ -113,9 +113,29 @@ $(document).ready(function () {
 
   inview('.hp .promo1-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
 
-  for (var i = 1; i < 8; i++) {
+  for (var i = 1; i < 9; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);
   }
+
+  var a = $('.hp a');
+  $(a).each(function(i,val){
+    var img = $(val).find('img');
+    console.log(img);
+    if(img.length !== 0){
+      // var theClass = $(val).next().find('h2').text().replace(/ /g, '-').toLowerCase();
+      var theClass = 'img ' + $(img).attr('alt').replace(/ /g, '-').toLowerCase();
+      // console.log(theClass);
+      var oldClass = $(val).attr('class');
+      if(oldClass !== undefined){
+        theClass = `${oldClass} ${theClass}`;
+        // console.log(theClass);
+        $(val).attr('class', theClass);
+      } else {
+        $(val).attr('class', theClass);
+      }
+     
+    }
+  });
 
   // $('img[usemap]').rwdImageMaps();
 

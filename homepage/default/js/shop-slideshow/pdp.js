@@ -1,15 +1,15 @@
 const pdps = [
 
-    // { url: `https://www.teacollection.com/product/24f12130/studious-owl-graphic-tee.html#perennial%20pink`, num: 1 },
-    // { url: `https://www.teacollection.com/product/24f11102/rainbow-sweater.html#med%20heather%20grey`, num: 2 },
-    // { url: `https://www.teacollection.com/product/24f12318/tiered-skirted-twirl-dress.html#turkish%20rose`, num: 3 },
-    // { url: `https://www.teacollection.com/product/24f12219/going-places-joggers.html#scenic%20blue`, num: 4 },
-    // { url: `https://www.teacollection.com/product/24f32504/snap-front-ruffle-baby-romper.html#iznik%20floral`, num: 5 },
-    // { url: `https://www.teacollection.com/product/24f22146/motorbike-sleeve-kanga-popover.html#smoke`, num: 6 },
-    // { url: `https://www.teacollection.com/product/24f22131/airplane-trio-graphic-tee.html#sangria`, num: 7 },
-    // { url: `https://www.teacollection.com/product/24f22216/playwear-pants.html#pineneedle`, num: 8 },
-    { url: `https://www.teacollection.com/product/24f22130/firetruck-graphic-tee.html#coronet%20blue`, num: 9 },
-    { url: `https://www.teacollection.com/product/24f22209/stripe-out-joggers.html#jet%20black`, num: 10 },
+    // { url: `https://www.teacollection.com/product/24f12329/ruffle-collar-ballet-dress.html#hariz%20rug%20floral%20in%20mauveglow`, num: 1 },
+    // { url: `https://www.teacollection.com/product/24f12138/painted-butterfly-graphic-tee.html#creole%20pink`, num: 2 },
+    // { url: `https://www.teacollection.com/product/24f12149/cat-ears-velour-hoodie.html#shadow`, num: 3 },
+    // { url: `https://www.teacollection.com/product/24f22151/helicopter-layered-sleeve-tee.html#vapor`, num: 4 },
+    // { url: `https://www.teacollection.com/product/24f22212/feeling-zippy-joggers.html#thunder`, num: 5 },
+    // { url: `https://www.teacollection.com/product/24f11100/iconic-cardigan.html#pomegranate%20fruit`, num: 6 },
+    // { url: `https://www.teacollection.com/product/24f12342/velour-ballet-dress.html#shadow`, num: 7 },
+    // { url: `https://www.teacollection.com/product/24f23103/flannel-button-up-shirt.html#anatolian%20plaid`, num: 8 },
+    { url: `https://www.teacollection.com/product/24f43202/corduroy-baby-pants.html#acorn`, num: 9 },
+    { url: `https://www.teacollection.com/product/24f31100/creature-comfort-baby-cardigan.html#oatmeal%20heather`, num: 10 },
 
 ];
 

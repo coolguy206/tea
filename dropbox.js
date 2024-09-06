@@ -16,12 +16,12 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Promotions/08 August/082324 Labor Day Sale/04 Handoff/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/080524 Fall 2 HP/03 Handoff/Category Headers & Visual Nav/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/092324 School Days/04 Handoff/Site/090424-hp/`
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/090524 Fall 3 HP/Handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/092324 School Days/04 Handoff/Site/090424-hp/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0904/`;
+  var writeFilePath = `Site/0905/`;
   // var writeFilePath = `handoff/headers/0805/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
