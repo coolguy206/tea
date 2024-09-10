@@ -42,14 +42,14 @@ $(document).ready(function () {
         //   qv = "";
         // }
 
-        var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv ">Quick View</span>`;
+        var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv browsing-history ${val.pdpName}">Quick View</span>`;
 
         var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
                                     <a href="${val.pdpURL}"
-                                        data-hash="" class="browsing-history">
+                                        data-hash="" class="browsing-history ${val.pdpName}">
                                         <img class="image" src="${val.pdpImgURL}" alt="${val.pdpName}" width="500" height="500">
                                     </a>
                                     ${qv}
