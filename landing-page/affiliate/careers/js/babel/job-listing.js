@@ -4,9 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.jobs = void 0;
-// import {
-//   digitalMarketingCoordinator
-// } from './digital-marketing-coordinator.js';
+var _accountExecutiveEast = require("./account-executive-east.js");
 // import {
 //   directorMarketing
 // } from './director-marketing.js';
@@ -14,5 +12,5 @@ exports.jobs = void 0;
 //   officeCoordinator
 // } from './office-coordinator.js';
 
-var jobs = exports.jobs = [];
+var jobs = exports.jobs = [_accountExecutiveEast.AccountExecutiveEast];
 //# sourceMappingURL=job-listing.js.map

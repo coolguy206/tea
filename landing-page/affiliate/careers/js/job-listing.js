@@ -1,6 +1,6 @@
-// import {
-//   digitalMarketingCoordinator
-// } from './digital-marketing-coordinator.js';
+import {
+    AccountExecutiveEast
+} from './account-executive-east.js';
 // import {
 //   directorMarketing
 // } from './director-marketing.js';
@@ -8,6 +8,6 @@
 //   officeCoordinator
 // } from './office-coordinator.js';
 
-export var jobs = [];
+export var jobs = [AccountExecutiveEast];
 
 
