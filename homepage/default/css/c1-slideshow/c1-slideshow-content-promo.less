@@ -16,10 +16,16 @@
     text-align: center;
 
     img {
-        &.mobile {
-            width: 88vw;
-            margin: 0 auto;
+        @media screen and (max-width: 1679px){
+            width: 27.5vw;
         }
+        @media screen and (max-width: 430px){
+            width: auto;
+        }
+        // &.mobile {
+        //     width: 88vw;
+        //     margin: 0 auto;
+        // }
     }
 
     h4 {
@@ -52,7 +58,7 @@
         }
 
         color: @c1-promo-h3-color !important;
-        margin:0 0 1vw;
+        margin:1vw 0 1vw;
         text-align: center !important;
         text-shadow: none;
         font-size: @c1-promo-h3-font-size;
