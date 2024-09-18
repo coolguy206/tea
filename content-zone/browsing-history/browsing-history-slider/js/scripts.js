@@ -6,45 +6,52 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
-  var browsingHistory = window.localStorage.getItem('browseHistory');
-  // console.log(browsingHistory);
+  var url = window.location.pathname;
+  // console.log(`url: ${url}`);
 
-  var browsingHistoryLength = $('.browsing-history li').length;
-  // console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
+  if (url !== '/product/EGIFTCARD-999-NS/tea-collection-gift-certificate-gift-card.html') {
 
-  if (browsingHistory !== null && browsingHistoryLength == 0) {
-
-    browsingHistory = JSON.parse(browsingHistory);
+    var browsingHistory = window.localStorage.getItem('browseHistory');
     // console.log(browsingHistory);
 
-    var items = browsingHistory.reverse();
+    var browsingHistoryLength = $('.browsing-history li').length;
+    // console.log(`browsingHistoryLength: ${browsingHistoryLength}`)
 
-    items.map((val, i) => {
-      // console.log(i);
-      // console.log(val[0]);
-      
-      if (i < 15) {
-        // var color = val[0].Url;
-        // color = color.split('#')[1];
-      
-        // var promoClass = "promo-teaser-thumb";
-        // var strike = val[0].Metadata.CompareAtPrice;
-        // if (strike == val[0].Metadata.Price) {
-        //   strike = "";
-        //   promoClass = "";
-        // }
+    if (browsingHistory !== null && browsingHistoryLength == 0) {
 
-        //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
-        // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
-        // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
-        // var thisPageUrl = window.location.pathname;
-        // if(thisPageUrl.indexOf('product') !== -1){
-        //   qv = "";
-        // }
+      browsingHistory = JSON.parse(browsingHistory);
+      // console.log(browsingHistory);
 
-        var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv browsing-history ${val.pdpName}">Quick View</span>`;
+      var items = browsingHistory.reverse();
 
-        var elem = `
+      items.map((val, i) => {
+        // console.log(i);
+        // console.log(val[0]);
+
+        if (i < 15) {
+          // var color = val[0].Url;
+          // color = color.split('#')[1];
+
+          // var promoClass = "promo-teaser-thumb";
+          // var strike = val[0].Metadata.CompareAtPrice;
+          // if (strike == val[0].Metadata.Price) {
+          //   strike = "";
+          //   promoClass = "";
+          // }
+
+          //! QUICK VIEW DOESN'T WORK... KEEPS ADDING MORE ITEMS TO SLIDESHOW
+          // var qv = `<span data-href="${url}" data-color="${color}" class="js-qv ">Quick View</span>`;
+          // //? ONLY SHOW QUICK VIEW IF NOT ON PDP PAGE
+          // var thisPageUrl = window.location.pathname;
+          // if(thisPageUrl.indexOf('product') !== -1){
+          //   qv = "";
+          // }
+
+          if (val.pdpURL !== undefined) {
+
+            var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv browsing-history ${val.pdpName}">Quick View</span>`;
+
+            var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
@@ -79,48 +86,51 @@ $(document).ready(function () {
                         </li>
                         `;
 
-        $('.browsing-history ul').append(elem);
+            $('.browsing-history ul').append(elem);
 
-        var btn = `<button class="glide__bullet" data-glide-dir="=${i}"></button>`;
-        $('div[data-glide-el="controls[nav]"]').append(btn);
-      }
-    })
-
-
-    $('.browsing-history').css('opacity', 1);
-
-    //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
-    if ($('.browsing-history li').length >= 5 || window.innerWidth < 431) {
-      new Glide('.browsing-history .glide', {
-        type: 'slider',
-        // autoplay: 4000,
-        animationDuration: 500,
-        perView: 4,
-        hoverpause: true,
-        gap: 0,
-        bound: true,
-        rewind: false,
-        breakpoints: {
-          821: {
-            perView: 3,
-            perSwipe: '|',
-          },
-          431: {
-            perView: 1,
-            perSwipe: '|',
-          },
+            var btn = `<button class="glide__bullet" data-glide-dir="=${i}"></button>`;
+            $('div[data-glide-el="controls[nav]"]').append(btn);
+          }
         }
-      }).mount();
+      })
+
+
+      $('.browsing-history').css('opacity', 1);
+
+      //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
+      if ($('.browsing-history li').length >= 5 || window.innerWidth < 431) {
+        new Glide('.browsing-history .glide', {
+          type: 'slider',
+          // autoplay: 4000,
+          animationDuration: 500,
+          perView: 4,
+          hoverpause: true,
+          gap: 0,
+          bound: true,
+          rewind: false,
+          breakpoints: {
+            821: {
+              perView: 3,
+              perSwipe: '|',
+            },
+            431: {
+              perView: 1,
+              perSwipe: '|',
+            },
+          }
+        }).mount();
+      } else {
+        //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
+        $('.browsing-history div[data-glide-el="controls"]').hide();
+        $('.browsing-history ul').addClass('width-300');
+      }
+
     } else {
-      //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
-      $('.browsing-history div[data-glide-el="controls"]').hide();
-      $('.browsing-history ul').addClass('width-300');
+      $('.browsing-history').hide();
     }
 
-  } else {
-    $('.browsing-history').hide();
-  }
+    inview('.browsing-history');
 
-  inview('.browsing-history');
+  }
 
 });
