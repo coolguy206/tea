@@ -51,7 +51,7 @@ $(document).ready(function () {
 
             var urlParams = `?utm_campaign=recently_viewed&utm_medium=recently_viewed&utm_source=recently_viewed`;
 
-            var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv browsing-history ${val.pdpName}">Quick View</span>`;
+            var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv ${val.pdpName}">Quick View</span>`;
 
             var elem = `
                         <li>
