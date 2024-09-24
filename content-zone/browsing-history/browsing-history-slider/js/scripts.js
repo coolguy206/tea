@@ -49,13 +49,15 @@ $(document).ready(function () {
 
           if (val.pdpURL !== undefined) {
 
+            var urlParams = `?utm_campaign=recently_viewed&utm_medium=recently_viewed&utm_source=recently_viewed`;
+
             var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv browsing-history ${val.pdpName}">Quick View</span>`;
 
             var elem = `
                         <li>
                             <div class="thumb-grid item">
                                 <span class="img">
-                                    <a href="${val.pdpURL}"
+                                    <a href="${val.pdpURL}${urlParams}"
                                         data-hash="" class="browsing-history ${val.pdpName}">
                                         <img class="image" src="${val.pdpImgURL}" alt="${val.pdpName}" width="500" height="500">
                                     </a>
@@ -63,7 +65,7 @@ $(document).ready(function () {
                                 </span>
                                 <div class="thumb-content">
                                     <a class="name browsing-history"
-                                        href="${val.pdpURL}"
+                                        href="${val.pdpURL}${urlParams}"
                                         data-hash="">
                                         <span class="model">${val.pdpName}</span>
                                     </a>
