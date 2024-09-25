@@ -31,6 +31,8 @@ var elem = (url, imgSrc, title, color, price, strike, promoClass, sizesStr, size
                     Sizes ${sizesArr[0]} to ${sizesArr[sizesArr.length - 1]}
                 </span>
             </p>
+
+            include "red-text.html"
             ${redText}
 
         </div>
