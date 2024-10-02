@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/0923/v0/`;
+var category = `promos/one-offs/2024/0929/v0/`;
 // var category = `homepage/2024/0905/v1/`;
 // var category = `headers/2024/0905/v0/`;
 // var category = `landing-pages/carry-in-style/2024/0918/v1/`;
@@ -17,12 +17,12 @@ var category = `promos/one-offs/2024/0923/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/0923/site/mega/`;
+var readFilePath = `Site/0929/Site/`;
 // var readFilePath = `handoff/headers/0805/Category Headers & Visual Nav/Playwear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0923/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/0923/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/0929/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/sweeps/carry-in-style/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/0905/`;
