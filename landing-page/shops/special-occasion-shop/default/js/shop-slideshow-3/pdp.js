@@ -1,12 +1,12 @@
 const pdps = [
-    `https://www.teacollection.com/product/24m93101/adult-tunic-dress.html#kalavathi%20blockprint`,
-    `https://www.teacollection.com/product/24s23102/striped-button-up-woven-shirt.html#bay%20leaf`,
-    `https://www.teacollection.com/product/24s23202/twill-sport-shorts.html#nugget`,
-    `https://www.teacollection.com/product/24m13301/flutter-sleeve-smocked-dress.html#kalavathi%20blockprint`,
-    `https://www.teacollection.com/product/24s93301/adult-puff-sleeve-dress.html#leopard%20floral`,
-    `https://www.teacollection.com/product/24s33301/printed-empire-baby-dress-set.html#lilac%20breasted%20roller`,
-    `https://www.teacollection.com/product/24s43500/buttoned-baby-romper.html#bay%20leaf`,
-    `https://www.teacollection.com/product/24m33500/peek-a-boo-back-baby-romper.html#kalavathi%20blockprint`
+    // { url: `https://www.teacollection.com/product/24w11101/sparkle-cardigan.html#pineneedle`, num: 1 },
+    // { url: `https://www.teacollection.com/product/24w13303/puff-sleeve-collar-dress.html#salma%20floral`, num: 2 },
+    // { url: `https://www.teacollection.com/product/24w23102/flannel-button-up-shirt.html#anatolian%20plaid`, num: 3 },
+    // { url: `https://www.teacollection.com/product/24w12303/long-sleeve-wrap-neck-dress.html#turkish%20forest%20scene`, num: 4 },
+    // { url: `https://www.teacollection.com/product/24w22114/long-sleeve-striped-polo.html#bedford%20blue`, num: 5 },
+    // { url: `https://www.teacollection.com/product/24w23200/relaxed-twill-cargo-pants.html#indigo`, num: 6 },
+    { url: `https://www.teacollection.com/product/24w12304/velour-wrap-neck-dress.html#chestnut`, num: 7 },
+    { url: `https://www.teacollection.com/product/24w42500/long-sleeve-pocket-baby-romper.html#turkish%20forest%20scene`, num: 8 },
 ];
 
 exports.pdps = pdps;

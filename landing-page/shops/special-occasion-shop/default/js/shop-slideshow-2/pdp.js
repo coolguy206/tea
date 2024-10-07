@@ -1,12 +1,12 @@
 const pdps = [
-    `https://www.teacollection.com/product/24m23100/button-up-woven-shirt.html#limpopo%20bandana`,
-    `https://www.teacollection.com/product/24s13303/boat-neck-button-woven-dress.html#nairobi%20plaid`,
-    `https://www.teacollection.com/product/24s13302/hi-lo.html#suma%20bouquet`,
-    `https://www.teacollection.com/product/24s93100/adult-button-up-woven-shirt.html#lamu%20plaid`,
-    `https://www.teacollection.com/product/24s93100/adult-button-up-woven-shirt.html#nairobi%20plaid`,
-    `https://www.teacollection.com/product/24s23201/ripstop-cargo-shorts.html#triumph`,
-    `https://www.teacollection.com/product/24s93300/adult-wrap-dress.html#suma%20bouquet`,
-    `https://www.teacollection.com/product/24m93100/adult-button-up-woven-shirt.html#limpopo%20bandana`,
+    // { url: `https://www.teacollection.com/product/24w13304/metallic-balloon-skirted-dress.html#metallic%20gold`, num: 1 },
+    // { url: `https://www.teacollection.com/product/24w23101/printed-button-up-shirt.html#dragon%20floral`, num: 2 },
+    // { url: `https://www.teacollection.com/product/24w23201/timeless-stretch-twill-pants.html#cappuccino`, num: 3 },
+    // { url: `https://www.teacollection.com/product/24w12304/velour-wrap-neck-dress.html#bedford%20blue`, num: 4 },
+    // { url: `https://www.teacollection.com/product/24w13400/metallic-bomber-jacket.html#metallic%20gold`, num: 5 },
+    // { url: `https://www.teacollection.com/product/24w13302/ruffle-sleeve-dress.html#dragon%20floral`, num: 6 },
+    { url: `https://www.teacollection.com/product/24w21100/dragon-sweater.html#evren%20dragon`, num: 7 },
+    { url: `https://www.teacollection.com/product/24w12319/velour-ballet-dress.html#pineneedle`, num: 8 },
 ];
 
 exports.pdps = pdps;
