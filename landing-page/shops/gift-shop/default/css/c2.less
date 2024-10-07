@@ -6,84 +6,52 @@
 @c2-cta-background: #608A8A;
 
 .c2 {
-  @media screen and (max-width: 430px) {}
+  @media screen and (max-width: 1679px) {
+    padding: 4vw 0;
+  }
+
+  @media screen and (max-width: 430px) {
+    padding: 8vw 0;
+  }
 
   position: relative;
+  display: block !important;
+  padding: 60px 0;
 
-  .the-content {
+  h2 {
+    @media screen and (max-width: 1679px) {
+      font-size: 3.5vw;
+    }
+
     @media screen and (max-width: 430px) {
-      width: 100%;
-      top: 5%;
-      left: 0;
-      text-align: center;
+      font-size: 9vw;
     }
 
-    position: absolute;
-    left: 5%;
-    top: 32%;
+    font-family: @souv;
+    font-size: 54px;
+    color: @c2-h2-font-color;
+    text-align: center;
+  }
 
-    h3 {
-      @media screen and (max-width: 1679px) {
-        font-size: 1.1vw;
-      }
-      @media screen and (max-width: 430px) {
-        font-size: 4vw;
-      }
-
-      font-family: @gilroyb;
-      color: @c2-h3-font-color;
-      font-size: 18px;
-      letter-spacing: 4px;
-      margin: 0;
-      text-transform: uppercase;
+  div {
+    @media screen and (max-width: 430px) {
+      flex-wrap: wrap;
     }
 
-    h2 {
-      @media screen and (max-width: 1679px) {
-        font-size: 5vw;
-        margin: 1vw 0 2vw;
-      }
-      @media screen and (max-width: 430px) {
-        font-size: 9vw;
-        text-align: center;
-      }
-
-      font-family: @souv;
-      color: @c2-h2-font-color;
-      font-size: 80px;
-      text-align: left;
-      margin: 20px 0 40px;
-    }
-
-    p {
-      @media screen and (max-width: 1679px) {
-        font-size: 1.3vw;
-        line-height: 2vw;
-      }
-      @media screen and (max-width: 430px) {
-        display: none;
-      }
-
-      font-family: @souv;
-      color: @c2-font-color;
-      font-size: 22px;
-      line-height: 33px;
-      margin: 0 0 20px;
-      text-align:left;
-    }
+    display: flex;
 
     a {
-      @media screen and (max-width: 1679px) {
-        width: 13.5vw;
-      }
       @media screen and (max-width: 430px) {
-        width: 48vw;
+        flex-basis: 50%;
       }
 
-      color: @c2-cta-color;
-      background-color: @c2-cta-background;
-      width: 226px;
+      text-align: center;
+
+      span {
+        color: @c2-font-color;
+      }
     }
   }
+
 
 }

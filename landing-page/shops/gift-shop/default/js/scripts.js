@@ -20,21 +20,21 @@ $(document).ready(function () {
     }
   }).mount();
 
-  new Glide('.c2 .glide', {
+  new Glide('.shop-slideshow-2 .glide', {
     type: 'carousel',
-    autoplay: 5000,
+    // autoplay: 500,
     animationDuration: 500,
-    perView: 1,
+    perView: 5,
     hoverpause: true,
     gap: 0,
-    // breakpoints: {
-    //   431: {
-    //     perView: 2,
-    //     perSwipe: '|',
-    //   },
-    // }
+    breakpoints: {
+      431: {
+        perView: 2,
+        perSwipe: '|',
+      },
+    }
   }).mount();
 
-  inview('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8');
+  inview('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8, .content-wrap .shop-slideshow-2, .content-wrap .shop-slideshow');
 
 });

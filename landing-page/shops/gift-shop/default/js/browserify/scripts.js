@@ -5,30 +5,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.inview = void 0;
-
-var inview = function inview(elem) {
+var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
   $(elem).on('inview', function (event, isInView) {
     if (isInView) {
       // element is now visible in the viewport
       // console.log('in view');
-      var imgs = $(this).find('img'); // let width = $(window).width();
+      var imgs = $(this).find('img');
+      // let width = $(window).width();
       // console.log(imgs);
       // console.log(width);
-
       $.each(imgs, function (i, val) {
-        var src = $(val).attr('data-set'); // console.log(src);
-
+        var src = $(val).attr('data-set');
+        // console.log(src);
         if (src) {
           $(val).attr('src', src);
         }
-
         $(val).removeAttr('data-set');
       });
       $(this).css('visibility', 'visible');
     }
   });
-}; // module.exports = function(elem) {
+};
+
+// module.exports = function(elem) {
 //   // console.log(`from inview.js`);
 //   $(elem).on('inview', function(event, isInView) {
 //     if (isInView) {
@@ -51,18 +51,12 @@ var inview = function inview(elem) {
 // };
 
 
-exports.inview = inview;
-
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
-
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
-
 $(document).ready(function () {
   new _glide["default"]('.shop-slideshow .glide', {
     type: 'carousel',
@@ -78,21 +72,21 @@ $(document).ready(function () {
       }
     }
   }).mount();
-  new _glide["default"]('.c2 .glide', {
+  new _glide["default"]('.shop-slideshow-2 .glide', {
     type: 'carousel',
-    autoplay: 5000,
+    // autoplay: 500,
     animationDuration: 500,
-    perView: 1,
+    perView: 5,
     hoverpause: true,
-    gap: 0 // breakpoints: {
-    //   431: {
-    //     perView: 2,
-    //     perSwipe: '|',
-    //   },
-    // }
-
+    gap: 0,
+    breakpoints: {
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
   }).mount();
-  (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8');
+  (0, _inview.inview)('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3, .content-wrap .c4, .content-wrap .c5, .content-wrap .c6, .content-wrap .c7, .content-wrap .c8, .content-wrap .shop-slideshow-2, .content-wrap .shop-slideshow');
 });
 
 
