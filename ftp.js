@@ -10,7 +10,7 @@ var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/0929/v0/`;
 // var category = `homepage/2024/1003/v0/`;
 // var category = `headers/2024/1003/v0/`;
-var category = `landing-pages/gift-shop/2024/1003/v0/`;
+var category = `landing-pages/dresses-shop/2024/1003/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
@@ -18,13 +18,13 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/1003/04 Handoff/headers/Sparkle/`;
-var readFilePath = `handoff/landing-pages/gift-guide/1003/Handoff/`;
+var readFilePath = `handoff/landing-pages/dresses/1003/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/0923/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/0929/`;
 // var writeFilePath = `promos/headers/dev/images/promo/sparkle/`;
-var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1003/`;
+var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/1003/`;
 // var writeFilePath = `homepage/default/dev/images/1003/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
