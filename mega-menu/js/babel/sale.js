@@ -38,8 +38,8 @@ $(document).ready(function () {
     $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-sale').hover(function () {
-    $('.promo1-url').hide();
-    // $('.promo1-url').show();
+    // $('.promo1-url').hide();
+    $('.promo1-url').show();
     // $('.promo2-url').show();
     $('.promo3-url').show();
     // $('.clearance-url').show();

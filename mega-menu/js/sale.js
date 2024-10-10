@@ -47,8 +47,8 @@ $(document).ready(function () {
   });
 
   $('.dept-sale').hover(function () {
-    $('.promo1-url').hide();
-    // $('.promo1-url').show();
+    // $('.promo1-url').hide();
+    $('.promo1-url').show();
     // $('.promo2-url').show();
     $('.promo3-url').show();
     // $('.clearance-url').show();
