@@ -1,0 +1,163 @@
+.browsing-history {
+  background: #fff;
+  opacity: 0;
+  transition: all 1s;
+  position: relative;
+}
+
+.browsing-history .a {
+  width: 180px;
+  height: 45px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  position: relative;
+}
+
+@media screen and (max-width:1679px) {
+  .browsing-history .a {
+    width: 10.7vw;
+    height: 2.7vw;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history .a {
+    width: 43.5vw;
+    height: 7vw;
+    padding: 0;
+  }
+}
+
+.browsing-history .glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.browsing-history .glide * {
+  box-sizing: inherit;
+}
+
+.browsing-history .glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.browsing-history .glide {
+  position: unset;
+}
+
+.browsing-history .glide div[data-glide-el="controls"] span {
+  position: absolute;
+  top: 50%;
+  transform: translate(0, -50%);
+  width: 20px;
+}
+
+@media screen and (max-width:1679px) {
+  .browsing-history .glide div[data-glide-el="controls"] span {
+    width: 1.2vw;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history .glide div[data-glide-el="controls"] span {
+    width: 5vw;
+  }
+}
+
+.browsing-history .glide div[data-glide-el="controls"] span:hover {
+  cursor: pointer;
+}
+
+.browsing-history img {
+  display: block;
+}
+
+.browsing-history span:hover {
+  cursor: pointer;
+}
+
+.browsing-history li {
+  position: relative;
+}
+
+.browsing-history .thumb-grid.item {
+  width: 100%;
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history .thumb-grid.item .thumb-content {
+    display: inline-block;
+    left: 50%;
+    position: relative;
+    transform: translate(-50%, 0);
+  }
+}
+
+@media screen and (max-width:835px) {
+  .browsing-history .thumb-grid.item .img .js-qv {
+    display: block;
+    opacity: 1;
+    position: relative;
+  }
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history .thumb-grid.item .img .js-qv {
+    display: none;
+  }
+}
+
+.browsing-history .thumb-grid.item .price-wrap #store_price {
+  display: inline;
+}
+
+.browsing-history .thumb-grid.item .size {
+  text-align: left;
+}
+
+.browsing-history .thumb-grid.item .size .thumb-sizes {
+  display: block;
+}
+
+.browsing-history .thumb-grid.item .promo-teaser-thumb {
+  white-space: wrap;
+  display: inline;
+}
+
+.browsing-history .glide {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:430px) {
+  .browsing-history div[data-glide-el="controls"] {
+    display: none;
+  }
+}
+
+.browsing-history .thumb-grid.item {
+  width: 100%;
+  padding: 0;
+}
+
+.browsing-history .width-300 {
+  justify-content: center;
+}
+
+.browsing-history .width-300 li {
+  width: 300px;
+}
+
+@media screen and (max-width:1679px) {
+  .browsing-history .width-300 li {
+    width: 18vw;
+  }
+}
+
+.browsing-history .width-300 li .thumb-grid.item {
+  padding: 0;
+}
