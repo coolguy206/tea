@@ -1,0 +1,68 @@
+@promo2Bg: #788B89;
+@promo2Color1: #3E454A;
+@promo2Color2: #DBEC8E;
+@promo2Color3: #3E454A;
+
+
+&.promo2 {
+    background: @promo2Bg;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color1;
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color2;
+            // text-decoration: underline;
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color3;
+            // text-decoration:underline;
+        }
+
+        &.shop-now {
+            i {
+                color: @promo2Color2;
+            }
+        }
+
+        &.details {
+            @media screen and (max-width:430px) {
+                top: 78%;
+            }
+
+            a {
+                color: @promo2Color3;
+            }
+        }
+    }
+}
