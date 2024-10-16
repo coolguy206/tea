@@ -1,6 +1,6 @@
 @import "../var.less";
 @promo3-background: #F9EBE5;
-@promo3-h2-color: #006684;
+@promo3-h2-color: #fff;
 @promo3-h2-color-430: @promo3-h2-color;
 @promo3-h3-color: #fff;
 @promo3-h3-color-430: @promo3-h3-color;
@@ -8,8 +8,8 @@
 @promo3-h4-color-430: @promo3-h4-color;
 @promo3-font-color: #fff;
 @promo3-p-color: #fff;
-@promo3-cta1-color: #fff;
-@promo3-cta1-background: @promo3-h2-color;
+@promo3-cta1-color: #47363D;
+@promo3-cta1-background: #fff;
 @promo3-cta2-color: @promo3-cta1-color;
 @promo3-cta2-background: #4261A6;
 @promo3-cta3-color: @promo3-cta1-color;
@@ -76,7 +76,7 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 72%;
+        top: 17%;
         // position: relative;
         width: 100%;
         // left: 0;
@@ -85,7 +85,7 @@
       }
 
       position: absolute;
-      top: 76%;
+      top: 15%;
       transform: translate(-50%, 0%);
       width: 90%;
       left: 50%;
@@ -134,29 +134,42 @@
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 2.4vw;
-          line-height: 3vw;
-          margin: 0 0 3vw;
-          letter-spacing: .5vw;
+          // font-size: 2.4vw;
+          // line-height: 3vw;
+          // margin: 0 0 3vw;
+          // letter-spacing: .5vw;
+
+          font-size: 1.1vw;
+          margin: 0 0 6vw;
+          letter-spacing: .3vw;
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 5vw;
-          line-height: 7vw;
-          margin: 0 0 6vw;
+          // font-size: 5vw;
+          // line-height: 7vw;
+          // margin: 0 0 6vw;
           color: @promo3-h3-color-430;
           text-align: center;
-          letter-spacing: .8vw;
+          // letter-spacing: .8vw;
+
+          margin:0 0 32vw;
+          letter-spacing: .7vw;
+          font-size: 4.5vw;
         }
 
-        font-size: 40px;
-        line-height: normal;
-        text-align: center;
-        text-transform: uppercase;
-        font-family: @gilroybl;
-        color: @promo3-h3-color;
+        // font-size: 40px;
+        // line-height: normal;
+        // text-align: center;
+        // text-transform: uppercase;
+        // font-family: @gilroybl;
+        // color: @promo3-h3-color;
         margin: 0 0 100px;
-        letter-spacing: 8px;
+        // letter-spacing: 8px;
+
+        font-size: 20px;
+        letter-spacing: 4px;
+        text-transform: uppercase;
+        font-family: @gilroyb;
       }
 
       h4 {
@@ -241,6 +254,10 @@
           column-gap: 4vw;
           justify-content: center;
           flex-wrap: wrap;
+
+          position: relative;
+          top: 0;
+          left: 0;
         }
 
         display: flex;
@@ -250,6 +267,10 @@
         justify-content: center;
         // width: 80%;
         margin: 0 auto;
+
+        position: absolute;
+        top: 85%;
+        left: 74%;
 
 
         a {

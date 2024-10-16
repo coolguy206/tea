@@ -20,8 +20,14 @@
     }
 
     h2 {
+        @media screen and (max-width: 430px) {
+            font-size: 12vw !important;
+            line-height: 13vw !important;
+        }
+
         color: @c1-3-h2-color;
         text-align: center;
+        font-family: @c1-3-h2-font-family;
     }
 
     p {
@@ -51,7 +57,7 @@
 
     div {
         @media screen and (max-width: 430px) {
-            top: 158vw;
+            top: @c1-3-top-431;
         }
 
         a {

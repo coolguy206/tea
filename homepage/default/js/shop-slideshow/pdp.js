@@ -1,15 +1,15 @@
 const pdps = [
 
-    { url: `https://www.teacollection.com/product/24f12301/long-sleeve-twirl-dress.html#turkish%20coastal%20floral`, num: 1 },
-    { url: `https://www.teacollection.com/product/24f12112/marbled-apple-graphic-tee.html#parkside`, num: 2 },
-    // { url: `https://www.teacollection.com/product/24f12210/flare-for-fun-pocket-pants.html#cassis`, num: 3 },
-    // { url: `https://www.teacollection.com/product/24f22114/boji-train-graphic-tee.html#blue%20yarrow`, num: 4 },
-    // { url: `https://www.teacollection.com/product/24f22203/playwear-pants.html#raw%20umber`, num: 5 },
-    // { url: `https://www.teacollection.com/product/24f22119/long-sleeve-printed-pocket-tee.html#school%20of%20anchovies`, num: 6 },
-    // { url: `https://www.teacollection.com/product/24f23200/timeless-stretch-twill-pants.html#silver%20pine`, num: 7 },
-    // { url: `https://www.teacollection.com/product/24f12306/long-sleeve-pocket-dress.html#squabble%20of%20seagulls`, num: 8 },
-    // { url: `https://www.teacollection.com/product/24f32301/mighty-mini-baby-dress.html#school%20of%20anchovies`, num: 9 },
-    // { url: `https://www.teacollection.com/product/24f42507/long-sleeve-pocket-baby-romper.html#squabble%20of%20seagulls`, num: 10 },
+    // { url: `https://www.teacollection.com/product/24w12304/velour-wrap-neck-dress.html#bedford%20blue`, num: 1 },
+    // { url: `https://www.teacollection.com/product/24w12104/decorated-deer-graphic-tee.html#desert%20sand`, num: 2 },
+    // { url: `https://www.teacollection.com/product/24w12216/very-velour-flare-pants.html#cosmic%20berry`, num: 3 },
+    // { url: `https://www.teacollection.com/product/24w22107/t-rex-mountains-graphic-tee.html#coronet%20blue`, num: 4 },
+    { url: `https://www.teacollection.com/product/24w23200/relaxed-twill-cargo-pants.html#indigo`, num: 5 },
+    // { url: `https://www.teacollection.com/product/24w11100/unicorn-cardigan.html#unicorn%20frolic`, num: 6 },
+    // { url: `https://www.teacollection.com/product/24w12307/tiered-tulle-sparkle-dress.html#shimmer%20sky`, num: 7 },
+    // { url: `https://www.teacollection.com/product/24w21100/dragon-sweater.html#evren%20dragon`, num: 8 },
+    // { url: `https://www.teacollection.com/product/24w42101/moose-bird-baby-graphic-tee.html#balsa%20wood`, num: 9 },
+    // { url: `https://www.teacollection.com/product/24w32500/ruffle-shoulder-baby-romper.html#iznik%20flora%20&%20fauna`, num: 10 },
 
 ];
 
