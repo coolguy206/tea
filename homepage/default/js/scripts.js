@@ -23,6 +23,8 @@ $(document).ready(function () {
   //   );
   // });
 
+  $('.hp .shop-slideshow').append($('.x-sliders'));
+
   new Glide('.c1 .glide', {
     type: 'carousel',
     autoplay: 4000,
@@ -43,20 +45,20 @@ $(document).ready(function () {
   //   gap: 0
   // }).mount();
 
-  new Glide('.shop-slideshow .glide', {
-    type: 'carousel',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
+  // new Glide('.shop-slideshow .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   // new Glide('.shop-slideshow2 .glide', {
   //   type: 'carousel',
