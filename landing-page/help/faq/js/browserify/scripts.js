@@ -8,7 +8,7 @@ $(document).ready(function () {
     section: 'general'
   }, {
     q: 'What’s the best way to wash Tea clothing?',
-    a: '<p>We always recommend following the washing instructions on the label of the Tea garment. Many of our clothes are 100% cotton, which we suggest washing in cold water with a low tumble dry setting. All of our clothes are pre-washed and pre-shrunk.</p><p><b>Please note:</b>We advise against using any detergents or stain removers that contain Oxiclean. The active agent in Oxiclean (Sodium Percarbonate) interacts with textiles, acting like a bleaching agent by removing dye. Time, sun exposure, and heat will further exacerbate the bleaching effect <span style="color: #f00;">causing color loss and holes</span>.</p>',
+    a: '<p>We always recommend following the washing instructions on the label of the Tea garment. Many of our clothes are 100% cotton, which we suggest washing in cold water with a low tumble dry setting. All of our clothes are pre-washed and pre-shrunk.</p><p><b>Please note:</b>We advise against using any detergents or stain removers that contain Oxiclean. The active agent in Oxiclean (Sodium Percarbonate) interacts with textiles, acting like a bleaching agent by removing dye. Time, sun exposure, and heat will further exacerbate the bleaching effect causing color loss and holes.</p>',
     section: 'general'
   }, {
     q: 'Do you ship internationally?',
