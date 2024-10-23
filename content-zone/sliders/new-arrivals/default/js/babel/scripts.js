@@ -16,11 +16,11 @@ $(document).ready(function () {
       type: 'slider',
       // autoplay: 4000,
       animationDuration: 500,
-      perView: 4,
+      perView: 5,
       hoverpause: true,
       gap: 0,
-      bound: true,
-      rewind: false,
+      // bound: true,
+      // rewind: false,
       breakpoints: {
         821: {
           perView: 3,
@@ -32,7 +32,8 @@ $(document).ready(function () {
         }
       }
     }).mount();
-    $('.new-arrivals-slider-container').hide();
+
+    // $('.new-arrivals-slider-container').hide();
   } else {
     //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
     // $('.new-arrivals-slider-container div[data-glide-el="controls"]').hide();

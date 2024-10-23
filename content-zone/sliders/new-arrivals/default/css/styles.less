@@ -1,8 +1,14 @@
 .new-arrivals-slider-container {
+    @media screen and (max-width: 1679px) {
+        margin: 2vw 0 0;
+    }
+
     background: #fff;
     opacity: 0;
+    display: none;
     transition: all 1s;
     position: relative;
+    margin: 40px 0 0;
 
     @import 'var.less';
     @import 'classes.less';
@@ -10,11 +16,11 @@
     @import 'shop-slideshow/shop-slideshow.less';
 
     .glide {
-        max-width: 1290px;
+        // max-width: 1290px;
         margin: 0 auto;
     }
 
-    div[data-glide-el="controls"]{
+    div[data-glide-el="controls"] {
         @media screen and (max-width:430px) {
             // display: none;
         }

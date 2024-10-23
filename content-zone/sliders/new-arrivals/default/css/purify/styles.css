@@ -1,8 +1,16 @@
 .new-arrivals-slider-container {
   background: #fff;
   opacity: 0;
+  display: none;
   transition: all 1s;
   position: relative;
+  margin: 40px 0 0;
+}
+
+@media screen and (max-width:1679px) {
+  .new-arrivals-slider-container {
+    margin: 2vw 0 0;
+  }
 }
 
 .new-arrivals-slider-container .glide {
@@ -29,7 +37,6 @@
 }
 
 .new-arrivals-slider-container .glide {
-  max-width: 1290px;
   margin: 0 auto;
 }
 
