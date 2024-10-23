@@ -12,6 +12,12 @@
   }
 }
 
+@media screen and (max-width:430px) {
+  .new-arrivals-slider-container {
+    margin: 8vw 0 0;
+  }
+}
+
 .new-arrivals-slider-container .glide {
   position: relative;
   width: 100%;
