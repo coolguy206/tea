@@ -32,7 +32,7 @@ $(document).ready(function () {
       }
     }).mount();
 
-    // $('.new-arrivals-slider-container').hide();
+    $('.new-arrivals-slider-container').hide();
 
   } else {
     //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300

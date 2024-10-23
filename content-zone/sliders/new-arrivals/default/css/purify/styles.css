@@ -1,7 +1,6 @@
 .new-arrivals-slider-container {
   background: #fff;
   opacity: 0;
-  display: none;
   transition: all 1s;
   position: relative;
   margin: 40px 0 0;
