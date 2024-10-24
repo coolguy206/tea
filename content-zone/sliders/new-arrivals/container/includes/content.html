@@ -1,0 +1,18 @@
+<div class="x-sliders">
+    <div class="the-gender">
+        <span class="a cta-border selected">Girl</span>
+        <span class="a cta-border">Boy</span>
+    </div>
+    {cms name="new-arrivals-slider-girl"}
+    {cms name="new-arrivals-slider-boy"}
+</div>
+
+{literal}
+<style>
+    .x-sliders{background:#fff;opacity:1;transition:all 1s;position:relative;margin:40px 0 0}.x-sliders .cta-no-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:28px;letter-spacing:.2em}@media screen and (max-width:1679px){.x-sliders .cta-no-border{font-size:.9vw}}@media screen and (max-width:810px){.x-sliders .cta-no-border{padding:0;line-height:2vw}}@media screen and (max-width:430px){.x-sliders .cta-no-border{font-size:3vw;line-height:8vw}}.x-sliders .cta-no-border::after{content:'';border-bottom:2px solid;display:block;position:relative;bottom:1%}.x-sliders .cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.x-sliders .cta-border{font-size:.9vw}}@media screen and (max-width:430px){.x-sliders .cta-border{font-size:2.5vw}}@media screen and (max-width:430px){.x-sliders .desktop{display:none !important}}.x-sliders .mobile{display:none}@media screen and (max-width:430px){.x-sliders .mobile{display:block}}.x-sliders .a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.x-sliders .a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.x-sliders .a{width:43.5vw;height:7vw;padding:0}}.x-sliders h2{font-family:gilroy-regular;color:#4f4243;font-size:1.625rem;text-align:center;letter-spacing:4px;text-transform:uppercase;margin:20px 0}@media screen and (max-width:1679px){}@media screen and (max-width:430px){}@media screen and (max-width:320px){}.x-sliders .the-gender{display:flex;justify-content:center;column-gap:40px;margin:0 0 40px}.x-sliders .the-gender span{color:#4f4243}.x-sliders .the-gender span.selected{background:#4f4243;color:#fff}.x-sliders .the-gender span:hover{cursor:pointer;background:#4f4243;color:#fff}
+</style>
+
+<script>
+    !function(){function a(b,c,d){function e(g,h){if(!c[g]){if(!b[g]){var i="function"==typeof require&&require;if(!h&&i)return i(g,!0);if(f)return f(g,!0);var j=new Error("Cannot find module '"+g+"'");throw j.code="MODULE_NOT_FOUND",j}var k=c[g]={exports:{}};b[g][0].call(k.exports,function(a){var c=b[g][1][a];return e(c||a)},k,k.exports,a,b,c,d)}return c[g].exports}for(var f="function"==typeof require&&require,g=0;g<d.length;g++)e(d[g]);return e}return a}()({1:[function(a,b,c){"use strict";$(document).ready(function(){$(".new-arrivals-slider.boy").hide(),$(".the-gender span").on("click",function(){var a=$(this).text().toLowerCase();$(".the-gender span").removeClass("selected"),"girl"==a?($(".new-arrivals-slider.girl").show(),$(this).addClass("selected"),$(".new-arrivals-slider.boy").hide()):($(".new-arrivals-slider.girl").hide(),$(".new-arrivals-slider.boy").show(),$(this).addClass("selected"))})})},{}]},{},[1]);
+</script>
+{/literal}

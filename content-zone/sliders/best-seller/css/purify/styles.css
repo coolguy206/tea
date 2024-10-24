@@ -1,0 +1,54 @@
+.best-sellers {
+  background: #fff;
+  opacity: 0;
+  transition: all 1s;
+  position: relative;
+}
+
+.best-sellers .glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.best-sellers .glide * {
+  box-sizing: inherit;
+}
+
+.best-sellers .glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.best-sellers .glide {
+  position: unset;
+}
+
+.best-sellers li {
+  position: relative;
+}
+
+.best-sellers .glide {
+  max-width: 1290px;
+  margin: 0 auto;
+}
+
+@media screen and (max-width:430px) {
+  .best-sellers div[data-glide-el="controls"] {
+    display: none;
+  }
+}
+
+.best-sellers .width-300 {
+  justify-content: center;
+}
+
+.best-sellers .width-300 li {
+  width: 300px;
+}
+
+@media screen and (max-width:1679px) {
+  .best-sellers .width-300 li {
+    width: 18vw;
+  }
+}
