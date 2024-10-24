@@ -19,6 +19,9 @@ $(document).ready(function () {
   //   );
   // });
 
+  $('.hp .shop-slideshow').append($('.new-arrivals-slider-container'));
+  $('.new-arrivals-slider-container').show();
+  $('.new-arrivals-slider-container').css('opacity', 1);
   new _glide["default"]('.c1 .glide', {
     type: 'carousel',
     // autoplay: 4000,
@@ -39,20 +42,20 @@ $(document).ready(function () {
   //   gap: 0
   // }).mount();
 
-  new _glide["default"]('.shop-slideshow .glide', {
-    type: 'carousel',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
+  // new Glide('.shop-slideshow .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   // new Glide('.shop-slideshow2 .glide', {
   //   type: 'carousel',
