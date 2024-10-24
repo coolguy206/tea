@@ -5,12 +5,10 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.jobs = void 0;
 var _accountExecutiveEast = require("./account-executive-east.js");
-// import {
-//   directorMarketing
-// } from './director-marketing.js';
+var _technicalDesigner = require("./technical-designer.js");
 // import {
 //   officeCoordinator
 // } from './office-coordinator.js';
 
-var jobs = exports.jobs = [_accountExecutiveEast.AccountExecutiveEast];
+var jobs = exports.jobs = [_accountExecutiveEast.AccountExecutiveEast, _technicalDesigner.TechnicalDesigner];
 //# sourceMappingURL=job-listing.js.map
