@@ -12,7 +12,7 @@ $(document).ready(function () {
   if ($('.new-arrivals-slider-container li').length >= 5) {
     // console.log(Glide);
     new Glide('.new-arrivals-slider-container .glide', {
-      type: 'slider',
+      type: 'carousel',
       // autoplay: 4000,
       animationDuration: 500,
       perView: 5,
