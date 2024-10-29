@@ -7,6 +7,21 @@ import {
 } from './tracking.js';
 import Glide from '@glidejs/glide'
 
+
+
+$(document).ajaxComplete(function (event, xhr, options) {
+  // console.log(event,xhr,options)
+  // ajaxCount = ajaxCount + 1;
+  // console.log(ajaxCount);
+
+  // if (ajaxCount == 2) {
+    $('.hp .shop-slideshow').append($('.the-sliders'));
+    // $('.the-sliders').clone().appendTo('.hp .shop-slideshow')
+    $('.the-sliders').show();
+    $('.the-sliders').css('opacity', 1);
+  // }
+});
+
 $(document).ready(function () {
 
   // if (window.innerWidth < 431) {
@@ -22,6 +37,11 @@ $(document).ready(function () {
   //     // event.strftime('%-D %H:%M:%S')
   //   );
   // });
+
+  // $('.hp .shop-slideshow').append($('.the-sliders'));
+  // $('.the-sliders').clone().appendTo('.hp .shop-slideshow')
+  // $('.the-sliders').show();
+  // $('.the-sliders').css('opacity', 1);
 
   new Glide('.c1 .glide', {
     type: 'carousel',
@@ -43,20 +63,20 @@ $(document).ready(function () {
   //   gap: 0
   // }).mount();
 
-  new Glide('.shop-slideshow .glide', {
-    type: 'carousel',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    breakpoints: {
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
+  // new Glide('.shop-slideshow .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   breakpoints: {
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   // new Glide('.shop-slideshow2 .glide', {
   //   type: 'carousel',

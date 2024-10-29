@@ -1,0 +1,47 @@
+.best-sellers {
+    background: #fff;
+    opacity: 0;
+    transition: all 1s;
+    position: relative;
+
+    @import 'var.less';
+    @import 'classes.less';
+    @import 'glide/glide.less';
+    @import 'shop-slideshow/shop-slideshow.less';
+
+    .glide {
+        max-width: 1290px;
+        margin: 0 auto;
+    }
+
+    div[data-glide-el="controls"]{
+        @media screen and (max-width:430px) {
+            display: none;
+        }
+
+    }
+
+
+    .thumb-grid.item {
+        width: 100%;
+        padding: 0;
+    }
+
+    .width-300 {
+        justify-content: center;
+
+        li {
+            @media screen and (max-width: 1679px) {
+                width: 18vw;
+                // margin: 0 2vw 0 0;
+            }
+
+            width: 300px;
+            // margin: 0 30px 0 0;
+
+            .thumb-grid.item {
+                padding: 0;
+            }
+        }
+    }
+}

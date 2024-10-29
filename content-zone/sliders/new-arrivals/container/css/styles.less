@@ -1,0 +1,70 @@
+.the-sliders {
+    background: #fff;
+    opacity: 1;
+    transition: all 1s;
+    position: relative;
+    margin: 40px 0 0;
+
+    @import 'var.less';
+    @import 'classes.less';
+
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            // font-size: 3.4vw;
+        }
+
+        @media screen and (max-width:430px) {
+            // font-size: 11vw;
+            // line-height: 11vw;
+            // font-size: 8vw;
+            // line-height: normal;
+            // margin: 0 0 6%;
+        }
+
+        @media screen and (max-width:320px) {
+            // font-size: 36px;
+        }
+
+        font-family: @gilroyr;
+        color: #4f4243;
+        font-size: 1.625rem;
+        text-align: center;
+        letter-spacing: 4px;
+        // line-height: 70px;
+        text-transform: uppercase;
+        margin: 20px 0;
+
+    }
+
+    .the-gender {
+        @media screen and (max-width: 430px) {
+            column-gap: 20px;
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        display: flex;
+        justify-content: center;
+        column-gap: 40px;
+        margin: 0 0 40px;
+
+        span {
+            color: #4f4243;
+            border: 1px solid;
+
+            &.selected {
+                background: #4f4243;
+                color: #fff;
+            }
+
+            &:hover {
+                cursor: pointer;
+                background: #4f4243;
+                color: #fff;
+            }
+        }
+    }
+
+
+}
