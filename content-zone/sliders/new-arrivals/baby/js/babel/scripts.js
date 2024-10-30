@@ -12,7 +12,7 @@ $(document).ready(function () {
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
   if ($('.new-arrivals-slider.baby li').length >= 5 || window.innerWidth < 431) {
     new _glide["default"]('.new-arrivals-slider.baby .glide', {
-      type: 'slider',
+      type: 'carousel',
       // autoplay: 4000,
       animationDuration: 500,
       perView: 5,
@@ -31,6 +31,8 @@ $(document).ready(function () {
         }
       }
     }).mount();
+
+    // $('.new-arrivals-slider.baby').hide();
   } else {
     //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
     $('.new-arrivals-slider.baby div[data-glide-el="controls"]').hide();

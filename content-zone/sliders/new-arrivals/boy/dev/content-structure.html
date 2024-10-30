@@ -20,7 +20,7 @@
 			                        </a>
 		                        {/if}
 
-                                <a href="{$cat.item->item_url()}" class="new-arrivals-slider boy {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+                                <a href="{$cat.item->item_url()}" class="new-arrivals-slider-boy {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
                                     <img src="{image size=thumb type=item id=$cat.sku}" alt="{$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
 
                                     {if $cat.thumb_wink_images[$id]}
@@ -39,7 +39,7 @@
 
                                 {*{if $cat.item->mas_new_arrival}<span class="new-item">New!</span>{/if}*}
 
-                                <a href="{$cat.item->item_url()}" class="name new-arrivals-slider boy">
+                                <a href="{$cat.item->item_url()}" class="name new-arrivals-slider-boy">
                                     {if $cat.applied_inventory_control == 'in_stock_email' && $cat.item->per_color_qty <= 0}
                                         {if $cat.badge == 'comingsoon'}
                                             <span class="comingsoon-item">{""|lang:"Coming Soon"}</span>

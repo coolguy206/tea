@@ -31,12 +31,6 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width:430px) {
-  .new-arrivals-slider div[data-glide-el="controls"] {
-    display: none;
-  }
-}
-
 .new-arrivals-slider .width-300 {
   justify-content: center;
 }
