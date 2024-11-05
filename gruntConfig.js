@@ -37,7 +37,7 @@ module.exports = {
     name: 'about/catalogs'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/new-arrivals/girl',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -50,7 +50,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
+    name: 'headers',
     ftp: {
       css: {
         src: 'default/css/',

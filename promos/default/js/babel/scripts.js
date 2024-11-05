@@ -55,16 +55,18 @@ jQuery(document).ready(function () {
     $.fancybox.close();
     $('.fancybox-container').hide();
   });
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2500,
-    onSliderLoad: function onSliderLoad() {
-      $('.promos.promo1, .promos.promo2').show();
-    }
-  });
+
+  // $('.promos-wrap').bxSlider({
+  //   auto: true,
+  //   autoHover: true,
+  //   mode: 'fade',
+  //   controls: false,
+  //   pager: false,
+  //   pause: 2500,
+
+  //   onSliderLoad: function () {
+  //     $('.promos.promo1, .promos.promo2').show();
+  //   }
+  // });
 });
 //# sourceMappingURL=scripts.js.map
