@@ -12,7 +12,7 @@ $(document).ready(function () {
 
   var links = $('.category-page .nav .side-nav ul li .links ul li a');
   links.map((i, val) => {
-    console.log($(val).text());
+    // console.log($(val).text());
     var str = $(val).text();
     if (str == `Warehouse Sale: Up to 75% Off `) {
       $(val).hide();
