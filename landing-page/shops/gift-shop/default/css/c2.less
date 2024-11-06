@@ -18,6 +18,21 @@
   display: block !important;
   padding: 60px 0;
 
+  p {
+    @media screen and (max-width: 430px) {
+      font-size: 4.5vw;
+      line-height: 6vw;
+      margin: 0 0 10vw;
+      display: block;
+    }
+
+    font-size: 22px;
+    line-height: 33px;
+    color: @c2-font-color;
+    font-family: @souv;
+    display: none;
+  }
+
   h2 {
     @media screen and (max-width: 1679px) {
       font-size: 3.5vw;

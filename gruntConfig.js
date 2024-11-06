@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'about/catalogs'
+    name: 'shops/gift-shop/default'
   },
   zone: {
     name: 'sliders/new-arrivals/girl',
