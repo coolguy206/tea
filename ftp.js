@@ -17,13 +17,13 @@ var category = `headers/2024/1107/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1107/03 Handoff/New-Arrivals/`;
+var readFilePath = `Site/1107/03 Handoff/Print-Shop/`;
 // var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/1025/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/1105/`;
-var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
+var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
 // var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
 // var writeFilePath = `homepage/default/dev/images/1107/`;
 // var writeFilePath = `mega-menu/dev/images/`;
