@@ -8,24 +8,24 @@ require('dotenv').config()
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/2024/1105/v1/`;
-// var category = `homepage/2024/1029/v0/`;
-// var category = `headers/2024/1003/v0/`;
-var category = `landing-pages/gift-shop/2024/1107/v0/`;
+// var category = `homepage/2024/1107/v0/`;
+var category = `headers/2024/1107/v0/`;
+// var category = `landing-pages/gift-shop/2024/1107/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-// var readFilePath = `Site/1105/04 Handoff/Site/`;
-var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
+var readFilePath = `Site/1107/03 Handoff/Print-Shop/`;
+// var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/1025/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/1105/`;
-// var writeFilePath = `promos/headers/dev/images/select-styles/`;
-var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
-// var writeFilePath = `homepage/default/dev/images/1029/`;
+var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+// var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
+// var writeFilePath = `homepage/default/dev/images/1107/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
