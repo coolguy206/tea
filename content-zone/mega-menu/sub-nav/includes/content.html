@@ -1,12 +1,14 @@
 {* desktop *}
 
-{*
+
 <div class="site-nav-submenu bf">
 	<div class="bar">
+		{*
 		<div>
 			<a href="/select-styles" data="mega menu">&#10024; Holiday Flash Sale &#10024;</a>
 			<span class="line"></span>
 		</div>
+		*}
 		<div>
 		  <a href="/black-friday/girl" data="mega menu black friday">GIRL</a>
 		  <span class="line"></span>
@@ -24,8 +26,10 @@
 		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
-
+		        
+		        {*
 		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        *}
 
 		        </ul>
 		      </ul>
@@ -56,7 +60,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="/boys-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        {*
+		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        *}
 
 		        </ul>
 		      </ul>
@@ -87,7 +93,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        <li><a href="/baby-girl-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        {*
+		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        *}
 
 		        </ul>
 		      </ul>
@@ -118,7 +126,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		            <li><a href="/baby-boy-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        {*
+		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        *}
 
 		        </ul>
 		      </ul>
@@ -131,51 +141,7 @@
 		  </div>
 		</div>
 
-		<div>
-		  <a href="/newborn-clothing" data="mega menu black friday">50% OFF NEWBORN</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-		        
-		        <li>Shop by Category</li>
-		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
-		        
-		        {sub_cats name="cat" category="black-friday/newborn"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-		        
-
-		        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mega menu black friday categories" >Rompers</a></li>
-
-		        <li><a href="/newborn-dresses" class="dresses menu bf" data="mega menu black friday categories" >Dresses</a></li>
-
-		        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf" data="mega menu black friday categories" >2-Piece Outfits</a></li>
-
-		        <li><a href="/newborn-accessories" class="accessories menu bf" data="mega menu black friday categories" >Accessories</a></li>
-
-		        <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf" data="mega menu black friday categories" >Bodysuits</a></li>
-
-		        <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_newborn"></div>
-		    </div>
-
-		  </div>
-		</div>
-
+		{*include "../black-friday/desktop/newborn.html"*}
 		<div>
 		  <a href="/black-friday/shop-all" data="mega menu black friday">SHOP ALL</a>
 		  <span class="line"></span>
@@ -194,7 +160,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
+		        {*
 		        <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+		        *}
 
 		        </ul>
 		      </ul>
@@ -210,7 +178,7 @@
 		
 	</div>
 </div>
-*}
+
 
 
 <div class="site-nav-submenu new-arrivals">
@@ -2043,11 +2011,13 @@
 {* mobile *}
 <div id="site-nav-mobile" class="site-nav-mobile">
 	<ul>
-		{*
+		
 		<li>
 			<h2 class="bf">Black Friday <span class="fas fa-plus"></span></h2>
 			<div class="sub">
+				{*
 				<h3><a href="/select-styles" data="mega menu">&#10024; Holiday Flash Sale &#10024;</a></h3>
+				*}
 				<h3 class="bf"><span class="fas fa-chevron-left"></span> GIRL <span class="fas fa-chevron-right"></span></h3>
 				<div class="links">
 				  <ul>
@@ -2056,8 +2026,10 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-
+				    *}
+				    
 				  </ul>
 
 				</div>
@@ -2070,8 +2042,10 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Boy':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/boys-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-
+				    *}
+				    
 				  </ul>
 
 				</div>
@@ -2084,8 +2058,10 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Baby Girl':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/baby-girl-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-
+				    *}
+				    
 				  </ul>
 
 				</div>
@@ -2098,7 +2074,9 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Baby Boy':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/baby-boy-clothes/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+				    *}
 
 				  </ul>
 
@@ -2112,7 +2090,9 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+				    *}
 
 				  </ul>
 
@@ -2126,37 +2106,15 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Boy':''}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+				    *}
 
 				  </ul>
 
 				</div>
 
-				<h3 class="bf"><span class="fas fa-chevron-left"></span> 50% OFF NEWBORN <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-
-				    {sub_cats name="cat" category="black-friday/newborn"}
-				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
-				    {/sub_cats}
-				    
-
-				    <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mobile mega menu black friday categories" >Rompers</a></li>
-
-				    <li><a href="/newborn-dresses" class="dresses menu bf" data="mobile mega menu black friday categories" >Dresses</a></li>
-
-				    <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf" data="mobile mega menu black friday categories" >2-Piece Outfits</a></li>
-
-				    <li><a href="/newborn-accessories" class="accessories menu bf" data="mobile mega menu black friday categories" >Accessories</a></li>
-
-				    <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf" data="mobile mega menu black friday categories" >Bodysuits</a></li>
-
-				    <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-
-				  </ul>
-
-				</div>
-
+				{*include "../black-friday/mobile/newborn-m.html"*}
 				<h3 class="bf"><span class="fas fa-chevron-left"></span> SHOP ALL <span class="fas fa-chevron-right"></span></h3>
 				<div class="links">
 				  <ul>
@@ -2165,7 +2123,9 @@
 				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories" >{$cat.title}</a></li>
 				    {/sub_cats}
 
+				    {*
 				    <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+				    *}
 
 				  </ul>
 
@@ -2174,7 +2134,7 @@
 
 			</div>
 		</li>
-		*}
+		
 
 
 		<li>

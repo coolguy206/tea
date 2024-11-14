@@ -1,11 +1,13 @@
-@promo1Bg:  #B23C46;
-@promo1Color1: #fff;
-@promo1Color2: #ECC05A;
+@import 'var.less';
+@promo1Bg:  #E493CD;
+@promo1Color1: #373A49;
+@promo1Color2: #fff;
 @promo1Color3: @promo1Color1;
 @promo1Details: #fff;
 
 &.promo1 {
     background: @promo1Bg;
+    display: none;
 
     span {
         &.first {
@@ -18,6 +20,7 @@
             }
 
             color: @promo1Color1;
+            font-family: @gilroybl;
 
             a {
                 color: @promo1Color1;
@@ -34,6 +37,7 @@
             }
 
             color: @promo1Color2;
+            font-family: @gilroybl;
             // text-decoration:underline;
 
             i {
@@ -56,6 +60,7 @@
             }
 
             color: @promo1Color3;
+            font-family: @gilroybl;
             // text-decoration:underline;
 
             a {
