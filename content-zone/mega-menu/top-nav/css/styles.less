@@ -1,58 +1,72 @@
+@bf-font-color: #E493CD !important;
+@sale-font-color: #C2D05E !important;
+@new-font-color: #58CCAD !important;
+@select-styles-font-color: #0088A2 !important;
+@warehouse-font-color: #FF1744 !important;
+@clearance-font-color: #FF1744 !important;
+
 .dept-bf {
 	a {
-		// color: #FF1744 !important;
-		color: #D05F9A !important;
+		color: @bf-font-color;
 	}
 
 	&.active {
 		.line {
-			// border-color: #FF1744 !important;
-			border-color: #D05F9A !important;
+			border-color: @bf-font-color;
 		}
 	}
 }
+
 
 .dept-warehouse {
 	a {
-		color: #FF1744 !important;
-		// color: #C1D065 !important;
+		color: @warehouse-font-color;
 	}
 
 	&.active {
 		.line {
-			border-color: #FF1744 !important;
-			// border-color: #C1D065 !important;
+			border-color: @warehouse-font-color;
 		}
 	}
 }
 
 
-.dept-clearance,
 .dept-sale {
 	a {
-		color: #FF1744 !important;
-		// color: #C1D065 !important;
+		color: @sale-font-color;
 	}
 
 	&.active,
 	&:hover {
 		.line {
-			border-color: #FF1744 !important;
-			// border-color: #C1D065 !important;
+			border-color: @sale-font-color;
 		}
 	}
 }
 
+
+.dept-clearance {
+	a {
+		color: @clearance-font-color
+	}
+
+	&.active,
+	&:hover {
+		.line {
+			border-color: @clearance-font-color;
+		}
+	}
+}
+
+
 .dept-new-arrivals {
 	a {
-		color: #436FC1 !important;
-		// color: #58CCAD !important;
+		color: @new-font-color;
 	}
 
 	&.active {
 		.line {
-			border-color: #436FC1 !important;
-			// border-color: #58CCAD !important;
+			border-color: @new-font-color;
 		}
 	}
 }
@@ -60,15 +74,13 @@
 
 .dept-select-styles {
 	a {
-		color: #0088A2 !important;
-		// color: #58CCAD !important;
+		color: @select-styles-font-color;
 	}
 
 	&.active,
 	&:hover {
 		.line {
-			border-color: #0088A2 !important;
-			// border-color: #58CCAD !important;
+			border-color: @select-styles-font-color;
 		}
 	}
 

@@ -1,21 +1,29 @@
 .dept-bf a {
-  color: #D05F9A !important;
+  color: #E493CD !important;
 }
 
 .dept-warehouse a {
   color: #FF1744 !important;
 }
 
-.dept-clearance a,.dept-sale a {
+.dept-sale a {
+  color: #C2D05E !important;
+}
+
+.dept-sale:hover .line {
+  border-color: #C2D05E !important;
+}
+
+.dept-clearance a {
   color: #FF1744 !important;
 }
 
-.dept-clearance:hover .line,.dept-sale:hover .line {
+.dept-clearance:hover .line {
   border-color: #FF1744 !important;
 }
 
 .dept-new-arrivals a {
-  color: #436FC1 !important;
+  color: #58CCAD !important;
 }
 
 .dept-select-styles a {

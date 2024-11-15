@@ -1,3 +1,6 @@
+@bf-header-background-color: #373A49;
+@bf-header-font-color: #E493CD;
+
 header.site-header {
   top: 0 !important;
 }
@@ -29,62 +32,62 @@ body.index header {
 
 body.index header {
   &.active .site-header-inner .nav .site-nav-links li a {
-    color: #47363d !important;
+    // color: #47363d !important;
   }
 
   &.fixed .site-header-inner .nav .site-nav-links li a {
-    color: #47363d !important;
+    // color: #47363d !important;
   }
 
   .site-header-inner .nav .site-nav-links li a {
-    color: #47363d !important;
+    // color: #47363d !important;
   }
 }
 
 
 //? BLACK FRIDAY EDIT
-// body.index header {
+body.index header {
 
-//   .site-header-inner .nav .site-nav-links li {
+  .site-header-inner .nav .site-nav-links li,  &.active .site-header-inner .nav .site-nav-links li {
 
-//     &.dept-bf {
-//       a {
-//         color: #E894CD !important;
-//       }
+    // &.dept-bf {
+    //   a {
+    //     color: @bf-header-font-color !important;
+    //   }
 
-//       &.active {
-//         .line {
-//           border-color: #E894CD !important;
-//         }
-//       }
-//     }
+    //   &.active {
+    //     .line {
+    //       border-color: @bf-header-font-color !important;
+    //     }
+    //   }
+    // }
 
-//     a {
-//       // color: #47363d !important;
-//       color: #fff !important;
-//     }
+    a {
+      // color: #47363d !important;
+      color: #fff;
+    }
 
-//   }
+  }
 
-//   &.fixed .site-header-inner .nav .site-nav-links li {
+  &.fixed .site-header-inner .nav .site-nav-links li {
 
-//     &.dept-bf {
-//       a {
-//         color: #D05F9A !important;
-//       }
+    // &.dept-bf {
+    //   a {
+    //     color: @bf-header-font-color !important;
+    //   }
 
-//       &.active {
-//         .line {
-//           border-color: #D05F9A !important;
-//         }
-//       }
-//     }
+    //   &.active {
+    //     .line {
+    //       border-color: @bf-header-font-color !important;
+    //     }
+    //   }
+    // }
 
-//     a {
-//       color: #47363d !important;
-//     }
-//   }
-// }
+    a {
+      color: #47363d;
+    }
+  }
+}
 
 
 //? BLACK FRIDAY EDIT
@@ -93,8 +96,8 @@ header .site-header-inner.homepage {
     height: auto;
   }
 
-  // background: #373A49;
-  // height: 160px;
+  background: @bf-header-background-color;
+  height: 160px;
 }
 
 
@@ -103,101 +106,103 @@ body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
 }
 
 //? TEA LOGO REGULAR
-header .site-header-inner .header-wrapper .logo .logo-placeholder {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
-  background-size: contain !important;
-}
+// header .site-header-inner .header-wrapper .logo .logo-placeholder {
+  // background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
+  // background-size: contain !important;
+// }
 
 //? TEA LOGO BLACK FRIDAY
-// body.index header {
-  // &.active .site-header-inner .logo .logo-placeholder {
-  //   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo_white.png") center no-repeat;
-  // }
+body.index header {
+  &.active .site-header-inner .logo .logo-placeholder {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo_white.png") center no-repeat;
+    background-size: contain !important;
+  }
 
-  // &.fixed .site-header-inner .logo .logo-placeholder {
-  //   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat;
-  // }
-// }
+  &.fixed .site-header-inner .logo .logo-placeholder {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat;
+    background-size: contain !important;
+  }
+}
 
 //? SEARCH ICON REGULAR
-header .site-header-inner .header-wrapper .header-actions .search-icon {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
-}
+// header .site-header-inner .header-wrapper .header-actions .search-icon {
+//   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
+// }
 
 //? SEARCH ICON BLACK FRIDAY
-// body.index header {
-//   &.active .site-header-inner .header-actions .search-icon {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search_white.png") no-repeat center center/contain;
-//   }
+body.index header {
+  &.active .site-header-inner .header-actions .search-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search_white.png") no-repeat center center/contain;
+  }
 
-//   &.fixed .site-header-inner .header-actions .search-icon {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain;
-//   }
-// }
+  &.fixed .site-header-inner .header-actions .search-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain;
+  }
+}
 
 //? MY ACCOUNT ICON REGULAR
-header .site-header-inner .header-wrapper .header-actions .my-account .my-account-icon {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
-}
+// header .site-header-inner .header-wrapper .header-actions .my-account .my-account-icon {
+//   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
+// }
 
 //? MY ACCOUNT ICON BLACK FRIDAY
-// body.index header {
-//   &.active .site-header-inner .header-actions .my-account .my-account-icon {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account_white.png") no-repeat center center/contain;
-//   }
+body.index header {
+  &.active .site-header-inner .header-actions .my-account .my-account-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account_white.png") no-repeat center center/contain;
+  }
 
-//   &.fixed .site-header-inner .header-actions .my-account .my-account-icon {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain;
-//   }
-// }
+  &.fixed .site-header-inner .header-actions .my-account .my-account-icon {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain;
+  }
+}
 
 //? SHOPPING CART ICON REGUALR
-header .site-header-inner .header-wrapper .header-actions .cart-toggle .shopping-cart {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
-}
+// header .site-header-inner .header-wrapper .header-actions .cart-toggle .shopping-cart {
+//   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
+// }
 
 //? SHOPPING CART BLACK FRIDAY
-// body.index header {
-//   &.active .site-header-inner .header-actions .cart-toggle .shopping-cart {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag_white.png") no-repeat center center/contain;
-//   }
+body.index header {
+  &.active .site-header-inner .header-actions .cart-toggle .shopping-cart {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag_white.png") no-repeat center center/contain;
+  }
 
-//   &.fixed .site-header-inner .header-actions .cart-toggle .shopping-cart {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain;
-//   }
-// }
+  &.fixed .site-header-inner .header-actions .cart-toggle .shopping-cart {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain;
+  }
+}
 
 //? FAVORITES ICON REGULAR
-header .site-header-inner .header-wrapper .header-actions .favorites {
-  background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat !important;
-}
+// header .site-header-inner .header-wrapper .header-actions .favorites {
+//   background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") center center/contain no-repeat !important;
+// }
 
 //? FAVORITES ICON BLACK FRIDAY
-// body.index header {
-//   &.active .favorites {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px-white.png") no-repeat center center/contain;
-//   }
+body.index header {
+  &.active .favorites {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px-white.png") no-repeat center center/contain;
+  }
 
-//   &.fixed .favorites {
-//     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") no-repeat center center/contain;
-//   }
-// }
-
-//? MOBILE NAV BARS REGULAR
-body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
-  background-color: #47363d !important;
+  &.fixed .favorites {
+    background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") no-repeat center center/contain;
+  }
 }
 
-//? MOBILE NAV BARS BLACK FRIDAY 
-// body.index header {
-//   &.active .site-header-inner .nav .nav-toggle .bars-wrap .bar {
-//     background-color: #fff !important;
-//   }
-
-//   &.fixed .site-header-inner .nav .nav-toggle .bars-wrap .bar {
-//     background-color: #47363d !important;
-//   }
+//? MOBILE NAV BARS REGULAR
+// body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+//   background-color: #47363d !important;
 // }
+
+//? MOBILE NAV BARS BLACK FRIDAY 
+body.index header {
+  &.active .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+    background-color: #fff !important;
+  }
+
+  &.fixed .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+    background-color: #47363d !important;
+  }
+}
 
 .thumb-grid .img .js-qv {
   @media screen and (max-width: 835px) {
