@@ -1,0 +1,78 @@
+@import 'var.less';
+@import 'classes.less';
+@red: #FF1744;
+@cta-leggings-color: #fff;
+@cta-leggings-background: #4A556B;
+@cta-tees-color: #fff;
+@cta-tees-background: #58CCAD;
+@cta-dresses-color: #fff;
+@cta-dresses-background: #E493CD;
+@cta-pants-color: #fff;
+@cta-pants-background: #363B48;
+@cta-pajamas-color: #fff;
+@cta-pajamas-background: #58718F;
+@cta-shop-all-color: #fff;
+@cta-shop-all-background: #C1D065;
+
+.container-black-friday {
+
+	div {
+		@media screen and (max-width: 430px) {}
+
+		a {
+			@media screen and (max-width: 1679px) {
+				width: 12vw;
+			}
+
+			@media screen and (max-width:430px) {
+				width: 43vw;
+				margin: 0 0 4vw;
+			}
+
+			color: @cta-leggings-color;
+			width: 201px;
+
+			&.cta-leggings {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta1-color;
+				background: @cta-leggings-background;
+			}
+
+			&.cta-tees {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta1-color;
+				background: @cta-tees-background;
+			}
+
+			&.cta-dresses {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta3-color;
+				background: @cta-dresses-background;
+			}
+
+			&.cta-pants {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta4-color;
+				background: @cta-pants-background;
+			}
+
+			&.cta-pajamas {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta4-color;
+				background: @cta-pajamas-background;
+			}
+
+			&.cta-shop-all {
+				@media screen and (max-width:430px) {}
+
+				// color: @cta5-color;
+				background: @cta-shop-all-background;
+			}
+		}
+	}
+}

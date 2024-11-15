@@ -1,0 +1,24 @@
+<div class="container-black-friday">
+
+    <div>
+        <a class="cta-border a cta1" href="/newborn-clothes/shop-by-category/rompers">rompers</a>
+        <a class="cta-border a cta2" href="/newborn-dresses">dresses</a>
+        <a class="cta-border a cta3" href="/newborn-clothes/shop-by-category/outfits">2-Piece Outfits</a>
+        <a class="cta-border a cta4" href="/newborn-clothes/newborn-accessories">accessories</a>
+        <a class="cta-border a cta5" href="/newborn-clothes/newborn-tops-and-bottoms">Bodysuits</a>
+    </div>
+
+</div>
+
+<style>
+    .container-black-friday{position:relative;visibility:hidden;padding:0 0 1vw}.container-black-friday div{display:flex;column-gap:20px}@media screen and (max-width:821px){.container-black-friday div{justify-content:center}}@media screen and (max-width:430px){.container-black-friday div{flex-wrap:wrap;column-gap:4%}}
+    /* include "../css/overrides.css" */
+    .the-grid{display:inline-grid;grid-template-columns:repeat(2, 1fr);grid-template-rows:repeat(2, 1fr);column-gap:6%;row-gap:20%;justify-content:center;justify-items:center}.cta-no-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:28px;letter-spacing:.2em}@media screen and (max-width:1679px){.cta-no-border{font-size:.9vw}}@media screen and (max-width:810px){.cta-no-border{padding:0;line-height:2vw}}@media screen and (max-width:430px){.cta-no-border{font-size:3vw;line-height:8vw}}.cta-no-border::after{content:'';border-bottom:2px solid;display:block;position:relative;bottom:1%}.cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.cta-border{font-size:.9vw}}@media screen and (max-width:430px){.cta-border{font-size:2.5vw}}@media screen and (max-width:430px){.desktop{display:none !important}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}.mobile-cta{display:none !important}@media screen and (max-width:430px){.mobile-cta{display:inline-flex !important}}.a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.a{width:43.5vw;height:7vw;padding:0}}.container-black-friday div a{color:#fff;width:201px}@media screen and (max-width:1679px){.container-black-friday div a{width:12vw}}@media screen and (max-width:430px){.container-black-friday div a{width:43vw;margin:0 0 4vw}}.container-black-friday div a.cta-leggings{background:#4A556B}.container-black-friday div a.cta-tees{background:#58CCAD}.container-black-friday div a.cta-dresses{background:#E493CD}.container-black-friday div a.cta-pants{background:#363B48}.container-black-friday div a.cta-pajamas{background:#58718F}.container-black-friday div a.cta-shop-all{background:#C1D065}
+</style>
+
+<!-- inview.js -->
+<script src="/mas_assets/media/tea_collection/js/jquery.inview.js"></script>
+
+<script>
+        !function(){return function i(n,e,r){function t(o,s){if(!e[o]){if(!n[o]){var c="function"==typeof require&&require;if(!s&&c)return c(o,!0);if(a)return a(o,!0);var u=new Error("Cannot find module '"+o+"'");throw u.code="MODULE_NOT_FOUND",u}var f=e[o]={exports:{}};n[o][0].call(f.exports,function(i){return t(n[o][1][i]||i)},f,f.exports,i,n,e,r)}return e[o].exports}for(var a="function"==typeof require&&require,o=0;o<r.length;o++)t(r[o]);return t}}()({1:[function(i,n,e){"use strict";Object.defineProperty(e,"__esModule",{value:!0}),e.inview=void 0;e.inview=function(i){$(i).on("inview",function(i,n){if(n){var e=$(this).find("img");$.each(e,function(i,n){var e=$(n).attr("data-set");e&&$(n).attr("src",e),$(n).removeAttr("data-set")}),$(this).css("visibility","visible")}})}},{}],2:[function(i,n,e){"use strict";var r=i("./inview.js");$(document).ready(function(){$(".shops h2").addClass("open"),$(".shops .links").css("display","block"),$(".shops h2 span").attr("class","fas fa-minus"),(0,r.inview)(".container-black-friday");var i=window.location.pathname.replace(/\//g,"-").replace("-","");$(".container-black-friday").addClass(i)})},{"./inview.js":1}]},{},[2]);
+</script>
