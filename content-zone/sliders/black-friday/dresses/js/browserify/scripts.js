@@ -10,7 +10,10 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 $(document).ready(function () {
   // $('.bf-slider.dresses').css('opacity', 1);
 
+  $($(".bf-slider.dresses .lgw-thumb")[6]).before($('.bf-slider.dresses .img-2'));
+
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
+
   if ($('.bf-slider.dresses li').length >= 5 || window.innerWidth < 431) {
     new _glide["default"]('.bf-slider.dresses .glide', {
       type: 'carousel',
