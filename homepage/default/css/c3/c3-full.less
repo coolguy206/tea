@@ -1,7 +1,7 @@
 @import "../var.less";
 @c3-font-color: #fff;
 @c3-cta-color: #fff;
-@c3-cta-background: #3B5F7A;
+@c3-cta-background: #373A49;
 
 
 .c3 {
@@ -18,8 +18,9 @@
     // flex-wrap: wrap;
     div {
         @media screen and (max-width:1679px) {
-            padding: 1vw;
+            // padding: 1vw;
         }
+
         @media screen and (max-width:430px) {
             padding: 0;
         }
@@ -37,32 +38,31 @@
 
         h2 {
             @media screen and (max-width: 1679px) {
-                font-size: 11vw;
-                // line-height: 4vw;
+              font-size: 3vw;
+              // line-height: 4vw;
             }
-
+    
             @media screen and (max-width:430px) {
-                font-size: 25vw;
-                color: @c3-cta-background;
-                // line-height: 10.5vw;
+              font-size: 7vw;
+              margin: 4vw 0;
             }
-
-            font-family: @kindnesss;
-            font-size: 180px;
-            text-transform: uppercase;
-            // line-height: normal;
-            // letter-spacing: 0.1rem;
+    
+            font-family: @gilroyb;
+            font-size: 50px;
+            line-height: normal;
+            letter-spacing: 10px;
             color: @c3-font-color;
-            margin: 0 0 12%;
-            // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-            // text-align:left;
-        }
+            margin: 1vw 0;
+            text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
+            text-align: center;
+            text-transform: uppercase;
+          }
 
         &.the-content {
             @media screen and (max-width: 430px) {
                 width: 100%;
                 // margin: 10% 0 0 !important;
-                top: 59%;
+                top: 76%;
             }
 
             margin: 0;
@@ -94,16 +94,17 @@
 
                 a {
                     @media screen and (max-width:1679px) {
-                        width: 19vw;
+                        width: 23vw;
                     }
 
                     @media screen and(max-width: 430px) {
-                        width: 55vw;
+                        width: 84vw;
                     }
 
                     background: @c3-cta-background;
-                    color: @c3-cta-color;   
-                    width: 323px;
+                    color: @c3-cta-color;
+                    // width: 323px;
+                    width: 380px;
                 }
             }
         }
