@@ -6,18 +6,21 @@
       {assign var=i value=0}
       <ul class="category first">
 
+        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
+
         {sub_cats name="cat" category="black-friday/girl"}
         {if $i && $i % 8 eq 0}
           </ul>
           <ul class="category">
             <li class="spacer">Spacer</li>
         {/if}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
+
+          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
         
         {*
-        <li><a href="/girls-clothing/favorites/limited-time-sale" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
+        <li><a href="/girls-clothing/favorites/limited-time-sale" class="" style="color: #A18CBA;">Holiday Flash Sale</a></li>
         *}
 
         </ul>
