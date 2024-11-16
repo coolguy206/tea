@@ -18,6 +18,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
     $('.hp .shop-slideshow').append($('.bf-slider.dresses'));
     $('.hp .shop-slideshow2').append($('.bf-slider.leggings'));
     $('.hp .shop-slideshow3').append($('.bf-slider.rompers'));
+    $('.hp .white-out').fadeOut();
 
     // var dressesImg1 = `<li><a href="/black-friday/shop-all/dresses "><img src="/mas_assets/media/tea_collection/promos/black-friday/2024/1120/hp/v0/Dresses-01.jpg"></a></li>`;
 
