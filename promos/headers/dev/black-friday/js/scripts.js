@@ -12,6 +12,9 @@ $(document).ready(function () {
 
   var url = window.location.pathname;
 
+  //? CHANGE THE COLOR OF THE SIDE NAV DROPDOWN
+  $('.category-page .nav .side-nav ul li h2.open')[0].style.color = '#D05F9A';
+
   /*
   //? ADD BLACK FRIDAY TO THE TITLE
   var title = $('.main-title').text();
