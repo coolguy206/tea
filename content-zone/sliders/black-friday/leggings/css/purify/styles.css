@@ -23,6 +23,10 @@
   position: unset;
 }
 
+.bf-slider img {
+  display: block;
+}
+
 .bf-slider li {
   position: relative;
 }
