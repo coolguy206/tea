@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/gift-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/black-friday/leggings',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -47,6 +47,7 @@ module.exports = {
         src: 'mega-menu/top-nav/js/jsmin/',
         dest: `content-zone/mega-menu/top-nav/2022/${date}/js/${version}/`,
       }
+
     },
   },
   promo: {
