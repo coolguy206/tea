@@ -51,7 +51,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
+    name: 'headers',
     ftp: {
       css: {
         src: 'default/css/',
