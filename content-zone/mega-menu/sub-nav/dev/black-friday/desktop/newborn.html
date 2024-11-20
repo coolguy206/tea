@@ -8,6 +8,8 @@
         
         <li>Shop by Category</li>
         <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
+
+        <li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
         
         {sub_cats name="cat" category="black-friday/newborn"}
         {if $i && $i % 8 eq 0}
@@ -15,20 +17,21 @@
           <ul class="category">
             <li class="spacer">Spacer</li>
         {/if}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
+
+          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
         {math equation="x + y" x=$i y=1 assign=i}
         {/sub_cats}
         
 
-        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf" data="mega menu black friday categories" >Rompers</a></li>
+        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers bf-font-color-mobile" data="mega menu black friday categories" >Rompers</a></li>
 
-        <li><a href="/newborn-dresses" class="dresses menu bf" data="mega menu black friday categories" >Dresses</a></li>
+        <li><a href="/newborn-dresses" class="dresses bf-font-color-mobile" data="mega menu black friday categories" >Dresses</a></li>
 
-        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf" data="mega menu black friday categories" >2-Piece Outfits</a></li>
+        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits bf-font-color-mobile" data="mega menu black friday categories" >2-Piece Outfits</a></li>
 
-        <li><a href="/newborn-accessories" class="accessories menu bf" data="mega menu black friday categories" >Accessories</a></li>
+        <li><a href="/newborn-accessories" class="accessories bf-font-color-mobile" data="mega menu black friday categories" >Accessories</a></li>
 
-        <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf" data="mega menu black friday categories" >Bodysuits</a></li>
+        <li><a href="/newborn-tops-and-bottoms" class="bodysuits bf-font-color-mobile" data="mega menu black friday categories" >Bodysuits</a></li>
 
         include "../holiday-flash-sale.html"
 

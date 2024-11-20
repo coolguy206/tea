@@ -4,13 +4,7 @@
     <li>Shop by Category</li>
   
     {* BLACK FRIDAY *}
-    {*
-    <li><a href="{$secure_html_url}black-friday/baby-girl" data="mobile mega menu black friday categories" class="bf">Black Friday</a></li>
-    {sub_cats name="cat" category="black-friday/baby-girl"}
-      <li><a href="{$cat.url}" class="{$cat.title|lower} bf" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
-    {/sub_cats}
-    *}
-
+    include "black-friday/baby-girl.html"
 
     {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories" >{$cat.title}</a></li>

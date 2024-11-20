@@ -1,0 +1,32 @@
+<div>
+  <a href="/black-friday/shop-all" data="mega menu black friday">SHOP ALL</a>
+  <span class="line"></span>
+  <div class="menu flex-menu">
+    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
+      {assign var=i value=0}
+      <ul class="category first">
+
+        {sub_cats name="cat" category="black-friday/shop-all"}
+        {if $i && $i % 8 eq 0}
+          </ul>
+          <ul class="category">
+            <li class="spacer">Spacer</li>
+        {/if}
+          <li><a href="{$cat.url}" class="{$cat.title|lower} menu bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title}</a></li>
+        {math equation="x + y" x=$i y=1 assign=i}
+        {/sub_cats}
+
+        {*
+        include "../holiday-flash-sale.html"
+        *}
+
+        </ul>
+      </ul>
+    </div>
+
+    <div class="panel panel-3" style="flex-basis: 100% !important">
+      <div class="da-rennab-zone" data-zone="mega_bf_all"></div>
+    </div>
+
+  </div>
+</div>

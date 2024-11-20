@@ -4,24 +4,10 @@
   <div class="menu flex-menu">
 
     {* BLACK FRIDAY *}
-    {*
-    <div class="panel panel-1">
-      {assign var=i value=0}
+    include "black-friday/boy.html"
 
-      <ul class="category">
-
-        <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf" >Black Friday</a></li>
-
-        {sub_cats name="cat" category="black-friday/boy"}
-          <li><a href="{$cat.url}" class="{$cat.title|lower} bf"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-        {/sub_cats}
-
-      </ul>
-    </div>
-    *}
-
-    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-    <div class="panel panel-1">
+    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
+    <div class="panel panel-2">
       {assign var=i value=0}
 
       <ul class="category first">

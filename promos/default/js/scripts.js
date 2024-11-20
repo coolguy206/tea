@@ -28,6 +28,8 @@ jQuery(document).ready(function () {
     // $('.header-banner').css('max-width', '100%');
     // $('.promos')[0].style.display = 'none'
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
+    $('.promos .the-promo.promo1').show();
+    $('.promos .the-promo.promo2').hide();
 
     if (window.innerWidth < 431) {
       // $(`.promos .the-promo`).css('height', '46px');
@@ -36,6 +38,9 @@ jQuery(document).ready(function () {
 
   } else {
     //? NOT HOME PAGE
+    $('.promos .the-promo.promo1').hide();
+    $('.promos .the-promo.promo2').show();
+
     if (window.innerWidth < 431) {
       $(`.promos .the-promo`).css('height', '100px');
     }

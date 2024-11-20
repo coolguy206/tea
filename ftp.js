@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/1110/v0/`;
+var category = `promos/black-friday/2024/1120/mega/v1/`;
 // var category = `homepage/2024/1107/v0/`;
 // var category = `headers/2024/1107/v0/`;
 // var category = `landing-pages/gift-shop/2024/1107/v0/`;
@@ -17,13 +17,13 @@ var category = `promos/one-offs/2024/1110/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1110/Site/mega/`;
+var readFilePath = `Site/1120/112024 Launch/visual-nav/baby-girl/`;
 // var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/1110/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/1110/`;
-// var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+// var writeFilePath = `promos/default/dev/images/homepage/black-friday/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/black-friday/`;
+// var writeFilePath = `promos/headers/dev/images/promo/black-friday/`;
 // var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
 // var writeFilePath = `homepage/default/dev/images/1107/`;
 // var writeFilePath = `mega-menu/dev/images/`;

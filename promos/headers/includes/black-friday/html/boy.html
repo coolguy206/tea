@@ -1,0 +1,25 @@
+<div class="container-black-friday">
+
+    <div>
+        <!-- <a class="cta-border a cta1" href="/black-friday/boy/10">shop $10</a> -->
+        <a class="cta-border a cta-tees" href="/black-friday/boy/tees-tops">$12+ tees & tops</a>
+        <a class="cta-border a cta-pants" href="/black-friday/boy/pants">$15+ pants</a>
+        <a class="cta-border a cta-pajamas" href="/black-friday/boy/pajamas">$34 pajamas</a>
+        <!-- <a class="cta-border a cta5" href="/black-friday/boy/20">$20 & up</a> -->
+        <a class="cta-border a cta-shop-all" href="/black-friday/boy/shop-all">shop all</a>
+    </div>
+
+</div>
+
+<style>
+    .container-black-friday{position:relative;visibility:hidden;padding:0 0 1vw}.container-black-friday div{display:flex;column-gap:20px}@media screen and (max-width:821px){.container-black-friday div{justify-content:center}}@media screen and (max-width:430px){.container-black-friday div{flex-wrap:wrap;column-gap:4%}}
+    .category-page .nav .side-nav ul li .links ul li a{color:#D05F9A}.category-page .nav .side-nav ul li .links ul li a.active::before{background:#D05F9A}.category-page .nav .side-nav ul li .links ul li a.active{color:#D05F9A}.category-page .nav .side-nav ul li .links ul li a:hover::before{background:#D05F9A}.category-page .nav .side-nav ul li .links ul li ul.sub li.active a{color:#D05F9A}.category-page .nav .side-nav ul li .links ul li ul.sub li.active a::before{background:#D05F9A}.category-page .content h1.main-title{text-transform:capitalize}@media screen and (max-width:430px){.site-content-bg-wrapper{padding:0 !important}}
+    .the-grid{display:inline-grid;grid-template-columns:repeat(2, 1fr);grid-template-rows:repeat(2, 1fr);column-gap:6%;row-gap:20%;justify-content:center;justify-items:center}.cta-no-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:28px;letter-spacing:.2em}@media screen and (max-width:1679px){.cta-no-border{font-size:.9vw}}@media screen and (max-width:810px){.cta-no-border{padding:0;line-height:2vw}}@media screen and (max-width:430px){.cta-no-border{font-size:3vw;line-height:8vw}}.cta-no-border::after{content:'';border-bottom:2px solid;display:block;position:relative;bottom:1%}.cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.cta-border{font-size:.9vw}}@media screen and (max-width:430px){.cta-border{font-size:2.5vw}}@media screen and (max-width:430px){.desktop{display:none !important}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}.mobile-cta{display:none !important}@media screen and (max-width:430px){.mobile-cta{display:inline-flex !important}}.a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.a{width:43.5vw;height:7vw;padding:0}}.container-black-friday div a{color:#fff;width:201px}@media screen and (max-width:1679px){.container-black-friday div a{width:12vw}}@media screen and (max-width:430px){.container-black-friday div a{width:43vw;margin:0 0 4vw}}.container-black-friday div a.cta-leggings,.container-black-friday div a.cta-rompers{background:#4A556B}.container-black-friday div a.cta-tees{background:#58CCAD}.container-black-friday div a.cta-dresses{background:#E493CD}.container-black-friday div a.cta-pants{background:#363B48}.container-black-friday div a.cta-pajamas{background:#58718F}.container-black-friday div a.cta-shop-all{background:#C1D065}
+</style>
+
+<!-- inview.js -->
+<script src="/mas_assets/media/tea_collection/js/jquery.inview.js"></script>
+
+<script>
+        !function(){return function e(i,n,r){function t(o,s){if(!n[o]){if(!i[o]){var c="function"==typeof require&&require;if(!s&&c)return c(o,!0);if(a)return a(o,!0);var u=new Error("Cannot find module '"+o+"'");throw u.code="MODULE_NOT_FOUND",u}var f=n[o]={exports:{}};i[o][0].call(f.exports,function(e){return t(i[o][1][e]||e)},f,f.exports,e,i,n,r)}return n[o].exports}for(var a="function"==typeof require&&require,o=0;o<r.length;o++)t(r[o]);return t}}()({1:[function(e,i,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.inview=void 0;n.inview=function(e){$(e).on("inview",function(e,i){if(i){var n=$(this).find("img");$.each(n,function(e,i){var n=$(i).attr("data-set");n&&$(i).attr("src",n),$(i).removeAttr("data-set")}),$(this).css("visibility","visible")}})}},{}],2:[function(e,i,n){"use strict";var r=e("./inview.js");$(document).ready(function(){$(".shops h2").addClass("open"),$(".shops .links").css("display","block"),$(".shops h2 span").attr("class","fas fa-minus"),(0,r.inview)(".container-black-friday");var e=window.location.pathname;$(".category-page .nav .side-nav ul li h2.open")[0].style.color="#D05F9A";var i=e.replace(/\//g,"-").replace("-","");$(".container-black-friday").addClass(i)})},{"./inview.js":1}]},{},[2]);
+</script>

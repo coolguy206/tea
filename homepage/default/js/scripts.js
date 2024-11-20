@@ -15,10 +15,21 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(ajaxCount);
 
   // if (ajaxCount == 2) {
-    $('.hp .shop-slideshow').append($('.the-sliders'));
+    $('.hp .shop-slideshow').append($('.bf-slider.dresses'));
+    $('.hp .shop-slideshow2').append($('.bf-slider.leggings'));
+    $('.hp .shop-slideshow3').append($('.bf-slider.rompers'));
+    $('.hp .white-out').fadeOut();
+
+    // var dressesImg1 = `<li><a href="/black-friday/shop-all/dresses "><img src="/mas_assets/media/tea_collection/promos/black-friday/2024/1120/hp/v0/Dresses-01.jpg"></a></li>`;
+
+    // var dressesImg2 = `<li><a href="/black-friday/shop-all/dresses "><img src="/mas_assets/media/tea_collection/promos/black-friday/2024/1120/hp/v0/Dresses-02.jpg"></a></li>`;
+
+    // $('.bf-slider.dresses .lgw-thumb.glide__slide--active').before(dressesImg1);
+    // $('.bf-slider.dresses .lgw-thumb.glide__slide--active').next().next().next().next().before(dressesImg2);
+
     // $('.the-sliders').clone().appendTo('.hp .shop-slideshow')
-    $('.the-sliders').show();
-    $('.the-sliders').css('opacity', 1);
+    // $('.the-sliders').show();
+    // $('.the-sliders').css('opacity', 1);
   // }
 });
 
@@ -43,16 +54,16 @@ $(document).ready(function () {
   // $('.the-sliders').show();
   // $('.the-sliders').css('opacity', 1);
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    // dragThreshold: false,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   // dragThreshold: false,
+  // }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
