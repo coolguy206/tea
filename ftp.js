@@ -7,7 +7,7 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/black-friday/2024/1127/mega/v0/`;
+var category = `promos/black-friday/2024/1127/headers/v0/`;
 // var category = `homepage/2024/1107/v0/`;
 // var category = `headers/2024/1107/v0/`;
 // var category = `landing-pages/gift-shop/2024/1107/v0/`;
@@ -17,13 +17,13 @@ var category = `promos/black-friday/2024/1127/mega/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1127/112724 Holiday Flash Sale/visual-nav/`;
+var readFilePath = `Site/1127/112724 Holiday Flash Sale/headers/`;
 // var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/black-friday/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/black-friday/`;
-// var writeFilePath = `promos/headers/dev/images/promo/black-friday/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/black-friday/`;
+var writeFilePath = `promos/headers/dev/images/promo/holiday-flash-sale/`;
 // var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
 // var writeFilePath = `homepage/default/dev/images/1107/`;
 // var writeFilePath = `mega-menu/dev/images/`;
@@ -306,7 +306,7 @@ c.on('ready', function () {
 //?CONNECT FTP
 
 c.connect({
-  host: process.env.FTP_SANDBOX_HOST,
-  user: process.env.FTP_SANDBOX_USER,
-  password: process.env.FTP_SANDBOX_PASSWORD
+  host: process.env.FTP_HOST,
+  user: process.env.FTP_USER,
+  password: process.env.FTP_PASSWORD
 });

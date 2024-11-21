@@ -1,6 +1,16 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.promo.date);
 
+var promosDest = ``;
+if (config.promo.js !== ``) {
+  promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/babel/`;
+  promosDest = `promos/${config.promo.name}/dev/${config.promo.js}/js/browserify/`;
+} else {
+  promosSrc =  `promos/${config.promo.name}/js/babel/`;
+  promosDest = `promos/${config.promo.name}/js/browserify/`;
+}
+// console.log(promosSrc, promosDest);
+
 module.exports = {
 
   hp: {
@@ -15,9 +25,9 @@ module.exports = {
   promos: {
     files: [{
       expand: true,
-      cwd: 'promos/' + config.promo.name + '/js/babel/',
+      cwd: promosSrc,
       src: '*.js',
-      dest: 'promos/' + config.promo.name + '/js/browserify/'
+      dest: promosDest
     }]
   },
 

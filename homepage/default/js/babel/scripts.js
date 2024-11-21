@@ -35,12 +35,11 @@ $(document).ready(function () {
   // 23:59:59
 
   //? COUNTDOWN.JS
-  // $("#countdown span").countdown("2024/07/07 23:59:59", function (event) {
-  //   $(this).text(
-  //     event.strftime('%-D days %H:%M:%S')
-  //     // event.strftime('%-D %H:%M:%S')
-  //   );
-  // });
+  $("#countdown span").countdown("2024/11/29 23:59:59", function (event) {
+    $(this).text(event.strftime('%-DD %HH %MM %SS')
+    // event.strftime('%-D %H:%M:%S')
+    );
+  });
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.the-sliders').clone().appendTo('.hp .shop-slideshow')

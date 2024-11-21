@@ -1,6 +1,16 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.promo.date);
 
+var promosDest = ``;
+if (config.promo.js !== ``) {
+  promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/`;
+  promosDest = `promos/${config.promo.name}/dev/${config.promo.js}/js/babel/`;
+} else {
+  promosSrc =  `promos/${config.promo.name}/js/`;
+  promosDest = `promos/${config.promo.name}/js/babel/`;
+}
+// console.log(promosSrc, promosDest);
+
 module.exports = {
 
   options: {
@@ -38,9 +48,9 @@ module.exports = {
   promos: {
     files: [{
       expand: true,
-      cwd: 'promos/' + config.promo.name + '/js/',
+      cwd: promosSrc,
       src: '*.js',
-      dest: 'promos/' + config.promo.name + '/js/babel/'
+      dest: promosDest
     }]
   },
 
