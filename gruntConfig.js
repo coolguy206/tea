@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/gift-shop/default'
   },
   zone: {
-    name: 'sliders/black-friday/dresses',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
