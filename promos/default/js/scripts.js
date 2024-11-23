@@ -16,6 +16,14 @@ jQuery(document).ready(function () {
 
   */
 
+  //? COUNTDOWN.JS
+  $(".the-promo.countdown-promo #countdown span").countdown("2024/11/29 23:59:59", function (event) {
+    $(this).text(
+      event.strftime('%-DD %HH %MM %SS')
+      // event.strftime('%-D %H:%M:%S')
+    );
+  });
+
 
   const url = window.location.pathname;
 
@@ -32,18 +40,18 @@ jQuery(document).ready(function () {
     $('.promos .the-promo.promo3').show();
     $('.promos .the-promo.promo2').remove();
 
-    $('.promos-wrap').bxSlider({
-      auto: true,
-      autoHover: true,
-      mode: 'fade',
-      controls: false,
-      pager: false,
-      // pause: 2500,
+    // $('.promos-wrap').bxSlider({
+    //   auto: true,
+    //   autoHover: true,
+    //   mode: 'fade',
+    //   controls: false,
+    //   pager: false,
+    //   // pause: 2500,
 
-      onSliderLoad: function () {
-        $('.promos.promo1, .promos.promo3').show();
-      }
-    });
+    //   onSliderLoad: function () {
+    //     $('.promos.promo1, .promos.promo3').show();
+    //   }
+    // });
 
     if (window.innerWidth < 431) {
       // $(`.promos .the-promo`).css('height', '46px');
@@ -52,8 +60,8 @@ jQuery(document).ready(function () {
 
   } else {
     //? NOT HOME PAGE
-    $('.promos .the-promo.promo1').hide();
-    $('.promos .the-promo.promo3').hide();
+    $('.promos .the-promo.promo1').remove();
+    $('.promos .the-promo.promo3').show();
     $('.promos .the-promo.promo2').show();
 
     if (window.innerWidth < 431) {
@@ -65,6 +73,7 @@ jQuery(document).ready(function () {
   if ($('header.site-header .promos').length == 0) {
     // console.log(`cloning .promos`);
     $('header.site-header').prepend($('.promos').clone());
+    $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());
   } else {
     // console.log(`.promos already cloned`);
   }
@@ -84,17 +93,17 @@ jQuery(document).ready(function () {
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   pause: 2500,
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 2500,
 
-  //   onSliderLoad: function () {
-  //     $('.promos.promo1, .promos.promo2').show();
-  //   }
-  // });
+    onSliderLoad: function () {
+      $('.promos.promo1, .promos.promo2').show();
+    }
+  });
 
 });
