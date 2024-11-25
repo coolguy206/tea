@@ -4,26 +4,10 @@
   <div class="menu flex-menu">
 
     {* BLACK FRIDAY *}
-
-      <div class="panel panel-1">
-        {assign var=i value=0}
-
-        <ul class="category">
-
-          <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-          {sub_cats name="cat" category="black-friday/boy"}
-            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-          {/sub_cats}
-
-          <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-        </ul>
-      </div>
-      
+    {*include "black-friday/boy.html"*}
 
     {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-    <div class="panel panel-2">
+    <div class="panel panel-1">
       {assign var=i value=0}
 
       <ul class="category first">
@@ -32,6 +16,7 @@
         {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
         {sub_cats name="cat" category="boys-clothing/shop-by-category"}
         {if $i && $i % 6 eq 0}
+
       </ul>
     </div>
 

@@ -1,7 +1,7 @@
 <div id="site-nav-mobile" class="site-nav-mobile">
 	<ul>
 		
-		<li>
+		{*<li>
 			<h2 class="bf-font-color-mobile">Black Friday <span class="fas fa-plus"></span></h2>
 			<div class="sub">
 				
@@ -103,7 +103,31 @@
 
 				</div>
 
-				{*include "../black-friday/mobile/newborn-m.html"*}
+				<h3 class="bf-font-color-mobile"><span class="fas fa-chevron-left"></span> 50% OFF NEWBORN <span class="fas fa-chevron-right"></span></h3>
+				<div class="links">
+				  <ul>
+
+				    {sub_cats name="cat" category="black-friday/newborn"}
+				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
+				    {/sub_cats}
+				    
+
+				    <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Rompers</a></li>
+
+				    <li><a href="/newborn-dresses" class="dresses menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Dresses</a></li>
+
+				    <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf-font-color-mobile" data="mobile mega menu black friday categories" >2-Piece Outfits</a></li>
+
+				    <li><a href="/newborn-accessories" class="accessories menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Accessories</a></li>
+
+				    <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Bodysuits</a></li>
+
+				    <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
+				  </ul>
+
+				</div>
+
 				<h3 class="bf-font-color-mobile"><span class="fas fa-chevron-left"></span> SHOP ALL <span class="fas fa-chevron-right"></span></h3>
 				<div class="links">
 				  <ul>
@@ -124,8 +148,12 @@
 				<h3><a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a></h3>
 
 			</div>
-		</li>
+		</li>*}
 		
+		<li>
+			<h2><a href="/select-styles" class="cm-font-color-mobile">⚡cyber monday⚡</a></h2>
+			<div class="sub"></div>
+		</li>
 
 
 		<li>
@@ -144,9 +172,6 @@
 			*}
 		</li>
 
-		<li>
-			<h2><a href="/clothing-sale" class="sale-font-color-mobile">SALE</a></h2>
-		</li>
 
 		<!-- <li>
 			<h2><a href="/select-styles" style="">✨The Dressy Event✨</a></h2>
@@ -161,7 +186,7 @@
 		</li> -->
 
 		<li>
-			<h2>&#x1f381; gift guide &#x1f381;<span class="fas fa-plus"></span></h2>
+			<h2>🎁GIFT SHOP🎁 <span class="fas fa-plus"></span></h2>
 			<div class="sub">
 				<!-- <h3><a href="/gift-shop" data="mobile mega menu gifts">gift guide</a></h3> -->
 
@@ -241,15 +266,7 @@
 				    <li>Shop by Category</li>
 				  
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/toddler-girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				          flash sale</a></li>
+				    {*include "black-friday/toddler-girl.html"*}
 
 				    {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl categories" >{$cat.title}</a></li>
@@ -334,14 +351,7 @@
 				    <li>Shop by Category</li>
 				    
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+				    {*include "black-friday/girl.html"*}
 
 				    {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl categories" >{$cat.title}</a></li>
@@ -434,15 +444,7 @@
 				    <li>Shop by Category</li>
 				   
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/toddler-boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				          flash sale</a></li>
+				    {*include "black-friday/toddler-boy.html"*}
 
 				    {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy categories" >{$cat.title}</a></li>
@@ -526,14 +528,7 @@
 				    <li>Shop by Category</li>
 				   
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+				    {*include "black-friday/boy.html"*}
 
 
 				    {sub_cats name="cat" category="boys-clothing/shop-by-category"}
@@ -626,15 +621,7 @@
 				    <li>Shop by Category</li>
 				  
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/baby-girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/baby-girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
-				      {/sub_cats}
-
-				      <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				      
+				    {*include "black-friday/baby-girl.html"*}
 
 				    {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories" >{$cat.title}</a></li>
@@ -719,15 +706,7 @@
 				    <li>Shop by Category</li>
 
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/baby-boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/baby-boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-				      {/sub_cats}
-
-				      <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				      
+				    {*include "black-friday/baby-boy.html"*}
 
 				    {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy categories" >{$cat.title}</a></li>
@@ -990,9 +969,9 @@
 		</li> -->
 
 
-		<!-- <li>
-			<h2><a href="/clothing-sale" style="color:#FF1744 !important">SALE</a></h2>
-		</li> -->
+		<li>
+			<h2><a href="/clothing-sale" class="sale-font-color-mobile">SALE</a></h2>
+		</li>
 
 
 		<li>

@@ -4,15 +4,7 @@
     <li>Shop by Category</li>
   
     {* BLACK FRIDAY *}
-
-      <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-      
-      {sub_cats name="cat" category="black-friday/toddler-girl"}
-        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
-      {/sub_cats}
-      
-      <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-          flash sale</a></li>
+    {*include "black-friday/toddler-girl.html"*}
 
     {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
       <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl categories" >{$cat.title}</a></li>

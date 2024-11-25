@@ -53,7 +53,8 @@ var urls = exports.urls = {
       baby: {
         girl: "/baby-girl-clothes/favorites/limited-time-sale",
         boy: "/baby-boy-clothes/favorites/limited-time-sale",
-        newborn: "/newborn-clothes/favorites/limited-time-sale"
+        newborn: "/newborn-clothes/favorites/limited-time-sale",
+        newborn2: "/select-styles/newborn"
       },
       toddler: {
         girl: "/select-styles/toddler-girls-clothes/favorites/limited-time-sale",
