@@ -319,6 +319,59 @@
 </div>
 *}
 
+<div class="site-nav-submenu cm">
+	<div class="bar">
+		{*
+		{sub_cats name="cat" category="tee-shop"}
+		<div>
+		  <a href="{$cat.url}" data="mega menu tees">{$cat.title}</a>
+		  <span class="line"></span>
+		</div>
+		{/sub_cats}
+		*}
+
+		{literal}
+		<style>
+		  .cyber-monday-sub-nav-font {
+		    color: #556A82 !important;
+		    font-family: gilroy-black;
+		    font-size: 18px !important;
+		  }
+		</style>
+		{/literal}
+
+		<div>
+		  <a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/boys-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-girl-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-boy-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/select-styles/newborn" data="mega menu select-styles" class="cyber-monday-sub-nav-font">newborn</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/select-styles" data="mega menu select-styles" class="cyber-monday-sub-nav-font">shop all</a>
+		  <span class="line"></span>
+		</div>
+	</div>
+</div>
+
 
 <div class="site-nav-submenu girl">
 	<div class="bar">
@@ -2016,8 +2069,27 @@
 		</li>*}
 		
 		<li>
-			<h2><a href="/select-styles" class="cm-font-color-mobile">⚡cyber monday⚡</a></h2>
-			<div class="sub"></div>
+			<h2>⚡cyber monday⚡<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				{*
+				<h3><a href="/tee-shop" class="view all" data="mobile mega menu tees">view all</a></h3>
+				{sub_cats name="cat" category="tee-shop"}
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees">{$cat.title}</a></h3>
+				{/sub_cats}
+				*}
+
+				<h3><a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles">girl</a></h3>
+
+				<h3><a href="/boys-clothing/favorites/limited-time-sale" data="mega menu select-styles">boy</a></h3>
+
+				<h3><a href="/baby-girl-clothes/limited-time-sale" data="mega menu select-styles">baby girl</a></h3>
+
+				<h3><a href="/baby-boy-clothes/limited-time-sale" data="mega menu select-styles">baby boy</a></h3>
+
+				<h3><a href="/select-styles/newborn" data="mega menu select-styles">newborn</a></h3>
+
+				<h3><a href="/select-styles" data="mega menu select-styles">shop all</a></h3>
+			</div>
 		</li>
 
 
