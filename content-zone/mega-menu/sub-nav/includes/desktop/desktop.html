@@ -2,12 +2,7 @@
 
 <div class="site-nav-submenu bf">
 	<div class="bar">
-		{*
-		<div>
-			<a href="/select-styles" data="mega menu">&#10024; Holiday Flash Sale &#10024;</a>
-			<span class="line"></span>
-		</div>
-		*}
+		
 		<div>
 		  <a href="/black-friday/shop-all" data="mega menu black friday">SHOP ALL</a>
 		  <span class="line"></span>
@@ -29,9 +24,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        {*
-		        <li><a href="/select-styles" class="menu" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-		        *}
+		        
+		        <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		        
 
 		        </ul>
 		      </ul>
@@ -65,9 +60,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 		        
-		        {*
-		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-		        *}
+		        
+		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		        
 
 		        </ul>
 		      </ul>
@@ -101,9 +96,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        {*
-		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-		        *}
+		        
+		        <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		        
 
 		        </ul>
 		      </ul>
@@ -137,9 +132,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        {*
-		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-		        *}
+		        
+		        <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		        
 
 		        </ul>
 		      </ul>
@@ -173,9 +168,9 @@
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		        {*
-		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="" style="color: #A18CBA;">Holiday Flash Sale</a></li>
-		        *}
+		        
+		        <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		        
 
 		        </ul>
 		      </ul>
@@ -186,6 +181,12 @@
 		    </div>
 
 		  </div>
+		</div>
+
+
+		<div>
+			<a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a>
+			<span class="line"></span>
 		</div>
 
 		{*include "../black-friday/desktop/newborn.html"*}
@@ -293,6 +294,8 @@
 		          {sub_cats name="cat" category="black-friday/girl"}
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 		          {/sub_cats}
+
+		          <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
 
 		        </ul>
 		      </div>
@@ -426,6 +429,9 @@
 		          {sub_cats name="cat" category="black-friday/toddler-girl"}
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
 		          {/sub_cats}
+
+		          <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
+		              flash sale</a></li>
 
 		        </ul>
 		      </div>
@@ -563,6 +569,8 @@
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
 		          {/sub_cats}
 
+		          <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
 		        </ul>
 		      </div>
 		      
@@ -695,6 +703,10 @@
 		          {sub_cats name="cat" category="black-friday/toddler-boy"}
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
 		          {/sub_cats}
+
+		          <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
+		              flash sale</a></li>
+		          
 		        </ul>
 		      </div>
 		      
@@ -834,6 +846,8 @@
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
 		          {/sub_cats}
 
+		          <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
 		        </ul>
 		      </div>
 		      
@@ -967,6 +981,8 @@
 		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
 		          {/sub_cats}
 
+		          <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+		          
 		        </ul>
 		      </div>
 		      
@@ -1461,6 +1477,8 @@
 						                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 						            {/sub_cats}
 
+						            <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
 						      </ul>
 						  </div>
 						    
@@ -1529,6 +1547,8 @@
 				        {sub_cats name="cat" category="black-friday/boy"}
 				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
 				        {/sub_cats}
+
+				        <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
 				        
 				    </ul>
 				  </div>
@@ -1595,6 +1615,9 @@
 				            {sub_cats name="cat" category="black-friday/toddler-girl"}
 				                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 				            {/sub_cats}
+
+				            <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
+				                flash sale</a></li>
 
 				      </ul>
 				  </div>
@@ -1664,6 +1687,9 @@
 				                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
 				            {/sub_cats}
 
+				            <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
+				                flash sale</a></li>
+
 				      </ul>
 				  </div>
 				    
@@ -1729,6 +1755,8 @@
 				        {sub_cats name="cat" category="black-friday/baby-girl"}
 				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
 				        {/sub_cats}
+
+				        <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
 
 				    </ul>
 				  </div>
@@ -1796,6 +1824,8 @@
 				        {sub_cats name="cat" category="black-friday/baby-boy"}
 				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
 				        {/sub_cats}
+
+				        <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
 				        
 				    </ul>
 

@@ -16,6 +16,14 @@ jQuery(document).ready(function () {
 
   */
 
+  //? COUNTDOWN.JS
+  $(".the-promo.countdown-promo #countdown span").countdown("2024/11/29 23:59:59", function (event) {
+    $(this).text(
+      event.strftime('%-DD %HH %MM %SS')
+      // event.strftime('%-D %H:%M:%S')
+    );
+  });
+
 
   const url = window.location.pathname;
 
@@ -52,7 +60,7 @@ jQuery(document).ready(function () {
 
   } else {
     //? NOT HOME PAGE
-    $('.promos .the-promo.promo1').hide();
+    $('.promos .the-promo.promo1').remove();
     $('.promos .the-promo.promo3').show();
     $('.promos .the-promo.promo2').show();
     $('.promos .the-promo.promo1').remove();
@@ -66,6 +74,7 @@ jQuery(document).ready(function () {
   if ($('header.site-header .promos').length == 0) {
     // console.log(`cloning .promos`);
     $('header.site-header').prepend($('.promos').clone());
+    $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());
   } else {
     // console.log(`.promos already cloned`);
   }

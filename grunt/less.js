@@ -1,6 +1,14 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.landing);
 
+var promosDest = ``;
+if(config.promo.css !== ``){
+    promosDest = `promos/${config.promo.name}/dev/${config.promo.css}/css/`;
+} else {
+    promosDest = `promos/${config.promo.name}/css/`
+}
+// console.log(promosDest);
+
 module.exports = {
 
     options: {
@@ -56,9 +64,9 @@ module.exports = {
 
     promos: {
         expand: true,
-        cwd: 'promos/' + config.promo.name + '/css/',
+        cwd: promosDest,
         src: ['**/*.less'],
-        dest: 'promos/' + config.promo.name + '/css/',
+        dest: promosDest,
         ext: '.css',
     },
 

@@ -1,6 +1,16 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.landing);
 
+var promosDest = ``;
+if (config.promo.js !== ``) {
+  promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/browserify/`;
+  promosDest = `promos/${config.promo.name}/dev/${config.promo.js}/js/jsmin/`;
+} else {
+  promosSrc =  `promos/${config.promo.name}/js/browserify/`;
+  promosDest = `promos/${config.promo.name}/js/jsmin/`;
+}
+// console.log(promosSrc, promosDest);
+
 module.exports = {
 
   options: {
@@ -39,9 +49,9 @@ module.exports = {
   promos: {
     //dynamic files
     expand: true,
-    cwd: 'promos/' + config.promo.name + '/js/browserify/',
+    cwd: promosSrc,
     src: ['*.js'],
-    dest: 'promos/' + config.promo.name + '/js/jsmin/',
+    dest: promosDest,
     ext: '.min.js',
   },
 

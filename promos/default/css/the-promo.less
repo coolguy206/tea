@@ -23,7 +23,7 @@
 
 //? SHOW & HIDE CLONE OF .PROMOS 
 header.site-header {
-  .promos {
+  .promos, .the-promo.countdown-promo {
     display: none;
   }
 
@@ -36,6 +36,14 @@ header.site-header {
       }
 
       display: block;
+    }
+
+    .the-promo.countdown-promo {
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      display: flex;
     }
 
     .site-header-inner.container,

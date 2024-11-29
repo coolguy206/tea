@@ -40,7 +40,7 @@ module.exports = {
 
 
   promos: {
-    files: ['promos/' + config.promo.name + '/css/**/*.less', 'promos/' + config.promo.name + '/dev/**/*.html', 'promos/' + config.promo.name + '/js/*.js'],
+    files: [`promos/${config.promo.name}/**/*.less`, `promos/${config.promo.name}/dev/**/*.html`, `promos/${config.promo.name}/**/*.js`],
     tasks: ['less:promos', 'babel:promos', 'browserify:promos', 'uglify:promos', 'includes:promos', 'htmlmin:promos'],
   },
 
