@@ -238,85 +238,6 @@
 	
 	</div>
 </div>
-*}
-
-
-<div class="site-nav-submenu new-arrivals">
-	<div class="bar">
-
-		{sub_cats name="cat" category="new-arrivals"}
-		<div>
-		  <a href="{$cat.url}" data="mega menu new-arrivals">{$cat.title}</a>
-		  <span class="line"></span>
-		</div>
-		{/sub_cats}
-
-
-	</div>
-</div>
-
-{*
-<div class="site-nav-submenu special-occasion">
-	<div class="bar">
-		<!-- 
-		<div>
-		  <a href="/girls-clothing/favorites/special-occasion" data="mega menu special occasion girl">Girl</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/boys-clothing/favorites/special-occasion" data="mega menu special occasion boy">Boy</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-girl-clothes/favorites/special-occasion" data="mega menu special occasion baby girl">Baby Girl</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-boy-clothes/favorites/special-occasion " data="mega menu special occasion baby boy">Baby Boy</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu special occasion adult dresses">Adult Dresses</a>
-		  <span class="line"></span>
-		</div> -->
-
-		<!-- <div>
-		  <a href="/select-styles/family" data="mega menu special occasion family">Family</a>
-		  <span class="line"></span>
-		</div> -->
-
-
-		<div>
-		  <a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">SIBLING SHOP</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/family-outfitting/mommy-and-me" data="mega menu family matching MOMMY & ME">MOMMY & ME</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/special-occasion/sibling" data="mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mega menu family matching SWIM">SWIM</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mega menu family matching PJs">PJs</a>
-		  <span class="line"></span>
-		</div>
-	</div>
-</div>
-*}
 
 <div class="site-nav-submenu cm">
 	<div class="bar">
@@ -368,6 +289,91 @@
 		  <a href="/select-styles" data="mega menu select-styles" class="cyber-monday-sub-nav-font">shop all</a>
 		  <span class="line"></span>
 		</div>
+	</div>
+</div>
+*}
+
+
+<div class="site-nav-submenu new-arrivals">
+	<div class="bar">
+
+		{sub_cats name="cat" category="new-arrivals"}
+		<div>
+		  <a href="{$cat.url}" data="mega menu new-arrivals">{$cat.title}</a>
+		  <span class="line"></span>
+		</div>
+		{/sub_cats}
+
+
+	</div>
+</div>
+
+
+<div class="site-nav-submenu special-occasion">
+	<div class="bar">
+		{*include "../special-occasion/shop-by-collection.html"*}
+	</div>
+</div>
+
+
+<div class="site-nav-submenu gift-guide">
+	<div class="bar">
+		<div>
+		  <a href="/gift-and-save-shop" class="" data="mega menu Gift Guide"> Gift Guide</a>
+		  <span class="line"></span>
+
+		  <div class="menu flex-menu">
+
+		    <div class="panel panel-1">
+		      <ul class="category first">
+		        <li>Shop by Department</li>
+		        <li><a href="/girls-clothing/favorites/gift-shop" data="mega menu Gift Guide">Girl</a></li>
+		        <li><a href="/boys-clothing/favorites/gift-shop" data="mega menu Gift Guide">Boy</a></li>
+		        <li><a href="/baby-girl-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Girl</a></li>
+		        <li><a href="/baby-boy-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Boy</a></li>
+		        <li><a href="/newborn-clothing" data="mega menu Gift Guide">Newborn</a></li>
+		        <li><a href="/family-outfitting/adult" data="mega menu Gift Guide">Adult</a></li>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Shop by Collection</li>
+		        <li><a href="/gift-and-save-shop" data="mega menu Gift Guide">Gift & Save Shop</a></li>
+		        <li><a href="/cozy-shop" data="mega menu Gift Guide">Cozy & Cute</a></li>
+		        <li><a href="/dress-shop" data="mega menu Gift Guide">Dreamy Dresses</a></li>
+		        <li><a href="/holiday-print-shop" data="mega menu Gift Guide">Holiday Shop</a></li>
+		        <!-- <li><a href="/teaxsanrio" data="mega menu Gift Guide">Tea x Hello Kitty</a></li> -->
+		        <li><a href="/best-sellers" data="mega menu Gift Guide">Best Sellers</a></li>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li class="spacer">Spacer</li>
+		        <li><a href="/product/giftfuroserv/furoshiki-wrap-service.html#cayenne" data="mega menu Gift Guide">Gift Wrap Services</a></li>
+		        <li><a href="/product/giftfurosupp/furoshiki-wrap-supplies.html#ink" data="mega menu Gift Guide">Gift Wrap Supplies</a></li>
+		        <li><a href="/product/egiftcard-999-ns/tea-collection-gift-certificate-gift-card.html" data="mega menu Gift Guide">Gift Cards</a></li>
+		      </ul>
+		    </div>
+
+		    <!-- <div class="panel panel-4">
+		      <ul class="category">
+		        <li>Tea REWEAR</li>
+		        <li>
+		          <a href="#" class="kidizen-url" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&amp;utm_medium=Web+-+girl+dropdown&amp;utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea
+		    for Rewards</a>
+		        </li>
+		      </ul>
+		    </div> -->
+
+		  
+		  </div>
+		    
+		</div>
+
+
+
 	</div>
 </div>
 
@@ -1185,7 +1191,7 @@
 	</div>
 </div>
 
-
+{*
 <div class="site-nav-submenu swim">
 	<div class="bar">
 		<div>
@@ -1231,7 +1237,7 @@
 
 	</div>
 </div>
-
+*}
 
 <div class="site-nav-submenu dress">
 	<div class="bar">
@@ -1393,68 +1399,6 @@
 		  <span class="line"></span>
 		</div>
 		{/sub_cats}
-
-
-	</div>
-</div>
-
-
-<div class="site-nav-submenu gift-guide">
-	<div class="bar">
-		<div>
-		  <a href="/gift-and-save-shop" class="" data="mega menu Gift Guide"> Gift Guide</a>
-		  <span class="line"></span>
-
-		  <div class="menu flex-menu">
-
-		    <div class="panel panel-1">
-		      <ul class="category first">
-		        <li>Shop by Department</li>
-		        <li><a href="/girls-clothing/favorites/gift-shop" data="mega menu Gift Guide">Girl</a></li>
-		        <li><a href="/boys-clothing/favorites/gift-shop" data="mega menu Gift Guide">Boy</a></li>
-		        <li><a href="/baby-girl-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Girl</a></li>
-		        <li><a href="/baby-boy-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Boy</a></li>
-		        <li><a href="/newborn-clothing" data="mega menu Gift Guide">Newborn</a></li>
-		        <li><a href="/family-outfitting/adult" data="mega menu Gift Guide">Adult</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Collection</li>
-		        <li><a href="/gift-and-save-shop" data="mega menu Gift Guide">Gift & Save Shop</a></li>
-		        <li><a href="/cozy-shop" data="mega menu Gift Guide">Cozy & Cute</a></li>
-		        <li><a href="/dress-shop" data="mega menu Gift Guide">Dreamy Dresses</a></li>
-		        <li><a href="/holiday-print-shop" data="mega menu Gift Guide">Holiday Shop</a></li>
-		        <!-- <li><a href="/teaxsanrio" data="mega menu Gift Guide">Tea x Hello Kitty</a></li> -->
-		        <li><a href="/best-sellers" data="mega menu Gift Guide">Best Sellers</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li class="spacer">Spacer</li>
-		        <li><a href="/product/giftfuroserv/furoshiki-wrap-service.html#cayenne" data="mega menu Gift Guide">Gift Wrap Services</a></li>
-		        <li><a href="/product/giftfurosupp/furoshiki-wrap-supplies.html#ink" data="mega menu Gift Guide">Gift Wrap Supplies</a></li>
-		        <li><a href="/product/egiftcard-999-ns/tea-collection-gift-certificate-gift-card.html" data="mega menu Gift Guide">Gift Cards</a></li>
-		      </ul>
-		    </div>
-
-		    <!-- <div class="panel panel-4">
-		      <ul class="category">
-		        <li>Tea REWEAR</li>
-		        <li>
-		          <a href="#" class="kidizen-url" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&amp;utm_medium=Web+-+girl+dropdown&amp;utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea
-		    for Rewards</a>
-		        </li>
-		      </ul>
-		    </div> -->
-
-		  
-		  </div>
-		    
-		</div>
-
 
 
 	</div>
