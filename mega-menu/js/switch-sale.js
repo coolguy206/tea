@@ -121,7 +121,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/newborn-clothing/view-all':
-      promo1 = urls.promo.select.baby.newborn2;
+      promo1 = urls.promo.select.baby.newborn;
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;

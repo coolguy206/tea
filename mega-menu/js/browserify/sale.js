@@ -267,7 +267,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      promo1 = _urls.urls.promo.select.baby.newborn2;
+      promo1 = _urls.urls.promo.select.baby.newborn;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
@@ -429,7 +429,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
       break;
     case '/sale/newborn-clothing/view-all':
-      promo1 = _urls.urls.promo.select.baby.newborn2;
+      promo1 = _urls.urls.promo.select.baby.newborn;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
