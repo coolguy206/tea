@@ -4,10 +4,10 @@
   <div class="menu flex-menu">
 
     {* BLACK FRIDAY *}
-    include "black-friday/baby-girl.html"
+    {*include "black-friday/baby-girl.html"*}
 
     {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-    <div class="panel panel-2">
+    <div class="panel panel-1">
       {assign var=i value=0}
 
       <ul class="category first">
@@ -16,6 +16,7 @@
         {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
         {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
         {if $i && $i % 8 eq 0}
+
       </ul>
     </div>
 

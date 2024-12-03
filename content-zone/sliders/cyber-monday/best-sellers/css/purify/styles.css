@@ -1,0 +1,50 @@
+.cm-slider {
+  background: #fff;
+  transition: all 1s;
+  position: relative;
+}
+
+.cm-slider .glide {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.cm-slider .glide * {
+  box-sizing: inherit;
+}
+
+.cm-slider .glide__arrows {
+  -webkit-touch-callout: none;
+  user-select: none;
+}
+
+.cm-slider .glide {
+  position: unset;
+}
+
+.cm-slider img {
+  display: block;
+}
+
+.cm-slider li {
+  position: relative;
+}
+
+.cm-slider .glide {
+  margin: 0 auto;
+}
+
+.cm-slider .width-300 {
+  justify-content: center;
+}
+
+.cm-slider .width-300 li {
+  width: 300px;
+}
+
+@media screen and (max-width:1679px) {
+  .cm-slider .width-300 li {
+    width: 18vw;
+  }
+}

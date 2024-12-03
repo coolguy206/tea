@@ -15,9 +15,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(ajaxCount);
 
   // if (ajaxCount == 2) {
-    $('.hp .shop-slideshow').append($('.bf-slider.dresses'));
-    $('.hp .shop-slideshow2').append($('.bf-slider.leggings'));
-    $('.hp .shop-slideshow3').append($('.bf-slider.rompers'));
+    $('.hp .shop-slideshow').append($('.cm-slider.best-sellers'));
+    $('.hp .shop-slideshow2').append($('.cm-slider.layers'));
+    $('.hp .shop-slideshow3').append($('.cm-slider.pants'));
     $('.hp .white-out').fadeOut();
 
     // var dressesImg1 = `<li><a href="/black-friday/shop-all/dresses "><img src="/mas_assets/media/tea_collection/promos/black-friday/2024/1120/hp/v0/Dresses-01.jpg"></a></li>`;
@@ -39,15 +39,13 @@ $(document).ready(function () {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
   // }
 
-  // 23:59:59
-
   //? COUNTDOWN.JS
-  $("#countdown span").countdown("2024/11/29 23:59:59", function (event) {
-    $(this).text(
-      event.strftime('%-DD %HH %MM %SS')
+  // $("#countdown span").countdown("2024/11/29 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-DD %HH %MM %SS')
       // event.strftime('%-D %H:%M:%S')
-    );
-  });
+  //   );
+  // });
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.the-sliders').clone().appendTo('.hp .shop-slideshow')

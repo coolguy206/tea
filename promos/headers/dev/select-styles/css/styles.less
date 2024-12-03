@@ -2,29 +2,23 @@
 @holiday-flash-sale-color: #A18CBA;
 
 .container-promo-header {
-    .the-content {
+    .the-content.select-styles {
         @media screen and (max-width: 430px) {
-            column-gap: 0 !important;
+            column-gap: 0vw !important;
             justify-content: center !important;
         }
 
-        justify-content: left !important;
         column-gap: 20px !important;
-
-        a {
-            @media screen and (max-width: 430px) {
-                flex-basis: 46% !important;
-            }
-
-            &.cta5 {
-                @media screen and (max-width: 430px) {
-                    display: block !important;
-                }
-            }
-        }
+        justify-content: left !important;
 
         img {
             width: 100%;
+        }
+
+        a.cta5 {
+            @media screen and (max-width: 430px){
+                display: block !important;
+            }
         }
 
         .the-cta {
@@ -32,8 +26,8 @@
         }
 
         .cta-border {
-            background: @holiday-flash-sale-color !important;
-            color: #fff !important;
+            background: #556A82 !important;
+            color: #E3F0A3 !important;
         }
     }
 

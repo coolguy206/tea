@@ -1,0 +1,148 @@
+<div class="cm-slider layers">
+    <!-- <h2>New Arrivals</h2> -->
+    <div class="white-out"></div>
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+
+                <li class="lgw-thumb img-1">
+                    <div class="thumb-grid item" style="width: 309px; max-width: 100%; padding: 0;">
+                        <a href="/select-styles/dresses">
+                            <img data-set="/mas_assets/media/tea_collection/promos/cyber-monday/2024/1130/v2/dresses-01.jpg">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="lgw-thumb img-2">
+                    <div class="thumb-grid item" style="width: 309px; max-width: 100%; padding: 0;">
+                        <a href="/select-styles/dresses">
+                            <img data-set="/mas_assets/media/tea_collection/promos/cyber-monday/2024/1130/v2/dresses-02.jpg">
+                        </a>
+                    </div>
+                </li>
+                
+            {load_thumbs mode="category_recursive" category="select-styles/dresses"}
+            {thumb_loop count="8"}
+                {thumb name=cat}
+                    {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}
+                    <li class="lgw-thumb">
+                        <div class="thumb-grid item" style="width: 100%; padding: 0;">
+                            <span class="img">
+                                {*<div class="quickview-overlay lgw"><h2><a href="#{$cat.item->sku}/{$cat.item->color}">&nbsp;</a></h2></div>*}
+
+                                {if $cat.item->badge != "none"}
+	    	                        <a class="badge {$cat.item->badge}" href="{$cat.item->item_url()}" data-hash="{$cat.item_attr_str.style}_{$color|lower|replace:' ':'_'}" style='background-image: url("{$media_assets_url}tea_responsive/badges/badge_{$cat.item->badge}.png");'>
+	    			                    <span class="ada-hidden">{""|lang:"Badge `$cat.item->badge`"}</span>
+			                        </a>
+		                        {/if}
+
+                                <a href="{$cat.item->item_url()}" class="cm-slider-dresses {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+                                    <img src="{image size=thumb type=item id=$cat.sku}" alt="{$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+
+                                    {if $cat.thumb_wink_images[$id]}
+                                        <img class="wink-image" src="{image size="thumb" type=id id="`$cat.thumb_wink_images[$id]`"}" alt="{if $cat.brand}{$cat.brand|smarty:nodefaults} {/if}{$cat.model|smarty:nodefaults}"/>
+                                    {/if}
+                                </a>
+
+                                <span data-href="{$cat.item->item_url()}" data-color="{$cat.item->color}" class="js-qv {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">Quick View</span>
+                            </span>
+
+                            <div class="thumb-content">
+                                
+                                {*<span>
+                                    {$cat.item->badge}
+                                </span>*}
+
+                                {*{if $cat.item->mas_new_arrival}<span class="new-item">New!</span>{/if}*}
+
+                                <a href="{$cat.item->item_url()}" class="name cm-slider-dresses">
+                                    {if $cat.applied_inventory_control == 'in_stock_email' && $cat.item->per_color_qty <= 0}
+                                        {if $cat.badge == 'comingsoon'}
+                                            <span class="comingsoon-item">{""|lang:"Coming Soon"}</span>
+                                        {elseif $cat.badge == 'unavailable'}
+                                            <span class="unavailable-item">{""|lang:"Currently Unavailable"}</span>
+                                        {else}
+                                            <span class="soldout-item">{""|lang:"Sold Out"}</span>
+                                        {/if}
+                                    {else}
+                                        {if $cat.mas_new_arrival}
+                                            <span class="new-item">{""|lang:"New!"}</span>
+                                        {/if}
+                                    {/if}
+                    
+                                    {if $cat.brand}
+                                        <span class="brand">{$cat.brand|smarty:nodefaults}</span> 
+                                    {/if}
+
+                                    <span class="model">{$cat.model|smarty:nodefaults}</span>
+                                </a>
+
+
+                                <div class="price-wrap">
+                                    <div class="price">
+                                        {if $cat.type ne 'gift_certificate'}
+                                            {if $cat.retail_price|floatval > $cat.store_price|floatval}
+                                                <span id="store_price" class="old-price"><strike>{$cat.retail_price|price|money}</strike></span>
+                                                <span id="sale_price" class="price-red">{$cat.store_price|price|money}</span>
+                                            {else}
+                                                <span id="store_price" class="price">{$cat.store_price|price|money}</span>
+                                            {/if}
+                                        {/if}
+                                    </div>
+                                </div>
+
+                                {if $cat.type eq 'gift_certificate'}
+			                        <p class="size">{""|lang:"Available \$25.00 to \$200.00"}</p>
+		                        {else}
+			                        {if $cat.type eq 'parent' || $cat.parent_id}
+				                        <p class="size">
+					                        {* One or more sizes *}
+					                        {if $cat.min_size}
+					                            <span class="thumb-sizes" title="{$sizes_per_parent|replace:'_':'-'}">
+						                            Sizes {$cat.min_size|replace:'_':'-'} to {$cat.max_size|replace:'_':'-'}
+					                            </span>
+					                        {else}
+						                        <span>Size {$cat.max_size|replace:'_':'-'}</span>
+					                        {/if}
+
+					                        {if $cat.badge_show_attribute && $cat.badge_copy_attribute}
+						                        <span class="thumb-badge">&#8226; {$cat.badge_copy_attribute|smarty:nodefaults}</span>
+					                        {/if}
+
+					                        {if $cat.tooltip_show_attribute && $cat.tooltip_copy_attribute}
+						                        <span class="thumb-badge-tooltip">
+                                                    <i class="far fa-question-circle"></i>
+							                        <span class="thumb-badge-tooltip-copy hidden">{$cat.tooltip_copy_attribute|smarty:nodefaults}</span>
+						                        </span>
+					                        {/if}
+				                        </p>
+			                        {/if}
+		                        {/if}
+
+                                {if $cat.item->promo_teaser}
+			                        <span class="promo-teaser-thumb">{$cat.item->promo_teaser}</span>
+		                        {/if}
+
+                            </div>
+                        </div>
+                    </li>
+                    {/if}
+                {/thumb}
+            {/thumb_loop}
+            
+            </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+
+        <div data-glide-el="controls">
+            <span data-glide-dir="<" class="lt-arrow">
+                <img src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
+            </span>
+            <span data-glide-dir=">" class="rt-arrow">
+                <img src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
+            </span>
+        </div>
+    </div>
+</div>

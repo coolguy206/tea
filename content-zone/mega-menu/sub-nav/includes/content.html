@@ -1,6 +1,5 @@
 {* desktop *}
-
-
+{*
 <div class="site-nav-submenu bf">
 	<div class="bar">
 		
@@ -184,18 +183,63 @@
 		  </div>
 		</div>
 
+		<div>
+		  <a href="/newborn-clothing" data="mega menu black friday">50% OFF NEWBORN</a>
+		  <span class="line"></span>
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
+		      {assign var=i value=0}
+		      <ul class="category first">
+		        
+		        <li>Shop by Category</li>
+		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
+
+		        <li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
+		        
+		        {sub_cats name="cat" category="black-friday/newborn"}
+		        {if $i && $i % 8 eq 0}
+		          </ul>
+		          <ul class="category">
+		            <li class="spacer">Spacer</li>
+		        {/if}
+
+		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
+		        {math equation="x + y" x=$i y=1 assign=i}
+		        {/sub_cats}
+		        
+
+		        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers bf-font-color-mobile" data="mega menu black friday categories" >Rompers</a></li>
+
+		        <li><a href="/newborn-dresses" class="dresses bf-font-color-mobile" data="mega menu black friday categories" >Dresses</a></li>
+
+		        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits bf-font-color-mobile" data="mega menu black friday categories" >2-Piece Outfits</a></li>
+
+		        <li><a href="/newborn-accessories" class="accessories bf-font-color-mobile" data="mega menu black friday categories" >Accessories</a></li>
+
+		        <li><a href="/newborn-tops-and-bottoms" class="bodysuits bf-font-color-mobile" data="mega menu black friday categories" >Bodysuits</a></li>
+
+		        <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
+		        </ul>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-3" style="flex-basis: 100% !important">
+		      <div class="da-rennab-zone" data-zone="mega_bf_newborn"></div>
+		    </div>
+
+		  </div>
+		</div>
+
 
 		<div>
 			<a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a>
 			<span class="line"></span>
 		</div>
-
-		{*include "../black-friday/desktop/newborn.html"*}
-		
-		
+	
 	</div>
 </div>
-
+*}
 
 
 <div class="site-nav-submenu new-arrivals">
@@ -275,6 +319,59 @@
 </div>
 *}
 
+<div class="site-nav-submenu cm">
+	<div class="bar">
+		{*
+		{sub_cats name="cat" category="tee-shop"}
+		<div>
+		  <a href="{$cat.url}" data="mega menu tees">{$cat.title}</a>
+		  <span class="line"></span>
+		</div>
+		{/sub_cats}
+		*}
+
+		{literal}
+		<style>
+		  .cyber-monday-sub-nav-font {
+		    color: #556A82 !important;
+		    font-family: gilroy-black;
+		    font-size: 18px !important;
+		  }
+		</style>
+		{/literal}
+
+		<div>
+		  <a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/boys-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-girl-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby girl</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/baby-boy-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby boy</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/newborn-clothes/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">newborn</a>
+		  <span class="line"></span>
+		</div>
+
+		<div>
+		  <a href="/select-styles" data="mega menu select-styles" class="cyber-monday-sub-nav-font">shop all</a>
+		  <span class="line"></span>
+		</div>
+	</div>
+</div>
+
 
 <div class="site-nav-submenu girl">
 	<div class="bar">
@@ -284,26 +381,10 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-		          
-		          <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/girl"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/girl.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -312,7 +393,9 @@
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
+		        
 		      </ul>
+
 		    </div>
 
 		    <div class="panel panel-2">
@@ -419,27 +502,10 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-		          
-		          <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/toddler-girl"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-		              flash sale</a></li>
-
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/toddler-girl.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -448,6 +514,7 @@
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
+		        
 		      </ul>
 		    </div>
 
@@ -558,26 +625,10 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-
-		          <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/boy"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/boy.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -586,6 +637,7 @@
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
+
 		      </ul>
 		    </div>
 
@@ -693,27 +745,10 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-
-		          <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/toddler-boy"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-		              flash sale</a></li>
-		          
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/toddler-boy.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -722,6 +757,7 @@
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
+		        
 		      </ul>
 		    </div>
 
@@ -835,26 +871,10 @@
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-
-		          <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/baby-girl"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/baby-girl.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -863,6 +883,7 @@
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
+
 		      </ul>
 		    </div>
 
@@ -970,26 +991,10 @@
 		  <div class="menu flex-menu">
 		    
 		    {* BLACK FRIDAY *}
-
-		      <div class="panel panel-1">
-		        {assign var=i value=0}
-
-		        <ul class="category">
-
-		          <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		          {sub_cats name="cat" category="black-friday/baby-boy"}
-		            <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-		          {/sub_cats}
-
-		          <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		          
-		        </ul>
-		      </div>
-		      
+		    {*include "black-friday/baby-boy.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-2">
+		    <div class="panel panel-1">
 		      {assign var=i value=0}
 
 		      <ul class="category first">
@@ -1120,6 +1125,7 @@
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
+		        
 		      </ul>
 		    </div>
 
@@ -1466,26 +1472,10 @@
 					<div class="menu flex-menu">
 
 						{* BLACK FRIDAY *}
-
-						  <div class="panel panel-1">
-						    {assign var=i value=0}
-
-						      <ul class="category-sale">
-
-						        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-						            {sub_cats name="cat" category="black-friday/girl"}
-						                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-						            {/sub_cats}
-
-						            <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-						      </ul>
-						  </div>
-						    
+						{*include "black-friday/girl.html"*}
 
 						{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-						<div class="panel panel-2">
+						<div class="panel panel-1">
 							{assign var=i value=0}
 
 
@@ -1537,26 +1527,10 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
-
-				  <div class="panel panel-1">
-				    {assign var=i value=0}
-
-				    <ul class="category-sale">
-
-				      <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-				        {sub_cats name="cat" category="black-friday/boy"}
-				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-				        {/sub_cats}
-
-				        <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				        
-				    </ul>
-				  </div>
-				  
+				{*include "black-friday/boy.html"*}
 
 				{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1605,27 +1579,10 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
-
-				  <div class="panel panel-1">
-				    {assign var=i value=0}
-
-				      <ul class="category-sale">
-
-				        <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-				            {sub_cats name="cat" category="black-friday/toddler-girl"}
-				                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-				            {/sub_cats}
-
-				            <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				                flash sale</a></li>
-
-				      </ul>
-				  </div>
-				    
+				{*include "black-friday/toddler-girl.html"*}
 
 				{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1676,27 +1633,10 @@
 			<div class="menu flex-menu">
 				
 				{* BLACK FRIDAY *}
-
-				  <div class="panel panel-1">
-				    {assign var=i value=0}
-
-				      <ul class="category-sale">
-
-				        <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-				            {sub_cats name="cat" category="black-friday/toddler-boy"}
-				                <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-				            {/sub_cats}
-
-				            <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				                flash sale</a></li>
-
-				      </ul>
-				  </div>
-				    
+				{*include "black-friday/toddler-boy.html"*}
 
 				{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1745,26 +1685,10 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
-
-				  <div class="panel panel-1">
-				    {assign var=i value=0}
-
-				    <ul class="category-sale">
-
-				      <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-				        {sub_cats name="cat" category="black-friday/baby-girl"}
-				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
-				        {/sub_cats}
-
-				        <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-				    </ul>
-				  </div>
-				  
+				{*include "black-friday/baby-girl.html"*}
 
 				{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -1814,27 +1738,10 @@
 			<div class="menu flex-menu">
 
 				{* BLACK FRIDAY *}
-
-				  <div class="panel panel-1">
-				    {assign var=i value=0}
-
-				    <ul class="category-sale">
-
-				      <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-
-				        {sub_cats name="cat" category="black-friday/baby-boy"}
-				          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile"  data="mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-				        {/sub_cats}
-
-				        <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				        
-				    </ul>
-
-				  </div>
-				  
+				{*include "black-friday/baby-boy.html"*}
 
 				{* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-				<div class="panel panel-2">
+				<div class="panel panel-1">
 					{assign var=i value=0}
 
 					<ul class="category-sale">
@@ -2012,7 +1919,7 @@
 <div id="site-nav-mobile" class="site-nav-mobile">
 	<ul>
 		
-		<li>
+		{*<li>
 			<h2 class="bf-font-color-mobile">Black Friday <span class="fas fa-plus"></span></h2>
 			<div class="sub">
 				
@@ -2114,7 +2021,31 @@
 
 				</div>
 
-				{*include "../black-friday/mobile/newborn-m.html"*}
+				<h3 class="bf-font-color-mobile"><span class="fas fa-chevron-left"></span> 50% OFF NEWBORN <span class="fas fa-chevron-right"></span></h3>
+				<div class="links">
+				  <ul>
+
+				    {sub_cats name="cat" category="black-friday/newborn"}
+				      <li><a  href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
+				    {/sub_cats}
+				    
+
+				    <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Rompers</a></li>
+
+				    <li><a href="/newborn-dresses" class="dresses menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Dresses</a></li>
+
+				    <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits menu bf-font-color-mobile" data="mobile mega menu black friday categories" >2-Piece Outfits</a></li>
+
+				    <li><a href="/newborn-accessories" class="accessories menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Accessories</a></li>
+
+				    <li><a href="/newborn-tops-and-bottoms" class="bodysuits menu bf-font-color-mobile" data="mobile mega menu black friday categories" >Bodysuits</a></li>
+
+				    <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+
+				  </ul>
+
+				</div>
+
 				<h3 class="bf-font-color-mobile"><span class="fas fa-chevron-left"></span> SHOP ALL <span class="fas fa-chevron-right"></span></h3>
 				<div class="links">
 				  <ul>
@@ -2135,8 +2066,31 @@
 				<h3><a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a></h3>
 
 			</div>
-		</li>
+		</li>*}
 		
+		<li>
+			<h2>⚡cyber monday⚡<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				{*
+				<h3><a href="/tee-shop" class="view all" data="mobile mega menu tees">view all</a></h3>
+				{sub_cats name="cat" category="tee-shop"}
+				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees">{$cat.title}</a></h3>
+				{/sub_cats}
+				*}
+
+				<h3><a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles">girl</a></h3>
+
+				<h3><a href="/boys-clothing/favorites/limited-time-sale" data="mega menu select-styles">boy</a></h3>
+
+				<h3><a href="/baby-girl-clothes/limited-time-sale" data="mega menu select-styles">baby girl</a></h3>
+
+				<h3><a href="/baby-boy-clothes/limited-time-sale" data="mega menu select-styles">baby boy</a></h3>
+
+				<h3><a href="/newborn-clothes/favorites/limited-time-sale" data="mega menu select-styles">newborn</a></h3>
+
+				<h3><a href="/select-styles" data="mega menu select-styles">shop all</a></h3>
+			</div>
+		</li>
 
 		<li>
 			<h2><a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a></h2>
@@ -2159,9 +2113,6 @@
 			*}
 		</li>
 
-		<li>
-			<h2><a href="/clothing-sale" class="sale-font-color-mobile">SALE</a></h2>
-		</li>
 
 		<!-- <li>
 			<h2><a href="/select-styles" style="">✨The Dressy Event✨</a></h2>
@@ -2176,7 +2127,7 @@
 		</li> -->
 
 		<li>
-			<h2>&#x1f381; gift guide &#x1f381;<span class="fas fa-plus"></span></h2>
+			<h2>🎁GIFT SHOP🎁 <span class="fas fa-plus"></span></h2>
 			<div class="sub">
 				<!-- <h3><a href="/gift-shop" data="mobile mega menu gifts">gift guide</a></h3> -->
 
@@ -2256,15 +2207,7 @@
 				    <li>Shop by Category</li>
 				  
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/toddler-girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/toddler-girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Girl':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/select-styles/toddler-girls-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				          flash sale</a></li>
+				    {*include "black-friday/toddler-girl.html"*}
 
 				    {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl categories" >{$cat.title}</a></li>
@@ -2349,14 +2292,7 @@
 				    <li>Shop by Category</li>
 				    
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Girl':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+				    {*include "black-friday/girl.html"*}
 
 				    {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl categories" >{$cat.title}</a></li>
@@ -2449,15 +2385,7 @@
 				    <li>Shop by Category</li>
 				   
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/toddler-boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/toddler-boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Toddler Boy':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/select-styles/toddler-boys-clothes/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday
-				          flash sale</a></li>
+				    {*include "black-friday/toddler-boy.html"*}
 
 				    {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy categories" >{$cat.title}</a></li>
@@ -2541,14 +2469,7 @@
 				    <li>Shop by Category</li>
 				   
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Boy':''}</a></li>
-				      {/sub_cats}
-				      
-				      <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
+				    {*include "black-friday/boy.html"*}
 
 
 				    {sub_cats name="cat" category="boys-clothing/shop-by-category"}
@@ -2641,15 +2562,7 @@
 				    <li>Shop by Category</li>
 				  
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/baby-girl" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/baby-girl"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Girl':''}</a></li>
-				      {/sub_cats}
-
-				      <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				      
+				    {*include "black-friday/baby-girl.html"*}
 
 				    {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories" >{$cat.title}</a></li>
@@ -2734,15 +2647,7 @@
 				    <li>Shop by Category</li>
 
 				    {* BLACK FRIDAY *}
-
-				      <li><a href="{$secure_html_url}black-friday/baby-boy" data="mobile mega menu black friday categories" class="bf-font-color-mobile">Black Friday</a></li>
-				      
-				      {sub_cats name="cat" category="black-friday/baby-boy"}
-				        <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mobile mega menu black friday categories">{$cat.title|replace:'Baby Boy':''}</a></li>
-				      {/sub_cats}
-
-				      <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-				      
+				    {*include "black-friday/baby-boy.html"*}
 
 				    {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy categories" >{$cat.title}</a></li>
@@ -3005,9 +2910,9 @@
 		</li> -->
 
 
-		<!-- <li>
-			<h2><a href="/clothing-sale" style="color:#FF1744 !important">SALE</a></h2>
-		</li> -->
+		<li>
+			<h2><a href="/clothing-sale" class="sale-font-color-mobile">SALE</a></h2>
+		</li>
 
 
 		<li>
@@ -3394,6 +3299,6 @@
 
 {literal}
 <style>
-  .black-friday{float:none !important;color:#E493CD !important}.black-friday:hover:before{background-color:#E493CD !important}.black-friday li{padding:10px 0 10px 10px !important}.black-friday li a{color:#E493CD !important}.black-friday li a:hover:before{background-color:#E493CD !important}.holiday-flash-sale-nav{color:#A18CBA !important;text-transform:uppercase !important}.holiday-flash-sale-nav:hover:before{background-color:#A18CBA !important}.bf-font-color-mobile{color:#E493CD !important}.bf-font-color-mobile:hover:before{background-color:#E493CD !important}.new-arrivals-font-color-mobile{color:#58CCAD !important}.sale-font-color-mobile{color:#C2D05E !important}@media screen and (max-width:430px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}@media screen and (max-width:810px){.promo-submenu{font-size:.875rem !important}}.flex-menu{display:flex !important;flex-wrap:nowrap !important;padding:2% 3% !important;justify-content:space-between}.panel,.panel-1,.panel-2,.panel-3,.panel-4{width:auto !important;float:none !important;display:flex !important;flex-wrap:nowrap !important;justify-content:center;flex-basis:100% !important}.panel ul,.panel-1 ul,.panel-2 ul,.panel-3 ul,.panel-4 ul{float:none !important;width:auto !important;flex-basis:100% !important;padding:0 !important}@media screen and (max-width:1679px){.panel ul li a,.panel-1 ul li a,.panel-2 ul li a,.panel-3 ul li a,.panel-4 ul li a{font-size:.9vw !important;line-height:1vw !important}}.panel ul li a.sale,.panel-1 ul li a.sale,.panel-2 ul li a.sale,.panel-3 ul li a.sale,.panel-4 ul li a.sale{font-family:gilroy-bold !important}.panel-2,.panel-3,.panel-4{padding:0 0 0 1vw !important}.panel-3{flex-basis:161% !important}.new.arrivals{color:#436FC1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436FC1 !important}.panel-1{border-right:1px solid #B2BAC4}.panel-2{border-right:1px solid #B2BAC4}.panel-4{border-right:1px solid #B2BAC4;flex-wrap:wrap !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}header .site-header-inner .site-nav-submenu div.bar{display:flex;justify-content:center;padding:0}@media screen and (max-width:430px){header .site-header-inner .site-nav-submenu{display:none}}@media screen and (max-width:430px){header.fixed{height:70px}}header .site-header-inner .nav .site-nav-links li{white-space:nowrap}@media screen and (max-width:834px){.nav.col-s-12.col-xs-12.col-xxs-12{display:none}}
+  .black-friday{float:none !important;color:#E493CD !important}.black-friday:hover:before{background-color:#E493CD !important}.black-friday li{padding:10px 0 10px 10px !important}.black-friday li a{color:#E493CD !important}.black-friday li a:hover:before{background-color:#E493CD !important}.holiday-flash-sale-nav{color:#A18CBA !important;text-transform:uppercase !important}.holiday-flash-sale-nav:hover:before{background-color:#A18CBA !important}.bf-font-color-mobile{color:#E493CD !important}.bf-font-color-mobile:hover:before{background-color:#E493CD !important}.cm-font-color-mobile{color:#556A82 !important}.cm-font-color-mobile:hover:before{background-color:#556A82 !important}.new-arrivals-font-color-mobile{color:#47363D !important}.sale-font-color-mobile{color:#FF0009 !important}@media screen and (max-width:430px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}@media screen and (max-width:810px){.promo-submenu{font-size:.875rem !important}}.flex-menu{display:flex !important;flex-wrap:nowrap !important;padding:2% 3% !important;justify-content:space-between}.panel,.panel-1,.panel-2,.panel-3,.panel-4{width:auto !important;float:none !important;display:flex !important;flex-wrap:nowrap !important;justify-content:center;flex-basis:100% !important}.panel ul,.panel-1 ul,.panel-2 ul,.panel-3 ul,.panel-4 ul{float:none !important;width:auto !important;flex-basis:100% !important;padding:0 !important}@media screen and (max-width:1679px){.panel ul li a,.panel-1 ul li a,.panel-2 ul li a,.panel-3 ul li a,.panel-4 ul li a{font-size:.9vw !important;line-height:1vw !important}}.panel ul li a.sale,.panel-1 ul li a.sale,.panel-2 ul li a.sale,.panel-3 ul li a.sale,.panel-4 ul li a.sale{font-family:gilroy-bold !important}.panel-2,.panel-3,.panel-4{padding:0 0 0 1vw !important}.panel-3{flex-basis:161% !important}.new.arrivals{color:#436FC1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436FC1 !important}.panel-1{border-right:1px solid #B2BAC4}.panel-2{border-right:1px solid #B2BAC4}.panel-4{border-right:1px solid #B2BAC4;flex-wrap:wrap !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}header .site-header-inner .site-nav-submenu div.bar{display:flex;justify-content:center;padding:0}@media screen and (max-width:430px){header .site-header-inner .site-nav-submenu{display:none}}@media screen and (max-width:430px){header.fixed{height:70px}}header .site-header-inner .nav .site-nav-links li{white-space:nowrap}@media screen and (max-width:834px){.nav.col-s-12.col-xs-12.col-xxs-12{display:none}}
 </style>
 {/literal}

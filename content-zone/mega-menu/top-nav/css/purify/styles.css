@@ -2,16 +2,20 @@
   color: #E493CD !important;
 }
 
+.dept-cm a {
+  color: #556A82 !important;
+}
+
 .dept-warehouse a {
   color: #FF1744 !important;
 }
 
 .dept-sale a {
-  color: #C2D05E !important;
+  color: #FF0009 !important;
 }
 
 .dept-sale:hover .line {
-  border-color: #C2D05E !important;
+  border-color: #FF0009 !important;
 }
 
 .dept-clearance a {
@@ -23,7 +27,7 @@
 }
 
 .dept-new-arrivals a {
-  color: #58CCAD !important;
+  color: #47363D !important;
 }
 
 .dept-select-styles a {

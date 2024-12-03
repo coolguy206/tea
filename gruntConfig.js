@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/gift-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/cyber-monday/dresses',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
