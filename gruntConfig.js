@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/gift-shop/default'
+    name: 'about/giving-back'
   },
   zone: {
     name: 'sliders/cyber-monday/dresses',
@@ -51,8 +51,8 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
-    css: '',
+    name: 'headers',
+    css: 'select-styles',
     js: '',
     ftp: {
       css: {

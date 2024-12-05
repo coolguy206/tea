@@ -13,7 +13,7 @@ $(document).ready(function () {
     // $('.promo1-url.girl').show();
     $('.promo1-url').show();
     // $('.promo2-url').show();
-    //  $('.promo3-url').show();
+    $('.promo3-url').show();
     //  $('.clearance-url').show();
     // $('.promo2-url').hide();
     // $('.clearance-url').hide();
@@ -28,7 +28,7 @@ $(document).ready(function () {
     // $('.promo1-url.boy').show();
     $('.promo1-url').show();
     // $('.promo2-url').show();
-    // $('.promo3-url').show();
+    $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo2-url').hide();
     // $('.clearance-url').hide();
@@ -41,7 +41,7 @@ $(document).ready(function () {
     // $('.promo1-url').hide();
     $('.promo1-url').show();
     // $('.promo2-url').show();
-    // $('.promo3-url').show();
+    $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
     // $('.promo1-url.girl').show();
@@ -73,7 +73,7 @@ $(document).ready(function () {
   $('.dept-baby').hover(function () {
     $('.promo1-url').show();
     //  $('.promo2-url').show();
-    // $('.promo3-url').show();
+    $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
