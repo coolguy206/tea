@@ -1,7 +1,8 @@
 <div id="site-nav-mobile" class="site-nav-mobile">
 	<ul>
 		
-		{*<li>
+		{*
+		<li>
 			<h2 class="bf-font-color-mobile">Black Friday <span class="fas fa-plus"></span></h2>
 			<div class="sub">
 				
@@ -148,17 +149,17 @@
 				<h3><a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a></h3>
 
 			</div>
-		</li>*}
+		</li>
 		
 		<li>
 			<h2>⚡cyber monday⚡<span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				{*
+
 				<h3><a href="/tee-shop" class="view all" data="mobile mega menu tees">view all</a></h3>
 				{sub_cats name="cat" category="tee-shop"}
 				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees">{$cat.title}</a></h3>
 				{/sub_cats}
-				*}
+
 
 				<h3><a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles">girl</a></h3>
 
@@ -173,10 +174,7 @@
 				<h3><a href="/select-styles" data="mega menu select-styles">shop all</a></h3>
 			</div>
 		</li>
-
-		<li>
-			<h2><a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a></h2>
-		</li>
+		*}
 		
 
 		<li>
@@ -201,13 +199,15 @@
 			<div class="sub"></div>
 		</li> -->
 
-		<!-- <li>
-			<h2><a href="/special-occasion">✨SPECIAL OCCASION✨<span class="fas fa-plus"></span></a></h2>
-			<div class="sub"> -->
-				{*include "../special-occasion/shop-by-collection-m.html"*}
-			<!-- </div>
-		</li> -->
 
+		<li>
+			<h2><a href="/special-occasion">✨SPECIAL OCCASION✨</a></h2>
+			<div class="sub">
+				{*include "../special-occasion/shop-by-collection-m.html"*}
+			</div>
+		</li>
+
+		
 		<li>
 			<h2>🎁GIFT SHOP🎁 <span class="fas fa-plus"></span></h2>
 			<div class="sub">
