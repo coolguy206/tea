@@ -82,7 +82,7 @@ jQuery(document).ready(function () {
     }
   });
   $('.close-fancy, .fancybox-close-small').on('click', function (e) {
-    // e.preventDefault();
+    e.preventDefault();
     // console.log(`fancy closed clicked`);
     $.fancybox.close();
     $('.fancybox-container').hide();
@@ -93,7 +93,8 @@ jQuery(document).ready(function () {
     mode: 'fade',
     controls: false,
     pager: false,
-    pause: 2500,
+    // pause: 8000,
+    touchEnabled: false,
     onSliderLoad: function onSliderLoad() {
       $('.promos.promo1, .promos.promo2').show();
     }
