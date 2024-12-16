@@ -46,7 +46,7 @@ $(document).ready(function () {
         if (year == holidayYear) {
           if (val.name !== "Good Friday" && val.name !== "Martin Luther King, Jr. Day" && val.name !== "Washington's Birthday" && val.name !== "Juneteenth" && val.name !== "Columbus Day" && val.name !== "Veterans Day" && val.name !== "Veterans Day") {
             if (month == 12 && month == holidayMonth) {
-              message = "\n          <h3>".concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n          <h3>").concat(newData[0].name, " ").concat(nextYearMonth, "/").concat(nextYearDay, "/").concat(nextYearYear, "</h3>\n          ");
+              message = "\n                <h3>Christmas Eve ".concat(holidayMonth, "/24/").concat(holidayYear, "</h3>\n                <h3>").concat(val.name, " ").concat(holidayMonth, "/").concat(holidayDay, "/").concat(holidayYear, "</h3>\n                <h3>New Year\u2019s Eve ").concat(holidayMonth, "/31/").concat(holidayYear, "</h3>\n                <h3>").concat(newData[0].name, " ").concat(nextYearMonth, "/").concat(nextYearDay, "/").concat(nextYearYear, "</h3>\n              ");
               $('.holiday-closure p').html(message);
               $('.holiday-closure').show();
             } else if (month == 7 && month == holidayMonth) {

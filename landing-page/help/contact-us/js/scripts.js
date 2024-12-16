@@ -49,19 +49,22 @@ $(document).ready(function () {
 
             if (month == 12 && month == holidayMonth) {
               message = `
-          <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
-          <h3>${newData[0].name} ${nextYearMonth}/${nextYearDay}/${nextYearYear}</h3>
-          `;
+                <h3>Christmas Eve ${holidayMonth}/24/${holidayYear}</h3>
+                <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
+                <h3>New Year’s Eve ${holidayMonth}/31/${holidayYear}</h3>
+                <h3>${newData[0].name} ${nextYearMonth}/${nextYearDay}/${nextYearYear}</h3>
+              `;
+              
               $('.holiday-closure p').html(message);
               $('.holiday-closure').show();
             } else if (month == 7 && month == holidayMonth) {
 
-              var theDay = new Date(`${holidayMonth}/${holidayDay-1}/${holidayYear}`).getDay();
-              theDay = weekdays[theDay -1];
+              var theDay = new Date(`${holidayMonth}/${holidayDay - 1}/${holidayYear}`).getDay();
+              theDay = weekdays[theDay - 1];
 
               // console.log(theDay);
               message = `
-              <!-- <h3>${theDay} ${holidayMonth}/${holidayDay-1}/${holidayYear}</h3> -->
+              <!-- <h3>${theDay} ${holidayMonth}/${holidayDay - 1}/${holidayYear}</h3> -->
               <h3>${val.name} ${holidayMonth}/${holidayDay}/${holidayYear}</h3>
               `;
               $('.holiday-closure p').html(message);
