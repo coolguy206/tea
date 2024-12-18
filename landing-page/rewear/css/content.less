@@ -1,5 +1,126 @@
 @import 'vars.less';
 
 .content-wrap {
-	
+    h1 {
+        color: #FFF;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 80px;
+        line-height: 80px;
+        margin: 0 0 40px;
+    }
+
+    h2 {
+        color: #436FC1;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 12px;
+        text-transform: uppercase;
+        margin: 0 0 40px;
+    }
+
+    h3 {
+        color: #436FC1;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 24px;
+        line-height: 48px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+
+    p {
+        color: #47363D;
+        text-align: center;
+        font-family: @souv;
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+    }
+
+    .the-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -22%);
+        text-align: center;
+    }
+
+    .cta-border {
+        background: #436FC1;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .c1 {
+        img {
+            width: 100%;
+        }
+
+        .cta-border {
+            width: 272px;
+        }
+    }
+
+    .c2 {
+        padding: 60px 0;
+        text-align: center;
+
+        p {
+            font-size: 36px;
+            line-height: 40px margin: 0;
+        }
+
+        ol {
+            list-style-type: none;
+            display: flex;
+            margin: 75px 0;
+            justify-content: space-between;
+
+            li {
+                p {
+                    font-size: 26px;
+                    line-height: 36px;
+                    margin: 70px 0 0;
+                }
+            }
+
+        }
+
+        .cta-border {
+            width: 383px;
+        }
+    }
+
+    .c3 {
+        background: #F7EBE5;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 110px 0;
+        text-align: center;
+        flex-wrap: wrap;
+        row-gap: 80px;
+
+        div {
+            &:last-of-type {
+                flex-basis: 100%;
+            }
+        }
+
+        .cta-border {
+            width: 252px;
+        }
+    }
+
+    .c4 {
+        padding: 50px 0;
+
+        p {
+            font-style: italic;
+        }
+    }
 }

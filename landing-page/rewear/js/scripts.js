@@ -4,6 +4,6 @@ import {
 
 $(document).ready(function () {
 
-  inview('.content-wrap');
+  inview('.content-wrap .c1, .content-wrap .c2, .content-wrap .c3');
 
 });
