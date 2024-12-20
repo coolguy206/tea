@@ -37,7 +37,7 @@ module.exports = {
     name: 'about/giving-back'
   },
   zone: {
-    name: 'sliders/cyber-monday/dresses',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
