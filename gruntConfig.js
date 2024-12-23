@@ -51,8 +51,8 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
-    css: '',
+    name: 'headers',
+    css: 'select-styles',
     js: '',
     ftp: {
       css: {

@@ -4,7 +4,7 @@
 .container-promo-header {
     .the-content.select-styles {
         @media screen and (max-width: 430px) {
-            column-gap: 4vw !important;
+            column-gap: 0vw !important;
             justify-content: center !important;
         }
 
@@ -15,20 +15,27 @@
             width: 100%;
         }
 
+        a {
+            @media screen and (max-width: 430px) {
+                flex-basis: 46% !important;
+            }
+
+        }
+
         a.cta5 {
-            @media screen and (max-width: 430px){
+            @media screen and (max-width: 430px) {
                 display: block !important;
             }
         }
 
         .the-cta {
-            // position: relative !important;
+            position: relative !important;
             // bottom: 10% !important;
         }
 
         .cta-border {
-            background: #fff !important;
-            color: #47363D !important;
+            background: #5F8099 !important;
+            color: #FBFD38 !important;
         }
     }
 
