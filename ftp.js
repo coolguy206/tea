@@ -7,24 +7,24 @@ require('dotenv').config()
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/1216/v0/`;
+var category = `promos/one-offs/2024/1219/v0/`;
 // var category = `homepage/2024/1107/v0/`;
 // var category = `headers/2024/1107/v0/`;
-// var category = `landing-pages/gift-shop/2024/1107/v0/`;
+// var category = `landing-pages/rewear/2024/1217/v0/`;
 // var category = `mega-menu/2024/0109/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1216/`;
-// var readFilePath = `handoff/landing-pages/gift-guide/1107/Handoff/`;
+var readFilePath = `Site/1219/Site/mega/`;
+// var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/1208/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/1216/`;
+// var writeFilePath = `promos/default/dev/images/homepage/1219/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/1219/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
-// var writeFilePath = `landing-page/shops/gift-shop/default/dev/images/1107/`;
+// var writeFilePath = `landing-page/rewear/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/1107/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;

@@ -126,7 +126,7 @@ export const switchSale = (href) => {
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
-      // $('.promo1-url').show();
+      $('.promo1-url').show();
       // $('.promo2-url').show();
       $('.promo3-url').show();
       // $('.clearance-url').show();
@@ -142,7 +142,7 @@ export const switchSale = (href) => {
       break;
   }
 
-  $('.promo1-url').attr('href', promo1);
+  // $('.promo1-url').attr('href', promo1);
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo3);
   $('.clearance-url').attr('href', clearance);

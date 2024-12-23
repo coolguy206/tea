@@ -122,7 +122,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
-      // $('.promo1-url').show();
+      $('.promo1-url').show();
       // $('.promo2-url').show();
       $('.promo3-url').show();
       // $('.clearance-url').show();
@@ -136,7 +136,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
     default:
       break;
   }
-  $('.promo1-url').attr('href', promo1);
+
+  // $('.promo1-url').attr('href', promo1);
   $('.promo2-url').attr('href', promo2);
   $('.promo3-url').attr('href', promo3);
   $('.clearance-url').attr('href', clearance);
