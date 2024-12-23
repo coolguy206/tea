@@ -37,7 +37,7 @@ module.exports = {
     name: 'about/giving-back'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/dresses',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -51,8 +51,8 @@ module.exports = {
     },
   },
   promo: {
-    name: 'headers',
-    css: 'select-styles',
+    name: 'default',
+    css: '',
     js: '',
     ftp: {
       css: {
