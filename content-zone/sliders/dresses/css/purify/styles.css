@@ -24,6 +24,10 @@
   position: unset;
 }
 
+.dresses img {
+  display: block;
+}
+
 .dresses li {
   position: relative;
 }
@@ -31,12 +35,6 @@
 .dresses .glide {
   max-width: 1290px;
   margin: 0 auto;
-}
-
-@media screen and (max-width:430px) {
-  .dresses div[data-glide-el="controls"] {
-    display: none;
-  }
 }
 
 .dresses .width-300 {

@@ -33,12 +33,6 @@
   margin: 0 auto;
 }
 
-@media screen and (max-width:430px) {
-  .best-sellers div[data-glide-el="controls"] {
-    display: none;
-  }
-}
-
 .best-sellers .width-300 {
   justify-content: center;
 }

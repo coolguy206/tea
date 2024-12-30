@@ -5,9 +5,11 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
+var num = `1226`
+
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/1219/v0/`;
+var category = `promos/one-offs/2024/${num}/v1/`;
 // var category = `homepage/2024/1107/v0/`;
 // var category = `headers/2024/1107/v0/`;
 // var category = `landing-pages/rewear/2024/1217/v0/`;
@@ -17,12 +19,12 @@ var category = `promos/one-offs/2024/1219/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/1219/Site/mega/`;
+var readFilePath = `Site/${num}/Site/hp/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/1219/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/1219/`;
+var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/rewear/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/1107/`;

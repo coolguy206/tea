@@ -1,11 +1,12 @@
 <div class="best-sellers">
-    <h2>Best Sellers</h2>
+    <!-- <h2>Best Sellers</h2> -->
+    <div class="white-out"></div>
 
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 
-                {load_thumbs mode="category_recursive" category="best-sellers"}
+                {load_thumbs mode="category_recursive" category="clothing-sale"}
                 {thumb_loop count="20"}
                     {thumb name=cat}
                         {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}

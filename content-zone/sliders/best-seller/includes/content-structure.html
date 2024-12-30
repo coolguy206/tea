@@ -1,11 +1,12 @@
 <div class="best-sellers">
-    <h2>Best Sellers</h2>
+    <!-- <h2>Best Sellers</h2> -->
+    <div class="white-out"></div>
 
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 
-                {load_thumbs mode="category_recursive" category="best-sellers"}
+                {load_thumbs mode="category_recursive" category="clothing-sale"}
                 {thumb_loop count="20"}
                     {thumb name=cat}
                         {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}
@@ -121,10 +122,10 @@
 
         <div data-glide-el="controls">
             <span data-glide-dir="<" class="lt-arrow">
-                <img data-src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
+                <img data-set="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
             </span>
             <span data-glide-dir=">" class="rt-arrow">
-                <img data-src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
+                <img data-set="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
             </span>
         </div>
     </div>

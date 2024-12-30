@@ -8,24 +8,26 @@ $(document).ready(function () {
 
   $('.dresses').css('opacity', 1);
 
+  $($(`.dresses .lgw-thumb`)[6]).before($('.dresses .img-2'));
+
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
   if ($('.dresses li').length >= 5 || window.innerWidth < 431) {
     new Glide('.dresses .glide', {
-      type: 'slider',
+      type: 'carousel',
       // autoplay: 4000,
       animationDuration: 500,
-      perView: 4,
+      perView: 5,
       hoverpause: true,
       gap: 0,
       bound: true,
       rewind: false,
       breakpoints: {
-        821: {
-          perView: 3,
-          perSwipe: '|',
-        },
+        // 821: {
+        //   perView: 3,
+        //   perSwipe: '|',
+        // },
         431: {
-          perView: 1,
+          perView: 2,
           perSwipe: '|',
         },
       }

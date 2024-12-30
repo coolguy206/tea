@@ -1,12 +1,29 @@
-<div class="dresses">
-    <h2>Dresses</h2>
+<div class="dresses sliders">
+    <!-- <h2>Dresses</h2> -->
+    <div class="white-out"></div>
 
     <div class="glide">
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
+
+                <li class="lgw-thumb img-1">
+                    <div class="thumb-grid item" style="width: 309px; max-width: 100%; padding: 0;">
+                        <a href="/select-styles/dresses">
+                            <img src="/mas_assets/media/tea_collection/promos/one-offs/2024/1226/v1/dresses_01.jpg">
+                        </a>
+                    </div>
+                </li>
+
+                <li class="lgw-thumb img-2">
+                    <div class="thumb-grid item" style="width: 309px; max-width: 100%; padding: 0;">
+                        <a href="/select-styles/dresses">
+                            <img src="/mas_assets/media/tea_collection/promos/one-offs/2024/1226/v0/dresses_02.jpg">
+                        </a>
+                    </div>
+                </li>
                 
-                {load_thumbs mode="category_recursive" category="baby-clothes"}
-                {thumb_loop count="20"}
+                {load_thumbs mode="category_recursive" category="select-styles/dresses"}
+                {thumb_loop count="8"}
                     {thumb name=cat}
                         {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}
                         <li class="lgw-thumb">
@@ -121,10 +138,10 @@
 
         <div data-glide-el="controls">
             <span data-glide-dir="<" class="lt-arrow">
-                <img data-src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
+                <img data-set="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
             </span>
             <span data-glide-dir=">" class="rt-arrow">
-                <img data-src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
+                <img data-set="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
             </span>
         </div>
     </div>

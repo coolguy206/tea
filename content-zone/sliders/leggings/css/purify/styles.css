@@ -24,6 +24,10 @@
   position: unset;
 }
 
+.leggings img {
+  display: block;
+}
+
 .leggings li {
   position: relative;
 }
@@ -31,12 +35,6 @@
 .leggings .glide {
   max-width: 1290px;
   margin: 0 auto;
-}
-
-@media screen and (max-width:430px) {
-  .leggings div[data-glide-el="controls"] {
-    display: none;
-  }
 }
 
 .leggings .width-300 {
