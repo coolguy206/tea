@@ -5,11 +5,11 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
-var num = `1226`
+var num = `0101`
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2024/${num}/v1/`;
+var category = `promos/one-offs/2025/${num}/v0/`;
 // var category = `homepage/2024/1107/v0/`;
 // var category = `headers/2024/1107/v0/`;
 // var category = `landing-pages/rewear/2024/1217/v0/`;
@@ -19,7 +19,7 @@ var category = `promos/one-offs/2024/${num}/v1/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/Site/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
