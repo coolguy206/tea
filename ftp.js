@@ -5,29 +5,30 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
-var num = `0101`
+var year = `2025`;
+var num = `0107`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/2025/${num}/v0/`;
-// var category = `homepage/2024/1107/v0/`;
-// var category = `headers/2024/1107/v0/`;
-// var category = `landing-pages/rewear/2024/1217/v0/`;
-// var category = `mega-menu/2024/0109/v0/`;
+var category = `promos/one-offs/${year}/${num}/v0/`;
+// var category = `homepage/${year}/${num}/v0/`;
+// var category = `headers/${year}/${num}/v0/`;
+// var category = `landing-pages/rewear/${year}/${num}/v0/`;
+// var category = `mega-menu/${year}/${num}/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/`;
+var readFilePath = `Site/${num}/03 Handoff/Category Headers/Lunar New Year/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-// var writeFilePath = `promos/headers/dev/images/select-styles/`;
+var writeFilePath = `promos/headers/dev/images/promo/lunar-new-year/`;
 // var writeFilePath = `landing-page/rewear/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/1107/`;
+// var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;

@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/01 January/010125 End of Season Sale pt 2/04 Handoff/Site/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Site/110724 Winter 2 HP/03 Handoff/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2024/Campaign/120324 Giving Tuesday/04 Handoff/Site/`
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/01 January/010125 End of Season Sale pt 2/04 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/010725 Winter 3 Launch/03 Handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/120324 Giving Tuesday/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0101/`;
+  var writeFilePath = `Site/0107/`;
   // var writeFilePath = `handoff/landing-pages/gift-guide/1107/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
