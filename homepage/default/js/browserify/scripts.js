@@ -61,9 +61,9 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "d
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.best-sellers'));
-  $('.hp .shop-slideshow2').append($('.dresses.sliders'));
-  $('.hp .shop-slideshow3').append($('.leggings.sliders'));
+  $('.hp .shop-slideshow').append($('.the-sliders'));
+  // $('.hp .shop-slideshow2').append($('.dresses.sliders'));
+  // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 });
 $(document).ready(function () {
