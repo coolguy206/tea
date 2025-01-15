@@ -14,15 +14,15 @@
 @promo-skinny-cta5-background: #2B5579;
 @promo-skinny-cta6-color: @promo-skinny-cta1-color;
 @promo-skinny-cta6-background: #EC5152;
-@promo-skinny-background-color: #D05F9A;
+@promo-skinny-background-color: #436FC1;
 
 .promo1-skinny {
   @media screen and (max-width: 1679px) {
-    height: 9vw;
+    height: 4vw;
   }
 
   @media screen and (max-width: 430px) {
-    height: 71vw;
+    height: 31vw;
     flex-wrap: wrap;
     // display: none;
   }
@@ -31,7 +31,7 @@
   display: flex;
   width: 100%;
   background: @promo-skinny-background-color;
-  height: 145px;
+  height: 65px;
   min-height: auto !important;
   align-items: center;
 
@@ -62,12 +62,12 @@
 
       position: absolute;
       top: 50%;
-      transform: translate(0, -50%);
-      width: 100%;
-      left: 0;
+      transform: translate(-50%, -50%);
+      width: auto;
+      left: 50%;
       display: flex;
       justify-content: center;
-      column-gap: 65px;
+      // column-gap: 65px;
       align-items: center;
       // text-align: center;
       // width: 40%;
@@ -124,7 +124,7 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 1.7vw;
+          font-size: 1.1vw;
           // left: 19vw;
           letter-spacing: .3vw;
           // line-height: 4.8vw;
@@ -132,18 +132,18 @@
 
         @media screen and (max-width: 430px) {
           margin: 0 0 4vw;
-          font-size: 6vw;
+          font-size: 4vw;
           letter-spacing: 1vw;
           // left: 0;
         }
 
         text-transform: uppercase;
         color: @promo-skinny-h2-color;
-        font-family: @gilroybl;
+        font-family: @gilroyb;
         margin: 0;
-        font-size: 28px;
+        font-size: 18px;
         line-height: normal;
-        letter-spacing: 4.8px;
+        letter-spacing: 3.6px;
         // display: inline-block;
         // left: 327px;
         position: relative;

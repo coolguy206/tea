@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'about/giving-back'
+    name: 'policy/privacy-policy'
   },
   zone: {
     name: 'mega-menu/sub-nav',
@@ -52,7 +52,7 @@ module.exports = {
   },
   promo: {
     name: 'headers',
-    css: 'select-styles',
+    css: 'warehouse',
     js: '',
     ftp: {
       css: {
