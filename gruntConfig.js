@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'rewear'
+    name: 'rewear/default'
   },
   zone: {
     name: 'sliders/cyber-monday/dresses',
