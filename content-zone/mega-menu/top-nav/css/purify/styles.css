@@ -7,7 +7,7 @@
 }
 
 .dept-warehouse a {
-  color: #FF1744 !important;
+  color: #FF0009 !important;
 }
 
 .dept-sale a {
@@ -19,11 +19,11 @@
 }
 
 .dept-clearance a {
-  color: #FF1744 !important;
+  color: #C912EB !important;
 }
 
 .dept-clearance:hover .line {
-  border-color: #FF1744 !important;
+  border-color: #C912EB !important;
 }
 
 .dept-new-arrivals a {

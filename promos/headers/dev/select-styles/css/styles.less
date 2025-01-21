@@ -7,16 +7,23 @@
     }
 
     .the-content.select-styles {
+        @media screen and (max-width: 1679px){
+            column-gap: 1.5vw !important;
+            row-gap: 1.5vw;
+        }
         @media screen and (max-width: 430px) {
-            column-gap: 0vw !important;
+            column-gap: 4vw !important;
+            row-gap: 4vw;
             justify-content: center !important;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -65%);
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -65%);
         }
 
-        column-gap: 0 !important;
+        column-gap: 24px !important;
+        row-gap: 24px;
+        flex-wrap: wrap;
         justify-content: left !important;
 
         img {
@@ -25,9 +32,16 @@
 
         a {
             @media screen and (max-width: 430px) {
-                flex-basis: 46% !important;
+                flex-basis: auto !important;
             }
 
+        }
+
+        a.cta0 {
+            .cta-border {
+                background: #F4B6FF !important;
+                color: #586397 !important;
+            }
         }
 
         a.cta5 {
@@ -37,16 +51,25 @@
         }
 
         .the-cta {
-            @media screen and (max-width: 430px) {
-                position: relative !important;
-            }
-            // position: relative !important;
+            // @media screen and (max-width: 430px) {
+            //     position: relative !important;
+            // }
+            position: relative !important;
             // bottom: 10% !important;
         }
 
         .cta-border {
+            @media screen and (max-width: 1679px) {
+                width: 24vw !important;
+            }
+            @media screen and (max-width: 430px) {
+                width: 44vw !important;
+                font-size: 2vw !important;
+            }
+
             background: #586397 !important;
             color: #fff !important;
+            width: 411px;
         }
     }
 
