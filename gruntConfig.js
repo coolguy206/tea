@@ -52,7 +52,7 @@ module.exports = {
   },
   promo: {
     name: 'headers',
-    css: 'warehouse',
+    css: '',
     js: '',
     ftp: {
       css: {

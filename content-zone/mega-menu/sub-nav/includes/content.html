@@ -2087,6 +2087,7 @@
 		</li>
 		*}
 
+
 		<li>
 			<h2><a href="/new-arrivals" class="new-arrivals-font-color-mobile">NEW</a>
 				<!--<span class="fas fa-plus"></span>-->
@@ -2105,51 +2106,10 @@
 
 
 		<li>
-			<h2><a href="/select-styles" style="color: #FF0009 !important;">Warehouse Sale</a></h2>
-		</li>
-
-		<li>
-			<h2><a href="/sale/clearance" style="color:#C912EB !important">last chance: extra 30% off</a></h2>
-		</li>
-
-
-		<li>
-			<h2><a href="/valentines-day-print-shop" style="">❤️v-day shop❤️</a></h2>
+			<h2><a href="/valentines-day-print-shop" style="">❤️25% off v-day❤️</a></h2>
 			<div class="sub"></div>
 		</li>
 		
-
-		<!-- <li>
-			<h2><a href="/special-occasion">✨HOLIDAY✨</a></h2>
-			<div class="sub">
-				{*include "../special-occasion/shop-by-collection-m.html"*}
-			</div>
-		</li> -->
-
-		
-		<!-- <li>
-			<h2>🎁GIFT SHOP🎁 <span class="fas fa-plus"></span></h2>
-			<div class="sub"> -->
-				<!-- include "../gifts/sub-gifts-m.html" -->
-			<!-- </div>
-		</li> -->
-
-		<!-- <li>
-			<h2><a href="/kids-fall-outfits">🍁Fall Edit🍁</a></h2>
-		</li> -->
-
-
-		<!-- <li>
-			<h2><a href="/back-to-school-shop">back to school</a></h2>
-		</li> -->
-
-
-		<!-- <li>
-			<h2>
-				<a href="/global-shop" class="">&#127757; Global Shop &#127757;</a>
-			</h2>
-		</li> -->
-
 
 		<li>
 			<h2>Girl <span class="fas fa-plus"></span></h2>
@@ -2847,6 +2807,65 @@
 
 
 		<li>
+			<h2><!--&#127754;--> Swim <!--&#127754;--> <span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				<!-- <h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3> -->
+				<div class="links swim">
+				  <ul>
+				    <li>Shop by Department</li>
+				    <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
+				    <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
+				    <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
+				    <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
+				    <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
+				    <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
+				    <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
+				  <ul>
+				    <li>Shop by Category</li>
+				    <!-- include "../shop-by-collection.html" -->
+				 
+				    {sub_cats name="cat" category="swim-shop/shop-by-category"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim" >{$cat.title}</a></li>
+				    {/sub_cats}
+				    
+				    <li><a href="/teaxgreensprouts" class="" data="mega menu swim">Tea x Green Sprouts</a></li>
+				  </ul>
+
+				</div>
+
+				{literal}
+				<style>
+				    header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
+				    display:none;
+				    
+				  }
+				@media screen and (max-width:430px){
+				  header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
+				    display:block;
+				    padding-top:0;
+				  }
+				}
+				</style>
+				{/literal}
+			</div>
+		</li>
+
+
+		<li>
+			<h2>Family Matching<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				<h3><a href="/family-outfitting" class="sibling shop" data="mobile mega menu family" >family outfitting</a></h3>
+				 <h3><a href="/sibling-shop" class="sibling shop" data="mobile mega menu family" >sibling shop</a></h3>
+				{sub_cats name="cat" category="family-outfitting"}
+				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu family" >{$cat.title}</a></h3>
+				{/sub_cats}
+			</div>
+		</li>
+
+
+		<li>
 			<h2>Tees<span class="fas fa-plus"></span></h2>
 			<div class="sub">
 
@@ -2860,6 +2879,7 @@
 				{/sub_cats}
 			</div>
 		</li>
+
 
 		<!-- <li>
 			<h2>Shorts<span class="fas fa-plus"></span></h2>
@@ -2906,61 +2926,125 @@
 			<h2><a href="#" class="kidizen-url">Pre-Loved</a></h2>
 		</li>
 
+
 		<li>
 			<h2><a href="/clothing-sale" class="sale-font-color-mobile">SALE</a></h2>
 		</li>
 
-		<!-- <li>
+
+		<li>
 			<h2><a href="/sale/clearance" style="color:#FF1744 !important">CLEARANCE</a></h2>
-		</li> -->
+		</li>
 
 
-		{*
+{*
 
 			<li>
-				<h2><!--&#127754;--> Swim <!--&#127754;--> <span class="fas fa-plus"></span></h2>
+				<h2><a href="/special-occasion">✨HOLIDAY✨</a></h2>
 				<div class="sub">
+					<!-- 
+					<h3><a href="/special-occasion" data="mega menu special occasion view all" >View All</a></h3>
+					<h3><a href="/girls-clothing/favorites/special-occasion" data="mega menu special occasion girl" >Girl</a></h3>
+					<h3><a href="/boys-clothing/favorites/special-occasion" data="mega menu special occasion boy" >Boy</a></h3>
+					<h3><a href="/baby-girl-clothes/favorites/special-occasion" data="mega menu special occasion baby girl" >Baby Girl</a></h3>
+					<h3><a href="/baby-boy-clothes/favorites/special-occasion" data="mega menu special occasion baby boy" >Baby Boy</a></h3>
+					<h3><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu special occasion adult dresses">Adult Dresses</a></h3> -->
+					<!-- <h3><a href="/select-styles/family" data="mega menu special occasion family" >Family</a></h3> -->
 
-					<!-- <h3><span class="fas fa-chevron-left"></span> Swim <span class="fas fa-chevron-right"></span></h3> -->
-					<div class="links swim">
-					  <ul>
-					    <li>Shop by Department</li>
-					    <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
-					    <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
-					    <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
-					    <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
-					    <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
-					    <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
-					    <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
-					  <ul>
-					    <li>Shop by Category</li>
-					    <!-- include "../shop-by-collection.html" -->
-					 
-					    {sub_cats name="cat" category="swim-shop/shop-by-category"}
-					      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim" >{$cat.title}</a></li>
-					    {/sub_cats}
-					    
-					    <li><a href="/teaxgreensprouts" class="" data="mega menu swim">Tea x Green Sprouts</a></li>
-					  </ul>
+					<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">VIEW ALL</a></h3>
+					<h3><a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">SIBLING SHOP</a></h3>
+					<h3><a href="/family-outfitting/mommy-and-me" data="mega menu family matching MOMMY & ME">MOMMY & ME</a></h3>
+					<h3><a href="/special-occasion/sibling" data="mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a></h3>
+					<h3><a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mega menu family matching SWIM">FAMILY SWIM</a></h3>
+					<h3><a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mega menu family matching PJs">FAMILY PJs</a></h3>
+
+
+				</div>
+			</li>
+	
+			
+			<li>
+				<h2>🎁GIFT SHOP🎁 <span class="fas fa-plus"></span></h2>
+				<div class="sub">
+					<!-- <h3><a href="/gift-shop" data="mobile mega menu gifts">gift guide</a></h3> -->
+
+					<div class="links gift-guide">
+					    <ul>
+					        <li><a href="/gift-shop" data="mega menu Gift Guide">Shop the Gift Guide</a></li>
+					        <li>Shop by Department</li>
+					        <li><a href="/girls-clothing/favorites/gift-shop" data="mega menu Gift Guide">Girl</a></li>
+					        <li><a href="/boys-clothing/favorites/gift-shop" data="mega menu Gift Guide">Boy</a></li>
+					        <li><a href="/baby-girl-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Girl</a></li>
+					        <li><a href="/baby-boy-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Boy</a></li>
+					        <li><a href="/newborn-clothing" data="mega menu Gift Guide">Newborn</a></li>
+					        <li><a href="/family-outfitting/adult" data="mega menu Gift Guide">Adult</a></li>
+					    </ul>
+
+					    <ul>
+					        <li>Shop by Collection</li>
+					        <li><a href="/gift-and-save-shop" data="mega menu Gift Guide">Gift & Save Shop</a></li>
+					        <li><a href="/cozy-shop" data="mega menu Gift Guide">Cozy & Cute</a></li>
+					        <li><a href="/dress-shop" data="mega menu Gift Guide">Dreamy Dresses</a></li>
+					        <li><a href="/holiday-print-shop" data="mega menu Gift Guide">Holiday Shop</a></li>
+					        <!-- <li><a href="/teaxsanrio" data="mega menu Gift Guide">Tea x Hello Kitty</a></li> -->
+					        <li><a href="/best-sellers" data="mega menu Gift Guide">Best Sellers</a></li>
+					        
+					        <li><a href="/product/giftfuroserv/furoshiki-wrap-service.html#cayenne" data="mega menu Gift Guide">Gift Wrap Services</a></li>
+					        <li><a href="/product/giftfurosupp/furoshiki-wrap-supplies.html#ink" data="mega menu Gift Guide">Gift Wrap Supplies</a></li>
+					        <li><a href="/product/egiftcard-999-ns/tea-collection-gift-certificate-gift-card.html" data="mega menu Gift Guide">Gift Cards</a></li>
+					    </ul>
 
 					</div>
 
 					{literal}
 					<style>
-					    header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
-					    display:none;
-					    
-					  }
-					@media screen and (max-width:430px){
-					  header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
-					    display:block;
-					    padding-top:0;
-					  }
-					}
+					    header .site-header-inner .site-nav-mobile ul li .sub .links.gift-guide {
+					        display: none;
+
+					    }
+
+					    @media screen and (max-width:835px) {
+					        header .site-header-inner .site-nav-mobile ul li .sub .links.gift-guide {
+					            display: block;
+					            padding-top: 0;
+					        }
+					    }
 					</style>
 					{/literal}
+
+					  
+
+					      
 				</div>
 			</li>
+	
+			
+			<li>
+				<h2><a href="/kids-fall-outfits">🍁Fall Edit🍁</a></h2>
+			</li>
+	
+	
+			<li>
+				<h2><a href="/back-to-school-shop">back to school</a></h2>
+			</li>
+	
+	
+			<li>
+				<h2>
+					<a href="/global-shop" class="">&#127757; Global Shop &#127757;</a>
+				</h2>
+			</li>
+
+
+			<li>
+				<h2><a href="/select-styles" style="color: #FF0009 !important;">Warehouse Sale</a></h2>
+			</li>
+	
+
+			<li>
+				<h2><a href="/sale/clearance" style="color:#C912EB !important">last chance: extra 30% off</a></h2>
+			</li>
+
 
 			<li>
 				<h2><a href="/warehousesale" style="color: #FF0009 !important;">flash Warehouse Sale</a></h2>
@@ -2972,6 +3056,7 @@
 					<a href="/select-styles" style="color: #0088A2 !important"><!--🦁--> end of season 40% off <!--🦁--></a>
 				</h2>
 			</li>
+
 
 		<li>
 			<h2><!--&#127754;--> <a href="/select-styles" style="color:#FF1744 !important">50% off all Swim</a>
@@ -3019,34 +3104,16 @@
 			</div>
 		</li>
 
-		
-
-		
-
-
-
-
-		
-
+	
 		<li>
 			<h2><a href="/cozy-shop">cozy shop</a></h2>
 		</li>
+
 
 		<li>
 			<h2><a href="/special-occasion">Special Occasion</a></h2>
 		</li>
 
-		<li>
-			<h2>Family<span class="fas fa-plus"></span></h2>
-			<div class="sub">
-
-				<h3><a href="/family-outfitting" class="sibling shop" data="mobile mega menu family" >family outfitting</a></h3>
-				 <h3><a href="/sibling-shop" class="sibling shop" data="mobile mega menu family" >sibling shop</a></h3>
-				{sub_cats name="cat" category="family-outfitting"}
-				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu family" >{$cat.title}</a></h3>
-				{/sub_cats}
-			</div>
-		</li>
 
 		<li>
 			<h2><a href="/sibling-shop">SIBLING</a></h2>
@@ -3320,7 +3387,7 @@
 		</li>
 
 
-		*}
+*}
 
 
 		<li>
