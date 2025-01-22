@@ -56,7 +56,7 @@ $(document).ready(function () {
   });
   $('.dept-swim').hover(function () {
     // $('.promo1-url.swim').show();
-    // $('.promo1-url').show();
+    $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();

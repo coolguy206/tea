@@ -116,12 +116,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
-      $('.promo1-url').show();
+      // $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
+      $('.promo1-url').hide();
       // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
@@ -133,7 +133,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
       // $('.promo1-url.swim').show();
-      // $('.promo1-url').show();
+      $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();

@@ -19,11 +19,11 @@
 }
 
 .dept-clearance a {
-  color: #C912EB !important;
+  color: #FF0009 !important;
 }
 
 .dept-clearance:hover .line {
-  border-color: #C912EB !important;
+  border-color: #FF0009 !important;
 }
 
 .dept-new-arrivals a {
