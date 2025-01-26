@@ -20,13 +20,13 @@ var category = `headers/${year}/${num}/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/03 Handoff/nav/print-shop/`;
+var readFilePath = `Site/${num}/nav/family shop/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+var writeFilePath = `promos/headers/dev/images/family/`;
 // var writeFilePath = `landing-page/rewear/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
