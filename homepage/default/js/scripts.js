@@ -33,7 +33,7 @@ $(document).ready(function () {
 
   new Glide('.c1 .glide', {
     type: 'carousel',
-    autoplay: 4000,
+    // autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -42,14 +42,14 @@ $(document).ready(function () {
     dragThreshold: false,
   }).mount();
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  new Glide('.c2 .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0
+  }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',
