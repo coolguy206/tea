@@ -12,22 +12,22 @@ var num = `0128`;
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/${year}/${num}/v0/`;
 // var category = `homepage/${year}/${num}/v0/`;
-var category = `headers/${year}/${num}/v1/`;
-// var category = `landing-pages/rewear/${year}/${num}/v0/`;
+// var category = `headers/${year}/${num}/v1/`;
+var category = `landing-pages/swim-shop/${year}/${num}/v0/`;
 // var category = `mega-menu/${year}/${num}/v0/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/category/category headers/brazil/`;
+var readFilePath = `Site/${num}/landing/Swim/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/promo/brazil/`;
-// var writeFilePath = `landing-page/rewear/dev/images/`;
+// var writeFilePath = `promos/headers/dev/images/promo/brazil/`;
+var writeFilePath = `landing-page/shops/swim-shop/default/dev/images/0128/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
