@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   new _glide["default"]('.c1 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
@@ -37,7 +37,7 @@ $(document).ready(function () {
   }).mount();
   new _glide["default"]('.c2 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
