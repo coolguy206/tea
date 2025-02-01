@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/swim-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/new-arrivals/all',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -51,7 +51,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'headers',
+    name: 'default',
     css: '',
     js: '',
     ftp: {

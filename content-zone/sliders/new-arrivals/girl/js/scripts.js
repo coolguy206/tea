@@ -21,7 +21,7 @@ $(document).ready(function () {
       rewind: false,
       breakpoints: {
         821: {
-          perView: 3,
+          perView: 4,
           perSwipe: '|',
         },
         431: {
