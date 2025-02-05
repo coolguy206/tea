@@ -6,12 +6,12 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0201`;
+var num = `0204`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/${year}/${num}/v0/`;
-// var category = `homepage/${year}/${num}/v0/`;
+// var category = `promos/one-offs/${year}/${num}/v0/`;
+var category = `homepage/${year}/${num}/v0/`;
 // var category = `headers/${year}/${num}/v0/`;
 // var category = `landing-pages/swim-shop/${year}/${num}/v0/`;
 // var category = `mega-menu/${year}/${num}/v0/`;
@@ -20,15 +20,15 @@ var category = `promos/one-offs/${year}/${num}/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/04 Handoff/promo/mega/`;
+var readFilePath = `Site/${num}/`;
 // var readFilePath = `handoff/landing-pages/tea-rewear/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/landing-pages/spring-break-edit/`;
 // var writeFilePath = `landing-page/shops/swim-shop/default/dev/images/0128/`;
-// var writeFilePath = `homepage/default/dev/images/${num}/`;
+var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
