@@ -1,0 +1,37 @@
+include "content-structure.html"
+
+{literal}
+<style>
+  /* include "../css/styles.css" */
+  include "../css/vars.css"
+
+  .content-wrap .cta-border {
+    width: 303px;
+    background: #436FC1;
+  }
+
+  @media screen and (max-width: 1679px) {
+    .content-wrap .cta-border {
+      width: 18vw;
+    }
+  }
+
+  @media screen and (max-width: 430px) {
+    .content-wrap .cta-border {
+      width: 70vw;
+    }
+  }
+
+  h1.box-ajax-none {
+    display: none;
+  }
+
+  .site-content .site-content-inner .site-content-bg-wrapper {
+    background: none;
+  }
+</style>
+
+<script>
+  /*include "../js/jsmin/scripts.min.js"*/
+</script>
+{/literal}

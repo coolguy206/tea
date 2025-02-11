@@ -1,0 +1,286 @@
+@import 'vars.less';
+
+.content-wrap {
+    h1 {
+        @media screen and (max-width: 1679px) {
+            font-size: 5vw;
+            line-height: 5vw;
+            margin: 0 0 3vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            color: #436FC1;
+            font-size: 8vw;
+            line-height: 8vw;
+            margin: 0 0 6vw;
+        }
+
+        color: #FFF;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 80px;
+        line-height: 80px;
+        margin: 0 0 40px;
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 2.5vw;
+            letter-spacing: .7vw;
+            margin: 0 0 3vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            font-size: 5vw;
+        }
+
+        color: #436FC1;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 40px;
+        line-height: 48px;
+        letter-spacing: 12px;
+        text-transform: uppercase;
+        margin: 0 0 40px;
+    }
+
+    h3 {
+        @media screen and (max-width: 1679px) {
+            font-size: 1.5vw;
+            letter-spacing: .4vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            font-size: 6vw;
+        }
+
+        color: #436FC1;
+        text-align: center;
+        font-family: @gilroyb;
+        font-size: 24px;
+        line-height: 48px;
+        letter-spacing: 6px;
+        text-transform: uppercase;
+    }
+
+    p {
+        @media screen and (max-width: 1679px) {
+            font-size: 1.5vw;
+            line-height: 2.5vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            font-size: 4vw;
+            line-height: 6vw;
+        }
+
+        color: #47363D;
+        text-align: center;
+        font-family: @souv;
+        font-size: 26px;
+        line-height: 36px;
+        letter-spacing: 0.5px;
+
+        i {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.1vw;
+                margin: 1vw 0;
+            }
+            @media screen and (max-width: 430px){
+                font-size: 4vw;
+                margin: 4vw 0;
+            }
+
+            font-size: 18px;
+            margin: 20px 0;
+            display: inline-block;
+        }
+    }
+
+    .the-content {
+        @media screen and (max-width: 430px) {
+            position: relative;
+            top: 0;
+            left: 0;
+            transform: translate(0);
+            padding: 4vw 0;
+            row-gap: 20px;
+            column-gap: 0;
+        }
+
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -22%);
+        text-align: center;
+        column-gap: 30px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .cta-border {
+        background: #436FC1;
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    .c1 {
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+
+        .cta-border {
+            @media screen and (max-width: 1679px) {
+                width: 16vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: 63vw;
+            }
+
+            width: 272px;
+        }
+    }
+
+    .c2 {
+        @media screen and (max-width: 1679px) {
+            padding: 4vw 0;
+        }
+
+        @media screen and (max-width: 430px) {
+            padding: 10vw 0;
+        }
+
+        padding: 60px 0;
+        text-align: center;
+
+        p {
+            @media screen and (max-width: 1679px) {
+                font-size: 2.1vw;
+                line-height: 2.3vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 4vw;
+                line-height: 6vw;
+            }
+
+            font-size: 36px;
+            line-height: 40px;
+            margin: 0;
+        }
+
+        ol {
+            @media screen and (max-width: 1679px) {
+                margin: 4.5vw 0;
+            }
+
+            @media screen and (max-width: 430px) {
+                flex-wrap: wrap;
+                row-gap: 8vw;
+            }
+
+            list-style-type: none;
+            display: flex;
+            margin: 75px 0;
+            justify-content: space-between;
+
+            li {
+
+                img {
+                    @media screen and (max-width: 430px) {
+                        width: 50%;
+                    }
+                }
+
+                p {
+                    @media screen and (max-width: 1679px) {
+                        font-size: 1.5vw;
+                        line-height: 2.5vw;
+                        margin: 4vw 0 0;
+                    }
+
+                    @media screen and (max-width: 430px) {
+                        font-size: 4vw;
+                        line-height: 6vw;
+                    }
+
+                    font-size: 26px;
+                    line-height: 36px;
+                    margin: 70px 0 0;
+                }
+            }
+
+        }
+
+        .cta-border {
+            @media screen and (max-width: 1679px) {
+                // width: 23vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                // width: 64vw;
+            }
+
+            // width: 383px;
+        }
+    }
+
+    .c3 {
+        @media screen and (max-width: 1679px) {
+            padding: 7vw 0;
+            row-gap: 5vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            flex-wrap: wrap;
+        }
+
+        background: #F7EBE5;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 110px 0;
+        text-align: center;
+        flex-wrap: wrap;
+        row-gap: 80px;
+
+        div {
+            @media screen and (max-width: 430px) {
+                flex-basis: 100%;
+            }
+
+            &:last-of-type {
+                flex-basis: 100%;
+            }
+        }
+
+        .cta-border {
+            @media screen and (max-width: 1679px) {
+                width: 15vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: 34vw;
+            }
+
+            width: 252px;
+        }
+    }
+
+    .c4 {
+        @media screen and (max-width: 1679px) {
+            padding: 3vw 0;
+        }
+
+        padding: 50px 0;
+
+        p {
+            font-style: italic;
+        }
+    }
+}
