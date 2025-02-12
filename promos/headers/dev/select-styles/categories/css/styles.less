@@ -1,0 +1,19 @@
+.container-black-friday {
+	position: relative;
+	// visibility: hidden;
+	padding: 0 0 1vw;
+
+	div {
+		@media screen and (max-width: 821px) {
+			justify-content: center;
+		}
+
+		@media screen and (max-width:430px) {
+			flex-wrap: wrap;
+			column-gap: 4%;
+		}
+
+		display: flex;
+		column-gap: 20px;
+	}
+}

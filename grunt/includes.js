@@ -15,7 +15,7 @@ module.exports = {
       //toolkit
       {
         cwd: 'mega-menu/dev/',
-        src: ['*.html', 'black-friday/*.html'],
+        src: ['*.html', 'black-friday/*.html', 'select-styles/*.html'],
         dest: 'mega-menu/includes/',
       },
     ],

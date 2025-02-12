@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/dresses-shop/default'
   },
   zone: {
-    name: 'sliders/new-arrivals/all',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
@@ -51,8 +51,8 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
-    css: '',
+    name: 'headers',
+    css: 'select-styles/categories',
     js: '',
     ftp: {
       css: {

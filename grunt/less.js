@@ -1,9 +1,16 @@
 var config = require("./../gruntConfig.js");
 // console.log(config.landing);
+var promoCSS = config.promo.css;
 
 var promosDest = ``;
 if(config.promo.css !== ``){
-    promosDest = `promos/${config.promo.name}/dev/${config.promo.css}/css/`;
+    if(promoCSS.indexOf('/') !== -1) {
+        promoCSS = promoCSS.split('/');
+        promosDest = `promos/${config.promo.name}/dev/${promoCSS[0]}/${promoCSS[1]}/css/`;
+    } else {
+        promosDest = `promos/${config.promo.name}/dev/${config.promo.css}/css/`;
+    } 
+    
 } else {
     promosDest = `promos/${config.promo.name}/css/`
 }
