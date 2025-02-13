@@ -31,9 +31,13 @@
 }
 
 .dept-select-styles a {
-  color: #0088A2 !important;
+  color: #833E31 !important;
 }
 
 .dept-select-styles:hover .line {
-  border-color: #0088A2 !important;
+  border-color: #833E31 !important;
+}
+
+.dept-select-styles li a {
+  text-transform: capitalize !important;
 }

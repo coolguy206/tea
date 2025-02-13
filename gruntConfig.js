@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/dresses-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'mega-menu/top-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
