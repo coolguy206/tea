@@ -10,7 +10,7 @@ var num = `0213`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/${year}/${num}/v0/`;
+var category = `promos/one-offs/${year}/${num}/v1/`;
 // var category = `homepage/${year}/${num}/v0/`;
 // var category = `headers/${year}/${num}/v0/`;
 // var category = `landing-pages/dresses-shop/${year}/${num}/v0/`;
@@ -20,12 +20,12 @@ var category = `promos/one-offs/${year}/${num}/v0/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/site/shop-all/`;
+var readFilePath = `Site/${num}/site/hp/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/landing-pages/spring-break-edit/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
