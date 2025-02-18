@@ -1,7 +1,7 @@
 @import 'vars.less';
 
 .content-wrap {
-	@media screen and (max-width:428px) {
+	@media screen and (max-width: 430px) {
 		// padding: 11% 0;
 		flex-wrap: wrap;
 	}
@@ -17,7 +17,7 @@
 		&.first,
 		&.second,
 		&.third {
-			@media screen and (max-width: 428px) {
+			@media screen and (max-width: 430px) {
 				flex-basis: 100% !important;
 			}
 
@@ -26,13 +26,13 @@
 		}
 
 		&.first {
-			@media screen and (max-width: 428px) {}
+			@media screen and (max-width: 430px) {}
 
 			// flex-basis: 39%;
 			order: 2;
 
 			.the-content {
-				@media screen and (max-width: 428px) {
+				@media screen and (max-width: 430px) {
 					position: relative;
 					width: 100%;
 					top: 0;
@@ -46,14 +46,14 @@
 				top: 50%;
 				transform: translate(-50%, -50%);
 				width: 100%;
-				padding: 0 1vw;
+				padding: 0;
 
 				img {
 					@media screen and (max-width: 1679px) {
 						width: 23.3vw;
 					}
 
-					@media screen and (max-width: 428px) {
+					@media screen and (max-width: 430px) {
 						width: 68.3vw;
 					}
 				}
@@ -64,7 +64,7 @@
 						font-size: 2.7vw;
 					}
 
-					@media screen and (max-width: 428px) {
+					@media screen and (max-width: 430px) {
 						line-height: 11vw;
 						font-size: 11vw;
 					}
@@ -88,7 +88,7 @@
 						line-height: 1.4vw;
 					}
 
-					@media screen and (max-width: 428px) {
+					@media screen and (max-width: 430px) {
 						font-size: 3.6vw;
 						line-height: 5vw;
 						margin: 0 0 8%;
@@ -108,9 +108,15 @@
 						letter-spacing: 0.35em;
 						font-weight:bold;
 
+						&:has(> .the-official-rules){
+							a {
+								color: @color3;	
+							}
+						}
+
 						a {
 							text-decoration: none;
-							color: @color3;
+							color: @color2;
 							text-transform: uppercase;
 							font-family: @gilroyb;
 							letter-spacing: 0.35em;
@@ -121,10 +127,10 @@
 				a {
 					@media screen and (max-width: 1679px) {}
 
-					@media screen and (max-width: 428px) {}
+					@media screen and (max-width: 430px) {}
 
 					&.enter-to-win {
-						@media screen and (max-width: 428px){
+						@media screen and (max-width: 430px){
 							margin: 8% 0;
 						}
 						color: #fff;
@@ -136,16 +142,20 @@
 		}
 
 		&.second {
-			@media screen and (max-width: 428px) {
+			@media screen and (max-width: 430px) {
 				display: none;
 			}
 
 			order: 1;
 			text-align:left;
+
+			img {
+				width: 100%;
+			}
 		}
 
 		&.third {
-			@media screen and (max-width:428px) {}
+			@media screen and (max-width: 430px) {}
 
 			order: 3;
 			text-align:right;

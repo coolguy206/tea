@@ -5,30 +5,30 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.inview = void 0;
-
-var inview = function inview(elem) {
+var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
   $(elem).on('inview', function (event, isInView) {
     if (isInView) {
       // element is now visible in the viewport
       // console.log('in view');
-      var imgs = $(this).find('img'); // let width = $(window).width();
+      var imgs = $(this).find('img');
+      // let width = $(window).width();
       // console.log(imgs);
       // console.log(width);
-
       $.each(imgs, function (i, val) {
-        var src = $(val).attr('data-src'); // console.log(src);
-
+        var src = $(val).attr('data-set');
+        // console.log(src);
         if (src) {
           $(val).attr('src', src);
         }
-
-        $(val).removeAttr('data-src');
+        $(val).removeAttr('data-set');
       });
       $(this).css('visibility', 'visible');
     }
   });
-}; // module.exports = function(elem) {
+};
+
+// module.exports = function(elem) {
 //   // console.log(`from inview.js`);
 //   $(elem).on('inview', function(event, isInView) {
 //     if (isInView) {
@@ -51,77 +51,117 @@ var inview = function inview(elem) {
 // };
 
 
-exports.inview = inview;
-
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.phoneConvert = void 0;
+var phoneConvert = exports.phoneConvert = function phoneConvert(string) {
+  var newString = string.match(/[0-9]{0,14}/g);
+  if (newString === null) {
+    return '';
+  }
+
+  // Join parts returned from RegEx match
+  newString = newString.join('');
+
+  // Start number with "+"
+  // newString = '+' + newString;
+
+  if (newString[0].includes('1')) {
+    newString = '+' + newString;
+  } else {
+    newString = '+1' + newString;
+  }
+
+  // Limit length to 15 characters
+  newString = newString.substring(0, 15);
+  return newString;
+};
+
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
 var _inview = require("./inview.js");
+var _phone = require("./phone.js");
+// console.log(keys);
 
 $(document).ready(function () {
-  //change maxlength for phone to 10 digit
-  // $('#this-form form input[name="the-phone"]').attr('maxlength', 10);
-  //? force phone to only be numbers
-  $("#this-form form input[name='the-phone']").on('input', function (e) {
-    $(this).val($(this).val().replace(/[^0-9]/g, ''));
-  }); //? on click animate scroll to form
-
-  $('.enter-to-win').on('click', function (e) {
-    e.preventDefault();
-    $('html,body').animate({
-      scrollTop: $("#this-form").offset().top - 200
-    }, 'slow');
-  });
   (0, _inview.inview)('.content-wrap');
-  var url = window.location.href;
-  var ac = "20230213_Sweeps_SpreadtheLove";
-
+  var companyId = "RAd6JR";
+  var list = "R55nPZ";
+  var custom_source = "STLG0225";
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
+  //? force phone to only be numbers
+  $('.this-form input[name="the-phone"]').on('input', function (e) {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
   $('.this-form form button').click(function (e) {
-    e.preventDefault(); // console.log(e.target);
-
+    e.preventDefault();
+    // console.log(e.target);
     var fname = $('.this-form input[name="fname"]').val();
     var lname = $('.this-form input[name="lname"]').val();
+    var instagram = $('.this-form input[name="instagram"]').val();
     var email = $('.this-form input[name="email"]').val();
+    // var childAge = $('.this-form input[name="childAge"]').val();
     var phone = $('.this-form input[name="the-phone"]').val();
     var checkbox = $('.this-form input[type=checkbox]').prop('checked');
-    var valid = emailIsValid(email); // console.log(`
+    var valid = emailIsValid(email);
+    // console.log(`
     //   fname: ${fname}
     //   lname: ${lname}
     //   email: ${email}
     //   checkbox: ${checkbox}
     //   valid: ${valid}`);
 
-    if (valid && checkbox && fname !== '' && lname !== '') {
+    if (valid && checkbox && fname !== '' && lname !== '' && instagram !== '') {
       $('.this-form form').hide();
       $('.this-form .sending').show();
-      Sailthru.integration("userSignUp", {
-        "id": email,
-        "email": email,
-        "lists": {
-          "MASTER_CONTACTS_LIST": 1,
-          '20230213_Sweeps_SpreadtheLove': 1
+      var theData = {
+        data: {
+          type: "subscription",
+          attributes: {
+            list_id: list,
+            custom_source: custom_source,
+            email: email,
+            properties: {
+              first_name: fname,
+              last_name: lname,
+              instagram: instagram
+            }
+          }
+        }
+      };
+
+      // if (childAge !== ``) {
+      //   theData.data.attributes.properties.child_age = childAge;
+      // }
+
+      if (phone !== "" && phone.length == 10) {
+        phone = (0, _phone.phoneConvert)(phone);
+        theData.data.attributes.phone_number = phone;
+      }
+      console.log(theData);
+      theData = JSON.stringify(theData);
+      $.ajax({
+        url: "https://a.klaviyo.com/client/subscriptions/?company_id=".concat(companyId),
+        type: 'post',
+        data: theData,
+        headers: {
+          revision: '2023-02-22',
+          'content-type': 'application/json'
         },
-        "vars": {
-          "ACQUISITION_SOURCE": ac,
-          "first_name": fname,
-          "last_name": lname,
-          "phone": phone
-        },
-        "source": ac,
-        "onSuccess": function onSuccess() {
+        success: function success(data, status, xhr) {
+          console.log('klaviyo success register');
+          // jQuery(document).trigger('klaviyoSuccess', data);
           $('.this-form .sending').hide();
           $('.this-form .successfully-sent').show();
-          window.dataLayer.push({
-            'event': 'sailthru',
-            'theUrl': url,
-            'sailthruEmail': email,
-            'sailthruSource': ac
-          });
         }
       });
     } else {
@@ -129,10 +169,11 @@ $(document).ready(function () {
       $('.this-form .sending').hide();
       $('.this-form form').show();
       $('.this-form .this-error').css('display', 'block');
-      $('.this-form input[name="fname"], .this-form input[name="lname"], .this-form input[name="email"], .this-form input[type=checkbox]').addClass('error-border'); // $('.this-form input').focus();
+      $('.this-form input[name="fname"], .this-form input[name="lname"], .this-form input[name="instagram"], .this-form input[name="email"], .this-form input[type=checkbox]').addClass('error-border');
+      // $('.this-form input').focus();
     }
   });
 });
 
 
-},{"./inview.js":1}]},{},[2]);
+},{"./inview.js":1,"./phone.js":2}]},{},[3]);
