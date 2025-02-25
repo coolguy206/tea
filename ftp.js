@@ -6,13 +6,13 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0219`;
+var num = `0227`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/${year}/${num}/v1/`;
 // var category = `homepage/${year}/${num}/v0/`;
-var category = `headers/${year}/${num}/v1/`;
+var category = `headers/${year}/${num}/pom-pom/v0/`;
 // var category = `landing-pages/dresses-shop/${year}/${num}/v0/`;
 // var category = `mega-menu/${year}/${num}/v0/`;
 
@@ -20,13 +20,13 @@ var category = `headers/${year}/${num}/v1/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/swim/022425 Swim Visual Nav/`;
+var readFilePath = `Site/${num}/03 Handoff/Categroy Headers/pom/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/swim/`;
+var writeFilePath = `promos/headers/dev/images/landing-pages/pom-pom/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
