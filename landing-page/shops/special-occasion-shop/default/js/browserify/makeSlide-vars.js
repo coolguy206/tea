@@ -15,10 +15,16 @@ var basePath = "./landing-page/shops/special-occasion-shop/default/";
 //     writePath:  `${basePath}dev/slideshow-2/`
 // }
 
+// module.exports =  { 
+//     basePath: basePath, 
+//     pdpPath: `${basePath}js/shop-slideshow-3/pdp.js`,
+//     writePath:  `${basePath}dev/slideshow-3/`
+// }
+
 module.exports = {
   basePath: basePath,
-  pdpPath: "".concat(basePath, "js/shop-slideshow-3/pdp.js"),
-  writePath: "".concat(basePath, "dev/slideshow-3/")
+  pdpPath: "".concat(basePath, "js/shop-slideshow-4/pdp.js"),
+  writePath: "".concat(basePath, "dev/slideshow-4/")
 };
 
 
