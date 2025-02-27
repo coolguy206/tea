@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/special-occasion-shop/default'
+    name: 'about/catalogs'
   },
   zone: {
     name: 'mega-menu/sub-nav',
@@ -51,8 +51,8 @@ module.exports = {
     },
   },
   promo: {
-    name: 'default',
-    css: '',
+    name: 'headers',
+    css: 'select-styles',
     js: '',
     ftp: {
       css: {
