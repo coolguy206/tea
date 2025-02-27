@@ -3,7 +3,7 @@
 var _inview = require("./inview.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
@@ -27,7 +27,7 @@ $(document).ready(function () {
 
   new _glide["default"]('.c1 .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 1000,
     perView: 1,
     hoverpause: true,
