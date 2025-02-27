@@ -5,7 +5,7 @@ puppeteer.use(StealthPlugin())
 const { executablePath } = require('puppeteer')
 const cheerio = require('cheerio');
 
-const thePath = `./landing-page/shops/gift-shop/default/`;
+const thePath = `./landing-page/shops/special-occasion-shop/default/`;
 
 const vars = require(`${thePath}js/makeSlide-vars.js`);
 // console.log(vars.writePath);
