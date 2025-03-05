@@ -15,7 +15,7 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/03 March/030125 Dressy Event/04 Handoff/Site/hp/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/03 March/030125 Dressy Event/04 Handoff/Site/hp/new swim/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/022525 Special Occasion LP/03 Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/120324 Giving Tuesday/04 Handoff/Site/`
   folderPath = folderPath.toLowerCase();
