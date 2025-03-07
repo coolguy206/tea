@@ -52,7 +52,7 @@ module.exports = {
   },
   promo: {
     name: 'headers',
-    css: 'select-styles',
+    css: '',
     js: '',
     ftp: {
       css: {
