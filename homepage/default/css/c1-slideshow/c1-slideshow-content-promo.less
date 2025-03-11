@@ -7,6 +7,7 @@
         // left: 10% !important;
         transform: translate(0) !important;
         top: 0 !important;
+        padding: 0 0 0 8vw;
     }
 
     top: @c1-promo-top;
@@ -54,32 +55,36 @@
     h3 {
         @media screen and (max-width: 1679px) {
             // font-size: @c1-promo-h3-font-size-1679;
+            font-size: 1.7vw;
+            letter-spacing: .4vw;
         }
 
         @media screen and (max-width: 430px) {
             color: @c1-promo-h3-color-430 !important;
             line-height: @c1-promo-h3-line-height-430;
-            // font-size: @c1-promo-h3-font-size-430;
-            margin: 4vw 0 !important;
+            font-size: @c1-promo-h3-font-size-430;
+            margin: 10vw 0 4vw 0 !important;
+            text-align: left !important;
+            letter-spacing: 1vw;
             // margin: 60vw 0 6vw;
         }
 
         color: @c1-promo-h3-color !important;
         // margin:1vw 0 2vw;
         text-align: left;
-        // text-shadow: none;
-        // font-size: @c1-promo-h3-font-size;
+        text-shadow: none;
+        font-size: @c1-promo-h3-font-size;
         // line-height: normal;
         // text-transform: capitalize;
-        // letter-spacing: 0;
+        letter-spacing: 6px;
     }
 
     h2 {
         @media screen and (max-width: 1679px) {
             // margin: 3vw 0 8vw;
-            font-size: 6vw !important;
-            line-height: 7vw !important;
-            letter-spacing: .6vw;
+            font-size: 5vw !important;
+            // line-height: 7vw !important;
+            // letter-spacing: .6vw;
         }
 
         @media screen and (max-width: 430px) {
@@ -87,8 +92,8 @@
             color: @c1-promo-h2-color-430 !important;
             font-size: @c1-promo-h2-font-size-430;
             // line-height: @c1-promo-h2-line-height-430 !important;
-            line-height: normal !important;
-            letter-spacing: 1.3vw;
+            // line-height: normal !important;
+            // letter-spacing: 1.3vw;
         }
 
         color: @c1-promo-h2-color !important;
@@ -97,10 +102,10 @@
         font-family: @c1-promo-h2-font-family;
         // margin: 0 0 4vw;
         margin: 0;
-        // text-align: left !important;
+        text-align: left !important;
         text-shadow: none;
-        font-size: 101px !important;
-        line-height: 113px !important;
+        font-size: @c1-promo-h2-font-size;
+        line-height: @c1-promo-h2-line-height;
     }
 
     p {
@@ -136,7 +141,7 @@
             row-gap: 20px;
             margin: 2vw 0 0;
             width: 100%;
-            justify-content: center;
+            justify-content: left;
         }
 
         &.the-grid {
