@@ -2,14 +2,15 @@
 
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
-  $('.dresses').css('opacity', 1);
-  $($(".dresses .lgw-thumb")[6]).before($('.dresses .img-2'));
+  // $('.the-dresses-slider').css('opacity', 1);
+
+  // $($(`.dresses .lgw-thumb`)[6]).before($('.dresses .img-2'));
 
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
-  if ($('.dresses li').length >= 5 || window.innerWidth < 431) {
-    new _glide["default"]('.dresses .glide', {
+  if ($('.the-dresses-slider li').length >= 5 || window.innerWidth < 431) {
+    new _glide["default"]('.the-dresses-slider .glide', {
       type: 'carousel',
       // autoplay: 4000,
       animationDuration: 500,
@@ -31,9 +32,9 @@ $(document).ready(function () {
     }).mount();
   } else {
     //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
-    $('.dresses div[data-glide-el="controls"]').hide();
-    $('.dresses ul').addClass('width-300');
+    $('.the-dresses-slider div[data-glide-el="controls"]').hide();
+    $('.the-dresses-slider ul').addClass('width-300');
   }
-  (0, _inview.inview)('.dresses');
+  (0, _inview.inview)('.the-dresses-slider');
 });
 //# sourceMappingURL=scripts.js.map

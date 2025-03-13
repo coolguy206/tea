@@ -56,14 +56,15 @@ var inview = exports.inview = function inview(elem) {
 
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
-  $('.dresses').css('opacity', 1);
-  $($(".dresses .lgw-thumb")[6]).before($('.dresses .img-2'));
+  // $('.the-dresses-slider').css('opacity', 1);
+
+  // $($(`.dresses .lgw-thumb`)[6]).before($('.dresses .img-2'));
 
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
-  if ($('.dresses li').length >= 5 || window.innerWidth < 431) {
-    new _glide["default"]('.dresses .glide', {
+  if ($('.the-dresses-slider li').length >= 5 || window.innerWidth < 431) {
+    new _glide["default"]('.the-dresses-slider .glide', {
       type: 'carousel',
       // autoplay: 4000,
       animationDuration: 500,
@@ -85,17 +86,17 @@ $(document).ready(function () {
     }).mount();
   } else {
     //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
-    $('.dresses div[data-glide-el="controls"]').hide();
-    $('.dresses ul').addClass('width-300');
+    $('.the-dresses-slider div[data-glide-el="controls"]').hide();
+    $('.the-dresses-slider ul').addClass('width-300');
   }
-  (0, _inview.inview)('.dresses');
+  (0, _inview.inview)('.the-dresses-slider');
 });
 
 
 },{"./inview.js":1,"@glidejs/glide":3}],3:[function(require,module,exports){
 /*!
- * Glide.js v3.5.2
- * (c) 2013-2021 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
+ * Glide.js v3.7.1
+ * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
  * Released under the MIT License.
  */
 
@@ -104,6 +105,44 @@ $(document).ready(function () {
   typeof define === 'function' && define.amd ? define(factory) :
   (global = typeof globalThis !== 'undefined' ? globalThis : global || self, global.Glide = factory());
 })(this, (function () { 'use strict';
+
+  function ownKeys(object, enumerableOnly) {
+    var keys = Object.keys(object);
+
+    if (Object.getOwnPropertySymbols) {
+      var symbols = Object.getOwnPropertySymbols(object);
+
+      if (enumerableOnly) {
+        symbols = symbols.filter(function (sym) {
+          return Object.getOwnPropertyDescriptor(object, sym).enumerable;
+        });
+      }
+
+      keys.push.apply(keys, symbols);
+    }
+
+    return keys;
+  }
+
+  function _objectSpread2(target) {
+    for (var i = 1; i < arguments.length; i++) {
+      var source = arguments[i] != null ? arguments[i] : {};
+
+      if (i % 2) {
+        ownKeys(Object(source), true).forEach(function (key) {
+          _defineProperty(target, key, source[key]);
+        });
+      } else if (Object.getOwnPropertyDescriptors) {
+        Object.defineProperties(target, Object.getOwnPropertyDescriptors(source));
+      } else {
+        ownKeys(Object(source)).forEach(function (key) {
+          Object.defineProperty(target, key, Object.getOwnPropertyDescriptor(source, key));
+        });
+      }
+    }
+
+    return target;
+  }
 
   function _typeof(obj) {
     "@babel/helpers - typeof";
@@ -141,6 +180,21 @@ $(document).ready(function () {
     if (protoProps) _defineProperties(Constructor.prototype, protoProps);
     if (staticProps) _defineProperties(Constructor, staticProps);
     return Constructor;
+  }
+
+  function _defineProperty(obj, key, value) {
+    if (key in obj) {
+      Object.defineProperty(obj, key, {
+        value: value,
+        enumerable: true,
+        configurable: true,
+        writable: true
+      });
+    } else {
+      obj[key] = value;
+    }
+
+    return obj;
   }
 
   function _inherits(subClass, superClass) {
@@ -640,26 +694,12 @@ $(document).ready(function () {
 
     if (settings.hasOwnProperty('classes')) {
       options.classes = Object.assign({}, defaults.classes, settings.classes);
-
-      if (settings.classes.hasOwnProperty('direction')) {
-        options.classes.direction = Object.assign({}, defaults.classes.direction, settings.classes.direction);
-      }
-
-      if (settings.classes.hasOwnProperty('type')) {
-        options.classes.type = Object.assign({}, defaults.classes.type, settings.classes.type);
-      }
-
-      if (settings.classes.hasOwnProperty('slide')) {
-        options.classes.slide = Object.assign({}, defaults.classes.slide, settings.classes.slide);
-      }
-
-      if (settings.classes.hasOwnProperty('arrow')) {
-        options.classes.arrow = Object.assign({}, defaults.classes.arrow, settings.classes.arrow);
-      }
-
-      if (settings.classes.hasOwnProperty('nav')) {
-        options.classes.nav = Object.assign({}, defaults.classes.nav, settings.classes.nav);
-      }
+      var properties = ['direction', 'type', 'slide', 'arrow', 'nav'];
+      properties.forEach(function (property) {
+        if (settings.classes.hasOwnProperty(property)) {
+          options.classes[property] = _objectSpread2(_objectSpread2({}, defaults.classes[property]), settings.classes[property]);
+        }
+      });
     }
 
     if (settings.hasOwnProperty('breakpoints')) {
@@ -1408,10 +1448,10 @@ $(document).ready(function () {
    * @see https://github.com/jashkenas/underscore
    */
 
-  function throttle(func, wait, options) {
+  function throttle(func, wait) {
+    var options = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : {};
     var timeout, context, args, result;
     var previous = 0;
-    if (!options) options = {};
 
     var later = function later() {
       previous = options.leading === false ? 0 : now();
@@ -1574,18 +1614,14 @@ $(document).ready(function () {
     return [];
   }
   /**
-   * Checks if passed node exist and is a valid element.
+   * Coerces a NodeList to an Array.
    *
-   * @param  {Element} node
-   * @return {Boolean}
+   * @param  {NodeList} nodeList
+   * @return {Array}
    */
 
-  function exist(node) {
-    if (node && node instanceof window.HTMLElement) {
-      return true;
-    }
-
-    return false;
+  function toArray(nodeList) {
+    return Array.prototype.slice.call(nodeList);
   }
 
   var TRACK_SELECTOR = '[data-glide-el="track"]';
@@ -1606,7 +1642,7 @@ $(document).ready(function () {
        * Collect slides
        */
       collectSlides: function collectSlides() {
-        this.slides = Array.prototype.slice.call(this.wrapper.children).filter(function (slide) {
+        this.slides = toArray(this.wrapper.children).filter(function (slide) {
           return !slide.classList.contains(Glide.settings.classes.slide.clone);
         });
       }
@@ -1631,7 +1667,7 @@ $(document).ready(function () {
           r = document.querySelector(r);
         }
 
-        if (exist(r)) {
+        if (r !== null) {
           Html._r = r;
         } else {
           warn('Root element must be a existing Html node');
@@ -1654,11 +1690,7 @@ $(document).ready(function () {
        * @return {Object}
        */
       set: function set(t) {
-        if (exist(t)) {
-          Html._t = t;
-        } else {
-          warn("Could not find track element. Please use ".concat(TRACK_SELECTOR, " attribute."));
-        }
+        Html._t = t;
       }
     });
     define(Html, 'wrapper', {
@@ -2050,7 +2082,7 @@ $(document).ready(function () {
             classes = _Glide$settings.classes,
             cloningRatio = _Glide$settings.cloningRatio;
 
-        if (slides.length !== 0) {
+        if (slides.length > 0) {
           var peekIncrementer = +!!Glide.settings.peek;
           var cloneCount = perView + peekIncrementer + Math.round(perView / 2);
           var append = slides.slice(0, cloneCount).reverse();
@@ -2668,11 +2700,11 @@ $(document).ready(function () {
       compose: function compose(property) {
         var settings = Glide.settings;
 
-        if (!disabled) {
-          return "".concat(property, " ").concat(this.duration, "ms ").concat(settings.animationTimingFunc);
+        if (disabled) {
+          return "".concat(property, " 0ms ").concat(settings.animationTimingFunc);
         }
 
-        return "".concat(property, " 0ms ").concat(settings.animationTimingFunc);
+        return "".concat(property, " ").concat(this.duration, "ms ").concat(settings.animationTimingFunc);
       },
 
       /**
@@ -3359,12 +3391,10 @@ $(document).ready(function () {
           return;
         }
 
-        if (item) {
-          item.classList.add(settings.classes.nav.active);
-          siblings(item).forEach(function (sibling) {
-            sibling.classList.remove(settings.classes.nav.active);
-          });
-        }
+        item.classList.add(settings.classes.nav.active);
+        siblings(item).forEach(function (sibling) {
+          sibling.classList.remove(settings.classes.nav.active);
+        });
       },
 
       /**
@@ -3375,10 +3405,7 @@ $(document).ready(function () {
        */
       removeClass: function removeClass(controls) {
         var item = controls[Glide.index];
-
-        if (item) {
-          item.classList.remove(Glide.settings.classes.nav.active);
-        }
+        item === null || item === void 0 ? void 0 : item.classList.remove(Glide.settings.classes.nav.active);
       },
 
       /**
@@ -3415,7 +3442,7 @@ $(document).ready(function () {
         }
 
         lists.forEach(function (list) {
-          list.forEach(function (element) {
+          toArray(list).forEach(function (element) {
             element.classList.remove(settings.classes.arrow.disabled);
           });
         });
@@ -3434,7 +3461,7 @@ $(document).ready(function () {
         }
 
         lists.forEach(function (list) {
-          list.forEach(function (element) {
+          toArray(list).forEach(function (element) {
             element.classList.add(settings.classes.arrow.disabled);
           });
         });
@@ -3588,13 +3615,13 @@ $(document).ready(function () {
        */
       press: function press(event) {
         var perSwipe = Glide.settings.perSwipe;
+        var arrowSymbols = {
+          ArrowRight: '>',
+          ArrowLeft: '<'
+        };
 
-        if (event.keyCode === 39) {
-          Components.Run.make(Components.Direction.resolve("".concat(perSwipe, ">")));
-        }
-
-        if (event.keyCode === 37) {
-          Components.Run.make(Components.Direction.resolve("".concat(perSwipe, "<")));
+        if (['ArrowRight', 'ArrowLeft'].includes(event.code)) {
+          Components.Run.make(Components.Direction.resolve("".concat(perSwipe).concat(arrowSymbols[event.code])));
         }
       }
     };
