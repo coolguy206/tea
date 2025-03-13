@@ -1,50 +1,70 @@
 <div class="this-form" id="this-form">
   <form>
-    <div>
-      <label for="">First Name*</label>
-      <span class="this-error">required</span>
-      <input name="fname" type="text" required>
-    </div>
-    <div>
-      <label for="">Last Name*</label>
-      <span class="this-error">required</span>
-      <input name="lname" type="text" required>
-    </div>
-    <div>
-      <label for="">Email*</label>
-      <span class="this-error">required</span>
-      <input name="email" type="email" required>
-    </div>
-    <div>
-      <label for="">Phone Number</label>
-      <!-- <span class="this-error">required</span> -->
-      {literal}
-      <input name="the-phone" type="tel" pattern="[0-9]{10,10}" maxlength="10" minlength="10" placeholder="1234567890"
-        title="Please enter your 10 digit phone number">
-      {/literal}
+    <div class="input-container">
+      <div>
+        <label for="">First Name*</label>
+        <span class="this-error">required</span>
+        <input name="fname" type="text" required>
+      </div>
+
+      <div>
+        <label for="">Last Name*</label>
+        <span class="this-error">required</span>
+        <input name="lname" type="text" required>
+      </div>
+
+      <div></div>
+
+      <div>
+        <label for="">Instagram Handle*</label>
+        <span class="this-error">required</span>
+        <input name="instagram" type="text" required>
+      </div>
+
+      <div>
+        <label for="">Email*</label>
+        <span class="this-error">required</span>
+        <input name="email" type="email" required>
+      </div>
+
+      <div>
+        <label for="">Phone Number</label>
+        <!-- <span class="this-error">required</span> -->
+        {literal}
+        <input name="the-phone" type="tel" pattern="[0-9]{10,10}" maxlength="10" minlength="10" placeholder="1234567890"
+          title="Please enter your 10 digit phone number">
+        {/literal}
+      </div>
     </div>
 
-    <p class="by-entering">
-      <span class="this-error">required</span>
-      <input type="checkbox" required /> By entering the sweepstakes, you will be<br class="mobile"> automatically
-      signed up to<br class="desktop"> receive emails from<br class="mobile"> all participating brands. I agree to the
+    <div class="p-container">
+      <p class="by-entering">
+        <span class="this-error">required</span>
+        <input type="checkbox" required /> By entering the sweepstakes, you will be automatically
+        signed up to<br class="desktop"> receive emails from all participating brands. I agree to the
 
-      <a class="the-official-rules" href="/mas_assets/media/tea_collection/landing-pages/spring-break-escape/2024/0315/v2/official-rules.pdf" target="_blank">official rules</a>
-      .
-    </p>
-    <p class="required"><i>*Required Fields</i></p>
+        <a class="the-official-rules" href="/mas_assets/media/tea_collection/landing-pages/spring-break-escape/2025/0318/v0/official-rules.pdf" target="_blank">official rules</a>
+      </p>
+
+      <p class="required"><i>*Required Fields</i></p>
+    </div>
+
     <div class="button-box">
       <button class="a cta-border">enter to win</button>
     </div>
+
   </form>
+
   <div class="sending">
     <h2>Sending...</h2>
   </div>
+
   <div class="successfully-sent">
     <h2>
-      Thank you for entering.<br>
-      Winner will be notified before March 29, 2024.<br>
+      Thank you for entering!<br />
+      Winner will be notified before <span class="notified-date"></span><br>
       Make sure to follow us on <a target="_blank" href="https://www.instagram.com/teacollection/">Instagram</a>.
     </h2>
   </div>
+
 </div>

@@ -34,7 +34,7 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/dresses-shop/default'
+    name: 'sweeps/spring-break-escape'
   },
   zone: {
     name: 'sliders/dresses',

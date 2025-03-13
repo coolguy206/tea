@@ -16,12 +16,12 @@ refreshAccessToken((data) => {
   });
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/03 March/030925 Friends & Family/04 Handoff/Site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/031325 Dress LP Refresh/handoff/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/030825 International Women's Day/04 Handoff/Site/`
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/031325 Dress LP Refresh/handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/031425 Spring Break Escape Giveaway/03 handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0317/`;
+  var writeFilePath = `Site/0318/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);

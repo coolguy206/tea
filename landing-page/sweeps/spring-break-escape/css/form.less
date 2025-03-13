@@ -4,6 +4,7 @@
 	@media screen and (max-width: 430px) {
 		padding: 17.5% 0;
 	}
+
 	background: #F8F8F8;
 	padding: 4.5% 0;
 
@@ -16,9 +17,11 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 1.8vw;
 			}
+
 			@media screen and (max-width: 430px) {
 				font-size: 5vw;
 			}
+
 			font-family: gilroy-regular;
 			font-size: 1.25rem;
 		}
@@ -36,59 +39,96 @@
 			transform: translateX(0);
 			padding: 0 5%;
 		}
-		width: 50%;
+
+		width: 71%;
 		left: 50%;
 		position: relative;
 		transform: translateX(-50%);
-		display: flex;
-		flex-wrap: wrap;
-		padding: 0 0 0 1.9%;
+		// display: flex;
+		// flex-wrap: wrap;
+		// padding: 0 0 0 1.9%;
 
-		div {
-			@media screen and (max-width: 430px) {
-				flex-basis: 100%;
-				margin: 0 0 9%;
+		.input-container {
+			@media screen and (max-width: 1679px) {
+				column-gap: 2vw;
+				row-gap: 4vw;
 			}
-			flex-basis: 50%;
-			margin: 0 0 3.9%;
 
-			&.button-box {
+			@media screen and (max-width: 430px) {
+				column-gap: 0;
+				row-gap: 13vw;
+			}
+
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 37px;
+			row-gap: 60px;
+			justify-content: center;
+			// width: 98%;
+
+
+			div {
 				@media screen and (max-width: 430px) {
-					margin: 12% 0 0;
+					// flex-basis: 100%;
+					// margin: 0 0 9%;
 				}
-				flex-basis: 100%;
-				text-align: center;
-				margin: 0;
+
+				// flex-basis: 50%;
+				// margin: 0 0 3.9%;
+
 			}
 		}
 
-		p {
-			@media screen and (max-width: 1679px) {
-				font-size: 1.1vw;
-				line-height: 1.1vw;
-			}
+		.button-box {
 			@media screen and (max-width: 430px) {
-				font-size: 3.9vw;
-				line-height: 5vw;
-			}
-			font-family: gilroy-regular;
-			font-size: 16px;
-			line-height: 21px;
-			flex-basis: 100%;
-			letter-spacing: 0.04em;
-			// color: #47363D;
-			&.by-entering {
-				@media screen and (max-width: 430px) {
-					margin: 7% 0 0;
-				}
-				margin: 3% 0 0;
+				margin: 12% 0 0;
 			}
 
-			&.required {
-				@media screen and (max-width: 430px) {
-					margin: 13% 0 1%;
+			flex-basis: 100%;
+			text-align: center;
+			margin: 0;
+		}
+
+		.p-container {
+			@media screen and (max-width: 430px) {
+				padding: 0 0 0 2%;
+			}
+
+			padding: 0 0 0 18%;
+
+			p {
+				@media screen and (max-width: 1679px) {
+					font-size: 1.1vw;
+					line-height: 1.1vw;
 				}
-				margin: 3% 0 1%;
+
+				@media screen and (max-width: 430px) {
+					font-size: 3.9vw;
+					line-height: 5vw;
+				}
+
+				font-family: gilroy-regular;
+				font-size: 16px;
+				line-height: 21px;
+				flex-basis: 100%;
+				letter-spacing: 0.04em;
+
+				// color: #47363D;
+				&.by-entering {
+					@media screen and (max-width: 430px) {
+						margin: 7% 0 0;
+					}
+
+					margin: 3% 0 0;
+				}
+
+				&.required {
+					@media screen and (max-width: 430px) {
+						margin: 13% 0 1%;
+					}
+
+					margin: 3% 0 1%;
+				}
 			}
 		}
 
@@ -96,9 +136,11 @@
 			@media screen and (max-width: 1679px) {
 				font-size: 0.7vw;
 			}
+
 			@media screen and (max-width: 430px) {
 				font-size: 3vw;
 			}
+
 			font-family: gilroy-regular;
 			font-size: 12px;
 			line-height: 28px;
@@ -108,17 +150,26 @@
 		}
 
 		input {
-			@media screen and (max-width: 430px) {
-				width: 100%;
+			@media screen and (max-width: 1679px) {
+				width: 22vw;
+				height: 3.3vw;
 			}
+
+			@media screen and (max-width: 430px) {
+				width: 86vw;
+				height: 13vw;
+			}
+
 			background: #EDEBEC;
 			border: none;
-			padding: 4.5% 6%;
+			padding: 0 0 0 6%;
 			display: block;
-			width: 91%;
+			// width: 91%;
 			font-family: gilroy-regular;
 			border-radius: 0;
 			letter-spacing: 0.04em;
+			width: 370px;
+			height:55px;
 
 			&[type="checkbox"] {
 				background: none;
@@ -136,8 +187,10 @@
 
 		button {
 			@media screen and (max-width: 1679px) {}
+
 			@media screen and (max-width: 430px) {}
-			color: @cta-font-color !important;
+
+			color: #fff !important;
 			background: @cta-background-color !important;
 			padding: 0 !important;
 			border: none !important;
