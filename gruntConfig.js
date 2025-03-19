@@ -37,7 +37,7 @@ module.exports = {
     name: 'sweeps/spring-break-escape'
   },
   zone: {
-    name: 'sliders/dresses',
+    name: 'mega-menu/sub-nav',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
