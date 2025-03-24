@@ -1,0 +1,106 @@
+@import 'var.less';
+@holiday-flash-sale-color: #A18CBA;
+
+.container-promo-header {
+    @media screen and (max-width: 430px) {
+        position: relative;
+    }
+
+    .the-content.select-styles {
+        @media screen and (max-width: 1679px){
+            column-gap: 1.3vw !important;
+            // row-gap: 1.5vw;
+        }
+        @media screen and (max-width: 430px) {
+            column-gap: 4vw !important;
+            row-gap: 4vw;
+            justify-content: center !important;
+             flex-wrap: wrap;
+            // position: absolute;
+            // top: 50%;
+            // left: 50%;
+            // transform: translate(-50%, -65%);
+        }
+
+        column-gap: 18px !important;
+        // row-gap: 24px;
+        // flex-wrap: wrap;
+        justify-content: left !important;
+
+        img {
+            width: 100%;
+        }
+
+        a {
+            @media screen and (max-width: 430px) {
+                // flex-basis: auto !important;
+            }
+
+        }
+
+        a.cta0 {
+            .cta-border {
+                background: #F4B6FF !important;
+                color: #586397 !important;
+            }
+        }
+
+        a.cta5 {
+            @media screen and (max-width: 430px) {
+                // display: block !important;
+            }
+        }
+
+        .the-cta {
+            // @media screen and (max-width: 430px) {
+            //     position: relative !important;
+            // }
+            position: relative !important;
+            // bottom: 10% !important;
+        }
+
+        .cta-border {
+            @media screen and (max-width: 1679px) {
+                width: 24vw !important;
+            }
+            @media screen and (max-width: 430px) {
+                width: 44vw !important;
+                font-size: 2vw !important;
+            }
+
+            background: #586397 !important;
+            color: #fff !important;
+            width: 411px;
+        }
+    }
+
+    // #countdown {
+    //     @media screen and (max-width: 1679px) {
+    //         font-size: 1.1vw;
+    //     }
+
+    //     @media screen and (max-width: 430px) {
+    //         width: 100%;
+    //         text-align: center;
+    //         font-size: 4vw;
+    //         left: 0;
+    //         background: #A18CBA;
+    //         top: 0;
+    //         transform: translate(0, 0);
+    //         padding: 18px 0;
+    //     }
+
+    //     // position: absolute;
+    //     background: #A18CBA;
+    //     font-family: @gilroybl;
+    //     color: #fff;
+    //     // top: 5%;
+    //     // left: 50%;
+    //     // transform: translate(-50%, 0);
+    //     letter-spacing: 4px;
+    //     text-transform: uppercase;
+    //     font-size: 18px;
+    //     text-align: center;
+    //     padding: 18px;
+    // }
+}
