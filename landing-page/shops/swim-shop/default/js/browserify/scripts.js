@@ -57,10 +57,18 @@ var inview = exports.inview = function inview(elem) {
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+$(document).ajaxComplete(function (event, xhr, options) {
+  // console.log(event,xhr,options)
+
+  $('.swim .shop-slideshow').append($('.the-swim-slider'));
+  // $('.hp .shop-slideshow2').append($('.dresses.sliders'));
+  // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
+  $('.swim .white-out').fadeOut();
+});
 $(document).ready(function () {
   new _glide["default"]('.slideshow .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 2000,
     perView: 1,
     hoverpause: true,

@@ -18,17 +18,17 @@
       @media screen and (max-width: 1679px) {}
 
       @media screen and (max-width: 430px) {
-        top: 65%;
+        top: 4%;
         width: 100%;
         transform: translate(0);
         left: 0;
       }
 
       position: absolute;
-      top: 50%;
+      top: 6%;
       width: auto;
-      left: 50%;
-      transform: translate(0%, -50%);
+      left: 3%;
+      // transform: translate(0%, -50%);
 
       h2 {
         @media screen and (max-width: 1679px) {
@@ -41,9 +41,10 @@
           line-height: 11vw;
           margin: 0 0 4%;
           font-family: @gilroyb;
+          text-align: center;
         }
 
-        text-align: center;
+        text-align: left;
         color: @c2-h2-color;
         // flex-basis: 39%;
         font-size: 64px;
@@ -65,7 +66,7 @@
           display: none;
         }
 
-        text-align: center;
+        text-align: left;
         color: @c2-p-color;
         // flex-basis: 60%;
         font-size: 22px;
@@ -75,8 +76,12 @@
       }
 
       div {
+        @media screen and (max-width: 430px) {
+          text-align: center;
+        }
+
         // flex-basis: 39%;
-        text-align: center;
+        text-align: left;
 
         a {
           @media screen and (max-width:1679px) {

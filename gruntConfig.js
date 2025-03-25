@@ -37,7 +37,7 @@ module.exports = {
     name: 'shops/swim-shop/default'
   },
   zone: {
-    name: 'mega-menu/sub-nav',
+    name: 'sliders/swim',
     ftp: {
       css: {
         src: 'mega-menu/top-nav/css/',
