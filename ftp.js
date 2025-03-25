@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2025`;
 var num = `0327`;
-var version = `v1`;
+var version = `v2`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -21,7 +21,7 @@ var category = `headers/${year}/${num}/swim-shop/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/v2/03 Handoff/Pages/swim/`;
+var readFilePath = `Site/${num}/v3/03 Handoff/Pages/swim/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
