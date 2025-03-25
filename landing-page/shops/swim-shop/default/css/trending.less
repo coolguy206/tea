@@ -1,0 +1,268 @@
+@import "var.less";
+@trending-h2-color: #4F4243;
+@trending-font-color: #fff;
+@trending-p-color: #fff;
+@trending-cta1-color: #47363D;
+@trending-cta1-background: #fff;
+@trending-cta2-color: @trending-cta1-color;
+@trending-cta2-background: #2FAB9D;
+@trending-cta3-color: @trending-cta1-color;
+@trending-cta3-background: #A291B9;
+@trending-cta4-color: @trending-cta1-color;
+@trending-cta4-background: #6C6694;
+@trending-cta5-color: @trending-cta1-color;
+@trending-cta5-background: #2B5579;
+@trending-cta6-color: @trending-cta1-color;
+@trending-cta6-background: #EC5152;
+@trending-background-color: none;
+
+.trending {
+  @media screen and (max-width: 1679px) {
+    height: 7vw;
+  }
+
+  @media screen and (max-width: 430px) {
+    height: 54vw;
+    flex-wrap: wrap;
+    // display: none;
+  }
+
+  position: relative;
+  display: flex;
+  width: 100%;
+  background: @trending-background-color;
+  height: 120px;
+  min-height: auto !important;
+  align-items: center;
+
+  // flex-wrap: wrap;
+  // video {
+  //   vertical-align: middle;
+  //   max-width: 100%;
+  // }
+
+  div {
+    &.the-content {
+      @media screen and (max-width: 1679px) {
+        column-gap: 4vw;
+      }
+
+      @media screen and (max-width: 1024px) {}
+
+      @media screen and (max-width: 810px) {}
+
+      @media screen and (max-width: 430px) {
+        top: 50%;
+        width: 100%;
+        left: 0%;
+        transform: translate(0%, -50%);
+        text-align: center;
+        flex-wrap: wrap;
+      }
+
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      left: 50%;
+      display: flex;
+      justify-content: space-around;
+      // column-gap: 65px;
+      align-items: center;
+      // text-align: center;
+      // width: 40%;
+
+      a,
+      a,
+      h2,
+      p {
+        // color: @trending-font-color;
+        // font-family: @souv;
+        // margin: 0 auto;
+      }
+
+      h3 {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.1vw;
+          // line-height: 4.8vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          // font-size: 9vw;
+          // margin: 0;
+          line-height: 11vw;
+          font-size: 4vw;
+          // color: #B45A90;
+          margin: 0;
+          // display: none;
+          // color: #fff;
+          order: 2;
+          flex-basis: 100%;
+        }
+
+        @media screen and (max-width:320px) {
+          margin: 3% 0 0;
+        }
+
+        // margin: 5% 0 0;
+        text-transform: none;
+        color: @trending-h2-color;
+        // line-height: 76px;
+        // font-family: @souv;
+        font-family: @gilroyb;
+        // font-size: 70px;
+        margin: 0;
+        font-size: 18px;
+        line-height: 28px;
+        text-transform: uppercase;
+        letter-spacing: 4px;
+        margin: 0 3vw 0 0;
+        // letter-spacing: 0.25em;
+
+
+      }
+
+      h2 {
+        @media screen and (max-width: 1679px) {
+          font-size: 3vw;
+          // left: 19vw;
+          // letter-spacing: .3vw;
+          // line-height: 4.8vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          margin: 0 0 4vw;
+          font-size: 9vw;
+          // letter-spacing: 1vw;
+          // left: 0;
+        }
+
+        text-transform: capitalize;
+        color: @trending-h2-color;
+        font-family: @gilroyr;
+        margin: 0;
+        font-size: 54px;
+        line-height: normal;
+        // letter-spacing: 3.6px;
+        // display: inline-block;
+        // left: 327px;
+        position: relative;
+
+      }
+
+      p {
+        @media screen and (max-width: 1679px) {
+          font-size: 1.4vw;
+          line-height: 2vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          font-size: 4vw;
+          line-height: 6vw;
+          width: 100%;
+          margin: 4% auto;
+          // display: none;
+          text-shadow: none;
+        }
+
+        @media screen and (max-width: 320px) {
+          font-size: 15px;
+          line-height: 17px;
+        }
+
+        margin: 4% auto;
+        color: @trending-p-color;
+        text-transform: none;
+        font-size: 24px;
+        line-height: 34px;
+        width: 100%;
+        font-family: @gilroyr;
+        text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+      }
+
+      div {
+        @media screen and (max-width: 1679px) {
+          column-gap: 1.2vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          flex-wrap: wrap;
+          width: 100%;
+          column-gap: 4vw;
+          row-gap: 4vw;
+          justify-content: center;
+        }
+
+        column-gap: 20px;
+        // row-gap: 19%;
+        display:flex;
+        // align-items: center;
+        // justify-content: center;
+
+        // display: inline-block;
+        // left: 920px;
+        position: relative;
+        // top: -.5vw;
+
+
+        a {
+          @media screen and (max-width: 1679px) {
+            width: 12vw;
+          }
+
+          @media screen and (max-width: 1024px) {}
+
+          @media screen and (max-width: 810px) {}
+
+          @media screen and (max-width: 430px) {
+            width: 43.5vw;
+          }
+
+          color: @trending-cta1-color;
+          background: @trending-cta1-background;
+          width: 203px;
+          border: 1px solid #4F4243;
+
+          &:hover {
+            background: @trending-cta1-color;
+            color: @trending-cta1-background;
+          }
+
+          &.cta1 {
+            // background: @trending-cta1-background;
+            // color: @trending-cta1-color;
+          }
+
+          &.cta2 {
+            // background: @trending-cta2-background;
+            // color: @trending-cta2-color;
+          }
+
+          &.cta3 {
+            // background: @trending-cta3-background;
+            // color: @trending-cta3-color;
+          }
+
+          &.cta4 {
+            // background: @trending-cta4-background;
+            // color: @trending-cta4-color;
+          }
+
+          &.cta5 {
+            // background: @trending-cta5-background;
+            // color: @trending-cta5-color;
+          }
+
+          &.cta6 {
+            // background: @trending-cta6-background;
+            // color: @trending-cta6-color;
+          }
+        }
+      }
+    }
+  }
+}
+
+// .promos {
+//   display: none !important;
+// }

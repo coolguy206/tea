@@ -2,11 +2,11 @@
 
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
   new _glide["default"]('.slideshow .glide', {
     type: 'carousel',
-    autoplay: 4000,
+    // autoplay: 4000,
     animationDuration: 2000,
     perView: 1,
     hoverpause: true,
