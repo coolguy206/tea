@@ -14,5 +14,4 @@ var TechnicalDesigner = exports.TechnicalDesigner = {
   footer: "\n    <p>\n        If you are enthusiastic about children\u2019s fashion and have the sales experience and network to drive wholesale growth, we invite you to apply by submitting your resume and a cover letter detailing your qualifications and interest in the role to <a href=\"mailtio:hr@teacollection.com\">hr@teacollection.com</a>.\n    </p>\n\n    <p>\n        Tea Collection is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status.\n    </p>"
 };
 
-
 },{}]},{},[1]);

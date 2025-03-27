@@ -34,7 +34,8 @@ module.exports = {
     name: 'default'
   },
   landing: {
-    name: 'shops/swim-shop/default'
+    name: 'affiliate/careers',
+    js: 'job-descriptions'
   },
   zone: {
     name: 'sliders/swim',

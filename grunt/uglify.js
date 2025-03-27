@@ -32,7 +32,7 @@ module.exports = {
     //dynamic files
     expand: true,
     cwd: 'landing-page/' + config.landing.name + '/js/browserify/',
-    src: ['*.js'],
+    src: ['job-descriptions/*.js', '*.js'],
     dest: 'landing-page/' + config.landing.name + '/js/jsmin/',
     ext: '.min.js',
   },

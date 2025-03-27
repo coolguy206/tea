@@ -29,5 +29,4 @@ var dutiesQualifications = exports.dutiesQualifications = function dutiesQualifi
   $('.the-job').append(dutiesContent);
 };
 
-
 },{}]},{},[1]);

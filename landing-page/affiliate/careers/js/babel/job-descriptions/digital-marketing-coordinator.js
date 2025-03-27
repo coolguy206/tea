@@ -1,4 +1,3 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -13,6 +12,3 @@ var digitalMarketingCoordinator = exports.digitalMarketingCoordinator = {
   qualifications: ["0-2 years of experience in  digital marketing, minimum of digital marketing internship in Meta or Google", "Basic level knowledge of paid search and paid social media advertising, and Affiliate/partner marketing is a plus. Understanding of key metrics and common acronyms.", "Results driven; curious; self-starter; organized;  takes great pride in their work and takes ownership", "Creative and analytical mind with exceptional problem-solving skills", "Strong interpersonal and communication skills", "Able to work independently with little direction and multi-task while being productive and timely", "Engagement in learning and research on digital marketing", "Interest in email marketing, catalog marketing, and ecommerce technology (web analytics, ad tracking, a/b testing, tag management, content management)", "Advanced Excel skills and fully proficient with Docs/Word and Slides/PowerPoint", "Bachelor\u2019s degree with strong academic track record"],
   footer: "Please email a cover letter and resume to hr@teacollection.com for consideration.\n\n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for\n    employment without regard to age, ancestry, color, family or medical care leave, gender identity\n    or expression, genetic information, marital status, medical condition, national origin, physical or\n    mental disability, political affiliation, protected veteran status, race, religion, sex(including\n    pregnancy), sexual orientation, or any other characteristic protected by applicable laws,\n        regulations, and ordinances."
 };
-
-
-},{}]},{},[1]);

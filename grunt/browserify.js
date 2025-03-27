@@ -35,7 +35,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: 'landing-page/' + config.landing.name + '/js/babel/',
-      src: '*.js',
+      src: ['job-descriptions/*.js', '*.js'],
       dest: 'landing-page/' + config.landing.name + '/js/browserify/'
     }]
   },

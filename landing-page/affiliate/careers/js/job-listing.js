@@ -2,12 +2,12 @@
 //     AccountExecutiveEast
 // } from './account-executive-east.js';
 import {
-    TechnicalDesigner
-} from './technical-designer.js';
+    SocialMediaContentIntern
+} from './job-descriptions/social-media-content-intern.js';
 // import {
 //   officeCoordinator
 // } from './office-coordinator.js';
 
-export var jobs = [TechnicalDesigner];
+export var jobs = [SocialMediaContentIntern];
 
 

@@ -6,7 +6,7 @@ if (config.promo.js !== ``) {
   promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/`;
   promosDest = `promos/${config.promo.name}/dev/${config.promo.js}/js/babel/`;
 } else {
-  promosSrc =  `promos/${config.promo.name}/js/`;
+  promosSrc = `promos/${config.promo.name}/js/`;
   promosDest = `promos/${config.promo.name}/js/babel/`;
 }
 // console.log(promosSrc, promosDest);
@@ -14,7 +14,7 @@ if (config.promo.js !== ``) {
 module.exports = {
 
   options: {
-    sourceMap: true,
+    // sourceMap: true,
     presets: ['@babel/preset-env', '@babel/preset-typescript']
   },
 
@@ -31,7 +31,7 @@ module.exports = {
     files: [{
       expand: true,
       cwd: 'landing-page/' + config.landing.name + '/js/',
-      src: '*.js',
+      src: ['job-descriptions/*.js', '*.js'],
       dest: 'landing-page/' + config.landing.name + '/js/babel/'
     }]
   },

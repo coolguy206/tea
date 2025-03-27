@@ -34,7 +34,7 @@ module.exports = {
 
 
   landing: {
-    files: ['landing-page/' + config.landing.name + '/css/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/js/*.js'],
+    files: ['landing-page/' + config.landing.name + '/css/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/js/**/*.js'],
     tasks: ['less:landing', /*'purifycss:landing', 'cssmin:landing', 'uncss:landing',*/ 'babel:landing', 'browserify:landing', 'uglify:landing', 'includes:landing', 'htmlmin:landing'],
   },
 

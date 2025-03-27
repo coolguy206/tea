@@ -27,4 +27,3 @@ var dutiesQualifications = exports.dutiesQualifications = function dutiesQualifi
   var dutiesContent = dutiesTitle + dutiesList;
   $('.the-job').append(dutiesContent);
 };
-//# sourceMappingURL=duties-qualifications.js.map

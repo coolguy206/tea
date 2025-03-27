@@ -23,5 +23,4 @@ var officeCoordinator = exports.officeCoordinator = {
   footer: "Expectations for All Employees\n    Supports the organization\u2019s mission, vision, and values by exhibiting the following behaviors: excellence and competence, collaboration, innovation, respect, personalization, commitment to our community, and accountability and ownership. \n    \n    Tea is an equal opportunity employer.All qualified applicants will receive consideration for employment without regard to age, ancestry, color, family or medical care leave, gender identity or expression, genetic information, marital status, medical condition, national origin, physical or mental disability, political affiliation, protected veteran status, race, religion, sex(including pregnancy), sexual orientation, or any other characteristic protected by applicable laws, regulations, and ordinances.\n    Please email a cover letter and resume to hr@teacollection.com for consideration. We would like to hear how you learned about the position, why you are interested, and how you can contribute in this role."
 };
 
-
 },{}]},{},[1]);
