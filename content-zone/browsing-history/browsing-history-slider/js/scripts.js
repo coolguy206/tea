@@ -49,7 +49,7 @@ $(document).ready(function () {
 
           if (val.pdpURL !== undefined) {
 
-            var urlParams = `?utm_campaign=recently_viewed&utm_medium=recently_viewed&utm_source=recently_viewed`;
+            var urlParams = ``;
 
             var qv = `<span data-href="${val.pdpURL}" data-color="${val.pdpColor}" class="js-qv ${val.pdpName}">Quick View</span>`;
 

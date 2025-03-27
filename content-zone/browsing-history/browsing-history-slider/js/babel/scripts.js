@@ -2,7 +2,7 @@
 
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
   var url = window.location.pathname;
   // console.log(`url: ${url}`);
@@ -43,7 +43,7 @@ $(document).ready(function () {
           // }
 
           if (val.pdpURL !== undefined) {
-            var urlParams = "?utm_campaign=recently_viewed&utm_medium=recently_viewed&utm_source=recently_viewed";
+            var urlParams = "";
             var qv = "<span data-href=\"".concat(val.pdpURL, "\" data-color=\"").concat(val.pdpColor, "\" class=\"js-qv ").concat(val.pdpName, "\">Quick View</span>");
             var elem = "\n                        <li>\n                            <div class=\"thumb-grid item\">\n                                <span class=\"img\">\n                                    <a href=\"".concat(val.pdpURL).concat(urlParams, "\"\n                                        data-hash=\"\" class=\"browsing-history ").concat(val.pdpName, "\">\n                                        <img class=\"image\" src=\"").concat(val.pdpImgURL, "\" alt=\"").concat(val.pdpName, "\" width=\"500\" height=\"500\">\n                                    </a>\n                                    ").concat(qv, "\n                                </span>\n                                <div class=\"thumb-content\">\n                                    <a class=\"name browsing-history\"\n                                        href=\"").concat(val.pdpURL).concat(urlParams, "\"\n                                        data-hash=\"\">\n                                        <span class=\"model\">").concat(val.pdpName, "</span>\n                                    </a>\n                        \n                                    <div class=\"price-wrap\">\n                                        <div class=\"price\">\n                                            <strike></strike>\n                                            <span id=\"store_price\" class=\"price \">").concat(val.pdpPrice, "</span>\n                                        </div>\n                                    </div>\n\n                                    <p class=\"size\">\n                                      <span class=\"thumb-sizes\">\n                                        ").concat(val.pdpSizes, "\n                                      </span>\n                                    </p>\n                        \n                                </div>\n                            </div>\n                        </li>\n                        ");
             $('.browsing-history ul').append(elem);
@@ -87,4 +87,3 @@ $(document).ready(function () {
     (0, _inview.inview)('.browsing-history');
   }
 });
-//# sourceMappingURL=scripts.js.map
