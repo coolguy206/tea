@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2025`;
 var num = `0329`;
-var version = `v0`;
+var version = `v1`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -21,12 +21,12 @@ var category = `promos/one-offs/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/032925 Promo/mega/`;
+var readFilePath = `Site/${num}/v2/032925 Promo/hp/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/landing-pages/easter-edit/`;
 // var writeFilePath = `landing-page/sweeps/spring-break-escape/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
