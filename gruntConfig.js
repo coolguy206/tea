@@ -52,7 +52,7 @@ module.exports = {
     },
   },
   promo: {
-    name: 'headers',
+    name: 'default',
     css: '',
     js: '',
     ftp: {
