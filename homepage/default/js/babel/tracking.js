@@ -25,4 +25,3 @@ var tracking = exports.tracking = function tracking(elem, id) {
 //     });
 //   });
 // };
-//# sourceMappingURL=tracking.js.map

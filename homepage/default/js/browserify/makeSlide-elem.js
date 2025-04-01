@@ -7,5 +7,4 @@ var elem = function elem(url, imgSrc, title, color, price, strike, promoClass, s
 };
 exports.elem = elem;
 
-
 },{}]},{},[1]);

@@ -86,7 +86,8 @@
                 font-size: 1.1vw;
                 margin: 1vw 0;
             }
-            @media screen and (max-width: 430px){
+
+            @media screen and (max-width: 430px) {
                 font-size: 4vw;
                 margin: 4vw 0;
             }
@@ -191,8 +192,14 @@
             justify-content: space-between;
 
             li {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
 
                 img {
+                    @media screen and (max-width: 1679px) {
+                        width: 68%;
+                    }
                     @media screen and (max-width: 430px) {
                         width: 50%;
                     }
@@ -202,7 +209,7 @@
                     @media screen and (max-width: 1679px) {
                         font-size: 1.5vw;
                         line-height: 2.5vw;
-                        margin: 4vw 0 0;
+                        margin: 4vw 0;
                     }
 
                     @media screen and (max-width: 430px) {
@@ -212,7 +219,11 @@
 
                     font-size: 26px;
                     line-height: 36px;
-                    margin: 70px 0 0;
+                    margin: 70px 0;
+                }
+
+                a {
+                    align-self: flex-end;
                 }
             }
 

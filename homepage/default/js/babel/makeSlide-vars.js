@@ -18,4 +18,3 @@ module.exports = {
 //     pdpPath: `${basePath}js/shop-c5/pdp.js`,
 //     writePath:  `${basePath}dev/c5/pdps/`
 // }
-//# sourceMappingURL=makeSlide-vars.js.map

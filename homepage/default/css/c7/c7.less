@@ -3,15 +3,17 @@
 @c7-background: #FDF5F2;
 
 .c7 {
-  @media screen and (max-width: 1679px){
+  @media screen and (max-width: 1679px) {
     min-height: 39vw !important;
     padding: 1% 0 5%;
   }
+
   @media screen and (max-width: 430px) {
     flex-wrap: wrap;
     padding: 6% 0 5%;
     // min-height: 377vw !important;
   }
+
   display: flex;
   // background: @c7-background;
   // padding: 4.2% 0 5%;
@@ -19,6 +21,7 @@
   min-height:721px !important;
 
   div {
+
     &.first,
     &.fourth,
     &.second,
@@ -26,10 +29,12 @@
       @media screen and (max-width:1679px) {
         padding: 0 3%;
       }
+
       @media screen and (max-width: 430px) {
         padding: 0 5%;
         margin: 0 0 15%;
       }
+
       display: flex;
       flex-basis: 34%;
       text-align: center;
@@ -41,12 +46,14 @@
           @media screen and (max-width: 430px) {
             margin: 10% 0 0;
           }
+
           margin: 9% 0 0;
 
           span {
             @media screen and (max-width: 430px) {
               font-size: 3vw !important;
             }
+
             color: @c7-cta-color;
 
             .desktop-copy {
@@ -59,6 +66,7 @@
               @media screen and (max-width: 430px) {
                 display: inline;
               }
+
               display: none;
             }
           }
@@ -80,6 +88,37 @@
 
     &.second {}
 
-    &.third {}
+    &.third {
+      flex-wrap: wrap;
+      position: relative;
+
+      .the-content {
+        @media screen and (max-width: 1679px) {
+          top: 29.8vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          margin: 9% 0 0;
+          position: relative;
+          top: 0;
+        }
+
+        width: 100%;
+        position: absolute;
+        top: 538px;
+
+        div {
+          display: flex;
+          justify-content: space-evenly;
+
+          span {
+            a {
+              text-decoration: none;
+              font-family: @gilroyb;
+            }
+          }
+        }
+      }
+    }
   }
 }

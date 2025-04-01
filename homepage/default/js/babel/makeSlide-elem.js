@@ -5,4 +5,3 @@ var elem = function elem(url, imgSrc, title, color, price, strike, promoClass, s
   return str;
 };
 exports.elem = elem;
-//# sourceMappingURL=makeSlide-elem.js.map
