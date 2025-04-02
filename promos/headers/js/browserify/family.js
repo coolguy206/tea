@@ -20,7 +20,6 @@ $(document).ready(function () {
   $('.container-promo-header h1').text(title);
 });
 
-
 },{"./inview.js":2}],2:[function(require,module,exports){
 "use strict";
 
@@ -72,6 +71,5 @@ var inview = exports.inview = function inview(elem) {
 //     }
 //   });
 // };
-
 
 },{}]},{},[1]);

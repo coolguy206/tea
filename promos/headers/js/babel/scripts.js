@@ -111,4 +111,3 @@ $(document).ready(function () {
 
   // $('.container-black-friday')[0].remove()
 });
-//# sourceMappingURL=scripts.js.map

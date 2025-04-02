@@ -18,4 +18,3 @@ $(document).ready(function () {
   }
   $('.container-promo-header h1').text(title);
 });
-//# sourceMappingURL=family.js.map

@@ -113,5 +113,4 @@ $(document).ready(function () {
   // $('.container-black-friday')[0].remove()
 });
 
-
 },{}]},{},[1]);

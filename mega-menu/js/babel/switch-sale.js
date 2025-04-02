@@ -140,4 +140,3 @@ var switchSale = exports.switchSale = function switchSale(href) {
   $('.promo3-url').attr('href', promo3);
   $('.clearance-url').attr('href', clearance);
 };
-//# sourceMappingURL=switch-sale.js.map

@@ -142,7 +142,6 @@ var switchSale = exports.switchSale = function switchSale(href) {
   $('.clearance-url').attr('href', clearance);
 };
 
-
 },{"./urls.js":2}],2:[function(require,module,exports){
 "use strict";
 
@@ -264,6 +263,5 @@ var urls = exports.urls = {
     }
   }
 };
-
 
 },{}]},{},[1]);

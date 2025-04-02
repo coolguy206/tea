@@ -50,7 +50,6 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -71,6 +70,5 @@ $(document).ready(function () {
     }
   });
 });
-
 
 },{"./inview.js":1}]},{},[2]);
