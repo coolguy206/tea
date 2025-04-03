@@ -1,32 +1,26 @@
 <div class="photo-credits">
 	<h1>Photography Credits</h1>
 	<p>
-		At Tea Collection, every image tells a story — capturing the spirit of adventure, culture, and childhood wonder.<br class="desktop">
-		We're honored to collaborate with talented photographers who help bring our collections to life.
+		At Tea Collection, every image tells a story — capturing the spirit of<br class="desktop">
+		adventure, culture, and childhood wonder. We're honored to collaborate<br class="desktop">
+		with talented photographers who help bring our collections to life.
 	</p>
 
-	<h2>Spring Summer 2025 Collection</h2>
-	<h3>Brazil Location Photography:</h3>
-	<h4>Priscilla Gragg</h4>
-	<h2>Fall Winter 2024 Collection</h2>
-	<h3>Turkey Location Photography</h3>
-	<h4>Charlotte Cohen</h4>
-	<h2>Studio Photography:</h2>
-	<h4>Maria</h4>
+	<div class="photographers"></div>
 
 	<p>
-		We are deeply grateful to these artists for their vision and storytelling,<br class="desktop"> which beautifully reflect the heart
-		of each destination-inspired collection.
+		We are deeply grateful to these artists for their vision and storytelling,<br class="desktop"> which beautifully
+		reflect the heart of each destination-inspired collection.
 	</p>
 
 </div>
 
 {literal}
 <style>
-	.box-ajax-none{display:none}.site-content-bg-wrapper{background:none !important}@media screen and (max-width:430px){.desktop{display:none}}
+	.box-ajax-none{display:none}.site-content-bg-wrapper{background:none !important}.photo-credits h1{text-align:center}.photo-credits h1+p{text-align:center}.photo-credits .photographers{display:flex;justify-content:center;flex-wrap:wrap;column-gap:2vw;row-gap:2vw}.photo-credits .photographers+p{text-align:center}.photo-credits .photographers div{flex-basis:24%}@media screen and (max-width:430px){.photo-credits .photographers div{flex-basis:100%;text-align:center}}@media screen and (max-width:430px){.desktop{display:none}}
 </style>
 
 <script>
-	/* include "../js/jsmin/scripts.min.js" */
+	!function(){return function o(e,n,r){function a(i,l){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!l&&c)return c(i,!0);if(t)return t(i,!0);var h=new Error("Cannot find module '"+i+"'");throw h.code="MODULE_NOT_FOUND",h}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(o){return a(e[i][1][o]||o)},p,p.exports,o,e,n,r)}return n[i].exports}for(var t="function"==typeof require&&require,i=0;i<r.length;i++)a(r[i]);return a}}()({1:[function(o,e,n){"use strict";$(document).ready(function(){console.log("ready");var o=[],e=function(o,e,n){this.title=o,this.location=e,this.name=n},n=new e("Spring Summer 2025 Collection","Brazil Location Photography","Priscilla Gragg"),r=new e("Fall Winter 2024 Collection","Turkey Location Photography","Charlotte Cohen"),a=new e("Spring/Summer 2024","Kenya Location Photography",'Odedeodede +<a href="https://www.instagram.com/199xorg/" target="_blank">199xorg</a>'),t=new e("Fall Winter 2023 Collection","France Location Photography","Mariani Troiani"),i=new e("Spring/Summer 2023","Mexico Location Photography","María Esme del Río"),l=new e("Fall Winter 2022 Collection","Japan Location Photography","Nanako -a"),c=new e("Spring/Summer 2022","Caribbean Location Photography","Taryn Elledge-Penner of Quartier Collective"),h=new e("Fall Winter 2021 Collection","Sweden Location Photography","Taryn Elledge-Penner of Quartier Collective"),p=new e("Spring/Summer 2021","Portugal Location Photography","Taryn Elledge-Penner of Quartier Collective"),u=new e("Spring/Summer 2020","Mediterranean Location Photography","Taryn Elledge-Penner of Quartier Collective"),g=new e("Fall Winter 2019 Collection","Nepal Location Photography","Laurie Frankel"),d=new e("Fall Winter 2017 Collection","Scotland Location Photography","Hamada Hideaki"),y=new e("Fall Winter 2016 Collection","Japan Location Photography","Hamada Hideaki"),f=new e("","Studio Photography","María Esme del Río");o.push(n,r,a,t,i,l,c,h,p,u,g,d,y,f);var m="";$(o).each(function(o,e){console.log(o,e);var n="";n=""==e.title?"<div><h2>".concat(e.location,"</h2><p>").concat(e.name,"</p></div>"):"<div><h2>".concat(e.title,"</h2><p>").concat(e.location,"</p><p>").concat(e.name,"</p></div>"),m+=n}),$(".photographers").append(m)})},{}]},{},[1]);
 </script>
 {/literal}

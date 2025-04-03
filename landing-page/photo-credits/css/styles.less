@@ -6,7 +6,37 @@
 	background: none !important;
 }
 
-.photo-credits {}
+.photo-credits {
+	h1 {
+		text-align: center;
+
+		&+p {
+			text-align: center;
+		}
+	}
+
+
+	.photographers {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+		column-gap: 2vw;
+		row-gap: 2vw;
+
+		&+p {
+			text-align: center;
+		}
+
+		div {
+			@media screen and (max-width: 430px) {
+				flex-basis: 100%;
+				text-align: center;
+			}
+
+			flex-basis: 24%;
+		}
+	}
+}
 
 .desktop {
 	@media screen and (max-width: 430px) {
