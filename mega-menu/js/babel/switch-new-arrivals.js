@@ -144,6 +144,24 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       // $('.clearance-url').hide();
 
       break;
+    case '/dresses':
+      // promo1 = urls.promo.select.swim;
+      promo1 = _urls.urls.promo.promo;
+      promo2 = _urls.urls.promo.select.promo;
+      promo3 = _urls.urls.promo.sale.promo;
+      clearance = _urls.urls.promo.clearance.girl;
+      // $('.promo1-url.swim').show();
+      $('.promo1-url').show();
+      // $('.promo1-url.girl').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
+      // $('.clearance-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
+      // $('.clearance-url').hide();
+
+      break;
     default:
       break;
   }

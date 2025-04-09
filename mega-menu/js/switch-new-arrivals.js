@@ -149,6 +149,25 @@ export const switchNewArrivals = (href) => {
 
       break;
 
+    case '/dresses':
+      // promo1 = urls.promo.select.swim;
+      promo1 = urls.promo.promo;
+      promo2 = urls.promo.select.promo;
+      promo3 = urls.promo.sale.promo;
+      clearance = urls.promo.clearance.girl;
+      // $('.promo1-url.swim').show();
+      $('.promo1-url').show();
+      // $('.promo1-url.girl').show();
+      $('.promo2-url').show();
+      // $('.promo3-url').show();
+      // $('.clearance-url').show();
+      // $('.promo1-url, .promo2-url, .clearance-url').show();
+      // $('.promo1-url').hide();
+      // $('.promo2-url').hide();
+      // $('.clearance-url').hide();
+
+      break;
+
     default:
       break;
   }
