@@ -38,7 +38,7 @@ $(document).ready(function () {
     perView: 1,
     hoverpause: true,
     gap: 0,
-    swipeThreshold: false,
+    // swipeThreshold: false,
     dragThreshold: false,
   }).mount();
 
