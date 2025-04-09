@@ -21,7 +21,7 @@ refreshAccessToken((data) => {
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0404/`;
+  var writeFilePath = `Site/0404/v2/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
