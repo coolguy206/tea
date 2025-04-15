@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/03 March/032925 BMSM Event/04 Handoff/Site/040425 easter/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/04 April/041225 Spring Faves/04 Handoff/Site/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/032725 Summer 1 HP/03 Handoff/Pages/09-easter/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/031425 Spring Break Escape Giveaway/03 handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0404/v2/`;
+  var writeFilePath = `Site/0412/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
