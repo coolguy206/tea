@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/04 April/042225 Dresses & Rompers Sale/04 handoff/site/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/041925 Rewear Site/handoff/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/04 April/042225 Dresses & Rompers Sale/04 handoff/site/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/041925 Rewear Site/handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/031425 Spring Break Escape Giveaway/03 handoff/Site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0422/v2/`;
+  var writeFilePath = `Site/0422/v3/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
