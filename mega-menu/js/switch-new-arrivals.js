@@ -30,7 +30,7 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
-      $('.promo1-url.boy').show();
+      // $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
@@ -100,7 +100,7 @@ export const switchNewArrivals = (href) => {
       promo3 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
       // $('.promo1-url.toddler-boy').show();
-       $('.promo1-url.boy').show();
+      //  $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
