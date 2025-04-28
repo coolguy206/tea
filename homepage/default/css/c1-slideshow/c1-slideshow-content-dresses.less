@@ -1,0 +1,99 @@
+@import "c1-slideshow-vars.less";
+
+&.content-dresses {
+    @media screen and (max-width: 430px) {
+        width: 100%;
+        left: 0;
+        top: 11vw;
+        transform: translateX(0);
+    }
+
+    top: @c1-dresses-top;
+    left: @c1-dresses-left;
+    width: 35%;
+    transform: @c1-dresses-transform;
+    // text-align: center;
+
+    h3 {
+        @media screen and (max-width: 430px) {
+            color: @c1-dresses-h3-color-430;
+            font-size: 4vw !important;
+        }
+
+        color: @c1-dresses-h3-color;
+        text-align: center;
+        text-shadow: none;
+
+        i {
+            @media screen and (max-width: 430px) {
+                display: none;
+            }
+
+            font-style: normal;
+        }
+    }
+
+    h2 {
+        @media screen and (max-width: 430px) {
+            font-size: 12vw !important;
+            line-height: 12vw !important;
+            color: @c1-dresses-h2-color-430;
+        }
+
+        color: @c1-dresses-h2-color;
+        text-align: center;
+        font-family: @c1-dresses-h2-font-family;
+        text-shadow: none;
+    }
+
+    p {
+        @media screen and (max-width: 430px) {
+            display: block;
+            color: #fff;
+            font-size: 5vw;
+            top: 119vw;
+            position: absolute;
+            line-height: 6vw;
+        }
+
+        color: @c1-dresses-p-color;
+        text-shadow: @c1-p-text-shadow;
+        font-family: @c1-dresses-p-font-family;
+        text-align: center;
+    }
+
+    // img {
+    //     @media screen and (max-width: 1679px) {
+    //         width: 39vw;
+    //     }
+
+    //     @media screen and (max-width: 430px) {
+    //         width: 89vw;
+    //         margin: 0 auto;
+    //     }
+    // }
+
+    div {
+        @media screen and (max-width: 430px) {
+            top: @c1-dresses-top-431;
+            justify-content: center;
+        }
+
+        width: 100%;
+        text-align: center;
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: @c1-dresses-cta-size-1679;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: @c1-dresses-cta-size-431;
+            }
+
+            color: @c1-dresses-cta-color;
+            background: @c1-dresses-cta-background;
+            width: @c1-dresses-cta-size;
+        }
+    }
+}

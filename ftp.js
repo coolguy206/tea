@@ -6,14 +6,14 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0424`;
+var num = `0427`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/${year}/${num}/${version}/`;
+var category = `promos/one-offs/${year}/${num}/${version}/`;
 // var category = `homepage/${year}/${num}/${version}/`;
-var category = `headers/${year}/${num}/print-shop/${version}/`;
+// var category = `headers/${year}/${num}/print-shop/${version}/`;
 // var category = `landing-pages/spring-break-escape/${year}/${num}/${version}/`;
 // var category = `mega-menu/${year}/${num}/${version}/`;
 
@@ -21,13 +21,13 @@ var category = `headers/${year}/${num}/print-shop/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/handoff/headers/print shop/`;
+var readFilePath = `Site/${num}/Site/headers/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/sweeps/spring-break-escape/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
