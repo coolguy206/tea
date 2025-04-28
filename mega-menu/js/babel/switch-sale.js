@@ -33,7 +33,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
-      $('.promo1-url.boy').show();
+      // $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       $('.promo3-url').show();
@@ -103,7 +103,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo3 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy;
       // $('.promo1-url.toddler-boy').show();
-      $('.promo1-url.boy').show();
+      //  $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       $('.promo3-url').show();

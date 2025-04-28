@@ -33,7 +33,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
-      $('.promo1-url.boy').show();
+      // $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
@@ -99,7 +99,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy;
       // $('.promo1-url.toddler-boy').show();
-      $('.promo1-url.boy').show();
+      //  $('.promo1-url.boy').show();
       // $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();

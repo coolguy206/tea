@@ -33,7 +33,7 @@ $(document).ready(function () {
   $('.dept-boy').hover(function () {
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
-    $('.promo1-url.boy').show();
+    // $('.promo1-url.boy').show();
     // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();

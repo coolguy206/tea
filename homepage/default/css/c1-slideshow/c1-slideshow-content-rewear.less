@@ -1,0 +1,132 @@
+@import "c1-slideshow-vars.less";
+
+&.content-rewear {
+    @media screen and (max-width: 430px) {
+        width: 100%;
+        left: 0;
+        top: 11vw;
+        transform: translate(0) !important;
+    }
+
+    top: @c1-rewear-top;
+    left: @c1-rewear-left;
+    width: @c1-rewear-width;
+    transform: @c1-rewear-transform;
+    text-align: center;
+
+    h3 {
+        @media screen and (max-width: 430px) {
+            color: @c1-rewear-h3-color-430;
+            font-size: 4vw !important;
+        }
+
+        color: @c1-rewear-h3-color;
+        white-space: nowrap;
+        font-family: @c1-rewear-h3-font-family;
+        text-shadow: none;
+        // text-align: left;
+        // padding: 0 0 0 3vw;
+
+        &.fs {
+            @media screen and (max-width: 430px) {
+                position: absolute;
+                top: 125vw;
+                left: 50%;
+                transform: translate(-50%, 0);
+                line-height: 5vw;
+            }
+        }
+    }
+
+    img {
+        @media screen and (max-width: 1679px) {
+            width: 22vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            width: 41vw;
+            // margin: 0 auto;
+        }
+
+        width: 365px;
+    }
+
+    h2 {
+        @media screen and (max-width: 430px) {
+            color: @c1-rewear-h2-color-430;
+            // font-size: 11vw !important;
+            // line-height: 11vw !important;
+            // margin: 9vw 0 0 !important;
+            font-size: 12vw !important;
+            line-height: 12vw !important;
+        }
+
+        color: @c1-rewear-h2-color;
+        text-align: center;
+        font-family: @c1-rewear-h2-font-family;
+        margin: 0 0 2vw;
+        text-shadow: none;
+    }
+
+    p {
+        @media screen and (max-width: 430px) {
+            display: block;
+            font-size: 4vw;
+            // margin: 76% auto 8%;
+        }
+
+        text-align: center;
+        margin: 8% auto;
+        color: @c1-rewear-p-color;
+        text-shadow: none;
+        font-family: @c1-rewear-p-font-family;
+    }
+
+    div {
+        @media screen and (max-width: 430px) {
+            // top: @c1-rewear-top-431;
+        }
+
+        &.the-flex {
+            @media screen and (max-width: 1679px) {
+                // margin: 15vw 0 0;
+            }
+
+            @media screen and (max-width: 430px) {
+                top: @c1-rewear-the-flex-430;
+                margin: 0;
+            }
+
+            // margin: 270px auto 0 auto;
+            width: auto;
+            justify-content: center;
+        }
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: @c1-rewear-cta-size-1679;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: @c1-rewear-cta-size-430;
+            }
+
+            color: @c1-rewear-cta-color;
+            background: @c1-rewear-cta-background;
+            width: @c1-rewear-cta-size;
+
+
+            &.cta5 {
+                @media screen and (max-width: 1679px) {
+                    width: 18vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 65vw;
+                }
+
+                width: 303px;
+            }
+        }
+    }
+}
