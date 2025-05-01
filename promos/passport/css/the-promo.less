@@ -1,0 +1,324 @@
+@defaultPromoBg: #B23C46;
+@defaultPromoColor1: #fff;
+@defaultPromoColor2: #F6D3CB;
+@defaultPromoColor3: @defaultPromoColor1;
+
+.header-banner.homepage {
+  max-width: 100%;
+}
+
+.header-banner {
+  //background: @promo1Bg;
+  max-width: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+
+//? ON PDP PAGES REMOVING THE MARGIN BOTTOM OF THE SLIDER VERSION OF PROMO
+.site-header .promos .bx-wrapper {
+  margin-bottom: 0;
+}
+
+//? SHOW & HIDE CLONE OF .PROMOS 
+header.site-header {
+  .promos, .the-promo.countdown-promo {
+    display: none;
+  }
+
+  &.fixed {
+    // height: auto;
+
+    .promos {
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      display: block;
+    }
+
+    .the-promo.countdown-promo {
+      @media screen and (max-width: 991px) {
+        display: none;
+      }
+
+      display: flex;
+    }
+
+    .site-header-inner.container,
+    .site-header-inner.homepage {
+      background: #fff;
+    }
+  }
+}
+
+//? CHANGE THE TOP OF THE MOBILE FILTERS
+/*
+.category-page .content .mobile-filter-toggle-wrapper.fixed,
+  .search-page .content .mobile-filter-toggle-wrapper.fixed {
+    @media screen and (max-width: 991px){
+      top: 10% !important;
+    }
+    @media screen and (max-width: 768px){
+      // top: 9% !important;
+    }
+    @media screen and (max-width: 600px){
+      top: 12% !important;
+    }
+    @media screen and (max-width: 430px){
+      top: 15% !important;
+    }
+    @media screen and (max-width: 414px){
+      top: 19% !important;
+    }
+    @media screen and (max-width: 411px){
+      top: 17% !important;
+    }
+    @media screen and (max-width: 390px){
+      top: 17% !important;
+    }
+    @media screen and (max-width: 376px){
+      top: 21% !important;
+    }
+    @media screen and (max-width: 320px){
+      top: 25% !important;
+    }
+   
+  }
+*/
+
+.promos {
+  // max-width: 1680px;
+  // margin: 0 auto;
+  // position: relative;
+  // display: none;
+  // background: @promo1Bg;
+
+  .promos-wrap {
+    // max-width: 1680px;
+    margin: 0 auto;
+    position: relative;
+  }
+
+
+  .the-promo {
+    @media screen and (max-width: 1679px) {
+      // height: 3.9vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      // padding: 2% 0;
+      // height: 22vw;
+      height: 65px;
+      // height: 100px;
+    }
+
+    // background: @backgroundColor;
+    text-align: center;
+    height: 65px;
+    position:relative;
+
+    //? for slideshow
+    width:100% !important;
+
+    // padding: 2% 0;
+    // padding: 0.8% 0;
+    // display:none;
+
+    // .see-details {
+    //  display: block;
+    //  text-align: center;
+    // }
+
+    a {
+      @media screen and (max-width: 430px) {
+        // top: 44%;
+      }
+
+      text-decoration: none;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 100%;
+      // display: block;
+    }
+
+    span,
+    span>a {
+      @media screen and (max-width:1024px) {
+        font-size: 16px;
+        // line-height: 18px;
+      }
+
+      @media screen and (max-width:810px) {
+        font-size: 12px;
+        line-height: 18px;
+      }
+
+      @media screen and (max-width:430px) {
+        font-size: 2.8vw;
+        // line-height: 4vw;
+        line-height: 5vw;
+      }
+
+      position: relative;
+      font-family: gilroy-bold;
+      // font-size: 12px;
+      // line-height: 18px;
+      // font-size: 25px;
+      // line-height: 30px;
+      font-size: 20px;
+      line-height: 24px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+
+      &.span-wrap {
+        left: 0;
+
+        //! FOR PROMO BANNERS WITH NO URLS
+        // text-decoration: none;
+        // position: absolute;
+        // top: 50%;
+        // left: 50%;
+        // transform: translate(-50%, -50%);
+        // width: 100%;
+      }
+
+      &.first {
+        @media screen and (max-width: 430px) {
+          left: 0;
+          // display: none;
+        }
+
+        // left: -1%;
+        // color: @fontColor1;
+        position: relative;
+        font-family: gilroy-bold;
+      }
+
+      &.second {
+        @media screen and (max-width: 430px) {
+          display: block;
+          // display: inline;
+        }
+
+        // color: @fontColor2;
+        i {
+
+          &:first-of-type {
+            @media screen and (max-width: 430px) {
+              // color: @promo2Color2;
+            }
+
+            // color: @defaultPromoColor1;
+          }
+
+          &:nth-of-type(2) {
+            @media screen and (max-width: 430px) {
+              // color: @promo2Color1;
+            }
+
+            // color: @defaultPromoColor2;
+          }
+
+          &:last-of-type {
+            @media screen and (max-width: 430px) {}
+
+            // color: @defaultPromoColor3;
+          }
+
+          &.mobile {
+            // display: inline !important;
+          }
+
+          font-style: normal;
+        }
+      }
+
+      &.third {
+        @media screen and (max-width: 430px) {
+          // left: 0;
+          display: block;
+        }
+
+        // left: 0;
+      }
+
+      &.shop-now {
+        @media screen and (max-width: 430px) {
+          left: 0;
+        }
+
+        left: 1%;
+        text-align: center;
+        border: none;
+        position: relative;
+        top: 0;
+
+        i {
+          font-size: 12px;
+          line-height: 18px;
+          letter-spacing: 2px;
+          font-family: gilroy-bold;
+          text-transform: uppercase;
+          font-style: normal;
+          text-decoration: none;
+          // color: #768ca3;
+        }
+      }
+
+      &.details {
+        @media screen and (max-width: 810px) {
+          // left: 86%;
+          // display: none;
+        }
+
+        @media screen and (max-width: 430px) {
+          // left: 78%;
+          left: 50%;
+          // top: 74%;
+          // top: 78%;
+          top: 76%;
+          transform: translate(-50%, 0);
+          // position: relative;
+          // display: none;
+          // margin: 2% 0 0;
+        }
+
+        left: 91%;
+        top: 50%;
+        transform: translate(0, -50%);
+        position: absolute;
+
+        a {
+          @media screen and (max-width:810px) {
+            font-size: 12px;
+          }
+
+          font-size: 15px;
+          line-height: 18px;
+          // color: #fff;
+          text-decoration: none;
+          font-family: gilroy-regular;
+          text-transform: capitalize;
+          letter-spacing: 0;
+          top:0;
+          left:0;
+        }
+      }
+    }
+
+    img {
+      max-width: 100%;
+    }
+
+    @import 'promo1.less';
+    // @import 'promo2.less';
+    // @import 'promo3.less';
+    // @import 'promo-shipping.less';
+
+
+  }
+}

@@ -1,0 +1,73 @@
+@import 'var.less';
+@promo2Bg: #E76C9A;
+@promo2Color1: #FFC7E4;
+@promo2Color2: #fff;
+@promo2Color3: #FFC7E4;
+
+
+&.promo2 {
+    background: @promo2Bg;
+    // display:none;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color1;
+            font-family: @gilroyb;
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color2;
+            font-family: @gilroyb;
+            // text-decoration: underline;
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 2.8vw;
+                display: block;
+            }
+
+            color: @promo2Color3;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+        }
+
+        &.shop-now {
+            i {
+                color: @promo2Color2;
+            }
+        }
+
+        &.details {
+            @media screen and (max-width:430px) {
+                top: 78%;
+            }
+
+            a {
+                color: @promo2Color3;
+            }
+        }
+    }
+}
