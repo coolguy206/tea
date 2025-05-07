@@ -79,6 +79,34 @@
                 display: inline-block;
                 margin: 0 0 50px;
             }
+
+            span {
+
+                &.cta1 {
+                    &:after {
+                        @media screen and (max-width: 430px){
+                            width: 62%;
+                        }
+                    }
+                }
+
+                &.cta2 {
+                    &:after {
+                        @media screen and (max-width: 430px){
+                            // width: 62%;
+                        }
+                    }
+                }
+
+                &.cta3 {
+                    &:after {
+                        @media screen and (max-width: 430px){
+                            width: 42%;
+                        }
+                    }
+                }
+               
+            }
         }
     }
 
