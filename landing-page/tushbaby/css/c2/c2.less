@@ -1,0 +1,48 @@
+@import "../var.less";
+
+.c2 {
+    @media screen and (max-width: 1679px) {
+        padding: 5vw;
+    }
+
+    position: relative;
+    padding: 80px 0;
+
+    h2 {
+
+        //MOBILE CSS
+        color: #47363D;
+        text-align: center;
+        font-family: @souv;
+        // font-size: 32px;
+        font-size: 7.5vw;
+        // line-height: 34px;
+        line-height: 8vw;
+        text-transform: capitalize;
+
+        &.desktop {
+            @media screen and (max-width: 1679px) {
+                font-size: 3.2vw;
+            }
+
+            color: #47363D;
+            text-align: center;
+            font-family: @souv;
+            font-size: 54px;
+            line-height: normal;
+            text-transform: capitalize;
+        }
+
+    }
+
+    p {
+        //MOBILE CSS
+        color: #47363D;
+        text-align: center;
+        font-family: @souv;
+        // font-size: 20px;
+        font-size: 4.5vw;
+        line-height: normal;
+    }
+
+}

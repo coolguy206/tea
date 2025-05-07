@@ -1,0 +1,69 @@
+@import "../var.less";
+
+.c1 {
+    position: relative;
+
+    .the-content {
+        @media screen and (max-width: 430px) {
+            width: 100%;
+            left: 0;
+            top: 6vw;
+            transform: translate(0);
+        }
+
+        position: absolute;
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        width: 50%;
+
+        img {
+            @media screen and (max-width: 1679px) {
+                width: 24vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: 47vw;
+            }
+        }
+
+        h1 {
+            @media screen and (max-width: 1679px) {
+                font-size: 4.5vw;
+                line-height: 4.5vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 8.5vw;
+                line-height: 8.5vw;
+                margin: 4vw 0;
+            }
+
+            color: #AF5665;
+            font-family: @souv;
+            font-size: 75px;
+            line-height: 75px
+        }
+
+        p {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.5vw;
+            }
+
+            color: #47363D;
+            text-align: center;
+            font-family: @souv;
+            font-size: 24px;
+            line-height: normal;
+        }
+
+        a {
+            background: #D2A378;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+}

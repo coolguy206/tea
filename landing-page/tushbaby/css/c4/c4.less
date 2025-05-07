@@ -1,0 +1,142 @@
+@import "../var.less";
+
+.c4 {
+    @media screen and (max-width: 1679px) {
+        padding: 5vw;
+    }
+
+    @media screen and (max-width: 430px) {
+        flex-wrap: wrap;
+    }
+
+    position: relative;
+    display: flex;
+    background: #FDF5F2;
+    padding: 90px;
+
+    .first {
+        @media screen and (max-width: 430px) {
+            order: 1;
+        }
+
+        order: 2;
+        text-align: center;
+
+        h3 {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.1vw;
+                line-height: 1.5vw;
+                letter-spacing: .25vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 3.1vw;
+                line-height: 5.5vw;
+                letter-spacing: 1vw;
+            }
+
+            color: #47363D;
+            text-align: center;
+            font-family: @gilroyb;
+            font-size: 18px;
+            line-height: 28px;
+            letter-spacing: 4px;
+            text-transform: uppercase;
+        }
+
+        h2 {
+            @media screen and (max-width: 1679px) {
+                font-size: 2.7vw;
+                line-height: 3vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 9.7vw;
+                line-height: 10vw;
+            }
+
+            color: #AF5665;
+            text-align: center;
+            font-family: @souv;
+            font-size: 44px;
+            line-height: 46px;
+            text-transform: capitalize;
+        }
+
+        p {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.3vw;
+                line-height: 2vw;
+            }
+
+            color: #47363D;
+            text-align: center;
+            font-family: @souv;
+            font-size: 22px;
+            line-height: 33px;
+        }
+
+        img {
+            @media screen and (max-width: 1679px) {
+                width: 29vw;
+            }
+        }
+
+        a {
+            @media screen and (max-width: 1679px) {
+                margin: 3vw 0 0;
+            }
+
+            @media screen and (max-width: 430px) {
+                display: none;
+            }
+
+            background: #D2A378;
+            margin: 50px 0 0;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+
+    .second {
+        @media screen and (max-width: 1679px) {
+            padding: 0 0 3vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            text-align: center;
+            order: 2;
+        }
+
+        position: relative;
+        order: 1;
+        overflow: hidden;
+        padding: 0 0 40px;
+
+        .glide__bullets {
+            left: 50%;
+            transform: translate(-50%, -0);
+            bottom: 0;
+        }
+
+        p {
+            @media screen and (max-width: 430px) {
+                text-align: center;
+                font-size: 4.5vw;
+                line-height: 6.5vw;
+            }
+        }
+
+        a {
+            @media screen and (max-width: 430px) {
+                display: inline-flex;
+            }
+
+            display: none;
+            background: #D2A378;
+        }
+    }
+
+}

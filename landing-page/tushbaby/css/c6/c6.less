@@ -1,0 +1,123 @@
+@import "../var.less";
+
+.c6 {
+    @media screen and (max-width: 1679px) {
+        padding: 6vw 0;
+    }
+
+    @media screen and (max-width: 430px) {
+        padding: 0;
+    }
+
+    position: relative;
+    padding: 100px 0;
+    background: #FDF5F2;
+
+    div {
+        @media screen and (max-width: 1679px) {
+            column-gap: 5vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            display: block;
+        }
+
+        display: flex;
+        justify-content: center;
+        column-gap: 90px;
+
+        img {
+            @media screen and (max-width: 1679px) {
+                width: 21vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: 100%;
+            }
+        }
+
+        .the-content {
+            @media screen and (max-width: 430px) {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+            }
+
+            display: block;
+            text-align: center;
+
+            h3 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.1vw;
+                    line-height: 2vw;
+                    letter-spacing: .25vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    color: #FFF;
+                    font-size: 4vw;
+                    line-height: 6vw;
+                    letter-spacing: 1vw;
+                }
+
+                color: #47363D;
+                text-align: center;
+                font-family: @gilroyb;
+                font-size: 18px;
+                line-height: 28px;
+                letter-spacing: 4px;
+                text-transform: uppercase;
+            }
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 2.7vw;
+                    line-height: 3vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    color: #FFF;
+                    font-size: 9vw;
+                    line-height: 9vw;
+                }
+
+                color: #AF5665;
+                text-align: center;
+                font-family: @souv;
+                font-size: 44px;
+                line-height: 46px;
+                text-transform: capitalize;
+            }
+
+            p {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.3vw;
+                    line-height: 2vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    color: #FFF;
+                    font-size: 5vw;
+                    line-height: 6vw;
+                }
+
+                color: #47363D;
+                text-align: center;
+                font-family: @souv;
+                font-size: 22px;
+                line-height: 33px;
+            }
+
+            a {
+                background: #D2A378;
+
+                &:hover {
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+
+}
