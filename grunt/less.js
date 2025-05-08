@@ -3,14 +3,20 @@ var config = require("./../gruntConfig.js");
 var promoCSS = config.promo.css;
 
 var promosDest = ``;
-if(config.promo.css !== ``){
-    if(promoCSS.indexOf('/') !== -1) {
+if (config.promo.css !== ``) {
+    if (promoCSS.indexOf('/') !== -1) {
         promoCSS = promoCSS.split('/');
-        promosDest = `promos/${config.promo.name}/dev/${promoCSS[0]}/${promoCSS[1]}/css/`;
+        var slashCount = promoCSS.length;
+        if (slashCount == 3) {
+            promosDest = `promos/${config.promo.name}/dev/${promoCSS[0]}/${promoCSS[1]}//${promoCSS[2]}/css/`;
+        } else {
+            promosDest = `promos/${config.promo.name}/dev/${promoCSS[0]}/${promoCSS[1]}/css/`;
+        }
+
     } else {
         promosDest = `promos/${config.promo.name}/dev/${config.promo.css}/css/`;
-    } 
-    
+    }
+
 } else {
     promosDest = `promos/${config.promo.name}/css/`
 }
