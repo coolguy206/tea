@@ -9,6 +9,19 @@ header.site-header {
   position: fixed !important;
 }
 
+.site-content .site-content-inner.homepage {
+  @media screen and (max-width: 430px) {
+    padding: 0;
+  }
+
+  max-width: 100% !important;
+  padding: 30px;
+}
+
+header .site-header-inner.homepage {
+  max-width: 100% !important;
+}
+
 header.site-header.fixed .site-header-inner.container,
 header.site-header.fixed .site-header-inner.homepage {
   height: auto;
@@ -86,6 +99,7 @@ body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
     opacity: 1;
     position: relative;
   }
+
   @media screen and (max-width: 430px) {
     display: none;
   }
