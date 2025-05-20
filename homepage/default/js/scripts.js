@@ -10,8 +10,8 @@ import Glide from '@glidejs/glide'
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow2').append($('.dresses.sliders'));
+  $('.hp .shop-slideshow').append($('.the-dresses-slider'));
+  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 
@@ -73,6 +73,7 @@ $(document).ready(function () {
   }
 
   tracking('.hp .shop-slideshow a', 'shop-slideshow');
+  tracking('.hp .shop-slideshow2 a', 'shop-slideshow2');
   tracking('.hp .promo1 a', 'promo1');
 
   var a = $('.hp a');

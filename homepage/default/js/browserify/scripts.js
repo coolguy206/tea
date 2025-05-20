@@ -60,8 +60,8 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow2').append($('.dresses.sliders'));
+  $('.hp .shop-slideshow').append($('.the-dresses-slider'));
+  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 });
@@ -118,6 +118,7 @@ $(document).ready(function () {
     (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);
   }
   (0, _tracking.tracking)('.hp .shop-slideshow a', 'shop-slideshow');
+  (0, _tracking.tracking)('.hp .shop-slideshow2 a', 'shop-slideshow2');
   (0, _tracking.tracking)('.hp .promo1 a', 'promo1');
   var a = $('.hp a');
   $(a).each(function (i, val) {
