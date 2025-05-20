@@ -1,10 +1,10 @@
 @import "../var.less";
-@c2-first-font-color: #FBFD37;
-@c2-first-cta-color: #FBFD37;
-@c2-first-cta-background: #5F8198;
-@c2-second-font-color: #FBFD37;
-@c2-second-cta-color: #FBFD37;
-@c2-second-cta-background: #5F8198;
+@c2-first-font-color: #fff;
+@c2-first-cta-color: #fff;
+@c2-first-cta-background: #EC8EB8;
+@c2-second-font-color: #fff;
+@c2-second-cta-color: #fff;
+@c2-second-cta-background: #EC8EB8;
 
 
 .c2 {
@@ -51,24 +51,24 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 5.7vw;
-          line-height: 5.4vw;
+          font-size: 3vw;
+          // line-height: 5.4vw;
         }
 
         @media screen and (max-width:430px) {
-          font-size: 15vw;
-          line-height: 13vw;
-          margin: 4vw 0;
+          font-size: 7vw;
+          // line-height: 13vw;
+          margin: 0 0 4vw;
         }
 
         font-family: @dumpling;
-        font-size: 96px;
-        line-height: 92px;
+        font-size: 45px;
+        // line-height: 92px;
         // letter-spacing: 10px;
         color: @c2-first-font-color;
         margin: 0 0 1vw;
         text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.25);
-        text-align: left;
+        text-align: center;
         text-transform: uppercase;
 
         i {
@@ -95,15 +95,16 @@
 
         @media screen and (max-width: 430px) {
           // top: 62%;
+          width: 60%;
         }
 
         margin: 0;
         width: auto;
-        text-align: left;
+        text-align: center;
         position: absolute;
         bottom: 6%;
-        left: 5%;
-        transform: translate(0%, 0%);
+        left: 50%;
+        transform: translate(-50%, 0%);
 
         div {
           @media screen and (max-width: 430px) {}
@@ -161,16 +162,16 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: 24vw;
+              // width: 24vw;
             }
 
             @media screen and (max-width: 430px) {
-              width: 64vw;
+              // width: 64vw;
             }
 
             // color: @c2-first-cta-color;
             // background: @c2-first-cta-background;
-            width: 396px;
+            // width: 396px;
             // margin: 0 0 20%;
 
           }
@@ -219,16 +220,16 @@
 
           a {
             @media screen and (max-width:1679px) {
-              width: 24vw;
+              // width: 24vw;
             }
 
             @media screen and (max-width: 430px) {
-              width: 64vw;
+              // width: 64vw;
             }
 
             // color: @c2-second-cta-color;
             // background: @c2-second-cta-background;
-            width: 413px;
+            // width: 413px;
 
           }
         }
