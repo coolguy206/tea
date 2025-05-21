@@ -8,7 +8,7 @@ $(document).ready(function () {
 
   // $('.the-swim-slider').css('opacity', 1);
 
-  // $($(`.swim .lgw-thumb`)[6]).before($('.swim .img-2'));
+  $($(`.the-swim-slider .lgw-thumb`)[6]).before($('.the-swim-slider .img-2'));
 
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
   if ($('.the-swim-slider li').length >= 5 || window.innerWidth < 431) {

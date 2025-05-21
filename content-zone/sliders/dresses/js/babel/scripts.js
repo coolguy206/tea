@@ -6,7 +6,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ready(function () {
   // $('.the-dresses-slider').css('opacity', 1);
 
-  // $($(`.dresses .lgw-thumb`)[6]).before($('.dresses .img-2'));
+  $($(".the-dresses-slider .lgw-thumb")[6]).before($('.the-dresses-slider .img-2'));
 
   //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
   if ($('.the-dresses-slider li').length >= 5 || window.innerWidth < 431) {
@@ -37,4 +37,3 @@ $(document).ready(function () {
   }
   (0, _inview.inview)('.the-dresses-slider');
 });
-//# sourceMappingURL=scripts.js.map

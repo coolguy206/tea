@@ -7,8 +7,8 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow2').append($('.dresses.sliders'));
+  $('.hp .shop-slideshow').append($('.the-dresses-slider'));
+  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 });
@@ -25,24 +25,25 @@ $(document).ready(function () {
   //   );
   // });
 
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false
-  }).mount();
-  new _glide["default"]('.c2 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
+
+  // new Glide('.c2 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount();
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',
@@ -64,6 +65,7 @@ $(document).ready(function () {
     (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);
   }
   (0, _tracking.tracking)('.hp .shop-slideshow a', 'shop-slideshow');
+  (0, _tracking.tracking)('.hp .shop-slideshow2 a', 'shop-slideshow2');
   (0, _tracking.tracking)('.hp .promo1 a', 'promo1');
   var a = $('.hp a');
   $(a).each(function (i, val) {
