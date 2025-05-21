@@ -270,7 +270,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
-      // $('.promo1-url').show();
+      $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
@@ -450,7 +450,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       // $('.promo1-url.newborn').show();
-      // $('.promo1-url').show();
+      $('.promo1-url').show();
       // $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
