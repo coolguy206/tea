@@ -2,8 +2,8 @@
 @promo-skinny-h2-color: #4F4243;
 @promo-skinny-font-color: #fff;
 @promo-skinny-p-color: #fff;
-@promo-skinny-cta1-color: #47363D;
-@promo-skinny-cta1-background: #fff;
+@promo-skinny-cta1-color: #EF465D;
+@promo-skinny-cta1-background: #FCF7E1;
 @promo-skinny-cta2-color: @promo-skinny-cta1-color;
 @promo-skinny-cta2-background: #2FAB9D;
 @promo-skinny-cta3-color: @promo-skinny-cta1-color;
@@ -18,20 +18,20 @@
 
 .promo1-skinny {
   @media screen and (max-width: 1679px) {
-    height: 7vw;
+    // height: 7vw;
   }
 
   @media screen and (max-width: 430px) {
-    height: 54vw;
-    flex-wrap: wrap;
+    // height: 54vw;
+    // flex-wrap: wrap;
     // display: none;
   }
 
   position: relative;
-  display: flex;
+  // display: flex;
   width: 100%;
   background: @promo-skinny-background-color;
-  height: 120px;
+  // height: 120px;
   min-height: auto !important;
   align-items: center;
 
@@ -52,21 +52,21 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 50%;
+        top: 81%;
         width: 100%;
         left: 0%;
         transform: translate(0%, -50%);
-        text-align: center;
+        // text-align: center;
         flex-wrap: wrap;
       }
 
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
-      left: 50%;
+      // width: 100%;
+      left: 87%;
       display: flex;
-      justify-content: space-around;
+      // justify-content: space-around;
       // column-gap: 65px;
       align-items: center;
       // text-align: center;
@@ -193,9 +193,9 @@
           justify-content: center;
         }
 
-        column-gap: 20px;
+        // column-gap: 20px;
         // row-gap: 19%;
-        display:flex;
+        // display:flex;
         // align-items: center;
         // justify-content: center;
 
@@ -207,7 +207,7 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            width: 12vw;
+            width: 15vw;
           }
 
           @media screen and (max-width: 1024px) {}
@@ -216,17 +216,18 @@
 
           @media screen and (max-width: 430px) {
             width: 43.5vw;
+            left: 9vw;
           }
 
           color: @promo-skinny-cta1-color;
           background: @promo-skinny-cta1-background;
-          width: 203px;
-          border: 1px solid #4F4243;
+          width: 258px;
+          // border: 1px solid #4F4243;
 
-          &:hover {
-            background: @promo-skinny-cta1-color;
-            color: @promo-skinny-cta1-background;
-          }
+          // &:hover {
+          //   background: @promo-skinny-cta1-color;
+          //   color: @promo-skinny-cta1-background;
+          // }
 
           &.cta1 {
             // background: @promo-skinny-cta1-background;

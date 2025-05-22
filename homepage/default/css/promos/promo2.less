@@ -1,7 +1,7 @@
 @import "../var.less";
 @promo2-background-color: none;
 @promo2-h2-font-color: #47363D;
-@promo2-cta1-color: #fff;
+@promo2-cta1-color: #3160AA;
 @promo2-cta1-background: #586397;
 @promo2-cta2-color: #E3EFA3;
 @promo2-cta2-background: #2C8082;
@@ -22,7 +22,7 @@
 
   @media screen and (max-width: 430px) {
     // padding: 7vw 0;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     // column-gap: 4vw;
   }
 
@@ -32,16 +32,23 @@
   // column-gap: 16px;
   // padding: 55px 0;
   // padding: 0 .5vw;
-  // flex-wrap: wrap;
+  flex-wrap: wrap;
 
   div {
     @media screen and (max-width:1679px) {}
 
     @media screen and (max-width:430px) {}
 
-    overflow: hidden;
+    // overflow: hidden;
     padding:0;
     position: relative;
+
+
+    &.top,
+    &.bottom {
+      display: flex;
+      flex-wrap: wrap;
+    }
 
     &.first,
     &.second,
@@ -50,10 +57,10 @@
     &.fifth,
     &.sixth {
       @media screen and (max-width: 430px) {
-        flex-basis: 100% !important;
+        flex-basis: 50% !important;
       }
 
-      flex-basis: 25%;
+      flex-basis: 33.3%;
     }
 
     &.second,
@@ -87,14 +94,18 @@
 
     .the-content {
       @media screen and (max-width:430px) {
-        top: 70%;
+        // top: 70%;
+        width: 100%;
+        bottom: 5%;
+        text-align: center;
       }
 
       position: absolute;
-      top:60%;
+      // top:60%;
       left:50%;
+      bottom: 10%;
       transform: translate(-50%, 0%);
-      text-align: left;
+      // text-align: left;
 
       h2 {
         @media screen and (max-width: 1679px) {
@@ -130,16 +141,24 @@
       }
 
       div {
-        text-align: left;
+        // text-align: left;
 
         a {
           @media screen and (max-width:1679px) {}
 
-          @media screen and (max-width:430px) {}
+          @media screen and (max-width:430px) {
+            font-size: 2vw;
+          }
 
-          background: @promo2-cta1-background;
+          // background: @promo2-cta1-background;
           color: @promo2-cta1-color;
           // width: 308px;
+
+          &:after {
+            @media screen and (max-width:430px) {
+              bottom: 20%;
+            }
+          }
 
         }
       }
