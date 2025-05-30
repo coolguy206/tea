@@ -7,8 +7,8 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.the-dresses-slider'));
-  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
+  $('.hp .shop-slideshow').append($('.the-sliders'));
+  // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 });

@@ -21,13 +21,13 @@ var category = `promos/one-offs/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/headers/new-arrivals/`;
+var readFilePath = `Site/${num}/Site/headers/select-styles/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
+var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/tushbaby/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
