@@ -1,9 +1,9 @@
 @import "../var.less";
-@promo-skinny-h2-color: #4F4243;
+@promo-skinny-h2-color: #fff;
 @promo-skinny-font-color: #fff;
 @promo-skinny-p-color: #fff;
-@promo-skinny-cta1-color: #EF465D;
-@promo-skinny-cta1-background: #FCF7E1;
+@promo-skinny-cta1-color: #F18D8D;
+@promo-skinny-cta1-background: #FFEC60;
 @promo-skinny-cta2-color: @promo-skinny-cta1-color;
 @promo-skinny-cta2-background: #2FAB9D;
 @promo-skinny-cta3-color: @promo-skinny-cta1-color;
@@ -14,15 +14,15 @@
 @promo-skinny-cta5-background: #2B5579;
 @promo-skinny-cta6-color: @promo-skinny-cta1-color;
 @promo-skinny-cta6-background: #EC5152;
-@promo-skinny-background-color: none;
+@promo-skinny-background-color: #F18D8D;
 
 .promo1-skinny {
   @media screen and (max-width: 1679px) {
-    // height: 7vw;
+    height: 12vw;
   }
 
   @media screen and (max-width: 430px) {
-    // height: 54vw;
+    height: 89vw;
     // flex-wrap: wrap;
     // display: none;
   }
@@ -31,7 +31,7 @@
   // display: flex;
   width: 100%;
   background: @promo-skinny-background-color;
-  // height: 120px;
+  height: 200px;
   min-height: auto !important;
   align-items: center;
 
@@ -44,7 +44,7 @@
   div {
     &.the-content {
       @media screen and (max-width: 1679px) {
-        column-gap: 4vw;
+        column-gap: 7vw;
       }
 
       @media screen and (max-width: 1024px) {}
@@ -52,25 +52,26 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 81%;
+        top: 50%;
         width: 100%;
         left: 0%;
         transform: translate(0%, -50%);
-        // text-align: center;
-        flex-wrap: wrap;
+        text-align: center;
+        display: block;
+        // flex-wrap: wrap;
       }
 
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
       // width: 100%;
-      left: 87%;
+      left: 50%;
       display: flex;
       // justify-content: space-around;
-      // column-gap: 65px;
+      column-gap: 117px;
       align-items: center;
       // text-align: center;
-      // width: 40%;
+      width: 72%;
 
       a,
       a,
@@ -126,27 +127,53 @@
         @media screen and (max-width: 1679px) {
           font-size: 3vw;
           // left: 19vw;
-          // letter-spacing: .3vw;
+          letter-spacing: .6vw;
           // line-height: 4.8vw;
         }
 
         @media screen and (max-width: 430px) {
           margin: 0 0 4vw;
-          font-size: 9vw;
-          // letter-spacing: 1vw;
+          font-size: 12vw;
+          letter-spacing: 2.5vw;
+          text-align: center;
           // left: 0;
         }
 
-        text-transform: capitalize;
+
         color: @promo-skinny-h2-color;
-        font-family: @gilroyr;
+        text-transform: uppercase;
+        font-family: @gilroyb;
         margin: 0;
-        font-size: 54px;
+        font-size: 48px;
         line-height: normal;
-        // letter-spacing: 3.6px;
+        letter-spacing: 9.6px;
         // display: inline-block;
         // left: 327px;
         position: relative;
+        text-align: left;
+
+        i {
+          @media screen and (max-width: 1679px) {
+            font-size: 1.8vw;
+            letter-spacing: .4vw;
+            line-height: 3vw;
+          }
+
+          @media screen and (max-width: 430px) {
+            font-size: 6vw;
+            letter-spacing: 1vw;
+            line-height: 14vw;
+          }
+
+          color: #FFEC60;
+          font-family: @gilroyb;
+          font-size: 30px;
+          font-style: normal;
+          line-height: 58px;
+          letter-spacing: 6px;
+          text-transform: uppercase;
+          display: block;
+        }
 
       }
 
@@ -207,7 +234,7 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            width: 15vw;
+            width: 12vw;
           }
 
           @media screen and (max-width: 1024px) {}
@@ -215,13 +242,13 @@
           @media screen and (max-width: 810px) {}
 
           @media screen and (max-width: 430px) {
-            width: 43.5vw;
-            left: 9vw;
+            width: 37.5vw;
+            // left: 9vw;
           }
 
           color: @promo-skinny-cta1-color;
           background: @promo-skinny-cta1-background;
-          width: 258px;
+          width: 203px;
           // border: 1px solid #4F4243;
 
           // &:hover {

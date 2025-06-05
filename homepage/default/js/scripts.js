@@ -11,7 +11,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
+  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 
@@ -31,16 +31,16 @@ $(document).ready(function () {
   //   );
   // });
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
   new Glide('.c2 .glide', {
     type: 'carousel',
