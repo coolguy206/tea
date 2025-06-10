@@ -59,7 +59,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ready(function () {
   new _glide["default"]('.slideshow .glide', {
     type: 'carousel',
-    // autoplay: 4000,
+    autoplay: 4000,
     animationDuration: 2000,
     perView: 1,
     hoverpause: true,
