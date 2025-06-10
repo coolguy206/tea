@@ -78,25 +78,38 @@ $(document).ready(function () {
   //   );
   // });
 
-  // new Glide('.c1 .glide', {
+  new _glide["default"]('.c1 .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false
+  }).mount();
+
+  // new Glide('.c2 .glide', {
   //   type: 'carousel',
   //   autoplay: 4000,
   //   animationDuration: 1000,
   //   perView: 1,
   //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
+  //   gap: 0
   // }).mount();
 
-  new _glide["default"]('.c2 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  $('.c2 ul').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    // pause: 8000,
+    touchEnabled: false,
+    onSliderLoad: function onSliderLoad() {
+      // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    }
+  });
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',
