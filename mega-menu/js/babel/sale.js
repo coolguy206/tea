@@ -41,7 +41,7 @@ $(document).ready(function () {
     $('.promo1-url').show();
     // $('.promo1-url.girl').show();
     // $('.promo2-url').show();
-    $('.promo3-url').show();
+    // $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
     // $('.promo1-url.girl').show();

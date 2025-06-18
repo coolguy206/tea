@@ -61,7 +61,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   $('.hp .shop-slideshow').append($('.the-sliders'));
-  $('.hp .shop-slideshow2').append($('.the-swim-slider'));
+  // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
 });
@@ -71,13 +71,11 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // $("#countdown span").countdown("2024/11/29 23:59:59", function (event) {
-  //   $(this).text(
-  //     event.strftime('%-DD %HH %MM %SS')
-  // event.strftime('%-D %H:%M:%S')
-  //   );
-  // });
-
+  $("#countdown span").countdown("2025/06/22 23:59:59", function (event) {
+    $(this).text(
+    // event.strftime('%-DD %HH %MM %SS');
+    event.strftime('%-D Days %H Hrs %M Mins'));
+  });
   new _glide["default"]('.c1 .glide', {
     type: 'carousel',
     autoplay: 4000,

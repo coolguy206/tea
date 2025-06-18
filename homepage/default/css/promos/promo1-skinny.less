@@ -18,11 +18,11 @@
 
 .promo1-skinny {
   @media screen and (max-width: 1679px) {
-    height: 12vw;
+    // height: 12vw;
   }
 
   @media screen and (max-width: 430px) {
-    height: 89vw;
+    // height: 89vw;
     // flex-wrap: wrap;
     // display: none;
   }
@@ -30,8 +30,8 @@
   position: relative;
   // display: flex;
   width: 100%;
-  background: @promo-skinny-background-color;
-  height: 200px;
+  // background: @promo-skinny-background-color;
+  // height: 200px;
   min-height: auto !important;
   align-items: center;
 
@@ -41,7 +41,34 @@
   //   max-width: 100%;
   // }
 
+
   div {
+    display: flex;
+    flex-wrap: wrap;
+
+    a {
+      @media screen and (max-width: 1679px) {
+        flex-basis: 33.33%;
+      }
+      @media screen and (max-width: 430px) {
+        flex-basis: 100%;
+      }
+
+      position: relative;
+
+      .the-cta {
+        position: absolute;
+        top: 56%;
+        left: 52%;
+        transform: translate(-50%, -50%);
+
+        span {
+          color: #fff;
+        }
+      }
+    }
+
+
     &.the-content {
       @media screen and (max-width: 1679px) {
         column-gap: 7vw;

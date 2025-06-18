@@ -1,7 +1,7 @@
-@promo3Bg: #F18D8D;
-@promo3Color1: #FFEC60;
-@promo3Color2: #fff;
-@promo3Color3: #fff;
+@promo3Bg: #F9F613;
+@promo3Color1: #52A2BA;
+@promo3Color2: #52A2BA;
+@promo3Color3: #47363D;
 
 &.promo3 {
     background: @promo3Bg;
@@ -13,7 +13,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 4vw;
+                font-size: 3vw;
                 // display: none;
             }
 
@@ -27,7 +27,7 @@
 
             @media screen and (max-width: 430px) {
                 // font-size: 2.5vw;
-                font-size: 4vw;
+                font-size: 3vw;
             }
 
             i {
@@ -76,10 +76,46 @@
 
             @media screen and (max-width: 430px) {
                 // font-size: 2.8vw;
-                font-size: 4vw;
+                font-size: 3vw;
             }
 
-            color: @promo3Color3;
+            i {
+
+                &:first-of-type {
+                    @media screen and (max-width: 430px) {
+                        // color: @promo3Color1;
+                        // display: inline;
+                    }
+
+                    // color: @promo3Color1;
+                }
+
+                &:nth-of-type(2) {
+                    @media screen and (max-width: 430px) {
+                        // color: @promo3Color2;
+                    }
+
+                    // color: @promo3Color2;
+                }
+
+                &:last-of-type {
+                    @media screen and (max-width: 430px) {
+                        // display: inline;
+                        // color: @promo3Color2;
+                    }
+
+                    // color: @promo3Color3;
+                }
+
+                &.mobile {
+                    // display: inline !important;
+                }
+
+                font-style: normal;
+                color: @promo3Color3;
+            }
+
+            color: @promo3Color2;
             // text-decoration:underline;
         }
 
