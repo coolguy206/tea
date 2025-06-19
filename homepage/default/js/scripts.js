@@ -27,7 +27,7 @@ $(document).ready(function () {
   $("#countdown span").countdown("2025/06/22 23:59:59", function (event) {
     $(this).text(
       // event.strftime('%-DD %HH %MM %SS');
-      event.strftime('%-D Days %H Hrs %M Mins')
+      event.strftime('%-D days %H hrs %M mins')
     );
   });
 
