@@ -1,14 +1,14 @@
 @import 'var.less';
-@promo1Bg: #6BB7CE;
-@promo2Bg: #DFB6B2;
-@promo1Color1: #F3F110;
-@promo1Color2: #fff;
-@promo1Color3: #FFEC60;
+@promo1Bg: #5F8099;
+@promo1-Bg-2: #DFB6B2;
+@promo1Color1: #FBFD38;
+@promo1Color2: #F3C1FD;
+@promo1Color3: #FBFD38;
 @promo1Details: #fff;
 
 &.promo1 {
-    // background: @promo1Bg;
-    background-image: linear-gradient(to right, @promo1Bg , @promo2Bg);
+    background: @promo1Bg;
+    // background-image: linear-gradient(to right, @promo1Bg , @promo1-Bg-2);
     // display: none;
 
     span {
@@ -18,7 +18,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 3vw;
+                font-size: 4vw;
                 // display: none;
             }
 
@@ -37,7 +37,7 @@
 
             @media screen and (max-width: 430px) {
                 // font-size: 2.8vw;
-                font-size: 3vw;
+                font-size: 4vw;
             }
 
             color: @promo1Color2;
@@ -62,7 +62,7 @@
 
             @media screen and (max-width: 430px) {
                 // font-size: 2.8vw;
-                font-size: 3vw;
+                font-size: 4vw;
             }
 
             color: @promo1Color3;
@@ -70,7 +70,7 @@
             // text-decoration:underline;
 
             i {
-                color: @promo1Color1;
+                color: @promo1Color2;
                 font-style: normal;
                 // font-size: 8px;
             }

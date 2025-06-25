@@ -6,8 +6,8 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0620`;
-var version = `v2`;
+var num = `0627`;
+var version = `v1`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -21,12 +21,13 @@ var category = `promos/one-offs/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/v2/HP/`;
+// var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/select-styles/`;
 // var writeFilePath = `landing-page/shops/global-shop/default/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;

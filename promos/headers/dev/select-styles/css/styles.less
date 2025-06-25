@@ -8,27 +8,27 @@
 
     .the-content.select-styles {
         @media screen and (max-width: 1679px) {
-            // column-gap: 1.3vw !important;
+            column-gap: 1vw;
             // row-gap: 1.5vw;
         }
 
         @media screen and (max-width: 430px) {
-            // column-gap: 4vw !important;
+            column-gap: 4vw;
             // row-gap: 4vw;
-            // justify-content: center !important;
+            justify-content: center;
             //  flex-wrap: wrap;
             // position: absolute;
             // top: 50%;
             // left: 50%;
             // transform: translate(-50%, -65%);
-            row-gap: 0;
+            // row-gap: 0;
         }
 
-        // column-gap: 18px !important;
+        column-gap: 20px;
         // row-gap: 24px;
         flex-wrap: wrap;
-        // justify-content: left !important;
-        column-gap:0;
+        justify-content: start;
+        // column-gap:0;
 
         img {
             width: 100%;
@@ -36,48 +36,64 @@
 
         a {
             @media screen and (max-width: 1679px) {
-                flex-basis: 32%;
+                // flex-basis: 32%;
             }
+
             @media screen and (max-width: 430px) {
-                flex-basis: 50%;
+                // flex-basis: 50%;
             }
 
         }
 
         a.cta0 {
             .cta-border {
-                background: #F4B6FF !important;
-                color: #586397 !important;
+                // background: #F4B6FF !important;
+                // color: #586397 !important;
             }
         }
 
-        a.cta5 {
-            @media screen and (max-width: 430px) {
-                display: block !important;
+        a.cta2,
+        a.cta4,
+        a.cta6 {
+            .the-cta {
+                @media screen and (max-width: 430px) {
+                    text-align: left !important;
+                }
             }
+
+        }
+
+        a.cta5,
+        a.cta6 {
+            @media screen and (max-width: 430px) {
+                display: block;
+            }
+
+            display: block
         }
 
         .the-cta {
-            // @media screen and (max-width: 430px) {
-            //     position: relative !important;
-            // }
+            @media screen and (max-width: 430px) {
+                text-align: right !important;
+            }
+
             position: relative !important;
             // bottom: 10% !important;
         }
 
         .cta-border {
             @media screen and (max-width: 1679px) {
-                width: 24vw !important;
+                width: 12vw !important;
             }
 
             @media screen and (max-width: 430px) {
-                width: 44vw !important;
-                font-size: 2vw !important;
+                width: 41.5vw !important;
+                // font-size: 2vw !important;
             }
 
-            background: #586397 !important;
-            color: #fff !important;
-            width: 411px;
+            background: #5F8099 !important;
+            color: #FCFF00 !important;
+            width: 203px;
         }
     }
 
