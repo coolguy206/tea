@@ -15,7 +15,7 @@ module.exports = {
     hp: {
         // tsconfig: './tsconfig.json'
         src: ["homepage/" + config.hp.name + "/ts/**/*.ts", "!node_modules/**"],
-        outDir: "homepage/" + config.hp.name + "/js/jsmin",
+        outDir: "homepage/" + config.hp.name + "/js/ts2js",
     },
 
     mega: {
@@ -25,17 +25,17 @@ module.exports = {
 
     zone: {
         src: ['content-zone/' + config.zone.name + '/**/ts/*.ts'],
-        outDir: 'content-zone/' + config.zone.name + '/js/jsmin',
+        outDir: 'content-zone/' + config.zone.name + '/js/ts2js',
     },
 
     landing: {
         src: ['landing-page/' + config.landing.name + '/**/ts/**/*.ts'],
-        outDir: 'landing-page/' + config.landing.name + '/js/jsmin',
+        outDir: 'landing-page/' + config.landing.name + '/js/ts2js',
     },
 
     promos: {
         src: ['promos/' + config.promo.name + '/**/ts/**/*.ts'],
-        outDir: 'promos/' + config.promo.name + '/js/jsmin',
+        outDir: 'promos/' + config.promo.name + '/js/ts2js',
     },
 
 };
