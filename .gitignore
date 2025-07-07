@@ -14,3 +14,4 @@ schema.graphql
 handoff/**
 Site/**
 .vscode
+.tscache
