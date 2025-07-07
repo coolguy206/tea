@@ -20,7 +20,7 @@ module.exports = {
 
     mega: {
         src: ['mega-menu/ts/*.ts', "!node_modules/**"],
-        outDir
+        outDir: 'mega-menu/js/ts2js',
     },
 
     zone: {
