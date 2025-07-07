@@ -11,7 +11,7 @@ module.exports = {
         sourceMap: true
     },
     hp: {
-        // tsconfig: './tsconfig.json'
+        // tsconfig: './tsconfig.json',
         src: ["homepage/" + config.hp.name + "/ts/**/*.ts", "!node_modules/**"],
         options: {
             outDir: "homepage/" + config.hp.name + "/js/ts2js",
@@ -19,10 +19,10 @@ module.exports = {
         }
     },
     mega: {
-        src: ['mega-menu/ts/*.ts', "!node_modules/**"],
+        src: ["mega-menu/ts/*.ts", "!node_modules/**"],
         options: {
-            outDir: 'mega-menu/js/ts2js',
-            rootDir: 'mega-menu/ts',
+            outDir: "mega-menu/js/ts2js",
+            rootDir: "mega-menu/ts",
         }
     },
     zone: {
