@@ -6,8 +6,6 @@
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
     "@types/node-fetch": "^2.6.1",
-    "async": "^2.6.4",
-    "axios": "^0.26.1",
     "cheerio": "^1.0.0-rc.12",
     "cloudinary": "^1.28.1",
     "cssunminifier": "0.0.2",
@@ -29,9 +27,7 @@
     "node-fetch": "^2.7.0",
     "puppeteer": "^21.3.6",
     "puppeteer-extra": "^3.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "request": "^2.88.2",
-    "sailthru-client": "^3.0.6"
+    "puppeteer-extra-plugin-stealth": "^2.11.2"
   },
   "devDependencies": {
     "@babel/core": "^7.11.1",
