@@ -8,7 +8,7 @@ module.exports = {
         noImplicitAny: true,
         removeComments: true,
         preserveConstEnums: true,
-        sourceMap: true
+        // sourceMap: true
     },
     hp: {
         // tsconfig: './tsconfig.json',
@@ -21,8 +21,8 @@ module.exports = {
     mega: {
         src: ["mega-menu/ts/*.ts", "!node_modules/**"],
         options: {
-            outDir: "mega-menu/js/ts2js",
-            rootDir: "mega-menu/ts",
+            outDir: "mega-menu/js/ts2js/",
+            rootDir: "mega-menu/ts/",
         }
     },
     zone: {

@@ -3,10 +3,10 @@ var config = require("./../gruntConfig.js");
 
 var promosDest = ``;
 if (config.promo.js !== ``) {
-  promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/ts2js/`;
+  promosSrc = `promos/${config.promo.name}/dev/${config.promo.js}/js/`;
   promosDest = `promos/${config.promo.name}/dev/${config.promo.js}/js/babel/`;
 } else {
-  promosSrc = `promos/${config.promo.name}/js/ts2js/`;
+  promosSrc = `promos/${config.promo.name}/js/`;
   promosDest = `promos/${config.promo.name}/js/babel/`;
 }
 // console.log(promosSrc, promosDest);
@@ -15,14 +15,14 @@ module.exports = {
 
   options: {
     // sourceMap: true,
-    presets: ['@babel/preset-env', '@babel/preset-typescript'],
-    only: ['*.js']
+    presets: ['@babel/preset-typescript', '@babel/preset-env'],
+    // only: ['*.js']
   },
 
   hp: {
     files: [{
       expand: true,
-      cwd: 'homepage/' + config.hp.name + '/js/ts2js/',
+      cwd: 'homepage/' + config.hp.name + '/js/',
       src: '*.js',
       dest: 'homepage/' + config.hp.name + '/js/babel/'
     }]
@@ -31,7 +31,7 @@ module.exports = {
   landing: {
     files: [{
       expand: true,
-      cwd: 'landing-page/' + config.landing.name + '/js/ts2js/',
+      cwd: 'landing-page/' + config.landing.name + '/js/',
       src: ['*.js'],
       dest: 'landing-page/' + config.landing.name + '/js/babel/'
     }]
@@ -40,7 +40,7 @@ module.exports = {
   zone: {
     files: [{
       expand: true,
-      cwd: 'content-zone/' + config.zone.name + '/js/ts2js/',
+      cwd: 'content-zone/' + config.zone.name + '/js/',
       src: '*.js',
       dest: 'content-zone/' + config.zone.name + '/js/babel/'
     }]
@@ -58,7 +58,7 @@ module.exports = {
   mega: {
     files: [{
       expand: true,
-      cwd: 'mega-menu/js/ts2js/',
+      cwd: 'mega-menu/js/',
       src: '*.js',
       dest: 'mega-menu/js/babel/'
     }]

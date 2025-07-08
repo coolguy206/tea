@@ -12,7 +12,6 @@ const inview = (elem) => {
                 }
                 $(val).removeAttr('data-set');
             });
-            $(this).css('opacity', '1');
         }
     });
 };
