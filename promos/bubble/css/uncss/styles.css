@@ -1,2 +1,0 @@
-/*** uncss> filename: promos/bubble/css/styles.css ***/
-.bubble{position:fixed;bottom:26px;left:2vw;padding:1vw;display:none}@media screen and (max-width:1679px){.bubble{bottom:36px}}@media screen and (max-width:430px){.bubble{bottom:50px}}.bubble a{text-decoration:none}.bubble a img{width:300px}@media screen and (max-width:1679px){.bubble a img{width:17.5vw}}@media screen and (max-width:430px){.bubble a img{width:35vw}}
