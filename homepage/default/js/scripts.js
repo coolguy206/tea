@@ -2,6 +2,9 @@
 import {
   inview
 } from './inview.js';
+// import {
+//   countdown
+// } from './countdown.js';
 import {
   tracking
 } from './tracking.js';
@@ -10,12 +13,12 @@ import Glide from '@glidejs/glide'
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  // $('.hp .shop-slideshow').append($('.the-sliders'));
-  $('.hp .shop-slideshow').append($('.best-sellers'));
+  $('.hp .shop-slideshow').append($('.the-sliders'));
+  // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
   $('.hp .white-out').fadeOut();
-  $('.the-sliders').hide();
+  // $('.the-sliders').hide();
 
 });
 
@@ -26,23 +29,18 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // $("#countdown span").countdown("2025/06/22 23:59:59", function (event) {
-  //   $(this).text(
-  //     // event.strftime('%-DD %HH %MM %SS');
-  //     event.strftime('%-D days %H hrs %M mins')
-  //   );
-  // });
+  // countdown('2025/07/22 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  new Glide('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false,
+  }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
