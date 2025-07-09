@@ -59,7 +59,7 @@ module.exports = {
       {
         cwd: 'category-pages/' + config.cat.name + '/dev',
         src: ['*.html'],
-        dest: 'category-pages/' + config.cat.name + '/toolkit/'
+        dest: 'category-pages/' + config.cat.name + '/includes/'
       },
     ],
 
