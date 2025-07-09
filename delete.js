@@ -5,38 +5,52 @@ const writeFileContent = util.promisify(fs.writeFile);
 const mkDir = util.promisify(fs.mkdir);
 
 //!NEEDS ENDING SLASH
-var readFilePath = `handoff/landing-pages/dresses/handoff/`;
+var readFilePath = `content-zone/mega-menu/sub-nav/less/`;
 
 fs.readdir(`${readFilePath}`, (err, files) => {
-    //   console.log(files);
-    files.map((file, i) => {
-        // console.log(file);
-        
-        if(file.indexOf(`v2`) !== -1){
-            // console.log(file);
-            try {
-                fs.unlinkSync(readFilePath + file)
-                console.log(`${file} has been deleted`);
-                
-              } catch(err) {
-                console.log(`oops something went wrong`);
-                console.error(err)
-              }
-        }
+  //   console.log(files);
+  files.map((file, i) => {
+    // console.log(file);
 
-        // fs.unlink()
+    //? delete folders
+    // if (file.indexOf(`toolkit`) !== -1) {
+    //   // console.log(file);
+    //   try {
+    //     fs.rmSync(readFilePath + file, { recursive: true })
+    //     console.log(`${file} has been deleted and all its contents`);
 
-        // fs.rename(readFilePath + file, readFilePath + newName, (err) => {
-        //     if(err){
-        //         console.log(`oops something went wrong`);
-        //         console.log(err);
-        //     } else {
-        //         console.log(`${file} renamed to ${newName}`);
-        //     }
-        
-        // });
+    //   } catch (err) {
+    //     console.log(`oops something went wrong`);
+    //     console.error(err)
+    //   }
+    // }
 
-    });
+    //? delete files
+    if (file.indexOf(`.css`) !== -1) {
+      console.log(file);
+      try {
+        fs.unlinkSync(readFilePath + file, { recursive: true, force: true })
+        console.log(`${file} has been deleted`);
+
+      } catch (err) {
+        console.log(`oops something went wrong`);
+        console.error(err)
+      }
+    }
+
+    // fs.unlink()
+
+    // fs.rename(readFilePath + file, readFilePath + newName, (err) => {
+    //     if(err){
+    //         console.log(`oops something went wrong`);
+    //         console.log(err);
+    //     } else {
+    //         console.log(`${file} renamed to ${newName}`);
+    //     }
+
+    // });
+
+  });
 
 });
 
