@@ -1,4 +1,4 @@
-const axios = require('axios').default;
+
 const fs = require('fs');
 const util = require('util');
 const readFileContent = util.promisify(fs.readFile)
@@ -8,15 +8,21 @@ module.exports = {
 
   refreshAccessToken: (callback) => {
     //REFRESH ACCESS TOKEN
-    axios.post(`https://api.dropboxapi.com/oauth2/token?client_id=${process.env.TEA_DROPBOX_KEY}&client_secret=${process.env.TEA_DROPBOX_SECRET}&grant_type=refresh_token&refresh_token=${process.env.TEA_DROPBOX_REFRESH_TOKEN}`).then((res) => {
-      // console.log(res.data);
-      data = res.data;
+    fetch(`https://api.dropboxapi.com/oauth2/token?client_id=${process.env.TEA_DROPBOX_KEY}&client_secret=${process.env.TEA_DROPBOX_SECRET}&grant_type=refresh_token&refresh_token=${process.env.TEA_DROPBOX_REFRESH_TOKEN}`, {
+      method: 'post',
+    }).then((res) => {
+
+      let data = res.json();
+      // console.log(data);
       return data;
+
     }).then((data) => {
+
       //NEW ACCESS TOKEN RETURNED
       // console.log(data.access_token);
-      var access_token = data.access_token;
+      let access_token = data.access_token;
       return access_token;
+
     }).then((access_token) => {
 
       //READ .ENV FILE & UPDATE TEA_DROPBOX_TOKEN
@@ -24,7 +30,7 @@ module.exports = {
 
         //CHANGE .ENV FILE CONTENT TO ARRAY
         // console.log(data);
-        var arr = data.split('\n');
+        let arr = data.split('\n');
         // console.log(arr);
 
         //FIND TEA_DROPBOX_TOKEN
@@ -33,7 +39,7 @@ module.exports = {
 
             //REPLACE OLD TOKEN WITH NEW TOKEN
             // console.log(arr[i]);
-            var obj = arr[i].split('=');
+            let obj = arr[i].split('=');
             // console.log(obj);
             obj[1] = `"${access_token}"`;
             // console.log(obj);
@@ -45,14 +51,15 @@ module.exports = {
 
         //CONVERT CONTENT ARRAY BACK TO STRING
         // console.log(arr);
-        var content = arr.join('\n');
+        let content = arr.join('\n');
         // console.log(content);
-        var what = [content, access_token];
+        let what = [content, access_token];
         // console.log(what);
         return [content, access_token]
+
       }).then((data) => {
-        var content = data[0];
-        var access_token = data[1];
+        let content = data[0];
+        let access_token = data[1];
         // console.log(`this is content:\n ${content}`);
         // console.log(`this is access token:\n ${access_token}`);
 
