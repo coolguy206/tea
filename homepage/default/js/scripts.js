@@ -59,7 +59,7 @@ $(document).ready(function () {
     pager: false,
     // pause: 8000,
     touchEnabled: false,
-    pause: 2500,
+    pause: 1500,
 
     onSliderLoad: function () {
       // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
