@@ -6,7 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0703`;
+var num = `0712`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
@@ -22,7 +22,7 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/Site/hp/`;
-var readFilePath = `Site/0627/${num}/extra 10 update/mega/`;
+var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
