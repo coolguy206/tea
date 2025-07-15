@@ -23,13 +23,13 @@ var url = `${baseURL}${category}`
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/03 Handoff/hp/`;
 // var readFilePath = `Site/${num}/Site/mega/`;
-var readFilePath = `Site/${num}/03 Handoff/headers/korea/`;
+var readFilePath = `Site/${num}/03 Handoff/headers/Playwear-Pants/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/landing-pages/korea-edit/`;
+var writeFilePath = `promos/headers/dev/images/playwear/playwear-pants/`;
 // var writeFilePath = `landing-page/shops/dresses-shop/default/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
