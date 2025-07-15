@@ -18,20 +18,34 @@
     transform: @c1-2-transform;
     // text-align: center;
 
-    h3, h2, p {
+    h3,
+    h2,
+    p {
         text-shadow: none;
     }
 
     h3 {
+        @media screen and (max-width: 1679px) {
+            top: -28vw;
+            left: 6vw;
+        }
+
         @media screen and (max-width: 430px) {
             color: @c1-2-h3-color-431;
             text-shadow: none;
             font-size: 4vw !important;
+            top: 0;
+            left: 0;
+            position: relative;
         }
 
         color: @c1-2-h3-color;
         text-align: center;
         // text-shadow: @text-shadow;
+
+        position: absolute;
+        top: -490px;
+        left: 90px;
     }
 
     h2 {
@@ -90,10 +104,11 @@
                 @media screen and (max-width: 1679px) {
                     width: 17vw;
                 }
-    
+
                 @media screen and (max-width: 430px) {
                     width: 49vw;
                 }
+
                 width: 297px;
             }
 

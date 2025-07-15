@@ -1,0 +1,22 @@
+include "content-structure-bottoms.html"
+
+<style>
+  include "../../../css/select-styles/select-styles.css"
+  include "../../../css/overrides.css"
+</style>
+
+<script>
+  include "../../../js/jsmin/scripts2.min.js"
+  
+  $(document).ready(function () {
+    var a = $('.the-content.select-styles a');
+
+    a.map((i, val) => {
+      var str = $(val).find('span').text();
+      str = str.replace(/ /g, '_');
+      str = `img ${str}`;
+      $(val).addClass(str);
+    });
+
+  });
+</script>

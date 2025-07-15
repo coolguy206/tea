@@ -1,0 +1,115 @@
+@import "var.less";
+@c3-h2-color: #fff;
+@c3-cta1-color: #fff;
+@c3-cta1-background: #47363D;
+@c3-cta2-color: #fff;
+@c3-cta2-background: #EF3C25;
+@c3-cta3-color: #fff;
+@c3-cta3-background: #EA94CD;
+@c3-cta4-color: #fff;
+@c3-cta4-background: #3862AA;
+@c3-cta5-color: #fff;
+@c3-cta5-background: #3862AA;
+@c3-cta6-color: #fff;
+@c3-cta6-background: #E8B2AB;
+
+
+div {
+  &.the-content {
+    @media screen and (max-width: 1679px) {}
+
+    @media screen and (max-width: 430px) {
+      // display: block;
+      // bottom: 8%;
+      width: 100%;
+      left:0;
+      top: 87%;
+    }
+
+    position: absolute;
+    top: 84%;
+    width: auto;
+    left: 6%;
+    transform: translate(0%, -50%);
+    // text-align:center;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    h3 {
+      @media screen and (max-width:430px) {
+        line-height: 4vw;
+        margin: 0 0 6vw;
+      }
+    }
+
+    h2 {
+      @media screen and (max-width: 1679px) {
+        font-size: 2.5vw;
+        // line-height: 5vw;
+      }
+
+      @media screen and (max-width:430px) {
+        font-size: 9vw;
+        margin: 0 0 8%;
+        text-align: center;
+      }
+
+      text-align: center;
+      color: @c3-h2-color;
+      flex-basis: 39%;
+      font-size: 44px;
+      // line-height: 80px;
+      font-family: @gilroyb;
+      margin: 0 0 8%;
+      text-transform: capitalize;
+    }
+
+    p {
+      @media screen and (max-width: 1679px) {
+        font-size: 1.3vw;
+        line-height: 2vw;
+      }
+
+      @media screen and (max-width: 430px) {
+        margin: 0 0 8vw;
+        font-size: 4vw;
+        line-height: 8vw;
+        display: none;
+      }
+
+      text-align: left;
+      color: #fff;
+      flex-basis: 60%;
+      font-size: 22px;
+      line-height: 33px;
+      font-family: @souv;
+      margin: 0 0 8%;
+    }
+
+    div {
+      @media screen and (max-width:430px) {
+        text-align: center;
+      }
+
+      // flex-basis: 39%;
+      text-align: left;
+
+      a {
+        @media screen and (max-width:1679px) {
+          width: 20vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          width: 59vw;
+        }
+
+        background: @c3-cta1-background;
+        color: #fff;
+        width: 333px;
+      }
+    }
+
+
+  }
+}

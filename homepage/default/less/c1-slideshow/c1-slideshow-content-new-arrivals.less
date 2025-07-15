@@ -1,0 +1,113 @@
+@import "c1-slideshow-vars.less";
+
+&.content-new-arrivals {
+    @media screen and (max-width: 1679px) {
+        width: @c1-new-arrivals-width-1678;
+    }
+
+    @media screen and (max-width: 430px) {
+        width: 100%;
+        left: 0;
+        top: 11vw;
+        transform: translateX(0);
+    }
+
+    top: @c1-new-arrivals-top;
+    left: @c1-new-arrivals-left;
+    width: @c1-new-arrivals-width;
+    transform: @c1-new-arrivals-transform;
+    // text-align: center;
+
+    h3,
+    h2,
+    p {
+        text-shadow: none;
+    }
+
+    h3 {
+        @media screen and (max-width: 430px) {
+            color: @c1-new-arrivals-h3-color-431;
+            text-shadow: none;
+            font-size: 4vw !important;
+        }
+
+        color: @c1-new-arrivals-h3-color;
+        text-align: center;
+        // text-shadow: @text-shadow;
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 5vw !important;
+            line-height: 5vw !important;
+        }
+
+        @media screen and (max-width: 430px) {
+            color: @c1-new-arrivals-h2-color-431;
+            font-size: 11vw !important;
+            line-height: 13vw !important;
+        }
+
+        color: @c1-new-arrivals-h2-color;
+        text-align: center;
+        font-family: @c1-new-arrivals-h2-font-family;
+        // text-shadow: @text-shadow;
+    }
+
+    p {
+        @media screen and (max-width: 430px) {
+            display: block;
+            font-size: 5vw;
+        }
+
+        text-align: center;
+        // margin: 8% auto;
+        color: @c1-new-arrivals-p-color;
+        // text-shadow: @text-shadow;
+        font-family: @c1-new-arrivals-p-font-family
+    }
+
+    div {
+        @media screen and (max-width: 430px) {
+            // top: @c1-new-arrivals-top-431;
+        }
+
+        &.the-flex {
+            @media screen and (max-width: 430px) {
+                top: @c1-new-arrivals-the-flex-top-431;
+                justify-content: center;
+            }
+
+            margin: 0 auto;
+            width: @c1-new-arrivals-the-flex-width;
+            justify-content: center;
+        }
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: @c1-new-arrivals-cta-size-1679;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: @c1-new-arrivals-cta-size-431;
+                background: @c1-new-arrivals-cta-background-430;
+            }
+
+            &.cta5 {
+                @media screen and (max-width: 1679px) {
+                    width: 17vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 49vw;
+                }
+
+                width: 297px;
+            }
+
+            color: @c1-new-arrivals-cta-color;
+            background: @c1-new-arrivals-cta-background;
+            width: @c1-new-arrivals-cta-size;
+        }
+    }
+}

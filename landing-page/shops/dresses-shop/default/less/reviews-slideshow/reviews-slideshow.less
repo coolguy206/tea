@@ -1,0 +1,38 @@
+@import "../var.less";
+
+.reviews-slideshow {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+  .glide__bullets {
+    @media screen and (max-width: 431px) {
+      bottom: 5vw;
+    }
+
+    bottom: 1vw;
+    width: 100%;
+    text-align: center;
+
+    button {
+      @media screen and (max-width: 431px) {
+        // background-color: #FA8180 !important;
+      }
+
+      background: #A36452 !important;
+
+      &:hover,
+      &.glide__bullet--active {
+        @media screen and (max-width:431px) {
+          // background-color: #F1FF50 !important;
+          border: none !important;
+        }
+
+        background: #4765A1 !important;
+        border: none !important;
+      }
+    }
+  }
+
+
+}

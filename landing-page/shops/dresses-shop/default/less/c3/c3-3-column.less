@@ -1,0 +1,167 @@
+@import "var.less";
+@c3-first-font-color: #fff;
+@c3-first-cta-color: #fff;
+@c3-first-cta-background: #E4BD3C;
+@c3-second-font-color: #FFF;
+@c3-second-cta-color: #FFF;
+@c3-second-cta-background: #568F73;
+@c3-third-font-color: #FFF;
+@c3-third-cta-color: #FFF;
+@c3-third-cta-background: @c3-first-cta-background;
+
+
+div {
+
+    &.first,
+    &.second,
+    &.third {
+        text-align: center;
+        box-sizing: border-box;
+        // flex-basis: 33.5%;
+        flex-basis: 50%;
+        padding: 0;
+        position: relative;
+
+        a {
+            text-decoration: none;
+        }
+
+        .the-content {
+            @media screen and (max-width: 431px) {
+                margin: 10% 0 0 !important;
+            }
+
+            margin: 0;
+            position: absolute;
+            bottom: 6%;
+            width: 100%;
+
+            div {
+                @media screen and (max-width: 431px) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: center;
+                    margin: 110% 0 0;
+                }
+
+                @media screen and (max-width: 376px) {
+                    margin: 92% 0 0;
+                }
+
+                margin: 0 0 4%;
+
+                a {
+                    @media screen and (max-width:1679px) {
+                        width: 45%;
+                        // padding: 4.5%;
+                    }
+
+                    @media screen and(max-width: 431px) {}
+
+                    color: @c3-first-cta-color;
+                    background: @c3-first-cta-background;
+                    width: 246px;
+                }
+            }
+        }
+    }
+
+    &.first {
+        @media screen and (max-width: 431px) {
+            // padding: 10% 0 0;
+            // background: #FDF5F2;
+            position: relative;
+            text-align: center;
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        &>a {
+            @media screen and (max-width:431px) {
+                width: 100%;
+                display: inline-block;
+                order: 2;
+            }
+        }
+
+        .the-content {
+            @media screen and (max-width: 431px) {}
+
+            div {
+                @media screen and (max-width: 431px) {
+                    margin: 0;
+                }
+
+                @media screen and (max-width: 375px) {}
+
+                a {
+                    @media screen and (max-width: 1679px) {
+                        width: 70%;
+                    }
+
+                    @media screen and (max-width: 431px) {
+                        width: 80%;
+                    }
+
+                    // color: @c3-first-cta-color;
+                    width: 381px;
+                }
+            }
+        }
+    }
+
+    &.second {
+        @media screen and (max-width: 431px) {
+            padding: 0;
+        }
+
+        .the-content {
+            @media screen and (max-width: 431px) {}
+
+            div {
+                @media screen and (max-width: 431px) {
+                    margin: 0;
+                }
+
+                a {
+                    @media screen and (max-width: 431px) {}
+
+                    // color: @c3-second-cta-color;
+                    // background: @c3-second-cta-background;
+                }
+            }
+        }
+    }
+
+    &.third {
+        @media screen and (max-width: 431px) {
+            background: @background;
+        }
+
+        .the-content {
+            @media screen and (max-width: 431px) {
+                padding: 8.2% 0;
+            }
+
+            div {
+                @media screen and (max-width: 431px) {
+                    margin: 5% 0 0;
+                }
+
+                a {
+                    @media screen and (max-width: 1679px) {
+                        // width: 70%;
+                    }
+
+                    @media screen and (max-width: 431px) {
+                        // width: 80%;
+                    }
+
+                    // color: @c3-third-cta-color;
+                    // width: 381px;
+                }
+            }
+        }
+    }
+}

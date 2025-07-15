@@ -50,7 +50,6 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -66,17 +65,30 @@ $(document).ajaxComplete(function (event, xhr, options) {
   $('.dresses .white-out').fadeOut();
 });
 $(document).ready(function () {
-  new _glide["default"]('.slideshow .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 2000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0
-  }).mount();
+  // new Glide('.slideshow .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 2000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0
+  // }).mount()
+
+  $('.reviews-slideshow ul').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    // pause: 8000,
+    touchEnabled: false,
+    pause: 2000,
+    onSliderLoad: function onSliderLoad() {
+      // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    }
+  });
   (0, _inview.inview)('.dresses .c1, .dresses .c2, .dresses .c3, .dresses .c4, .dresses .c5, .dresses .c6, .dresses .c7, .dresses .clothes, .dresses .graphics, .dresses .dress-type, .dresses .slideshow, .dresses .reviews, .dresses .leggings, .dresses .trending');
 });
-
 
 },{"./inview.js":1,"@glidejs/glide":3}],3:[function(require,module,exports){
 /*!

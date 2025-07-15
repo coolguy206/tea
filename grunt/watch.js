@@ -22,7 +22,7 @@ module.exports = {
 
 
   hp: {
-    files: ['homepage/default/css/**/*.less', 'homepage/default/dev/**/*.html', 'homepage/default/js/*.js'],
+    files: ['homepage/default/less/**/*.less', 'homepage/default/dev/**/*.html', 'homepage/default/js/*.js'],
     tasks: ['less:hp', /*'ts:hp',*/ 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp'],
   },
 
@@ -34,7 +34,7 @@ module.exports = {
 
 
   landing: {
-    files: ['landing-page/' + config.landing.name + '/css/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/**/js/**/*.js'],
+    files: ['landing-page/' + config.landing.name + '/less/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/**/js/**/*.js'],
     tasks: ['less:landing', /*'ts:landing',*/ 'babel:landing', 'browserify:landing', 'uglify:landing', 'includes:landing',],
   },
 

@@ -15,14 +15,26 @@
     // text-align: center;
 
     h3 {
+        @media screen and (max-width: 1679px) {
+            top: -28vw;
+            left: 12vw;
+        }
+
         @media screen and (max-width: 430px) {
             color: @c1-dresses-h3-color-430;
             font-size: 4vw !important;
+            top: 0;
+            left: 0;
+            position: relative;
         }
 
         color: @c1-dresses-h3-color;
         text-align: center;
         text-shadow: none;
+
+        position: absolute;
+        top: -470px;
+        left: 201px;
 
         i {
             @media screen and (max-width: 430px) {
@@ -35,7 +47,7 @@
 
     h2 {
         @media screen and (max-width: 430px) {
-            font-size: 12vw !important;
+            font-size: 10vw !important;
             line-height: 12vw !important;
             color: @c1-dresses-h2-color-430;
         }
