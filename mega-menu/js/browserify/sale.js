@@ -524,8 +524,10 @@ var urls = exports.urls = {
       girl: "/girls-clothing/favorites/limited-time-sale",
       boy: "/boys-clothing/favorites/limited-time-sale",
       baby: {
-        girl: "/baby-girl-clothes/favorites/limited-time-sale",
-        boy: "/baby-boy-clothes/favorites/limited-time-sale",
+        // girl: `/baby-girl-clothes/favorites/limited-time-sale`,
+        girl: "/baby-girl-clothes/limited-time-sale",
+        // boy: `/baby-boy-clothes/favorites/limited-time-sale`,
+        boy: "/baby-boy-clothes/limited-time-sale",
         newborn: "/newborn-clothing/favorites/limited-time-sale",
         newborn2: "/select-styles/newborn"
       },
