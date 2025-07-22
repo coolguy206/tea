@@ -23,6 +23,15 @@ jQuery(document).ready(function () {
   //   );
   // });
 
+  //? change the aria-label for the promos
+  var aria = $('.the-promo');
+  aria.map(function (i, val) {
+    var str = $(val).find('.span-wrap').text();
+    str = str.replace(/\n/g, '');
+    str = str.replace(/  /g, '');
+    // console.log(str);
+    $(val).attr('aria-label', str);
+  });
   var url = window.location.pathname;
 
   // if (url !== '/') {
@@ -87,18 +96,16 @@ jQuery(document).ready(function () {
     $.fancybox.close();
     $('.fancybox-container').hide();
   });
-
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   // pause: 8000,
-  //   touchEnabled: false,
-
-  //   onSliderLoad: function () {
-  //     $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    // pause: 8000,
+    touchEnabled: false,
+    onSliderLoad: function onSliderLoad() {
+      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    }
+  });
 });

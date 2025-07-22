@@ -20,9 +20,20 @@ jQuery(document).ready(function () {
   // $(".the-promo.countdown-promo #countdown span").countdown("2024/11/29 23:59:59", function (event) {
   //   $(this).text(
   //     event.strftime('%-DD %HH %MM %SS')
-      // event.strftime('%-D %H:%M:%S')
+  // event.strftime('%-D %H:%M:%S')
   //   );
   // });
+
+  //? change the aria-label for the promos
+  let aria = $('.the-promo') 
+
+  aria.map((i, val) => {
+    var str = $(val).find('.span-wrap').text();
+    str = str.replace(/\n/g, '');
+    str = str.replace(/  /g, '');
+    // console.log(str);
+    $(val).attr('aria-label', str);
+  })
 
 
   const url = window.location.pathname;
@@ -95,18 +106,18 @@ jQuery(document).ready(function () {
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   // pause: 8000,
-  //   touchEnabled: false,
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    // pause: 8000,
+    touchEnabled: false,
 
-  //   onSliderLoad: function () {
-  //     $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+    onSliderLoad: function () {
+      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    }
+  });
 
 });
