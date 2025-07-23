@@ -21,205 +21,238 @@ auth = `Basic ${auth}`;
 
 //? RUN THE SCHEDULE TO EXECUTE REST.JS EVERY HOUR
 // const job = schedule.scheduleJob('0 * * * *', function () {
-    console.log(`running scheduled task to update pdps-order-lines.js`);
+console.log(`running scheduled task to update pdps-order-lines.js`);
 
-    //? GET TODAY'S DATE AND TIME BUT 3HRS BEFORE UNLESS IT IS 12AM 
-    //? THEN CHANGE THE DATE TO THE DAY BEFORE AND CHANGE THE TIME TO LIKE 10PM
-    let today = new Date();
-    let hours = today.getHours();
-    let day = today.getDate();
-    if (hours < 3) {
-        day = day - 1;
-        today.setDate(day);
-        hours = 23 - 3;
-    } else {
-        hours = hours - 3;
-    }
-    today.setHours(hours);
+//? GET TODAY'S DATE AND TIME BUT 3HRS BEFORE UNLESS IT IS 12AM 
+//? THEN CHANGE THE DATE TO THE DAY BEFORE AND CHANGE THE TIME TO LIKE 10PM
+let today = new Date();
+let hours = today.getHours();
+let day = today.getDate();
+if (hours < 3) {
+    day = day - 1;
+    today.setDate(day);
+    hours = 23 - 3;
+} else {
+    hours = hours - 3;
+}
+today.setHours(hours);
 
-    //? FOR TESTING
-    // today = 1753252235350;
+//? FOR TESTING
+// today = 1753252235350;
 
-    //? CONVERT TO UNIX TIME
-    today = moment(today).unix();
-    // console.log(`today: ${today}`);
+//? CONVERT TO UNIX TIME
+today = moment(today).unix();
+// console.log(`today: ${today}`);
 
-    //? GOT THIS FROM POSTMAN BUT AUTH IS BASIC EMAIL:PASSWORD USING BASE64 ENCODE
-    const myHeaders = new Headers();
-    myHeaders.append("Authorization", auth);
-    myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
+//? GOT THIS FROM POSTMAN BUT AUTH IS BASIC EMAIL:PASSWORD USING BASE64 ENCODE
+const myHeaders = new Headers();
+myHeaders.append("Authorization", auth);
+myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
 
-    const requestOptions = {
-        method: "GET",
-        headers: myHeaders,
-        redirect: "follow"
-    };
+const requestOptions = {
+    method: "GET",
+    headers: myHeaders,
+    redirect: "follow"
+};
 
-    //? GET THE PDPS ORDER FROM TODAY
-    fetch(`https://www.teacollection.com/?type=rest&page=order_lines&format=json&created:after=${today}`, requestOptions)
-        .then((response) => response.json())
-        .then((result) => {
-            // console.log(result);
+//? GET THE PDPS ORDER FROM TODAY
+fetch(`https://www.teacollection.com/?type=rest&page=order_lines&format=json&created:after=${today}`, requestOptions)
+    .then((response) => response.json())
+    .then((result) => {
+        // console.log(result);
 
-            //? CHECK IF THERE ARE ORDERS OTHERWISE JUST RETURN
-            if (result.order_lines !== undefined) {
+        //? CHECK IF THERE ARE ORDERS OTHERWISE JUST RETURN
+        if (result.order_lines !== undefined) {
 
-                //? SKUS ARRAY
-                let skuArray = [];
+            //? SKUS ARRAY
+            let skuArray = [];
 
-                //? CONVERT INTO ARRAY OF OBJS
-                const orderLinesArray = Object.values(result.order_lines).filter(item => typeof item === 'object');
-                // console.log(orderLinesArray)
+            //? CONVERT INTO ARRAY OF OBJS
+            const orderLinesArray = Object.values(result.order_lines).filter(item => typeof item === 'object');
+            // console.log(orderLinesArray)
 
-                //? PUSH INTO ARRAY
-                orderLinesArray.map((val, i) => {
-                    // console.log(val.sku);
-                    let sku = val.sku;
-                    sku = sku.split('-')[0];
-                    skuArray.push(sku);
-                });
+            //? PUSH INTO ARRAY
+            orderLinesArray.map((val, i) => {
+                // console.log(val.sku);
+                let sku = val.sku;
+                sku = sku.split('-')[0];
+                skuArray.push(sku);
+            });
 
-                //? REMOVE DUPLICATES
-                const uniqueArray = [...new Set(skuArray)];
-                // console.log(uniqueArray);
+            //? REMOVE DUPLICATES
+            const uniqueArray = [...new Set(skuArray)];
+            // console.log(uniqueArray);
 
-                return uniqueArray;
-            } else {
-                console.log(`no purchases`);
-                return;
-            }
+            return uniqueArray;
+        } else {
+            console.log(`no purchases`);
+            return;
+        }
 
-        }).then((arr) => {
+    }).then((arr) => {
 
-            //? CHECK IF THERE IS AN ARRAY OTHERWISE STOP THE SCRIPT
-            if (arr !== undefined) {
+        //? CHECK IF THERE IS AN ARRAY OTHERWISE STOP THE SCRIPT
+        if (arr !== undefined) {
 
-                //? GET ALL THE PDP INFO FROM THE ARRAY OF SKUS
-                Promise.all(arr.map((val, i) => {
-                    // console.log(val);
+            //? GET ALL THE PDP INFO FROM THE ARRAY OF SKUS
+            Promise.all(arr.map((val, i) => {
+                // console.log(val);
 
-                    const myHeaders = new Headers();
-                    myHeaders.append("Authorization", auth);
-                    myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
+                const myHeaders = new Headers();
+                myHeaders.append("Authorization", auth);
+                myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
 
-                    const requestOptions = {
-                        method: "GET",
-                        headers: myHeaders,
-                        redirect: "follow"
-                    };
+                const requestOptions = {
+                    method: "GET",
+                    headers: myHeaders,
+                    redirect: "follow"
+                };
 
-                    return fetch(`https://www.teacollection.com/?type=rest&full=1&page=items&format=json&sku:begins=${val}&active=1`, requestOptions)
-                        .then((response) => response.json())
-                        .then((result) => {
-                            // console.log(result)
+                return fetch(`https://www.teacollection.com/?type=rest&full=1&page=items&format=json&sku:begins=${val}&active=1`, requestOptions)
+                    .then((response) => response.json())
+                    .then((result) => {
+                        // console.log(result)
 
-                            //? CONVERT INTO ARRAY OF OBJS
-                            const resultArray = Object.values(result.items).filter(item => typeof item === 'object');
-                            // console.log(resultArray[0]);
+                        //? CONVERT INTO ARRAY OF OBJS
+                        const resultArray = Object.values(result.items).filter(item => typeof item === 'object');
+                        // console.log(resultArray[0]);
 
-                            //? RETURN ONLY THE 1ST ONE BECAUSE ITS ONLY DIFFERENT SIZES
-                            return resultArray[0];
-                        })
-                        .catch((error) => console.error(error));
+                        //? RETURN ONLY THE 1ST ONE BECAUSE ITS ONLY DIFFERENT SIZES
+                        return resultArray[0];
+                    })
+                    .catch((error) => console.error(error));
 
-                })).then((result) => {
-                    // console.log(result);
+            })).then((result) => {
+                // console.log(result);
 
-                    //? MAKE ARRAY OF PDP OBJS RETURNED FROM THE FETCH TO WRITE TO FILE AND UPLOAD FTP
-                    let arr = [];
-                    let imgSrcHtml = ``;
+                //? MAKE ARRAY OF PDP OBJS RETURNED FROM THE FETCH TO WRITE TO FILE AND UPLOAD FTP
+                //? imgSrcHtml IS HTML UPLOADED TO FTP AND INCLUDED USING BANNER ADS TO GET THE IMG SRC
+                let arr = [];
+                let imgSrcHtml = ``;
 
-                    result.map((val, i) => {
+                result.map((val, i) => {
 
-                        //? DON'T ADD THE GIFT CARD PURCHASES THOUGH
+                    //? DON'T ADD THE GIFT CARD PURCHASES THOUGH
+                    let theSku = val.sku;
+                    if (theSku.indexOf('GIFTFUROSERV') == -1) {
+                        let obj = {};
+                        obj.sku = val.sku;
+                        obj.name = val.model;
+                        obj.img = `{image size="original" type="item" id="${val.sku}"}`;
+
+                        //? BUILD OUT TEXT FOR OBJ.URL
                         let theSku = val.sku;
-                        if (theSku.indexOf('GIFTFUROSERV') == -1) {
-                            let obj = {};
-                            obj.sku = val.sku;
-                            obj.name = val.model;
+                        theSku = theSku.split('-')[0];
+                        let theName = val.model;
+                        theName = theName.replace(/ /g, '-').toLowerCase();
 
+                        //? CHECK IF COLOR IS NOT UNDEFINED
+                        if (val.color !== undefined) {
                             obj.color = val.color;
-                            obj.img = `{image size="original" type="item" id="${val.sku}"}`;
-
-                            let theSku = val.sku;
-                            theSku = theSku.split('-')[0];
-                            let theName = val.model;
-                            theName = theName.replace(/ /g, '-').toLowerCase();
                             obj.url = `https://www.teacollection.com/product/${theSku}/${theName}.html#${obj.color}`;
-                            // console.log(val.sku);
-                            // console.log(val.model);
-                            // console.log(val.color);
-                            if (val.store_price !== val.retail_price) {
-                                obj.store_price = `$${Number(val.store_price).toFixed(2)}`;
-                                obj.retail_price = `$${Number(val.retail_price).toFixed(2)}`;
-                                // console.log(val.store_price);
-                                // console.log(val.retail_price);
-                            } else {
-                                obj.store_price = `$${Number(val.store_price).toFixed(2)}`;
-                                // console.log(val.store_price);
-                            }
-
-                            if (val.promo_teaser !== "") {
-                                obj.promo_teaser = val.promo_teaser;
-                                // console.log(val.promo_teaser);
-                            }
-
-                            arr.push(obj);
-
-                            imgSrcHtml = `${imgSrcHtml}\n<div><span class="ref-url">${obj.url}</span><span class="ref-img">${obj.img}</span></div>\n`;
+                        } else {
+                            obj.url = `https://www.teacollection.com/product/${theSku}/${theName}.html`;
                         }
 
-                    });
+                        //? STORE PRICE VS RETAIL PRICE
+                        if (val.store_price !== val.retail_price) {
+                            obj.store_price = `$${Number(val.store_price).toFixed(2)}`;
+                            obj.retail_price = `$${Number(val.retail_price).toFixed(2)}`;
+                        } else {
+                            obj.store_price = `$${Number(val.store_price).toFixed(2)}`;
+                        }
 
-                    imgSrcHtml = `<div class="ref-html">${imgSrcHtml}</div>`;
+                        //? CHECK IF PROMO_TEASER IS NOT UNDEFINED
+                        if (val.promo_teaser !== "") {
+                            obj.promo_teaser = val.promo_teaser;
+                        }
 
-                    // console.log(arr);
-                    // console.log(imgSrcHtml);
+                        //? PUSH TO ARRAY
+                        arr.push(obj);
 
-                    // let json = arr;
-                    let json = JSON.stringify(arr);
+                        //? ADD TO HTML
+                        imgSrcHtml = `${imgSrcHtml}\n<div><span class="ref-url">${obj.url}</span><span class="ref-img">${obj.img}</span></div>\n`;
+                    }
 
-                    writeFilePromise('pdps-order-lines-img-src.html', imgSrcHtml).then(() => {
-                        console.log(`successfully created pdps-order-lines-img-src.html`);
-                    });
+                });
+
+                //? ADD DIV CONTAINER IMG SRC
+                imgSrcHtml = `<div class="ref-html" style="display: none">${imgSrcHtml}</div>`;
+
+                // console.log(arr);
+                // console.log(imgSrcHtml);
+
+                //? CONVERT INTO STRING
+                let json = JSON.stringify(arr);
+
+                //? WRITE FILE AND UPLOAD
+                writeFilePromise('pdps-order-lines-img-src.html', imgSrcHtml).then(() => {
+                    console.log(`successfully created pdps-order-lines-img-src.html`);
 
                     /*
-                    //? WRITE FILE
-                    writeFilePromise('pdps-order-lines.js', json).then(() => {
-                        console.log('successfully created pdps-order-lines.js');
+                    //? UPLOAD FILE FTP
+                    var url = `/media/tea_collection/js/`;
 
-                        //? UPLOAD FILE FTP
-                        var url = `/media/tea_collection/js/`;
+                    var c = new Client();
+                    c.on('ready', function () {
 
-                        var c = new Client();
-                        c.on('ready', function () {
+                        //? UPLOAD THE FILE
+                        c.put(`pdps-order-lines-img-src.html`, `${url}pdps-order-lines-img-src.html`, (err) => {
+                            if (err) throw err;
+                            console.log(`successfully uploaded file: pdps-order-lines-img-src.html`);
 
-                            //? UPLOAD THE FILE
-                            c.put(`pdps-order-lines.js`, `${url}pdps-order-lines.js`, (err) => {
-                                if (err) throw err;
-                                console.log(`successfully uploaded file: pdps-order-lines.js`);
-
-                                c.end();
-                            });
-
+                            c.end();
                         });
 
-                        c.connect({
-                            host: process.env.FTP_HOST,
-                            user: process.env.FTP_USER,
-                            password: process.env.FTP_PASSWORD
-                        });
+                    });
 
-                    }).catch((error) => console.error('Error writing file:', error));
+                    c.connect({
+                        host: process.env.FTP_HOST,
+                        user: process.env.FTP_USER,
+                        password: process.env.FTP_PASSWORD
+                    });
                     */
                 });
 
-            } else {
-                console.log(`stop script`);
-                return;
-            }
 
-        }).catch((error) => console.error(error));
+                //? WRITE FILE AND UPLOAD
+                writeFilePromise('pdps-order-lines.js', json).then(() => {
+                    console.log('successfully created pdps-order-lines.js');
+
+                    /*
+                    //? UPLOAD FILE FTP
+                    var url = `/media/tea_collection/js/`;
+
+                    var c = new Client();
+                    c.on('ready', function () {
+
+                        //? UPLOAD THE FILE
+                        c.put(`pdps-order-lines.js`, `${url}pdps-order-lines.js`, (err) => {
+                            if (err) throw err;
+                            console.log(`successfully uploaded file: pdps-order-lines.js`);
+
+                            c.end();
+                        });
+
+                    });
+
+                    c.connect({
+                        host: process.env.FTP_HOST,
+                        user: process.env.FTP_USER,
+                        password: process.env.FTP_PASSWORD
+                    });
+                    */
+
+                }).catch((error) => console.error('Error writing file:', error));
+
+            });
+
+        } else {
+            console.log(`stop script`);
+            return;
+        }
+
+    }).catch((error) => console.error(error));
 
 
 // });
