@@ -15,3 +15,5 @@ handoff/**
 Site/**
 .vscode
 .tscache
+open-ai-api-key.txt
+pdps-order-lines.js
