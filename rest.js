@@ -11,6 +11,15 @@ const schedule = require('node-schedule');
 // console.log(`TEA_REST_API_USERNAME: ${process.env.TEA_REST_API_USERNAME}`);
 // console.log(`TEA_REST_API_PASSWORD: ${process.env.TEA_REST_API_PASSWORD}`);
 
+//? REST AUTH
+let auth = `${process.env.TEA_REST_API_USERNAME}:${process.env.TEA_REST_API_PASSWORD}`;
+// console.log(auth)
+
+auth = Buffer.from(auth).toString('base64');
+auth = `Basic ${auth}`;
+// console.log('Base64 Encoded:', auth);
+
+
 //? RUN THE SCHEDULE TO EXECUTE REST.JS EVERY HOUR
 const job = schedule.scheduleJob('0 * * * *', function () {
     console.log(`running scheduled task to update pdps-order-lines.js`);
@@ -27,7 +36,7 @@ const job = schedule.scheduleJob('0 * * * *', function () {
 
     //? GOT THIS FROM POSTMAN BUT AUTH IS BASIC EMAIL:PASSWORD USING BASE64 ENCODE
     const myHeaders = new Headers();
-    myHeaders.append("Authorization", "Basic ZGF2aWQudGhhbnBoaWxvbUB0ZWFjb2xsZWN0aW9uLmNvbTpfNyVVNzImcTV2VWgtUUM=");
+    myHeaders.append("Authorization", auth);
     myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
 
     const requestOptions = {
@@ -70,7 +79,7 @@ const job = schedule.scheduleJob('0 * * * *', function () {
                 // console.log(val);
 
                 const myHeaders = new Headers();
-                myHeaders.append("Authorization", "Basic ZGF2aWQudGhhbnBoaWxvbUB0ZWFjb2xsZWN0aW9uLmNvbTpfNyVVNzImcTV2VWgtUUM=");
+                myHeaders.append("Authorization", auth);
                 myHeaders.append("Cookie", "cart_marker=6c6f10bb4e3b0951317d587e74902bf509b1f150; ds3=a02404bd65aa5b2e4fd25ed9770b8220");
 
                 const requestOptions = {
@@ -172,5 +181,3 @@ const job = schedule.scheduleJob('0 * * * *', function () {
 
 
 });
-
-
