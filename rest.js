@@ -137,6 +137,7 @@ auth = `Basic ${auth}`;
                             let obj = {};
                             obj.sku = val.sku;
                             obj.name = val.model;
+
                             obj.color = val.color;
                             obj.img = `{image size="original" type="item" id="${val.sku}"}`;
 
@@ -144,7 +145,7 @@ auth = `Basic ${auth}`;
                             theSku = theSku.split('-')[0];
                             let theName = val.model;
                             theName = theName.replace(/ /g, '-').toLowerCase();
-                            obj.url = `https://www.teacollection.com/product/${theSku}/${theName}.html#${val.color}`;
+                            obj.url = `https://www.teacollection.com/product/${theSku}/${theName}.html#${obj.color}`;
                             // console.log(val.sku);
                             // console.log(val.model);
                             // console.log(val.color);
