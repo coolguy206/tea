@@ -7,7 +7,6 @@ const moment = require('moment');
 const Client = require('ftp');
 const schedule = require('node-schedule');
 
-
 // console.log(`TEA_REST_API_USERNAME: ${process.env.TEA_REST_API_USERNAME}`);
 // console.log(`TEA_REST_API_PASSWORD: ${process.env.TEA_REST_API_PASSWORD}`);
 
@@ -21,7 +20,7 @@ auth = `Basic ${auth}`;
 
 
 //? RUN THE SCHEDULE TO EXECUTE REST.JS EVERY HOUR
-const job = schedule.scheduleJob('0 * * * *', function () {
+// const job = schedule.scheduleJob('0 * * * *', function () {
     console.log(`running scheduled task to update pdps-order-lines.js`);
 
     //? GET TODAY'S DATE AND TIME BUT 3HRS BEFORE UNLESS IT IS 12AM 
@@ -128,6 +127,7 @@ const job = schedule.scheduleJob('0 * * * *', function () {
 
                     //? MAKE ARRAY OF PDP OBJS RETURNED FROM THE FETCH TO WRITE TO FILE AND UPLOAD FTP
                     let arr = [];
+                    let imgSrcHtml = ``;
 
                     result.map((val, i) => {
 
@@ -164,15 +164,25 @@ const job = schedule.scheduleJob('0 * * * *', function () {
                             }
 
                             arr.push(obj);
+
+                            imgSrcHtml = `${imgSrcHtml}\n<div><span class="ref-url">${obj.url}</span><span class="ref-img">${obj.img}</span></div>\n`;
                         }
 
                     });
 
+                    imgSrcHtml = `<div class="ref-html">${imgSrcHtml}</div>`;
+
                     // console.log(arr);
+                    // console.log(imgSrcHtml);
 
                     // let json = arr;
                     let json = JSON.stringify(arr);
 
+                    writeFilePromise('pdps-order-lines-img-src.html', imgSrcHtml).then(() => {
+                        console.log(`successfully created pdps-order-lines-img-src.html`);
+                    });
+
+                    /*
                     //? WRITE FILE
                     writeFilePromise('pdps-order-lines.js', json).then(() => {
                         console.log('successfully created pdps-order-lines.js');
@@ -200,6 +210,7 @@ const job = schedule.scheduleJob('0 * * * *', function () {
                         });
 
                     }).catch((error) => console.error('Error writing file:', error));
+                    */
                 });
 
             } else {
@@ -210,4 +221,4 @@ const job = schedule.scheduleJob('0 * * * *', function () {
         }).catch((error) => console.error(error));
 
 
-});
+// });
