@@ -1,5 +1,4 @@
 const fs = require('fs');
-const axios = require('axios');
 // const md5 = require('md5');
 const reOrderIssuu = require('./re-order-issuu.js');
 require('dotenv').config()
@@ -14,23 +13,30 @@ var state = `state=PUBLISHED`;
 
 var li = ``;
 
-axios.get(`${baseUrl}?${state}`, {
-  headers: {
-    "accept": "application/json",
-    "authorization": `Bearer ${process.env.ISSUU_TOKEN}`
-  }
-}).then((res) => {
-  // console.log(res);
-  size = size + res.data.count;
+const myHeaders = new Headers();
+myHeaders.append("Authorization", `Bearer ${process.env.ISSUU_TOKEN}`);
 
-  axios.get(`${baseUrl}?${size}&${state}`, {
-    headers: {
-      "accept": "application/json",
-      "authorization": `Bearer ${process.env.ISSUU_TOKEN}`
-    }
+const requestOptions = {
+  method: "GET",
+  headers: myHeaders,
+  redirect: "follow"
+};
+
+fetch(`${baseUrl}?${state}`, requestOptions).then((res) => {
+  return res.json();
+}).then((res) => {
+
+  // console.log(res);
+  size = size + res.count;
+  // console.log(`${baseUrl}?${size}&${state}`);
+
+  fetch(`${baseUrl}?${size}&${state}`, requestOptions).then((data) => {
+    return data.json();
   }).then((data) => {
+
+
     // console.log(data.data.results[0]);
-    var catalogs = data.data.results;
+    var catalogs = data.results;
 
     catalogs.map((val, i) => {
       var title = val.title;
