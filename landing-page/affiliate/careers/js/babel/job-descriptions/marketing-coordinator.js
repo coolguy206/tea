@@ -1,4 +1,3 @@
-(function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -29,22 +28,3 @@ var marketingCoordinator = exports.marketingCoordinator = {
   qualifications: ["0\u20132 years of experience in digital marketing, eCommerce, or a related role", "Hands-on experience with paid media platforms like Meta Ads Manager and Google Ads is required", "Proficient using Excel/Google Sheets for data tracking and reporting", "Bachelor's degree in Marketing, Advertising, or related with a strong academic track record"],
   footer: "Expectations for All Employees: Supports Tea Collection\u2019s mission, vision, and values by embodying excellence and competence, collaboration, innovation, respect, personalization, community commitment, and accountability. \n    \n     Note: Nothing in this job description restricts management\u2019s right to assign or reassign duties and responsibilities to this job at any time. Tea Collection is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based upon race, religion, color, national origin, sex, sexual orientation, gender identity, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics."
 };
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.jobs = void 0;
-var _marketingCoordinator = require("./job-descriptions/marketing-coordinator.js");
-// import {
-//     AccountExecutiveEast
-// } from './account-executive-east.js';
-// import {
-//     SocialMediaContentIntern
-// } from './job-descriptions/social-media-content-intern.js';
-
-var jobs = exports.jobs = [_marketingCoordinator.marketingCoordinator];
-
-},{"./job-descriptions/marketing-coordinator.js":1}]},{},[2]);

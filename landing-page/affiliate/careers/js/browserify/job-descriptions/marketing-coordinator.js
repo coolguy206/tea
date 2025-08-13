@@ -30,21 +30,4 @@ var marketingCoordinator = exports.marketingCoordinator = {
   footer: "Expectations for All Employees: Supports Tea Collection\u2019s mission, vision, and values by embodying excellence and competence, collaboration, innovation, respect, personalization, community commitment, and accountability. \n    \n     Note: Nothing in this job description restricts management\u2019s right to assign or reassign duties and responsibilities to this job at any time. Tea Collection is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based upon race, religion, color, national origin, sex, sexual orientation, gender identity, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics."
 };
 
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.jobs = void 0;
-var _marketingCoordinator = require("./job-descriptions/marketing-coordinator.js");
-// import {
-//     AccountExecutiveEast
-// } from './account-executive-east.js';
-// import {
-//     SocialMediaContentIntern
-// } from './job-descriptions/social-media-content-intern.js';
-
-var jobs = exports.jobs = [_marketingCoordinator.marketingCoordinator];
-
-},{"./job-descriptions/marketing-coordinator.js":1}]},{},[2]);
+},{}]},{},[1]);

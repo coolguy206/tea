@@ -35,14 +35,30 @@ var dutiesQualifications = exports.dutiesQualifications = function dutiesQualifi
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.SocialMediaContentIntern = void 0;
-var SocialMediaContentIntern = exports.SocialMediaContentIntern = {
-  title: "Social Media Content Intern",
-  header: "\n\n        <h4>Reports to:</h4> \n        <p>Digital Marketing Associate</p>\n\n        <h4>Department:</h4> \n        <p>Marketing</p>\n\n        <h4>FLSA Status:</h4> \n        <p>Non-Exempt</p>\n\n        <h4>Expectations for All Employees:</h4>\n<p>Supports the organization\u2019s mission, vision and values by exhibiting the following behaviors: excellence and competence, collaboration, innovation, respect, personalization, commitment to our community, and accountability and ownership.</p>\n\n<h4>About the Role:</h4>\n<p>Tea Collection is a globally inspired children's clothing company based in San Francisco. We believe in fostering global curiosity and connection in children through our high-quality, uniquely designed apparel. Our mission is to create beautiful, comfortable clothing that celebrates cultures around the world.</p>\n\n<p>This position is hybrid; San Francisco Bay Area employees work in the Tea office one day/week or as business requires. This intern will be required to work in person with the team, and visit various Bay Area locations, including boutiques that carry our products.</p>\n\n<h4>Objective:</h4>\n<p>Tea Collection is seeking a Marketing Intern for a 3-month internship to join our team. In this role, you will be responsible for ideating & producing daily video content for our paid and organic channels, and will work closely with the Digital & Brand Marketing teams to ensure alignment with Tea voice & business objectives.</p>\n\n        ",
-  pay: "<h4>Availability:</h4>\n    <p>This is a part-time position, 10-15 hours per week.</p>",
-  duties: ["Brainstorm video content based on current trends (sounds, challenges, etc.)", "Align ideas with brand voice and featured product", "Highlight & support on-site promos and product launches", "Produce and edit 5 videos per week to be used on TikTok and/or Instagram", "Report out on performance & creative learnings"],
-  qualifications: ["Currently a student or recent grad with interest in social media marketing", "Creative, outgoing, curious mind with ability to brainstorm and iterate", "Ability to work in a fast-paced environment", "Strong communication skills, decisiveness, & attention to detail", "Able to work independently with daily direction from key lead", "Engagement in learning and research on social media platforms & trends", "Previous experience creating content, portfolio a plus", "Experience as a creator on TikTok is a plus"],
-  footer: "<p>Tea Collection is committed to creating a diverse environment and is proud to be an equal opportunity employer. All qualified applicants will receive consideration for employment without regard to race, color, religion, gender, gender identity or expression, sexual orientation, national origin, genetics, disability, age, or veteran status.</p>"
+exports.marketingCoordinator = void 0;
+var marketingCoordinator = exports.marketingCoordinator = {
+  title: "Marketing Coordinator",
+  header: "<h4 style=\"display:block\">COVER LETTER AND RESUME MUST BE SUBMITTED TO BE CONSIDERED FOR THIS ROLE</h4>\n\n    Level: 1<br> \n    Reports to: Growth Marketing Manager<br> \n    Department: Marketing Direct<br> \n    Reports: None<br> \n    FLSA Status: Non-Exempt<br> \n    Employee: TBD<br><br>\n    \n    As our Marketing Coordinator, you\u2019ll help keep our marketing campaigns organized, on track, and running smoothly. This entry-level role is a great opportunity to learn by doing, with direct mentorship from experienced advisors. You\u2019ll work across various areas including digital ads, affiliate marketing, and print catalogs\u2014supporting the team with planning, execution, and reporting.<br><br>\n\nThis position is ideal for recent graduates who are curious, enjoy both creative and analytical tasks, and want to gain hands-on experience in a fast-paced, brand-driven environment.<br><br>\n\nThis is a hybrid role. Bay Area-based team members work from our Emeryville office at least one day per week. Remote team members are expected to travel to the office at least twice a year. The Coordinator must be accessible via video and messaging platforms during standard Pacific Time business hours.",
+  pay: "Pay Range:\n    $53-58k Salary",
+  duties: [{
+    header: "Campaign Execution & Asset Coordination:",
+    list: ["Brief the Creative team on asset needs based on historical data and ensure timely and accurate delivery across platforms.", "Maintain campaign trackers, link tracking, asset logs, and shared calendars to ensure seamless execution across all channels.", "Own the affiliate channel and support coordination of direct mail assets, ensuring consistency in messaging and seasonal timing."]
+  }, {
+    header: "Channel & Partner Coordination:",
+    list: ["Assist in managing relationships with external marketing partners, including ad platform reps (Meta, Google, TikTok) and affiliate partners through Awin.", "Support onboarding, communication, and activation for affiliate partners, ensuring they have current promotional materials and product feeds.", "Help manage timelines and collaborate with external catalog vendors, including list coordination, asset deadlines, and mail drop schedules."]
+  }, {
+    header: "Testing & Optimization:",
+    list: ["Contribute to A/B testing efforts across creative, copy, and targeting strategies within paid media platforms.", "Track and summarize test performance, helping the team draw clear insights for future optimizations.", "Stay informed on platform updates and marketing best practices to bring new ideas for testing and channel improvements."]
+  }, {
+    header: "Reporting & Performance Tracking:",
+    list: ["Pull weekly and monthly performance data across digital ad and affiliate marketing channels.", "Assist in maintaining campaign performance reports for monthly staff and marketing meetings.", "Track pacing, performance trends, and variances from target KPIs\u2014flagging issues or opportunities for improvement."]
+  }, {
+    header: "Project & Process Management:",
+    list: ["Keep marketing calendars, campaign timelines, and shared project documentation organized and up to date.", "Coordinate across internal teams (Creative, Site, Product, and Brand) to ensure campaign deliverables are aligned and executed on time.", "Support the organization of marketing assets, testing recaps, vendor files, and planning documents for easy team access and archival."]
+  }],
+  who: ["Curious, organized, and excited to grow in the marketing space", "A proactive problem-solver and clear communicator", "Equally comfortable with spreadsheets and creative briefs", "Thrive in fast-paced, collaborative environments", "Detail-oriented with strong organizational skills"],
+  qualifications: ["0\u20132 years of experience in digital marketing, eCommerce, or a related role", "Hands-on experience with paid media platforms like Meta Ads Manager and Google Ads is required", "Proficient using Excel/Google Sheets for data tracking and reporting", "Bachelor's degree in Marketing, Advertising, or related with a strong academic track record"],
+  footer: "Expectations for All Employees: Supports Tea Collection\u2019s mission, vision, and values by embodying excellence and competence, collaboration, innovation, respect, personalization, community commitment, and accountability. \n    \n     Note: Nothing in this job description restricts management\u2019s right to assign or reassign duties and responsibilities to this job at any time. Tea Collection is an Equal Opportunity Employer. We celebrate diversity and are committed to creating an inclusive environment for all employees. We do not discriminate based upon race, religion, color, national origin, sex, sexual orientation, gender identity, age, status as a protected veteran, status as an individual with a disability, or other applicable legally protected characteristics."
 };
 
 },{}],3:[function(require,module,exports){
@@ -52,18 +68,17 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.jobs = void 0;
-var _socialMediaContentIntern = require("./job-descriptions/social-media-content-intern.js");
+var _marketingCoordinator = require("./job-descriptions/marketing-coordinator.js");
 // import {
 //     AccountExecutiveEast
 // } from './account-executive-east.js';
-
 // import {
-//   officeCoordinator
-// } from './office-coordinator.js';
+//     SocialMediaContentIntern
+// } from './job-descriptions/social-media-content-intern.js';
 
-var jobs = exports.jobs = [_socialMediaContentIntern.SocialMediaContentIntern];
+var jobs = exports.jobs = [_marketingCoordinator.marketingCoordinator];
 
-},{"./job-descriptions/social-media-content-intern.js":2}],4:[function(require,module,exports){
+},{"./job-descriptions/marketing-coordinator.js":2}],4:[function(require,module,exports){
 "use strict";
 
 var _jobListing = require("./job-listing.js");
@@ -105,6 +120,10 @@ $(document).ready(function () {
 
         //show the responsibilities & qualifications
         (0, _dutiesQualifications.dutiesQualifications)(job.duties, "Duties & Responsibilities");
+        //only show who you are if not undefined
+        if (job.who !== undefined) {
+          (0, _dutiesQualifications.dutiesQualifications)(job.who, "Who You Are");
+        }
         (0, _dutiesQualifications.dutiesQualifications)(job.qualifications, "Qualifications");
 
         //show the footer and apply

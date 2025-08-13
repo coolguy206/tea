@@ -46,6 +46,10 @@ $(document).ready(function () {
 
         //show the responsibilities & qualifications
         dutiesQualifications(job.duties, `Duties & Responsibilities`);
+        //only show who you are if not undefined
+        if(job.who !== undefined){
+          dutiesQualifications(job.who, `Who You Are`);
+        }
         dutiesQualifications(job.qualifications, `Qualifications`);
 
         //show the footer and apply
