@@ -17,7 +17,7 @@ refreshAccessToken((data) => {
 
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/08 August/081025 Back to School Event/03 Handoff/Site/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/080625 Fall 2/03 handoff/`;
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/Fall 25 School Days/03 Handoff/Recruitment/LP/`
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/Fall 25 School Days/03 Handoff/Recruitment/HP/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 

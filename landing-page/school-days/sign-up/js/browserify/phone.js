@@ -28,5 +28,4 @@ var phoneConvert = exports.phoneConvert = function phoneConvert(string) {
   return newString;
 };
 
-
 },{}]},{},[1]);

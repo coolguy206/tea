@@ -26,4 +26,3 @@ var phoneConvert = exports.phoneConvert = function phoneConvert(string) {
   newString = newString.substring(0, 15);
   return newString;
 };
-//# sourceMappingURL=phone.js.map

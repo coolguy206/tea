@@ -50,7 +50,6 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -81,14 +80,13 @@ var phoneConvert = exports.phoneConvert = function phoneConvert(string) {
   return newString;
 };
 
-
 },{}],3:[function(require,module,exports){
 "use strict";
 
 var _phone = require("./phone.js");
 var _inview = require("./inview.js");
 $(document).ready(function () {
-  (0, _inview.inview)('.main-content .header .div-2');
+  (0, _inview.inview)('.main-content .header, .main-content .header .div-1, .main-content .how-it-works, .main-content .get-started, .main-content .quote');
   var url = window.location.href;
   var companyId = "RAd6JR";
   var list1 = "XQN7pP";
@@ -214,6 +212,5 @@ $(document).ready(function () {
     }
   });
 });
-
 
 },{"./inview.js":1,"./phone.js":2}]},{},[3]);

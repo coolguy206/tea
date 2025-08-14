@@ -7,7 +7,7 @@ import {
 
 $(document).ready(function () {
 
-  inview('.main-content .header .div-2');
+  inview('.main-content .header, .main-content .header .div-1, .main-content .how-it-works, .main-content .get-started, .main-content .quote');
 
   const url = window.location.href;
 
