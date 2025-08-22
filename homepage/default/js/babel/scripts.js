@@ -26,16 +26,16 @@ $(document).ready(function () {
   //? COUNTDOWN.JS
   // countdown('2025/07/22 23:59:59');
 
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
@@ -46,19 +46,20 @@ $(document).ready(function () {
   //   gap: 0
   // }).mount();
 
-  $('.c2-slideshow ul').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    // pause: 8000,
-    touchEnabled: false,
-    pause: 1500,
-    onSliderLoad: function onSliderLoad() {
-      // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-    }
-  });
+  // $('.c2-slideshow ul').bxSlider({
+  //   auto: true,
+  //   autoHover: true,
+  //   mode: 'fade',
+  //   controls: false,
+  //   pager: false,
+  //   // pause: 8000,
+  //   touchEnabled: false,
+  //   pause: 1500,
+
+  //   onSliderLoad: function () {
+  //     // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+  //   }
+  // });
 
   // new Glide('.c6 .glide', {
   //   type: 'carousel',
