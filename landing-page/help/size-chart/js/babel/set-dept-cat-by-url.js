@@ -35,4 +35,3 @@ module.exports = function (urlpara, elem1, elem2) {
     $(ul).prepend('<li class="selected">' + s + '</li>');
   }
 };
-//# sourceMappingURL=set-dept-cat-by-url.js.map

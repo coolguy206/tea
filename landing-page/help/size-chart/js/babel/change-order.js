@@ -53,4 +53,3 @@ module.exports = function (sizeChartArr) {
     }, 1100);
   }
 };
-//# sourceMappingURL=change-order.js.map

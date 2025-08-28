@@ -38,4 +38,3 @@ module.exports = function (sizeChartArr) {
     }
   });
 };
-//# sourceMappingURL=change-background-image.js.map

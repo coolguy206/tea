@@ -105,4 +105,3 @@ module.exports = function (k, row, rows, tableElem) {
     }
   });
 };
-//# sourceMappingURL=make-td.js.map

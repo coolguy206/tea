@@ -150,4 +150,3 @@ $('.size-chart').click(function (e) {
   });
   */
 });
-//# sourceMappingURL=pdp-function.js.map

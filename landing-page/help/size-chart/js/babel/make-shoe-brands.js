@@ -13,7 +13,7 @@ module.exports = function () {
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
 
   //only execute if sweaters or shoes
-  if (cat == 'sweater + outerwear' || cat == 'shoes + accessories') {
+  if (cat == 'sweater + outerwear' || cat.indexOf('shoes + accessories') !== -1) {
     //make the element to add to the page
     // var elem = '<div class="brands"></div>';
     var elem1 = '<div class="brands"></div>';
@@ -25,7 +25,7 @@ module.exports = function () {
     var ol = $('<ol class="mobile"></ol>');
 
     //if shoes + accessories
-    if (cat == 'shoes + accessories') {
+    if (cat.indexOf('shoes + accessories') !== -1) {
       h2 = '<h2>' + dept + ' shoes size chart</h2>';
 
       //add the <option> and <li>
@@ -107,4 +107,3 @@ module.exports = function () {
     brandChange();
   }
 };
-//# sourceMappingURL=make-shoe-brands.js.map

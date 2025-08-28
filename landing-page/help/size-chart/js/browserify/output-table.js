@@ -107,7 +107,6 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -149,6 +148,5 @@ module.exports = function (i, val, rows) {
     }
   });
 };
-
 
 },{"./make-td.js":1}]},{},[2]);

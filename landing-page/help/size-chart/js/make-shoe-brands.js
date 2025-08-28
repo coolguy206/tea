@@ -3,7 +3,7 @@ const brandChange = require('./change-shoe-brand.js');
 const sizeChartArr = require('./measuring-tips.js');
 const shoeBrands = require('./shoe-brands.js');
 
-module.exports = function() {
+module.exports = function () {
   //function to make the brand drop down for shoes or sweaters
 
   //remove .brands
@@ -13,7 +13,7 @@ module.exports = function() {
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
 
   //only execute if sweaters or shoes
-  if (cat == 'sweater + outerwear' || cat == 'shoes + accessories') {
+  if (cat == 'sweater + outerwear' || cat.indexOf('shoes + accessories') !== -1) {
     //make the element to add to the page
     // var elem = '<div class="brands"></div>';
     var elem1 = '<div class="brands"></div>';
@@ -25,18 +25,18 @@ module.exports = function() {
     var ol = $('<ol class="mobile"></ol>');
 
     //if shoes + accessories
-    if (cat == 'shoes + accessories') {
+    if (cat.indexOf('shoes + accessories') !== -1) {
       h2 = '<h2>' + dept + ' shoes size chart</h2>';
 
       //add the <option> and <li>
       //loop through the .sizeChartArr
-      $.each(sizeChartArr, function(i, val) {
+      $.each(sizeChartArr, function (i, val) {
         //find the matched dept
         if (dept == val.dept) {
           //loop through dept shoes
-          $.each(val.shoes, function(j, shoe) {
+          $.each(val.shoes, function (j, shoe) {
             //loop through the shoeBrands
-            $.each(shoeBrands, function(k, brand) {
+            $.each(shoeBrands, function (k, brand) {
               //if match output
               if (shoe == brand.brand) {
                 //<ul>
@@ -99,7 +99,7 @@ module.exports = function() {
     $('.size-chart-table').append(brandsDropdown);
 
     //because of onload append shoe size chart to .size-chart-table
-    setTimeout(function() {
+    setTimeout(function () {
       $('.size-chart-table').append($('.brands'));
       $('.size-chart-table').append($('.brands-dropdown'));
     }, 1500);

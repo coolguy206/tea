@@ -53,4 +53,3 @@ module.exports = function () {
   //re-order the tables if shoes + accessories
   changeOrder();
 };
-//# sourceMappingURL=onload.js.map

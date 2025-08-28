@@ -143,4 +143,3 @@ module.exports = function (sizeChartArr) {
     }
   });
 };
-//# sourceMappingURL=change-measuring-tips-copy.js.map

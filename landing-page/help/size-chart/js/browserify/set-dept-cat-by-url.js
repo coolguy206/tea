@@ -37,5 +37,4 @@ module.exports = function (urlpara, elem1, elem2) {
   }
 };
 
-
 },{}]},{},[1]);

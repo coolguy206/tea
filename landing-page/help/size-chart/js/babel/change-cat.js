@@ -31,4 +31,3 @@ module.exports = function (sizeChartArr) {
     }
   });
 };
-//# sourceMappingURL=change-cat.js.map

@@ -46,4 +46,3 @@ module.exports = [{
   brand: 'cienta',
   url: 'https://cientausa.com/'
 }];
-//# sourceMappingURL=shoe-brands.js.map

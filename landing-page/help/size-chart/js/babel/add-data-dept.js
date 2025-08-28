@@ -8,4 +8,3 @@ module.exports = function () {
 
   $('.size-chart-container').find($('.tips')).attr('data-dept', onloadDeptVal);
 };
-//# sourceMappingURL=add-data-dept.js.map

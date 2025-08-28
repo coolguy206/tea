@@ -48,4 +48,3 @@ module.exports = function () {
   //   $('.size-chart-container').find($('.tips')).removeAttr('style');
   // }
 };
-//# sourceMappingURL=tips-css.js.map

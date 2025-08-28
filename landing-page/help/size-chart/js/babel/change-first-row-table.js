@@ -23,4 +23,3 @@ module.exports = function () {
   }
   $('.size-chart-table table .size-chart-header th').html(str);
 };
-//# sourceMappingURL=change-first-row-table.js.map

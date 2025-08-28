@@ -152,5 +152,4 @@ $('.size-chart').click(function (e) {
   */
 });
 
-
 },{}]},{},[1]);

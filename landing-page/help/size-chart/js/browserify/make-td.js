@@ -107,5 +107,4 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-
 },{}]},{},[1]);

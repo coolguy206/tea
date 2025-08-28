@@ -356,4 +356,3 @@ $(document).ready(function () {
     $('.tables-loading').remove();
   }
 });
-//# sourceMappingURL=functions.js.map

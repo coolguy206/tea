@@ -38,4 +38,3 @@ module.exports = function (i, val, rows) {
     }
   });
 };
-//# sourceMappingURL=output-table.js.map

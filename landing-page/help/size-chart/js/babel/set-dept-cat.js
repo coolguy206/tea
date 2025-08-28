@@ -16,4 +16,3 @@ module.exports = function (elem1, elem2) {
 
   return Val;
 };
-//# sourceMappingURL=set-dept-cat.js.map

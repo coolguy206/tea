@@ -32,4 +32,3 @@ module.exports = function () {
     }
   });
 };
-//# sourceMappingURL=change-shoe-brand.js.map

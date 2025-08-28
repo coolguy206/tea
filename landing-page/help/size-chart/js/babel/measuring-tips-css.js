@@ -92,4 +92,3 @@ module.exports = function () {
   //   $('.size-chart-container').find($('.measure-tips')).attr('style', measureStyles);
   // }
 };
-//# sourceMappingURL=measuring-tips-css.js.map

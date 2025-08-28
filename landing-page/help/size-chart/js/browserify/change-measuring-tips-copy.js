@@ -145,7 +145,6 @@ module.exports = function (sizeChartArr) {
   });
 };
 
-
 },{"./set-dept-cat.js":2}],2:[function(require,module,exports){
 "use strict";
 
@@ -165,6 +164,5 @@ module.exports = function (elem1, elem2) {
 
   return Val;
 };
-
 
 },{}]},{},[1]);

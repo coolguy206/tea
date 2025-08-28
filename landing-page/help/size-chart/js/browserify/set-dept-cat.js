@@ -18,5 +18,4 @@ module.exports = function (elem1, elem2) {
   return Val;
 };
 
-
 },{}]},{},[1]);

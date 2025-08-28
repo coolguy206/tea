@@ -9,14 +9,15 @@
 }
 
 .mobile {
-	@media screen and (max-width:428px) {
+	@media screen and (max-width:430px) {
 		display: inline-block !important;
 	}
+
 	display: none !important;
 }
 
 .desktop {
-	@media screen and (max-width:428px) {
+	@media screen and (max-width:430px) {
 		display: none !important;
 	}
 }
@@ -31,15 +32,17 @@
 	display: flex;
 	flex-wrap: wrap;
 }
+
 //---------------------------------------------------------------
 
 .size-chart-container {
 	padding: 0;
 
 	.note {
-		@media screen and (max-width: 428px) {
+		@media screen and (max-width: 430px) {
 			margin: 1em 0;
 		}
+
 		margin: 0;
 	}
 
@@ -108,18 +111,20 @@
 			flex-wrap: wrap;
 
 			.the-img {
-				@media screen and (max-width:428px) {
+				@media screen and (max-width:430px) {
 					flex-basis: 100%;
 				}
+
 				flex-basis: 50%;
 
 				img {}
 			}
 
 			.text {
-				@media screen and (max-width:428px) {
+				@media screen and (max-width:430px) {
 					flex-basis: 100%;
 				}
+
 				overflow: hidden;
 				background: @pink-color;
 				padding: 0;
@@ -163,6 +168,7 @@
 		margin: 0 0 3%;
 		display: flex;
 		flex-wrap: wrap;
+
 		// ul {
 		// 	overflow: hidden;
 		// 	list-style-type: none;
@@ -217,12 +223,13 @@
 		// 	}
 		// }
 		select {
-			@media screen and (max-width:428px) {
+			@media screen and (max-width:430px) {
 				border-radius: 0;
 				flex-basis: 100%;
 				margin: 0 0 5%;
 				padding: 3%;
 			}
+
 			-moz-appearance: window;
 			-webkit-appearance: none;
 			margin: 0 2% 0 0;
@@ -245,9 +252,10 @@
 	}
 
 	.measure-tips {
-		@media screen and (max-width:428px) {
+		@media screen and (max-width:430px) {
 			flex-basis: 100%;
 		}
+
 		background-repeat: no-repeat;
 		background-position: center center;
 		min-height: 443px;
@@ -255,6 +263,7 @@
 		box-sizing: border-box;
 		flex-basis: 50%;
 		position: relative;
+		display:none;
 
 		.tips {
 			text-decoration: none;
@@ -335,12 +344,14 @@
 	}
 
 	.size-chart-table {
-		@media screen and (max-width:428px) {
+		@media screen and (max-width:430px) {
 			flex-basis: 100%;
 		}
+
 		box-sizing: border-box;
 		padding: 0;
-		flex-basis: 50%;
+		// flex-basis: 50%;
+		flex-basis: 100%;
 
 		.brands,
 		.brands-dropdown,
@@ -366,11 +377,13 @@
 			}
 
 			select {
+
 				&.brand,
 				&.shoes {
-					@media screen and (max-width:428px) {
+					@media screen and (max-width:430px) {
 						padding: 3%;
 					}
+
 					width: 100%;
 					-webkit-appearance: none;
 					margin: 0 2% 0 0;
@@ -386,6 +399,7 @@
 					padding: 2% 0;
 				}
 			}
+
 			// ol {
 			// 	margin-top: 10px;
 			// 	width: 100%;
@@ -445,6 +459,7 @@
 
 		table {
 			&.the-table {}
+
 			width: 100%;
 			margin: 0 0 5%;
 
@@ -556,4 +571,5 @@
 	position: relative;
 	left: 2%;
 }
+
 //---------------------------------------------------------------

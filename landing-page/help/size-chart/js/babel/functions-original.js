@@ -1569,4 +1569,3 @@ $(document).ready(function () {
     $('.tables-loading').remove();
   }
 });
-//# sourceMappingURL=functions-original.js.map

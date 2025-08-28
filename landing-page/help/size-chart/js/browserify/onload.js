@@ -10,7 +10,6 @@ module.exports = function () {
   $('.size-chart-container').find($('.tips')).attr('data-dept', onloadDeptVal);
 };
 
-
 },{"./set-dept-cat.js":17}],2:[function(require,module,exports){
 "use strict";
 
@@ -53,7 +52,6 @@ module.exports = function (sizeChartArr) {
   });
 };
 
-
 },{"./set-dept-cat.js":17}],3:[function(require,module,exports){
 "use strict";
 
@@ -89,7 +87,6 @@ module.exports = function (sizeChartArr) {
   });
 };
 
-
 },{}],4:[function(require,module,exports){
 "use strict";
 
@@ -116,7 +113,6 @@ module.exports = function () {
   }
   $('.size-chart-table table .size-chart-header th').html(str);
 };
-
 
 },{"./set-dept-cat.js":17}],5:[function(require,module,exports){
 "use strict";
@@ -265,7 +261,6 @@ module.exports = function (sizeChartArr) {
   });
 };
 
-
 },{"./set-dept-cat.js":17}],6:[function(require,module,exports){
 "use strict";
 
@@ -323,7 +318,6 @@ module.exports = function (sizeChartArr) {
   }
 };
 
-
 },{"./set-dept-cat.js":17}],7:[function(require,module,exports){
 "use strict";
 
@@ -360,7 +354,6 @@ module.exports = function () {
   });
 };
 
-
 },{}],8:[function(require,module,exports){
 "use strict";
 
@@ -377,7 +370,7 @@ module.exports = function () {
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
 
   //only execute if sweaters or shoes
-  if (cat == 'sweater + outerwear' || cat == 'shoes + accessories') {
+  if (cat == 'sweater + outerwear' || cat.indexOf('shoes + accessories') !== -1) {
     //make the element to add to the page
     // var elem = '<div class="brands"></div>';
     var elem1 = '<div class="brands"></div>';
@@ -389,7 +382,7 @@ module.exports = function () {
     var ol = $('<ol class="mobile"></ol>');
 
     //if shoes + accessories
-    if (cat == 'shoes + accessories') {
+    if (cat.indexOf('shoes + accessories') !== -1) {
       h2 = '<h2>' + dept + ' shoes size chart</h2>';
 
       //add the <option> and <li>
@@ -472,7 +465,6 @@ module.exports = function () {
   }
 };
 
-
 },{"./change-shoe-brand.js":7,"./measuring-tips.js":13,"./set-dept-cat.js":17,"./shoe-brands.js":18}],9:[function(require,module,exports){
 "use strict";
 
@@ -483,8 +475,13 @@ module.exports = function (i, val, dept, subcat) {
   //add new table
   $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
   // console.log('rows: ', val);
+
   rows = val.merges[0].endColumnIndex - 1;
-  colspan = val.merges[0].endColumnIndex;
+  if (subcat == "all categories" && dept == "newborn") {
+    colspan = 7;
+  } else {
+    colspan = val.merges[0].endColumnIndex;
+  }
   // console.log(colspan);
 
   //add colspan to .size-chart-header
@@ -492,10 +489,15 @@ module.exports = function (i, val, dept, subcat) {
   return rows;
 };
 
-
 },{"./make-td.js":11}],10:[function(require,module,exports){
 "use strict";
 
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 var deptCat = require('./set-dept-cat.js');
 var makeTableHeader = require('./make-table-header.js');
 var outputTable = require('./output-table.js');
@@ -523,6 +525,8 @@ module.exports = function () {
   //the selected values
   var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
   var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+  // console.log(dept,cat);
+
   var sheet = sheets;
   console.log('from make-table.js');
   console.log(sheet);
@@ -532,7 +536,8 @@ module.exports = function () {
     var sheetVal = val.data[0].rowData[2].values[0].formattedValue;
     var sheetArr = sheetVal.split(':');
     var sheetDept = sheetArr[0];
-    var sheetCatArr = sheetArr[1].split(',');
+    // var sheetCatArr = sheetArr[1].split(',');
+    var sheetCatArr = sheetArr[1];
     // console.log(sheetCatArr);
 
     //if baby
@@ -540,62 +545,55 @@ module.exports = function () {
       sheetDept = ['baby girl', 'baby boy'];
     }
 
-    //check if dept matches
-    if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
-      //check if cat matches
-      $.each(sheetCatArr, function (j, category) {
-        if (category == cat) {
-          // console.log(i,val);
-          var rows;
-          var colspan;
+    //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change cat to match sheet
+    if (dept == "baby girl") {
+      if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
+        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+      }
+    } else if (dept == "baby boy") {
+      if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
+        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+      }
+    }
+    if (dept == "newborn") {
+      //? hide the top table
+      $('.size-chart-table .the-table').hide();
+      var nbCatArr = cat.split(',');
+      $.each(nbCatArr, function (j, str) {
+        if (str == " Booties" || str == " Bibs") {
+          nbCatArr[j] = "all categories, accessories";
+        } else if (str == " hats") {
+          nbCatArr[j] = "all categories, hats";
+        }
+      });
+      var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
+      // console.log(uniqueNbCatArr);
 
-          //if newborn department or category is shoes + accessories
-          if (dept == 'newborn' || cat == 'shoes + accessories') {
-            //hide the top table
-            $('.size-chart-container .the-table').hide();
-            var subcat = val.data[0].rowData[2].values[0].formattedValue;
+      //? find the matching sheetDepts for newborn
+      if (sheetDept == dept) {
+        //? loop through uniqueNbCatArr and find matching data and output
+        $.each(uniqueNbCatArr, function (j, nb) {
+          if (nb == sheetCatArr) {
+            var rows;
+            var colspan;
 
-            //if not newborn
-            if (dept !== 'newborn') {
-              subcat = subcat.split(',')[1];
-            } else {
-              //this is newborn
-              subcat = subcat.split(',');
-              if (subcat[1] !== undefined) {
-                subcat = subcat[1];
-              } else {
-                subcat = 'all categories';
-              }
-            }
-
-            // console.log(subcat);
-
-            //if girl
-            if (dept == 'girl') {
-              rows = makeTableHeader(i, val, dept, subcat);
-            }
-
-            //if boy || baby girl || baby baby
-            if (dept == 'boy' || dept == 'baby girl' || dept == 'baby boy') {
-              rows = makeTableHeader(i, val, dept, subcat);
-            }
-
-            //if newborn
-            if (dept == 'newborn') {
-              rows = makeTableHeader(i, val, dept, subcat);
-            }
-
-            //output the table contents
-            outputTable(i, val, rows);
-
-            //stop the function
-            return false;
-          } else {
-            rows = val.merges[0].endColumnIndex - 1;
-            colspan = val.merges[0].endColumnIndex;
+            // rows = val.merges[0].endColumnIndex - 1;
+            // if (nb == `all categories`) {
+            //   colspan = 7;
+            // } else {
+            //   colspan = val.merges[0].endColumnIndex;
+            // }
 
             //add colspan to .size-chart-header
-            $('.size-chart-header th').attr('colspan', colspan);
+            // $('.size-chart-header th').attr('colspan', colspan);
+
+            //? change the headers for the newborn tables
+            if (nb == "all categories, accessories") {
+              nb = "Booties & Bibs";
+            } else if (nb == "all categories, hats") {
+              nb = "hats";
+            }
+            rows = makeTableHeader(i, val, dept, nb);
 
             //output the table contents
             outputTable(i, val, rows);
@@ -603,12 +601,71 @@ module.exports = function () {
             //stop the function
             return false;
           }
-        }
-      });
+        });
+      }
+    } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
+      //check if cat matches
+      // $.each(sheetCatArr, function (j, category) {
+      // if (category == cat) {
+
+      //? if category is shoes + accessories
+      if (cat.indexOf('shoes + accessories') !== -1) {
+        //? hide the top table
+        $('.size-chart-table .the-table').hide();
+
+        //? split the selected categories into an array
+        var catArr = cat.split(',');
+
+        //? loop through the array and check if any of the values match
+        $.each(catArr, function (k, c) {
+          // console.log(k,c);
+
+          var shoesAccess = sheetCatArr.split(',')[1];
+
+          //? skip shoe + accessories but match the rest eg: socks & hats
+          if (c !== 'shoes + accessories' && shoesAccess == c) {
+            console.log('match found');
+            console.log(shoesAccess, c);
+            var rows;
+            var colspan;
+
+            // rows = val.merges[0].endColumnIndex - 1;
+            colspan = val.merges[0].endColumnIndex;
+
+            //add colspan to .size-chart-header
+            $('.size-chart-header th').attr('colspan', colspan);
+            rows = makeTableHeader(i, val, dept, c);
+
+            //output the table contents
+            outputTable(i, val, rows);
+
+            //stop the function
+            return false;
+          }
+        });
+
+        //? all other categories that are not shoes + accessories
+      } else if (cat.indexOf(sheetCatArr) !== -1) {
+        // console.log(i,val);
+        var rows;
+        var colspan;
+        console.log("only activate");
+        rows = val.merges[0].endColumnIndex - 1;
+        colspan = val.merges[0].endColumnIndex;
+
+        //add colspan to .size-chart-header
+        $('.size-chart-header th').attr('colspan', colspan);
+
+        //output the table contents
+        outputTable(i, val, rows);
+
+        //stop the function
+        return false;
+      }
+      // });
     }
   });
 };
-
 
 },{"./make-table-header.js":9,"./output-table.js":15,"./set-dept-cat.js":17}],11:[function(require,module,exports){
 "use strict";
@@ -719,7 +776,6 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-
 },{}],12:[function(require,module,exports){
 "use strict";
 
@@ -816,7 +872,6 @@ module.exports = function () {
   // }
 };
 
-
 },{"./set-dept-cat.js":17}],13:[function(require,module,exports){
 "use strict";
 
@@ -830,27 +885,30 @@ module.exports = [{
     waist: 'Tie a string around your child\'s middle and have her bend from side to side. The string will settle around her natural waist, above her hipbones. Wrap a measuring tape around this part of her waist.'
   },
   cat: [{
-    name: 'dresses',
+    name: 'tops,dresses,bottoms',
     img: 'girls/girls-dresses.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her chest measurement is the most important factor in finding a dress that fits.',
     rightH2: 'Long Live the Dress',
     rightP: 'Many parents tell us that when their daughter is too tall for her favorite Tea dress, she wears it as a tunic!'
-  }, {
-    name: 'tops',
-    img: 'girls/girls-tops.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'Her chest measurement is the most important factor in finding a top that fits.',
-    rightH2: 'Always in Season',
-    rightP: 'Thanks to our easy-to-layer purity tees, she can wear that favorite tank or short sleeve top all year long. (Whew, right?!)'
-  }, {
-    name: 'bottoms',
-    img: 'girls/girls-bottoms.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably—but her hip measurement can make the difference if you\'re stuck between sizes.',
-    rightH2: 'Easy Does it',
-    rightP: 'She\'s got places to go. Like, right now! That\'s why our pants are designed to be extra easy for her to pull on and off in a jiffy.'
-  }, {
+  },
+  // {
+  //   name: 'tops',
+  //   img: 'girls/girls-tops.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'Her chest measurement is the most important factor in finding a top that fits.',
+  //   rightH2: 'Always in Season',
+  //   rightP: 'Thanks to our easy-to-layer purity tees, she can wear that favorite tank or short sleeve top all year long. (Whew, right?!)',
+  // },
+  // {
+  //   name: 'bottoms',
+  //   img: 'girls/girls-bottoms.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably—but her hip measurement can make the difference if you\'re stuck between sizes.',
+  //   rightH2: 'Easy Does it',
+  //   rightP: 'She\'s got places to go. Like, right now! That\'s why our pants are designed to be extra easy for her to pull on and off in a jiffy.',
+  // },
+  {
     name: 'swim',
     img: 'girls/girls-swim.png',
     leftH2: 'Tankinis + Bikinis',
@@ -874,7 +932,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }, {
-    name: 'shoes + accessories',
+    name: 'shoes + accessories,socks,headbands,hats',
     img: '',
     leftH2: '',
     leftP: '',
@@ -882,6 +940,7 @@ module.exports = [{
     rightP: ''
   }]
 }, /*-----------------------------------------------------------------------------------------*/
+
 {
   dept: 'boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -892,20 +951,22 @@ module.exports = [{
     waist: 'Tie a string around your child\'s middle and have him bend from side to side. The string will settle around his natural waist, above his hipbones. Wrap a measuring tape around this part of his waist.'
   },
   cat: [{
-    name: 'tees + shirts',
+    name: 'tees + shirts,bottoms',
     img: 'boys/boys-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His chest measurement is the most important factor in finding a shirt that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer purity tees, he can wear that favorite sleeve shirt all year long. (Whew, right?!)'
-  }, {
-    name: 'bottoms',
-    img: 'boys/boys-bottoms.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'His waist measurement is the most important factor in finding pants that fit comfortably—but his hip measurement can make the difference if you\'re stuck between sizes.',
-    rightH2: 'Easy Does it',
-    rightP: 'He\'s got places to go. Like, right now! That\'s why our pants are designed to be extra easy for him to pull on and off in a jiffy.'
-  }, {
+  },
+  // {
+  //   name: 'bottoms',
+  //   img: 'boys/boys-bottoms.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'His waist measurement is the most important factor in finding pants that fit comfortably—but his hip measurement can make the difference if you\'re stuck between sizes.',
+  //   rightH2: 'Easy Does it',
+  //   rightP: 'He\'s got places to go. Like, right now! That\'s why our pants are designed to be extra easy for him to pull on and off in a jiffy.',
+  // },
+  {
     name: 'swim',
     img: 'boys/boys-swim.png',
     leftH2: 'Swim Trunks',
@@ -929,7 +990,7 @@ module.exports = [{
     rightH2: '',
     rightP: ''
   }, {
-    name: 'shoes + accessories',
+    name: 'shoes + accessories,socks,hats',
     img: '',
     leftH2: '',
     leftP: '',
@@ -937,6 +998,7 @@ module.exports = [{
     rightP: ''
   }]
 }, /*-----------------------------------------------------------------------------------------*/
+
 {
   dept: 'baby girl',
   shoes: ['yosi samra', 'vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
@@ -954,51 +1016,57 @@ module.exports = [{
     rightH2: 'Diaper Duty',
     rightP: 'We design our rompers to fit over diapers, but you don\'t have to include them when you measure. For her correct hip measurement, be sure to leave the diaper out of the equation!'
   }, {
-    name: 'dresses',
+    name: 'dresses, tops, bottoms, swim, sweater + outerwear, pajamas',
     img: 'baby-girl/baby-girl-dresses.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'Her chest measurement is the most important factor in finding a dress that fits.',
     rightH2: 'Matching Bloomers',
     rightP: 'Some of our dresses come with matching bloomers up to size 24m. Check her waist measurement to see how the bloomers will fit.'
-  }, {
-    name: 'tops',
-    img: 'baby-girl/baby-girl-tops.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'Her chest measurement is the most important factor in finding a top or bodysuit that fits.',
-    rightH2: 'Always in Season',
-    rightP: 'Thanks to our easy-to-layer bodysuits, she can wear that adorable tank or short sleeve top all year long. (Whew, right?!)'
-  }, {
-    name: 'bottoms',
-    img: 'baby-girl/baby-girl-bottoms.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably— but her hip measurement can make the difference if you\'re stuck between sizes.',
-    rightH2: 'Diaper Duty',
-    rightP: 'We design our baby bottoms to fit over diapers, but you don\'t have to include them when you measure. For her correct hip measurement, be sure to leave the diaper out of the equation!'
-  }, {
-    name: 'swim',
-    img: 'baby-girl/baby-girl-swim.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'Chest and hip <span class="desktop">(sans diaper)</span> measurements are what you\'re looking for to find the right size. When in doubt, go with her chest measurement.',
-    rightH2: 'Two-Piece Tip',
-    rightP: 'Experienced parents tell us they love two-piece suits for quick and easy diaper changes at the beach.',
-    rightH2Bottom: '',
-    rightPBottom: ''
-  }, {
-    name: 'sweater + outerwear',
-    img: 'baby-girl/baby-girl-sweaters.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'The only measurement you need to determine her size is the circumference of her chest.',
-    rightH2: 'Layer Up!',
-    rightP: 'We design our outerwear to fit comfortably over all sorts of layers, so don\'t be afraid to add that extra sweater.'
-  }, {
-    name: 'pajamas',
-    img: '',
-    leftH2: '',
-    leftP: '',
-    rightH2: '',
-    rightP: ''
-  }, {
-    name: 'shoes + accessories',
+  },
+  // {
+  //   name: 'tops',
+  //   img: 'baby-girl/baby-girl-tops.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'Her chest measurement is the most important factor in finding a top or bodysuit that fits.',
+  //   rightH2: 'Always in Season',
+  //   rightP: 'Thanks to our easy-to-layer bodysuits, she can wear that adorable tank or short sleeve top all year long. (Whew, right?!)',
+  // },
+  // {
+  //   name: 'bottoms',
+  //   img: 'baby-girl/baby-girl-bottoms.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'Her waist measurement is the most important factor in finding pants that fit comfortably— but her hip measurement can make the difference if you\'re stuck between sizes.',
+  //   rightH2: 'Diaper Duty',
+  //   rightP: 'We design our baby bottoms to fit over diapers, but you don\'t have to include them when you measure. For her correct hip measurement, be sure to leave the diaper out of the equation!',
+  // },
+  // {
+  //   name: 'swim',
+  //   img: 'baby-girl/baby-girl-swim.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'Chest and hip <span class="desktop">(sans diaper)</span> measurements are what you\'re looking for to find the right size. When in doubt, go with her chest measurement.',
+  //   rightH2: 'Two-Piece Tip',
+  //   rightP: 'Experienced parents tell us they love two-piece suits for quick and easy diaper changes at the beach.',
+  //   rightH2Bottom: '',
+  //   rightPBottom: '',
+  // },
+  // {
+  //   name: 'sweater + outerwear',
+  //   img: 'baby-girl/baby-girl-sweaters.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'The only measurement you need to determine her size is the circumference of her chest.',
+  //   rightH2: 'Layer Up!',
+  //   rightP: 'We design our outerwear to fit comfortably over all sorts of layers, so don\'t be afraid to add that extra sweater.',
+  // },
+  // {
+  //   name: 'pajamas',
+  //   img: '',
+  //   leftH2: '',
+  //   leftP: '',
+  //   rightH2: '',
+  //   rightP: '',
+  // },
+  {
+    name: 'shoes + accessories,socks,hats',
     img: '',
     leftH2: '',
     leftP: '',
@@ -1013,6 +1081,7 @@ module.exports = [{
     rightP: ''
   }]
 }, /*-----------------------------------------------------------------------------------------*/
+
 {
   dept: 'baby boy',
   shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
@@ -1030,44 +1099,49 @@ module.exports = [{
     rightH2: 'Diaper Duty',
     rightP: 'We design our rompers to fit over diapers, but you don\'t have to include them when you measure. For his correct hip measurement, be sure to leave the diaper out of the equation!'
   }, {
-    name: 'tees + shirts',
+    name: 'tees + shirts, bottoms, swim, sweater + outerwear, pajamas',
     img: 'baby-boy/baby-boy-tops.png',
     leftH2: 'Stuck Between Sizes?',
     leftP: 'His chest measurement is the most important factor in finding a top or bodysuit that fits.',
     rightH2: 'Always in Season',
     rightP: 'Thanks to our easy-to-layer bodysuits, he can wear that favorite short sleeve shirt all year long. (Whew, right?!)'
-  }, {
-    name: 'bottoms',
-    img: 'baby-boy/baby-boy-bottoms.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'His waist measurement is the most important factor in finding bottoms that fit comfortably— but his hip measurement can make the difference if you\'re stuck between sizes.',
-    rightH2: 'Diaper Duty',
-    rightP: 'We design our baby bottoms to fit over diapers, but you don\'t have to include them when you measure. For his correct hip measurement, be sure to leave the diaper out of the equation!'
-  }, {
-    name: 'swim',
-    img: 'baby-boy/baby-boy-swim.png',
-    leftH2: 'Swim Trunks',
-    leftP: 'His waist measurement is the most important factor in choosing trunks that fit comfortably—but his hip measurement can make the difference if you\'re stuck between sizes.',
-    rightH2: 'Rash Guard Suits',
-    rightP: 'His height is the most important measurement to get the right fit. ',
-    rightH2Bottom: 'Rash Guards',
-    rightPBottom: 'His chest measurement is the magic number you need to get the right size rash guard. '
-  }, {
-    name: 'sweater + outerwear',
-    img: 'baby-boy/baby-boy-sweaters.png',
-    leftH2: 'Stuck Between Sizes?',
-    leftP: 'The only measurement you need to determine his size is the circumference of his chest.',
-    rightH2: 'Layer Up!',
-    rightP: 'We design our outerwear to fit comfortably over all sorts of layers, so don\'t be afraid to add that extra sweater.'
-  }, {
-    name: 'pajamas',
-    img: '',
-    leftH2: '',
-    leftP: '',
-    rightH2: '',
-    rightP: ''
-  }, {
-    name: 'shoes + accessories',
+  },
+  // {
+  //   name: 'bottoms',
+  //   img: 'baby-boy/baby-boy-bottoms.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'His waist measurement is the most important factor in finding bottoms that fit comfortably— but his hip measurement can make the difference if you\'re stuck between sizes.',
+  //   rightH2: 'Diaper Duty',
+  //   rightP: 'We design our baby bottoms to fit over diapers, but you don\'t have to include them when you measure. For his correct hip measurement, be sure to leave the diaper out of the equation!',
+  // },
+  // {
+  //   name: 'swim',
+  //   img: 'baby-boy/baby-boy-swim.png',
+  //   leftH2: 'Swim Trunks',
+  //   leftP: 'His waist measurement is the most important factor in choosing trunks that fit comfortably—but his hip measurement can make the difference if you\'re stuck between sizes.',
+  //   rightH2: 'Rash Guard Suits',
+  //   rightP: 'His height is the most important measurement to get the right fit. ',
+  //   rightH2Bottom: 'Rash Guards',
+  //   rightPBottom: 'His chest measurement is the magic number you need to get the right size rash guard. ',
+  // },
+  // {
+  //   name: 'sweater + outerwear',
+  //   img: 'baby-boy/baby-boy-sweaters.png',
+  //   leftH2: 'Stuck Between Sizes?',
+  //   leftP: 'The only measurement you need to determine his size is the circumference of his chest.',
+  //   rightH2: 'Layer Up!',
+  //   rightP: 'We design our outerwear to fit comfortably over all sorts of layers, so don\'t be afraid to add that extra sweater.',
+  // },
+  // {
+  //   name: 'pajamas',
+  //   img: '',
+  //   leftH2: '',
+  //   leftP: '',
+  //   rightH2: '',
+  //   rightP: '',
+  // },
+  {
+    name: 'shoes + accessories,socks,hats',
     img: '',
     leftH2: '',
     leftP: '',
@@ -1082,16 +1156,34 @@ module.exports = [{
     rightP: ''
   }]
 }, /*-----------------------------------------------------------------------------------------*/
+
 {
   dept: 'newborn',
   cat: [{
-    name: 'all categories',
+    name: 'all categories, Booties, Bibs, hats',
     img: 'newborn/newborn-all.png',
     leftH2: 'Newborn Needs',
     leftP: 'Brand new babies are a bit messy! Buy a few extra outfits so you don\'t have to do laundry every day.',
     rightH2: 'Romper Rules',
     rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!'
-  }]
+  }
+  // {
+  //   name: 'Booties, Bibs, hats',
+  //   img: 'newborn/newborn-all.png',
+  //   leftH2: 'Newborn Needs',
+  //   leftP: 'Brand new babies are a bit messy! Buy a few extra outfits so you don\'t have to do laundry every day.',
+  //   rightH2: 'Romper Rules',
+  //   rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!',
+  // },
+  // {
+  //   name: 'hats',
+  //   img: 'newborn/newborn-all.png',
+  //   leftH2: 'Newborn Needs',
+  //   leftP: 'Brand new babies are a bit messy! Buy a few extra outfits so you don\'t have to do laundry every day.',
+  //   rightH2: 'Romper Rules',
+  //   rightP: 'Rompers are easy gifts—they keep babies cozy all the way to their tiny toes, plus they\'re easy to change in a snap!',
+  // },
+  ]
 }, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'adult unisex',
@@ -1114,34 +1206,38 @@ module.exports = [{
 {
   dept: 'women',
   cat: [{
-    name: 'swim',
+    name: 'swim,pajamas,dresses,tops',
     img: '',
     leftH2: '',
     leftP: '',
     rightH2: '',
     rightP: ''
-  }, {
-    name: 'pajamas',
-    img: '',
-    leftH2: '',
-    leftP: '',
-    rightH2: '',
-    rightP: ''
-  }, {
-    name: 'dresses',
-    img: '',
-    leftH2: '',
-    leftP: '',
-    rightH2: '',
-    rightP: ''
-  }, {
-    name: 'tops',
-    img: '',
-    leftH2: '',
-    leftP: '',
-    rightH2: '',
-    rightP: ''
-  }]
+  }
+  // {
+  //   name: 'pajamas',
+  //   img: '',
+  //   leftH2: '',
+  //   leftP: '',
+  //   rightH2: '',
+  //   rightP: '',
+  // },
+  // {
+  //   name: 'dresses',
+  //   img: '',
+  //   leftH2: '',
+  //   leftP: '',
+  //   rightH2: '',
+  //   rightP: '',
+  // },
+  // {
+  //   name: 'tops',
+  //   img: '',
+  //   leftH2: '',
+  //   leftP: '',
+  //   rightH2: '',
+  //   rightP: '',
+  // }
+  ]
 }, /*-----------------------------------------------------------------------------------------*/
 {
   dept: 'men',
@@ -1154,7 +1250,6 @@ module.exports = [{
     rightP: ''
   }]
 }];
-
 
 },{}],14:[function(require,module,exports){
 "use strict";
@@ -1213,7 +1308,6 @@ module.exports = function () {
   changeOrder();
 };
 
-
 },{"./add-data-dept.js":1,"./change-background-image.js":2,"./change-cat.js":3,"./change-first-row-table.js":4,"./change-measuring-tips-copy.js":5,"./change-order.js":6,"./change-shoe-brand.js":7,"./make-shoe-brands.js":8,"./make-table-header.js":9,"./make-table.js":10,"./make-td.js":11,"./measuring-tips-css.js":12,"./measuring-tips.js":13,"./output-table.js":15,"./set-dept-cat-by-url.js":16,"./set-dept-cat.js":17,"./shoe-brands.js":18,"./tips-css.js":19}],15:[function(require,module,exports){
 "use strict";
 
@@ -1256,7 +1350,6 @@ module.exports = function (i, val, rows) {
   });
 };
 
-
 },{"./make-td.js":11}],16:[function(require,module,exports){
 "use strict";
 
@@ -1296,7 +1389,6 @@ module.exports = function (urlpara, elem1, elem2) {
   }
 };
 
-
 },{}],17:[function(require,module,exports){
 "use strict";
 
@@ -1316,7 +1408,6 @@ module.exports = function (elem1, elem2) {
 
   return Val;
 };
-
 
 },{}],18:[function(require,module,exports){
 "use strict";
@@ -1367,7 +1458,6 @@ module.exports = [{
   brand: 'cienta',
   url: 'https://cientausa.com/'
 }];
-
 
 },{}],19:[function(require,module,exports){
 "use strict";
@@ -1420,6 +1510,5 @@ module.exports = function () {
   //   $('.size-chart-container').find($('.tips')).removeAttr('style');
   // }
 };
-
 
 },{"./set-dept-cat.js":17}]},{},[14]);

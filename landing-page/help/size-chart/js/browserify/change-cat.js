@@ -33,5 +33,4 @@ module.exports = function (sizeChartArr) {
   });
 };
 
-
 },{}]},{},[1]);
