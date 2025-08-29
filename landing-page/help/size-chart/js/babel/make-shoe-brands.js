@@ -1,6 +1,5 @@
 "use strict";
 
-// var deptCat = require('./set-dept-cat.js');
 var brandChange = require('./change-shoe-brand.js');
 var sizeChartArr = require('./measuring-tips.js');
 var shoeBrands = require('./shoe-brands.js');
@@ -9,9 +8,6 @@ module.exports = function () {
 
   //? remove .brands
   $('.brands, .brands-dropdown').remove();
-
-  // var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  // var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
   var dept = $('.size-chart-container select.department').val();
   var cat = $('.size-chart-container select.category').val();
 
@@ -61,12 +57,6 @@ module.exports = function () {
     //? add to page
     $('.size-chart-table').append(brandsContainer);
     $('.size-chart-table').append(brandsDropdown);
-
-    //? because of onload append shoe size chart to .size-chart-table
-    setTimeout(function () {
-      $('.size-chart-table').append($('.brands'));
-      $('.size-chart-table').append($('.brands-dropdown'));
-    }, 1500);
 
     //? on .brand change
     brandChange();

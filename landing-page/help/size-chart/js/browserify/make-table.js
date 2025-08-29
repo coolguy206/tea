@@ -1,6 +1,123 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+module.exports = function (dept, cat) {
+  //? function to return cat if dept is baby
+
+  //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
+  if (dept == "baby girl") {
+    if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  } else if (dept == "baby boy") {
+    if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  }
+  return cat;
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to build the newborn tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
+  var nbCatArr = cat.split(',');
+  $.each(nbCatArr, function (j, str) {
+    if (str == " Booties" || str == " Bibs") {
+      nbCatArr[j] = "all categories, accessories";
+    } else if (str == " hats") {
+      nbCatArr[j] = "all categories, hats";
+    }
+  });
+
+  //? remove duplicates
+  var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
+  // console.log(uniqueNbCatArr);
+
+  //? find the matching sheetDepts for newborn
+  if (sheetDept == dept) {
+    //? loop through uniqueNbCatArr and find matching data and output
+    $.each(uniqueNbCatArr, function (j, nb) {
+      if (nb == sheetCatArr) {
+        var rows;
+
+        //? change the headers for the newborn tables
+        if (nb == "all categories, accessories") {
+          nb = "Booties & Bibs";
+        } else if (nb == "all categories, hats") {
+          nb = "hats";
+        }
+
+        //? THIS MAKES THE MULTIPLE TABLES and table headers
+        rows = makeTableHeader(i, val, dept, nb);
+
+        //? output the tables and contents
+        outputTable(i, val, rows);
+
+        //? stop the function
+        return false;
+      }
+    });
+  }
+};
+
+},{"./make-table-header.js":4,"./output-table.js":7}],3:[function(require,module,exports){
+"use strict";
+
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to make the shoes + accessories tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array
+  var catArr = cat.split(',');
+
+  //? loop through the array and check if any of the values match
+  $.each(catArr, function (k, c) {
+    // console.log(k,c);
+
+    //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
+    var shoesAccess = sheetCatArr.split(',')[1];
+
+    //? skip shoe + accessories but match the rest eg: socks & hats
+    if (c !== 'shoes + accessories' && shoesAccess == c) {
+      // console.log('match found');
+      // console.log(shoesAccess, c);
+
+      var rows;
+
+      //? THIS MAKES THE MULTIPLE TABLES and table headers
+      rows = makeTableHeader(i, val, dept, c);
+
+      //? output the table contents
+      outputTable(i, val, rows);
+
+      //? stop the function
+      return false;
+    }
+  });
+};
+
+},{"./make-table-header.js":4,"./output-table.js":7}],4:[function(require,module,exports){
+"use strict";
+
 var makeTd = require('./make-td.js');
 module.exports = function (i, val, dept, subcat) {
   //? function to make table header because of shoes + accessories have multiple tables
@@ -24,17 +141,14 @@ module.exports = function (i, val, dept, subcat) {
   return rows;
 };
 
-},{"./make-td.js":3}],2:[function(require,module,exports){
+},{"./make-td.js":6}],5:[function(require,module,exports){
 "use strict";
 
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 var makeTableHeader = require('./make-table-header.js');
 var outputTable = require('./output-table.js');
+var checkIfBaby = require('./check-if-baby.js');
+var makeNewborn = require('./make-newborn.js');
+var makeShoeAccessories = require('./make-shoe-accessories.js');
 module.exports = function () {
   //? function to create the tables
   //? show .the-table
@@ -83,102 +197,17 @@ module.exports = function () {
     }
 
     //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
-    if (dept == "baby girl") {
-      if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
-        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
-      }
-    } else if (dept == "baby boy") {
-      if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
-        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
-      }
-    }
+    cat = checkIfBaby(dept, cat);
 
     //? if newborn show all the categories and tables
     if (dept == "newborn") {
-      //? hide the top table
-      $('.size-chart-table .the-table').hide();
-
-      //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
-      var nbCatArr = cat.split(',');
-      $.each(nbCatArr, function (j, str) {
-        if (str == " Booties" || str == " Bibs") {
-          nbCatArr[j] = "all categories, accessories";
-        } else if (str == " hats") {
-          nbCatArr[j] = "all categories, hats";
-        }
-      });
-
-      //? remove duplicates
-      var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
-      // console.log(uniqueNbCatArr);
-
-      //? find the matching sheetDepts for newborn
-      if (sheetDept == dept) {
-        //? loop through uniqueNbCatArr and find matching data and output
-        $.each(uniqueNbCatArr, function (j, nb) {
-          if (nb == sheetCatArr) {
-            var rows;
-
-            //? change the headers for the newborn tables
-            if (nb == "all categories, accessories") {
-              nb = "Booties & Bibs";
-            } else if (nb == "all categories, hats") {
-              nb = "hats";
-            }
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, nb);
-
-            //? output the tables and contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
-      }
+      makeNewborn(cat, sheetDept, dept, sheetCatArr, val, i);
     } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
       //? all other departments NOT newborn
 
       //? if category is shoes + accessories
       if (cat.indexOf('shoes + accessories') !== -1) {
-        //? hide the top table
-        $('.size-chart-table .the-table').hide();
-
-        //? split the selected categories into an array
-        var catArr = cat.split(',');
-
-        //? loop through the array and check if any of the values match
-        $.each(catArr, function (k, c) {
-          // console.log(k,c);
-
-          //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
-          var shoesAccess = sheetCatArr.split(',')[1];
-
-          //? skip shoe + accessories but match the rest eg: socks & hats
-          if (c !== 'shoes + accessories' && shoesAccess == c) {
-            // console.log('match found');
-            // console.log(shoesAccess, c);
-
-            var rows;
-            // var colspan;
-
-            // rows = val.merges[0].endColumnIndex - 1;
-            // colspan = val.merges[0].endColumnIndex;
-
-            //? add colspan to .size-chart-header
-            $('.size-chart-header th').attr('colspan', colspan);
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, c);
-
-            //? output the table contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
+        makeShoeAccessories(cat, sheetDept, dept, sheetCatArr, val, i);
       } else if (cat.indexOf(sheetCatArr) !== -1) {
         //? all other categories that are not shoes + accessories and only have 1 table
         // console.log(i,val);
@@ -203,7 +232,7 @@ module.exports = function () {
   });
 };
 
-},{"./make-table-header.js":1,"./output-table.js":4}],3:[function(require,module,exports){
+},{"./check-if-baby.js":1,"./make-newborn.js":2,"./make-shoe-accessories.js":3,"./make-table-header.js":4,"./output-table.js":7}],6:[function(require,module,exports){
 "use strict";
 
 module.exports = function (k, row, rows, tableElem) {
@@ -313,41 +342,40 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-},{}],4:[function(require,module,exports){
+},{}],7:[function(require,module,exports){
 "use strict";
 
 var makeTd = require('./make-td.js');
 module.exports = function (i, val, rows) {
-  //function to output the table contents
+  //? function to output the table contents
 
-  //output the table
+  //? output the table
   $.each(val.data[0].rowData, function (k, row) {
-    //add the row <tr>
+    //? add the row <tr>
     if (k > 2) {
       var tableLength = $('.size-chart-table table').length;
       // console.log(tableLength);
 
-      //check if the number of rows is even or odd then add class
+      //? check if the number of rows is even or odd then add class
       var tableNum = val.data[0].rowData.length - 4;
 
-      //if only one table (not shoes + accessories)
+      //? if only one table (not shoes + accessories)
       if (tableLength == 1) {
         $('.size-chart-container .the-table').append('<tr data-num="' + k + '"></tr>');
 
-        //add the data <td>
+        //? add the data <td>
         makeTd(k, row, rows, '.size-chart-container .the-table');
-      }
-      //if multiple tables (shoes + accessories)
-      else if (tableLength > 1) {
+      } else if (tableLength > 1) {
+        //? if multiple tables (shoes + accessories)
         // console.log(row.values[0].formattedValue);
 
-        //only make a row if the 1st td of the row has data
+        //? only make a row if the 1st td of the row has data
         if (row.values[0].formattedValue !== undefined) {
           $('.size-chart-table table[data-num="' + i + '"]').append('<tr data-num="' + k + '"></tr>');
 
           // console.log('more then one table\n this is the index\n' + i);
 
-          //add the data <td>
+          //? add the data <td>
           makeTd(k, row, rows, '.size-chart-table table[data-num="' + i + '"]');
         }
       }
@@ -355,4 +383,4 @@ module.exports = function (i, val, rows) {
   });
 };
 
-},{"./make-td.js":3}]},{},[2]);
+},{"./make-td.js":6}]},{},[5]);

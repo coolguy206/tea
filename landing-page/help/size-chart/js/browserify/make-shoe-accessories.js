@@ -1,6 +1,72 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to make the shoes + accessories tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array
+  var catArr = cat.split(',');
+
+  //? loop through the array and check if any of the values match
+  $.each(catArr, function (k, c) {
+    // console.log(k,c);
+
+    //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
+    var shoesAccess = sheetCatArr.split(',')[1];
+
+    //? skip shoe + accessories but match the rest eg: socks & hats
+    if (c !== 'shoes + accessories' && shoesAccess == c) {
+      // console.log('match found');
+      // console.log(shoesAccess, c);
+
+      var rows;
+
+      //? THIS MAKES THE MULTIPLE TABLES and table headers
+      rows = makeTableHeader(i, val, dept, c);
+
+      //? output the table contents
+      outputTable(i, val, rows);
+
+      //? stop the function
+      return false;
+    }
+  });
+};
+
+},{"./make-table-header.js":2,"./output-table.js":4}],2:[function(require,module,exports){
+"use strict";
+
+var makeTd = require('./make-td.js');
+module.exports = function (i, val, dept, subcat) {
+  //? function to make table header because of shoes + accessories have multiple tables
+
+  //? add new table
+  $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
+  // console.log('rows: ', val);
+
+  rows = val.merges[0].endColumnIndex - 1;
+
+  //? if newborn change the colspan to 7 if all categories otherwise use the endColumnIndex
+  if (subcat == "all categories" && dept == "newborn") {
+    colspan = 7;
+  } else {
+    colspan = val.merges[0].endColumnIndex;
+  }
+  // console.log(colspan);
+
+  //? add colspan to .size-chart-header
+  $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
+  return rows;
+};
+
+},{"./make-td.js":3}],3:[function(require,module,exports){
+"use strict";
+
 module.exports = function (k, row, rows, tableElem) {
   //? function to make the <td>
 
@@ -108,7 +174,7 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-},{}],2:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 var makeTd = require('./make-td.js');
@@ -149,4 +215,4 @@ module.exports = function (i, val, rows) {
   });
 };
 
-},{"./make-td.js":1}]},{},[2]);
+},{"./make-td.js":3}]},{},[1]);

@@ -3,9 +3,10 @@ const changeRow = require('./change-first-row-table.js');
 const makeBrands = require('./make-shoe-brands.js');
 const makeTable = require('./make-table.js');
 
+//? function to execute and remake the tables
 module.exports = function () {
 
-    //? change <th> of the .size-chart-table table
+    //? add the table header
     changeRow();
 
     //? make the table

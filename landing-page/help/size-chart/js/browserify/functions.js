@@ -21,12 +21,8 @@ module.exports = function (sizeChartArr) {
 },{}],2:[function(require,module,exports){
 "use strict";
 
-// var deptCat = require('./set-dept-cat.js');
 //? function to change the 1st row of the size chart table
 module.exports = function () {
-  // var d = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  // var c = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
-
   var d = $('.size-chart-container select.department').val();
   var c = $('.size-chart-container select.category').val();
   var str;
@@ -77,12 +73,33 @@ module.exports = function () {
 },{}],4:[function(require,module,exports){
 "use strict";
 
+module.exports = function (dept, cat) {
+  //? function to return cat if dept is baby
+
+  //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
+  if (dept == "baby girl") {
+    if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  } else if (dept == "baby boy") {
+    if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  }
+  return cat;
+};
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
 var changeRow = require('./change-first-row-table.js');
 // const changeOrder = require('./change-order.js');
 var makeBrands = require('./make-shoe-brands.js');
 var makeTable = require('./make-table.js');
+
+//? function to execute and remake the tables
 module.exports = function () {
-  //? change <th> of the .size-chart-table table
+  //? add the table header
   changeRow();
 
   //? make the table
@@ -95,21 +112,14 @@ module.exports = function () {
   // changeOrder();
 };
 
-},{"./change-first-row-table.js":2,"./make-shoe-brands.js":6,"./make-table.js":8}],5:[function(require,module,exports){
+},{"./change-first-row-table.js":2,"./make-shoe-brands.js":9,"./make-table.js":11}],6:[function(require,module,exports){
 "use strict";
 
 var shoeBrands = require('./shoe-brands.js');
 var sizeChartArr = require('./measuring-tips.js');
-// const deptCat = require('./set-dept-cat.js');
 var changeCats = require('./change-cat.js');
-// const changeBackground = require('./change-background-image.js');
-// const adjustMeasureCSS = require('./measuring-tips-css.js');
-// const adjustTipsCSS = require('./tips-css.js');
-// const addDataAttr = require('./add-data-dept.js');
 var changeRow = require('./change-first-row-table.js');
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-// const changeCopy = require('./change-measuring-tips-copy.js');
-// const changeOrder = require('./change-order.js');
 var brandChange = require('./change-shoe-brand.js');
 var makeBrands = require('./make-shoe-brands.js');
 var makeTd = require('./make-td.js');
@@ -135,7 +145,7 @@ $(document).ready(function () {
 
     //? convert cats to string
     var theCats = cats.join();
-    //add data attribute to page
+    //? add data attribute to page
     $('#sizeChartArr').attr('data-' + dept, theCats);
   });
 
@@ -164,212 +174,18 @@ $(document).ready(function () {
 
     //? change the cats dropdown
     changeCats(sizeChartArr);
+
+    //? remake the tables
     execute();
-
-    //? change the background image
-    // changeBackground(sizeChartArr);
-
-    //? change the copy
-    // changeCopy(sizeChartArr);
-
-    //? if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-    // adjustMeasureCSS();
-
-    //? if baby boy or baby girl adjust css on .tips
-    // adjustTipsCSS();
-
-    //? add class to .tips
-    // addDataAttr();
-
-    //? change <th> of the .size-chart-table table
-    // changeRow();
-
-    //? make the table
-    // makeTable();
-
-    //? if shoes + accessories or sweaters + outerwear add the brands drop down
-    // makeBrands();
   });
 
   /*-----------------------------------------------------------------------------------------*/
 
   //? on .category change
   $('.size-chart-container select.category').change(function () {
+    //? remake the tables
     execute();
-
-    //? change the background image
-    // changeBackground(sizeChartArr);
-
-    //? change the copy
-    // changeCopy(sizeChartArr);
-
-    //? if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-    // adjustMeasureCSS();
-
-    //? if baby boy or baby girl adjust css on .tips
-    // adjustTipsCSS();
-
-    //? change <th> of the .size-chart-table table
-    // changeRow();
-
-    //? make the table
-    // makeTable();
-
-    //? if shoes + accessories or sweaters + outerwear add the brands drop down
-    // makeBrands();
-
-    //? re-order the tables if shoes + accessories
-    // changeOrder();
   });
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? desktop dropdown to expand and collapse
-  /*
-  $('ul.department, ul.category').click(function() {
-    //check if has style attr remove it
-    if ($(this).attr('style') !== undefined) {
-      $(this).removeAttr('style');
-    }
-    // if doesn't have style attr add css to expand
-    else {
-      $(this).css('height', 'auto');
-      $(this).find('li.selected').text('please select');
-    }
-  });
-  */
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? desktop dropdown to select new department
-  /*
-  $('ul.department li').click(function() {
-      if ($(this).attr('class') !== 'selected') {
-      //get the clicked li text
-      var txt = $(this).text();
-      //change the text of .selected
-      $('ul.department .selected').text(txt);
-        //remove all the li in ul.category
-      $('ul.category li').remove();
-        //change the cats dropdown
-      changeCats(sizeChartArr);
-        //prepend <li class="selected">cat</li> to ul.category
-      var s = $('ul.category li:first-of-type').text();
-      $('ul.category').prepend('<li class="selected">' + s + '</li>');
-        //change the background image
-      changeBackground(sizeChartArr);
-        //change the copy
-      changeCopy(sizeChartArr);
-        //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-      adjustMeasureCSS();
-        //if baby boy or baby girl adjust css on .tips
-      adjustTipsCSS();
-        //add class to .tips
-      addDataAttr();
-        //change <th> of the .size-chart-table table
-      changeRow();
-        //make the table
-      makeTable();
-        //if shoes + accessories or sweaters + outerwear add the brands drop down
-      makeBrands();
-        //if user changes the ul.category
-      catLiChange();
-    }
-    });
-  */
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? function for desktop dropdown to select new category
-  /*
-  var catLiChange = function() {
-    $('ul.category li').click(function() {
-        if ($(this).attr('class') !== 'selected') {
-        //get the clicked li text
-        var txt = $(this).text();
-        //change the text of .selected
-        $('ul.category .selected').text(txt);
-          //change the background image
-        changeBackground(sizeChartArr);
-          //change the copy
-        changeCopy(sizeChartArr);
-          //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-        adjustMeasureCSS();
-          //if baby boy or baby girl adjust css on .tips
-        adjustTipsCSS();
-          //add class to .tips
-        addDataAttr();
-          //change <th> of the .size-chart-table table
-        changeRow();
-          //make the table
-        makeTable();
-          //if shoes + accessories or sweaters + outerwear add the brands drop down
-        makeBrands();
-          //re-order the tables if shoes + accessories
-        changeOrder();
-        }
-      });
-  };
-    //onpage load call this
-  catLiChange();
-  */
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? on click .tips
-  /*
-  $('.size-chart-container').find($('.tips')).click(function (e) {
-    e.preventDefault();
-      //get the data-dept
-    var dept = $(this).attr('data-dept');
-      //hide h1
-    $('.size-chart-container h1').hide();
-      //add the content to .measure-take-over
-    $.each(sizeChartArr, function (i, val) {
-      if (dept == val.dept) {
-        //add the image
-        //desktop
-        if ($(window).width() > 737) {
-          $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + val.measure.img);
-        }
-        //mobile
-        else if ($(window).width() < 737) {
-          var imgSrc = val.measure.img;
-            imgSrc = imgSrc.split('.');
-          imgSrc = imgSrc[0] + '-m.' + imgSrc[1];
-            $('.measure-content img').attr('src', 'https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/' + imgSrc);
-        }
-          //add the chest text
-        $('.measure-content .text .chest p').html(val.measure.chest);
-        //add the hips text
-        $('.measure-content .text .hips p').html(val.measure.hips);
-        //add the waist text
-        $('.measure-content .text .waist p').html(val.measure.waist);
-      }
-    });
-      //hide the other elements
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').hide();
-      //show .measure-take-over
-    $('.measure-take-over').show();
-  });
-  */
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? collapse ul.department & ul.category when click on .measure-tips
-  /*
-  $('.measure-tips').click(function () {
-    var dept = $('ul.department')
-    var cat = $('ul.category')
-      var arr = [dept, cat];
-      $.each(arr, function (i, val) {
-      var attribute = $(val).attr('style');
-      if (attribute !== undefined) {
-        $(val).removeAttr('style');
-      }
-    });
-  });
-  */
 
   /*-----------------------------------------------------------------------------------------*/
 
@@ -377,23 +193,6 @@ $(document).ready(function () {
   $('.brands h2').click(function () {
     $('ul.brand').removeAttr('style');
   });
-
-  /*-----------------------------------------------------------------------------------------*/
-
-  //? close the .measure-take-over
-  /*
-  $('.measure-take-over .measure, .measure-take-over .return').click(function () {
-    //show h1
-    $('.size-chart-container h1').show();
-    //hide .measure-take-over
-    $('.measure-take-over').hide();
-    //show the other elements
-    $('.size-chart-container .dropdowns, .size-chart-container .measure-tips, .size-chart-container .size-chart-table').show();
-    //reset the .measure-content
-    $('.measure-content img').attr('src', '');
-    $('.measure-content .text .chest p, .measure-content .text .hips p, .measure-content .text .waist p').html('');
-  });
-  */
 
   /*-----------------------------------------------------------------------------------------*/
 
@@ -439,10 +238,107 @@ $(document).ready(function () {
   }
 });
 
-},{"./change-cat.js":1,"./change-first-row-table.js":2,"./change-shoe-brand.js":3,"./execute.js":4,"./make-shoe-brands.js":6,"./make-table-header.js":7,"./make-table.js":8,"./make-td.js":9,"./measuring-tips.js":10,"./onload.js":11,"./output-table.js":12,"./set-dept-cat-by-url.js":13,"./shoe-brands.js":14}],6:[function(require,module,exports){
+},{"./change-cat.js":1,"./change-first-row-table.js":2,"./change-shoe-brand.js":3,"./execute.js":5,"./make-shoe-brands.js":9,"./make-table-header.js":10,"./make-table.js":11,"./make-td.js":12,"./measuring-tips.js":13,"./onload.js":14,"./output-table.js":15,"./set-dept-cat-by-url.js":16,"./shoe-brands.js":17}],7:[function(require,module,exports){
 "use strict";
 
-// var deptCat = require('./set-dept-cat.js');
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to build the newborn tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
+  var nbCatArr = cat.split(',');
+  $.each(nbCatArr, function (j, str) {
+    if (str == " Booties" || str == " Bibs") {
+      nbCatArr[j] = "all categories, accessories";
+    } else if (str == " hats") {
+      nbCatArr[j] = "all categories, hats";
+    }
+  });
+
+  //? remove duplicates
+  var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
+  // console.log(uniqueNbCatArr);
+
+  //? find the matching sheetDepts for newborn
+  if (sheetDept == dept) {
+    //? loop through uniqueNbCatArr and find matching data and output
+    $.each(uniqueNbCatArr, function (j, nb) {
+      if (nb == sheetCatArr) {
+        var rows;
+
+        //? change the headers for the newborn tables
+        if (nb == "all categories, accessories") {
+          nb = "Booties & Bibs";
+        } else if (nb == "all categories, hats") {
+          nb = "hats";
+        }
+
+        //? THIS MAKES THE MULTIPLE TABLES and table headers
+        rows = makeTableHeader(i, val, dept, nb);
+
+        //? output the tables and contents
+        outputTable(i, val, rows);
+
+        //? stop the function
+        return false;
+      }
+    });
+  }
+};
+
+},{"./make-table-header.js":10,"./output-table.js":15}],8:[function(require,module,exports){
+"use strict";
+
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to make the shoes + accessories tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array
+  var catArr = cat.split(',');
+
+  //? loop through the array and check if any of the values match
+  $.each(catArr, function (k, c) {
+    // console.log(k,c);
+
+    //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
+    var shoesAccess = sheetCatArr.split(',')[1];
+
+    //? skip shoe + accessories but match the rest eg: socks & hats
+    if (c !== 'shoes + accessories' && shoesAccess == c) {
+      // console.log('match found');
+      // console.log(shoesAccess, c);
+
+      var rows;
+
+      //? THIS MAKES THE MULTIPLE TABLES and table headers
+      rows = makeTableHeader(i, val, dept, c);
+
+      //? output the table contents
+      outputTable(i, val, rows);
+
+      //? stop the function
+      return false;
+    }
+  });
+};
+
+},{"./make-table-header.js":10,"./output-table.js":15}],9:[function(require,module,exports){
+"use strict";
+
 var brandChange = require('./change-shoe-brand.js');
 var sizeChartArr = require('./measuring-tips.js');
 var shoeBrands = require('./shoe-brands.js');
@@ -451,9 +347,6 @@ module.exports = function () {
 
   //? remove .brands
   $('.brands, .brands-dropdown').remove();
-
-  // var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  // var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
   var dept = $('.size-chart-container select.department').val();
   var cat = $('.size-chart-container select.category').val();
 
@@ -504,18 +397,12 @@ module.exports = function () {
     $('.size-chart-table').append(brandsContainer);
     $('.size-chart-table').append(brandsDropdown);
 
-    //? because of onload append shoe size chart to .size-chart-table
-    setTimeout(function () {
-      $('.size-chart-table').append($('.brands'));
-      $('.size-chart-table').append($('.brands-dropdown'));
-    }, 1500);
-
     //? on .brand change
     brandChange();
   }
 };
 
-},{"./change-shoe-brand.js":3,"./measuring-tips.js":10,"./shoe-brands.js":14}],7:[function(require,module,exports){
+},{"./change-shoe-brand.js":3,"./measuring-tips.js":13,"./shoe-brands.js":17}],10:[function(require,module,exports){
 "use strict";
 
 var makeTd = require('./make-td.js');
@@ -541,17 +428,14 @@ module.exports = function (i, val, dept, subcat) {
   return rows;
 };
 
-},{"./make-td.js":9}],8:[function(require,module,exports){
+},{"./make-td.js":12}],11:[function(require,module,exports){
 "use strict";
 
-function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
-function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
-function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 var makeTableHeader = require('./make-table-header.js');
 var outputTable = require('./output-table.js');
+var checkIfBaby = require('./check-if-baby.js');
+var makeNewborn = require('./make-newborn.js');
+var makeShoeAccessories = require('./make-shoe-accessories.js');
 module.exports = function () {
   //? function to create the tables
   //? show .the-table
@@ -600,102 +484,17 @@ module.exports = function () {
     }
 
     //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
-    if (dept == "baby girl") {
-      if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
-        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
-      }
-    } else if (dept == "baby boy") {
-      if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
-        cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
-      }
-    }
+    cat = checkIfBaby(dept, cat);
 
     //? if newborn show all the categories and tables
     if (dept == "newborn") {
-      //? hide the top table
-      $('.size-chart-table .the-table').hide();
-
-      //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
-      var nbCatArr = cat.split(',');
-      $.each(nbCatArr, function (j, str) {
-        if (str == " Booties" || str == " Bibs") {
-          nbCatArr[j] = "all categories, accessories";
-        } else if (str == " hats") {
-          nbCatArr[j] = "all categories, hats";
-        }
-      });
-
-      //? remove duplicates
-      var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
-      // console.log(uniqueNbCatArr);
-
-      //? find the matching sheetDepts for newborn
-      if (sheetDept == dept) {
-        //? loop through uniqueNbCatArr and find matching data and output
-        $.each(uniqueNbCatArr, function (j, nb) {
-          if (nb == sheetCatArr) {
-            var rows;
-
-            //? change the headers for the newborn tables
-            if (nb == "all categories, accessories") {
-              nb = "Booties & Bibs";
-            } else if (nb == "all categories, hats") {
-              nb = "hats";
-            }
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, nb);
-
-            //? output the tables and contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
-      }
+      makeNewborn(cat, sheetDept, dept, sheetCatArr, val, i);
     } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
       //? all other departments NOT newborn
 
       //? if category is shoes + accessories
       if (cat.indexOf('shoes + accessories') !== -1) {
-        //? hide the top table
-        $('.size-chart-table .the-table').hide();
-
-        //? split the selected categories into an array
-        var catArr = cat.split(',');
-
-        //? loop through the array and check if any of the values match
-        $.each(catArr, function (k, c) {
-          // console.log(k,c);
-
-          //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
-          var shoesAccess = sheetCatArr.split(',')[1];
-
-          //? skip shoe + accessories but match the rest eg: socks & hats
-          if (c !== 'shoes + accessories' && shoesAccess == c) {
-            // console.log('match found');
-            // console.log(shoesAccess, c);
-
-            var rows;
-            // var colspan;
-
-            // rows = val.merges[0].endColumnIndex - 1;
-            // colspan = val.merges[0].endColumnIndex;
-
-            //? add colspan to .size-chart-header
-            $('.size-chart-header th').attr('colspan', colspan);
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, c);
-
-            //? output the table contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
+        makeShoeAccessories(cat, sheetDept, dept, sheetCatArr, val, i);
       } else if (cat.indexOf(sheetCatArr) !== -1) {
         //? all other categories that are not shoes + accessories and only have 1 table
         // console.log(i,val);
@@ -720,7 +519,7 @@ module.exports = function () {
   });
 };
 
-},{"./make-table-header.js":7,"./output-table.js":12}],9:[function(require,module,exports){
+},{"./check-if-baby.js":4,"./make-newborn.js":7,"./make-shoe-accessories.js":8,"./make-table-header.js":10,"./output-table.js":15}],12:[function(require,module,exports){
 "use strict";
 
 module.exports = function (k, row, rows, tableElem) {
@@ -830,7 +629,7 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-},{}],10:[function(require,module,exports){
+},{}],13:[function(require,module,exports){
 "use strict";
 
 module.exports = [{
@@ -1209,28 +1008,14 @@ module.exports = [{
   }]
 }];
 
-},{}],11:[function(require,module,exports){
+},{}],14:[function(require,module,exports){
 "use strict";
 
-// const shoeBrands = require('./shoe-brands.js');
 var sizeChartArr = require('./measuring-tips.js');
-// const deptCat = require('./set-dept-cat.js');
 var changeCats = require('./change-cat.js');
-// const changeBackground = require('./change-background-image.js');
-// const adjustMeasureCSS = require('./measuring-tips-css.js');
-// const adjustTipsCSS = require('./tips-css.js');
-// const addDataAttr = require('./add-data-dept.js');
-// const changeRow = require('./change-first-row-table.js');
+var changeRow = require('./change-first-row-table.js');
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-// const changeCopy = require('./change-measuring-tips-copy.js');
-// const changeOrder = require('./change-order.js');
-// const brandChange = require('./change-shoe-brand.js');
-// const makeBrands = require('./make-shoe-brands.js');
-// const makeTd = require('./make-td.js');
-// const outputTable = require('./output-table.js');
-// const makeTableHeader = require('./make-table-header.js');
-// const makeTable = require('./make-table.js');
-
+var makeBrands = require('./make-shoe-brands.js');
 module.exports = function () {
   //? onload get select Dept Cat based on url params
   var urlDept = selectDeptCat('selectedDept', '.size-chart-container select.department');
@@ -1238,7 +1023,7 @@ module.exports = function () {
   //? this changes the dept although if there are no url params then it will return undefined so we add the default value of girl
   // console.log('onload.js')
   // console.log(urlDept);
-  if (urlDept == undefined) {
+  if (urlDept === undefined || urlDept === null) {
     urlDept = 'girl';
   }
   //?  set the dept dropdown
@@ -1254,7 +1039,7 @@ module.exports = function () {
   //? this changes the cat although if there are no url params then it will return undefined so we add the default value of tops,dresses,bottoms
   // console.log('onload.js')
   // console.log(urlCat);
-  if (urlCat == undefined) {
+  if (urlCat === undefined || urlCat === null) {
     urlCat = "tops,dresses,bottoms";
   }
 
@@ -1333,69 +1118,47 @@ module.exports = function () {
     $('.size-chart-container select.category').val(urlCat);
   }
 
-  //onload change the background image
-  // changeBackground(sizeChartArr);
-
-  //onload change the copy
-  // changeCopy(sizeChartArr);
-
-  //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-  // adjustMeasureCSS();
-
-  //if baby boy or baby girl adjust css on .tips
-  // adjustTipsCSS();
-
-  //add class to .tips
-  // addDataAttr();
-
-  //? change <th> of the .size-chart-table table
-  // changeRow();
-
-  //? make the table
-  // makeTable();
+  //? add the table header 
+  changeRow();
 
   //? if shoes + accessories or sweaters + outerwear add the brands drop down
-  // makeBrands();
-
-  //re-order the tables if shoes + accessories
-  // changeOrder();
+  makeBrands();
 };
 
-},{"./change-cat.js":1,"./measuring-tips.js":10,"./set-dept-cat-by-url.js":13}],12:[function(require,module,exports){
+},{"./change-cat.js":1,"./change-first-row-table.js":2,"./make-shoe-brands.js":9,"./measuring-tips.js":13,"./set-dept-cat-by-url.js":16}],15:[function(require,module,exports){
 "use strict";
 
 var makeTd = require('./make-td.js');
 module.exports = function (i, val, rows) {
-  //function to output the table contents
+  //? function to output the table contents
 
-  //output the table
+  //? output the table
   $.each(val.data[0].rowData, function (k, row) {
-    //add the row <tr>
+    //? add the row <tr>
     if (k > 2) {
       var tableLength = $('.size-chart-table table').length;
       // console.log(tableLength);
 
-      //check if the number of rows is even or odd then add class
+      //? check if the number of rows is even or odd then add class
       var tableNum = val.data[0].rowData.length - 4;
 
-      //if only one table (not shoes + accessories)
+      //? if only one table (not shoes + accessories)
       if (tableLength == 1) {
         $('.size-chart-container .the-table').append('<tr data-num="' + k + '"></tr>');
 
-        //add the data <td>
+        //? add the data <td>
         makeTd(k, row, rows, '.size-chart-container .the-table');
-      }
-      //if multiple tables (shoes + accessories)
-      else if (tableLength > 1) {
+      } else if (tableLength > 1) {
+        //? if multiple tables (shoes + accessories)
         // console.log(row.values[0].formattedValue);
 
-        //only make a row if the 1st td of the row has data
+        //? only make a row if the 1st td of the row has data
         if (row.values[0].formattedValue !== undefined) {
           $('.size-chart-table table[data-num="' + i + '"]').append('<tr data-num="' + k + '"></tr>');
 
           // console.log('more then one table\n this is the index\n' + i);
 
-          //add the data <td>
+          //? add the data <td>
           makeTd(k, row, rows, '.size-chart-table table[data-num="' + i + '"]');
         }
       }
@@ -1403,54 +1166,48 @@ module.exports = function (i, val, rows) {
   });
 };
 
-},{"./make-td.js":9}],13:[function(require,module,exports){
+},{"./make-td.js":12}],16:[function(require,module,exports){
 "use strict";
 
-function _createForOfIteratorHelper(r, e) { var t = "undefined" != typeof Symbol && r[Symbol.iterator] || r["@@iterator"]; if (!t) { if (Array.isArray(r) || (t = _unsupportedIterableToArray(r)) || e && r && "number" == typeof r.length) { t && (r = t); var _n = 0, F = function F() {}; return { s: F, n: function n() { return _n >= r.length ? { done: !0 } : { done: !1, value: r[_n++] }; }, e: function e(r) { throw r; }, f: F }; } throw new TypeError("Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); } var o, a = !0, u = !1; return { s: function s() { t = t.call(r); }, n: function n() { var r = t.next(); return a = r.done, r; }, e: function e(r) { u = !0, o = r; }, f: function f() { try { a || null == t["return"] || t["return"](); } finally { if (u) throw o; } } }; }
-function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
-function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
 module.exports = function (urlpara, elem1) {
   //? function to select the department & category based  url params
 
+  //? Check if the URL has parameters
+  var searchParams = new URLSearchParams(window.location.search);
+
+  //? Retrieve the value of the specified parameter
+  var paramValue = searchParams.get(urlpara);
+  if (paramValue !== null) {
+    //? Decode URL-encoded characters
+    return decodeURIComponent(paramValue);
+  }
+  return null; // or handle the case where the parameter isn't present
+
+  /*
   //? onload check if parameters in url for department and category
   var urlParam = window.location.href;
-
-  //? check if parameters if there are then split them into an array
+    //? check if parameters if there are then split them into an array
   if (urlParam.indexOf('?') !== -1) {
-    var paramArr = urlParam.split('?');
-
-    //? split the parameters into an array
+      var paramArr = urlParam.split('?');
+      //? split the parameters into an array
     paramArr = paramArr[1].split('&');
-
-    //? loop through the array to find selectedDept & selectedCat then change the selected values from the dropdown
-    var _iterator = _createForOfIteratorHelper(paramArr),
-      _step;
-    try {
-      for (_iterator.s(); !(_step = _iterator.n()).done;) {
-        var val = _step.value;
+      //? loop through the array to find selectedDept & selectedCat then return the values and stop the loop
+    for (let val of paramArr) {
         var param = val.split('=');
-        //? this finds the selectedDept and selectedCat url parameter
-        console.log(param[0], param[1], urlpara);
+      //? this finds the selectedDept and selectedCat url parameter
+      // console.log(param[0], param[1], urlpara);
         if (param[0] == urlpara) {
           var deptCat = param[1];
-
-          //? if 20% in variable change to ' '
-          deptCat = String(deptCat.replace(/%20/g, ' '));
+        //? if 20% in variable change to ' '
+        deptCat = String(deptCat.replace(/%20/g, ' '));
           return deptCat;
-
-          //?change the value selected from the dropdown
-          // $(elem1).val(deptCat);
         }
       }
-    } catch (err) {
-      _iterator.e(err);
-    } finally {
-      _iterator.f();
     }
-  }
+  */
 };
 
-},{}],14:[function(require,module,exports){
+},{}],17:[function(require,module,exports){
 "use strict";
 
 module.exports = [{
@@ -1500,4 +1257,4 @@ module.exports = [{
   url: 'https://cientausa.com/'
 }];
 
-},{}]},{},[5]);
+},{}]},{},[6]);

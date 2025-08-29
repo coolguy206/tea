@@ -1,5 +1,8 @@
 var makeTableHeader = require('./make-table-header.js');
 var outputTable = require('./output-table.js');
+var checkIfBaby = require('./check-if-baby.js');
+var makeNewborn = require('./make-newborn.js');
+var makeShoeAccessories = require('./make-shoe-accessories.js');
 
 module.exports = function () {
   //? function to create the tables
@@ -49,65 +52,12 @@ module.exports = function () {
     }
 
     //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
-    if (dept == `baby girl`) {
-
-      if (cat == `dresses, tops, bottoms, swim, sweater + outerwear, pajamas`) {
-        cat = `dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas`;
-      }
-    } else if (dept == `baby boy`) {
-
-      if (cat == `tees + shirts, bottoms, swim, sweater + outerwear, pajamas`) {
-        cat = `dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas`;
-      }
-    }
+    cat = checkIfBaby(dept, cat);
 
     //? if newborn show all the categories and tables
     if (dept == `newborn`) {
 
-      //? hide the top table
-      $('.size-chart-table .the-table').hide();
-
-      //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
-      var nbCatArr = cat.split(',');
-      $.each(nbCatArr, function (j, str) {
-        if (str == ` Booties` || str == ` Bibs`) {
-          nbCatArr[j] = `all categories, accessories`;
-        } else if (str == ` hats`) {
-          nbCatArr[j] = `all categories, hats`;
-        }
-      });
-
-      //? remove duplicates
-      var uniqueNbCatArr = [...new Set(nbCatArr)];
-      // console.log(uniqueNbCatArr);
-
-      //? find the matching sheetDepts for newborn
-      if (sheetDept == dept) {
-
-        //? loop through uniqueNbCatArr and find matching data and output
-        $.each(uniqueNbCatArr, function (j, nb) {
-          if (nb == sheetCatArr) {
-            var rows;
-
-            //? change the headers for the newborn tables
-            if (nb == `all categories, accessories`) {
-              nb = `Booties & Bibs`;
-            } else if (nb == `all categories, hats`) {
-              nb = `hats`;
-            }
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, nb);
-
-            //? output the tables and contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
-
-      }
+      makeNewborn(cat, sheetDept, dept, sheetCatArr, val, i);
 
     } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
       //? all other departments NOT newborn
@@ -115,43 +65,7 @@ module.exports = function () {
       //? if category is shoes + accessories
       if (cat.indexOf('shoes + accessories') !== -1) {
 
-        //? hide the top table
-        $('.size-chart-table .the-table').hide();
-
-        //? split the selected categories into an array
-        var catArr = cat.split(',');
-
-        //? loop through the array and check if any of the values match
-        $.each(catArr, function (k, c) {
-          // console.log(k,c);
-
-          //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
-          var shoesAccess = sheetCatArr.split(',')[1];
-
-          //? skip shoe + accessories but match the rest eg: socks & hats
-          if (c !== 'shoes + accessories' && shoesAccess == c) {
-            // console.log('match found');
-            // console.log(shoesAccess, c);
-
-            var rows;
-            // var colspan;
-
-            // rows = val.merges[0].endColumnIndex - 1;
-            // colspan = val.merges[0].endColumnIndex;
-
-            //? add colspan to .size-chart-header
-            $('.size-chart-header th').attr('colspan', colspan);
-
-            //? THIS MAKES THE MULTIPLE TABLES and table headers
-            rows = makeTableHeader(i, val, dept, c);
-
-            //? output the table contents
-            outputTable(i, val, rows);
-
-            //? stop the function
-            return false;
-          }
-        });
+        makeShoeAccessories(cat, sheetDept, dept, sheetCatArr, val, i);
 
       } else if (cat.indexOf(sheetCatArr) !== -1) {
 

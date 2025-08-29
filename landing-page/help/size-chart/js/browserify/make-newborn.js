@@ -1,6 +1,90 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to build the newborn tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
+  var nbCatArr = cat.split(',');
+  $.each(nbCatArr, function (j, str) {
+    if (str == " Booties" || str == " Bibs") {
+      nbCatArr[j] = "all categories, accessories";
+    } else if (str == " hats") {
+      nbCatArr[j] = "all categories, hats";
+    }
+  });
+
+  //? remove duplicates
+  var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
+  // console.log(uniqueNbCatArr);
+
+  //? find the matching sheetDepts for newborn
+  if (sheetDept == dept) {
+    //? loop through uniqueNbCatArr and find matching data and output
+    $.each(uniqueNbCatArr, function (j, nb) {
+      if (nb == sheetCatArr) {
+        var rows;
+
+        //? change the headers for the newborn tables
+        if (nb == "all categories, accessories") {
+          nb = "Booties & Bibs";
+        } else if (nb == "all categories, hats") {
+          nb = "hats";
+        }
+
+        //? THIS MAKES THE MULTIPLE TABLES and table headers
+        rows = makeTableHeader(i, val, dept, nb);
+
+        //? output the tables and contents
+        outputTable(i, val, rows);
+
+        //? stop the function
+        return false;
+      }
+    });
+  }
+};
+
+},{"./make-table-header.js":2,"./output-table.js":4}],2:[function(require,module,exports){
+"use strict";
+
+var makeTd = require('./make-td.js');
+module.exports = function (i, val, dept, subcat) {
+  //? function to make table header because of shoes + accessories have multiple tables
+
+  //? add new table
+  $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
+  // console.log('rows: ', val);
+
+  rows = val.merges[0].endColumnIndex - 1;
+
+  //? if newborn change the colspan to 7 if all categories otherwise use the endColumnIndex
+  if (subcat == "all categories" && dept == "newborn") {
+    colspan = 7;
+  } else {
+    colspan = val.merges[0].endColumnIndex;
+  }
+  // console.log(colspan);
+
+  //? add colspan to .size-chart-header
+  $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
+  return rows;
+};
+
+},{"./make-td.js":3}],3:[function(require,module,exports){
+"use strict";
+
 module.exports = function (k, row, rows, tableElem) {
   //? function to make the <td>
 
@@ -108,7 +192,7 @@ module.exports = function (k, row, rows, tableElem) {
   });
 };
 
-},{}],2:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 var makeTd = require('./make-td.js');
@@ -149,4 +233,4 @@ module.exports = function (i, val, rows) {
   });
 };
 
-},{"./make-td.js":1}]},{},[2]);
+},{"./make-td.js":3}]},{},[1]);

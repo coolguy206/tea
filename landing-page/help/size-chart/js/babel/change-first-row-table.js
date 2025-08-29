@@ -1,11 +1,7 @@
 "use strict";
 
-// var deptCat = require('./set-dept-cat.js');
 //? function to change the 1st row of the size chart table
 module.exports = function () {
-  // var d = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  // var c = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
-
   var d = $('.size-chart-container select.department').val();
   var c = $('.size-chart-container select.category').val();
   var str;
