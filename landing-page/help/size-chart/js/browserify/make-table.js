@@ -3,13 +3,15 @@
 
 var makeTd = require('./make-td.js');
 module.exports = function (i, val, dept, subcat) {
-  //function to make table header because of shoes + accessories have multiple tables
+  //? function to make table header because of shoes + accessories have multiple tables
 
-  //add new table
+  //? add new table
   $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
   // console.log('rows: ', val);
 
   rows = val.merges[0].endColumnIndex - 1;
+
+  //? if newborn change the colspan to 7 if all categories otherwise use the endColumnIndex
   if (subcat == "all categories" && dept == "newborn") {
     colspan = 7;
   } else {
@@ -17,7 +19,7 @@ module.exports = function (i, val, dept, subcat) {
   }
   // console.log(colspan);
 
-  //add colspan to .size-chart-header
+  //? add colspan to .size-chart-header
   $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
   return rows;
 };
@@ -31,15 +33,14 @@ function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) 
 function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
 function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
 function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
-var deptCat = require('./set-dept-cat.js');
 var makeTableHeader = require('./make-table-header.js');
 var outputTable = require('./output-table.js');
 module.exports = function () {
-  //function to create the tables
-  //show .the-table
+  //? function to create the tables
+  //? show .the-table
   $('.size-chart-table .the-table').show();
 
-  //remove all <tr> except the 1st one
+  //? remove all <tr> except the 1st one
   var trs = $('.size-chart-table table tr');
   $.each(trs, function (i, val) {
     if ($(val).attr('class') !== 'size-chart-header') {
@@ -47,7 +48,7 @@ module.exports = function () {
     }
   });
 
-  //remove all the tables except the .the-table
+  //? remove all the tables except the .the-table
   var tables = $('.size-chart-table table');
   $.each(tables, function (i, val) {
     if ($(val).attr('class') !== 'the-table') {
@@ -55,30 +56,33 @@ module.exports = function () {
     }
   });
 
-  //the selected values
-  var dept = deptCat('.size-chart-container ul.department .selected', '.size-chart-container select.department');
-  var cat = deptCat('.size-chart-container ul.category .selected', '.size-chart-container select.category');
+  //? the selected values
+  var dept = $('.size-chart-container select.department').val();
+  var cat = $('.size-chart-container select.category').val();
   // console.log(dept,cat);
 
   var sheet = sheets;
   console.log('from make-table.js');
   console.log(sheet);
 
-  //loop through sheet and find the matched table
+  //? loop through sheet and find the matched table
   $.each(sheet, function (i, val) {
+    //? var to hold the sheet dept and cat
     var sheetVal = val.data[0].rowData[2].values[0].formattedValue;
+    //? split the sheetVal because it is in the format of dept:category
     var sheetArr = sheetVal.split(':');
+    //? the dept var from the sheets
     var sheetDept = sheetArr[0];
-    // var sheetCatArr = sheetArr[1].split(',');
+    //? the cat var from the sheets
     var sheetCatArr = sheetArr[1];
     // console.log(sheetCatArr);
 
-    //if baby
+    //? if the sheet dept is baby change to array of baby girl and baby boy
     if (sheetDept == 'baby') {
       sheetDept = ['baby girl', 'baby boy'];
     }
 
-    //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change cat to match sheet
+    //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
     if (dept == "baby girl") {
       if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
         cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
@@ -88,9 +92,13 @@ module.exports = function () {
         cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
       }
     }
+
+    //? if newborn show all the categories and tables
     if (dept == "newborn") {
       //? hide the top table
       $('.size-chart-table .the-table').hide();
+
+      //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
       var nbCatArr = cat.split(',');
       $.each(nbCatArr, function (j, str) {
         if (str == " Booties" || str == " Bibs") {
@@ -99,6 +107,8 @@ module.exports = function () {
           nbCatArr[j] = "all categories, hats";
         }
       });
+
+      //? remove duplicates
       var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
       // console.log(uniqueNbCatArr);
 
@@ -108,17 +118,6 @@ module.exports = function () {
         $.each(uniqueNbCatArr, function (j, nb) {
           if (nb == sheetCatArr) {
             var rows;
-            var colspan;
-
-            // rows = val.merges[0].endColumnIndex - 1;
-            // if (nb == `all categories`) {
-            //   colspan = 7;
-            // } else {
-            //   colspan = val.merges[0].endColumnIndex;
-            // }
-
-            //add colspan to .size-chart-header
-            // $('.size-chart-header th').attr('colspan', colspan);
 
             //? change the headers for the newborn tables
             if (nb == "all categories, accessories") {
@@ -126,20 +125,20 @@ module.exports = function () {
             } else if (nb == "all categories, hats") {
               nb = "hats";
             }
+
+            //? THIS MAKES THE MULTIPLE TABLES and table headers
             rows = makeTableHeader(i, val, dept, nb);
 
-            //output the table contents
+            //? output the tables and contents
             outputTable(i, val, rows);
 
-            //stop the function
+            //? stop the function
             return false;
           }
         });
       }
     } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
-      //check if cat matches
-      // $.each(sheetCatArr, function (j, category) {
-      // if (category == cat) {
+      //? all other departments NOT newborn
 
       //? if category is shoes + accessories
       if (cat.indexOf('shoes + accessories') !== -1) {
@@ -153,65 +152,69 @@ module.exports = function () {
         $.each(catArr, function (k, c) {
           // console.log(k,c);
 
+          //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
           var shoesAccess = sheetCatArr.split(',')[1];
 
           //? skip shoe + accessories but match the rest eg: socks & hats
           if (c !== 'shoes + accessories' && shoesAccess == c) {
-            console.log('match found');
-            console.log(shoesAccess, c);
+            // console.log('match found');
+            // console.log(shoesAccess, c);
+
             var rows;
-            var colspan;
+            // var colspan;
 
             // rows = val.merges[0].endColumnIndex - 1;
-            colspan = val.merges[0].endColumnIndex;
+            // colspan = val.merges[0].endColumnIndex;
 
-            //add colspan to .size-chart-header
+            //? add colspan to .size-chart-header
             $('.size-chart-header th').attr('colspan', colspan);
+
+            //? THIS MAKES THE MULTIPLE TABLES and table headers
             rows = makeTableHeader(i, val, dept, c);
 
-            //output the table contents
+            //? output the table contents
             outputTable(i, val, rows);
 
-            //stop the function
+            //? stop the function
             return false;
           }
         });
-
-        //? all other categories that are not shoes + accessories
       } else if (cat.indexOf(sheetCatArr) !== -1) {
+        //? all other categories that are not shoes + accessories and only have 1 table
         // console.log(i,val);
         var rows;
         var colspan;
-        console.log("only activate");
+
+        // console.log(`only activate`);
+
         rows = val.merges[0].endColumnIndex - 1;
         colspan = val.merges[0].endColumnIndex;
 
-        //add colspan to .size-chart-header
+        //? add colspan to .size-chart-header
         $('.size-chart-header th').attr('colspan', colspan);
 
-        //output the table contents
+        //? output the table contents
         outputTable(i, val, rows);
 
-        //stop the function
+        //? stop the function
         return false;
       }
-      // });
     }
   });
 };
 
-},{"./make-table-header.js":1,"./output-table.js":4,"./set-dept-cat.js":5}],3:[function(require,module,exports){
+},{"./make-table-header.js":1,"./output-table.js":4}],3:[function(require,module,exports){
 "use strict";
 
 module.exports = function (k, row, rows, tableElem) {
-  //function to make th <td>
+  //? function to make the <td>
 
   // console.log(tableElem);
   // console.log(k, row, rows);
 
-  //add the data <td>
+  //? add the data <td>
   $.each(row.values, function (l, td) {
-    //loop only to the rows variable
+    //? loop only to the rows variable
     if (l <= rows) {
       var content;
       var fraction;
@@ -219,6 +222,8 @@ module.exports = function (k, row, rows, tableElem) {
       // console.log(l, rows, row);
 
       if (td.formattedValue !== undefined) {
+        //? formatting to match design
+
         content = td.formattedValue;
         // console.log(content);
         content = content.toLowerCase();
@@ -228,7 +233,6 @@ module.exports = function (k, row, rows, tableElem) {
         if (content.indexOf('inches') !== -1 || content.indexOf('pounds') !== -1) {
           content = content.split('\n');
           // console.log(content);
-
           content = content[0] + '<span>' + content[1] + '</span>';
         }
         if (content == 'shoe size') {
@@ -236,9 +240,10 @@ module.exports = function (k, row, rows, tableElem) {
         }
         fraction = td.formattedValue;
         // console.log('the fraction: ',fraction);
-        //for shoes + accessories if not L/XL
+
+        //? for shoes + accessories if not L/XL
         if (fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4') {
-          //if cell has two fractions example 58 1/2 - 61 1/2
+          //? if cell has two fractions example 58 1/2 - 61 1/2
           if (fraction.indexOf('/') !== -1 && fraction.indexOf('-') !== -1) {
             fraction = fraction.split('-');
             var twoFrac = [];
@@ -253,22 +258,22 @@ module.exports = function (k, row, rows, tableElem) {
 
             // console.log(twoFrac);
 
-            //output
-            //example 61 1/2 - 64
+            //? output
+            //? example 61 1/2 - 64
             if (twoFrac[1].indexOf('/') !== -1 && twoFrac[3] == undefined) {
               var twoFracA = twoFrac[1].split('/');
               twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + '</td>');
             }
 
-            //example 61 - 61 1/2
+            //? example 61 - 61 1/2
             else if (twoFrac[1].indexOf('/') == -1 && twoFrac[2].indexOf('/') !== -1) {
               var twoFracA = twoFrac[2].split('/');
               twoFrac[2] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
             }
 
-            //example 58 1/2 - 61 1/2
+            //? example 58 1/2 - 61 1/2
             else if (twoFrac[1].indexOf('/') !== -1 && twoFrac[1] !== undefined && twoFrac[3].indexOf('/') !== -1 && twoFrac[3] !== undefined) {
               var twoFracA = twoFrac[1].split('/');
               twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
@@ -276,10 +281,9 @@ module.exports = function (k, row, rows, tableElem) {
               twoFrac[3] = '<sup class="frac">' + twoFracB[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracB[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] + '</td>');
             }
-          }
+          } else {
+            //? only one fraction
 
-          //only one fraction
-          else {
             fraction = fraction.split(' ');
             $.each(fraction, function (m, frac) {
               // console.log(m, frac);
@@ -289,7 +293,7 @@ module.exports = function (k, row, rows, tableElem) {
               }
             });
 
-            //output
+            //? output
             if (theFraction !== undefined && theFraction.indexOf('/') !== -1) {
               theFraction = theFraction.split('/');
               var htmlFraction = '<sup class="frac">' + theFraction[0] + '</sup>&frasl;<span class="frac denominator">' + theFraction[1] + '</span>';
@@ -298,9 +302,9 @@ module.exports = function (k, row, rows, tableElem) {
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + content + '</td>');
             }
           }
-
-          //output sizes 'L/XL','2T/2','3T/3','4T/4'
         } else if (fraction == 'L/XL' || fraction == '2T/2' || fraction == '3T/3' || fraction == '4T/4') {
+          //? output sizes 'L/XL','2T/2','3T/3','4T/4'
+
           // console.log('yo buddy: ', fraction);
           $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction + '</td>');
         }
@@ -351,24 +355,4 @@ module.exports = function (i, val, rows) {
   });
 };
 
-},{"./make-td.js":3}],5:[function(require,module,exports){
-"use strict";
-
-module.exports = function (elem1, elem2) {
-  //function to set the selected department and category for desktop or mobile
-  var Val;
-  //desktop
-  // if ($(window).width() > 737) {
-  //   //get the value of the .department or .category
-  //   Val = $(elem1).text();
-  // }
-  //mobile
-  // else {
-  //get the value of the .department or .category
-  Val = $(elem2).val();
-  // }
-
-  return Val;
-};
-
-},{}]},{},[2]);
+},{"./make-td.js":3}]},{},[2]);

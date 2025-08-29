@@ -1,15 +1,15 @@
 const shoeBrands = require('./shoe-brands.js');
 const sizeChartArr = require('./measuring-tips.js');
-const deptCat = require('./set-dept-cat.js');
+// const deptCat = require('./set-dept-cat.js');
 const changeCats = require('./change-cat.js');
-const changeBackground = require('./change-background-image.js');
-const adjustMeasureCSS = require('./measuring-tips-css.js');
-const adjustTipsCSS = require('./tips-css.js');
-const addDataAttr = require('./add-data-dept.js');
+// const changeBackground = require('./change-background-image.js');
+// const adjustMeasureCSS = require('./measuring-tips-css.js');
+// const adjustTipsCSS = require('./tips-css.js');
+// const addDataAttr = require('./add-data-dept.js');
 const changeRow = require('./change-first-row-table.js');
 const selectDeptCat = require('./set-dept-cat-by-url.js');
-const changeCopy = require('./change-measuring-tips-copy.js');
-const changeOrder = require('./change-order.js');
+// const changeCopy = require('./change-measuring-tips-copy.js');
+// const changeOrder = require('./change-order.js');
 const brandChange = require('./change-shoe-brand.js');
 const makeBrands = require('./make-shoe-brands.js');
 const makeTd = require('./make-td.js');
@@ -17,25 +17,25 @@ const outputTable = require('./output-table.js');
 const makeTableHeader = require('./make-table-header.js');
 const makeTable = require('./make-table.js');
 const onload = require('./onload.js');
+const execute = require('./execute.js');
 
-$(document).ready(function() {
+$(document).ready(function () {
 
-  $('body').prepend($('.bg-ref'));
-
-  //add sizeChartArr to the page for pdp pages
+  //? add sizeChartArr to the page for pdp pages
   $('.size-chart-container').prepend('<div id="sizeChartArr"></div>');
-  //loop through sizeChartArr and add the attribute to #sizeChartArr
-  $.each(sizeChartArr, function(i, val) {
+
+  //? loop through sizeChartArr and add the attribute to #sizeChartArr
+  $.each(sizeChartArr, function (i, val) {
     var cats = [];
     var dept = val.dept;
     dept = dept.replace(' ', '-');
 
-    //loop through the categories and push to cats
-    $.each(val.cat, function(j, cat) {
+    //? loop through the categories and push to cats
+    $.each(val.cat, function (j, cat) {
       cats.push(cat.name);
     });
 
-    //convert cats to string
+    //? convert cats to string
     var theCats = cats.join();
     //add data attribute to page
     $('#sizeChartArr').attr('data-' + dept, theCats);
@@ -44,13 +44,9 @@ $(document).ready(function() {
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //onload make the department dropdown
-  //make the department dropdown
-  $.each(sizeChartArr, function(i, val) {
-    //<ul>
-    var deptLi = '<li>' + val.dept + '</li>';
-    $('.size-chart-container ul.department').append(deptLi);
-    //<select>
+  //? onload make the department dropdown
+  //? make the department dropdown
+  $.each(sizeChartArr, function (i, val) {
     var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
     $('.size-chart-container select.department').append(deptOption);
   });
@@ -58,79 +54,87 @@ $(document).ready(function() {
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //onload
+  //? onload check if there are url params
+  //? if there are then set the dept and cat dropdowns
+  //? otherwise set the default dept and cat
   onload();
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //on .department change
-  $('.size-chart-container select.department').change(function() {
+  //? on .department change
+  $('.size-chart-container select.department').change(function () {
 
-    //remove all the <option> in .category
+    //? remove all the <option> in .category
     $('.size-chart-container select.category option').remove();
 
-    //change the cats dropdown
+    //? change the cats dropdown
     changeCats(sizeChartArr);
 
-    //change the background image
-    changeBackground(sizeChartArr);
+    execute();
 
-    //change the copy
-    changeCopy(sizeChartArr);
+    //? change the background image
+    // changeBackground(sizeChartArr);
 
-    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-    adjustMeasureCSS();
+    //? change the copy
+    // changeCopy(sizeChartArr);
 
-    //if baby boy or baby girl adjust css on .tips
-    adjustTipsCSS();
+    //? if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    // adjustMeasureCSS();
 
-    //add class to .tips
-    addDataAttr();
+    //? if baby boy or baby girl adjust css on .tips
+    // adjustTipsCSS();
 
-    //change <th> of the .size-chart-table table
-    changeRow();
+    //? add class to .tips
+    // addDataAttr();
 
-    //make the table
-    makeTable();
+    //? change <th> of the .size-chart-table table
+    // changeRow();
 
-    //if shoes + accessories or sweaters + outerwear add the brands drop down
-    makeBrands();
+    //? make the table
+    // makeTable();
+
+    //? if shoes + accessories or sweaters + outerwear add the brands drop down
+    // makeBrands();
+
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .category change
+  $('.size-chart-container select.category').change(function () {
+
+    execute();
+
+    //? change the background image
+    // changeBackground(sizeChartArr);
+
+    //? change the copy
+    // changeCopy(sizeChartArr);
+
+    //? if shoes + accessories hide .tips & change min-height and padding of .measure-tips
+    // adjustMeasureCSS();
+
+    //? if baby boy or baby girl adjust css on .tips
+    // adjustTipsCSS();
+
+    //? change <th> of the .size-chart-table table
+    // changeRow();
+
+    //? make the table
+    // makeTable();
+
+    //? if shoes + accessories or sweaters + outerwear add the brands drop down
+    // makeBrands();
+
+    //? re-order the tables if shoes + accessories
+    // changeOrder();
 
   });
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //on .category change
-  $('.size-chart-container select.category').change(function() {
-
-    //change the background image
-    changeBackground(sizeChartArr);
-
-    //change the copy
-    changeCopy(sizeChartArr);
-
-    //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-    adjustMeasureCSS();
-
-    //if baby boy or baby girl adjust css on .tips
-    adjustTipsCSS();
-
-    //change <th> of the .size-chart-table table
-    changeRow();
-
-    //make the table
-    makeTable();
-
-    //if shoes + accessories or sweaters + outerwear add the brands drop down
-    makeBrands();
-
-    //re-order the tables if shoes + accessories
-    changeOrder();
-
-  });
-
-  /*-----------------------------------------------------------------------------------------*/
-  //desktop dropdown to expand and collapse
+  //? desktop dropdown to expand and collapse
+  /*
   $('ul.department, ul.category').click(function() {
     //check if has style attr remove it
     if ($(this).attr('style') !== undefined) {
@@ -141,11 +145,13 @@ $(document).ready(function() {
       $(this).css('height', 'auto');
       $(this).find('li.selected').text('please select');
     }
-
   });
+  */
 
   /*-----------------------------------------------------------------------------------------*/
-  //desktop dropdown to select new department
+
+  //? desktop dropdown to select new department
+  /*
   $('ul.department li').click(function() {
 
     if ($(this).attr('class') !== 'selected') {
@@ -193,9 +199,12 @@ $(document).ready(function() {
     }
 
   });
+  */
 
   /*-----------------------------------------------------------------------------------------*/
-  //function for desktop dropdown to select new category
+
+  //? function for desktop dropdown to select new category
+  /*
   var catLiChange = function() {
     $('ul.category li').click(function() {
 
@@ -239,12 +248,13 @@ $(document).ready(function() {
 
   //onpage load call this
   catLiChange();
-
+*/
 
   /*-----------------------------------------------------------------------------------------*/
 
-  // on click .tips
-  $('.size-chart-container').find($('.tips')).click(function(e) {
+  //? on click .tips
+  /*
+  $('.size-chart-container').find($('.tips')).click(function (e) {
     e.preventDefault();
 
     //get the data-dept
@@ -254,7 +264,7 @@ $(document).ready(function() {
     $('.size-chart-container h1').hide();
 
     //add the content to .measure-take-over
-    $.each(sizeChartArr, function(i, val) {
+    $.each(sizeChartArr, function (i, val) {
       if (dept == val.dept) {
         //add the image
         //desktop
@@ -286,35 +296,39 @@ $(document).ready(function() {
     //show .measure-take-over
     $('.measure-take-over').show();
   });
+  */
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //collapse ul.department & ul.category when click on .measure-tips
-  $('.measure-tips').click(function() {
+  //? collapse ul.department & ul.category when click on .measure-tips
+  /*
+  $('.measure-tips').click(function () {
     var dept = $('ul.department')
     var cat = $('ul.category')
 
     var arr = [dept, cat];
 
-    $.each(arr, function(i, val) {
+    $.each(arr, function (i, val) {
       var attribute = $(val).attr('style');
       if (attribute !== undefined) {
         $(val).removeAttr('style');
       }
     });
   });
+  */
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //collapse ul.brand when click on .size-chart-table
-  $('.brands h2').click(function() {
+  //? collapse ul.brand when click on .size-chart-table
+  $('.brands h2').click(function () {
     $('ul.brand').removeAttr('style');
   });
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //close the .measure-take-over
-  $('.measure-take-over .measure, .measure-take-over .return').click(function() {
+  //? close the .measure-take-over
+  /*
+  $('.measure-take-over .measure, .measure-take-over .return').click(function () {
     //show h1
     $('.size-chart-container h1').show();
     //hide .measure-take-over
@@ -325,53 +339,52 @@ $(document).ready(function() {
     $('.measure-content img').attr('src', '');
     $('.measure-content .text .chest p, .measure-content .text .hips p, .measure-content .text .waist p').html('');
   });
+  */
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //add the loading
+  //? add the loading
   $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
 
   /*-----------------------------------------------------------------------------------------*/
 
-  // var sheetId = '1guudkOtlPolTXiMskAmMqplxY9NM11W6UW1hxmpPpH0';
-  // const sheetId = '1_uxw0nK5cwnP02JM4ks9SvQo8qeXel41BgQM3a19xwY';
-
-  //test sheet
+  //? sheetId
   const sheetId = `1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c`;
-  //test sheetId
-  // const sheetId = `1Qas_UDmBURDfhwpL64VBS6IJGv3eMBXNoVqQOQLn9fo`;
 
+  //? api key
   // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
   const hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
   const sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?key=${hidden}&includeGridData=true`;
 
   // console.log(sheetUrl);
 
-  //if sheets is undefined make the $.get call else just call makeTable() and remove the loading
+  //? if sheets is undefined make the $.get call else just call makeTable() and remove the loading
   if (sheets == undefined) {
     console.log('no sheets go get sheets');
 
-    //make the get call
-    $.getJSON(sheetUrl, function(data) {
+    //? make the get call
+    $.getJSON(sheetUrl, function (data) {
       // console.log(data.sheets);
       sheets = data.sheets;
 
-      //make the table
+      //? make the table
       makeTable();
 
-      //remove the loading
+      //? remove the loading
       $('.tables-loading').remove();
     });
+
   } else {
     console.log('sheets found');
     // console.log(sheets);
 
-    //make the table
+    //? make the table
     makeTable();
 
-    //remove the loading
+    //? remove the loading
     $('.tables-loading').remove();
 
   }
+
 
 });

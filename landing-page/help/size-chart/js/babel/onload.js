@@ -1,55 +1,150 @@
 "use strict";
 
-var shoeBrands = require('./shoe-brands.js');
+// const shoeBrands = require('./shoe-brands.js');
 var sizeChartArr = require('./measuring-tips.js');
-var deptCat = require('./set-dept-cat.js');
+// const deptCat = require('./set-dept-cat.js');
 var changeCats = require('./change-cat.js');
-var changeBackground = require('./change-background-image.js');
-var adjustMeasureCSS = require('./measuring-tips-css.js');
-var adjustTipsCSS = require('./tips-css.js');
-var addDataAttr = require('./add-data-dept.js');
-var changeRow = require('./change-first-row-table.js');
+// const changeBackground = require('./change-background-image.js');
+// const adjustMeasureCSS = require('./measuring-tips-css.js');
+// const adjustTipsCSS = require('./tips-css.js');
+// const addDataAttr = require('./add-data-dept.js');
+// const changeRow = require('./change-first-row-table.js');
 var selectDeptCat = require('./set-dept-cat-by-url.js');
-var changeCopy = require('./change-measuring-tips-copy.js');
-var changeOrder = require('./change-order.js');
-var brandChange = require('./change-shoe-brand.js');
-var makeBrands = require('./make-shoe-brands.js');
-var makeTd = require('./make-td.js');
-var outputTable = require('./output-table.js');
-var makeTableHeader = require('./make-table-header.js');
-var makeTable = require('./make-table.js');
-module.exports = function () {
-  //onload select Dept based on url params
-  selectDeptCat('selectedDept', '.size-chart-container ul.department li', '.size-chart-container select.department');
+// const changeCopy = require('./change-measuring-tips-copy.js');
+// const changeOrder = require('./change-order.js');
+// const brandChange = require('./change-shoe-brand.js');
+// const makeBrands = require('./make-shoe-brands.js');
+// const makeTd = require('./make-td.js');
+// const outputTable = require('./output-table.js');
+// const makeTableHeader = require('./make-table-header.js');
+// const makeTable = require('./make-table.js');
 
-  //onload change the cats dropdown
-  //make the category dropdown
+module.exports = function () {
+  //? onload get select Dept Cat based on url params
+  var urlDept = selectDeptCat('selectedDept', '.size-chart-container select.department');
+
+  //? this changes the dept although if there are no url params then it will return undefined so we add the default value of girl
+  // console.log('onload.js')
+  // console.log(urlDept);
+  if (urlDept == undefined) {
+    urlDept = 'girl';
+  }
+  //?  set the dept dropdown
+  $('.size-chart-container select.department').val(urlDept);
+
+  //? onload change the cats dropdown if dept has changed
+  //? make the category dropdown
   changeCats(sizeChartArr);
 
-  //onload select Cat based on url params
-  selectDeptCat('selectedCat', '.size-chart-container ul.category li', '.size-chart-container select.category');
+  //? onload get select Cat based on url params
+  var urlCat = selectDeptCat('selectedCat', '.size-chart-container select.category');
+
+  //? this changes the cat although if there are no url params then it will return undefined so we add the default value of tops,dresses,bottoms
+  // console.log('onload.js')
+  // console.log(urlCat);
+  if (urlCat == undefined) {
+    urlCat = "tops,dresses,bottoms";
+  }
+
+  //? this will set the correct cats to match the sheets based on the receieved url params
+  //? for example: selectedDept=baby girl&selectedCat=swim
+  if (urlDept == "girl") {
+    switch (urlCat) {
+      case "dresses":
+      case "tops":
+      case "bottoms":
+        $('.size-chart-container select.category').val("tops,dresses,bottoms");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "boy") {
+    switch (urlCat) {
+      case "tees + shirts":
+      case "bottoms":
+        $('.size-chart-container select.category').val("tees + shirts,bottoms");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "baby girl") {
+    switch (urlCat) {
+      case "dresses":
+      case "tops":
+      case "bottoms":
+      case "swim":
+      case "sweater + outerwear":
+      case "pajamas":
+        $('.size-chart-container select.category').val("dresses, tops, bottoms, swim, sweater + outerwear, pajamas");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "baby boy") {
+    switch (urlCat) {
+      case "tees + shirts":
+      case "bottoms":
+      case "swim":
+      case "sweater + outerwear":
+      case "pajamas":
+        $('.size-chart-container select.category').val("tees + shirts, bottoms, swim, sweater + outerwear, pajamas");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "newborn") {
+    switch (urlCat) {
+      case "all categories":
+        $('.size-chart-container select.category').val("all categories, Booties, Bibs, hats");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "women") {
+    switch (urlCat) {
+      case "swim":
+      case "pajamas":
+      case "dresses":
+      case "tops":
+        $('.size-chart-container select.category').val("swim,pajamas,dresses,tops");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else {
+    $('.size-chart-container select.category').val(urlCat);
+  }
 
   //onload change the background image
-  changeBackground(sizeChartArr);
+  // changeBackground(sizeChartArr);
 
   //onload change the copy
-  changeCopy(sizeChartArr);
+  // changeCopy(sizeChartArr);
 
   //if shoes + accessories hide .tips & change min-height and padding of .measure-tips
-  adjustMeasureCSS();
+  // adjustMeasureCSS();
 
   //if baby boy or baby girl adjust css on .tips
-  adjustTipsCSS();
+  // adjustTipsCSS();
 
   //add class to .tips
-  addDataAttr();
+  // addDataAttr();
 
-  //change <th> of the .size-chart-table table
-  changeRow();
+  //? change <th> of the .size-chart-table table
+  // changeRow();
 
-  //if shoes + accessories or sweaters + outerwear add the brands drop down
-  makeBrands();
+  //? make the table
+  // makeTable();
+
+  //? if shoes + accessories or sweaters + outerwear add the brands drop down
+  // makeBrands();
 
   //re-order the tables if shoes + accessories
-  changeOrder();
+  // changeOrder();
 };
