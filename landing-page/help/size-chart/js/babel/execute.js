@@ -6,12 +6,12 @@ var makeBrands = require('./make-shoe-brands.js');
 var makeTable = require('./make-table.js');
 
 //? function to execute and remake the tables
-module.exports = function () {
+module.exports = function (sheets) {
   //? add the table header
   changeRow();
 
   //? make the table
-  makeTable();
+  makeTable(sheets);
 
   //? if shoes + accessories or sweaters + outerwear add the brands drop down
   makeBrands();

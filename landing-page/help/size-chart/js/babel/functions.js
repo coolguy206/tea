@@ -1,18 +1,10 @@
 "use strict";
 
-var shoeBrands = require('./shoe-brands.js');
 var sizeChartArr = require('./measuring-tips.js');
 var changeCats = require('./change-cat.js');
-var changeRow = require('./change-first-row-table.js');
-var selectDeptCat = require('./set-dept-cat-by-url.js');
-var brandChange = require('./change-shoe-brand.js');
-var makeBrands = require('./make-shoe-brands.js');
-var makeTd = require('./make-td.js');
-var outputTable = require('./output-table.js');
-var makeTableHeader = require('./make-table-header.js');
-var makeTable = require('./make-table.js');
 var onload = require('./onload.js');
 var execute = require('./execute.js');
+var getSheets = require('./get-sheets.js');
 $(document).ready(function () {
   //? add sizeChartArr to the page for pdp pages
   $('.size-chart-container').prepend('<div id="sizeChartArr"></div>');
@@ -37,7 +29,6 @@ $(document).ready(function () {
   /*-----------------------------------------------------------------------------------------*/
 
   //? onload make the department dropdown
-  //? make the department dropdown
   $.each(sizeChartArr, function (i, val) {
     var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
     $('.size-chart-container select.department').append(deptOption);
@@ -45,9 +36,7 @@ $(document).ready(function () {
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //? onload check if there are url params
-  //? if there are then set the dept and cat dropdowns
-  //? otherwise set the default dept and cat
+  //? onload set the department and make the category dropdown and make the table header 
   onload();
 
   /*-----------------------------------------------------------------------------------------*/
@@ -61,7 +50,7 @@ $(document).ready(function () {
     changeCats(sizeChartArr);
 
     //? remake the tables
-    execute();
+    execute(sheets);
   });
 
   /*-----------------------------------------------------------------------------------------*/
@@ -69,7 +58,7 @@ $(document).ready(function () {
   //? on .category change
   $('.size-chart-container select.category').change(function () {
     //? remake the tables
-    execute();
+    execute(sheets);
   });
 
   /*-----------------------------------------------------------------------------------------*/
@@ -86,39 +75,8 @@ $(document).ready(function () {
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //? sheetId
-  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c";
-
-  //? api key
-  // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
-  var hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
-  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true");
-
-  // console.log(sheetUrl);
-
-  //? if sheets is undefined make the $.get call else just call makeTable() and remove the loading
-  if (sheets == undefined) {
-    console.log('no sheets go get sheets');
-
-    //? make the get call
-    $.getJSON(sheetUrl, function (data) {
-      // console.log(data.sheets);
-      sheets = data.sheets;
-
-      //? make the table
-      makeTable();
-
-      //? remove the loading
-      $('.tables-loading').remove();
-    });
-  } else {
-    console.log('sheets found');
-    // console.log(sheets);
-
-    //? make the table
-    makeTable();
-
-    //? remove the loading
-    $('.tables-loading').remove();
-  }
+  //? get the sheets from google and make the tables
+  getSheets(sheets, function (data) {
+    sheets = data;
+  });
 });

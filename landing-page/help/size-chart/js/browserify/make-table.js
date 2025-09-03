@@ -149,7 +149,7 @@ var outputTable = require('./output-table.js');
 var checkIfBaby = require('./check-if-baby.js');
 var makeNewborn = require('./make-newborn.js');
 var makeShoeAccessories = require('./make-shoe-accessories.js');
-module.exports = function () {
+module.exports = function (sheets) {
   //? function to create the tables
   //? show .the-table
   $('.size-chart-table .the-table').show();

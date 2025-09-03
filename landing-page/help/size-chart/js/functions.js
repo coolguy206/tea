@@ -1,16 +1,8 @@
-const shoeBrands = require('./shoe-brands.js');
 const sizeChartArr = require('./measuring-tips.js');
 const changeCats = require('./change-cat.js');
-const changeRow = require('./change-first-row-table.js');
-const selectDeptCat = require('./set-dept-cat-by-url.js');
-const brandChange = require('./change-shoe-brand.js');
-const makeBrands = require('./make-shoe-brands.js');
-const makeTd = require('./make-td.js');
-const outputTable = require('./output-table.js');
-const makeTableHeader = require('./make-table-header.js');
-const makeTable = require('./make-table.js');
 const onload = require('./onload.js');
 const execute = require('./execute.js');
+const getSheets = require('./get-sheets.js');
 
 $(document).ready(function () {
 
@@ -38,7 +30,6 @@ $(document).ready(function () {
   /*-----------------------------------------------------------------------------------------*/
 
   //? onload make the department dropdown
-  //? make the department dropdown
   $.each(sizeChartArr, function (i, val) {
     var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
     $('.size-chart-container select.department').append(deptOption);
@@ -47,9 +38,7 @@ $(document).ready(function () {
 
   /*-----------------------------------------------------------------------------------------*/
 
-  //? onload check if there are url params
-  //? if there are then set the dept and cat dropdowns
-  //? otherwise set the default dept and cat
+  //? onload set the department and make the category dropdown and make the table header 
   onload();
 
   /*-----------------------------------------------------------------------------------------*/
@@ -64,7 +53,7 @@ $(document).ready(function () {
     changeCats(sizeChartArr);
 
     //? remake the tables
-    execute();
+    execute(sheets);
 
   });
 
@@ -74,7 +63,7 @@ $(document).ready(function () {
   $('.size-chart-container select.category').change(function () {
 
     //? remake the tables
-    execute();
+    execute(sheets);
 
   });
 
@@ -96,44 +85,8 @@ $(document).ready(function () {
 
   /*-----------------------------------------------------------------------------------------*/
 
-
-  //? sheetId
-  const sheetId = `1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c`;
-
-  //? api key
-  // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
-  const hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
-  const sheetUrl = `https://sheets.googleapis.com/v4/spreadsheets/${sheetId}?key=${hidden}&includeGridData=true`;
-
-  // console.log(sheetUrl);
-
-  //? if sheets is undefined make the $.get call else just call makeTable() and remove the loading
-  if (sheets == undefined) {
-    console.log('no sheets go get sheets');
-
-    //? make the get call
-    $.getJSON(sheetUrl, function (data) {
-      // console.log(data.sheets);
-      sheets = data.sheets;
-
-      //? make the table
-      makeTable();
-
-      //? remove the loading
-      $('.tables-loading').remove();
-    });
-
-  } else {
-    console.log('sheets found');
-    // console.log(sheets);
-
-    //? make the table
-    makeTable();
-
-    //? remove the loading
-    $('.tables-loading').remove();
-
-  }
+  //? get the sheets from google and make the tables
+  getSheets(sheets, function(data){sheets = data});
 
 
 });
