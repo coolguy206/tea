@@ -5,6 +5,7 @@
   "main": "Gruntfile.js",
   "dependencies": {
     "@glidejs/glide": "^3.5.2",
+    "@google/genai": "^1.11.0",
     "@types/node-fetch": "^2.6.1",
     "cheerio": "^1.0.0-rc.12",
     "cloudinary": "^1.28.1",
@@ -13,6 +14,7 @@
     "dropbox": "^10.26.1",
     "extract-zip": "^2.0.1",
     "ftp": "^0.3.10",
+    "gemini-ai": "^2.2.1",
     "get-json": "^1.0.1",
     "grunt": "^1.6.1",
     "grunt-contrib-less": "^2.0.0",
