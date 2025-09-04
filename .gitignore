@@ -17,3 +17,7 @@ Site/**
 .tscache
 open-ai-api-key.txt
 pdps-order-lines.js
+pdps-order-lines-img-src.html
+pdps.js
+order-lines.js
+google-rest-api-example.js
