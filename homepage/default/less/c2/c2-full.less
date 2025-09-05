@@ -1,31 +1,33 @@
 @import "../var.less";
 @c2-font-color: #fff;
 @c2-cta-color: #6E3B40;
-@c2-cta-background:  #fff;
+@c2-cta-background: #fff;
 @c2-h3-color-430: @c2-font-color;
 @c2-font-family: @analogue;
 
 .c2 {
     @media screen and (max-width:1679px) {
-        margin: 0 0 5vw;
+        // margin: 0 0 5vw;
     }
+
     @media screen and (max-width: 430px) {
         flex-wrap: wrap;
         // background: #E8C3CA;
         padding: 0;
-        margin: 0 0 13vw;
+        // margin: 0 0 13vw;
     }
 
     padding: 0;
     text-align: center;
     position:relative;
-    margin: 0 0 94px;
+    // margin: 0 0 94px;
 
     // flex-wrap: wrap;
     div {
         @media screen and (max-width:1679px) {
             padding: 1vw;
         }
+
         @media screen and (max-width:430px) {
             padding: 0;
         }
@@ -138,7 +140,7 @@
                 @media screen and (max-width:430px) {}
             }
 
-            
+
 
             div {
                 @media screen and (max-width: 430px) {
@@ -162,11 +164,14 @@
                     }
 
                     background: @c2-cta-background;
-                    color: @c2-cta-color;   
+                    color: @c2-cta-color;
                     width: 203px;
                 }
             }
         }
 
+        @import "c2-content-new-arrivals.less";
+
     }
+
 }

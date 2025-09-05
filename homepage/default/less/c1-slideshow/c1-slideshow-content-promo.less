@@ -65,10 +65,12 @@
             color: @c1-promo-h3-color-430 !important;
             line-height: @c1-promo-h3-line-height-430;
             font-size: @c1-promo-h3-font-size-430;
-            margin: 0 0 3vw !important;
-            padding: 0 0 0 11vw;
+            margin: 0 !important;
+            padding: 1vw;
             text-align: center !important;
             letter-spacing: 1vw;
+            background: #AD9742;
+            display: inline
             // text-shadow: @text-shadow;
             // margin: 60vw 0 6vw;
         }
@@ -89,11 +91,21 @@
         text-transform: uppercase;
         margin: 0;
 
+        i {
+            @media screen and (max-width: 430px) {
+                color: #4F4243;
+            }
+
+            font-style: normal;
+            color: #AD9742;
+        }
+
         span {
             @media screen and (max-width: 1679px) {
                 padding: .3vw .6vw;
             }
-              @media screen and (max-width: 430px) {
+
+            @media screen and (max-width: 430px) {
                 padding: .5vw .6vw;
             }
 
