@@ -7,53 +7,94 @@ import Glide from '@glidejs/glide'
 
 $(document).ready(function () {
 
-  var num = Date.now();
-  console.log(`/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=${num}`);
-  fetch(`/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=${num}`)
-    .then(response => response.json())
-    .then(data => {
-      console.log(data);
+  let baseURL = `https://item-recommender-api.vercel.app/orders/`;
 
-      let html = ``;
+  let itemsArray = [];
 
-      data.map((val, i) => {
+  //?get the recommendations
+  fetch(`${baseURL}`).then((data) => { return data.json() }).then((data) => {
+    // console.log(data);
 
-        let img = val.img;
+    for (let i = 0; i < data.length; i++) {
+      if (itemsArray.length < 20) {
 
-        let price = ``;
-        let storePrice = val.store_price;
-        let retailPrice = val.retail_price;
+        for (let j = 0; j < data[i].items.length; j++) {
 
-        //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
-        if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
+          var storePrice = Number(data[i].items[j].store_price).toFixed(2);
+          var retailPrice = Number(data[i].items[j].retail_price).toFixed(2);
+          var img = data[i].items[j].img;
 
+          // console.log(storePrice, retailPrice, img);
 
-          if (storePrice !== retailPrice) {
-            price = `<span id="store_price" class="old-price"><strike>${val.retail_price}</strike></span>
-                  <span id="sale_price" class="price-red">${val.store_price}</span>`;
-          } else {
-            price = `<span id="store_price" class="price">${val.store_price}</span>`;
+          //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
+          if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
+
+            // console.log(`conditions met`);
+            // console.log(storePrice, retailPrice, img);
+            // console.log(data[i].items[j]);
+            itemsArray.push(data[i].items[j]);
+            // itemsArray = itemsArray.flat();
+
           }
 
-          let promoTeaser = ``;
-          if (val.promo_teaser !== undefined) {
-            promoTeaser = `<span class="promo-teaser-thumb">${val.promo_teaser}</span>`;
-          }
+        }
 
-          let li = `<li class="lgw-thumb">
+      } else {
+
+        //? stop the loop because we have 20 items
+        break;
+
+      }
+
+    }
+
+    // console.log(`itemsArray`);
+    // console.log(itemsArray);
+
+    return itemsArray;
+
+  }).then((data) => {
+
+
+    let html = ``;
+
+    data.map((val, i) => {
+
+      let img = val.img;
+
+      let price = ``;
+      let storePrice = Number(val.store_price).toFixed(2);
+      let retailPrice = Number(val.retail_price).toFixed(2);
+
+      //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
+      if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
+
+        if (storePrice !== retailPrice) {
+          price = `<span id="store_price" class="old-price"><strike>${retailPrice}</strike></span>
+                  <span id="sale_price" class="price-red">${storePrice}</span>`;
+        } else {
+          price = `<span id="store_price" class="price">${storePrice}</span>`;
+        }
+
+        let promoTeaser = ``;
+        if (val.promo_teaser !== undefined && val.promo_teaser !== null && val.promo_teaser !== "") {
+          promoTeaser = `<span class="promo-teaser-thumb">${val.promo_teaser}</span>`;
+        }
+
+        let li = `<li class="lgw-thumb">
                     <div class="thumb-grid item" style="width: 100%; padding: 0;">
                       
                       <span class="img">
-                        <a href="${val.url}" class="the-order-lines ${val.name}">
+                        <a href="${val.url}" class="the-order-lines ${val.model}">
                            ${img} 
                         </a>
     
-                        <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.name}">Quick View</span>
+                        <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.model}">Quick View</span>
                       </span>
     
                       <div class="thumb-content">
                         <a href="${val.url}" class="name the-order-lines">
-                          <span class="model">${val.name}</span>
+                          <span class="model">${val.model}</span>
                         </a>
     
                         <div class="price-wrap">
@@ -68,60 +109,21 @@ $(document).ready(function () {
                     </div>
                   </li>`;
 
-          html = `${html}${li}`;
-        }
-      });
-
-      // console.log(html);
-
-      $('.the-orders-lines-slider ul').append(html);
-
-      $('.the-orders-lines-slider').css('opacity', 1);
-
-      // $($(`.the-orders-lines-slider .lgw-thumb`)[6]).before($('.the-orders-lines-slider .img-2'));
-
-      //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
-      if ($('.the-orders-lines-slider li').length >= 5 || window.innerWidth < 431) {
-        new Glide('.the-orders-lines-slider .glide', {
-          type: 'carousel',
-          // autoplay: 4000,
-          animationDuration: 500,
-          perView: 5,
-          hoverpause: true,
-          gap: 0,
-          bound: true,
-          rewind: false,
-          breakpoints: {
-            // 821: {
-            //   perView: 3,
-            //   perSwipe: '|',
-            // },
-            431: {
-              perView: 2,
-              perSwipe: '|',
-            },
-          }
-        }).mount();
-      } else {
-        //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
-        $('.the-orders-lines-slider div[data-glide-el="controls"]').hide();
-        $('.the-orders-lines-slider ul').addClass('width-300');
+        html = `${html}${li}`;
       }
+    });
 
-      inview('.the-orders-lines-slider');
-      $('.the-orders-lines-slider .white-out').fadeOut();
+    // console.log(html);
 
-    }).catch((err) => { console.log(`oops something went wrong. \n ${err}`) });
+    $('.the-orders-lines-slider ul').append(html);
 
+    $('.the-orders-lines-slider').css('opacity', 1);
 
+    // $($(`.the-orders-lines-slider .lgw-thumb`)[6]).before($('.the-orders-lines-slider .img-2'));
 
-
-  // $('.the-orders-lines-slider').css('opacity', 1);
-
-  // $($(`.the-orders-lines-slider .lgw-thumb`)[6]).before($('.the-orders-lines-slider .img-2'));
-  /*
     //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
     if ($('.the-orders-lines-slider li').length >= 5 || window.innerWidth < 431) {
+
       new Glide('.the-orders-lines-slider .glide', {
         type: 'carousel',
         // autoplay: 4000,
@@ -142,13 +144,19 @@ $(document).ready(function () {
           },
         }
       }).mount();
+
     } else {
+
       //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
       $('.the-orders-lines-slider div[data-glide-el="controls"]').hide();
       $('.the-orders-lines-slider ul').addClass('width-300');
+
     }
-  */
-  //  inview('.the-orders-lines-slider');
+
+    inview('.the-orders-lines-slider');
+    $('.the-orders-lines-slider .white-out').fadeOut();
+
+  }).catch((err) => { console.log(`oops something went wrong. \n ${err}`) });;
 
 
 });
