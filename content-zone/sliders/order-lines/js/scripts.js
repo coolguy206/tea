@@ -51,7 +51,28 @@ $(document).ready(function () {
     // console.log(`itemsArray`);
     // console.log(itemsArray);
 
-    return itemsArray;
+    //? Remove duplicates based on sku prefix
+    let uniqueArray = [];
+    const seenPrefixes = new Set();
+
+    uniqueArray = itemsArray.filter(item => {
+      const prefix = item.baseSku;
+
+      if (seenPrefixes.has(prefix)) {
+
+        //? Skip if prefix already seen
+        return false;
+
+      } else {
+
+        //? Keep the first occurrence
+        seenPrefixes.add(prefix);
+        return true;
+
+      }
+    });
+
+    return uniqueArray;
 
   }).then((data) => {
 
@@ -70,10 +91,10 @@ $(document).ready(function () {
       if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
 
         if (storePrice !== retailPrice) {
-          price = `<span id="store_price" class="old-price"><strike>${retailPrice}</strike></span>
-                  <span id="sale_price" class="price-red">${storePrice}</span>`;
+          price = `<span id="store_price" class="old-price"><strike>$${retailPrice}</strike></span>
+                  <span id="sale_price" class="price-red">$${storePrice}</span>`;
         } else {
-          price = `<span id="store_price" class="price">${storePrice}</span>`;
+          price = `<span id="store_price" class="price">$${storePrice}</span>`;
         }
 
         let promoTeaser = ``;
@@ -89,7 +110,7 @@ $(document).ready(function () {
                            ${img} 
                         </a>
     
-                        <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.model}">Quick View</span>
+                        <!-- <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.model}">Quick View</span>-->
                       </span>
     
                       <div class="thumb-content">

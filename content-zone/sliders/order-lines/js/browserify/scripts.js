@@ -95,7 +95,21 @@ $(document).ready(function () {
     // console.log(`itemsArray`);
     // console.log(itemsArray);
 
-    return itemsArray;
+    //? Remove duplicates based on sku prefix
+    var uniqueArray = [];
+    var seenPrefixes = new Set();
+    uniqueArray = itemsArray.filter(function (item) {
+      var prefix = item.baseSku;
+      if (seenPrefixes.has(prefix)) {
+        //? Skip if prefix already seen
+        return false;
+      } else {
+        //? Keep the first occurrence
+        seenPrefixes.add(prefix);
+        return true;
+      }
+    });
+    return uniqueArray;
   }).then(function (data) {
     var html = "";
     data.map(function (val, i) {
@@ -107,15 +121,15 @@ $(document).ready(function () {
       //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
       if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
         if (storePrice !== retailPrice) {
-          price = "<span id=\"store_price\" class=\"old-price\"><strike>".concat(retailPrice, "</strike></span>\n                  <span id=\"sale_price\" class=\"price-red\">").concat(storePrice, "</span>");
+          price = "<span id=\"store_price\" class=\"old-price\"><strike>$".concat(retailPrice, "</strike></span>\n                  <span id=\"sale_price\" class=\"price-red\">$").concat(storePrice, "</span>");
         } else {
-          price = "<span id=\"store_price\" class=\"price\">".concat(storePrice, "</span>");
+          price = "<span id=\"store_price\" class=\"price\">$".concat(storePrice, "</span>");
         }
         var promoTeaser = "";
         if (val.promo_teaser !== undefined && val.promo_teaser !== null && val.promo_teaser !== "") {
           promoTeaser = "<span class=\"promo-teaser-thumb\">".concat(val.promo_teaser, "</span>");
         }
-        var li = "<li class=\"lgw-thumb\">\n                    <div class=\"thumb-grid item\" style=\"width: 100%; padding: 0;\">\n                      \n                      <span class=\"img\">\n                        <a href=\"".concat(val.url, "\" class=\"the-order-lines ").concat(val.model, "\">\n                           ").concat(img, " \n                        </a>\n    \n                        <span data-href=\"").concat(val.url, "\" data-color=\"").concat(val.color, "\" class=\"js-qv ").concat(val.model, "\">Quick View</span>\n                      </span>\n    \n                      <div class=\"thumb-content\">\n                        <a href=\"").concat(val.url, "\" class=\"name the-order-lines\">\n                          <span class=\"model\">").concat(val.model, "</span>\n                        </a>\n    \n                        <div class=\"price-wrap\">\n                          <div class=\"price\">\n                            ").concat(price, "\n                          </div>\n                        </div>\n    \n                        ").concat(promoTeaser, "\n    \n                      </div>\n                    </div>\n                  </li>");
+        var li = "<li class=\"lgw-thumb\">\n                    <div class=\"thumb-grid item\" style=\"width: 100%; padding: 0;\">\n                      \n                      <span class=\"img\">\n                        <a href=\"".concat(val.url, "\" class=\"the-order-lines ").concat(val.model, "\">\n                           ").concat(img, " \n                        </a>\n    \n                        <!-- <span data-href=\"").concat(val.url, "\" data-color=\"").concat(val.color, "\" class=\"js-qv ").concat(val.model, "\">Quick View</span>-->\n                      </span>\n    \n                      <div class=\"thumb-content\">\n                        <a href=\"").concat(val.url, "\" class=\"name the-order-lines\">\n                          <span class=\"model\">").concat(val.model, "</span>\n                        </a>\n    \n                        <div class=\"price-wrap\">\n                          <div class=\"price\">\n                            ").concat(price, "\n                          </div>\n                        </div>\n    \n                        ").concat(promoTeaser, "\n    \n                      </div>\n                    </div>\n                  </li>");
         html = "".concat(html).concat(li);
       }
     });
