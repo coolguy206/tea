@@ -17,4 +17,3 @@ $(document).ready(function () {
     $('.kidizen-overlay, .kidizen-content').remove();
   });
 });
-//# sourceMappingURL=scripts.js.map
