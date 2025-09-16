@@ -6,8 +6,8 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0915`;
-var version = `v1`;
+var num = `0919`;
+var version = `v0`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;

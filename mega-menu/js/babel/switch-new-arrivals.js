@@ -18,7 +18,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.girl;
       // $('.promo1-url.girl').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -34,7 +34,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.boy;
       // $('.promo1-url.boy').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -50,7 +50,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.girl;
       // $('.promo1-url.baby-girl').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -66,7 +66,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.boy;
       // $('.promo1-url.baby-boy').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -83,7 +83,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       // $('.promo1-url.toddler-girl').show();
       // $('.promo1-url.girl').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -100,7 +100,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       // $('.promo1-url.toddler-boy').show();
       //  $('.promo1-url.boy').show();
       $('.promo1-url').show();
-      // $('.promo2-url').show();
+      $('.promo2-url').show();
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
