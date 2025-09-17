@@ -1,0 +1,244 @@
+@font-color: #47363D;
+@blue-color: #436FC1;
+@pink-color: #F9EBE6;
+
+.size-chart-container {
+    padding: 0;
+
+    .note {
+        @media screen and (max-width: 430px) {
+            margin: 1em 0;
+        }
+
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 42px;
+        line-height: 53px;
+        letter-spacing: 0.5px;
+        color: @font-color;
+        font-family: souvenirstd-light;
+        margin: 0 0 2%;
+        text-transform: capitalize;
+    }
+
+    .dropdowns {
+        @media screen and (max-width:1679px) {
+            column-gap: 2vw;
+        }
+
+        @media screen and (max-width:430px) {
+            column-gap: 0;
+        }
+
+        text-align: center;
+        padding: 0;
+        position: relative;
+        margin: 0 0 3%;
+        display: flex;
+        flex-wrap: wrap;
+        column-gap: 30px;
+
+        select {
+            @media screen and (max-width:430px) {
+                border-radius: 0;
+                flex-basis: 100%;
+                margin: 0 0 5%;
+                padding: 3%;
+            }
+
+            -moz-appearance: window;
+            -webkit-appearance: none;
+            // margin: 0 2% 0 0;
+            padding: 1%;
+            background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 50% #fff;
+            border-color: #47363D;
+            font-family: gilroy-bold;
+            font-size: 14px;
+            line-height: 17px;
+            text-align: center;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: #47363D;
+            flex-basis: 48%;
+
+            &.category {
+                //margin:0;
+            }
+        }
+    }
+
+    .size-chart-table {
+        @media screen and (max-width:430px) {
+            flex-basis: 100%;
+        }
+
+        box-sizing: border-box;
+        padding: 0;
+        // flex-basis: 50%;
+        flex-basis: 100%;
+
+        .brands,
+        .brands-dropdown,
+        .shoe-brands {
+            text-align: center;
+
+            h2 {
+                margin-bottom: 19px;
+                padding: 9px 0;
+                text-transform: capitalize;
+                font-family: souvenirstd-light;
+                font-size: 24px;
+                line-height: 32px;
+                text-align: center;
+                letter-spacing: 0.02em;
+                color: @blue-color;
+                background: @pink-color;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 21px;
+            }
+
+            select {
+
+                &.brand,
+                &.shoes {
+                    @media screen and (max-width:430px) {
+                        padding: 3%;
+                    }
+
+                    width: 100%;
+                    -webkit-appearance: none;
+                    margin: 0 2% 0 0;
+                    background: url("https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/expand.png") no-repeat 96% 50% #fff;
+                    border-color: @font-color;
+                    font-family: gilroy-bold;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: center;
+                    letter-spacing: 0.2em;
+                    text-transform: uppercase;
+                    color: @font-color;
+                    padding: 1% 0;
+                }
+            }
+
+        }
+
+        table {
+            &.the-table {}
+
+            width: 100%;
+            margin: 0 0 5%;
+
+            tr {
+                &.size-chart-header {
+                    background: @pink-color;
+
+                    th {
+                        padding: 9px 0;
+                        text-transform: capitalize;
+                        font-family: souvenirstd-light;
+                        font-size: 24px;
+                        line-height: 32px;
+                        text-align: center;
+                        letter-spacing: 0.03em;
+                        color: @blue-color;
+                    }
+                }
+
+                &[data-num="3"] {
+                    background: @blue-color !important;
+
+                    td {
+                        font-family: gilroy-bold;
+                        font-size: 16px;
+                        line-height: 24px;
+                        text-align: center;
+                        // letter-spacing: 0.03em;
+                        text-transform: lowercase;
+                        color: @pink-color;
+                        border-right: 1px solid @pink-color;
+
+                        &:first-of-type {
+                            text-transform: lowercase;
+                            padding-top: 14px;
+                        }
+
+                        &:nth-of-type(2) {
+                            //padding-top: 14px;
+                            padding-top: 9px;
+                        }
+
+                        .shoe-size {
+                            padding-top: 5px;
+                            font-size: 1rem;
+                        }
+
+                        span {
+                            font-family: gilroy-regular;
+                            font-size: 12px;
+                            // line-height: 12px;
+                            text-align: center;
+                            letter-spacing: 0.03em;
+                            text-transform: lowercase;
+                            color: @pink-color;
+                        }
+                    }
+                }
+
+                &:nth-of-type(odd) {
+                    background: @pink-color;
+                }
+
+                th {
+                    font-weight: normal;
+                }
+
+                td {
+                    border-right: 1px solid @blue-color;
+                    padding: 9px 0;
+                    text-align: center;
+                    box-sizing: border-box;
+                    width: 10%;
+                    text-transform: lowercase;
+                    position: relative;
+                    font-family: gilroy-bold;
+                    font-size: 16px;
+                    line-height: 24px;
+                    letter-spacing: 0.03em;
+                    color: @font-color;
+
+                    span,
+                    sup {
+                        font-weight: normal;
+                    }
+
+                    &:first-of-type {
+                        text-transform: uppercase;
+                    }
+
+                    &:last-of-type {
+                        border: none;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.frac {
+    font-family: gilroy-bold;
+    font-size: 11px;
+    line-height: 13px;
+    letter-spacing: 0.01em;
+    color: @font-color;
+}
+
+.denominator {
+    position: relative;
+    left: 2%;
+}

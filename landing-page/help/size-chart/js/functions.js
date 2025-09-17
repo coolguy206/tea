@@ -3,6 +3,7 @@ const changeCats = require('./change-cat.js');
 const onload = require('./onload.js');
 const execute = require('./execute.js');
 const getSheets = require('./get-sheets.js');
+const showMeasuringTips = require('./show-measuring-tips.js');
 
 $(document).ready(function () {
 
@@ -45,6 +46,7 @@ $(document).ready(function () {
 
   //? on .department change
   $('.size-chart-container select.department').change(function () {
+    var dept = $(this).val();
 
     //? remove all the <option> in .category
     $('.size-chart-container select.category option').remove();
@@ -54,6 +56,9 @@ $(document).ready(function () {
 
     //? remake the tables
     execute(sheets);
+
+    //? show the mearsuring tips
+    showMeasuringTips(dept);
 
   });
 
@@ -69,12 +74,23 @@ $(document).ready(function () {
 
   /*-----------------------------------------------------------------------------------------*/
 
+  //? on .category change
+  $('.measure-content .category-headers a').on('click', function (e) {
+    e.preventDefault();
+
+    var dept = $(this).text();
+
+    //? show the mearsuring tips
+    showMeasuringTips(dept);
+
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
 
   //? collapse ul.brand when click on .size-chart-table
   $('.brands h2').click(function () {
     $('ul.brand').removeAttr('style');
   });
-
 
   /*-----------------------------------------------------------------------------------------*/
 
@@ -86,7 +102,7 @@ $(document).ready(function () {
   /*-----------------------------------------------------------------------------------------*/
 
   //? get the sheets from google and make the tables
-  getSheets(sheets, function(data){sheets = data});
+  getSheets(sheets, function (data) { sheets = data });
 
 
 });

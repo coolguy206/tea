@@ -5,6 +5,7 @@ var changeCats = require('./change-cat.js');
 var changeRow = require('./change-first-row-table.js');
 var makeBrands = require('./make-shoe-brands.js');
 var matchCats = require('./match-cats.js');
+var showMeasuringTips = require('./show-measuring-tips.js');
 module.exports = function () {
   var urlDept = 'girl';
 
@@ -25,4 +26,7 @@ module.exports = function () {
 
   //? if shoes + accessories or sweaters + outerwear add the brands drop down
   makeBrands();
+
+  //? show measuring tips
+  showMeasuringTips(urlDept);
 };

@@ -305,6 +305,7 @@ var changeCats = require('./change-cat.js');
 var changeRow = require('./change-first-row-table.js');
 var makeBrands = require('./make-shoe-brands.js');
 var matchCats = require('./match-cats.js');
+var showMeasuringTips = require('./show-measuring-tips.js');
 module.exports = function () {
   var urlDept = 'girl';
 
@@ -325,9 +326,12 @@ module.exports = function () {
 
   //? if shoes + accessories or sweaters + outerwear add the brands drop down
   makeBrands();
+
+  //? show measuring tips
+  showMeasuringTips(urlDept);
 };
 
-},{"./change-cat.js":1,"./change-first-row-table.js":2,"./make-shoe-brands.js":4,"./match-cats.js":5,"./measuring-tips.js":6}],8:[function(require,module,exports){
+},{"./change-cat.js":1,"./change-first-row-table.js":2,"./make-shoe-brands.js":4,"./match-cats.js":5,"./measuring-tips.js":6,"./show-measuring-tips.js":9}],8:[function(require,module,exports){
 "use strict";
 
 module.exports = [{
@@ -376,5 +380,43 @@ module.exports = [{
   brand: 'cienta',
   url: 'https://cientausa.com/'
 }];
+
+},{}],9:[function(require,module,exports){
+"use strict";
+
+module.exports = function (urlDept) {
+  //? hide measure tips if any of these depts
+  // if (urlDept == `newborn` || urlDept == `adult unisex` || urlDept == `women` || urlDept == `men`) {
+  //     $('.measure-content').removeClass('active');
+  //     return;
+  // }
+
+  //? remove class active from all
+  $('.measure-content .category-headers a, .measure-content .measure-container, .measure-content').removeClass('active');
+
+  //? set the measuring tips dept
+  var headers = $('.measure-content .category-headers a');
+  headers.map(function (i, val) {
+    // console.log($(val).text());
+    if ($(val).text() == urlDept) {
+      $(val).addClass('active');
+    }
+  });
+
+  //? add class active to measure-container with matching header
+  var m = $('.measure-content .measure-container');
+  for (var i = 0; i < m.length; i++) {
+    var theClass = $(m[i]).attr('class').split('measure-container')[1].replace(/ /, '');
+    console.log($(m[i]));
+    console.log(theClass);
+    if (theClass == urlDept) {
+      $(m[i]).addClass('active');
+      break;
+    }
+  }
+
+  //? add class active to show the measuring tips entire container
+  $('.measure-content').addClass('active');
+};
 
 },{}]},{},[7]);

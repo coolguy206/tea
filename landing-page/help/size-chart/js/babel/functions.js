@@ -5,6 +5,7 @@ var changeCats = require('./change-cat.js');
 var onload = require('./onload.js');
 var execute = require('./execute.js');
 var getSheets = require('./get-sheets.js');
+var showMeasuringTips = require('./show-measuring-tips.js');
 $(document).ready(function () {
   //? add sizeChartArr to the page for pdp pages
   $('.size-chart-container').prepend('<div id="sizeChartArr"></div>');
@@ -43,6 +44,8 @@ $(document).ready(function () {
 
   //? on .department change
   $('.size-chart-container select.department').change(function () {
+    var dept = $(this).val();
+
     //? remove all the <option> in .category
     $('.size-chart-container select.category option').remove();
 
@@ -51,6 +54,9 @@ $(document).ready(function () {
 
     //? remake the tables
     execute(sheets);
+
+    //? show the mearsuring tips
+    showMeasuringTips(dept);
   });
 
   /*-----------------------------------------------------------------------------------------*/
@@ -59,6 +65,17 @@ $(document).ready(function () {
   $('.size-chart-container select.category').change(function () {
     //? remake the tables
     execute(sheets);
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .category change
+  $('.measure-content .category-headers a').on('click', function (e) {
+    e.preventDefault();
+    var dept = $(this).text();
+
+    //? show the mearsuring tips
+    showMeasuringTips(dept);
   });
 
   /*-----------------------------------------------------------------------------------------*/

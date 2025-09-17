@@ -20,30 +20,40 @@
         <!-- <p class="align-center">Looking for sizes 2T/2-4T/4?<br> You can now find them in the Boys and Girls sections.</p> -->
       </div>
 
-      <!-- <div class="measure-tips">
-        <a href="#" class="tips">Measuring<br> Tips >></a>
-        <div>
-          <p></p>
+
+      <div class="measure-content">
+        <h2>Measuring Tips</h2>
+
+        <div class="category-headers">
+          <a href="#" class="cta a cta-border">girl</a>
+          <a href="#" class="cta a cta-border">boy</a>
+          <a href="#" class="cta a cta-border">baby girl</a>
+          <a href="#" class="cta a cta-border">baby boy</a>
         </div>
-      </div> -->
 
-    </div>
+        include "measuring-girl.html"
+        include "measuring-boy.html"
+        include "measuring-baby-girl.html"
+        include "measuring-baby-boy.html"
 
-    <div>
-      <p class="note">* Approximate age for kids within an average height percentile. <br>Please always make sure to consult height and weight measurements for the right size.</p>
-    </div>
+      </div>
 
-    {literal}
-    <style>
-      include "../css/styles.css"
-    </style>
+      <div>
+        <p class="note">* Approximate age for kids within an average height percentile. <br>Please always make sure to
+          consult height and weight measurements for the right size.</p>
+      </div>
 
-    <script>
-      var sheets, rows, colspan;
+      {literal}
+      <style>
+        include "../css/styles.css"
+      </style>
+
+      <script>
+        var sheets, rows, colspan;
       include "../js/jsmin/functions.min.js"
-    </script>
-    {/literal}
+      </script>
+      {/literal}
 
 
+    </div>
   </div>
-</div>
