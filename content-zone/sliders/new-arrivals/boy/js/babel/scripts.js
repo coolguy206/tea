@@ -1,7 +1,7 @@
 "use strict";
 
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 // import {
 //   inview
 // } from './inview.js';
@@ -21,10 +21,10 @@ $(document).ready(function () {
       bound: true,
       rewind: false,
       breakpoints: {
-        821: {
-          perView: 4,
-          perSwipe: '|'
-        },
+        // 821: {
+        //   perView: 4,
+        //   perSwipe: '|',
+        // },
         431: {
           perView: 2,
           perSwipe: '|'
@@ -41,4 +41,3 @@ $(document).ready(function () {
 
   // inview('.new-arrivals-slider.boy');
 });
-//# sourceMappingURL=scripts.js.map
