@@ -74,11 +74,12 @@ $(document).ready(function () {
           var storePrice = Number(data[i].items[j].store_price).toFixed(2);
           var retailPrice = Number(data[i].items[j].retail_price).toFixed(2);
           var img = data[i].items[j].img;
+          var baseSku = data[i].items[j].baseSku;
 
           // console.log(storePrice, retailPrice, img);
 
           //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
-          if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
+          if (storePrice == retailPrice && img.indexOf('undefined') == -1 && baseSku !== "GIFT_MESSAGE") {
             // console.log(`conditions met`);
             // console.log(storePrice, retailPrice, img);
             // console.log(data[i].items[j]);
