@@ -20,10 +20,10 @@ $(document).ready(function () {
       bound: true,
       rewind: false,
       breakpoints: {
-        821: {
-          perView: 4,
-          perSwipe: '|',
-        },
+        // 821: {
+        //   perView: 4,
+        //   perSwipe: '|',
+        // },
         431: {
           perView: 2,
           perSwipe: '|',

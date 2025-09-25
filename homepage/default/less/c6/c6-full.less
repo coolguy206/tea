@@ -1,8 +1,8 @@
 @import "../var.less";
-@c6-font-color: #4F4243;
+@c6-font-color: #fff;
 @c6-cta-color: #fff;
-@c6-cta-background:  #4F6EB1;
-@c6-h2-color: #4F6EB1;
+@c6-cta-background:  #4F4243;
+@c6-h2-color: #fff;
 @c6-h3-color-430: @c6-font-color;
 @c6-font-family: @gilroyb;
 
@@ -46,24 +46,25 @@
             @media screen and (max-width: 1679px) {
                 font-size: 1.1vw;
                 line-height: 1.6vw;
+                margin: 0 0 1vw;
             }
 
             @media screen and (max-width: 430px) {
                 font-size: 4.2vw;
-                margin: 0 0 8vw;
+                margin: 0 0 3vw;
                 color: #fff;
                 text-align: center;
-                text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+                // text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
             }
 
             color: #fff;
             font-family: @gilroyb;
             font-size: 18px;
             line-height: 28px;
-            text-align: left;
+            // text-align: left;
             letter-spacing: 4px;
             text-transform: uppercase;
-            // margin: 0 0 1vw;
+            margin: 0 0 20px;
             
         }
 
@@ -75,7 +76,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 11vw;
+                font-size: 12vw;
                 line-height: normal;
                 margin: 0 0 4vw;
                 // text-align: center !important;
@@ -93,7 +94,7 @@
             font-family: @c6-font-family;
             color: @c6-h2-color;
             font-size: 80px;
-            line-height: 90px;
+            line-height: 80px;
             // margin: 0 0 50px;
             
         }
@@ -128,7 +129,7 @@
                 width: 100%;
                 transform: translate(0, 0);
                 left: 0;
-                top: 5vw;
+                top: 11vw;
                 // margin: 10% 0 0 !important;
                 // top: 50%;
                 // left:0;
@@ -138,7 +139,7 @@
             position: absolute;
             transform: translate(-50%, -50%);
             top: 50%;
-            left: 50%;
+            left: 35%;
             width: 35%;
             text-align: center;
             
@@ -157,7 +158,7 @@
                     // flex-wrap: wrap;
                     // justify-content: center;
                     // margin: 110% 0 0;
-                    // top: -8vw;
+                    top: 120vw;
                     text-align: center;
                 }
 
@@ -167,7 +168,7 @@
 
                 a {
                     @media screen and (max-width:1679px) {
-                        width: 17vw;
+                        width: 20vw;
                     }
 
                     @media screen and(max-width: 430px) {
@@ -176,11 +177,11 @@
 
                     background: @c6-cta-background;
                     color: @c6-cta-color;   
-                    width: 293px;
+                    width: 336px;
                 }
             }
 
-            @import 'c6-back-to-school.less';
+            // @import 'c6-back-to-school.less';
         }
 
     }
