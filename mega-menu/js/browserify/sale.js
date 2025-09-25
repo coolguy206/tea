@@ -64,7 +64,7 @@ $(document).ready(function () {
     // $('.promo1-url').hide();
     $('.promo1-url.girl').show();
     // $('.promo1-url').show();
-    // $('.promo2-url').show();
+    $('.promo2-url').show();
     //  $('.promo3-url').show();
     //  $('.clearance-url').show();
     // $('.promo2-url').hide();
@@ -79,7 +79,7 @@ $(document).ready(function () {
     // $('.promo1-url').hide();
     $('.promo1-url.boy').show();
     // $('.promo1-url').show();
-    // $('.promo2-url').show();
+    $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo2-url').hide();
@@ -92,7 +92,7 @@ $(document).ready(function () {
   $('.dept-sale').hover(function () {
     $('.promo1-url.girl').show();
     // $('.promo1-url').show();
-    // $('.promo2-url').show();
+    $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
@@ -110,7 +110,7 @@ $(document).ready(function () {
     // $('.promo1-url.swim').show();
     $('.promo1-url.girl').show();
     // $('.promo1-url').show();
-    // $('.promo2-url').show();
+    $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -126,7 +126,7 @@ $(document).ready(function () {
     $('.promo1-url.baby-girl').show();
     // $('.promo1-url.baby-boy').show();
     // $('.promo1-url').show();
-    // $('.promo2-url').show();
+    $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
     // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -164,6 +164,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   var promo2 = href;
   var promo3 = href;
   var clearance = href;
+  var promo1Elem = ".promo1-url";
   var girl = ".promo1-url.girl";
   var boy = ".promo1-url.boy";
   var babyGirl = ".promo1-url.baby-girl";
@@ -175,24 +176,31 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   var toddlerBoy = ".promo1-url.boy";
   var newborn = "";
   // let newborn = `.promo1-url.newborn`;
-
+  var showNewborn = false;
   var swim = ".promo1-url.girl";
   var dress = ".promo1-url.girl";
+  var promo2Elem = ".promo2-url";
+
+  // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
+
   switch (href) {
     case '/girls-clothing/new-arrivals':
       promo1 = _urls.urls.promo.girl;
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
-      $(girl).show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (girl !== "") {
+        $(girl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -201,15 +209,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
-      $(boy).show();
-      // $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (boy !== "") {
+        $(boy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -218,15 +229,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
-      $(babyGirl).show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyGirl !== "") {
+        $(babyGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -235,15 +249,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.baby.boy;
       promo3 = _urls.urls.promo.sale.baby.boy;
       clearance = _urls.urls.promo.clearance.baby.boy;
-      $(babyBoy).show();
-      // $('.promo1-url.baby-boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyBoy !== "") {
+        $(babyBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -252,16 +269,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
-      $(toddlerGirl).show();
-      // $('.promo1-url.toddler-girl').show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerGirl !== "") {
+        $(toddlerGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -270,16 +289,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.toddler.boy;
       promo3 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy;
-      $(toddlerBoy).show();
-      // $('.promo1-url.toddler-boy').show();
-      //  $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerBoy !== "") {
+        $(toddlerBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -291,16 +312,16 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       clearance = _urls.urls.promo.clearance.baby.newborn;
       if (newborn !== "") {
         $(newborn).show();
+      } else if (showNewborn) {
+        $(promo1Elem).show();
       }
-      // $('.promo1-url.newborn').show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -310,16 +331,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
-      $(swim).show();
-      // $('.promo1-url.swim').show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (swim !== "") {
+        $(swim).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -329,16 +352,18 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
-      $(dress).show();
-      // $('.promo1-url.swim').show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (dress !== "") {
+        $(dress).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -365,6 +390,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
   var promo2 = href;
   var promo3 = href;
   var clearance = href;
+  var promo1Elem = ".promo1-url";
   var girl = ".promo1-url.girl";
   var boy = ".promo1-url.boy";
   var babyGirl = ".promo1-url.baby-girl";
@@ -376,25 +402,32 @@ var switchSale = exports.switchSale = function switchSale(href) {
   var toddlerBoy = ".promo1-url.boy";
   var newborn = "";
   // let newborn = `.promo1-url.newborn`;
-
+  var showNewborn = false;
   var swim = ".promo1-url.girl";
   var dress = ".promo1-url.girl";
+  var promo2Elem = ".promo2-url";
+
+  // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
+
   switch (href) {
     case '/sale/girls-clothing/view-all':
       promo1 = _urls.urls.promo.girl;
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
-      $(girl).show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (girl !== "") {
+        $(girl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -403,16 +436,19 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
-      $(boy).show();
-      // $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (boy !== "") {
+        $(boy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -421,16 +457,19 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
-      $(babyGirl).show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyGirl !== "") {
+        $(babyGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.baby-girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -439,16 +478,19 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.baby.boy;
       promo3 = _urls.urls.promo.sale.baby.boy;
       clearance = _urls.urls.promo.clearance.baby.boy;
-      $(babyBoy).show();
-      // $('.promo1-url.baby-boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyBoy !== "") {
+        $(babyBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.baby-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -457,17 +499,19 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
-      $(toddlerGirl).show();
-      // $('.promo1-url.toddler-girl').show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerGirl !== "") {
+        $(toddlerGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.toddler-girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -476,17 +520,19 @@ var switchSale = exports.switchSale = function switchSale(href) {
       promo2 = _urls.urls.promo.select.toddler.boy;
       promo3 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy;
-      $(toddlerBoy).show();
-      // $('.promo1-url.toddler-boy').show();
-      // $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerBoy !== "") {
+        $(toddlerBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.toddler-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -497,17 +543,17 @@ var switchSale = exports.switchSale = function switchSale(href) {
       clearance = _urls.urls.promo.clearance.baby.newborn;
       if (newborn !== "") {
         $(newborn).show();
+      } else if (showNewborn) {
+        $(promo1Elem).show();
       }
-      // $('.promo1-url.newborn').show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (promo2Elem !== "") {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       //  $('.promo2-url.newborn').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;

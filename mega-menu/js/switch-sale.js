@@ -8,6 +8,8 @@ export const switchSale = (href) => {
   let promo3 = href;
   let clearance = href;
 
+  let promo1Elem = `.promo1-url`;
+
   let girl = `.promo1-url.girl`;
   let boy = `.promo1-url.boy`;
   let babyGirl = `.promo1-url.baby-girl`;
@@ -20,9 +22,14 @@ export const switchSale = (href) => {
 
   let newborn = ``;
   // let newborn = `.promo1-url.newborn`;
+  let showNewborn = false;
 
   let swim = `.promo1-url.girl`;
   let dress = `.promo1-url.girl`;
+
+  let promo2Elem = `.promo2-url`;
+
+  // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
 
   switch (href) {
 
@@ -31,16 +38,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
-      $(girl).show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (girl !== ``) {
+        $(girl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -50,16 +61,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
-      $(boy).show();
-      // $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (boy !== ``) {
+        $(boy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -69,16 +84,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
-      $(babyGirl).show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyGirl !== ``) {
+        $(babyGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.baby-girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -88,16 +107,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.baby.boy;
       promo3 = urls.promo.sale.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
-      $(babyBoy).show();
-      // $('.promo1-url.baby-boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (babyBoy !== ``) {
+        $(babyBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.baby-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -107,17 +130,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
-      $(toddlerGirl).show();
-      // $('.promo1-url.toddler-girl').show();
-      // $('.promo1-url.girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerGirl !== ``) {
+        $(toddlerGirl).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.toddler-girl').show();
       // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -127,17 +153,20 @@ export const switchSale = (href) => {
       promo2 = urls.promo.select.toddler.boy;
       promo3 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
-      $(toddlerBoy).show();
-      // $('.promo1-url.toddler-boy').show();
-      // $('.promo1-url.boy').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+      if (toddlerBoy !== ``) {
+        $(toddlerBoy).show();
+      } else {
+        $(promo1Elem).show();
+      }
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       // $('.promo2-url.toddler-boy').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
@@ -149,17 +178,18 @@ export const switchSale = (href) => {
       clearance = urls.promo.clearance.baby.newborn;
       if (newborn !== ``) {
         $(newborn).show();
+      } else if (showNewborn) {
+        $(promo1Elem).show();
       }
-      // $('.promo1-url.newborn').show();
-      // $('.promo1-url.baby-girl').show();
-      // $('.promo1-url').show();
-      // $('.promo2-url').show();
+
+      if (promo2Elem !== ``) {
+        $(promo2Elem).show();
+      }
+
       // $('.promo3-url').show();
       // $('.clearance-url').show();
       //  $('.promo2-url.newborn').show();
       // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.promo1-url').hide();
-      // $('.promo2-url').hide();
       // $('.clearance-url').hide();
 
       break;
