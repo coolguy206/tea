@@ -7,6 +7,8 @@ export const switchNewArrivals = (href) => {
   let promo3 = href;
   let clearance = href;
 
+  let showPromo1 = false;
+
   let promo1Elem = `.promo1-url`;
 
   let girl = `.promo1-url.girl`;
@@ -36,10 +38,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
-      if (girl !== ``) {
-        $(girl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (girl !== ``) {
+          $(girl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -58,10 +62,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
-      if (boy !== ``) {
-        $(boy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (boy !== ``) {
+          $(boy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -80,10 +86,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
-      if (babyGirl !== ``) {
-        $(babyGirl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (babyGirl !== ``) {
+          $(babyGirl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -102,10 +110,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.baby.boy;
       promo3 = urls.promo.sale.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
-      if (babyBoy !== ``) {
-        $(babyBoy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (babyBoy !== ``) {
+          $(babyBoy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -124,10 +134,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
-      if (toddlerGirl !== ``) {
-        $(toddlerGirl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (toddlerGirl !== ``) {
+          $(toddlerGirl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -146,10 +158,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.toddler.boy;
       promo3 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
-      if (toddlerBoy !== ``) {
-        $(toddlerBoy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (toddlerBoy !== ``) {
+          $(toddlerBoy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -169,10 +183,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
-      if (newborn !== ``) {
-        $(newborn).show();
-      } else if (showNewborn) {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (newborn !== ``) {
+          $(newborn).show();
+        } else if (showNewborn) {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -192,10 +208,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
-      if (swim !== ``) {
-        $(swim).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (swim !== ``) {
+          $(swim).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
@@ -215,10 +233,12 @@ export const switchNewArrivals = (href) => {
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
-      if (dress !== ``) {
-        $(dress).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (dress !== ``) {
+          $(dress).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
 
       if (promo2Elem !== ``) {
