@@ -11,6 +11,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   var promo2 = href;
   var promo3 = href;
   var clearance = href;
+  var showPromo1 = false;
   var promo1Elem = ".promo1-url";
   var girl = ".promo1-url.girl";
   var boy = ".promo1-url.boy";
@@ -36,10 +37,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
-      if (girl !== "") {
-        $(girl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (girl !== "") {
+          $(girl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -56,10 +59,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
-      if (boy !== "") {
-        $(boy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (boy !== "") {
+          $(boy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -76,10 +81,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
-      if (babyGirl !== "") {
-        $(babyGirl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (babyGirl !== "") {
+          $(babyGirl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -96,10 +103,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.baby.boy;
       promo3 = _urls.urls.promo.sale.baby.boy;
       clearance = _urls.urls.promo.clearance.baby.boy;
-      if (babyBoy !== "") {
-        $(babyBoy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (babyBoy !== "") {
+          $(babyBoy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -116,10 +125,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
-      if (toddlerGirl !== "") {
-        $(toddlerGirl).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (toddlerGirl !== "") {
+          $(toddlerGirl).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -136,10 +147,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.toddler.boy;
       promo3 = _urls.urls.promo.sale.toddler.boy;
       clearance = _urls.urls.promo.clearance.toddler.boy;
-      if (toddlerBoy !== "") {
-        $(toddlerBoy).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (toddlerBoy !== "") {
+          $(toddlerBoy).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -157,10 +170,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
-      if (newborn !== "") {
-        $(newborn).show();
-      } else if (showNewborn) {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (newborn !== "") {
+          $(newborn).show();
+        } else if (showNewborn) {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -178,10 +193,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
-      if (swim !== "") {
-        $(swim).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (swim !== "") {
+          $(swim).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
@@ -199,10 +216,12 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
-      if (dress !== "") {
-        $(dress).show();
-      } else {
-        $(promo1Elem).show();
+      if (showPromo1) {
+        if (dress !== "") {
+          $(dress).show();
+        } else {
+          $(promo1Elem).show();
+        }
       }
       if (promo2Elem !== "") {
         $(promo2Elem).show();
