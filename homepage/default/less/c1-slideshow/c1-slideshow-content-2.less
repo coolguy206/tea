@@ -8,7 +8,7 @@
     @media screen and (max-width: 430px) {
         width: 100%;
         left: 0;
-        top: 11vw;
+        top: 91vw !important;
         transform: translateX(0);
     }
 
@@ -26,44 +26,50 @@
 
     h3 {
         @media screen and (max-width: 1679px) {
-            top: -33vw;
-            left: 8vw;
+            // top: -33vw;
+            // left: 8vw;
         }
 
         @media screen and (max-width: 430px) {
             color: @c1-2-h3-color-431;
             text-shadow: none;
-            font-size: 4vw !important;
-            top: 0;
-            left: 0;
-            position: relative;
+            font-size: 3vw !important;
+            // top: 0;
+            // left: 0;
+            // position: relative;
         }
 
         color: @c1-2-h3-color;
         text-align: center;
+        margin: 0;
         // text-shadow: @text-shadow;
 
-        position: absolute;
-        top: -544px;
-        left: 121px;
+        // position: absolute;
+        // top: -544px;
+        // left: 121px;
     }
 
     h2 {
         @media screen and (max-width: 1679px) {
-            font-size: 5vw !important;
-            line-height: 5vw !important;
+            font-size: 7vw !important;
+            line-height: 7vw !important;
+            margin: 1vw 0 2vw;
         }
 
         @media screen and (max-width: 430px) {
             color: @c1-2-h2-color-431;
-            font-size: 10vw !important;
-            line-height: 13vw !important;
+            font-size: 20vw !important;
+            line-height: 21vw !important;
+            margin: 4vw 0 !important;
         }
 
         color: @c1-2-h2-color;
         text-align: center;
         font-family: @c1-2-h2-font-family;
         // text-shadow: @text-shadow;
+        font-size: 120px !important;
+        line-height: 110px !important;
+        margin: 20px 0 30px;
     }
 
     p {
@@ -81,8 +87,10 @@
 
         &.the-flex {
             @media screen and (max-width: 430px) {
-                top: @c1-2-the-flex-top-431;
+                // top: @c1-2-the-flex-top-431;
                 justify-content: center;
+                top: 0;
+                position: relative;
             }
 
             margin: 0 auto;
@@ -100,13 +108,21 @@
                 background: @c1-2-cta-background-430;
             }
 
+            &.mobile {
+                @media screen and (max-width: 430px) {
+                    display: flex;
+                }
+
+                display:none;
+            }
+
             &.cta5 {
                 @media screen and (max-width: 1679px) {
                     width: 17vw;
                 }
 
                 @media screen and (max-width: 430px) {
-                    width: 49vw;
+                    width: 38vw;
                 }
 
                 width: 297px;
@@ -114,6 +130,7 @@
 
             color: @c1-2-cta-color;
             background: @c1-2-cta-background;
+            // background: none;
             width: @c1-2-cta-size;
         }
     }

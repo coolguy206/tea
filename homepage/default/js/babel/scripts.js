@@ -11,7 +11,7 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  $('.hp .shop-slideshow').append($('.the-sliders'));
+  // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
@@ -26,16 +26,16 @@ $(document).ready(function () {
   //? COUNTDOWN.JS
   // countdown('2025/07/22 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  new _glide["default"]('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false
+  }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',

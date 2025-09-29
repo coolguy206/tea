@@ -1,0 +1,39 @@
+@import "var.less";
+
+.container-promo-header.gift-save {
+
+
+    .the-content.gift-save {
+        @media screen and (max-width: 1679px) {}
+
+        @media screen and (max-width: 430px) {}
+
+        display: block;
+
+        div {
+            @media screen and (max-width: 430px) {
+                flex-wrap: wrap;
+            }
+
+            display: flex;
+
+            a {
+                @media screen and (max-width: 430px) {
+                    flex-basis: 50%;
+                }
+
+                flex-basis: 100%;
+
+                &.cta5 {
+                    @media screen and (max-width: 430px) {
+                        flex-basis: 100%;
+                    }
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
