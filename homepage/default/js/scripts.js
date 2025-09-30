@@ -10,11 +10,26 @@ import {
 } from './tracking.js';
 import Glide from '@glidejs/glide'
 
+
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
+  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone = $('.new-arrivals-slider').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount = $('.hp .new-arrivals-slider').length;
+  if (sliderCount == 0) {
+    $('.hp .shop-slideshow').append(theClone);
+  }
+
+  //? HIDE ALL THE SLIDERS
+  $('.new-arrivals-slider').hide()
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .new-arrivals-slider').show()
+
   // $('.hp .shop-slideshow').append($('.the-sliders'));
-    // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
+  // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
