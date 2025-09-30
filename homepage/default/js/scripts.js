@@ -23,6 +23,27 @@ $(document).ajaxComplete(function (event, xhr, options) {
     $('.hp .shop-slideshow').append(theClone);
   }
 
+  new Glide('.hp .new-arrivals-slider.all .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|',
+      },
+    }
+  }).mount();
+
   //? HIDE ALL THE SLIDERS
   $('.new-arrivals-slider').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM

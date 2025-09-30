@@ -72,6 +72,26 @@ $(document).ajaxComplete(function (event, xhr, options) {
   if (sliderCount == 0) {
     $('.hp .shop-slideshow').append(theClone);
   }
+  new _glide["default"]('.hp .new-arrivals-slider.all .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   //? HIDE ALL THE SLIDERS
   $('.new-arrivals-slider').hide();
