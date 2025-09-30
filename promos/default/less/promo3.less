@@ -2,6 +2,7 @@
 @promo3Color1: #fff;
 @promo3Color2: #F5AFBD;
 @promo3Color3: #fff;
+@promo3Details: #45556C;
 
 &.promo3 {
     background: @promo3Bg;
@@ -126,8 +127,19 @@
         }
 
         &.details {
+            @media screen and (max-width: 430px){
+                background: @promo3Color2;
+                border-color: @promo3Bg;
+            }
+
+            
+
             a {
+                @media screen and (max-width: 430px){
+                    color: @promo3Details;
+                }
                 color: @promo3Color3;
+                
             }
         }
     }

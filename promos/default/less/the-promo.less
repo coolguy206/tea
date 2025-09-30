@@ -23,7 +23,9 @@
 
 //? SHOW & HIDE CLONE OF .PROMOS 
 header.site-header {
-  .promos, .the-promo.countdown-promo {
+
+  .promos,
+  .the-promo.countdown-promo {
     display: none;
   }
 
@@ -277,14 +279,24 @@ header.site-header {
 
         @media screen and (max-width: 430px) {
           // left: 78%;
-          left: 50%;
+          // left: 50%;
           // top: 74%;
           // top: 78%;
-          top: 76%;
+          // top: 76%;
           transform: translate(-50%, 0);
           // position: relative;
           // display: none;
           // margin: 2% 0 0;
+
+          position: absolute;
+          top: 16vw;
+          background: #F5AFBD;
+          padding: 3vw;
+          border: 1px solid #45556C;
+          z-index: 99;
+          left: 83vw;
+          border-radius: 1vw;
+          font-weight: bold;
         }
 
         left: 91%;
@@ -297,10 +309,16 @@ header.site-header {
             font-size: 12px;
           }
 
+          @media screen and (max-width: 430px) {
+            text-transform: uppercase;
+            color: #45556C;
+            font-size: 3vw;
+          }
+
           font-size: 15px;
           line-height: 18px;
           // color: #fff;
-          text-decoration: none;
+          text-decoration: underline;
           font-family: gilroy-regular;
           text-transform: capitalize;
           letter-spacing: 0;
