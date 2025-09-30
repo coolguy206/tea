@@ -6,7 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `0926`;
+var num = `0930`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
@@ -22,14 +22,14 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/Site/hp/`;
-var readFilePath = `Site/${num}/Site/mega/`;
-// var readFilePath = `Site/${num}/02 Handoff/hp/`;
+// var readFilePath = `Site/${num}/Site/mega/`;
+var readFilePath = `Site/${num}/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-// var writeFilePath = `promos/headers/dev/images/new-arrivals/`;
+// var writeFilePath = `promos/headers/dev/images/promo/gift-save/`;
 // var writeFilePath = `landing-page/school-days/sign-up/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;

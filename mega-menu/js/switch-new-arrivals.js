@@ -8,8 +8,12 @@ export const switchNewArrivals = (href) => {
   let clearance = href;
 
   let showPromo1 = false;
+  let showPromo2 = false;
+  let showPromo3 = true;
 
   let promo1Elem = `.promo1-url`;
+  let promo2Elem = `.promo2-url`;
+  let promo3Elem = `.promo3-url`;
 
   let girl = `.promo1-url.girl`;
   let boy = `.promo1-url.boy`;
@@ -28,7 +32,7 @@ export const switchNewArrivals = (href) => {
   let swim = `.promo1-url.girl`;
   let dress = `.promo1-url.girl`;
 
-  let promo2Elem = `.promo2-url`;
+
 
   // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
 
@@ -46,8 +50,12 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -70,8 +78,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -94,8 +107,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -118,8 +136,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -142,8 +165,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -166,8 +194,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -191,8 +224,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -216,8 +254,13 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -241,8 +284,12 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-      if (promo2Elem !== ``) {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
