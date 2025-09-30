@@ -11,7 +11,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   var promo3 = href;
   var clearance = href;
   var showPromo1 = false;
+  var showPromo2 = false;
+  var showPromo3 = true;
   var promo1Elem = ".promo1-url";
+  var promo2Elem = ".promo2-url";
+  var promo3Elem = ".promo3-url";
   var girl = ".promo1-url.girl";
   var boy = ".promo1-url.boy";
   var babyGirl = ".promo1-url.baby-girl";
@@ -26,7 +30,6 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
   var showNewborn = false;
   var swim = ".promo1-url.girl";
   var dress = ".promo1-url.girl";
-  var promo2Elem = ".promo2-url";
 
   // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
 
@@ -43,8 +46,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -65,8 +71,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -87,8 +96,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -109,8 +121,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -131,8 +146,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -153,8 +171,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -176,8 +197,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -199,8 +223,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -222,8 +249,11 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
           $(promo1Elem).show();
         }
       }
-      if (promo2Elem !== "") {
+      if (showPromo2) {
         $(promo2Elem).show();
+      }
+      if (showPromo3) {
+        $(promo3Elem).show();
       }
 
       // $('.promo3-url').show();
