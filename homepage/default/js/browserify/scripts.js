@@ -65,6 +65,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
+  $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
