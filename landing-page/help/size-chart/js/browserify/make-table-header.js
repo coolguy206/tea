@@ -3,33 +3,39 @@
 
 var makeTd = require('./make-td.js');
 module.exports = function (i, val, dept, subcat) {
-  //function to make table header because of shoes + accessories have multiple tables
+  //? function to make table header because of shoes + accessories have multiple tables
 
-  //add new table
+  //? add new table
   $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
   // console.log('rows: ', val);
+
   rows = val.merges[0].endColumnIndex - 1;
-  colspan = val.merges[0].endColumnIndex;
+
+  //? if newborn change the colspan to 7 if all categories otherwise use the endColumnIndex
+  if (subcat == "all categories" && dept == "newborn") {
+    colspan = 7;
+  } else {
+    colspan = val.merges[0].endColumnIndex;
+  }
   // console.log(colspan);
 
-  //add colspan to .size-chart-header
+  //? add colspan to .size-chart-header
   $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
   return rows;
 };
-
 
 },{"./make-td.js":2}],2:[function(require,module,exports){
 "use strict";
 
 module.exports = function (k, row, rows, tableElem) {
-  //function to make th <td>
+  //? function to make the <td>
 
   // console.log(tableElem);
   // console.log(k, row, rows);
 
-  //add the data <td>
+  //? add the data <td>
   $.each(row.values, function (l, td) {
-    //loop only to the rows variable
+    //? loop only to the rows variable
     if (l <= rows) {
       var content;
       var fraction;
@@ -37,6 +43,8 @@ module.exports = function (k, row, rows, tableElem) {
       // console.log(l, rows, row);
 
       if (td.formattedValue !== undefined) {
+        //? formatting to match design
+
         content = td.formattedValue;
         // console.log(content);
         content = content.toLowerCase();
@@ -46,7 +54,6 @@ module.exports = function (k, row, rows, tableElem) {
         if (content.indexOf('inches') !== -1 || content.indexOf('pounds') !== -1) {
           content = content.split('\n');
           // console.log(content);
-
           content = content[0] + '<span>' + content[1] + '</span>';
         }
         if (content == 'shoe size') {
@@ -54,9 +61,10 @@ module.exports = function (k, row, rows, tableElem) {
         }
         fraction = td.formattedValue;
         // console.log('the fraction: ',fraction);
-        //for shoes + accessories if not L/XL
+
+        //? for shoes + accessories if not L/XL
         if (fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4') {
-          //if cell has two fractions example 58 1/2 - 61 1/2
+          //? if cell has two fractions example 58 1/2 - 61 1/2
           if (fraction.indexOf('/') !== -1 && fraction.indexOf('-') !== -1) {
             fraction = fraction.split('-');
             var twoFrac = [];
@@ -71,22 +79,22 @@ module.exports = function (k, row, rows, tableElem) {
 
             // console.log(twoFrac);
 
-            //output
-            //example 61 1/2 - 64
+            //? output
+            //? example 61 1/2 - 64
             if (twoFrac[1].indexOf('/') !== -1 && twoFrac[3] == undefined) {
               var twoFracA = twoFrac[1].split('/');
               twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + '</td>');
             }
 
-            //example 61 - 61 1/2
+            //? example 61 - 61 1/2
             else if (twoFrac[1].indexOf('/') == -1 && twoFrac[2].indexOf('/') !== -1) {
               var twoFracA = twoFrac[2].split('/');
               twoFrac[2] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
             }
 
-            //example 58 1/2 - 61 1/2
+            //? example 58 1/2 - 61 1/2
             else if (twoFrac[1].indexOf('/') !== -1 && twoFrac[1] !== undefined && twoFrac[3].indexOf('/') !== -1 && twoFrac[3] !== undefined) {
               var twoFracA = twoFrac[1].split('/');
               twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
@@ -94,10 +102,9 @@ module.exports = function (k, row, rows, tableElem) {
               twoFrac[3] = '<sup class="frac">' + twoFracB[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracB[1] + '</span>';
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] + '</td>');
             }
-          }
+          } else {
+            //? only one fraction
 
-          //only one fraction
-          else {
             fraction = fraction.split(' ');
             $.each(fraction, function (m, frac) {
               // console.log(m, frac);
@@ -107,7 +114,7 @@ module.exports = function (k, row, rows, tableElem) {
               }
             });
 
-            //output
+            //? output
             if (theFraction !== undefined && theFraction.indexOf('/') !== -1) {
               theFraction = theFraction.split('/');
               var htmlFraction = '<sup class="frac">' + theFraction[0] + '</sup>&frasl;<span class="frac denominator">' + theFraction[1] + '</span>';
@@ -116,9 +123,9 @@ module.exports = function (k, row, rows, tableElem) {
               $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + content + '</td>');
             }
           }
-
-          //output sizes 'L/XL','2T/2','3T/3','4T/4'
         } else if (fraction == 'L/XL' || fraction == '2T/2' || fraction == '3T/3' || fraction == '4T/4') {
+          //? output sizes 'L/XL','2T/2','3T/3','4T/4'
+
           // console.log('yo buddy: ', fraction);
           $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction + '</td>');
         }
@@ -126,6 +133,5 @@ module.exports = function (k, row, rows, tableElem) {
     }
   });
 };
-
 
 },{}]},{},[1]);

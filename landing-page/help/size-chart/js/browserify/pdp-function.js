@@ -1,156 +1,971 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
-//on .size-chart click
+module.exports = function (sizeChartArr) {
+  //? function to change the cats dropdown
+  //? get the value of the .department
+
+  var dept = $('.size-chart-container select.department').val();
+  $.each(sizeChartArr, function (i, val) {
+    //? get the cats that match the dept
+    if (val.dept == dept) {
+      //?loop through the cats and add to page
+      $.each(val.cat, function (j, arr) {
+        var catM = '<option value="' + arr.name + '">' + arr.name + '</option>';
+        $('.size-chart-container select.category').append(catM);
+      });
+    }
+  });
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+//? function to change the 1st row of the size chart table
+module.exports = function () {
+  var d = $('.size-chart-container select.department').val();
+  var c = $('.size-chart-container select.category').val();
+  var str;
+  if (d == 'newborn') {
+    str = d + ' size chart';
+  } else if (c == 'sweater + outerwear') {
+    str = d + ' outerwear size chart (sweaters + jackets)';
+  } else {
+    str = d + ' ' + c + ' size chart';
+  }
+  $('.size-chart-table table .size-chart-header th').html(str);
+};
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+module.exports = function () {
+  //? function when click shoe brand go to external url
+
+  //? collapse ul.brand on .brands click
+  $('.brands, table, .measure-tips').click(function () {
+    $('ul.brand').removeAttr('style');
+  });
+
+  //?expand or collapse
+  //desktop dropdown to expand and collapse
+  $('ul.brand').click(function () {
+    //?check if has style attr remove it
+    if ($(this).attr('style') !== undefined) {
+      $(this).removeAttr('style');
+    } else {
+      //? if doesn't have style attr add css to expand
+      $(this).css('height', 'auto');
+    }
+  });
+
+  //? on .shoes change
+  $('.size-chart-table').find('ul.brand li').click(function () {
+    var txt = $(this).text();
+    txt = txt.toLowerCase();
+    var brand = $(this).attr('data-url');
+    if (txt !== 'please select a brand') {
+      window.open(brand, '_blank');
+    }
+  });
+};
+
+},{}],4:[function(require,module,exports){
+"use strict";
+
+module.exports = function (dept, cat) {
+  //? function to return cat if dept is baby
+
+  //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
+  if (dept == "baby girl") {
+    if (cat == "dresses, tops, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  } else if (dept == "baby boy") {
+    if (cat == "tees + shirts, bottoms, swim, sweater + outerwear, pajamas") {
+      cat = "dresses,tops,tees + shirts,bodysuits,bottoms,swim,sweater + outerwear,pajamas";
+    }
+  }
+  return cat;
+};
+
+},{}],5:[function(require,module,exports){
+"use strict";
+
+var changeRow = require('./change-first-row-table.js');
+// const changeOrder = require('./change-order.js');
+var makeBrands = require('./make-shoe-brands.js');
+var makeTable = require('./make-table.js');
+
+//? function to execute and remake the tables
+module.exports = function (sheets) {
+  //? add the table header
+  changeRow();
+
+  //? make the table
+  makeTable(sheets);
+
+  //? if shoes + accessories or sweaters + outerwear add the brands drop down
+  makeBrands();
+
+  //re-order the tables if shoes + accessories
+  // changeOrder();
+};
+
+},{"./change-first-row-table.js":2,"./make-shoe-brands.js":9,"./make-table.js":11}],6:[function(require,module,exports){
+"use strict";
+
+var makeTable = require('./make-table.js');
+module.exports = function (sheets, callback) {
+  //? function to get the sheets from google sheets and make the tables
+
+  //? sheetId
+  var sheetId = "1ZzzDWxntUHpk4pSavmAgCSSUpNpmmbC1xkyKIH_2P8c";
+
+  //? api key
+  // var hidden = 'AIzaSyDHknRbkWGT1ozvC_H_rNtFlLsGGjXFs';
+  var hidden = 'AIzaSyCya37AW8ylhzoeU3FDFuUG824MfdW8wY8';
+  var sheetUrl = "https://sheets.googleapis.com/v4/spreadsheets/".concat(sheetId, "?key=").concat(hidden, "&includeGridData=true");
+
+  // console.log(sheetUrl);
+
+  //? if sheets is undefined make the $.get call else just call makeTable() and remove the loading
+  if (sheets == undefined) {
+    console.log('no sheets go get sheets');
+
+    //? make the get call
+    $.getJSON(sheetUrl, function (data) {
+      // console.log(data.sheets);
+      sheets = data.sheets;
+      // console.log(sheets)
+
+      //? make the table
+      makeTable(sheets);
+
+      //? remove the loading
+      $('.tables-loading').remove();
+
+      //? a callback function to pass sheets back to pdp-function.js
+      callback(sheets);
+    });
+  } else {
+    console.log('sheets found');
+    // console.log(sheets);
+
+    //? make the table
+    makeTable(sheets);
+
+    //? remove the loading
+    $('.tables-loading').remove();
+  }
+};
+
+},{"./make-table.js":11}],7:[function(require,module,exports){
+"use strict";
+
+function _toConsumableArray(r) { return _arrayWithoutHoles(r) || _iterableToArray(r) || _unsupportedIterableToArray(r) || _nonIterableSpread(); }
+function _nonIterableSpread() { throw new TypeError("Invalid attempt to spread non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."); }
+function _unsupportedIterableToArray(r, a) { if (r) { if ("string" == typeof r) return _arrayLikeToArray(r, a); var t = {}.toString.call(r).slice(8, -1); return "Object" === t && r.constructor && (t = r.constructor.name), "Map" === t || "Set" === t ? Array.from(r) : "Arguments" === t || /^(?:Ui|I)nt(?:8|16|32)(?:Clamped)?Array$/.test(t) ? _arrayLikeToArray(r, a) : void 0; } }
+function _iterableToArray(r) { if ("undefined" != typeof Symbol && null != r[Symbol.iterator] || null != r["@@iterator"]) return Array.from(r); }
+function _arrayWithoutHoles(r) { if (Array.isArray(r)) return _arrayLikeToArray(r); }
+function _arrayLikeToArray(r, a) { (null == a || a > r.length) && (a = r.length); for (var e = 0, n = Array(a); e < a; e++) n[e] = r[e]; return n; }
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to build the newborn tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array to loop through and change the string to match the sheetCatArr
+  var nbCatArr = cat.split(',');
+  $.each(nbCatArr, function (j, str) {
+    if (str == " Booties" || str == " Bibs") {
+      nbCatArr[j] = "all categories, accessories";
+    } else if (str == " hats") {
+      nbCatArr[j] = "all categories, hats";
+    }
+  });
+
+  //? remove duplicates
+  var uniqueNbCatArr = _toConsumableArray(new Set(nbCatArr));
+  // console.log(uniqueNbCatArr);
+
+  //? find the matching sheetDepts for newborn
+  if (sheetDept == dept) {
+    //? loop through uniqueNbCatArr and find matching data and output
+    $.each(uniqueNbCatArr, function (j, nb) {
+      if (nb == sheetCatArr) {
+        var rows;
+
+        //? change the headers for the newborn tables
+        if (nb == "all categories, accessories") {
+          nb = "Booties & Bibs";
+        } else if (nb == "all categories, hats") {
+          nb = "hats";
+        }
+
+        //? THIS MAKES THE MULTIPLE TABLES and table headers
+        rows = makeTableHeader(i, val, dept, nb);
+
+        //? output the tables and contents
+        outputTable(i, val, rows);
+
+        //? stop the function
+        return false;
+      }
+    });
+  }
+};
+
+},{"./make-table-header.js":10,"./output-table.js":15}],8:[function(require,module,exports){
+"use strict";
+
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+module.exports = function (cat, sheetDept, dept, sheetCatArr, val, i) {
+  //? function to make the shoes + accessories tables
+
+  //? hide the top table
+  $('.size-chart-table .the-table').hide();
+
+  //? split the selected categories into an array
+  var catArr = cat.split(',');
+
+  //? loop through the array and check if any of the values match
+  $.each(catArr, function (k, c) {
+    // console.log(k,c);
+
+    //? this var holds the actual category from the sheets because the format is shoes + accessories,brand
+    var shoesAccess = sheetCatArr.split(',')[1];
+
+    //? skip shoe + accessories but match the rest eg: socks & hats
+    if (c !== 'shoes + accessories' && shoesAccess == c) {
+      // console.log('match found');
+      // console.log(shoesAccess, c);
+
+      var rows;
+
+      //? THIS MAKES THE MULTIPLE TABLES and table headers
+      rows = makeTableHeader(i, val, dept, c);
+
+      //? output the table contents
+      outputTable(i, val, rows);
+
+      //? stop the function
+      return false;
+    }
+  });
+};
+
+},{"./make-table-header.js":10,"./output-table.js":15}],9:[function(require,module,exports){
+"use strict";
+
+var brandChange = require('./change-shoe-brand.js');
+var sizeChartArr = require('./measuring-tips.js');
+var shoeBrands = require('./shoe-brands.js');
+module.exports = function () {
+  //? function to make the brand drop down for shoes or sweaters
+
+  //? remove .brands
+  $('.brands, .brands-dropdown').remove();
+  var dept = $('.size-chart-container select.department').val();
+  var cat = $('.size-chart-container select.category').val();
+
+  //? only execute if sweaters or shoes
+  if (cat == 'sweater + outerwear' || cat.indexOf('shoes + accessories') !== -1) {
+    //?make the element to add to the page
+    var elem1 = '<div class="brands"></div>';
+    var elem2 = '<div class="brands-dropdown"></div>';
+    var h2;
+    var text = '<p>Please select a brand from the menu below to view the size chart. Size chart will open in a new window.</p>';
+    var select = $('<select class="brand" onchange="window.open(this.value)"><option>Please select a brand</option></select>');
+
+    //? if shoes + accessories
+    if (cat.indexOf('shoes + accessories') !== -1) {
+      h2 = '<h2>' + dept + ' shoes size chart</h2>';
+
+      //? add the <option>
+      //? loop through the .sizeChartArr
+      $.each(sizeChartArr, function (i, val) {
+        //? find the matched dept
+        if (dept == val.dept) {
+          //? loop through dept shoes
+          $.each(val.shoes, function (j, shoe) {
+            //? loop through the shoeBrands
+            $.each(shoeBrands, function (k, brand) {
+              //? if match output
+              if (shoe == brand.brand) {
+                var option = '<option value="' + brand.url + '">' + shoe + '</option>';
+                $(select).append(option);
+              }
+            });
+          });
+        }
+      });
+    } else if (cat == 'sweater + outerwear') {
+      //? else if sweaters + outerwear
+      h2 = '<h2>' + dept + ' outerwear size chart (other brands)</h2>';
+      $(select).append('<option value="https://www.patagonia.com/size-boys-girls.html">patagonia</option>');
+    }
+
+    // console.log(h2, text, select);
+
+    //?append the elements into .brands
+    var brandsContainer = $(elem1).append(h2, text);
+    var brandsDropdown = $(elem2).append(select);
+
+    //? add to page
+    $('.size-chart-table').append(brandsContainer);
+    $('.size-chart-table').append(brandsDropdown);
+
+    //? on .brand change
+    brandChange();
+  }
+};
+
+},{"./change-shoe-brand.js":3,"./measuring-tips.js":14,"./shoe-brands.js":19}],10:[function(require,module,exports){
+"use strict";
+
+var makeTd = require('./make-td.js');
+module.exports = function (i, val, dept, subcat) {
+  //? function to make table header because of shoes + accessories have multiple tables
+
+  //? add new table
+  $('.size-chart-table').append('<table data-num="' + i + '"><tr class="size-chart-header"><th>' + dept + ' ' + subcat + ' size chart</th></tr></table>');
+  // console.log('rows: ', val);
+
+  rows = val.merges[0].endColumnIndex - 1;
+
+  //? if newborn change the colspan to 7 if all categories otherwise use the endColumnIndex
+  if (subcat == "all categories" && dept == "newborn") {
+    colspan = 7;
+  } else {
+    colspan = val.merges[0].endColumnIndex;
+  }
+  // console.log(colspan);
+
+  //? add colspan to .size-chart-header
+  $('.size-chart-table table[data-num="' + i + '"] th').attr('colspan', colspan);
+  return rows;
+};
+
+},{"./make-td.js":12}],11:[function(require,module,exports){
+"use strict";
+
+var makeTableHeader = require('./make-table-header.js');
+var outputTable = require('./output-table.js');
+var checkIfBaby = require('./check-if-baby.js');
+var makeNewborn = require('./make-newborn.js');
+var makeShoeAccessories = require('./make-shoe-accessories.js');
+module.exports = function (sheets) {
+  //? function to create the tables
+  //? show .the-table
+  $('.size-chart-table .the-table').show();
+
+  //? remove all <tr> except the 1st one
+  var trs = $('.size-chart-table table tr');
+  $.each(trs, function (i, val) {
+    if ($(val).attr('class') !== 'size-chart-header') {
+      $(val).remove();
+    }
+  });
+
+  //? remove all the tables except the .the-table
+  var tables = $('.size-chart-table table');
+  $.each(tables, function (i, val) {
+    if ($(val).attr('class') !== 'the-table') {
+      $(val).remove();
+    }
+  });
+
+  //? the selected values
+  var dept = $('.size-chart-container select.department').val();
+  var cat = $('.size-chart-container select.category').val();
+  // console.log(dept,cat);
+
+  var sheet = sheets;
+  console.log('from make-table.js');
+  console.log(sheet);
+
+  //? loop through sheet and find the matched table
+  $.each(sheet, function (i, val) {
+    //? var to hold the sheet dept and cat
+    var sheetVal = val.data[0].rowData[2].values[0].formattedValue;
+    //? split the sheetVal because it is in the format of dept:category
+    var sheetArr = sheetVal.split(':');
+    //? the dept var from the sheets
+    var sheetDept = sheetArr[0];
+    //? the cat var from the sheets
+    var sheetCatArr = sheetArr[1];
+    // console.log(sheetCatArr);
+
+    //? if the sheet dept is baby change to array of baby girl and baby boy
+    if (sheetDept == 'baby') {
+      sheetDept = ['baby girl', 'baby boy'];
+    }
+
+    //? if baby girl or baby boy and category is dresses, tops, bottoms, swim, sweater + outerwear, pajamas change to match sheet because it does not match the measuring-tips.js array of objects
+    cat = checkIfBaby(dept, cat);
+
+    //? if newborn show all the categories and tables
+    if (dept == "newborn") {
+      makeNewborn(cat, sheetDept, dept, sheetCatArr, val, i);
+    } else if (sheetDept == dept || sheetDept[0] == dept || sheetDept[1] == dept) {
+      //? all other departments NOT newborn
+
+      //? if category is shoes + accessories
+      if (cat.indexOf('shoes + accessories') !== -1) {
+        makeShoeAccessories(cat, sheetDept, dept, sheetCatArr, val, i);
+      } else if (cat.indexOf(sheetCatArr) !== -1) {
+        //? all other categories that are not shoes + accessories and only have 1 table
+        // console.log(i,val);
+        var rows;
+        var colspan;
+
+        // console.log(`only activate`);
+
+        rows = val.merges[0].endColumnIndex - 1;
+        colspan = val.merges[0].endColumnIndex;
+
+        //? add colspan to .size-chart-header
+        $('.size-chart-header th').attr('colspan', colspan);
+
+        //? output the table contents
+        outputTable(i, val, rows);
+
+        //? stop the function
+        return false;
+      }
+    }
+  });
+};
+
+},{"./check-if-baby.js":4,"./make-newborn.js":7,"./make-shoe-accessories.js":8,"./make-table-header.js":10,"./output-table.js":15}],12:[function(require,module,exports){
+"use strict";
+
+module.exports = function (k, row, rows, tableElem) {
+  //? function to make the <td>
+
+  // console.log(tableElem);
+  // console.log(k, row, rows);
+
+  //? add the data <td>
+  $.each(row.values, function (l, td) {
+    //? loop only to the rows variable
+    if (l <= rows) {
+      var content;
+      var fraction;
+      var theFraction;
+      // console.log(l, rows, row);
+
+      if (td.formattedValue !== undefined) {
+        //? formatting to match design
+
+        content = td.formattedValue;
+        // console.log(content);
+        content = content.toLowerCase();
+        content = content.replace(' - ', '&ndash;');
+        content = content.replace('months', 'mos');
+        content = content.replace('years', 'yrs');
+        if (content.indexOf('inches') !== -1 || content.indexOf('pounds') !== -1) {
+          content = content.split('\n');
+          // console.log(content);
+          content = content[0] + '<span>' + content[1] + '</span>';
+        }
+        if (content == 'shoe size') {
+          content = '<span class="shoe-size">' + content + '</span>';
+        }
+        fraction = td.formattedValue;
+        // console.log('the fraction: ',fraction);
+
+        //? for shoes + accessories if not L/XL
+        if (fraction !== 'L/XL' && fraction !== '2T/2' && fraction !== '3T/3' && fraction !== '4T/4') {
+          //? if cell has two fractions example 58 1/2 - 61 1/2
+          if (fraction.indexOf('/') !== -1 && fraction.indexOf('-') !== -1) {
+            fraction = fraction.split('-');
+            var twoFrac = [];
+            $.each(fraction, function (m, frac) {
+              var fracArray = frac.split(' ');
+              $.each(fracArray, function (n, num) {
+                if (num !== '') {
+                  twoFrac.push(num);
+                }
+              });
+            });
+
+            // console.log(twoFrac);
+
+            //? output
+            //? example 61 1/2 - 64
+            if (twoFrac[1].indexOf('/') !== -1 && twoFrac[3] == undefined) {
+              var twoFracA = twoFrac[1].split('/');
+              twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + '</td>');
+            }
+
+            //? example 61 - 61 1/2
+            else if (twoFrac[1].indexOf('/') == -1 && twoFrac[2].indexOf('/') !== -1) {
+              var twoFracA = twoFrac[2].split('/');
+              twoFrac[2] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' &ndash; ' + twoFrac[1] + ' ' + twoFrac[2] + '</td>');
+            }
+
+            //? example 58 1/2 - 61 1/2
+            else if (twoFrac[1].indexOf('/') !== -1 && twoFrac[1] !== undefined && twoFrac[3].indexOf('/') !== -1 && twoFrac[3] !== undefined) {
+              var twoFracA = twoFrac[1].split('/');
+              twoFrac[1] = '<sup class="frac">' + twoFracA[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracA[1] + '</span>';
+              var twoFracB = twoFrac[3].split('/');
+              twoFrac[3] = '<sup class="frac">' + twoFracB[0] + '</sup>&frasl;<span class="frac denominator">' + twoFracB[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + twoFrac[0] + ' ' + twoFrac[1] + ' &ndash; ' + twoFrac[2] + ' ' + twoFrac[3] + '</td>');
+            }
+          } else {
+            //? only one fraction
+
+            fraction = fraction.split(' ');
+            $.each(fraction, function (m, frac) {
+              // console.log(m, frac);
+              if (frac.indexOf('/') !== -1) {
+                theFraction = frac;
+                // console.log('theFraction: ',theFraction);
+              }
+            });
+
+            //? output
+            if (theFraction !== undefined && theFraction.indexOf('/') !== -1) {
+              theFraction = theFraction.split('/');
+              var htmlFraction = '<sup class="frac">' + theFraction[0] + '</sup>&frasl;<span class="frac denominator">' + theFraction[1] + '</span>';
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction[0] + ' ' + htmlFraction + '</td>');
+            } else {
+              $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + content + '</td>');
+            }
+          }
+        } else if (fraction == 'L/XL' || fraction == '2T/2' || fraction == '3T/3' || fraction == '4T/4') {
+          //? output sizes 'L/XL','2T/2','3T/3','4T/4'
+
+          // console.log('yo buddy: ', fraction);
+          $(tableElem + ' tr[data-num="' + k + '"]').append('<td>' + fraction + '</td>');
+        }
+      }
+    }
+  });
+};
+
+},{}],13:[function(require,module,exports){
+"use strict";
+
+module.exports = function (urlDept, urlCat) {
+  //? function to match the category to the sheets category
+
+  //? this will set the correct cats to match the sheets based on the receieved url params
+  //? for example: selectedDept=baby girl&selectedCat=swim
+  if (urlDept == "girl") {
+    switch (urlCat) {
+      case "dresses":
+      case "tops":
+      case "bottoms":
+        $('.size-chart-container select.category').val("tops,dresses,bottoms");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "boy") {
+    switch (urlCat) {
+      case "tees + shirts":
+      case "bottoms":
+        $('.size-chart-container select.category').val("tees + shirts,bottoms");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "baby girl") {
+    switch (urlCat) {
+      case "dresses":
+      case "tops":
+      case "bottoms":
+      case "swim":
+      case "sweater + outerwear":
+      case "pajamas":
+        $('.size-chart-container select.category').val("dresses, tops, bottoms, swim, sweater + outerwear, pajamas");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "baby boy") {
+    switch (urlCat) {
+      case "tees + shirts":
+      case "bottoms":
+      case "swim":
+      case "sweater + outerwear":
+      case "pajamas":
+        $('.size-chart-container select.category').val("tees + shirts, bottoms, swim, sweater + outerwear, pajamas");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "newborn") {
+    switch (urlCat) {
+      case "all categories":
+        $('.size-chart-container select.category').val("all categories, Booties, Bibs, hats");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else if (urlDept == "women") {
+    switch (urlCat) {
+      case "swim":
+      case "pajamas":
+      case "dresses":
+      case "tops":
+        $('.size-chart-container select.category').val("swim,pajamas,dresses,tops");
+        break;
+      default:
+        $('.size-chart-container select.category').val(urlCat);
+        break;
+    }
+  } else {
+    $('.size-chart-container select.category').val(urlCat);
+  }
+};
+
+},{}],14:[function(require,module,exports){
+"use strict";
+
+module.exports = [{
+  dept: 'girl',
+  shoes: ['yosi samra', 'vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
+  cat: [{
+    name: 'tops,dresses,bottoms'
+  }, {
+    name: 'swim'
+  }, {
+    name: 'sweater + outerwear'
+  }, {
+    name: 'pajamas'
+  }, {
+    name: 'shoes + accessories,socks,headbands,hats'
+  }]
+}, {
+  dept: 'boy',
+  shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
+  cat: [{
+    name: 'tees + shirts,bottoms'
+  }, {
+    name: 'swim'
+  }, {
+    name: 'sweater + outerwear'
+  }, {
+    name: 'pajamas'
+  }, {
+    name: 'shoes + accessories,socks,hats'
+  }]
+}, {
+  dept: 'baby girl',
+  shoes: ['yosi samra', 'vans', 'elephantito', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'toke', 'havaianas', 'cienta'],
+  cat: [{
+    name: 'rompers'
+  }, {
+    name: 'dresses, tops, bottoms, swim, sweater + outerwear, pajamas'
+  }, {
+    name: 'shoes + accessories,socks,hats'
+  }, {
+    name: 'swim diapers'
+  }]
+}, {
+  dept: 'baby boy',
+  shoes: ['yosi samra', 'vans', 'old soles', 'superga', 'livie & luca', 'native', 'saltwater sandal', 'umi', 'onitsuka tiger', 'asics', 'asics tiger', 'havaianas', 'cienta'],
+  cat: [{
+    name: 'rompers'
+  }, {
+    name: 'tees + shirts, bottoms, swim, sweater + outerwear, pajamas'
+  }, {
+    name: 'shoes + accessories,socks,hats'
+  }, {
+    name: 'swim diapers'
+  }]
+}, {
+  dept: 'newborn',
+  cat: [{
+    name: 'all categories, Booties, Bibs, hats'
+  }]
+}, {
+  dept: 'adult unisex',
+  cat: [{
+    name: 'tops'
+  }, {
+    name: 'pajamas'
+  }]
+}, {
+  dept: 'women',
+  cat: [{
+    name: 'swim,pajamas,dresses,tops'
+  }]
+}, {
+  dept: 'men',
+  cat: [{
+    name: 'swim'
+  }]
+}];
+
+},{}],15:[function(require,module,exports){
+"use strict";
+
+var makeTd = require('./make-td.js');
+module.exports = function (i, val, rows) {
+  //? function to output the table contents
+
+  //? output the table
+  $.each(val.data[0].rowData, function (k, row) {
+    //? add the row <tr>
+    if (k > 2) {
+      var tableLength = $('.size-chart-table table').length;
+      // console.log(tableLength);
+
+      //? check if the number of rows is even or odd then add class
+      var tableNum = val.data[0].rowData.length - 4;
+
+      //? if only one table (not shoes + accessories)
+      if (tableLength == 1) {
+        $('.size-chart-container .the-table').append('<tr data-num="' + k + '"></tr>');
+
+        //? add the data <td>
+        makeTd(k, row, rows, '.size-chart-container .the-table');
+      } else if (tableLength > 1) {
+        //? if multiple tables (shoes + accessories)
+        // console.log(row.values[0].formattedValue);
+
+        //? only make a row if the 1st td of the row has data
+        if (row.values[0].formattedValue !== undefined) {
+          $('.size-chart-table table[data-num="' + i + '"]').append('<tr data-num="' + k + '"></tr>');
+
+          // console.log('more then one table\n this is the index\n' + i);
+
+          //? add the data <td>
+          makeTd(k, row, rows, '.size-chart-table table[data-num="' + i + '"]');
+        }
+      }
+    }
+  });
+};
+
+},{"./make-td.js":12}],16:[function(require,module,exports){
+"use strict";
+
+var setCats = require('./set-cats.js');
+var setDepts = require('./set-depts.js');
+var getSheets = require('./get-sheets.js');
+var sizeChartArr = require('./measuring-tips.js');
+var changeCats = require('./change-cat.js');
+var changeRow = require('./change-first-row-table.js');
+var makeBrands = require('./make-shoe-brands.js');
+var execute = require('./execute.js');
+var matchCats = require('./match-cats.js');
+
+//! CLOSE THE LIGHTBOX
+$('body').on('click', '.overlay-size-chart, .size-chart-container h2.close', function () {
+  //? remove the elements
+  $('.overlay-size-chart, .overlay-content-size-chart').remove();
+});
+
+//? on .size-chart click
 $('.size-chart').click(function (e) {
   e.preventDefault();
   //console.log(e);
-
-  //get the department & category
-  //var dept = $('#the-dept-cat').attr('data-department').toLowerCase();
-  //var cat = $('#the-dept-cat').attr('data-category').toLowerCase();
 
   //prod
   var dept = $('#the-mpd').attr('data-department').toLowerCase();
   var cat = $('#the-mpd').attr('data-category').toLowerCase();
 
-  //if statements
-  if (dept == 'kid girl' || dept == '') {
-    dept = 'girl';
-  }
-  if (dept == 'little girl') {
-    dept = 'baby girl';
-  }
-  if (dept == 'little boy') {
-    dept = 'baby boy';
-  }
-  if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1) {
-    dept = 'newborn';
-    cat = 'all categories';
-  }
-  var setCats = function setCats() {
-    // console.log('function setCats: ', dept,cat);
+  //? set the departments
+  dept = setDepts(dept);
 
-    if (cat == 'hoodies' || cat == 'tops') {
-      if (dept == 'girl' || dept == 'baby girl') {
-        cat = 'tops';
-      }
-      if (dept == 'boy' || dept == 'baby boy') {
-        cat = 'tees + shirts';
-      }
-    } else if (cat == 'dresses') {
+  //? set the categories
+  cat = setCats(cat, dept);
+
+  // console.log('after setCats: ',cat);
+
+  //! FOR DEV
+  // var dept = 'girl';
+  // var cat = 'dresses';
+
+  //! MAKE THE OVERLAY ELEMENT 
+  var overlay = '<div class="overlay-size-chart"></div>';
+
+  //! MAKE THE CONTENT ELEMENT
+  var overlayContent = "\n  <div class=\"overlay-content-size-chart\">\n\n    <div id=\"size-chart-section\">\n      <div class=\"size-chart-container\">\n        <h2 class=\"close\">size chart</h2>\n\n      <div class=\"dropdowns\">\n        <select class=\"department\"></select>\n        <select class=\"category\"></select>\n      </div>\n\n      <div class=\"main-content\">\n        <div class=\"size-chart-table\">\n          <table class=\"the-table\">\n            <tr class=\"size-chart-header\">\n              <th></th>\n            </tr>\n          </table>\n        </div>\n      </div>\n\n    </div>\n  </div>\n";
+
+  //? prepend overlay element to body
+  $('body').prepend(overlay);
+
+  //? prepend overlay content element to body
+  $('body').prepend(overlayContent);
+
+  //? add the loading
+  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
+
+  //? make the dept dropdown
+  $.each(sizeChartArr, function (i, val) {
+    var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
+    $('.size-chart-container select.department').append(deptOption);
+  });
+
+  //? set the dept dropdown
+  $('.size-chart-container select.department').val(dept);
+
+  //? make the category dropdown based on the dept
+  changeCats(sizeChartArr);
+
+  //? this will set the correct cats to match the sheets
+  matchCats(dept, cat);
+
+  //? add the table header 
+  changeRow();
+
+  //? if shoes + accessories or sweaters + outerwear add the brands drop down
+  makeBrands();
+
+  //? get the sheets from google and make the tables
+  getSheets(sheets, function (sheetsData) {
+    sheets = sheetsData;
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .department change
+  $('.size-chart-container select.department').change(function () {
+    //? remove all the <option> in .category
+    $('.size-chart-container select.category option').remove();
+
+    //? change the cats dropdown
+    changeCats(sizeChartArr);
+
+    //? remake the tables
+    execute(sheets);
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .category change
+  $('.size-chart-container select.category').change(function () {
+    //? remake the tables
+    execute(sheets);
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+});
+
+},{"./change-cat.js":1,"./change-first-row-table.js":2,"./execute.js":5,"./get-sheets.js":6,"./make-shoe-brands.js":9,"./match-cats.js":13,"./measuring-tips.js":14,"./set-cats.js":17,"./set-depts.js":18}],17:[function(require,module,exports){
+"use strict";
+
+module.exports = function (cat, dept) {
+  //? function to set categories to match sheets
+
+  if (cat == 'hoodies' || cat == 'tops') {
+    if (dept == 'girl' || dept == 'baby girl') {
+      cat = 'tops';
+    } else if (dept == 'boy' || dept == 'baby boy') {
+      cat = 'tees + shirts';
+    }
+  } else if (cat == 'dresses') {
+    cat = 'dresses';
+  } else if (cat == 'leggings' || cat == 'pants' || cat == 'skirts' || cat == 'bottoms') {
+    cat = 'bottoms';
+  } else if (cat == 'swimwear') {
+    cat = 'swim';
+  } else if (cat == 'outerwear' || cat == 'sweaters') {
+    cat = 'sweater + outerwear';
+  } else if (cat == 'sleepwear') {
+    cat = 'pajamas';
+  } else if (cat == 'accessories' || cat == 'shoes') {
+    cat = 'shoes + accessories';
+  } else {
+    if (dept == 'girl') {
+      // console.log('its girl defaults');
       cat = 'dresses';
-    } else if (cat == 'leggings' || cat == 'pants' || cat == 'skirts' || cat == 'bottoms') {
-      cat = 'bottoms';
-    } else if (cat == 'swimwear') {
-      cat = 'swim';
-    } else if (cat == 'outerwear' || cat == 'sweaters') {
-      cat = 'sweater + outerwear';
-    } else if (cat == 'sleepwear') {
-      cat = 'pajamas';
-    } else if (cat == 'accessories' || cat == 'shoes') {
-      cat = 'shoes + accessories';
-    } else {
-      if (dept == 'girl') {
-        // console.log('its girl defaults');
-        cat = 'dresses';
-      } else if (dept == 'boy') {
-        // console.log('its boy defaults');
-        cat = 'tees + shirts';
-      }
-
-      // else if (dept == 'baby girl' || dept == 'baby boy') {
+    } else if (dept == 'boy') {
+      // console.log('its boy defaults');
+      cat = 'tees + shirts';
+    } else if (dept == 'baby girl' || dept == 'baby boy') {
       // console.log('its baby girl & baby boy defaults');
-      // cat = 'rompers';
-      // }
+      cat = 'rompers';
     }
 
     // console.log('results ',cat);
-  };
-
-  //set defautls
-  setCats();
-  // console.log('after setCats: ',cat);
-
-  //set the <a> to open in a new window with the URL parameters
-  $(this).attr('target', '_blank');
-  $(this).attr('href', '/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat);
-  window.open('/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat, '_blank');
-
-  /*
-  ! THIS CODE DOESN'T WORK AND NEEDS FIXING
-    ! FOR DEV
-  // var dept = 'girl';
-  // var cat = 'dresses';
-    ! THE SIZE CHART URL 
-  var url = '/cms/size-chart/size-chart-tea-collection/1.html';
-    ! APPEND THE PARAMETERS AT THE END OF THE URL
-  var params = encodeURI('selectedDept=' + dept + '&selectedCat=' + cat);
-  var thisUrl = window.location.href;
-  
-  !CHECK IF HAVE PARAMETERS ALREADY
-  if (thisUrl.indexOf('?') !== -1) {
-    window.location.href = thisUrl + '&' + params;
-  } else {
-    window.location.href = thisUrl + '?' + params;
   }
-    !MAKE THE GET CALL
-  $.get(url, function(data) {
-      !FIND THE SIZE CHART
-    var sizeChart = $(data).find('#size-chart-section').html();
-    //console.log(sizeChart);
-      //desktop
-    if ($(window).width() > 737) {
-      ! MAKE THE OVERLAY ELEMENT 
-      var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>';
-        ! MAKE THE CONTENT ELEMENT
-      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-        //prepend overlay element to body
-      $('body').prepend(overlay);
-        //prepend overlay content element to body
-      $('body').prepend(overlayContent);
-        //append sizeChart to overlayContent
-      $('.overlay-content').append(sizeChart);
-    }
-      //mobile
-    else if ($(window).width() < 737) {
-        !MAKE THE CONTENT ELEMENT
-      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-        //prepend overlay content element to body
-      $('body').prepend(overlayContent);
-        //append sizeChart to overlayContent
-      $('.overlay-content').append(sizeChart);
-    }
-      //hide the h1 in overlayContent
-    // $('.size-chart-container h1').text('');
-      //add h1 background image of the x
-    $('.size-chart-container h1').css({
-      background: "url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 24px center",
-      padding: "17px 0"
-    });
-      //add css for hover h1 and overlay
-    $('.size-chart-container h1, .overlay').hover(function() {
-      $(this).css('cursor', 'pointer');
-    }, function() {
-      $(this).css('cursor', 'none');
-    });
-      ! CLOSE THE LIGHTBOX
-    $('.overlay, .size-chart-container h1').click(function() {
-      //remove the url parameters
-      var theUrl = window.location.href;
-      var newUrl;
-      if (theUrl.indexOf('?' + params) !== -1) {
-        newUrl = theUrl.replace('?' + params, '');
-      } else {
-        newUrl = theUrl.replace('&' + params, '');
-      }
-      window.location.href = newUrl;
-        //remove the elements
-      $('.overlay, .overlay-content').remove();
-    });
-  });
-  */
-});
+  return cat;
+};
 
+},{}],18:[function(require,module,exports){
+"use strict";
 
-},{}]},{},[1]);
+module.exports = function (dept) {
+  //? function to set categories to match sheets
+
+  if (dept == 'kid girl' || dept == '') {
+    dept = 'girl';
+  } else if (dept == 'little girl') {
+    dept = 'baby girl';
+  } else if (dept == 'little boy') {
+    dept = 'baby boy';
+  } else if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1) {
+    dept = 'newborn';
+  }
+  return dept;
+};
+
+},{}],19:[function(require,module,exports){
+"use strict";
+
+module.exports = [{
+  brand: 'yosi samra',
+  url: 'https://www.yosisamra.com/pages/size-chart'
+}, {
+  brand: 'vans',
+  url: '/static/vans-shoe-size-guide'
+}, {
+  brand: 'elephantito',
+  url: 'https://www.elephantito.com/pages/sizing'
+}, {
+  brand: 'old soles',
+  url: 'https://www.oldsoles.com.au/features/kids/'
+}, {
+  brand: 'superga',
+  url: 'https://www.superga-usa.com/content.jsp?pageName=SizeGuide'
+}, {
+  brand: 'livie & luca',
+  url: 'https://www.livieandluca.com/pages/size-chart'
+}, {
+  brand: 'native',
+  url: 'https://www.nativeshoes.com/'
+}, {
+  brand: 'saltwater sandal',
+  url: 'https://saltwater-sandals.com/sizing-calculator/'
+}, {
+  brand: 'umi',
+  url: 'http://www.umishoes.com/shop/includes/sizeChart.html'
+}, {
+  brand: 'onitsuka tiger',
+  url: 'http://www.onitsukatiger.com/us/en-us/size-guide'
+}, {
+  brand: 'asics',
+  url: 'http://www.asics.com/us/en-us/shoe-size-guide'
+}, {
+  brand: 'asics tiger',
+  url: 'http://www.asicstiger.com/us/en-us/size-guide'
+}, {
+  brand: 'toke',
+  url: 'https://www.tokeshoes.com/index.php/conversion/toke-conversion-chart'
+}, {
+  brand: 'havaianas',
+  url: '/static/havaianas-shoe-size-guide.html'
+}, {
+  brand: 'cienta',
+  url: 'https://cientausa.com/'
+}];
+
+},{}]},{},[16]);

@@ -1,153 +1,104 @@
 "use strict";
 
-//on .size-chart click
+var setCats = require('./set-cats.js');
+var setDepts = require('./set-depts.js');
+var getSheets = require('./get-sheets.js');
+var sizeChartArr = require('./measuring-tips.js');
+var changeCats = require('./change-cat.js');
+var changeRow = require('./change-first-row-table.js');
+var makeBrands = require('./make-shoe-brands.js');
+var execute = require('./execute.js');
+var matchCats = require('./match-cats.js');
+
+//! CLOSE THE LIGHTBOX
+$('body').on('click', '.overlay-size-chart, .size-chart-container h2.close', function () {
+  //? remove the elements
+  $('.overlay-size-chart, .overlay-content-size-chart').remove();
+});
+
+//? on .size-chart click
 $('.size-chart').click(function (e) {
   e.preventDefault();
   //console.log(e);
-
-  //get the department & category
-  //var dept = $('#the-dept-cat').attr('data-department').toLowerCase();
-  //var cat = $('#the-dept-cat').attr('data-category').toLowerCase();
 
   //prod
   var dept = $('#the-mpd').attr('data-department').toLowerCase();
   var cat = $('#the-mpd').attr('data-category').toLowerCase();
 
-  //if statements
-  if (dept == 'kid girl' || dept == '') {
-    dept = 'girl';
-  }
-  if (dept == 'little girl') {
-    dept = 'baby girl';
-  }
-  if (dept == 'little boy') {
-    dept = 'baby boy';
-  }
-  if (dept.indexOf('newborn') !== -1 || dept.indexOf('layette') !== -1) {
-    dept = 'newborn';
-    cat = 'all categories';
-  }
-  var setCats = function setCats() {
-    // console.log('function setCats: ', dept,cat);
+  //? set the departments
+  dept = setDepts(dept);
 
-    if (cat == 'hoodies' || cat == 'tops') {
-      if (dept == 'girl' || dept == 'baby girl') {
-        cat = 'tops';
-      }
-      if (dept == 'boy' || dept == 'baby boy') {
-        cat = 'tees + shirts';
-      }
-    } else if (cat == 'dresses') {
-      cat = 'dresses';
-    } else if (cat == 'leggings' || cat == 'pants' || cat == 'skirts' || cat == 'bottoms') {
-      cat = 'bottoms';
-    } else if (cat == 'swimwear') {
-      cat = 'swim';
-    } else if (cat == 'outerwear' || cat == 'sweaters') {
-      cat = 'sweater + outerwear';
-    } else if (cat == 'sleepwear') {
-      cat = 'pajamas';
-    } else if (cat == 'accessories' || cat == 'shoes') {
-      cat = 'shoes + accessories';
-    } else {
-      if (dept == 'girl') {
-        // console.log('its girl defaults');
-        cat = 'dresses';
-      } else if (dept == 'boy') {
-        // console.log('its boy defaults');
-        cat = 'tees + shirts';
-      }
+  //? set the categories
+  cat = setCats(cat, dept);
 
-      // else if (dept == 'baby girl' || dept == 'baby boy') {
-      // console.log('its baby girl & baby boy defaults');
-      // cat = 'rompers';
-      // }
-    }
-
-    // console.log('results ',cat);
-  };
-
-  //set defautls
-  setCats();
   // console.log('after setCats: ',cat);
 
-  //set the <a> to open in a new window with the URL parameters
-  $(this).attr('target', '_blank');
-  $(this).attr('href', '/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat);
-  window.open('/here-to-help/size-chart?selectedDept=' + dept + '&selectedCat=' + cat, '_blank');
-
-  /*
-  ! THIS CODE DOESN'T WORK AND NEEDS FIXING
-    ! FOR DEV
+  //! FOR DEV
   // var dept = 'girl';
   // var cat = 'dresses';
-    ! THE SIZE CHART URL 
-  var url = '/cms/size-chart/size-chart-tea-collection/1.html';
-    ! APPEND THE PARAMETERS AT THE END OF THE URL
-  var params = encodeURI('selectedDept=' + dept + '&selectedCat=' + cat);
-  var thisUrl = window.location.href;
-  
-  !CHECK IF HAVE PARAMETERS ALREADY
-  if (thisUrl.indexOf('?') !== -1) {
-    window.location.href = thisUrl + '&' + params;
-  } else {
-    window.location.href = thisUrl + '?' + params;
-  }
-    !MAKE THE GET CALL
-  $.get(url, function(data) {
-      !FIND THE SIZE CHART
-    var sizeChart = $(data).find('#size-chart-section').html();
-    //console.log(sizeChart);
-      //desktop
-    if ($(window).width() > 737) {
-      ! MAKE THE OVERLAY ELEMENT 
-      var overlay = '<div class="overlay" style="width:100%; height:100%; background:#000; opacity:.5; position:fixed; z-index:99999;"></div>';
-        ! MAKE THE CONTENT ELEMENT
-      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 5%; left: 29%; width: 700px; height: 87%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-        //prepend overlay element to body
-      $('body').prepend(overlay);
-        //prepend overlay content element to body
-      $('body').prepend(overlayContent);
-        //append sizeChart to overlayContent
-      $('.overlay-content').append(sizeChart);
-    }
-      //mobile
-    else if ($(window).width() < 737) {
-        !MAKE THE CONTENT ELEMENT
-      var overlayContent = $('<div class="overlay-content" style="background: #fff; position: fixed; top: 0; left: 0; width: 100%; height: 100%; overflow: auto; z-index: 999999; padding-bottom: 20px;"></div>');
-        //prepend overlay content element to body
-      $('body').prepend(overlayContent);
-        //append sizeChart to overlayContent
-      $('.overlay-content').append(sizeChart);
-    }
-      //hide the h1 in overlayContent
-    // $('.size-chart-container h1').text('');
-      //add h1 background image of the x
-    $('.size-chart-container h1').css({
-      background: "url('https://www.teacollection.com/mas_assets/theme/tea_collection/images/static/size-chart/171121/close.png') no-repeat 24px center",
-      padding: "17px 0"
-    });
-      //add css for hover h1 and overlay
-    $('.size-chart-container h1, .overlay').hover(function() {
-      $(this).css('cursor', 'pointer');
-    }, function() {
-      $(this).css('cursor', 'none');
-    });
-      ! CLOSE THE LIGHTBOX
-    $('.overlay, .size-chart-container h1').click(function() {
-      //remove the url parameters
-      var theUrl = window.location.href;
-      var newUrl;
-      if (theUrl.indexOf('?' + params) !== -1) {
-        newUrl = theUrl.replace('?' + params, '');
-      } else {
-        newUrl = theUrl.replace('&' + params, '');
-      }
-      window.location.href = newUrl;
-        //remove the elements
-      $('.overlay, .overlay-content').remove();
-    });
+
+  //! MAKE THE OVERLAY ELEMENT 
+  var overlay = '<div class="overlay-size-chart"></div>';
+
+  //! MAKE THE CONTENT ELEMENT
+  var overlayContent = "\n  <div class=\"overlay-content-size-chart\">\n\n    <div id=\"size-chart-section\">\n      <div class=\"size-chart-container\">\n        <h2 class=\"close\">size chart</h2>\n\n      <div class=\"dropdowns\">\n        <select class=\"department\"></select>\n        <select class=\"category\"></select>\n      </div>\n\n      <div class=\"main-content\">\n        <div class=\"size-chart-table\">\n          <table class=\"the-table\">\n            <tr class=\"size-chart-header\">\n              <th></th>\n            </tr>\n          </table>\n        </div>\n      </div>\n\n    </div>\n  </div>\n";
+
+  //? prepend overlay element to body
+  $('body').prepend(overlay);
+
+  //? prepend overlay content element to body
+  $('body').prepend(overlayContent);
+
+  //? add the loading
+  $('.size-chart-table').append('<div style="text-align:center; font-size:15px; font-family:brown-pro-bold !important" class="tables-loading">LOADING...</div>');
+
+  //? make the dept dropdown
+  $.each(sizeChartArr, function (i, val) {
+    var deptOption = '<option value="' + val.dept + '">' + val.dept + '</option>';
+    $('.size-chart-container select.department').append(deptOption);
   });
-  */
+
+  //? set the dept dropdown
+  $('.size-chart-container select.department').val(dept);
+
+  //? make the category dropdown based on the dept
+  changeCats(sizeChartArr);
+
+  //? this will set the correct cats to match the sheets
+  matchCats(dept, cat);
+
+  //? add the table header 
+  changeRow();
+
+  //? if shoes + accessories or sweaters + outerwear add the brands drop down
+  makeBrands();
+
+  //? get the sheets from google and make the tables
+  getSheets(sheets, function (sheetsData) {
+    sheets = sheetsData;
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .department change
+  $('.size-chart-container select.department').change(function () {
+    //? remove all the <option> in .category
+    $('.size-chart-container select.category option').remove();
+
+    //? change the cats dropdown
+    changeCats(sizeChartArr);
+
+    //? remake the tables
+    execute(sheets);
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
+
+  //? on .category change
+  $('.size-chart-container select.category').change(function () {
+    //? remake the tables
+    execute(sheets);
+  });
+
+  /*-----------------------------------------------------------------------------------------*/
 });
-//# sourceMappingURL=pdp-function.js.map
