@@ -1,0 +1,113 @@
+@font-color: #47363D;
+@blue-color: #436FC1;
+@pink-color: #F9EBE6;
+
+.measure-content {
+    // padding: 0 55px;
+    margin: 0 0 40px;
+    display: none;
+    flex-basis: 100%;
+
+    &.active {
+        display: block;
+    }
+
+    h2 {
+        font-family: souvenirstd-light;
+    }
+
+    .category-headers {
+        @media screen and (max-width: 430px) {
+            flex-wrap: wrap;
+            row-gap: 20px;
+        }
+
+        display: flex;
+        justify-content: center;
+        column-gap: 20px;
+        margin: 0 0 20px;
+
+        a {
+            background: @pink-color;
+            color: @blue-color;
+
+            &.active,
+            &:hover {
+                color: @pink-color;
+                background: @blue-color;
+            }
+        }
+    }
+
+    .measure-container {
+        @media screen and (max-width:430px) {
+            flex-wrap: wrap;
+        }
+
+        display: flex;
+        display:none;
+
+        &.active {
+            display: flex;
+        }
+
+        .measure-tips {
+            @media screen and (max-width:1024px) {
+                display: none;
+            }
+
+
+            flex-basis: 32%;
+
+        }
+
+        .the-img {
+            @media screen and (max-width:430px) {
+                flex-basis: 100%;
+            }
+
+            flex-basis: 50%;
+
+            img {}
+        }
+
+        .text {
+            @media screen and (max-width:430px) {
+                flex-basis: 100%;
+            }
+
+            overflow: hidden;
+            background: @pink-color;
+            padding: 0;
+            flex-basis: 50%;
+
+            .chest,
+            .hips,
+            .waist {
+                float: none;
+                width: 100%;
+                box-sizing: border-box;
+                padding: 3%;
+
+                h2 {
+                    margin: 0;
+                    font-family: souvenirstd-light;
+                    font-size: 16px;
+                    line-height: 18px;
+                    letter-spacing: 0.03em;
+                    color: @font-color;
+                }
+
+                p {
+                    padding: 0;
+                    font-family: souvenirstd-light;
+                    font-size: 12px;
+                    line-height: 18px;
+                    letter-spacing: 0.03em;
+                    color: @font-color;
+                    margin: 0;
+                }
+            }
+        }
+    }
+}

@@ -16,7 +16,7 @@ module.exports = {
 
 
   zone: {
-    files: ['content-zone/' + config.zone.name + '/less/*.less', 'content-zone/' + config.zone.name + '/dev/**/*.html', 'content-zone/' + config.zone.name + '/**/js/*.js'],
+    files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/**/*.html', 'content-zone/' + config.zone.name + '/**/js/*.js'],
     tasks: ['less:zone', /*'ts:zone',*/ 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', ],
   },
 
@@ -34,7 +34,7 @@ module.exports = {
 
 
   landing: {
-    files: ['landing-page/' + config.landing.name + '/less/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/**/js/**/*.js'],
+    files: ['landing-page/' + config.landing.name + '/less/**/*.less', 'landing-page/' + config.landing.name + '/dev/**/*.html', 'landing-page/' + config.landing.name + '/js/*.js'],
     tasks: ['less:landing', /*'ts:landing',*/ 'babel:landing', 'browserify:landing', 'uglify:landing', 'includes:landing',],
   },
 
