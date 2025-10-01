@@ -48,8 +48,8 @@ $(document).ready(function () {
                            ${img} 
                         </a>
     
-                        <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.name}">Quick View</span>
-                      </span>
+                        <!--<span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.name}">Quick View</span>
+                      </span>-->
     
                       <div class="thumb-content">
                         <a href="${val.url}" class="name the-order-lines">
