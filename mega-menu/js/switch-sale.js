@@ -8,13 +8,18 @@ export const switchSale = (href) => {
   let promo3 = href;
   let clearance = href;
 
-  let showPromo1 = false;
+  let showPromo1 = true;
   let showPromo2 = false;
-  let showPromo3 = true;
+  let showPromo3 = false;
 
   let promo1Elem = `.promo1-url`;
   let promo2Elem = `.promo2-url`;
   let promo3Elem = `.promo3-url`;
+
+  // let girl = ``;
+  // let boy = ``;
+  // let babyGirl = ``;
+  // let babyBoy = ``;
 
   let girl = `.promo1-url.girl`;
   let boy = `.promo1-url.boy`;
@@ -33,12 +38,11 @@ export const switchSale = (href) => {
   let swim = `.promo1-url.girl`;
   let dress = `.promo1-url.girl`;
 
-  // girl = ``; boy = ``; babyGirl = ``; babyBoy = ``; toddlerGirl = ``; toddlerBoy = ``; newborn = ``;
 
   switch (href) {
 
     case '/sale/girls-clothing/view-all':
-      promo1 = urls.promo.girl;
+      promo1 = urls.promo.select.girl;
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
@@ -67,7 +71,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/boys-clothing/view-all':
-      promo1 = urls.promo.boy;
+      promo1 = urls.promo.select.boy;
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
@@ -96,7 +100,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/baby-girl-clothes/view-all':
-      promo1 = urls.promo.baby.girl;
+      promo1 = urls.promo.select.baby.girl;
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
@@ -125,7 +129,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/baby-boy-clothes/view-all':
-      promo1 = urls.promo.baby.boy;
+      promo1 = urls.promo.select.baby.boy;
       promo2 = urls.promo.select.baby.boy;
       promo3 = urls.promo.sale.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
@@ -154,7 +158,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/toddler-girls-clothing/view-all':
-      promo1 = urls.promo.toddler.girl;
+      promo1 = urls.promo.select.toddler.girl;
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
@@ -183,7 +187,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/toddler-boys-clothing/view-all':
-      promo1 = urls.promo.toddler.boy;
+      promo1 = urls.promo.select.toddler.boy;
       promo2 = urls.promo.select.toddler.boy;
       promo3 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
@@ -212,7 +216,7 @@ export const switchSale = (href) => {
       break;
 
     case '/sale/newborn-clothing/view-all':
-      promo1 = urls.promo.baby.newborn;
+      promo1 = urls.promo.select.baby.newborn;
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
