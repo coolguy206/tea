@@ -8,8 +8,8 @@ import Glide from '@glidejs/glide'
 $(document).ready(function () {
 
   var num = Date.now();
-  console.log(`/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=${num}`);
-  fetch(`/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=${num}`)
+  console.log(`/mas_assets/media/tea_collection/js/pdps-order-lines.js?nocache=${num}`);
+  fetch(`/mas_assets/media/tea_collection/js/pdps-order-lines.js?nocache=${num}`)
     .then(response => response.json())
     .then(data => {
       console.log(data);

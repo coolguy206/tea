@@ -7,8 +7,8 @@ function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default":
 
 $(document).ready(function () {
   var num = Date.now();
-  console.log("/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=".concat(num));
-  fetch("/mas_assets/media/tea_collection/content-zone/order-lines-slider/pdps-order-lines.js?nocache=".concat(num)).then(function (response) {
+  console.log("/mas_assets/media/tea_collection/js/pdps-order-lines.js?nocache=".concat(num));
+  fetch("/mas_assets/media/tea_collection/js/pdps-order-lines.js?nocache=".concat(num)).then(function (response) {
     return response.json();
   }).then(function (data) {
     console.log(data);
