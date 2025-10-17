@@ -17,7 +17,7 @@
         @media screen and (max-width: 430px) {
             // column-gap: 4vw;
             // row-gap: 4vw;
-            // justify-content: center;
+            justify-content: center;
             //  flex-wrap: wrap;
             // position: absolute;
             // top: 50%;
@@ -72,13 +72,18 @@
 
         }
 
-        a.cta5,
-        a.cta6 {
-            // @media screen and (max-width: 430px) {
-            //     display: block;
-            // }
+        a.cta5 {
+            @media screen and (max-width: 430px) {
+                text-align: right;
+            }
+        }
 
-            // display: block
+        a.cta6 {
+            @media screen and (max-width: 430px) {
+                text-align: center;
+            }
+
+            display: block;
         }
 
         .the-cta {
