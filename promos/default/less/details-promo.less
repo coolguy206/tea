@@ -3,6 +3,21 @@
         width: 95%;
     }
 
+    @media screen and (max-width: 430px) {
+        display: block;
+        transition: all .5s;
+        // height: 50%;
+        position: fixed;
+        z-index: 9999;
+        width: 100%;
+        top: -150%;
+        border: 1px solid;
+    }
+
+    &.activate {
+        top: 0;
+    }
+
     display: none;
     background: #fff;
     width: 700px;

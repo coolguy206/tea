@@ -86,16 +86,35 @@ jQuery(document).ready(function () {
   } else {
     // console.log(`.promos already cloned`);
   }
-  $('.the-promo .see-details').fancybox({
-    helpers: {
-      overlay: null
+  $('body').on('click', '.the-promo .see-details', function () {
+    var windowSize = window.innerWidth;
+    // console.log(windowSize);
+
+    if (windowSize < 431) {
+      // console.log(`mobile add class`);
+      $('.details-promo').addClass('activate');
+    } else {
+      // console.log(`desktop use fancybox`);
+      $('.the-promo .see-details').fancybox({
+        helpers: {
+          overlay: null
+        }
+      });
     }
   });
-  $('.close-fancy, .fancybox-close-small').on('click', function (e) {
+  $('body').on('click', '.close-fancy, .fancybox-close-small', function (e) {
     e.preventDefault();
+    var windowSize = window.innerWidth;
+    // console.log(windowSize);
+    if (windowSize < 431) {
+      // console.log(`mobile remove class`);
+      $('.details-promo').removeClass('activate');
+    } else {
+      // console.log(`desktop use fancybox`);
+      $.fancybox.close();
+      $('.fancybox-container').hide();
+    }
     // console.log(`fancy closed clicked`);
-    $.fancybox.close();
-    $('.fancybox-container').hide();
   });
 
   // $('.promos-wrap').bxSlider({
