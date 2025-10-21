@@ -25,7 +25,7 @@ jQuery(document).ready(function () {
   // });
 
   //? change the aria-label for the promos
-  let aria = $('.the-promo') 
+  let aria = $('.the-promo')
 
   aria.map((i, val) => {
     var str = $(val).find('.span-wrap').text();
@@ -92,17 +92,39 @@ jQuery(document).ready(function () {
   }
 
 
-  $('.the-promo .see-details').fancybox({
-    helpers: {
-      overlay: null
-    },
+  $('body').on('click', '.the-promo .see-details', function () {
+
+    var windowSize = window.innerWidth;
+    // console.log(windowSize);
+
+    if (windowSize < 431) {
+      // console.log(`mobile add class`);
+      $('.details-promo').addClass('activate');
+    } else {
+      // console.log(`desktop use fancybox`);
+      $('.the-promo .see-details').fancybox({
+        helpers: {
+          overlay: null
+        }
+      });
+    }
   });
 
-  $('.close-fancy, .fancybox-close-small').on('click', function (e) {
+  $('body').on('click', '.close-fancy, .fancybox-close-small', function (e) {
     e.preventDefault();
+
+    var windowSize = window.innerWidth;
+    // console.log(windowSize);
+    if (windowSize < 431) {
+      // console.log(`mobile remove class`);
+      $('.details-promo').removeClass('activate');
+
+    } else {
+      // console.log(`desktop use fancybox`);
+      $.fancybox.close();
+      $('.fancybox-container').hide()
+    }
     // console.log(`fancy closed clicked`);
-    $.fancybox.close();
-    $('.fancybox-container').hide()
 
   });
 
