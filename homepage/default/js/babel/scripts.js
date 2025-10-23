@@ -53,27 +53,26 @@ $(document).ajaxComplete(function (event, xhr, options) {
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow-2').append(theClone2);
   }
-
-  // new Glide('.hp .tee-shop-slider .glide', {
-  //   type: 'carousel',
-  //   // autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   bound: true,
-  //   rewind: false,
-  //   breakpoints: {
-  //     // 821: {
-  //     //   perView: 4,
-  //     //   perSwipe: '|',
-  //     // },
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  new _glide["default"]('.hp .tee-shop-slider.all .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   //? HIDE ALL THE SLIDERS
   $('.tee-shop-slider.all').hide();
