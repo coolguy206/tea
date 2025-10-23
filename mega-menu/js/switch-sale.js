@@ -37,7 +37,7 @@ export const switchSale = (href) => {
 
   let newborn = ``;
   // let newborn = `.promo1-url.newborn`;
-  let showNewborn = false;
+  let showNewborn = true;
 
   // let swim = `.promo1-url.girl`;
   // let dress = `.promo1-url.girl`;

@@ -38,7 +38,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
 
   var newborn = "";
   // let newborn = `.promo1-url.newborn`;
-  var showNewborn = false;
+  var showNewborn = true;
 
   // let swim = `.promo1-url.girl`;
   // let dress = `.promo1-url.girl`;
