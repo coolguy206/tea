@@ -11,6 +11,7 @@ import {
 import Glide from '@glidejs/glide'
 
 
+
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
@@ -49,6 +50,43 @@ $(document).ajaxComplete(function (event, xhr, options) {
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
   $('.hp .new-arrivals-slider').show()
 
+
+  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone2 = $('.tee-shop-slider.all').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount2 = $('.hp .tee-shop-slider.all').length;
+  if (sliderCount2 == 0) {
+    $('.hp .shop-slideshow-2').append(theClone2);
+  }
+
+  // new Glide('.hp .tee-shop-slider .glide', {
+  //   type: 'carousel',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   bound: true,
+  //   rewind: false,
+  //   breakpoints: {
+  //     // 821: {
+  //     //   perView: 4,
+  //     //   perSwipe: '|',
+  //     // },
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
+
+  //? HIDE ALL THE SLIDERS
+  $('.tee-shop-slider.all').hide()
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .tee-shop-slider.all').show()
+
+
   // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
@@ -68,16 +106,16 @@ $(document).ready(function () {
   //? COUNTDOWN.JS
   // countdown('2025/07/22 23:59:59');
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
