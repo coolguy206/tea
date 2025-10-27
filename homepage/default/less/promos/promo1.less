@@ -1,15 +1,15 @@
 @import "../var.less";
 @promo-background: #5F4744;
-@promo-h2-color: #532E3A;
-@promo-h2-color-430: #fff;;
-@promo-h2-font-family: @analogue;
-@promo-h3-color: #532E3A;
+@promo-h2-color: #680246;
+@promo-h2-color-430: #fff;
+@promo-h2-font-family: @souv;
+@promo-h3-color: #fff;
 @promo-h3-color-430: #fff;
 @promo-h3-font-family: @gilroyb;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
-@promo-cta1-color: #fff;
-@promo-cta1-background: #532E3A;
+@promo-cta1-color: #680246;
+@promo-cta1-background: #fff;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #4261A6;
 @promo-cta3-color: @promo-cta1-color;
@@ -37,7 +37,7 @@
   width: 100%;
   // width: 50%;
   // display: inline-flex !important;
-  background: @promo-background;
+  // background: @promo-background;
   min-height: 450px;
   // flex-wrap: wrap;
 
@@ -89,13 +89,13 @@
         // top: 46%;
         transform: translate(0%, -50%);
         left: 0;
-        top: 13%;
+        top: 60%;
       }
 
       position: absolute;
       top: 50%;
       transform: translate(-50%, -50%);
-      width: 100%;
+      width: 30%;
       left: 50%;
       // text-align: center;
 
@@ -123,8 +123,10 @@
           // line-height: 6vw;
           // letter-spacing: .9vw;
 
-          font-size: 5vw;
-          line-height: 6vw;
+          // font-size: 5vw;
+
+          font-size: 6vw;
+          // line-height: 6vw;
           // column-gap: 4vw;
           // letter-spacing: .2vw;
           margin: 0 0 3vw;
@@ -141,6 +143,7 @@
           // letter-spacing: 1.1vw;
 
           font-size: 9vw;
+          font-size: 48px;
           line-height: normal;
           // letter-spacing: 1vw;
           margin: 0 0 6vw;
@@ -154,11 +157,16 @@
 
         color: @promo-h2-color;
         font-family: @promo-h2-font-family;
-        font-size: 80px;
-        line-height: 96px;
+        // font-size: 80px;
+        // line-height: 96px;
+
+        font-size: 93px;
+        line-height: normal;
         // margin:0 0 1vw;
         // letter-spacing: 2.258px;
-        text-transform: capitalize;
+        // text-transform: capitalize;
+
+        text-transform: uppercase;
         // text-align: right;
 
         span {
@@ -261,9 +269,9 @@
           justify-content: center;
           flex-wrap: wrap;
           width: 100%;
-          position: absolute;
+          // position: absolute;
           margin: 0;
-          top: 135vw;
+          // top: 135vw;
         }
 
         display: flex;
@@ -271,7 +279,7 @@
         row-gap: 21px;
         column-gap: 21px;
         justify-content: center;
-        width: 35%;
+        // width: 35%;
         margin: 0 auto;
         // margin: 1vw auto;
 
