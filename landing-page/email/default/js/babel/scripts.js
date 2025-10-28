@@ -1,17 +1,19 @@
 "use strict";
 
+var _inview = require("./inview.js");
 $(document).ready(function () {
+  (0, _inview.inview)('.email-wrap');
   var a;
   var url = window.location.href;
   var c = $(".email-wrap").find("button");
   var e = null;
-  var listId = "WiTjSE";
-  var companyId = "RAd6JR";
 
+  // var listId = `WiTjSE`;
+  var listId = "UERrV4";
+  var companyId = "RAd6JR";
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
-
   if (url.indexOf("?") !== -1) {
     var f = url.split("?")[1].split("&");
     $.each(f, function (b, c) {
@@ -23,8 +25,9 @@ $(document).ready(function () {
         e = f;
       }
     });
-    console.log("e = ".concat(e)); //? ONLY EXECUTE IF E EQUALS A VALUE NOT NULL
+    console.log("e = ".concat(e));
 
+    //? ONLY EXECUTE IF E EQUALS A VALUE NOT NULL
     if (e !== null) {
       var g = "<p>Sign up for exclusive offers, new<br> styles, and ".concat(e, "% off your first order!*</p>");
       $(".email-wrap .sign-up .default").hide();
@@ -35,19 +38,21 @@ $(document).ready(function () {
       $(".email-wrap .thanks .promo-message").append(h);
     }
   } else {
-    a = "email sign up landing page";
+    // a = "email sign up landing page";
+    a = "25FFE10";
   }
-
   $(c).click(function (c) {
     c.preventDefault();
     var e = $(".email-wrap").find("input").val();
     $(".email-wrap .error").hide();
     var f = emailIsValid(e);
-
     if (f) {
       $(".email-wrap .sign-up .load-more-wrap").show();
       $(".email-wrap .input-fields").hide();
-      var ac = a;
+      var ac = "25FFE10";
+
+      // console.log(ac);
+
       var theData = {
         data: {
           type: "subscription",
@@ -85,4 +90,3 @@ $(document).ready(function () {
     }
   });
 });
-//# sourceMappingURL=scripts.js.map
