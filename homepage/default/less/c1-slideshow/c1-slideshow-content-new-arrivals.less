@@ -2,13 +2,13 @@
 
 &.content-new-arrivals {
     @media screen and (max-width: 1679px) {
-        width: @c1-new-arrivals-width-1678;
+        // width: @c1-new-arrivals-width-1678;
     }
 
     @media screen and (max-width: 430px) {
         width: 100%;
         left: 0;
-        top: 91vw !important;
+        top: 55vw !important;
         transform: translateX(0);
     }
 
@@ -28,36 +28,39 @@
         @media screen and (max-width: 430px) {
             color: @c1-new-arrivals-h3-color-431;
             text-shadow: none;
-            font-size: 3vw !important;
+            font-size: 4.2vw !important;
+            line-height: 7.7vw;
+            letter-spacing: .9vw;
         }
 
         color: @c1-new-arrivals-h3-color;
         text-align: center;
         margin: 0 !important;
-        text-shadow: @text-shadow;
+        // text-shadow: @text-shadow;
     }
 
     h2 {
         @media screen and (max-width: 1679px) {
             font-size: 7vw !important;
-            line-height: 7vw !important;
-            margin: 1vw 0 2vw;
+            line-height: 8.7vw !important;
+            margin: 2.1vw 0 3.3vw;
         }
 
         @media screen and (max-width: 430px) {
             color: @c1-new-arrivals-h2-color-431;
-            font-size: 20vw !important;
-            line-height: 21vw !important;
-            margin: 4vw 0 !important;
+            font-size: 14vw !important;
+            line-height: 14vw !important;
+            margin: 5.4vw 0 8.2vw !important;
         }
 
         color: @c1-new-arrivals-h2-color;
         text-align: center;
         font-family: @c1-new-arrivals-h2-font-family;
-        text-shadow: @text-shadow;
-        font-size: 120px !important;
-        line-height: 110px !important;
-        margin: 20px 0 30px;
+        // text-shadow: @text-shadow;
+        font-size: 116px !important;
+        line-height: 145px !important;
+        margin: 35px 0 56px;
+        letter-spacing: 1.16px;
     }
 
     p {
@@ -94,11 +97,13 @@
         a {
             @media screen and (max-width: 1679px) {
                 width: @c1-new-arrivals-cta-size-1679;
+                margin: 6vw 0 0;
             }
 
             @media screen and (max-width: 430px) {
                 width: @c1-new-arrivals-cta-size-431;
                 background: @c1-new-arrivals-cta-background-430;
+                margin: 31vw 0 0;
             }
 
             &.cta5 {
@@ -114,10 +119,11 @@
             }
 
             color: @c1-new-arrivals-cta-color;
-            // background: @c1-new-arrivals-cta-background;
-            background: none;
+            background: @c1-new-arrivals-cta-background;
+            // background: none;
             width: @c1-new-arrivals-cta-size;
-            text-shadow: @text-shadow;
+            margin: 56px 0 0;
+            // text-shadow: @text-shadow;
         }
     }
 }

@@ -52,15 +52,15 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.tee-shop-slider.all').clone();
+  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .tee-shop-slider.all').length;
+  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow-2').append(theClone2);
   }
 
-  new Glide('.hp .tee-shop-slider.all .glide', {
+  new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
     type: 'carousel',
     // autoplay: 4000,
     animationDuration: 500,
@@ -82,9 +82,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.tee-shop-slider.all').hide()
+  $('.kids-holiday-outfits-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .tee-shop-slider.all').show()
+  $('.hp .kids-holiday-outfits-slider.all').show()
 
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
@@ -106,16 +106,17 @@ $(document).ready(function () {
   //? COUNTDOWN.JS
   // countdown('2025/07/22 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  new Glide('.c1 .glide', {
+    type: 'carousel',
+    // autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false,
+  }).mount();
+
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
