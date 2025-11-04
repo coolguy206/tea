@@ -1,0 +1,142 @@
+<div class="kids-holiday-outfits-slider all">
+    <div class="white-out"></div>
+   
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                
+                {load_thumbs mode="category_recursive" category="kids-holiday-outfits"}
+                {thumb_loop count="20"}
+                    {thumb name=cat}
+                        {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}
+                        <li class="lgw-thumb">
+                            <div class="thumb-grid item" style="width: 100%; padding: 0;">
+                                <span class="img">
+                                    {*<div class="quickview-overlay lgw"><h2><a href="#{$cat.item->sku}/{$cat.item->color}">&nbsp;</a></h2></div>*}
+    
+                                    {if $cat.item->badge != "none"}
+                                        <a class="badge {$cat.item->badge}" href="{$cat.item->item_url()}" data-hash="{$cat.item_attr_str.style}_{$color|lower|replace:' ':'_'}" style='background-image: url("{$media_assets_url}tea_responsive/badges/badge_{$cat.item->badge}.png");'>
+                                            <span class="ada-hidden">{""|lang:"Badge `$cat.item->badge`"}</span>
+                                        </a>
+                                    {/if}
+    
+                                    <a href="{$cat.item->item_url()}" class="kids-holiday-outfits-slider {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+                                        <img src="{image size=thumb type=item id=$cat.sku}" alt="{$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+    
+                                        {if $cat.thumb_wink_images[$id]}
+                                            <img class="wink-image" src="{image size=thumb type=id id=`$cat.thumb_wink_images[$id]`}" alt="{if $cat.brand}{$cat.brand|smarty:nodefaults} {/if}{$cat.model|smarty:nodefaults}"/>
+                                        {/if}
+                                    </a>
+    
+                                    <!--<span data-href="{$cat.item->item_url()}" data-color="{$cat.item->color}" class="js-qv {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">Quick View</span>-->
+                                </span>
+    
+                                <div class="thumb-content">
+                                    
+                                    {*<span>
+                                        {$cat.item->badge}
+                                    </span>*}
+    
+                                    {*{if $cat.item->mas_new_arrival}<span class="new-item">New!</span>{/if}*}
+    
+                                    <a href="{$cat.item->item_url()}" class="name kids-holiday-outfits">
+                                        {if $cat.applied_inventory_control == 'in_stock_email' && $cat.item->per_color_qty <= 0}
+                                            {if $cat.badge == 'comingsoon'}
+                                                <span class="comingsoon-item">{""|lang:"Coming Soon"}</span>
+                                            {elseif $cat.badge == 'unavailable'}
+                                                <span class="unavailable-item">{""|lang:"Currently Unavailable"}</span>
+                                            {else}
+                                                <span class="soldout-item">{""|lang:"Sold Out"}</span>
+                                            {/if}
+                                        {else}
+                                            {if $cat.mas_new_arrival}
+                                                <span class="new-item">{""|lang:"New!"}</span>
+                                            {/if}
+                                        {/if}
+                        
+                                        {if $cat.brand}
+                                            <span class="brand">{$cat.brand|smarty:nodefaults}</span> 
+                                        {/if}
+    
+                                        <span class="model">{$cat.model|smarty:nodefaults}</span>
+                                    </a>
+    
+    
+                                    <div class="price-wrap">
+                                        <div class="price">
+                                            {if $cat.type ne 'gift_certificate'}
+                                                {if $cat.retail_price|floatval > $cat.store_price|floatval}
+                                                    <span id="store_price" class="old-price"><strike>{$cat.retail_price|price|money}</strike></span>
+                                                    <span id="sale_price" class="price-red">{$cat.store_price|price|money}</span>
+                                                {else}
+                                                    <span id="store_price" class="price">{$cat.store_price|price|money}</span>
+                                                {/if}
+                                            {/if}
+                                        </div>
+                                    </div>
+    
+                                    {if $cat.type eq 'gift_certificate'}
+                                        <p class="size">{""|lang:"Available \$25.00 to \$200.00"}</p>
+                                    {else}
+                                        {if $cat.type eq 'parent' || $cat.parent_id}
+                                            <p class="size">
+                                                {* One or more sizes *}
+                                                {if $cat.min_size}
+                                                    <span class="thumb-sizes" title="{$sizes_per_parent|replace:'_':'-'}">
+                                                        Sizes {$cat.min_size|replace:'_':'-'} to {$cat.max_size|replace:'_':'-'}
+                                                    </span>
+                                                {else}
+                                                    <span>Size {$cat.max_size|replace:'_':'-'}</span>
+                                                {/if}
+    
+                                                {if $cat.badge_show_attribute && $cat.badge_copy_attribute}
+                                                    <span class="thumb-badge">&#8226; {$cat.badge_copy_attribute|smarty:nodefaults}</span>
+                                                {/if}
+    
+                                                {if $cat.tooltip_show_attribute && $cat.tooltip_copy_attribute}
+                                                    <span class="thumb-badge-tooltip">
+                                                        <i class="far fa-question-circle"></i>
+                                                        <span class="thumb-badge-tooltip-copy hidden">{$cat.tooltip_copy_attribute|smarty:nodefaults}</span>
+                                                    </span>
+                                                {/if}
+                                            </p>
+                                        {/if}
+                                    {/if}
+    
+                                    {if $cat.item->promo_teaser}
+                                        <span class="promo-teaser-thumb">{$cat.item->promo_teaser}</span>
+                                    {/if}
+    
+                                </div>
+                            </div>
+                        </li>
+                        {/if}
+                    {/thumb}
+                {/thumb_loop}
+            
+            </ul>
+        </div>
+
+        <div class="glide__bullets" data-glide-el="controls[nav]"></div>
+
+        <div data-glide-el="controls">
+            <span data-glide-dir="<" class="lt-arrow">
+                <img src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/lt-arrow.png">
+            </span>
+            <span data-glide-dir=">" class="rt-arrow">
+                <img src="/mas_assets/media/tea_collection/homepage/2022/1027/v0/rt-arrow.png">
+            </span>
+        </div>
+    </div>
+</div>
+
+{literal}
+<style>
+    .kids-holiday-outfits-slider{background:#fff;transition:all 1s;position:relative;margin:40px 0 0}@media screen and (max-width:1679px){.kids-holiday-outfits-slider{margin:2vw 0 0}}@media screen and (max-width:430px){.kids-holiday-outfits-slider{margin:8vw 0 0}}.kids-holiday-outfits-slider .cta-no-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:28px;letter-spacing:.2em}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .cta-no-border{font-size:.9vw}}@media screen and (max-width:810px){.kids-holiday-outfits-slider .cta-no-border{padding:0;line-height:2vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .cta-no-border{font-size:3vw;line-height:8vw}}.kids-holiday-outfits-slider .cta-no-border::after{content:'';border-bottom:2px solid;display:block;position:relative;bottom:1%}.kids-holiday-outfits-slider .cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .cta-border{font-size:.9vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .cta-border{font-size:2.5vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .desktop{display:none !important}}.kids-holiday-outfits-slider .mobile{display:none}@media screen and (max-width:430px){.kids-holiday-outfits-slider .mobile{display:block}}.kids-holiday-outfits-slider .a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .a{width:43.5vw;height:7vw;padding:0}}.kids-holiday-outfits-slider .glide{position:relative;width:100%;box-sizing:border-box}.kids-holiday-outfits-slider .glide *{box-sizing:inherit}.kids-holiday-outfits-slider .glide__track{overflow:hidden}.kids-holiday-outfits-slider .glide__slides{position:relative;width:100%;list-style:none;backface-visibility:hidden;transform-style:preserve-3d;touch-action:pan-Y;overflow:hidden;margin:0;padding:0;white-space:nowrap;display:flex;flex-wrap:nowrap;will-change:transform}.kids-holiday-outfits-slider .glide__slides--dragging{user-select:none}.kids-holiday-outfits-slider .glide__slide{width:100%;height:100%;flex-shrink:0;white-space:normal;user-select:none;-webkit-touch-callout:none;-webkit-tap-highlight-color:transparent}.kids-holiday-outfits-slider .glide__slide a{user-select:none;-webkit-user-drag:none;-moz-user-select:none;-ms-user-select:none}.kids-holiday-outfits-slider .glide__arrows{-webkit-touch-callout:none;user-select:none}.kids-holiday-outfits-slider .glide__bullets{-webkit-touch-callout:none;user-select:none}.kids-holiday-outfits-slider .glide--rtl{direction:rtl}.kids-holiday-outfits-slider .glide{position:unset}@media screen and (max-width:1679px){}.kids-holiday-outfits-slider .glide .glide__track .glide__slides .glide__slide{position:relative}.kids-holiday-outfits-slider .glide .glide__bullets{position:absolute}@media screen and (max-width:430px){.kids-holiday-outfits-slider .glide .glide__bullets{position:relative;padding:6vw 0;bottom:0;text-align:center}}.kids-holiday-outfits-slider .glide .glide__bullets button{border-radius:1vw;width:21px;height:21px;display:inline-block;padding:0 !important;border:none !important}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .glide .glide__bullets button{width:1.3vw;height:1.3vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .glide .glide__bullets button{width:10px;height:10px;border-radius:5px;background-color:#666 !important;margin:0 5px}}.kids-holiday-outfits-slider .glide .glide__bullets button.glide__bullet.glide__bullet--active{background-color:#000 !important}.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span{position:absolute;top:50%;transform:translate(0, -50%);width:20px}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span{width:1.2vw}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span{width:5vw}}.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span:hover{cursor:pointer}.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span.lt-arrow{left:0%}.kids-holiday-outfits-slider .glide div[data-glide-el="controls"] span.rt-arrow{right:0%}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .glide__slides{white-space:normal}}.kids-holiday-outfits-slider h2{font-family:gilroy-regular;color:#4f4243;font-size:1.625rem;text-align:center;letter-spacing:4px;text-transform:uppercase;margin:20px 0}@media screen and (max-width:1679px){}@media screen and (max-width:430px){}@media screen and (max-width:320px){}.kids-holiday-outfits-slider .glide__bullets{display:none}@media screen and (max-width:430px){.kids-holiday-outfits-slider .glide__bullets{display:block}}.kids-holiday-outfits-slider img{display:block}.kids-holiday-outfits-slider span:hover{cursor:pointer}.kids-holiday-outfits-slider li{position:relative}.kids-holiday-outfits-slider .thumb-grid.item{width:100%}@media screen and (max-width:430px){.kids-holiday-outfits-slider .thumb-grid.item .thumb-content{display:inline-block;left:50%;position:relative;transform:translate(-50%, 0)}}@media screen and (max-width:835px){.kids-holiday-outfits-slider .thumb-grid.item .img .js-qv{display:block;opacity:1;position:relative}}@media screen and (max-width:430px){.kids-holiday-outfits-slider .thumb-grid.item .img .js-qv{display:none}}.kids-holiday-outfits-slider .thumb-grid.item .price-wrap #store_price{display:inline}.kids-holiday-outfits-slider .thumb-grid.item .size{text-align:left}.kids-holiday-outfits-slider .thumb-grid.item .size .thumb-sizes{display:block}.kids-holiday-outfits-slider .thumb-grid.item .promo-teaser-thumb{white-space:wrap;display:inline}.kids-holiday-outfits-slider .cta-no-border{color:#fff}.kids-holiday-outfits-slider .white-out{position:absolute;width:100%;height:100%;background:#fff;z-index:99}.kids-holiday-outfits-slider .glide{margin:0 auto}@media screen and (max-width:430px){}.kids-holiday-outfits-slider .thumb-grid.item{width:100%;padding:0}.kids-holiday-outfits-slider .width-300{justify-content:center}.kids-holiday-outfits-slider .width-300 li{width:300px}@media screen and (max-width:1679px){.kids-holiday-outfits-slider .width-300 li{width:18vw}}.kids-holiday-outfits-slider .width-300 li .thumb-grid.item{padding:0}
+</style>
+
+<script>
+    //? TURNED OFF SCRIPT BECAUSE IT IS BEING CALLED IN THE HP SCRIPT
+     /*include "../js/jsmin/scripts.min.js" */
+</script>
+{/literal}
