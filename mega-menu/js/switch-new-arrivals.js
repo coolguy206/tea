@@ -7,9 +7,9 @@ export const switchNewArrivals = (href) => {
   let promo3 = href;
   let clearance = href;
 
-  let showPromo1 = true;
+  let showPromo1 = false;
   let showPromo2 = false;
-  let showPromo3 = false;
+  let showPromo3 = true;
 
   let promo1Elem = `.promo1-url`;
   let promo2Elem = `.promo2-url`;
@@ -83,7 +83,6 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-
       if (showPromo2) {
         $(promo2Elem).show();
       }
@@ -111,7 +110,6 @@ export const switchNewArrivals = (href) => {
           $(promo1Elem).show();
         }
       }
-
 
       if (showPromo2) {
         $(promo2Elem).show();
@@ -141,7 +139,6 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-
       if (showPromo2) {
         $(promo2Elem).show();
       }
@@ -170,7 +167,6 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-
       if (showPromo2) {
         $(promo2Elem).show();
       }
@@ -198,7 +194,6 @@ export const switchNewArrivals = (href) => {
           $(promo1Elem).show();
         }
       }
-
 
       if (showPromo2) {
         $(promo2Elem).show();
@@ -229,7 +224,6 @@ export const switchNewArrivals = (href) => {
         }
       }
 
-
       if (showPromo2) {
         $(promo2Elem).show();
       }
@@ -258,7 +252,6 @@ export const switchNewArrivals = (href) => {
           $(promo1Elem).show();
         }
       }
-
 
       if (showPromo2) {
         $(promo2Elem).show();

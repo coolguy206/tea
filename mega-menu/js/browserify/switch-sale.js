@@ -11,9 +11,9 @@ var switchSale = exports.switchSale = function switchSale(href) {
   var promo2 = href;
   var promo3 = href;
   var clearance = href;
-  var showPromo1 = true;
+  var showPromo1 = false;
   var showPromo2 = false;
-  var showPromo3 = false;
+  var showPromo3 = true;
   var promo1Elem = ".promo1-url";
   var promo2Elem = ".promo2-url";
   var promo3Elem = ".promo3-url";

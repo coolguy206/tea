@@ -8,9 +8,9 @@ export const switchSale = (href) => {
   let promo3 = href;
   let clearance = href;
 
-  let showPromo1 = true;
+  let showPromo1 = false;
   let showPromo2 = false;
-  let showPromo3 = false;
+  let showPromo3 = true;
 
   let promo1Elem = `.promo1-url`;
   let promo2Elem = `.promo2-url`;
