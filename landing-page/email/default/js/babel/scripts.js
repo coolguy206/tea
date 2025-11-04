@@ -7,9 +7,8 @@ $(document).ready(function () {
   var url = window.location.href;
   var c = $(".email-wrap").find("button");
   var e = null;
-
-  // var listId = `WiTjSE`;
-  var listId = "UERrV4";
+  var listId = "WiTjSE";
+  // var listId = `UERrV4`;
   var companyId = "RAd6JR";
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
@@ -38,8 +37,8 @@ $(document).ready(function () {
       $(".email-wrap .thanks .promo-message").append(h);
     }
   } else {
-    // a = "email sign up landing page";
-    a = "25FFE10";
+    a = "email sign up landing page";
+    // a = "25FFE10";
   }
   $(c).click(function (c) {
     c.preventDefault();
@@ -49,7 +48,7 @@ $(document).ready(function () {
     if (f) {
       $(".email-wrap .sign-up .load-more-wrap").show();
       $(".email-wrap .input-fields").hide();
-      var ac = "25FFE10";
+      var ac = "email sign up landing page";
 
       // console.log(ac);
 
