@@ -20,7 +20,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
     $('.hp .shop-slideshow').append(theClone);
   }
   new _glide["default"]('.hp .new-arrivals-slider.all .glide', {
-    type: 'carousel',
+    type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
     perView: 5,
@@ -54,7 +54,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
     $('.hp .shop-slideshow-2').append(theClone2);
   }
   new _glide["default"]('.hp .kids-holiday-outfits-slider.all .glide', {
-    type: 'carousel',
+    type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
     perView: 5,

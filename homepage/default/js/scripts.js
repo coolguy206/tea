@@ -25,7 +25,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }
 
   new Glide('.hp .new-arrivals-slider.all .glide', {
-    type: 'carousel',
+    type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
     perView: 5,
@@ -61,7 +61,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }
 
   new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
-    type: 'carousel',
+    type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
     perView: 5,
