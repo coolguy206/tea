@@ -48,8 +48,8 @@ $(document).ready(function () {
                            ${img} 
                         </a>
     
-                        <!--<span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.name}">Quick View</span>
-                      </span>-->
+                        <span data-href="${val.url}" data-color="${val.color}" class="js-qv ${val.name}">Quick View</span>
+                      </span>
     
                       <div class="thumb-content">
                         <a href="${val.url}" class="name the-order-lines">
@@ -83,7 +83,7 @@ $(document).ready(function () {
       //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
       if ($('.the-orders-lines-slider li').length >= 5 || window.innerWidth < 431) {
         new Glide('.the-orders-lines-slider .glide', {
-          type: 'carousel',
+          type: 'slider',
           // autoplay: 4000,
           animationDuration: 500,
           perView: 5,
@@ -102,53 +102,18 @@ $(document).ready(function () {
             },
           }
         }).mount();
+
       } else {
+
         //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
         $('.the-orders-lines-slider div[data-glide-el="controls"]').hide();
         $('.the-orders-lines-slider ul').addClass('width-300');
+        
       }
 
       inview('.the-orders-lines-slider');
       $('.the-orders-lines-slider .white-out').fadeOut();
 
     }).catch((err) => { console.log(`oops something went wrong. \n ${err}`) });
-
-
-
-
-  // $('.the-orders-lines-slider').css('opacity', 1);
-
-  // $($(`.the-orders-lines-slider .lgw-thumb`)[6]).before($('.the-orders-lines-slider .img-2'));
-  /*
-    //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
-    if ($('.the-orders-lines-slider li').length >= 5 || window.innerWidth < 431) {
-      new Glide('.the-orders-lines-slider .glide', {
-        type: 'carousel',
-        // autoplay: 4000,
-        animationDuration: 500,
-        perView: 5,
-        hoverpause: true,
-        gap: 0,
-        bound: true,
-        rewind: false,
-        breakpoints: {
-          // 821: {
-          //   perView: 3,
-          //   perSwipe: '|',
-          // },
-          431: {
-            perView: 2,
-            perSwipe: '|',
-          },
-        }
-      }).mount();
-    } else {
-      //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
-      $('.the-orders-lines-slider div[data-glide-el="controls"]').hide();
-      $('.the-orders-lines-slider ul').addClass('width-300');
-    }
-  */
-  //  inview('.the-orders-lines-slider');
-
 
 });
