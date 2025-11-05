@@ -80,19 +80,19 @@ jQuery(document).ready(function () {
 
 
       //? on mobile clone the promo & put in the footer. when scroll show it
-      $('.the-banner-footer-container').prepend($('.promos').clone());
+      // $('.the-banner-footer-container').prepend($('.promos').clone());
 
-      $(window).scroll(function () {
+      // $(window).scroll(function () {
         
-        var scrollTop = $(this).scrollTop();
-        // console.log(scrollTop);
+      //   var scrollTop = $(this).scrollTop();
+      //   // console.log(scrollTop);
 
-        if (scrollTop > 216) {
-            $('.the-banner-footer-container .promos').addClass('show-the-banner');
-        } else {
-          $('.the-banner-footer-container .promos').removeClass('show-the-banner');
-        }
-      });
+      //   if (scrollTop > 216) {
+      //       $('.the-banner-footer-container .promos').addClass('show-the-banner');
+      //   } else {
+      //     $('.the-banner-footer-container .promos').removeClass('show-the-banner');
+      //   }
+      // });
     }
   }
 

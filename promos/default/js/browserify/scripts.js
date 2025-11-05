@@ -75,7 +75,8 @@ jQuery(document).ready(function () {
       $(".promos .the-promo").css('height', '100px');
 
       //? on mobile clone the promo & put in the footer. when scroll show it
-      $('.the-banner-footer-container').prepend($('.promos').clone());
+      // $('.the-banner-footer-container').prepend($('.promos').clone());
+
       $(window).scroll(function () {
         var scrollTop = $(this).scrollTop();
         // console.log(scrollTop);
