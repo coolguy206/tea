@@ -4,9 +4,9 @@ import {
 
 $(document).ready(function () {
   //expand sidebar
-  $('.shops h2').addClass('open');
-  $('.shops .links').css('display', 'block');
-  $('.shops h2 span').attr('class', 'fas fa-minus');
+  // $('.shops h2').addClass('open');
+  // $('.shops .links').css('display', 'block');
+  // $('.shops h2 span').attr('class', 'fas fa-minus');
 
   inview('.container-black-friday');
 

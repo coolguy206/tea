@@ -50,16 +50,16 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
 $(document).ready(function () {
   //expand sidebar
-  $('.shops h2').addClass('open');
-  $('.shops .links').css('display', 'block');
-  $('.shops h2 span').attr('class', 'fas fa-minus');
+  // $('.shops h2').addClass('open');
+  // $('.shops .links').css('display', 'block');
+  // $('.shops h2 span').attr('class', 'fas fa-minus');
+
   (0, _inview.inview)('.container-black-friday');
   var url = window.location.pathname;
 
@@ -111,6 +111,5 @@ $(document).ready(function () {
     }
   */
 });
-
 
 },{"./inview.js":1}]},{},[2]);
