@@ -1,66 +1,52 @@
-import {
-  urls
-} from './urls.js';
+import { urls } from './urls.js';
+import { promoVars } from './promo-vars.js';
+
 export const switchNewArrivals = (href) => {
   let promo1 = href;
   let promo2 = href;
   let promo3 = href;
   let clearance = href;
 
-  let showPromo1 = false;
-  let showPromo2 = false;
-  let showPromo3 = true;
-
-  let promo1Elem = `.promo1-url`;
-  let promo2Elem = `.promo2-url`;
-  let promo3Elem = `.promo3-url`;
-
-  let girl = ``;
-  let boy = ``;
-  let babyGirl = ``;
-  let babyBoy = ``;
-  let toddlerGirl = ``;
-  let toddlerBoy = ``;
-  let swim = ``;
-  let dress = ``;
-
-  // let girl = `.promo1-url.girl`;
-  // let boy = `.promo1-url.boy`;
-  // let babyGirl = `.promo1-url.baby-girl`;
-  // let babyBoy = `.promo1-url.baby-boy`;
-
-  // let toddlerGirl = `.promo1-url.toddler-girl`;
-  // let toddlerBoy = `.promo1-url.toddler-boy`;
-  // let toddlerGirl = `.promo1-url.girl`;
-  // let toddlerBoy = `.promo1-url.boy`;
-
-  let newborn = ``;
-  // let newborn = `.promo1-url.newborn`;
-  let showNewborn = true;
-
-  // let swim = `.promo1-url.girl`;
-  // let dress = `.promo1-url.girl`;
+  let {
+    showPromo1,
+    showPromo2,
+    showPromo3,
+    promo1Elem,
+    promo2Elem,
+    promo3Elem,
+    girl,
+    boy,
+    babyGirl,
+    babyBoy,
+    toddlerGirl,
+    toddlerBoy,
+    newborn,
+    showNewborn,
+    swim,
+    dress
+  } = promoVars;
 
   switch (href) {
     case '/girls-clothing/new-arrivals':
-      promo1 =  urls.promo.girl;
+      promo1 = urls.promo.girl;
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
-      if (showPromo1) {
-        if (girl !== ``) {
-          $(girl).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.girl !== ``) {
+          $(promoVars.girl).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -71,24 +57,25 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/boys-clothing/new-arrivals':
-      promo1 =  urls.promo.boy;
+      promo1 = urls.promo.boy;
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
-      if (showPromo1) {
-        if (boy !== ``) {
-          $(boy).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.boy !== ``) {
+          $(promoVars.boy).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -99,24 +86,25 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-girl-clothes/new-arrivals':
-      promo1 =  urls.promo.baby.girl;
+      promo1 = urls.promo.baby.girl;
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
-      if (showPromo1) {
-        if (babyGirl !== ``) {
-          $(babyGirl).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.babyGirl !== ``) {
+          $(promoVars.babyGirl).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -127,24 +115,25 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/baby-boy-clothes/new-arrivals':
-      promo1 =  urls.promo.baby.boy;
+      promo1 = urls.promo.baby.boy;
       promo2 = urls.promo.select.baby.boy;
       promo3 = urls.promo.sale.baby.boy;
       clearance = urls.promo.clearance.baby.boy;
-      if (showPromo1) {
-        if (babyBoy !== ``) {
-          $(babyBoy).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.babyBoy !== ``) {
+          $(promoVars.babyBoy).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -155,24 +144,25 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-girls-clothes/favorites/new-arrivals':
-      promo1 =  urls.promo.toddler.girl;
+      promo1 = urls.promo.toddler.girl;
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
-      if (showPromo1) {
-        if (toddlerGirl !== ``) {
-          $(toddlerGirl).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.toddlerGirl !== ``) {
+          $(promoVars.toddlerGirl).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -183,24 +173,25 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/toddler-boys-clothes/favorites/new-arrivals':
-      promo1 =  urls.promo.toddler.boy;
+      promo1 = urls.promo.toddler.boy;
       promo2 = urls.promo.select.toddler.boy;
       promo3 = urls.promo.sale.toddler.boy;
       clearance = urls.promo.clearance.toddler.boy;
-      if (showPromo1) {
-        if (toddlerBoy !== ``) {
-          $(toddlerBoy).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.toddlerBoy !== ``) {
+          $(promoVars.toddlerBoy).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -212,24 +203,25 @@ export const switchNewArrivals = (href) => {
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      promo1 =  urls.promo.baby.newborn;
+      promo1 = urls.promo.baby.newborn;
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
-      if (showPromo1) {
-        if (newborn !== ``) {
-          $(newborn).show();
-        } else if (showNewborn) {
-          $(promo1Elem).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.newborn !== ``) {
+          $(promoVars.newborn).show();
+        } else if (promoVars.showNewborn) {
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -241,24 +233,25 @@ export const switchNewArrivals = (href) => {
 
     case '/swim-shop':
       // promo1 =  urls.promo.select.swim;
-      promo1 =  urls.promo.promo;
+      promo1 = urls.promo.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
-      if (showPromo1) {
-        if (swim !== ``) {
-          $(swim).show();
+
+      if (promoVars.showPromo1) {
+        if (promoVars.swim !== ``) {
+          $(promoVars.swim).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();
@@ -270,24 +263,25 @@ export const switchNewArrivals = (href) => {
 
     case '/dresses':
       // promo1 =  urls.promo.select.swim;
-      promo1 =  urls.promo.promo;
+      promo1 = urls.promo.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
-      if (showPromo1) {
-        if (dress !== ``) {
-          $(dress).show();
+      
+      if (promoVars.showPromo1) {
+        if (promoVars.dress !== ``) {
+          $(promoVars.dress).show();
         } else {
-          $(promo1Elem).show();
+          $(promoVars.promo1Elem).show();
         }
       }
 
-      if (showPromo2) {
-        $(promo2Elem).show();
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
       }
 
-      if (showPromo3) {
-        $(promo3Elem).show();
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
       }
 
       // $('.promo3-url').show();

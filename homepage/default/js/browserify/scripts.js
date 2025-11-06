@@ -57,9 +57,7 @@ var _inview = require("./inview.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-// import {
-//   countdown
-// } from './countdown.js';
+// import { countdown } from './countdown.js';
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
@@ -148,16 +146,16 @@ $(document).ready(function () {
   //? COUNTDOWN.JS
   // countdown('2025/07/22 23:59:59');
 
-  new _glide["default"]('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
@@ -225,8 +223,6 @@ $(document).ready(function () {
       }
     }
   });
-
-  // $('img[usemap]').rwdImageMaps();
 });
 
 },{"./inview.js":1,"./tracking.js":3,"@glidejs/glide":4}],3:[function(require,module,exports){
