@@ -109,14 +109,24 @@ jQuery(document).ready(function () {
       $('.details-promo').addClass('activate');
     } else {
       // console.log(`desktop use fancybox`);
-      $('.the-promo .see-details').fancybox({
-        helpers: {
-          overlay: null
-        }
-      });
+      // $('.the-promo .see-details').fancybox({
+      //   helpers: {
+      //     overlay: null
+      //   }
+      // });
+
+      //? make overlay div
+      var overlay = "<div class=\"fine-print-overlay\"></div>";
+
+      //? make clone of fine print and add class fine-print-overlay-details
+      var clone = $('.details-promo').clone().addClass('fine-print-overlay-details');
+
+      //? add the elements just under the body
+      $('body').prepend(clone);
+      $('body').prepend(overlay);
     }
   });
-  $('body').on('click', '.close-fancy, .fancybox-close-small', function (e) {
+  $('body').on('click', '.close-fancy, .fine-print-overlay', function (e) {
     e.preventDefault();
     var windowSize = window.innerWidth;
     // console.log(windowSize);
@@ -125,8 +135,11 @@ jQuery(document).ready(function () {
       $('.details-promo').removeClass('activate');
     } else {
       // console.log(`desktop use fancybox`);
-      $.fancybox.close();
-      $('.fancybox-container').hide();
+      // $.fancybox.close();
+      // $('.fancybox-container').hide()
+
+      //?remove the elements
+      $('.fine-print-overlay, .fine-print-overlay-details').remove();
     }
     // console.log(`fancy closed clicked`);
   });
