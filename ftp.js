@@ -6,12 +6,13 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `1109`;
+var num = `1117`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/${year}/${num}/${version}/`;
+// var category = `promos/one-offs/${year}/${num}/${version}/`;
+var category = `promos/black-friday/${year}/${num}/${version}/`;
 // var category = `homepage/${year}/${num}/${version}/`;
 // var category = `headers/${year}/${num}/${version}/`;
 // var category = `landing-pages/email/${year}/${num}/${version}/`;
@@ -21,7 +22,7 @@ var category = `promos/one-offs/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/Site/111725/hp/`;
 // var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `Site/${num}/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
@@ -311,8 +312,14 @@ c.on('ready', function () {
 
 //?CONNECT FTP
 
+// c.connect({
+//   host: process.env.FTP_HOST,
+//   user: process.env.FTP_USER,
+//   password: process.env.FTP_PASSWORD
+// });
+
 c.connect({
-  host: process.env.FTP_HOST,
-  user: process.env.FTP_USER,
-  password: process.env.FTP_PASSWORD
+  host: process.env.FTP_SANDBOX_HOST,
+  user: process.env.FTP_SANDBOX_USER,
+  password: process.env.FTP_SANDBOX_PASSWORD
 });

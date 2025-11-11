@@ -45,39 +45,39 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
+  // var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
-  if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow-2').append(theClone2);
-  }
+  // var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
+  // if (sliderCount2 == 0) {
+  //   $('.hp .shop-slideshow-2').append(theClone2);
+  // }
 
-  new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
+  // new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
+  //   type: 'slider',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   bound: true,
+  //   rewind: false,
+  //   breakpoints: {
+  //     // 821: {
+  //     //   perView: 4,
+  //     //   perSwipe: '|',
+  //     // },
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.kids-holiday-outfits-slider.all').hide()
+  // $('.kids-holiday-outfits-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .kids-holiday-outfits-slider.all').show()
+  // $('.hp .kids-holiday-outfits-slider.all').show()
 
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));

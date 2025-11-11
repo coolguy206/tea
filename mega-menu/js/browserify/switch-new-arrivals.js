@@ -12,29 +12,32 @@ var promoVars = exports.promoVars = {
   promo1Elem: '.promo1-url',
   promo2Elem: '.promo2-url',
   promo3Elem: '.promo3-url',
-  // girl: '',
-  // boy: '',
-  girl: '.promo1-url.girl',
-  boy: '.promo1-url.boy',
-  // babyGirl: '',
-  // babyBoy: '',
+  girl: '',
+  boy: '',
+  // girl: '.promo1-url.girl',
+  // boy: '.promo1-url.boy',
+
+  babyGirl: '',
+  babyBoy: '',
   // babyGirl: `.promo1-url.baby-girl`,
   // babyBoy: `.promo1-url.baby-boy`,
-  babyGirl: '.promo1-url.girl',
-  babyBoy: '.promo1-url.boy',
-  // toddlerGirl: '',
-  // toddlerBoy: '',
+  // babyGirl: '.promo1-url.girl',
+  // babyBoy: '.promo1-url.boy',
+
+  toddlerGirl: '',
+  toddlerBoy: '',
   // toddlerGirl: `.promo1-url.toddler-girl`,
   // toddlerBoy: `.promo1-url.toddler-boy`,
-  toddlerGirl: '.promo1-url.girl',
-  toddlerBoy: '.promo1-url.boy',
+  // toddlerGirl: '.promo1-url.girl',
+  // toddlerBoy: '.promo1-url.boy',
+
   newborn: '',
   // newborn:`.promo1-url.newborn`,
   showNewborn: false,
-  // swim: ``,
-  // dress: ``,
-  swim: '.promo1-url.girl',
-  dress: '.promo1-url.girl'
+  swim: "",
+  dress: ""
+  // swim: '.promo1-url.girl',
+  // dress: '.promo1-url.girl'
 };
 
 },{}],2:[function(require,module,exports){
@@ -315,7 +318,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.urls = void 0;
 var urls = exports.urls = {
   promo: {
-    promo: "/new-arrivals",
+    promo: "/black-friday",
     swim: "/swimwear",
     girl: "/girls-clothes",
     boy: "/boys-clothes",
@@ -415,6 +418,7 @@ var urls = exports.urls = {
       }
     },
     blackFriday: {
+      promo: "/black-friday",
       girl: "/black-friday/girl",
       boy: "/black-friday/boy",
       baby: {

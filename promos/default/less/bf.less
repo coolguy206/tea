@@ -1,0 +1,32 @@
+@import 'var.less';
+@promoBFBg: #E894CD;
+@promoBFColor1: #373A48;
+@promoBFColor2: #fff;
+@promoBFColor3: #373A48;
+@promoBFDetails: #fff;
+
+&.bf {
+    background: @promoBFBg !important;
+    // background-image: linear-gradient(to right, @promoBFBg , @promoBF-Bg-2);
+    // display: none;
+
+    span {
+        &.first {
+            color: @promoBFColor1 !important;
+        }
+
+        &.second {
+            color: @promoBFColor2 !important;
+        }
+
+        &.third {
+            color: @promoBFColor3 !important;
+        }
+
+        &.details {
+            a {
+                color: @promoBFDetails !important;
+            }
+        }
+    }
+}
