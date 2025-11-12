@@ -32,7 +32,7 @@ var promoVars = exports.promoVars = {
 
   newborn: '',
   // newborn:`.promo1-url.newborn`,
-  showNewborn: false,
+  showNewborn: true,
   swim: "",
   dress: ""
   // swim: '.promo1-url.girl',

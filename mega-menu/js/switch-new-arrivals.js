@@ -203,7 +203,8 @@ export const switchNewArrivals = (href) => {
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      promo1 = urls.promo.baby.newborn;
+      // promo1 = urls.promo.baby.newborn;
+      promo1 = urls.promo.promo;
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;

@@ -33,7 +33,7 @@ var promoVars = exports.promoVars = {
 
   newborn: '',
   // newborn:`.promo1-url.newborn`,
-  showNewborn: false,
+  showNewborn: true,
   swim: "",
   dress: ""
   // swim: '.promo1-url.girl',
@@ -230,7 +230,8 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
       break;
     case '/sale/newborn-clothing/view-all':
-      promo1 = _urls.urls.promo.baby.newborn;
+      // promo1 = urls.promo.baby.newborn;
+      promo1 = _urls.urls.promo.promo;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;

@@ -27,7 +27,7 @@ export const promoVars = {
 
     newborn: '',
     // newborn:`.promo1-url.newborn`,
-    showNewborn: false,
+    showNewborn: true,
 
     swim: ``,
     dress: ``,
