@@ -48,7 +48,7 @@ jQuery(document).ready(function () {
     // $('.promos .the-promo.promo2').remove();
 
     //? BLACK FRIDAY
-    $('.promos .the-promo').addClass('bf');
+    // $('.promos .the-promo').addClass('bf');
 
     // $('.promos-wrap').bxSlider({
     //   auto: true,
