@@ -17,12 +17,12 @@ jQuery(document).ready(function () {
   */
 
   //? COUNTDOWN.JS
-  // $(".the-promo.countdown-promo #countdown span").countdown("2024/11/29 23:59:59", function (event) {
-  //   $(this).text(
-  //     event.strftime('%-DD %HH %MM %SS')
+  $(".the-promo.countdown-promo #countdown span").countdown("2025/11/28 23:59:59", function (event) {
+    $(this).text(
+      event.strftime('%-D Days %H Hours %M Mins')
   // event.strftime('%-D %H:%M:%S')
-  //   );
-  // });
+    );
+  });
 
   //? change the aria-label for the promos
   let aria = $('.the-promo')
@@ -53,7 +53,7 @@ jQuery(document).ready(function () {
 
     //? BLACK FRIDAY
     // $('.promos .the-promo').addClass('bf');
-    
+
     // $('.promos-wrap').bxSlider({
     //   auto: true,
     //   autoHover: true,
@@ -86,7 +86,7 @@ jQuery(document).ready(function () {
       // $('.the-banner-footer-container').prepend($('.promos').clone());
 
       // $(window).scroll(function () {
-        
+
       //   var scrollTop = $(this).scrollTop();
       //   // console.log(scrollTop);
 
