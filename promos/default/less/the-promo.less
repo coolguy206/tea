@@ -296,6 +296,10 @@ header.site-header {
       }
 
       &.details {
+        @media screen and (max-width: 1679px) {
+          right: 6vw;
+        }
+
         @media screen and (max-width: 810px) {
           // left: 86%;
           // display: none;
@@ -303,7 +307,7 @@ header.site-header {
 
         @media screen and (max-width: 430px) {
           // left: 78%;
-          left: 50%;
+          // left: 50%;
           // top: 74%;
           // top: 78%;
           top: 76%;
@@ -315,11 +319,15 @@ header.site-header {
 
           //? rotated 45 degrees
           transform: rotate(45deg);
-          left: 86%;
+          // left: 86%;
+
+          right: 0;
           top: 19%;
         }
 
-        left: 91%;
+        // left: 91%;
+
+        right:100px;
         top: 50%;
         transform: translate(0, -50%);
         position: absolute;
