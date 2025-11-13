@@ -45,6 +45,7 @@
 
                 font-size: 18px;
                 letter-spacing:4px;
+                text-shadow: @text-shadow;
 
             }
 
@@ -64,6 +65,7 @@
                 margin: 0;
                 text-align:left;
                 width: 100%;
+                text-shadow: @text-shadow;
             }
 
             .the-content {
@@ -81,7 +83,7 @@
                     width: 92%;
                 }
 
-                width: 90%;
+                width: 92%;
                 text-align: left;
                 position: absolute;
                 bottom: 84px;
@@ -96,6 +98,12 @@
                     @media screen and (max-width: 430px) {}
 
                     margin: 0;
+
+                    a {
+                        @media screen and (max-width: 430px) {
+                            text-shadow: @text-shadow;
+                        }
+                    }
 
                 }
             }
