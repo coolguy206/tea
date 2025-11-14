@@ -378,13 +378,13 @@ var urls = exports.urls = {
       girl: "/black-friday?gender%5B%5D=girl",
       boy: "/black-friday?gender%5B%5D=boy",
       baby: {
-        girl: "/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&gender%5B%5D=newborn&size_girl%5B%5D=0%20to%203%20months&size_girl%5B%5D=3%20to%206%20months&size_girl%5B%5D=6%20to%209%20months&size_girl%5B%5D=9%20to%2012%20months&size_girl%5B%5D=12%20to%2018%20months&size_girl%5B%5D=18%20to%2024%20months&size_girl%5B%5D=2t&size_girl%5B%5D=3t&size_girl%5B%5D=4t&store_price%5B%5D=",
-        boy: "/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&size_girl%5B%5D=0%20to%203%20months&size_girl%5B%5D=3%20to%206%20months&size_girl%5B%5D=6%20to%209%20months&size_girl%5B%5D=9%20to%2012%20months&size_girl%5B%5D=12%20to%2018%20months&size_girl%5B%5D=18%20to%2024%20months&size_girl%5B%5D=2t&size_girl%5B%5D=3t&size_girl%5B%5D=4t&store_price%5B%5D=",
+        girl: "/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
+        boy: "/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         newborn: "/newborn-clothing"
       },
       toddler: {
-        girl: "/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=\n",
-        boy: "/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=\n"
+        girl: "/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
+        boy: "/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
       }
     }
   }
