@@ -22,14 +22,14 @@ var category = `promos/black-friday/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/updated/112525/hp/`;
+var readFilePath = `Site/${num}/updated/112525/mega/`;
 // var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `Site/${num}/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/gift-save/`;
 // var writeFilePath = `landing-page/email/default/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
@@ -312,14 +312,14 @@ c.on('ready', function () {
 
 //?CONNECT FTP
 
-// c.connect({
-//   host: process.env.FTP_HOST,
-//   user: process.env.FTP_USER,
-//   password: process.env.FTP_PASSWORD
-// });
-
 c.connect({
-  host: process.env.FTP_SANDBOX_HOST,
-  user: process.env.FTP_SANDBOX_USER,
-  password: process.env.FTP_SANDBOX_PASSWORD
+  host: process.env.FTP_HOST,
+  user: process.env.FTP_USER,
+  password: process.env.FTP_PASSWORD
 });
+
+// c.connect({
+//   host: process.env.FTP_SANDBOX_HOST,
+//   user: process.env.FTP_SANDBOX_USER,
+//   password: process.env.FTP_SANDBOX_PASSWORD
+// });

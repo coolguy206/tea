@@ -5,7 +5,8 @@
 
 body.index header {
 
-  .site-header-inner .nav .site-nav-links li,  &.active .site-header-inner .nav .site-nav-links li {
+  .site-header-inner .nav .site-nav-links li,
+  &.active .site-header-inner .nav .site-nav-links li {
 
     // &.dept-bf {
     //   a {
@@ -53,6 +54,10 @@ header .site-header-inner.homepage {
     height: auto;
   }
 
+  @media screen and (max-width:430px) {
+    background: #fff;
+  }
+
   background: @bf-header-background-color;
   height: 160px;
 }
@@ -65,6 +70,11 @@ body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
 //? TEA LOGO BLACK FRIDAY
 body.index header {
   .site-header-inner .logo .logo-placeholder {
+    @media screen and (max-width:430px) {
+      background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo.png") center no-repeat !important;
+      background-size: contain !important;
+    }
+
     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/tea_logo_white.png") center no-repeat !important;
     background-size: contain !important;
   }
@@ -78,6 +88,10 @@ body.index header {
 //? SEARCH ICON BLACK FRIDAY
 body.index header {
   .site-header-inner .header-actions .search-icon {
+    @media screen and (max-width:430px) {
+      background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search.png") no-repeat center center/contain !important;
+    }
+
     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_search_white.png") no-repeat center center/contain !important;
   }
 
@@ -89,6 +103,10 @@ body.index header {
 //? MY ACCOUNT ICON BLACK FRIDAY
 body.index header {
   .site-header-inner .header-actions .my-account .my-account-icon {
+    @media screen and (max-width:430px) {
+      background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account.png") no-repeat center center/contain !important;
+    }
+
     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_account_white.png") no-repeat center center/contain !important;
   }
 
@@ -100,6 +118,10 @@ body.index header {
 //? SHOPPING CART BLACK FRIDAY
 body.index header {
   .site-header-inner .header-actions .cart-toggle .shopping-cart {
+    @media screen and (max-width:430px) {
+      background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag.png") no-repeat center center/contain !important;
+    }
+
     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/icon_bag_white.png") no-repeat center center/contain !important;
   }
 
@@ -110,7 +132,11 @@ body.index header {
 
 //? FAVORITES ICON BLACK FRIDAY
 body.index header {
-    .site-header-inner .header-wrapper .header-actions .favorites {
+  .site-header-inner .header-wrapper .header-actions .favorites {
+    @media screen and (max-width:430px) {
+      background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px.png") no-repeat center center/contain !important;
+    }
+
     background: url("https://s.tea-global.net/mas_assets/theme/tea_responsive/images/hb-20px-white.png") no-repeat center center/contain !important;
   }
 
@@ -120,8 +146,16 @@ body.index header {
 }
 
 //? MOBILE NAV BARS BLACK FRIDAY 
+body.index header .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+  @media screen and (max-width:430px) {
+    background-color: #47363d !important;
+  }
+}
+
 body.index header {
   &.active .site-header-inner .nav .nav-toggle .bars-wrap .bar {
+
+
     background-color: #fff !important;
   }
 
