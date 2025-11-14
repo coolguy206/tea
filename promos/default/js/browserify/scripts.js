@@ -18,7 +18,7 @@ jQuery(document).ready(function () {
 
   //? COUNTDOWN.JS
   $(".the-promo.countdown-promo #countdown span").countdown("2025/11/28 23:59:59", function (event) {
-    $(this).text(event.strftime('%-D Days %H Hours %M Mins')
+    $(this).text(event.strftime('%-DD %HH %MM %SS')
     // event.strftime('%-D %H:%M:%S')
     );
   });

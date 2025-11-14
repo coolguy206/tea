@@ -1,5 +1,5 @@
-@countdown-promoBg: #58CCAD;
-@countdown-promoColor1: #373A49;
+@countdown-promoBg: #A28CBB;
+@countdown-promoColor1: #fff;
 @countdown-promoColor2: #fff;
 @countdown-promoColor3: #373A49;
 @import 'var.less';
@@ -41,5 +41,33 @@
         text-transform: uppercase;
         font-size: 18px;
         text-align: center;
+
+        i {
+            font-style: normal;
+            color: @countdown-promoColor3;
+
+            u {
+                text-decoration: none;
+
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 50%;
+                        position: relative;
+                        margin: auto;
+                        bottom: 0;
+                    }
+
+                    content: '';
+                    border-bottom: 1px solid;
+                    display: flex;
+                    width: 96%;
+                    padding: 2px;
+                    position: absolute;
+                    bottom: -10%;
+                    left: 0;
+                    // display:none;
+                }
+            }
+        }
     }
 }
