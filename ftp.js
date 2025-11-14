@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2025`;
 var num = `1125`;
-var version = `v1`;
+var version = `v2`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -22,7 +22,7 @@ var category = `promos/black-friday/${year}/${num}/${version}/`;
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/updated/112525/hp/`;
 // var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `Site/${num}/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
