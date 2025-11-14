@@ -312,14 +312,14 @@ c.on('ready', function () {
 
 //?CONNECT FTP
 
-// c.connect({
-//   host: process.env.FTP_HOST,
-//   user: process.env.FTP_USER,
-//   password: process.env.FTP_PASSWORD
-// });
-
 c.connect({
-  host: process.env.FTP_SANDBOX_HOST,
-  user: process.env.FTP_SANDBOX_USER,
-  password: process.env.FTP_SANDBOX_PASSWORD
+  host: process.env.FTP_HOST,
+  user: process.env.FTP_USER,
+  password: process.env.FTP_PASSWORD
 });
+
+// c.connect({
+//   host: process.env.FTP_SANDBOX_HOST,
+//   user: process.env.FTP_SANDBOX_USER,
+//   password: process.env.FTP_SANDBOX_PASSWORD
+// });
