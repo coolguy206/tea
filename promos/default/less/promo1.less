@@ -19,6 +19,7 @@
 
             @media screen and (max-width: 430px) {
                 font-size: 3.5vw;
+                display: block;
                 // display: none;
             }
 
@@ -44,6 +45,7 @@
             @media screen and (max-width: 430px) {
                 // font-size: 2.8vw;
                 font-size: 3.5vw;
+                display: inline-block;
             }
 
             color: @promo1Color2;
@@ -69,9 +71,10 @@
             @media screen and (max-width: 430px) {
                 // font-size: 2.8vw;
                 font-size: 3.5vw;
+                display: inline-block;
             }
 
-            color: @promo1Color1;
+            color: @promo1Color3;
             font-family: @gilroyb;
             // text-decoration:underline;
 
@@ -81,8 +84,19 @@
                 // font-size: 8px;
             }
 
+
             a {
                 color: @promo1Color3;
+            }
+
+            u {
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                    }
+                }
             }
         }
 
