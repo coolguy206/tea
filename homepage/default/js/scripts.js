@@ -1,6 +1,6 @@
 
 import { inview } from './inview.js';
-import { countdown } from './countdown.js';
+// import { countdown } from './countdown.js';
 import { tracking } from './tracking.js';
 import Glide from '@glidejs/glide'
 
@@ -97,7 +97,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  countdown('2025/11/28 23:59:59');
+  // countdown('2025/11/28 23:59:59');
 
 
   // new Glide('.c1 .glide', {

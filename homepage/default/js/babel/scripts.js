@@ -1,10 +1,11 @@
 "use strict";
 
 var _inview = require("./inview.js");
-var _countdown = require("./countdown.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+// import { countdown } from './countdown.js';
+
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
@@ -91,7 +92,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  (0, _countdown.countdown)('2025/11/28 23:59:59');
+  // countdown('2025/11/28 23:59:59');
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
