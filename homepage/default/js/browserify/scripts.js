@@ -4,6 +4,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.countdown = void 0;
+var countdown = exports.countdown = function countdown(str) {
+  //   console.log(`countdown.js`);
+  $("#countdown span").countdown(str, function (event) {
+    $(this).text(event.strftime('%-DD %HH %MM %SS')
+    // event.strftime('%-D days %H hrs %M mins')
+    );
+  });
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.inview = void 0;
 var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
@@ -50,15 +66,14 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
+var _countdown = require("./countdown.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-// import { countdown } from './countdown.js';
-
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
@@ -145,7 +160,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // countdown('2025/11/28 23:59:59');
+  (0, _countdown.countdown)('2025/12/02 23:59:59');
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
@@ -226,7 +241,7 @@ $(document).ready(function () {
   });
 });
 
-},{"./inview.js":1,"./tracking.js":3,"@glidejs/glide":4}],3:[function(require,module,exports){
+},{"./countdown.js":1,"./inview.js":2,"./tracking.js":4,"@glidejs/glide":5}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -255,7 +270,7 @@ var tracking = exports.tracking = function tracking(elem, id) {
 //   });
 // };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4157,4 +4172,4 @@ var tracking = exports.tracking = function tracking(elem, id) {
 
 }));
 
-},{}]},{},[2]);
+},{}]},{},[3]);
