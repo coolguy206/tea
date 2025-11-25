@@ -44,14 +44,14 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // $('.hp .new-arrivals-slider').show()
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.black-friday-slider.all').clone();
+  var theClone2 = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .black-friday-slider.all').length;
+  var sliderCount2 = $('.hp .select-styles.all').length;
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow').append(theClone2);
   }
-  new _glide["default"]('.hp .black-friday-slider.all .glide', {
+  new _glide["default"]('.hp .select-styles.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -73,9 +73,10 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.black-friday-slider.all').hide();
+  $('.select-styles.all').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .black-friday-slider.all').show();
+  $('.hp .select-styles.all').show();
+  $('.hp .select-styles.all').css('opacity', '1');
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
