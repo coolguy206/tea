@@ -17,11 +17,12 @@ jQuery(document).ready(function () {
     */
 
   //? COUNTDOWN.JS
-  $(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
-    $(this).text(event.strftime('%-DD %HH %MM %SS')
-    // event.strftime('%-D %H:%M:%S')
-    );
-  });
+  // $(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-DD %HH %MM %SS')
+  //     // event.strftime('%-D %H:%M:%S')
+  //   );
+  // });
 
   //? change the aria-label for the promos
   var aria = $('.the-promo');
@@ -49,10 +50,11 @@ jQuery(document).ready(function () {
 
     //? BLACK FRIDAY
     // $('.promos .the-promo').addClass('bf');
+
     //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
     if ($('header.site-header .promos').length == 0) {
       // console.log(`cloning .promos`);
-      // $('header.site-header').prepend($('.promos.not-countdown').clone());
+      $('header.site-header').prepend($('.promos.not-countdown').clone());
 
       //? CLONE COUNTDOWN AND ADD UNDER BANNER FOR BLACK FRIDAY
       // $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());
@@ -80,14 +82,27 @@ jQuery(document).ready(function () {
     //? NOT HOME PAGE
     // $('.promos .the-promo.promo1').remove();
     // $('.promos .the-promo.promo3').show();
-    // $('.promos .the-promo.promo2').show();
+    $('.promos .the-promo.promo2').show();
+    $('.promos-wrap').bxSlider({
+      auto: true,
+      autoHover: true,
+      mode: 'fade',
+      controls: false,
+      pager: false,
+      pause: 2000,
+      touchEnabled: false,
+      onSliderLoad: function onSliderLoad() {
+        $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+      }
+    });
 
     //? BLACK FRIDAY
-    $('.promos').css('display', 'none');
-    $('.promos.countdown').css('display', 'block');
+    // $('.promos').css('display', 'none');
+    // $('.promos.countdown').css('display', 'block');
+
     // if ($('header.site-header .promos').length == 0) {
     //   // console.log(`cloning .promos`);
-    //   // $('header.site-header').prepend($('.promos.not-countdown').clone());
+    // $('header.site-header').prepend($('.promos.not-countdown').clone());
 
     //   //? CLONE COUNTDOWN AND ADD UNDER BANNER FOR BLACK FRIDAY
     //   // $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());
