@@ -9,39 +9,39 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.new-arrivals-slider').clone();
+  var theClone = $('.the-dresses-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .new-arrivals-slider').length;
-  // if (sliderCount == 0) {
-  //   $('.hp .shop-slideshow').append(theClone);
-  // }
+  var sliderCount = $('.hp .the-dresses-slider').length;
+  if (sliderCount == 0) {
+    $('.hp .shop-slideshow-2').append(theClone);
+  }
 
-  // new Glide('.hp .new-arrivals-slider.all .glide', {
-  //   type: 'slider',
-  //   // autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   bound: true,
-  //   rewind: false,
-  //   breakpoints: {
-  //     // 821: {
-  //     //   perView: 4,
-  //     //   perSwipe: '|',
-  //     // },
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  new Glide('.hp .the-dresses-slider .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|',
+      },
+    }
+  }).mount();
 
   //? HIDE ALL THE SLIDERS
-  // $('.new-arrivals-slider').hide()
+  $('.the-dresses-slider').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .new-arrivals-slider').show()
+  $('.hp .the-dresses-slider').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
@@ -80,8 +80,44 @@ $(document).ajaxComplete(function (event, xhr, options) {
   $('.hp .black-friday-slider.all').show()
 
 
+   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone3 = $('.the-gift-shop-slider').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount3 = $('.hp .the-gift-shop-slider').length;
+  if (sliderCount3 == 0) {
+    $('.hp .shop-slideshow-3').append(theClone3);
+  }
+
+  new Glide('.hp .the-gift-shop-slider .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|',
+      },
+    }
+  }).mount();
+
+  //? HIDE ALL THE SLIDERS
+  $('.the-gift-shop-slider').hide()
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .the-gift-shop-slider').show()
+
+
   // $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
+  // $('.hp .shop-slideshow').append($('.the-dresses-slider'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
