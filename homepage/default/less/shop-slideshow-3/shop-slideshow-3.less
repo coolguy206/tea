@@ -1,15 +1,18 @@
 @import "../var.less"; // @import "promo1.less";
-@shop-slideshow3-font-color: #4f4243;
-@shop-slideshow3-cta-color: #fff;
-@shop-slideshow3-background: #3B5F7A;
+@shop-slideshow-3-font-color: #4f4243;
+@shop-slideshow-3-cta-color: #fff;
+@shop-slideshow-3-background: #3B5F7A;
 
 .shop-slideshow-3 {
     @media screen and (max-width: 1679px) {
         // min-height: 35vw !important;
+        padding: 3vw 0;
     }
 
     @media screen and (max-width:430px) {
-        // padding: 8% 0;
+        padding: 11.7vw 0;
+        // padding: 10vw 0 0;
+        // padding: 0;
         // min-height: 169vw !important;
     }
 
@@ -30,8 +33,11 @@
         }
 
         @media screen and (max-width:430px) {
-            font-size: 11vw;
-            line-height: 11vw;
+            // font-size: 11vw;
+            // line-height: 11vw;
+            font-size: 7.5vw;
+            line-height: normal;
+            margin: 0 0 9.5vw;
             // margin: 0 0 6%;
         }
 
@@ -39,12 +45,20 @@
             // font-size: 36px;
         }
 
-        font-family: @kindnesss;
-        color: @shop-slideshow3-font-color;
-        font-size: 80px;
-        line-height: 70px;
-        text-transform: uppercase;
+        font-family: @gilroyr;
+        color: @shop-slideshow-3-font-color;
+        font-size: 54px;
+        margin: 0;
+        // line-height: 70px;
+        // text-transform: uppercase;
+        // margin: 0 0 3%;
 
+    }
+
+    .the-sliders {
+        @media screen and (max-width: 1679px){
+            margin: 2vw 0 0;
+        }
     }
 
     .glide__bullets {
@@ -66,7 +80,7 @@
 
         .the-content {
             @media screen and (max-width: 821px) {
-                bottom: 35%;
+                bottom: 30%;
             }
 
             @media screen and (max-width: 430px) {
@@ -126,8 +140,8 @@
             }
 
             span {
-                background: @shop-slideshow3-background;
-                color: @shop-slideshow3-cta-color;
+                background: @shop-slideshow-3-background;
+                color: @shop-slideshow-3-cta-color;
             }
         }
     }
@@ -164,6 +178,6 @@
     }
 
     .cta-no-border {
-        color: @shop-slideshow3-cta-color;
+        color: @shop-slideshow-3-cta-color;
     }
 }

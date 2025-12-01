@@ -4,6 +4,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.countdown = void 0;
+var countdown = exports.countdown = function countdown(str) {
+  //   console.log(`countdown.js`);
+  $("#countdown span").countdown(str, function (event) {
+    $(this).text(event.strftime('%-DD %HH %MM %SS')
+    // event.strftime('%-D days %H hrs %M mins')
+    );
+  });
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.inview = void 0;
 var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
@@ -50,52 +66,50 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
+var _countdown = require("./countdown.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-// import { countdown } from './countdown.js';
-
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.new-arrivals-slider').clone();
+  var theClone = $('.the-dresses-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .new-arrivals-slider').length;
-  // if (sliderCount == 0) {
-  //   $('.hp .shop-slideshow').append(theClone);
-  // }
-
-  // new Glide('.hp .new-arrivals-slider.all .glide', {
-  //   type: 'slider',
-  //   // autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   bound: true,
-  //   rewind: false,
-  //   breakpoints: {
-  //     // 821: {
-  //     //   perView: 4,
-  //     //   perSwipe: '|',
-  //     // },
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  var sliderCount = $('.hp .the-dresses-slider').length;
+  if (sliderCount == 0) {
+    $('.hp .shop-slideshow-2').append(theClone);
+  }
+  new _glide["default"]('.hp .the-dresses-slider .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   //? HIDE ALL THE SLIDERS
-  // $('.new-arrivals-slider').hide()
+  $('.the-dresses-slider').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .new-arrivals-slider').show()
+  $('.hp .the-dresses-slider').show();
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
   var theClone2 = $('.black-friday-slider.all').clone();
@@ -131,8 +145,42 @@ $(document).ajaxComplete(function (event, xhr, options) {
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
   $('.hp .black-friday-slider.all').show();
 
+  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone3 = $('.the-gift-shop-slider').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount3 = $('.hp .the-gift-shop-slider').length;
+  if (sliderCount3 == 0) {
+    $('.hp .shop-slideshow-3').append(theClone3);
+  }
+  new _glide["default"]('.hp .the-gift-shop-slider .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
+
+  //? HIDE ALL THE SLIDERS
+  $('.the-gift-shop-slider').hide();
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .the-gift-shop-slider').show();
+
   // $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
+  // $('.hp .shop-slideshow').append($('.the-dresses-slider'));
   // $('.hp .shop-slideshow').append($('.best-sellers'));
   // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
   // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
@@ -145,7 +193,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // countdown('2025/07/22 23:59:59');
+  (0, _countdown.countdown)('2025/11/28 23:59:59');
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
@@ -226,7 +274,7 @@ $(document).ready(function () {
   });
 });
 
-},{"./inview.js":1,"./tracking.js":3,"@glidejs/glide":4}],3:[function(require,module,exports){
+},{"./countdown.js":1,"./inview.js":2,"./tracking.js":4,"@glidejs/glide":5}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -255,7 +303,7 @@ var tracking = exports.tracking = function tracking(elem, id) {
 //   });
 // };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4157,4 +4205,4 @@ var tracking = exports.tracking = function tracking(elem, id) {
 
 }));
 
-},{}]},{},[2]);
+},{}]},{},[3]);
