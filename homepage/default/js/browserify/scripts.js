@@ -4,22 +4,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.countdown = void 0;
-var countdown = exports.countdown = function countdown(str) {
-  //   console.log(`countdown.js`);
-  $("#countdown span").countdown(str, function (event) {
-    $(this).text(event.strftime('%-DD %HH %MM %SS')
-    // event.strftime('%-D days %H hrs %M mins')
-    );
-  });
-};
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.inview = void 0;
 var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
@@ -66,61 +50,27 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],3:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
-var _countdown = require("./countdown.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+// import { countdown } from './countdown.js';
+
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.new-arrivals-slider').clone();
+  var theClone = $('.new-arrivals-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .new-arrivals-slider').length;
-  // if (sliderCount == 0) {
-  //   $('.hp .shop-slideshow').append(theClone);
-  // }
-
-  // new Glide('.hp .new-arrivals-slider.all .glide', {
-  //   type: 'slider',
-  //   // autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   bound: true,
-  //   rewind: false,
-  //   breakpoints: {
-  //     // 821: {
-  //     //   perView: 4,
-  //     //   perSwipe: '|',
-  //     // },
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  // $('.new-arrivals-slider').hide()
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .new-arrivals-slider').show()
-
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.select-styles.all').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .select-styles.all').length;
-  if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow').append(theClone2);
+  var sliderCount = $('.hp .new-arrivals-slider').length;
+  if (sliderCount == 0) {
+    $('.hp .shop-slideshow').append(theClone);
   }
-  new _glide["default"]('.hp .select-styles.all .glide', {
+  new _glide["default"]('.hp .new-arrivals-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -142,10 +92,44 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.select-styles.all').hide();
+  $('.new-arrivals-slider').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .select-styles.all').show();
-  $('.hp .select-styles.all').css('opacity', '1');
+  $('.hp .new-arrivals-slider').show();
+
+  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
+  if (sliderCount2 == 0) {
+    $('.hp .shop-slideshow-2').append(theClone2);
+  }
+  new _glide["default"]('.hp .kids-holiday-outfits-slider.all .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
+
+  //? HIDE ALL THE SLIDERS
+  $('.kids-holiday-outfits-slider.all').hide();
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .kids-holiday-outfits-slider.all').show();
+  // $('.hp .kids-holiday-outfits-slider.all').css('opacity', '1');
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
   // $('.hp .shop-slideshow').append($('.new-arrivals-slider'));
@@ -161,18 +145,18 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  (0, _countdown.countdown)('2025/12/02 23:59:59');
+  // countdown('2025/12/02 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  new _glide["default"]('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false
+  }).mount();
 
   // new Glide('.c2 .glide', {
   //   type: 'carousel',
@@ -242,7 +226,7 @@ $(document).ready(function () {
   });
 });
 
-},{"./countdown.js":1,"./inview.js":2,"./tracking.js":4,"@glidejs/glide":5}],4:[function(require,module,exports){
+},{"./inview.js":1,"./tracking.js":3,"@glidejs/glide":4}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -271,7 +255,7 @@ var tracking = exports.tracking = function tracking(elem, id) {
 //   });
 // };
 
-},{}],5:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4173,4 +4157,4 @@ var tracking = exports.tracking = function tracking(elem, id) {
 
 }));
 
-},{}]},{},[3]);
+},{}]},{},[2]);
