@@ -55,10 +55,25 @@
                 display: block;
             }
 
-            i {
+            i,
+            u {
                 color: @promo2Color3;
                 font-style: normal;
                 // font-size: 8px;
+            }
+
+            u {
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 30%;
+                        position: absolute;
+                        left: 65vw;
+                        margin: 0;
+                        bottom: -10%;
+                    }
+
+                    left: 0;
+                }
             }
 
 
