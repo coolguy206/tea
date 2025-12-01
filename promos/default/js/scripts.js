@@ -17,12 +17,12 @@ jQuery(document).ready(function () {
   */
 
   //? COUNTDOWN.JS
-  $(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
-    $(this).text(
-      event.strftime('%-DD %HH %MM %SS')
-      // event.strftime('%-D %H:%M:%S')
-    );
-  });
+  // $(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
+  //   $(this).text(
+  //     event.strftime('%-DD %HH %MM %SS')
+  //     // event.strftime('%-D %H:%M:%S')
+  //   );
+  // });
 
   //? change the aria-label for the promos
   let aria = $('.the-promo')
@@ -88,8 +88,8 @@ jQuery(document).ready(function () {
     // $('.promos .the-promo.promo2').show();
 
     //? BLACK FRIDAY
-    $('.promos').css('display', 'none');
-    $('.promos.countdown').css('display', 'block');
+    // $('.promos').css('display', 'none');
+    // $('.promos.countdown').css('display', 'block');
     // if ($('header.site-header .promos').length == 0) {
     //   // console.log(`cloning .promos`);
     //   // $('header.site-header').prepend($('.promos.not-countdown').clone());
@@ -186,18 +186,18 @@ jQuery(document).ready(function () {
 
   });
 
-  // $('.promos-wrap').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   pause: 2000,
-  //   touchEnabled: false,
+  $('.promos-wrap').bxSlider({
+    auto: true,
+    autoHover: true,
+    mode: 'fade',
+    controls: false,
+    pager: false,
+    pause: 4000,
+    touchEnabled: false,
 
-  //   onSliderLoad: function () {
-  //     $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+    onSliderLoad: function () {
+      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    }
+  });
 
 });
