@@ -1,6 +1,6 @@
 export const urls = {
   promo: {
-    promo: `/new-arrivals`,
+    promo: `/black-friday`,
     swim: `/swimwear`,
     girl: `/girls-clothes`,
     boy: `/boys-clothes`,
@@ -100,16 +100,17 @@ export const urls = {
       },
     },
     blackFriday: {
-      girl: `/black-friday/girl`,
-      boy: `/black-friday/boy`,
+      promo: `/black-friday`,
+      girl: `/black-friday?gender%5B%5D=girl`,
+      boy: `/black-friday?gender%5B%5D=boy`,
       baby: {
-        girl: `/black-friday/baby-girl`,
-        boy: `/black-friday/baby-boy`,
+        girl: `/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=`,
+        boy: `/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=`,
         newborn: `/newborn-clothing`,
       },
       toddler: {
-        girl: `/black-friday/toddler-girl`,
-        boy: `/black-friday/toddler-boy`,
+        girl: `/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=`,
+        boy: `/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=`,
       }
     },
   },

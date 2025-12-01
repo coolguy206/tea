@@ -1,6 +1,8 @@
 @import 'var.less';
 @import 'classes.less';
 @red: #FF1744;
+@cta-default-color: #fff;
+@cta-default-background: #373A48;
 @cta-leggings-color: #fff;
 @cta-leggings-background: #4A556B;
 @cta-tees-color: #fff;
@@ -12,7 +14,7 @@
 @cta-pajamas-color: #fff;
 @cta-pajamas-background: #58718F;
 @cta-shop-all-color: #fff;
-@cta-shop-all-background: #C1D065;
+@cta-shop-all-background: #373A48;
 
 .container-black-friday {
 
@@ -24,15 +26,21 @@
 				width: 12vw;
 			}
 
-			@media screen and (max-width:430px) {
-				width: 43vw;
-				margin: 0 0 4vw;
+			@media screen and (max-width: 1024px) {
+				width: 16vw;
 			}
 
-			color: @cta-leggings-color;
+			@media screen and (max-width:430px) {
+				width: 43vw;
+				// margin: 0 0 4vw;
+			}
+
+			color: @cta-default-color;
+			background: @cta-default-background;
 			width: 201px;
 
-			&.cta-leggings, &.cta-rompers {
+			&.cta-leggings,
+			&.cta-rompers {
 				@media screen and (max-width:430px) {}
 
 				// color: @cta1-color;

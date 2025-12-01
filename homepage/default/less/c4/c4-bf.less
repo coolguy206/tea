@@ -1,0 +1,169 @@
+@import "../var.less";
+@c4-first-font-color: #fff;
+@c4-first-cta-color: #373A48;
+@c4-first-cta-background: #fff;
+@c4-second-font-color: #FFF;
+@c4-second-cta-color: #373A48;
+@c4-second-cta-background: #fff;
+
+
+.c4 {
+    @media screen and (max-width: 1679px) {}
+
+    @media screen and (max-width: 430px) {}
+
+    padding: 0;
+    column-gap: 0;
+
+    div {
+
+        &.first,
+        &.second {
+            @media screen and (max-width:1679px) {}
+
+            @media screen and (max-width: 430px) {
+                padding: 0 !important;
+            }
+
+            a {
+                text-decoration: none;
+                color: @c4-first-font-color;
+            }
+
+            h3 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 1.5vw;
+                    letter-spacing: .25vw;
+                }
+
+                @media screen and (max-width:430px) {
+                    font-size: 4.2vw;
+                    letter-spacing: 1vw;
+                }
+
+                font-size: 24px;
+                letter-spacing:4px;
+                text-shadow: @text-shadow;
+
+            }
+
+            h2 {
+                @media screen and (max-width: 1679px) {
+                    font-size: 4.7vw;
+                }
+
+                @media screen and (max-width:430px) {
+                    font-size: 13.3vw;
+                }
+
+                font-family: @gilroybl;
+                font-size: 78px;
+                line-height: normal;
+                color: @c4-first-font-color;
+                margin: 0;
+                text-align:left;
+                width: 100%;
+                text-shadow: @text-shadow;
+            }
+
+            .the-content {
+                @media screen and (max-width: 1679px) {
+                    bottom: 5vw;
+                    left: 4.5vw;
+                    row-gap: 1.8vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    padding: 0 !important;
+                    left: 4.7vw;
+                    bottom: 12.5vw;
+                    row-gap: 4.9vw;
+                    width: 90%;
+                }
+
+                width: 70%;
+                text-align: left;
+                position: absolute;
+                bottom: 84px;
+                left: 74px;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: start;
+                row-gap:30px;
+                padding: 0;
+
+                div {
+                    @media screen and (max-width: 430px) {}
+
+                    margin: 0;
+
+                    a {
+                        @media screen and (max-width: 430px) {
+                            text-shadow: @text-shadow;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        &.first {
+            @media screen and (max-width: 430px) {}
+
+            // order: 2;
+
+            .the-content {
+
+                div {
+
+                    a {
+                        @media screen and (max-width:1679px) {
+                            width: 21vw;
+                        }
+
+                        @media screen and (max-width: 430px) {
+                            // width: 63vw;
+                            width: auto;
+                            background: none;
+                            color: #fff;
+                        }
+
+                        color: @c4-first-cta-color;
+                        background: @c4-first-cta-background;
+                        width: 354px;
+
+                    }
+                }
+            }
+        }
+
+        &.second {
+            @media screen and (max-width: 430px) {}
+
+            .the-content {
+
+                div {
+
+                    a {
+                        @media screen and (max-width:1679px) {
+                            width: 25vw;
+                        }
+
+                        @media screen and (max-width: 430px) {
+                            // width: 85vw;
+                            width: auto;
+                            background: none;
+                            color: #fff;
+                        }
+
+                        color: @c4-second-cta-color;
+                        background: @c4-second-cta-background;
+                        width: 417px;
+
+                    }
+                }
+            }
+        }
+
+    }
+}

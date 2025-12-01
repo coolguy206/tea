@@ -9,51 +9,51 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.new-arrivals-slider').clone();
+  // var theClone = $('.new-arrivals-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .new-arrivals-slider').length;
-  if (sliderCount == 0) {
-    $('.hp .shop-slideshow').append(theClone);
-  }
+  // var sliderCount = $('.hp .new-arrivals-slider').length;
+  // if (sliderCount == 0) {
+  //   $('.hp .shop-slideshow').append(theClone);
+  // }
 
-  new Glide('.hp .new-arrivals-slider.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
+  // new Glide('.hp .new-arrivals-slider.all .glide', {
+  //   type: 'slider',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   bound: true,
+  //   rewind: false,
+  //   breakpoints: {
+  //     // 821: {
+  //     //   perView: 4,
+  //     //   perSwipe: '|',
+  //     // },
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.new-arrivals-slider').hide()
+  // $('.new-arrivals-slider').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .new-arrivals-slider').show()
+  // $('.hp .new-arrivals-slider').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
+  var theClone2 = $('.black-friday-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
+  var sliderCount2 = $('.hp .black-friday-slider.all').length;
   if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow-2').append(theClone2);
+    $('.hp .shop-slideshow').append(theClone2);
   }
 
-  new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
+  new Glide('.hp .black-friday-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -75,9 +75,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.kids-holiday-outfits-slider.all').hide()
+  $('.black-friday-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .kids-holiday-outfits-slider.all').show()
+  $('.hp .black-friday-slider.all').show()
 
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
