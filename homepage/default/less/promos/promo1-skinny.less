@@ -1,9 +1,9 @@
 @import "../var.less";
-@promo-skinny-h2-color: #fff;
+@promo-skinny-h2-color: #556A82;
 @promo-skinny-font-color: #fff;
 @promo-skinny-p-color: #fff;
-@promo-skinny-cta1-color: #373A48;
-@promo-skinny-cta1-background: #fff;
+@promo-skinny-cta1-color: #E3F0A3;
+@promo-skinny-cta1-background: #556A82;
 @promo-skinny-cta2-color: @promo-skinny-cta1-color;
 @promo-skinny-cta2-background: #2FAB9D;
 @promo-skinny-cta3-color: @promo-skinny-cta1-color;
@@ -14,7 +14,7 @@
 @promo-skinny-cta5-background: #2B5579;
 @promo-skinny-cta6-color: @promo-skinny-cta1-color;
 @promo-skinny-cta6-background: #EC5152;
-@promo-skinny-background-color: #E894CD;
+@promo-skinny-background-color: #FCC2FB;
 
 .promo1-skinny {
   @media screen and (max-width: 1679px) {
@@ -45,7 +45,7 @@
       }
 
       @media screen and (max-width: 430px) {
-        top: 14.5vw;
+        top: 8.5vw;
         flex-wrap: wrap;
         left: 4.8vw;
         row-gap: 6.3vw;
@@ -124,7 +124,7 @@
         }
 
         @media screen and (max-width: 430px) {
-          font-size: 9.4vw;
+          font-size: 8.4vw;
           letter-spacing: 2vw;
         }
 
@@ -224,7 +224,8 @@
 
         a {
           @media screen and (max-width: 1679px) {
-            width: 12vw;
+            // width: 12vw;
+            width: 13vw;
             // width: 36vw;
           }
 
@@ -239,8 +240,19 @@
 
           color: @promo-skinny-cta1-color;
           background: @promo-skinny-cta1-background;
-          width: 203px;
+          // width: 203px;
+          width: 232px;
           // border: 1px solid #4F4243;
+
+          i {
+            @media screen and (max-width: 430px) {
+              display: none;
+            }
+
+            font-style: normal;
+            position: relative;
+            left: 5px;
+          }
 
           // &:hover {
           //   background: @promo-skinny-cta1-color;

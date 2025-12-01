@@ -112,14 +112,14 @@ $(document).ajaxComplete(function (event, xhr, options) {
   $('.hp .the-dresses-slider').show();
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.black-friday-slider.all').clone();
+  var theClone2 = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .black-friday-slider.all').length;
+  var sliderCount2 = $('.hp .select-styles.all').length;
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow').append(theClone2);
   }
-  new _glide["default"]('.hp .black-friday-slider.all .glide', {
+  new _glide["default"]('.hp .select-styles.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -141,9 +141,10 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.black-friday-slider.all').hide();
+  $('.select-styles.all').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .black-friday-slider.all').show();
+  $('.hp .select-styles.all').show();
+  $('.hp .select-styles.all').css('opacity', '1');
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
   var theClone3 = $('.the-gift-shop-slider').clone();
@@ -193,7 +194,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  (0, _countdown.countdown)('2025/11/28 23:59:59');
+  (0, _countdown.countdown)('2025/12/02 23:59:59');
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',

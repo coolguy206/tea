@@ -17,7 +17,7 @@ jQuery(document).ready(function () {
   */
 
   //? COUNTDOWN.JS
-  $(".the-promo.countdown-promo #countdown span").countdown("2025/11/28 23:59:59", function (event) {
+  $(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
     $(this).text(
       event.strftime('%-DD %HH %MM %SS')
       // event.strftime('%-D %H:%M:%S')
@@ -56,7 +56,7 @@ jQuery(document).ready(function () {
     //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
     if ($('header.site-header .promos').length == 0) {
       // console.log(`cloning .promos`);
-      $('header.site-header').prepend($('.promos.not-countdown').clone());
+      // $('header.site-header').prepend($('.promos.not-countdown').clone());
 
       //? CLONE COUNTDOWN AND ADD UNDER BANNER FOR BLACK FRIDAY
       // $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());

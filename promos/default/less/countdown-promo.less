@@ -1,7 +1,7 @@
-@countdown-promoBg: #A28CBB !important;
-@countdown-promoColor1: #373A49 !important;
-@countdown-promoColor2: #fff !important;
-@countdown-promoColor3: #373A49 !important;
+@countdown-promoBg: #556A82 !important;
+@countdown-promoColor1: #E3F0A3 !important;
+@countdown-promoColor2: #FCC2FB !important;
+@countdown-promoColor3: #fff !important;
 @import 'var.less';
 
 .promos.countdown {
@@ -39,7 +39,7 @@
 
                 // position: absolute;
                 font-family: @gilroybl;
-                color: #fff;
+                color: @countdown-promoColor2;
                 // top: 5%;
                 // left: 50%;
                 // transform: translate(-50%, 0);
@@ -58,6 +58,14 @@
                 i {
                     @media screen and (max-width:430px) {
                         display: block;
+                    }
+
+                    &.yellow {
+                        color: @countdown-promoColor1;
+                    }
+
+                    &.white {
+                        color: @countdown-promoColor3;
                     }
 
                     font-style: normal;
