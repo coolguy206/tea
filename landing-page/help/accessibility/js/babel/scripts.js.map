@@ -1,0 +1,1 @@
+{"version":3,"file":"scripts.js","names":["$","document","ready"],"sources":["../scripts.js"],"sourcesContent":["\r\n$(document).ready(function () {\r\n\r\n\r\n});"],"mappings":";;AACAA,CAAC,CAACC,QAAQ,CAAC,CAACC,KAAK,CAAC,YAAY,CAG9B,CAAC,CAAC"}
