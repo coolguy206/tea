@@ -191,7 +191,7 @@ jQuery(document).ready(function () {
     mode: 'fade',
     controls: false,
     pager: false,
-    pause: 4000,
+    pause: 2000,
     touchEnabled: false,
     onSliderLoad: function onSliderLoad() {
       $('.promos.promo1, .promos.promo2, .promos.promo3').show();
