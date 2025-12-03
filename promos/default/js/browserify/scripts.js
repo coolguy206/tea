@@ -50,6 +50,7 @@ jQuery(document).ready(function () {
 
     //? BLACK FRIDAY
     // $('.promos .the-promo').addClass('bf');
+
     //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
     if ($('header.site-header .promos').length == 0) {
       // console.log(`cloning .promos`);
@@ -83,12 +84,27 @@ jQuery(document).ready(function () {
     // $('.promos .the-promo.promo3').show();
     // $('.promos .the-promo.promo2').show();
 
+    // $('.promos-wrap').bxSlider({
+    //   auto: true,
+    //   autoHover: true,
+    //   mode: 'fade',
+    //   controls: false,
+    //   pager: false,
+    //   pause: 2000,
+    //   touchEnabled: false,
+
+    //   onSliderLoad: function () {
+    //     $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+    //   }
+    // });
+
     //? BLACK FRIDAY
     // $('.promos').css('display', 'none');
     // $('.promos.countdown').css('display', 'block');
+
     // if ($('header.site-header .promos').length == 0) {
     //   // console.log(`cloning .promos`);
-    //   // $('header.site-header').prepend($('.promos.not-countdown').clone());
+    // $('header.site-header').prepend($('.promos.not-countdown').clone());
 
     //   //? CLONE COUNTDOWN AND ADD UNDER BANNER FOR BLACK FRIDAY
     //   // $('header.site-header .promos').after($('.the-promo.countdown-promo').clone());
@@ -176,7 +192,7 @@ jQuery(document).ready(function () {
     mode: 'fade',
     controls: false,
     pager: false,
-    pause: 4000,
+    pause: 2000,
     touchEnabled: false,
     onSliderLoad: function onSliderLoad() {
       $('.promos.promo1, .promos.promo2, .promos.promo3').show();
