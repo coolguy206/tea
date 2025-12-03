@@ -1,6 +1,6 @@
 
 import { inview } from './inview.js';
-import { countdown } from './countdown.js';
+// import { countdown } from './countdown.js';
 import { tracking } from './tracking.js';
 import Glide from '@glidejs/glide'
 
@@ -9,15 +9,15 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.the-dresses-slider').clone();
+  var theClone = $('.new-arrivals-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .the-dresses-slider').length;
+  var sliderCount = $('.hp .new-arrivals-slider').length;
   if (sliderCount == 0) {
-    $('.hp .shop-slideshow-2').append(theClone);
+    $('.hp .shop-slideshow').append(theClone);
   }
 
-  new Glide('.hp .the-dresses-slider .glide', {
+  new Glide('.hp .new-arrivals-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -39,21 +39,21 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.the-dresses-slider').hide()
+  $('.new-arrivals-slider').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .the-dresses-slider').show()
+  $('.hp .new-arrivals-slider').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.select-styles.all').clone();
+  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .select-styles.all').length;
+  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
   if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow').append(theClone2);
+    $('.hp .shop-slideshow-2').append(theClone2);
   }
 
-  new Glide('.hp .select-styles.all .glide', {
+  new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -75,46 +75,10 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.select-styles.all').hide()
+  $('.kids-holiday-outfits-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .select-styles.all').show()
-  $('.hp .select-styles.all').css('opacity', '1');
-
-
-   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone3 = $('.the-gift-shop-slider').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount3 = $('.hp .the-gift-shop-slider').length;
-  if (sliderCount3 == 0) {
-    $('.hp .shop-slideshow-3').append(theClone3);
-  }
-
-  new Glide('.hp .the-gift-shop-slider .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.the-gift-shop-slider').hide()
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .the-gift-shop-slider').show()
+  $('.hp .kids-holiday-outfits-slider.all').show()
+  // $('.hp .kids-holiday-outfits-slider.all').css('opacity', '1');
 
 
   // $('.hp .shop-slideshow').append($('.the-sliders'));
@@ -134,19 +98,19 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  countdown('2025/12/02 23:59:59');
+  // countdown('2025/12/02 23:59:59');
 
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  new Glide('.c1 .glide', {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false,
+  }).mount();
 
 
   // new Glide('.c2 .glide', {
