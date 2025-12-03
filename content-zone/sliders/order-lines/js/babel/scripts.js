@@ -20,7 +20,7 @@ $(document).ready(function () {
       var retailPrice = val.retail_price;
 
       //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
-      if (storePrice == retailPrice && img.indexOf('undefined') == -1) {
+      if (storePrice == retailPrice && img !== undefined) {
         if (storePrice !== retailPrice) {
           price = "<span id=\"store_price\" class=\"old-price\"><strike>".concat(val.retail_price, "</strike></span>\n                  <span id=\"sale_price\" class=\"price-red\">").concat(val.store_price, "</span>");
         } else {
