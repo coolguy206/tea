@@ -9,15 +9,15 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.new-arrivals-slider').clone();
+  var theClone = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .new-arrivals-slider').length;
+  var sliderCount = $('.hp .select-styles.all').length;
   if (sliderCount == 0) {
     $('.hp .shop-slideshow').append(theClone);
   }
 
-  new Glide('.hp .new-arrivals-slider.all .glide', {
+  new Glide('.hp .select-styles.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -39,9 +39,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.new-arrivals-slider').hide()
+  $('.select-styles.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .new-arrivals-slider').show()
+  $('.hp .select-styles.all').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
@@ -81,11 +81,42 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // $('.hp .kids-holiday-outfits-slider.all').css('opacity', '1');
 
 
-  // $('.hp .shop-slideshow').append($('.the-sliders'));
-  // $('.hp .shop-slideshow').append($('.the-dresses-slider'));
-  // $('.hp .shop-slideshow').append($('.best-sellers'));
-  // $('.hp .shop-slideshow2').append($('.the-swim-slider'));
-  // $('.hp .shop-slideshow3').append($('.leggings.sliders'));
+  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
+  var theClone3 = $('.clothing-sale-slider.all').clone();
+
+  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
+  var sliderCount3 = $('.hp .clothing-sale-slider.all').length;
+  if (sliderCount3 == 0) {
+    $('.hp .shop-slideshow-3').append(theClone3);
+  }
+
+  new Glide('.hp .clothing-sale-slider.all .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|',
+      },
+    }
+  }).mount();
+
+  //? HIDE ALL THE SLIDERS
+  $('.clothing-sale-slider.all').hide()
+  //? ONLY SHOW THE SLIDER IN THE HP ELEM
+  $('.hp .clothing-sale-slider.all').show()
+
+
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 
@@ -101,16 +132,16 @@ $(document).ready(function () {
   // countdown('2025/12/02 23:59:59');
 
 
-  new Glide('.c1 .glide', {
-    type: 'carousel',
-    autoplay: 4000,
-    animationDuration: 1000,
-    perView: 1,
-    hoverpause: true,
-    gap: 0,
-    // swipeThreshold: false,
-    dragThreshold: false,
-  }).mount();
+  // new Glide('.c1 .glide', {
+  //   type: 'carousel',
+  //   autoplay: 4000,
+  //   animationDuration: 1000,
+  //   perView: 1,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   // swipeThreshold: false,
+  //   dragThreshold: false,
+  // }).mount();
 
 
   // new Glide('.c2 .glide', {
