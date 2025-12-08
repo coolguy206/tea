@@ -63,6 +63,22 @@ var urls = exports.urls = {
         boy: "/select-styles/toddler-boys-clothes/favorites/limited-time-sale"
       }
     },
+    select2: {
+      promo: "/select-styles",
+      family: "/select-styles/family",
+      girl: "/select-styles?gender%5B%5D=girl",
+      boy: "/select-styles?gender%5B%5D=boy",
+      baby: {
+        girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
+        boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
+        newborn: "/newborn-clothing/favorites/limited-time-sale",
+        newborn2: "/select-styles/newborn"
+      },
+      toddler: {
+        girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
+        boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
+      }
+    },
     sale: {
       promo: "/clothing-sale",
       girl: "/sale/girls-clothing/view-all ",
