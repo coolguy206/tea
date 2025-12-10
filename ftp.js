@@ -6,16 +6,16 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2025`;
-var num = `1215`;
+var num = `1214`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-var category = `promos/one-offs/${year}/${num}/${version}/`;
+// var category = `promos/one-offs/${year}/${num}/${version}/`;
 // var category = `promos/giving-tuesday/${year}/${num}/${version}/`;
 // var category = `homepage/${year}/${num}/${version}/`;
 // var category = `headers/${year}/${num}/${version}/`;
-// var category = `landing-pages/email/${year}/${num}/${version}/`;
+var category = `landing-pages/tushbaby/${year}/${num}/${version}/`;
 // var category = `mega-menu/${year}/${num}/${version}/`;
 
 //!EXCEPT THIS ONE
@@ -23,15 +23,15 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/Site/mega/`;
-var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/Site/`;
 // var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/gift-save/`;
-// var writeFilePath = `landing-page/email/default/dev/images/`;
+var writeFilePath = `landing-page/sweeps/tushbaby-giveaway/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
