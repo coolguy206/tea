@@ -88,12 +88,12 @@ var _phone = require("./phone.js");
 // console.log(keys);
 
 $(document).ready(function () {
-  var notifiedDate = "10/17/25";
+  var notifiedDate = "12/22/25";
   $('.notified-date').html(notifiedDate);
   (0, _inview.inview)('.content-wrap');
   var companyId = "RAd6JR";
-  var list = "SQf8fq";
-  var custom_source = "WSG1025";
+  var list = "TsYU6K";
+  var custom_source = "TBG1225";
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }

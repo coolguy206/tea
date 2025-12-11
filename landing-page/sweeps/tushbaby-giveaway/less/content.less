@@ -26,20 +26,21 @@
 			position: relative;
 		}
 
-		&.first {
+		&.first, &.third {
 			@media screen and (max-width: 430px) {}
 
 			// flex-basis: 39%;
 			order: 2;
+			flex-basis: 100%;
 
 			.the-content {
 				@media screen and (max-width: 430px) {
-					position: relative;
-					width: 100%;
+					// position: relative;
+					// width: 100%;
 					top: 0;
 					left: 0;
 					transform: translate(0);
-					padding: 8vw 0;
+					padding: 11.7vw 0;
 				}
 
 				position: absolute;
@@ -50,14 +51,14 @@
 
 				img {
 					@media screen and (max-width: 1679px) {
-						width: 27vw;
+						width: 24vw;
 					}
 
 					@media screen and (max-width: 430px) {
-						width: 68vw;
+						width: 84vw;
 					}
 
-					width: 459px;
+					width: 400px;
 				}
 
 				h1 {
@@ -66,16 +67,17 @@
 						// font-size: 4vw;
 						font-size: 2vw;
 						letter-spacing: .3vw;
+						margin: .9vw 0 1.2vw;
 					}
 
 					@media screen and (max-width: 430px) {
-						// line-height: 13vw;
-						// font-size: 14vw;
-						font-size: 6vw;
-						letter-spacing: 1vw;
+						font-size: 7.7vw;
+						letter-spacing: 1.2vw;
+						line-height: 9.6vw;
+						margin: 3.3vw 0 4.7vw;
 					}
 
-					margin: 5.5% 0 0;
+					margin: 14px 0 20px;
 					letter-spacing: 5.9px;
 					font-family: @gilroyb;
 					color: @h1-font-color;
@@ -83,6 +85,7 @@
 					// line-height: 70px;
 					font-size: 33px;
 					line-height: normal;
+					text-transform: uppercase;
 
 					span {
 						@media screen and (max-width: 1679px) {
@@ -121,32 +124,34 @@
 					@media screen and (max-width: 1679px) {
 						font-size: 1.1vw;
 						line-height: 1.5vw;
+						margin: 0 0 1.2vw;
 					}
 
 					@media screen and (max-width: 430px) {
-						// font-size: 3.9vw;
-						// line-height: 3.1vw;
-						// margin: 0 0 6%;
-						font-size: 4vw;
-						line-height: 6vw;
+						font-size: 4.2vw;
+						line-height: 5.7vw;
+						margin: 0 0 4.7vw;
 					}
 
 					font-family: @gilroyr;
 					font-size: 18px;
 					line-height: 24px;
 					color: @p-font-color;
-					margin: 4% 0;
+					margin: 0 0 20px;
 					// letter-spacing: 0.04em;
 
 					a {
-						color: @span-font-color;
-						text-decoration: none;
-						font-family: @gilroyb;
+						&.social {
+							color: @span-font-color;
+							text-decoration: none;
+							font-family: @gilroyb;
+						}
+
 					}
 
 					span {
 						@media screen and (max-width: 1679px) {
-							letter-spacing: .3vw;
+							letter-spacing: .29vw;
 						}
 
 						@media screen and (max-width: 430px) {
@@ -222,6 +227,7 @@
 			display: flex;
 			flex-wrap: wrap;
 			order: 1;
+			display: none;
 
 			div {
 				&:first-of-type {
@@ -262,11 +268,17 @@
 
 		&.third {
 			@media screen and (max-width:430px) {
-				// display: none;
+				display: block;
+				background: #fff;
+
+				.the-content {
+					position: relative;
+				}
 			}
 
 			order: 3;
 			text-align: right;
+			display: none;
 
 			img {
 				width: 100%;
