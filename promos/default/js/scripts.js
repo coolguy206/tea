@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
     // $('.promos .the-promo.promo1').show();
     // $('.promos .the-promo.promo3').show();
-    // $('.promos .the-promo.promo2').remove();
+    $('.promos .the-promo.promo2').remove();
 
 
     //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
