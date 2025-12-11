@@ -25,7 +25,8 @@ $(document).ready(function () {
         let retailPrice = val.retail_price;
 
         //? ONLY SHOW FULL PRICE ITEMS && ITEMS WITH IMAGES
-        if (storePrice == retailPrice && img !== undefined) {
+        // if (storePrice == retailPrice && img !== undefined) {
+        if (img !== undefined) {
 
 
           if (storePrice !== retailPrice) {
