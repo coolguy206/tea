@@ -119,7 +119,7 @@ jQuery(document).ready(function () {
     mode: 'fade',
     controls: false,
     pager: false,
-    pause: 2000,
+    pause: 3000,
     touchEnabled: false,
 
     onSliderLoad: function () {
