@@ -56,13 +56,15 @@ jQuery(document).ready(function () {
     // console.log(`cloning .promos`);
     $('header.site-header').prepend($('.promos').clone());
   }
-  $('body').on('click', '.the-promo .see-details', function () {
+  $('body').on('click', '.the-promo .see-details', function (e) {
+    e.preventDefault();
     var windowSize = window.innerWidth;
     // console.log(windowSize);
-
+    var href = $(this).attr('href');
     if (windowSize < 431) {
       // console.log(`mobile add class`);
-      $('.details-promo').addClass('activate');
+
+      $(href).addClass('activate');
     } else {
       // console.log(`desktop use fancybox`);
       // $('.the-promo .see-details').fancybox({
@@ -75,7 +77,7 @@ jQuery(document).ready(function () {
       var overlay = "<div class=\"fine-print-overlay\"></div>";
 
       //? make clone of fine print and add class fine-print-overlay-details
-      var clone = $('.details-promo').clone().addClass('fine-print-overlay-details');
+      var clone = $(href).clone().addClass('fine-print-overlay-details');
 
       //? add the elements just under the body
       $('body').prepend(clone);
@@ -105,7 +107,7 @@ jQuery(document).ready(function () {
     mode: 'fade',
     controls: false,
     pager: false,
-    pause: 3000,
+    pause: 2000,
     touchEnabled: false,
     onSliderLoad: function onSliderLoad() {
       $('.promos.promo1, .promos.promo2, .promos.promo3').show();
