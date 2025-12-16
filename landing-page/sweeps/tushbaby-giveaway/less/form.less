@@ -1,0 +1,229 @@
+@import 'vars.less';
+
+.this-form {
+	@media screen and (max-width: 430px) {
+		padding: 17.5% 0;
+	}
+
+	background: #F8F8F8;
+	padding: 4.5% 0;
+
+	.sending,
+	.successfully-sent {
+		display: none;
+		text-align: center;
+
+		h2 {
+			@media screen and (max-width: 1679px) {
+				font-size: 1.8vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				font-size: 5vw;
+			}
+
+			font-family: gilroy-regular;
+			font-size: 1.25rem;
+		}
+
+		a {
+			text-decoration: none;
+			color: #4268ca;
+		}
+	}
+
+	form {
+		@media screen and (max-width: 430px) {
+			width: 100%;
+			left: 0;
+			transform: translateX(0);
+			padding: 0 5%;
+		}
+
+		width: 48%;
+		left: 50%;
+		position: relative;
+		transform: translateX(-50%);
+		// display: flex;
+		// flex-wrap: wrap;
+		// padding: 0 0 0 1.9%;
+
+		.input-container {
+			@media screen and (max-width: 1679px) {
+				column-gap: 2.2vw;
+				row-gap: 2vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				column-gap: 0;
+				row-gap: 8vw;
+			}
+
+			display: flex;
+			flex-wrap: wrap;
+			column-gap: 37px;
+			row-gap: 34px;
+			justify-content: left;
+			// width: 98%;
+
+
+			div {
+				@media screen and (max-width: 430px) {
+					// flex-basis: 100%;
+					// margin: 0 0 9%;
+				}
+
+				// flex-basis: 50%;
+				// margin: 0 0 3.9%;
+
+			}
+		}
+
+		.button-box {
+			@media screen and (max-width: 430px) {
+				margin: 12% 0 0;
+				text-align: left;
+			}
+
+			flex-basis: 100%;
+			text-align: center;
+			margin: 0;
+		}
+
+		.p-container {
+			@media screen and (max-width: 430px) {
+				// padding: 0 0 0 2%;
+			}
+
+			// padding: 0 0 0 18%;
+
+			p {
+				@media screen and (max-width: 1679px) {
+					font-size: 1vw;
+					line-height: 1.3vw;
+				}
+
+				@media screen and (max-width: 430px) {
+					font-size: 3.9vw;
+					line-height: 5vw;
+				}
+
+				font-family: gilroy-regular;
+				font-size: 16px;
+				line-height: 21px;
+				flex-basis: 100%;
+				letter-spacing: 0.04em;
+
+				// color: #47363D;
+				&.by-entering {
+					@media screen and (max-width: 1679px) {
+						margin: 4.2vw 0 0;
+					}
+
+					@media screen and (max-width: 430px) {
+						margin: 8vw 0 0;
+					}
+
+					margin: 70px 0 0;
+				}
+
+				&.required {
+					@media screen and (max-width: 1679px) {
+						margin: 1.2vw 0 2.2vw;
+					}
+
+					@media screen and (max-width: 430px) {
+						margin: 13% 0 1%;
+					}
+
+					margin: 20px 0 36px;
+				}
+			}
+		}
+
+		label {
+			@media screen and (max-width: 1679px) {
+				font-size: .7vw;
+				line-height: 1.7vw;
+				letter-spacing: .1vw;
+				padding: 0 0 0 1.2vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				font-size: 3vw;
+				line-height: 6.6vw;
+				letter-spacing: .3vw;
+				padding: 0 0 0 4.7vw;
+			}
+
+			font-family: gilroy-regular;
+			font-size: 12px;
+			line-height: 28px;
+			letter-spacing: 1px;
+			display: block;
+			padding: 0 0 0 20px;
+		}
+
+		input {
+			@media screen and (max-width: 1679px) {
+				width: 22vw;
+				height: 3.3vw;
+				padding: 0 0 0 1.2vw;
+			}
+
+			@media screen and (max-width: 430px) {
+				width: 86vw;
+				height: 13vw;
+				padding: 0 0 0 4.7vw;
+			}
+
+			background: #EDEBEC;
+			border: none;
+			padding: 0 0 0 20px;
+			display: block;
+			// width: 91%;
+			font-family: gilroy-regular;
+			border-radius: 0;
+			letter-spacing: 0.04em;
+			width: 370px;
+			height:55px;
+
+			&[type="checkbox"] {
+				background: none;
+				border: 1px solid;
+				display: inline-block;
+				padding: 0;
+				height: 18px;
+				width: 18px;
+
+				&:checked {
+					background: #47363d;
+				}
+			}
+		}
+
+		button {
+			@media screen and (max-width: 1679px) {}
+
+			@media screen and (max-width: 430px) {}
+
+			color: #fff !important;
+			background: @cta-background-color !important;
+			padding: 0 !important;
+			border: none !important;
+		}
+	}
+}
+
+.this-error {
+	text-transform: uppercase;
+	display: none;
+	color: #D94D52;
+	font-family: gilroy-bold;
+	flex-basis: 100%;
+	letter-spacing: 0.04em;
+}
+
+.error-border {
+	border: 1px solid #D94D52 !important;
+}
