@@ -1,0 +1,129 @@
+@import "c1-slideshow-vars.less";
+
+&.content-new-arrivals {
+    @media screen and (max-width: 1679px) {
+        // width: @c1-new-arrivals-width-1678;
+    }
+
+    @media screen and (max-width: 430px) {
+        width: 100%;
+        left: 0;
+        top: 55vw !important;
+        transform: translateX(0);
+    }
+
+    top: @c1-new-arrivals-top;
+    left: @c1-new-arrivals-left;
+    width: @c1-new-arrivals-width;
+    transform: @c1-new-arrivals-transform;
+    // text-align: center;
+
+    h3,
+    h2,
+    p {
+        text-shadow: none;
+    }
+
+    h3 {
+        @media screen and (max-width: 430px) {
+            color: @c1-new-arrivals-h3-color-431;
+            text-shadow: none;
+            font-size: 4.2vw !important;
+            line-height: 7.7vw;
+            letter-spacing: .9vw;
+        }
+
+        color: @c1-new-arrivals-h3-color;
+        text-align: center;
+        margin: 0 !important;
+        // text-shadow: @text-shadow;
+    }
+
+    h2 {
+        @media screen and (max-width: 1679px) {
+            font-size: 7vw !important;
+            line-height: 8.7vw !important;
+            margin: 2.1vw 0 3.3vw;
+        }
+
+        @media screen and (max-width: 430px) {
+            color: @c1-new-arrivals-h2-color-431;
+            font-size: 14vw !important;
+            line-height: 14vw !important;
+            margin: 5.4vw 0 8.2vw !important;
+        }
+
+        color: @c1-new-arrivals-h2-color;
+        text-align: center;
+        font-family: @c1-new-arrivals-h2-font-family;
+        // text-shadow: @text-shadow;
+        font-size: 116px !important;
+        line-height: 145px !important;
+        margin: 35px 0 56px;
+        letter-spacing: 1.16px;
+    }
+
+    p {
+        @media screen and (max-width: 430px) {
+            display: block;
+            font-size: 5vw;
+        }
+
+        text-align: center;
+        // margin: 8% auto;
+        color: @c1-new-arrivals-p-color;
+        text-shadow: @text-shadow;
+        font-family: @c1-new-arrivals-p-font-family
+    }
+
+    div {
+        @media screen and (max-width: 430px) {
+            // top: @c1-new-arrivals-top-431;
+        }
+
+        &.the-flex {
+            @media screen and (max-width: 430px) {
+                // top: @c1-new-arrivals-the-flex-top-431;
+                justify-content: center;
+                top: 0;
+                position: relative;
+            }
+
+            margin: 0 auto;
+            width: @c1-new-arrivals-the-flex-width;
+            justify-content: center;
+        }
+
+        a {
+            @media screen and (max-width: 1679px) {
+                width: @c1-new-arrivals-cta-size-1679;
+                margin: 6vw 0 0;
+            }
+
+            @media screen and (max-width: 430px) {
+                width: @c1-new-arrivals-cta-size-431;
+                background: @c1-new-arrivals-cta-background-430;
+                margin: 31vw 0 0;
+            }
+
+            &.cta5 {
+                @media screen and (max-width: 1679px) {
+                    width: 17vw;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 49vw;
+                }
+
+                width: 297px;
+            }
+
+            color: @c1-new-arrivals-cta-color;
+            background: @c1-new-arrivals-cta-background;
+            // background: none;
+            width: @c1-new-arrivals-cta-size;
+            margin: 56px 0 0;
+            // text-shadow: @text-shadow;
+        }
+    }
+}
