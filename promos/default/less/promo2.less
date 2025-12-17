@@ -21,7 +21,12 @@
             }
 
             i {
-                color: @promo2Color2;
+                @media screen and (max-width: 430px) {
+                    font-size: 3.5vw;
+                    display: none;
+                }
+
+                color: @promo2Color1;
                 font-style: normal;
                 // font-size: 8px;
             }
@@ -59,7 +64,7 @@
             @media screen and (max-width: 430px) {
                 font-size: 3.5vw;
                 // display: block;
-                display:none;
+                // display:none;
             }
 
             i,
@@ -84,7 +89,7 @@
             }
 
 
-            color: @promo2Color3;
+            color: @promo2Color2;
             font-family: @gilroyb;
             // text-decoration:underline;
         }
