@@ -15,7 +15,7 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/12 December/121825 End of Season Sale/03 Handoff/121825 Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Promotions/12 December/121825 End of Season Sale/04 Handoff/121825 Site/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Site/110425 Winter 2 Site/02 Handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/121425 Tea x Tushbaby Giveaway/handoff/site/`
   folderPath = folderPath.toLowerCase();

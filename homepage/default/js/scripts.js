@@ -9,15 +9,15 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.select-styles.all').clone();
+  var theClone = $('.bottoms-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .select-styles.all').length;
+  var sliderCount = $('.hp .bottoms-slider.all').length;
   if (sliderCount == 0) {
-    $('.hp .shop-slideshow').append(theClone);
+    $('.hp .shop-slideshow-3').append(theClone);
   }
 
-  new Glide('.hp .select-styles.all .glide', {
+  new Glide('.hp .bottoms-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -39,21 +39,21 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.select-styles.all').hide()
+  $('.bottoms-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .select-styles.all').show()
+  $('.hp .bottoms-slider.all').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.kids-holiday-outfits-slider.all').clone();
+  var theClone2 = $('.tee-shop-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .kids-holiday-outfits-slider.all').length;
+  var sliderCount2 = $('.hp .tee-shop-slider.all').length;
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow-2').append(theClone2);
   }
 
-  new Glide('.hp .kids-holiday-outfits-slider.all .glide', {
+  new Glide('.hp .tee-shop-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -75,10 +75,10 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.kids-holiday-outfits-slider.all').hide()
+  $('.tee-shop-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .kids-holiday-outfits-slider.all').show()
-  // $('.hp .kids-holiday-outfits-slider.all').css('opacity', '1');
+  $('.hp .tee-shop-slider.all').show()
+  // $('.hp .tee-shop-slider.all').css('opacity', '1');
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
@@ -87,7 +87,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
   var sliderCount3 = $('.hp .clothing-sale-slider.all').length;
   if (sliderCount3 == 0) {
-    $('.hp .shop-slideshow-3').append(theClone3);
+    $('.hp .shop-slideshow').append(theClone3);
   }
 
   new Glide('.hp .clothing-sale-slider.all .glide', {
