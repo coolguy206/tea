@@ -20,7 +20,7 @@ jQuery(document).ready(function () {
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
     // $('.promos .the-promo.promo1').show();
     // $('.promos .the-promo.promo3').show();
-    $('.promos .the-promo.promo2').remove();
+    // $('.promos .the-promo.promo2').remove();
 
 
     //? CLONE .PROMOS AND APPEND TO HEADER.SITE-HEADER
@@ -116,18 +116,18 @@ jQuery(document).ready(function () {
 
   });
 
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2000,
-    touchEnabled: false,
+  // $('.promos-wrap').bxSlider({
+  //   auto: true,
+  //   autoHover: true,
+  //   mode: 'fade',
+  //   controls: false,
+  //   pager: false,
+  //   pause: 2000,
+  //   touchEnabled: false,
 
-    onSliderLoad: function () {
-      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-    }
-  });
+  //   onSliderLoad: function () {
+  //     $('.promos.promo1, .promos.promo2, .promos.promo3').show();
+  //   }
+  // });
 
 });
