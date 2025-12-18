@@ -27,6 +27,11 @@ $(document).ready(function () {
         section: 'general'
     },
     {
+        q: 'Do you accept returns for  international orders?',
+        a: 'Yes. However, due to the complexities of international shipping, we will not be able to refund shipping cost or duties & taxes and the customer will be responsible for all return shipping fees.',
+        section: 'general'
+    },
+    {
         q: 'What is Tea’s Price Adjustment policy?',
         a: '<p>Tea Collection is happy to provide a one-time price adjustment on items you’ve purchased if you see the item on our site offered for a lower price within 10 days of placing your order. We’ll completely refund the price difference to your original form of payment if we’re contacted within 2 days of your order date. A Tea Collection credit for the price difference will be issued if we’re contacted within 3-10 days. Please contact us at <a href="tel:8663748747">866.374.8747</a> or email us at <a href="mailto:service@teacollection.com">service@teacollection.com</a>. Our Tea representatives are ready to assist you Monday through Friday 6am-5pm PT.</p>',
         section: 'us-policies'
