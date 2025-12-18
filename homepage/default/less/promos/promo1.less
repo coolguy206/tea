@@ -1,15 +1,15 @@
 @import "../var.less";
 @promo-background: none;
-@promo-h2-color: #37438B;
-@promo-h2-color-430: #37438B;
-@promo-h2-font-family: @analogue;
-@promo-h3-color: #2D2F30;
-@promo-h3-color-430: #2D2F30;
-@promo-h3-font-family: @gilroyb;
+@promo-h2-color: #FFFE00;
+@promo-h2-color-430: #FFFE00;
+@promo-h2-font-family: @dumpling;
+@promo-h3-color: #FFFE00;
+@promo-h3-color-430: #FFFE00;
+@promo-h3-font-family: @dumpling;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
-@promo-cta1-color: #fff;
-@promo-cta1-background: #87397A;
+@promo-cta1-color: #4F4243;
+@promo-cta1-background: #FFFE00;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #4261A6;
 @promo-cta3-color: @promo-cta1-color;
@@ -95,16 +95,16 @@
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 0;
+        top: 45vw;
         transform: translate(0);
         left: 0;
-        width: 100%;
-        padding: 7vw 0 0 7vw;
+        width: 93%;
+        // padding: 7vw 0 0 7vw;
       }
 
       position: absolute;
-      width: auto;
-      top: 50%;
+      width: 65%;
+      top: 51%;
       left: 50%;
       transform: translate(-50%, -50%);
 
@@ -127,31 +127,31 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 4.8vw;
+          font-size: 9.7vw;
           // margin: 3.7vw 0;
-          line-height: 5.3vw;
+          // line-height: 5.3vw;
         }
 
         @media screen and (max-width: 430px) {
           flex-wrap: wrap;
           color: @promo-h2-color-430;
-          font-size: 10vw;
-          line-height: 10.5vw;
+          font-size: 14vw;
+          // line-height: 10.5vw;
           margin: 0;
-          text-align: left;
+          // text-align: left;
         }
 
         display: block;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+        align-items: flex-end;
+        justify-content: flex-end;
+        text-align: right;
         // column-gap: 60px;
         margin: 0;
         color: @promo-h2-color;
         font-family: @promo-h2-font-family;
-        font-size: 81px;
-        line-height: 89px;
-        text-transform: capitalize;
+        font-size: 162px;
+        line-height: normal;
+        text-transform: uppercase;
 
         span {
           @media screen and (max-width: 1679px) {
@@ -176,38 +176,46 @@
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 2vw;
-          letter-spacing: .4vw;
-          line-height: 3.7vw;
-          margin: 3.5vw 0;
+          font-size: 5.2vw;
+          // letter-spacing: .4vw;
+          // line-height: 3.7vw;
+          // margin: 3.5vw 0;
         }
 
         @media screen and (max-width: 430px) {
           // margin: 0 0 4vw;
           color: @promo-h3-color-430;
           text-align: left;
-          font-size: 4.3vw;
-          letter-spacing: .9vw;
-          line-height: 7.5vw;
-          margin: 7vw 0;
+          font-size: 14vw;
+          // letter-spacing: .9vw;
+          // line-height: 7.5vw;
+          // margin: 7vw 0;
+          left: 7vw;
+          top: -44vw;
         }
 
         font-family: @promo-h3-font-family;
         color: @promo-h3-color;
-        font-size: 34px;
-        text-align: center;
-        line-height: 61px;
-        letter-spacing: 6px;
+        font-size: 87px;
+        text-align: left;
+        line-height: normal;
+        letter-spacing: 0px;
         text-transform: uppercase;
-        margin: 60px 0;
+        // margin: 60px 0;
+
+        top: -33%;
+        position: absolute;
+        left: -5%;
 
         i {
           @media screen and (max-width: 430px) {
-            display: none;
+            // display: none;
+            font-size: 9vw;
           }
 
           font-style: normal;
           color: @promo-h3-color;
+          font-size: 47px;
         }
       }
 
@@ -251,11 +259,11 @@
         @media screen and (max-width: 430px) {
           row-gap: 4vw;
           column-gap: 4vw;
-          justify-content: left;
+          // justify-content: left;
           flex-wrap: wrap;
           width: 100%;
           // position: absolute;
-          margin: 0;
+          margin: 11vw 0 0 0;
           // top: 135vw;
         }
 
@@ -263,7 +271,7 @@
         flex-wrap: wrap;
         row-gap: 21px;
         column-gap: 21px;
-        justify-content: center;
+        justify-content: flex-end;
         // width: 35%;
         margin: 0 auto;
         // margin: 1vw auto;

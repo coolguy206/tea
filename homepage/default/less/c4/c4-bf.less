@@ -1,10 +1,10 @@
 @import "../var.less";
-@c4-first-font-color: #fff;
-@c4-first-cta-color: #373A48;
-@c4-first-cta-background: #fff;
-@c4-second-font-color: #FFF;
-@c4-second-cta-color: #373A48;
-@c4-second-cta-background: #fff;
+@c4-first-font-color: #FFFE00;
+@c4-first-cta-color: #4F4243;
+@c4-first-cta-background: #FFFE00;
+@c4-second-font-color: #FFFE00;
+@c4-second-cta-color: #4F4243;
+@c4-second-cta-background: #FFFE00;
 
 
 .c4 {
@@ -51,21 +51,35 @@
 
             h2 {
                 @media screen and (max-width: 1679px) {
-                    font-size: 4.7vw;
+                    font-size: 5.8vw;
                 }
 
                 @media screen and (max-width:430px) {
-                    font-size: 10.6vw;
+                    font-size: 13.3vw;
                 }
 
-                font-family: @gilroybl;
-                font-size: 78px;
+                font-family: @dumpling !important;
+                font-size: 97px;
                 line-height: normal;
                 color: @c4-first-font-color;
                 margin: 0;
                 text-align:left;
                 width: 100%;
                 text-shadow: @text-shadow;
+
+                i {
+                    @media screen and (max-width: 1679px) {
+                        font-size: 2.9vw;
+                    }
+
+                    @media screen and (max-width:430px) {
+                        font-size: 6.6vw;
+                    }
+
+                    font-style: normal;
+                    color: @c4-first-font-color;
+                    font-size: 48px;
+                }
             }
 
             .the-content {
@@ -78,7 +92,7 @@
                 @media screen and (max-width: 430px) {
                     padding: 0 !important;
                     left: 4.7vw;
-                    bottom: 12.5vw;
+                    bottom: 6vw;
                     row-gap: 4.9vw;
                     width: 92%;
                 }
@@ -120,19 +134,19 @@
 
                     a {
                         @media screen and (max-width:1679px) {
-                            width: 17vw;
+                            // width: 25vw;
                         }
 
                         @media screen and (max-width: 430px) {
                             // width: 63vw;
-                            width: auto;
-                            background: none;
-                            color: #fff;
+                            // width: auto;
+                            // background: none;
+                            // color: #fff;
                         }
 
                         color: @c4-first-cta-color;
                         background: @c4-first-cta-background;
-                        width: 299px;
+                        // width: 424px;
 
                     }
                 }
@@ -153,9 +167,10 @@
 
                         @media screen and (max-width: 430px) {
                             // width: 85vw;
-                            width: auto;
-                            background: none;
-                            color: #fff;
+                            // width: auto;
+                            // background: none;
+                            // color: #fff;
+                            margin: 0;
                         }
 
                         color: @c4-second-cta-color;
