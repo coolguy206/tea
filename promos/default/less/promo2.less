@@ -1,7 +1,7 @@
 @import 'var.less';
-@promo2Bg: #2D82A1;
+@promo2Bg: #4765A1;
 @promo2Color1: #fff;
-@promo2Color2: #FFFE00;
+@promo2Color2: #fff;
 @promo2Color3: #fff;
 
 
@@ -10,14 +10,22 @@
     // display:none;
 
     span {
+        &.span-wrap {
+            @media screen and (max-width: 430px) {
+                display: flex;
+                flex-wrap:wrap;
+                justify-content: center;
+            }
+        }
         &.first {
             @media screen and (max-width: 1679px) {
                 font-size: 1.2vw;
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 3.5vw;
+                font-size: 2.7vw;
                 // display: none;
+                order: 2;
             }
 
             i {
@@ -41,8 +49,9 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 3.5vw;
+                font-size: 2.7vw;
                 display: block;
+                order:1;
             }
 
             i {
@@ -62,7 +71,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 3.5vw;
+                font-size: 2.7vw;
                 // display: block;
                 // display:none;
             }
