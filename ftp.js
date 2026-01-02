@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2026`;
 var num = `0106`;
-var version = `v0`;
+var version = `v1`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;

@@ -15,28 +15,29 @@ $(document).ajaxComplete(function (event, xhr, options) {
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
   var sliderCount = $('.hp .bottoms-slider.all').length;
   if (sliderCount == 0) {
-    $('.hp .shop-slideshow-3').append(theClone);
+    // $('.hp .shop-slideshow-3').append(theClone);
   }
-  new _glide["default"]('.hp .bottoms-slider.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
+
+  // new Glide('.hp .bottoms-slider.all .glide', {
+  //   type: 'slider',
+  //   // autoplay: 4000,
+  //   animationDuration: 500,
+  //   perView: 5,
+  //   hoverpause: true,
+  //   gap: 0,
+  //   bound: true,
+  //   rewind: false,
+  //   breakpoints: {
+  //     // 821: {
+  //     //   perView: 4,
+  //     //   perSwipe: '|',
+  //     // },
+  //     431: {
+  //       perView: 2,
+  //       perSwipe: '|',
+  //     },
+  //   }
+  // }).mount();
 
   //? HIDE ALL THE SLIDERS
   $('.bottoms-slider.all').hide();
