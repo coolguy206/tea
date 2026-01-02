@@ -17,7 +17,7 @@ module.exports = {
 
   zone: {
     files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/**/*.html', 'content-zone/' + config.zone.name + '/**/js/*.js'],
-    tasks: ['less:zone', /*'ts:zone',*/ 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', ],
+    tasks: ['less:zone', /*'ts:zone',*/ 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone' ],
   },
 
 

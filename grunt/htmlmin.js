@@ -26,14 +26,12 @@ module.exports = {
     //     }]
     //   },
 
-    //   zone: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'content-zone/' + config.zone.name + '/js/',
-    //       src: '*.js',
-    //       dest: 'content-zone/' + config.zone.name + '/js/babel/'
-    //     }]
-    //   },
+    zone: {
+        expand: true,
+        cwd: 'content-zone/' + config.zone.name + '/includes/',
+        src: 'content.html',
+        dest: 'content-zone/' + config.zone.name + '/htmlmin/'
+    },
 
     //   promos: {
     //     files: [{
