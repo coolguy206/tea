@@ -17,13 +17,13 @@ module.exports = {
 
   zone: {
     files: ['content-zone/' + config.zone.name + '/css/*.less', 'content-zone/' + config.zone.name + '/dev/**/*.html', 'content-zone/' + config.zone.name + '/**/js/*.js'],
-    tasks: ['less:zone', /*'ts:zone',*/ 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone' ],
+    tasks: ['less:zone', /*'ts:zone',*/ 'babel:zone', 'browserify:zone', 'uglify:zone', 'includes:zone', 'htmlmin:zone'],
   },
 
 
   hp: {
     files: ['homepage/default/less/**/*.less', 'homepage/default/dev/**/*.html', 'homepage/default/js/*.js'],
-    tasks: ['less:hp', /*'ts:hp',*/ 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp' ],
+    tasks: ['less:hp', /*'ts:hp',*/ 'babel:hp', 'browserify:hp', 'uglify:hp', 'includes:hp', 'htmlmin:hp'],
   },
 
 
@@ -40,8 +40,8 @@ module.exports = {
 
 
   promos: {
-    files: [`promos/${config.promo.name}/**/*.less`, `promos/${config.promo.name}/dev/**/*.html`,`promos/${config.promo.name}/js/**/*.js`],
-    tasks: ['less:promos', /*'ts:promos',*/ 'babel:promos', 'browserify:promos', 'uglify:promos', 'includes:promos',],
+    files: [`promos/${config.promo.name}/**/*.less`, `promos/${config.promo.name}/dev/**/*.html`, `promos/${config.promo.name}/js/**/*.js`],
+    tasks: ['less:promos', /*'ts:promos',*/ 'babel:promos', 'browserify:promos', 'uglify:promos', 'includes:promos', 'htmlmin:promos',],
   },
 
 };

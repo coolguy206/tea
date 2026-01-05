@@ -43,12 +43,12 @@ module.exports = {
         dest: 'content-zone/' + config.zone.name + '/htmlmin/'
     },
 
-    // promos: {
-    //     expand: true,
-    //     cwd: `promos/${config.promo.name}/includes/`,
-    //     src: 'content.html',
-    //     dest: `promos/${config.promo.name}/includes/`
-    // },
+    promos: {
+        expand: true,
+        cwd: `promos/${config.promo.name}/includes/`,
+        src: '**/*.html',
+        dest: `promos/${config.promo.name}/htmlmin/`
+    },
 
     //   mega: {
     //     files: [{
