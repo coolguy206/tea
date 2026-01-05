@@ -63,13 +63,13 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.bottoms-slider.all').clone();
+  // var theClone = $('.bottoms-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .bottoms-slider.all').length;
-  if (sliderCount == 0) {
-    // $('.hp .shop-slideshow-3').append(theClone);
-  }
+  // var sliderCount = $('.hp .bottoms-slider.all').length;
+  // if (sliderCount == 0) {
+  // $('.hp .shop-slideshow-3').append(theClone);
+  // }
 
   // new Glide('.hp .bottoms-slider.all .glide', {
   //   type: 'slider',
@@ -93,19 +93,19 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.bottoms-slider.all').hide();
+  // $('.bottoms-slider.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .bottoms-slider.all').show();
+  // $('.hp .bottoms-slider.all').show()
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.tee-shop-slider.all').clone();
+  var theClone2 = $('.the-swim-slider').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .tee-shop-slider.all').length;
+  var sliderCount2 = $('.hp .the-swim-slider').length;
   if (sliderCount2 == 0) {
     $('.hp .shop-slideshow-2').append(theClone2);
   }
-  new _glide["default"]('.hp .tee-shop-slider.all .glide', {
+  new _glide["default"]('.hp .the-swim-slider .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -127,20 +127,20 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.tee-shop-slider.all').hide();
+  $('.the-swim-slider').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .tee-shop-slider.all').show();
-  // $('.hp .tee-shop-slider.all').css('opacity', '1');
+  $('.hp .the-swim-slider').show();
+  $('.hp .the-swim-slider').css('opacity', '1');
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone3 = $('.clothing-sale-slider.all').clone();
+  var theClone3 = $('.new-arrivals-slider.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount3 = $('.hp .clothing-sale-slider.all').length;
+  var sliderCount3 = $('.hp .new-arrivals-slider.all').length;
   if (sliderCount3 == 0) {
     $('.hp .shop-slideshow').append(theClone3);
   }
-  new _glide["default"]('.hp .clothing-sale-slider.all .glide', {
+  new _glide["default"]('.hp .new-arrivals-slider.all .glide', {
     type: 'slider',
     // autoplay: 4000,
     animationDuration: 500,
@@ -162,9 +162,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   }).mount();
 
   //? HIDE ALL THE SLIDERS
-  $('.clothing-sale-slider.all').hide();
+  $('.new-arrivals-slider.all').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .clothing-sale-slider.all').show();
+  $('.hp .new-arrivals-slider.all').show();
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
