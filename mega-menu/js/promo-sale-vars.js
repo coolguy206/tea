@@ -1,7 +1,7 @@
 export const promoVars = {
-    showPromo1: true,
+    showPromo1: false,
     showPromo2: false,
-    showPromo3: false,
+    showPromo3: true,
     promo1Elem: '.promo1-url',
     promo2Elem: '.promo2-url',
     promo3Elem: '.promo3-url',

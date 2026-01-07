@@ -50,14 +50,14 @@ module.exports = {
         dest: `promos/${config.promo.name}/htmlmin/`
     },
 
-    //   mega: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'mega-menu/js/',
-    //       src: '*.js',
-    //       dest: 'mega-menu/js/babel/'
-    //     }]
-    //   },
+      mega: {
+        files: [{
+          expand: true,
+          cwd: 'mega-menu/includes/',
+          src: '**/*.html',
+          dest: 'mega-menu/htmlmin/'
+        }]
+      },
 
 
 };
