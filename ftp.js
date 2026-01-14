@@ -6,7 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2026`;
-var num = `0110`;
+var num = `0116`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH

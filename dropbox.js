@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/011026 Sale on Sale/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/011626 Warehouse Sale/03 Handoff/Site/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Site/010626 Resort/03 Handoff/visual navs`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/121425 Tea x Tushbaby Giveaway/handoff/site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0110/`;
+  var writeFilePath = `Site/0116/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);
