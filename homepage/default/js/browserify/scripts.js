@@ -4,6 +4,22 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.countdown = void 0;
+var countdown = exports.countdown = function countdown(str) {
+  //   console.log(`countdown.js`);
+  $("#countdown span").countdown(str, function (event) {
+    $(this).text(event.strftime('%-DD %HH %MM %SS')
+    // event.strftime('%-D days %H hrs %M mins')
+    );
+  });
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.inview = void 0;
 var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
@@ -50,28 +66,27 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],2:[function(require,module,exports){
+},{}],3:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
+var _countdown = require("./countdown.js");
 var _tracking = require("./tracking.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-// import { countdown } from './countdown.js';
-
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.bottoms-slider.all').clone();
+  // var theClone = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .bottoms-slider.all').length;
+  // var sliderCount = $('.hp .select-styles.all').length;
   // if (sliderCount == 0) {
-  // $('.hp .shop-slideshow-3').append(theClone);
+  //   $('.hp .shop-slideshow-3').append(theClone);
   // }
 
-  // new Glide('.hp .bottoms-slider.all .glide', {
+  // new Glide('.hp .select-styles.all .glide', {
   //   type: 'slider',
   //   // autoplay: 4000,
   //   animationDuration: 500,
@@ -93,9 +108,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // }).mount();
 
   //? HIDE ALL THE SLIDERS
-  // $('.bottoms-slider.all').hide()
+  // $('.select-styles.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .bottoms-slider.all').show()
+  // $('.hp .select-styles.all').show()
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
   var theClone2 = $('.the-swim-slider').clone();
@@ -174,7 +189,7 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // countdown('2025/12/02 23:59:59');
+  (0, _countdown.countdown)('2026/01/20 23:59:59');
 
   // new Glide('.c1 .glide', {
   //   type: 'carousel',
@@ -255,7 +270,7 @@ $(document).ready(function () {
   });
 });
 
-},{"./inview.js":1,"./tracking.js":3,"@glidejs/glide":4}],3:[function(require,module,exports){
+},{"./countdown.js":1,"./inview.js":2,"./tracking.js":4,"@glidejs/glide":5}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -284,7 +299,7 @@ var tracking = exports.tracking = function tracking(elem, id) {
 //   });
 // };
 
-},{}],4:[function(require,module,exports){
+},{}],5:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4186,4 +4201,4 @@ var tracking = exports.tracking = function tracking(elem, id) {
 
 }));
 
-},{}]},{},[2]);
+},{}]},{},[3]);

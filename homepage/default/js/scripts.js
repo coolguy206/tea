@@ -1,6 +1,6 @@
 
 import { inview } from './inview.js';
-// import { countdown } from './countdown.js';
+import { countdown } from './countdown.js';
 import { tracking } from './tracking.js';
 import Glide from '@glidejs/glide'
 
@@ -9,15 +9,15 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.bottoms-slider.all').clone();
+  // var theClone = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .bottoms-slider.all').length;
+  // var sliderCount = $('.hp .select-styles.all').length;
   // if (sliderCount == 0) {
-    // $('.hp .shop-slideshow-3').append(theClone);
+  //   $('.hp .shop-slideshow-3').append(theClone);
   // }
 
-  // new Glide('.hp .bottoms-slider.all .glide', {
+  // new Glide('.hp .select-styles.all .glide', {
   //   type: 'slider',
   //   // autoplay: 4000,
   //   animationDuration: 500,
@@ -39,9 +39,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // }).mount();
 
   //? HIDE ALL THE SLIDERS
-  // $('.bottoms-slider.all').hide()
+  // $('.select-styles.all').hide()
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .bottoms-slider.all').show()
+  // $('.hp .select-styles.all').show()
 
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
@@ -130,7 +130,7 @@ $(document).ready(function () {
 
 
   //? COUNTDOWN.JS
-  // countdown('2025/12/02 23:59:59');
+  countdown('2026/01/20 23:59:59');
 
 
   // new Glide('.c1 .glide', {
