@@ -9,39 +9,38 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  // var theClone = $('.select-styles.all').clone();
+  var theClone = $('.select-styles.all').clone();
 
   //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  // var sliderCount = $('.hp .select-styles.all').length;
-  // if (sliderCount == 0) {
-  //   $('.hp .shop-slideshow-3').append(theClone);
-  // }
-
-  // new Glide('.hp .select-styles.all .glide', {
-  //   type: 'slider',
-  //   // autoplay: 4000,
-  //   animationDuration: 500,
-  //   perView: 5,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   bound: true,
-  //   rewind: false,
-  //   breakpoints: {
-  //     // 821: {
-  //     //   perView: 4,
-  //     //   perSwipe: '|',
-  //     // },
-  //     431: {
-  //       perView: 2,
-  //       perSwipe: '|',
-  //     },
-  //   }
-  // }).mount();
+  var sliderCount = $('.hp .select-styles.all').length;
+  if (sliderCount == 0) {
+    $('.hp .shop-slideshow-3').append(theClone);
+  }
+  new _glide["default"]('.hp .select-styles.all .glide', {
+    type: 'slider',
+    // autoplay: 4000,
+    animationDuration: 500,
+    perView: 5,
+    hoverpause: true,
+    gap: 0,
+    bound: true,
+    rewind: false,
+    breakpoints: {
+      // 821: {
+      //   perView: 4,
+      //   perSwipe: '|',
+      // },
+      431: {
+        perView: 2,
+        perSwipe: '|'
+      }
+    }
+  }).mount();
 
   //? HIDE ALL THE SLIDERS
-  // $('.select-styles.all').hide()
+  $('.select-styles.all').hide();
   //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  // $('.hp .select-styles.all').show()
+  $('.hp .select-styles.all').show();
 
   //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
   var theClone2 = $('.the-swim-slider').clone();
