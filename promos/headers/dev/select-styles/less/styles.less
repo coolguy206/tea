@@ -21,7 +21,7 @@
 
     .the-content.select-styles {
         @media screen and (max-width: 1679px) {
-            column-gap: 1.8vw;
+            column-gap: 1.4vw;
             row-gap: 1.3vw;
         }
 
@@ -37,7 +37,7 @@
             // row-gap: 0;
         }
 
-        column-gap: 31px;
+        column-gap: 24px;
         row-gap: 21px;
         flex-wrap: wrap;
         justify-content: start;
@@ -53,18 +53,65 @@
             }
 
             @media screen and (max-width: 430px) {
-                // flex-basis: 50%;
+                flex-basis: 30%;
+            }
+
+            i {
+                @media screen and (max-width: 430px) {
+                    display: none;
+                }
+
+                font-style: normal;
             }
 
         }
 
-        // a.cta1,
-        // a.cta3 {
-        //     .cta-border {
-        //         // background: #EED150 !important;
-        //         // color: #B75C4E !important;
-        //     }
-        // }
+        a.cta1,
+        a.cta2,
+        a.cta3,
+        a.cta4 {
+            .cta-border {
+                @media screen and (max-width: 1679px) {
+                    width: 18vw !important;
+                    // width: 16.7vw !important;
+                }
+
+                @media screen and (max-width: 430px) {
+                    // width: 41.5vw !important;
+                    width: 100% !important;
+                    // font-size: 2vw !important;
+                }
+
+                // background: #EED150 !important;
+                // color: #B75C4E !important;
+
+                width: 300px;
+            }
+        }
+
+        a.cta5,
+        a.cta6,
+        a.cta7,
+        a.cta8,
+        a.cta9 {
+            .cta-border {
+                @media screen and (max-width: 1679px) {
+                    width: 14.2vw !important;
+                    // width: 16.7vw !important;
+                }
+
+                @media screen and (max-width: 430px) {
+                    width: 100% !important;
+                    // width: 41.5vw !important;
+                    // font-size: 2vw !important;
+                }
+
+                // background: #EED150 !important;
+                // color: #B75C4E !important;
+
+                width: 239px;
+            }
+        }
 
         // a.cta2,
         // a.cta4 {
