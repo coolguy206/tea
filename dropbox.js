@@ -8,14 +8,14 @@ const {
 } = require('./dropbox-access-token.js');
 
 refreshAccessToken((data) => {
-  
+
   var access_token = data;
 
   var dbx = new Dropbox({
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/011626 Warehouse Sale/03 Handoff/Site/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/01 january/011626 warehouse sale/04 handoff/site/version 2 (re-ordered tiers)/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Site/010626 Resort/03 Handoff/visual navs`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/121425 Tea x Tushbaby Giveaway/handoff/site/`
   folderPath = folderPath.toLowerCase();
@@ -39,6 +39,7 @@ refreshAccessToken((data) => {
   */
 
   //?DOWNLOAD FOLDER AS ZIP AND EXTRACT IT
+
   dbx.filesDownloadZip({
     path: folderPath
   }).then(function (response) {

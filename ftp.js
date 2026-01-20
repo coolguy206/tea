@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2026`;
 var num = `0116`;
-var version = `v1`;
+var version = `v2`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -23,13 +23,13 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/Site/headers/print-shop/`;
-var readFilePath = `Site/${num}/Site/hp`;
-// var readFilePath = `Site/${num}/Site/mega/`;
+// var readFilePath = `Site/${num}/Site/hp`;
+var readFilePath = `Site/${num}/Site/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
 // var writeFilePath = `landing-page/sweeps/tushbaby-giveaway/dev/images/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
