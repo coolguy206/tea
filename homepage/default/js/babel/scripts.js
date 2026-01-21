@@ -1,116 +1,20 @@
 "use strict";
 
 var _inview = require("./inview.js");
+var _cloneExecuteSlider = require("./clone-execute-slider.js");
 var _tracking = require("./tracking.js");
-var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 // import { countdown } from './countdown.js';
+
+// import Glide from '@glidejs/glide'
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.select-styles.all').clone();
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow');
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-2');
 
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .select-styles.all').length;
-  if (sliderCount == 0) {
-    $('.hp .shop-slideshow-3').append(theClone);
-  }
-  new _glide["default"]('.hp .select-styles.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
+  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
 
-  //? HIDE ALL THE SLIDERS
-  $('.select-styles.all').hide();
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .select-styles.all').show();
-
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.the-swim-slider').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .the-swim-slider').length;
-  if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow-2').append(theClone2);
-  }
-  new _glide["default"]('.hp .the-swim-slider .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.the-swim-slider').hide();
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .the-swim-slider').show();
-  $('.hp .the-swim-slider').css('opacity', '1');
-
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone3 = $('.new-arrivals-slider.all').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount3 = $('.hp .new-arrivals-slider.all').length;
-  if (sliderCount3 == 0) {
-    $('.hp .shop-slideshow').append(theClone3);
-  }
-  new _glide["default"]('.hp .new-arrivals-slider.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.new-arrivals-slider.all').hide();
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .new-arrivals-slider.all').show();
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
@@ -179,24 +83,5 @@ $(document).ready(function () {
   (0, _tracking.tracking)('.hp .shop-slideshow a', 'shop-slideshow');
   (0, _tracking.tracking)('.hp .shop-slideshow2 a', 'shop-slideshow2');
   (0, _tracking.tracking)('.hp .promo1 a', 'promo1');
-  var a = $('.hp a');
-  $(a).each(function (i, val) {
-    var img = $(val).find('img');
-    // console.log(img);
-    if (img.length !== 0) {
-      // var theClass = $(val).next().find('h2').text().replace(/ /g, '-').toLowerCase();
-      if ($(img).attr('alt') !== undefined) {
-        var theClass = 'img ' + $(img).attr('alt').replace(/ /g, '-').toLowerCase();
-        // console.log(theClass);
-        var oldClass = $(val).attr('class');
-        if (oldClass !== undefined) {
-          theClass = "".concat(oldClass, " ").concat(theClass);
-          // console.log(theClass);
-          $(val).attr('class', theClass);
-        } else {
-          $(val).attr('class', theClass);
-        }
-      }
-    }
-  });
+  (0, _tracking.addAltClass)();
 });

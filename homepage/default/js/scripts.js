@@ -1,121 +1,19 @@
 
 import { inview } from './inview.js';
 // import { countdown } from './countdown.js';
-import { tracking } from './tracking.js';
-import Glide from '@glidejs/glide'
+import { cloneExecuteSlider } from './clone-execute-slider.js';
+import { tracking, addAltClass } from './tracking.js';
+// import Glide from '@glidejs/glide'
 
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $('.select-styles.all').clone();
+  cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow');
 
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp .select-styles.all').length;
-  if (sliderCount == 0) {
-    $('.hp .shop-slideshow-3').append(theClone);
-  }
+  cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
-  new Glide('.hp .select-styles.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.select-styles.all').hide()
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .select-styles.all').show()
-
-
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone2 = $('.the-swim-slider').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount2 = $('.hp .the-swim-slider').length;
-  if (sliderCount2 == 0) {
-    $('.hp .shop-slideshow-2').append(theClone2);
-  }
-
-  new Glide('.hp .the-swim-slider .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.the-swim-slider').hide()
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .the-swim-slider').show()
-  $('.hp .the-swim-slider').css('opacity', '1');
-
-
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone3 = $('.new-arrivals-slider.all').clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount3 = $('.hp .new-arrivals-slider.all').length;
-  if (sliderCount3 == 0) {
-    $('.hp .shop-slideshow').append(theClone3);
-  }
-
-  new Glide('.hp .new-arrivals-slider.all .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|',
-      },
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $('.new-arrivals-slider.all').hide()
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp .new-arrivals-slider.all').show()
-
+  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
@@ -188,36 +86,20 @@ $(document).ready(function () {
   // });
 
 
+
   inview('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
+
 
   for (var i = 1; i < 9; i++) {
     tracking('.hp .c' + i + ' a', 'c' + i);
   }
 
+
   tracking('.hp .shop-slideshow a', 'shop-slideshow');
   tracking('.hp .shop-slideshow2 a', 'shop-slideshow2');
   tracking('.hp .promo1 a', 'promo1');
 
-  var a = $('.hp a');
-  $(a).each(function (i, val) {
-    var img = $(val).find('img');
-    // console.log(img);
-    if (img.length !== 0) {
-      // var theClass = $(val).next().find('h2').text().replace(/ /g, '-').toLowerCase();
-      if ($(img).attr('alt') !== undefined) {
-        var theClass = 'img ' + $(img).attr('alt').replace(/ /g, '-').toLowerCase();
-        // console.log(theClass);
-        var oldClass = $(val).attr('class');
-        if (oldClass !== undefined) {
-          theClass = `${oldClass} ${theClass}`;
-          // console.log(theClass);
-          $(val).attr('class', theClass);
-        } else {
-          $(val).attr('class', theClass);
-        }
-      }
-    }
-  });
-
+  
+  addAltClass();
 
 });
