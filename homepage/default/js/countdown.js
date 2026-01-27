@@ -1,3 +1,5 @@
+import '../../../../node_modules/countdown/countdown.js'
+
 export const countdown = function(str) {
 //   console.log(`countdown.js`);
    $("#countdown span").countdown(str, function (event) {

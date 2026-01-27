@@ -2,19 +2,18 @@
 
 var _inview = require("./inview.js");
 var _cloneExecuteSlider = require("./clone-execute-slider.js");
+var _makeGlide = require("./make-glide.js");
 var _tracking = require("./tracking.js");
 // import { countdown } from './countdown.js';
 
-// import Glide from '@glidejs/glide'
+// import { makeBxSlider } from './make-bxslider.js';
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-2');
-
-  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
-
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.select-styles.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
@@ -24,51 +23,17 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // countdown('2026/01/20 23:59:59');
+  // countdown('2026/01/30 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  // makeGlide('.c1 .glide');
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  // makeGlide('.c2 .glide');
 
-  // $('.c2-slideshow ul').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   // pause: 8000,
-  //   touchEnabled: false,
-  //   pause: 1500,
+  (0, _makeGlide.makeGlide)('.c2-slideshow .glide');
 
-  //   onSliderLoad: function () {
-  //     // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+  // makeBxSlider('.c2-slideshow ul');
 
-  // new Glide('.c6 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount()
+  // makeGlide('.c6 .glide');
 
   // $('.furoshiki .see-details').fancybox({
   //   helpers: {

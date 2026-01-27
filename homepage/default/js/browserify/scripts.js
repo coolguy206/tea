@@ -43,7 +43,7 @@ var cloneExecuteSlider = exports.cloneExecuteSlider = function cloneExecuteSlide
   $('.hp ' + elem).show();
 };
 
-},{"@glidejs/glide":5}],2:[function(require,module,exports){
+},{"@glidejs/glide":6}],2:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -98,21 +98,42 @@ var inview = exports.inview = function inview(elem) {
 },{}],3:[function(require,module,exports){
 "use strict";
 
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.makeGlide = void 0;
+var _glide = _interopRequireDefault(require("@glidejs/glide"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
+var makeGlide = exports.makeGlide = function makeGlide(elem) {
+  new _glide["default"](elem, {
+    type: 'carousel',
+    autoplay: 4000,
+    animationDuration: 1000,
+    perView: 1,
+    hoverpause: true,
+    gap: 0,
+    // swipeThreshold: false,
+    dragThreshold: false
+  }).mount();
+};
+
+},{"@glidejs/glide":6}],4:[function(require,module,exports){
+"use strict";
+
 var _inview = require("./inview.js");
 var _cloneExecuteSlider = require("./clone-execute-slider.js");
+var _makeGlide = require("./make-glide.js");
 var _tracking = require("./tracking.js");
 // import { countdown } from './countdown.js';
 
-// import Glide from '@glidejs/glide'
+// import { makeBxSlider } from './make-bxslider.js';
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-2');
-
-  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
-
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.select-styles.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
@@ -122,51 +143,17 @@ $(document).ready(function () {
   // }
 
   //? COUNTDOWN.JS
-  // countdown('2026/01/20 23:59:59');
+  // countdown('2026/01/30 23:59:59');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  // makeGlide('.c1 .glide');
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  // makeGlide('.c2 .glide');
 
-  // $('.c2-slideshow ul').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   // pause: 8000,
-  //   touchEnabled: false,
-  //   pause: 1500,
+  (0, _makeGlide.makeGlide)('.c2-slideshow .glide');
 
-  //   onSliderLoad: function () {
-  //     // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
+  // makeBxSlider('.c2-slideshow ul');
 
-  // new Glide('.c6 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount()
+  // makeGlide('.c6 .glide');
 
   // $('.furoshiki .see-details').fancybox({
   //   helpers: {
@@ -184,7 +171,7 @@ $(document).ready(function () {
   (0, _tracking.addAltClass)();
 });
 
-},{"./clone-execute-slider.js":1,"./inview.js":2,"./tracking.js":4}],4:[function(require,module,exports){
+},{"./clone-execute-slider.js":1,"./inview.js":2,"./make-glide.js":3,"./tracking.js":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -235,7 +222,7 @@ var addAltClass = exports.addAltClass = function addAltClass() {
 //   });
 // };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4137,4 +4124,4 @@ var addAltClass = exports.addAltClass = function addAltClass() {
 
 }));
 
-},{}]},{},[3]);
+},{}]},{},[4]);

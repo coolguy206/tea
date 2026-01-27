@@ -13,8 +13,8 @@ var version = `v0`;
 var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/${year}/${num}/${version}/`;
 // var category = `promos/giving-tuesday/${year}/${num}/${version}/`;
-// var category = `homepage/${year}/${num}/${version}/`;
-var category = `headers/${year}/${num}/${version}/`;
+var category = `homepage/${year}/${num}/${version}/`;
+// var category = `headers/${year}/${num}/${version}/`;
 // var category = `landing-pages/tushbaby/${year}/${num}/${version}/`;
 // var category = `mega-menu/${year}/${num}/${version}/`;
 
@@ -30,9 +30,9 @@ var readFilePath = `Site/${num}/Site/headers/Print Shop/`;
 // var writeFilePath = `promos/bubble/dev/images/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
-var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
+// var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
 // var writeFilePath = `landing-page/sweeps/tushbaby-giveaway/dev/images/`;
-// var writeFilePath = `homepage/default/dev/images/${num}/`;
+var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
@@ -296,7 +296,7 @@ c.on('ready', function () {
           if (name.indexOf(`-d`) !== -1) {
             html = `<img class="desktop" data-set="/mas_assets${url}${file.name}" alt="${alt}">`;
           } else if (name.indexOf(`-m`) !== -1) {
-            html = `<img class="mobile" data-set="/mas_assets${url}${file}" alt="${alt}">`;
+            html = `<img class="mobile" data-set="/mas_assets${url}${file.name}" alt="${alt}">`;
           } else {
             html = `<img data-set="/mas_assets${url}${file.name}">`;
           }

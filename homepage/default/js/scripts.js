@@ -2,8 +2,9 @@
 import { inview } from './inview.js';
 // import { countdown } from './countdown.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
+import { makeGlide } from './make-glide.js';
 import { tracking, addAltClass } from './tracking.js';
-// import Glide from '@glidejs/glide'
+// import { makeBxSlider } from './make-bxslider.js';
 
 
 $(document).ajaxComplete(function (event, xhr, options) {
@@ -13,7 +14,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
-  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
+  cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
@@ -26,57 +27,18 @@ $(document).ready(function () {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
   // }
 
-
   //? COUNTDOWN.JS
-  // countdown('2026/01/20 23:59:59');
+  // countdown('2026/01/30 23:59:59');
 
+  // makeGlide('.c1 .glide');
 
-  // new Glide('.c1 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0,
-  //   // swipeThreshold: false,
-  //   dragThreshold: false,
-  // }).mount();
+  // makeGlide('.c2 .glide');
 
+  makeGlide('.c2-slideshow .glide');
 
-  // new Glide('.c2 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 1000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount();
+  // makeBxSlider('.c2-slideshow ul');
 
-
-  // $('.c2-slideshow ul').bxSlider({
-  //   auto: true,
-  //   autoHover: true,
-  //   mode: 'fade',
-  //   controls: false,
-  //   pager: false,
-  //   // pause: 8000,
-  //   touchEnabled: false,
-  //   pause: 1500,
-
-  //   onSliderLoad: function () {
-  //     // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-  //   }
-  // });
-
-
-  // new Glide('.c6 .glide', {
-  //   type: 'carousel',
-  //   autoplay: 4000,
-  //   animationDuration: 2000,
-  //   perView: 1,
-  //   hoverpause: true,
-  //   gap: 0
-  // }).mount()
+  // makeGlide('.c6 .glide');
 
 
   // $('.furoshiki .see-details').fancybox({
@@ -84,7 +46,6 @@ $(document).ready(function () {
   //     overlay: null
   //   }
   // });
-
 
 
   inview('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
@@ -99,7 +60,7 @@ $(document).ready(function () {
   tracking('.hp .shop-slideshow2 a', 'shop-slideshow2');
   tracking('.hp .promo1 a', 'promo1');
 
-  
+
   addAltClass();
 
 });
