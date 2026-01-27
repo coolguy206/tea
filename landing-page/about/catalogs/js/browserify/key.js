@@ -6,5 +6,4 @@ module.exports = {
   secret: 'juixcxy7dri2nn0lwa6rh3eclyt39wkr'
 };
 
-
 },{}]},{},[1]);

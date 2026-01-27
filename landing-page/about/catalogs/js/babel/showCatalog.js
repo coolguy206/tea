@@ -13,4 +13,3 @@ module.exports = function (name, width, desc) {
     $('.loading').hide();
   });
 };
-//# sourceMappingURL=showCatalog.js.map

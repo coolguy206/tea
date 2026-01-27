@@ -27,14 +27,14 @@ module.exports = {
         dest: 'homepage/' + config.hp.name + '/htmlmin/'
     },
 
-    //   landing: {
-    //     files: [{
-    //       expand: true,
-    //       cwd: 'landing-page/' + config.landing.name + '/js/',
-    //       src: ['job-descriptions/*.js' , '*.js'],
-    //       dest: 'landing-page/' + config.landing.name + '/js/babel/'
-    //     }]
-    //   },
+      landing: {
+        files: [{
+          expand: true,
+          cwd: 'landing-page/' + config.landing.name + '/includes/',
+          src: ['content.html'],
+          dest: 'landing-page/' + config.landing.name + '/htmlmin/'
+        }]
+      },
 
     zone: {
         expand: true,

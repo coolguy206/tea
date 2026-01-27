@@ -15,5 +15,4 @@ module.exports = function (name, width, desc) {
   });
 };
 
-
 },{}]},{},[1]);

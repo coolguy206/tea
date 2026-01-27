@@ -21,4 +21,3 @@ module.exports = {
   },
   issu: "https://issuu.com/teacollection/docs/"
 };
-//# sourceMappingURL=vars.js.map

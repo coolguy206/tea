@@ -6,7 +6,6 @@ module.exports = {
   secret: 'juixcxy7dri2nn0lwa6rh3eclyt39wkr'
 };
 
-
 },{}],2:[function(require,module,exports){
 "use strict";
 
@@ -31,6 +30,5 @@ module.exports = {
   },
   issu: "https://issuu.com/teacollection/docs/"
 };
-
 
 },{"./key.js":1}]},{},[2]);

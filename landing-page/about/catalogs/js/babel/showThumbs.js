@@ -13,4 +13,3 @@ module.exports = function () {
     });
   });
 };
-//# sourceMappingURL=showThumbs.js.map
