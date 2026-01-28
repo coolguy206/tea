@@ -31,6 +31,7 @@ jQuery(document).ready(function () {
     if (window.innerWidth < 431) {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
+      $('.promos .the-promo.promo1').hide();
     }
   } else {
     //? NOT HOME PAGE
