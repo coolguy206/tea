@@ -1,7 +1,11 @@
 @import 'var.less';
 
 .email-wrap {
-  // background: #fcf5f2;
+  @media screen and (max-width:430px) {
+    flex-wrap: wrap;
+    background: #fcf5f2;
+  }
+
   // min-height: 500px;
   display: flex;
   justify-content: center;
@@ -184,10 +188,12 @@
 
   div.sign-up {
     @media screen and (max-width: 430px) {
-      left: 50%;
-      transform: translate(-50%, 0%);
-      top: 4.5%;
+      left: 0%;
+      transform: translate(0);
+      top: 0%;
       width: 90%;
+      padding: 12vw 0 0;
+      position: relative;
     }
 
     position: absolute;
@@ -236,10 +242,12 @@
 
   div.thanks {
     @media screen and (max-width: 430px) {
+      left: 0%;
+      transform: translate(0);
+      top: 0%;
       width: 90%;
-      left: 50%;
-      transform: translate(-50%, 0);
-      top: 4%;
+      padding: 12vw 0 0;
+      position: relative;
     }
 
     display: none;
