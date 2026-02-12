@@ -29,7 +29,7 @@ module.exports = {
 
   categories: {
     files: ['category-pages/' + config.cat.name + '/css/*.less', 'category-pages/' + config.cat.name + '/dev/*.html'],
-    tasks: ['less:categories', 'includes:categories'],
+    tasks: ['less:categories', 'includes:categories', 'htmlmin:categories'],
   },
 
 
