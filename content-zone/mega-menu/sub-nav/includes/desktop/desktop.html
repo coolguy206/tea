@@ -434,19 +434,52 @@
 
 <div class="site-nav-submenu new-arrivals">
 	<div class="bar">
-
+		{*
 		{sub_cats name="cat" category="new-arrivals"}
 		<div>
 		  <a href="{$cat.url}" data="mega menu new-arrivals">{$cat.title}</a>
 		  <span class="line"></span>
 		</div>
 		{/sub_cats}
+		*}
 
+		<div>
+		  <!-- <a href="/new-arrivals" data="mega menu new-arrivals">New</a> -->
+		  <!-- <span class="line"></span> -->
 
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      <ul class="category first">
+		        <li>Shop by Category</li>
+		        <li><a href="/new-arrivals" class="new arrivals" data="mega menu new-arrivals">All New</a></li>
+		        <li><a href="/girls-clothing/new-arrivals" class="" data="mega menu new-arrivals">Girl</a></li>
+		        <li><a href="/boys-clothing/new-arrivals" class="" data="mega menu new-arrivals">Boy</a></li>
+		        <li><a href="/baby-girl-clothes/new-arrivals" class="" data="mega menu new-arrivals">Baby Girl</a></li>
+		        <li><a href="/baby-boy-clothes/new-arrivals" class="" data="mega menu new-arrivals">Baby Boy</a></li>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Currently Loving</li>
+		        <li><a href="/best-sellers" class="" data="mega menu new-arrivals"> Best Sellers &#x1F3C6;</a></li>
+		        <li><a href="/spain-edit" class="" data="mega menu new-arrivals"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+		        <li><a href="/swimwear" class="" data="mega menu new-arrivals"> Swimwear</a></li>
+		        <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu new-arrivals"> Easter Shop 🐰</a></li>
+		      </ul>
+		    </div>
+		  </div>
+
+		  <div class="panel panel-3">
+		    <div class="da-rennab-zone" data-zone="mega_swim"></div>
+		  </div>
+
+		</div>
 	</div>
 </div>
 
 
+{*
 <div class="site-nav-submenu swim">
 	<div class="bar">
 		<div>
@@ -492,6 +525,7 @@
 
 	</div>
 </div>
+*}
 
 
 <div class="site-nav-submenu girl">
@@ -512,6 +546,8 @@
 		        <li>Shop by Category</li>
 		        <!-- <li><a href="/black-friday?gender%5B%5D=girl" data="mega menu black friday girl" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		        <li><a href="{$secure_html_url}girls-clothes" data="mega menu girl view all" >Shop All Girl (5&#8211;16)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -530,7 +566,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -630,6 +666,8 @@
 		        <li>Shop by Category</li>
 		        <!-- <li><a href="/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=" data="mega menu black friday toddler girl" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		        <li><a href="{$secure_html_url}toddler-girls-clothes" data="mega menu toddler girl view all">Shop All Toddler Girl (2&#8211;4)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -646,7 +684,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="/sale/toddler-girls-clothing" data="mega menu toddler girl sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -750,6 +788,8 @@
 		        <li>Shop by Category</li>
 		         <!-- <li><a href="/black-friday?gender%5B%5D=boy" data="mega menu black friday boy" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		         <li><a href="{$secure_html_url}boys-clothes" data="mega menu boy view all" >Shop All Boy (5&#8211;16)</a></li>
+
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -767,7 +807,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu boy sale" >Sale</a></li>
-		          <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all" >View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all" >View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -867,6 +907,8 @@
 		        <li>Shop by Category</li>
 		         <!-- <li><a href="/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=" data="mega menu black friday toddler boy" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		         <li><a href="{$secure_html_url}toddler-boys-clothes" data="mega menu toddler boy view all" >Shop All Toddler Boy (2&#8211;4)</a></li>
+
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -883,7 +925,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale" >Sale</a></li>
-		          <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all" >View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all" >View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -990,6 +1032,8 @@
 		        <li>Shop by Category</li>
 		        <!-- <li><a href="/black-friday?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=" data="mega menu black friday baby girl" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		        <li><a href="{$secure_html_url}baby-girl-clothes" data="mega menu baby girl view all" >Shop All Baby Girl (0&#8211;4T)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -1007,7 +1051,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu baby girl sale" >Sale</a></li>
-		          <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all" >View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all" >View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -1107,6 +1151,8 @@
 		        <li>Shop by Category</li>
 		         <!-- <li><a href="/black-friday?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=" data="mega menu black friday baby boy" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		         <li><a href="{$secure_html_url}baby-boy-clothes" data="mega menu baby boy view all" >Shop All Baby Boy (0&#8211;4T)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -1126,7 +1172,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale" >Sale</a></li>
-		          <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all" >View All</a></li>
+		          <!-- <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all" >View All</a></li> -->
 		        </ul>
 		      </ul>
 		    </div>
@@ -1226,6 +1272,8 @@
 		        <li>Shop by Category</li>
 		        <!-- <li><a href="/black-friday" data="mega menu black friday newborn" class="bf-font-color-mobile">Black Friday</a></li> -->
 
+		        <li><a href="{$secure_html_url}newborn-clothes" data="mega menu newborn view all" >Shop All Newborn (NB to 6&#8211;9 months)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -1298,91 +1346,11 @@
 </div>
 
 
-<div class="site-nav-submenu dress">
+<!-- <div class="site-nav-submenu dress">
 	<div class="bar">
 		
-		{*
-		{sub_cats name="cat" category="dresses"}
-		<div>
-		  <a href="{$cat.url}" data="mega menu dresses">{$cat.title}</a>
-		  <span class="line"></span>
-		</div>
-		{/sub_cats}
-		*}
-
-		<div>
-		  <a href="/dresses" data="mega menu dresses">Dress Shop</a> 
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-
-		      <ul class="category first">
-		        <li>Shop by Department</li>
-
-		          <ul class="category">
-		          
-		            <li><a href="/dress-shop/new-arrivals" data="mega menu dresses" class="new arrivals">New Arrivals</a></li>
-		            <li><a href="/girls-dresses" data="mega menu dresses">Girl</a></li>
-		            <li><a href="/baby-girl-dresses" data="mega menu dresses">Baby Girl</a></li>
-		            <li><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Adult</a></li>
-		          </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Silhouette</li>
-
-		        <ul class="category">
-		       
-		          <li><a href="/wrapneck-dresses" data="mega menu dresses">Wrap Neck</a></li>
-		          <li><a href="/ballet-dresses" data="mega menu dresses">Ballet</a></li>
-		          <li><a href="/empriredresses" data="mega menu dresses">Empire</a></li>
-		          <li><a href="/twirldresses" data="mega menu dresses">Twirl</a></li>
-		          <!-- <li><a href="/dropskirt-dresses" data="mega menu dresses">Drop Skirt</a></li> -->
-		          <li><a href="/mididresses" data="mega menu dresses">Midi</a></li>
-		          <!-- <li><a href="/longsleeve-dresses" data="mega menu dresses">Long Sleeve Dresses</a></li> -->
-		        </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2" style="border-right: none;">
-		      <ul class="category">
-		        <li>Trending</li>
-
-		        <ul class="category">
-		          <!-- <li><a href="/back-to-school?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Back to School Dresses</a></li> -->
-		          <!-- <li><a href="/spring-edit?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Spring Dresses</a></li> -->
-		          <!-- <li><a href="/vacation-shop?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Vacation Dresses</a></li> -->
-		          
-		          <li><a href="/play-dresses" data="mega menu dresses">Play</a></li>
-		          <li><a href="/occasion-dresses" data="mega menu dresses">Special Occasion</a></li>
-		          <li><a href="/kids-holiday-outfits?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Holiday</a></li>
-		          <li><a href="/family-outfitting/mommy-and-me?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Mommy & Me</a></li>
-		          <!-- <li style="font-family: gilroy-bold">Bundle & Save</li> -->
-		          <!-- <li><a href="/promo-code/dresses" data="mega menu buy 2 save">15% Off Dresses</a></li> -->
-		        </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<!-- <div>
-		  <a href="/promo-code/dresses" data="mega menu dresses">Bundle & Save</a>
-		  <span class="line"></span>
-		</div> -->
-
-		
 	</div>
-</div>
+</div> -->
 
 
 <div class="site-nav-submenu tees">

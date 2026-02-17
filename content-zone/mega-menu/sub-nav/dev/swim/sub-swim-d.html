@@ -1,0 +1,40 @@
+<div>
+  <a href="/swim-shop" data="mega menu Swim">Swim</a>
+  <span class="line"></span>
+
+  <div class="menu flex-menu">
+    <div class="panel panel-1">
+      {assign var=i value=0}
+
+      <ul class="category first">
+        <li>Shop by Department</li>
+        <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
+        <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
+        <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
+        <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
+        <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
+        <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
+        <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
+      </ul>
+    </div>
+
+    <div class="panel panel-2">
+      <ul class="category">
+        <li>Shop by Category</li>
+        <!-- include "../shop-by-collection.html" -->
+     
+        {sub_cats name="cat" category="swim-shop/shop-by-category"}
+          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu swim">{$cat.title}</a></li>
+        {/sub_cats}
+        
+        <!-- <li><a href="/teaxgreensprouts" class="" data="mega menu swim">Tea x Green Sprouts</a></li> -->
+      </ul>
+    </div>
+
+    <div class="panel panel-3">
+      <div class="da-rennab-zone" data-zone="mega_swim"></div>
+    </div>
+
+
+  </div>
+</div>

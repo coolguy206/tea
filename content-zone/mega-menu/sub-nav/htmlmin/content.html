@@ -435,19 +435,52 @@
 
 <div class="site-nav-submenu new-arrivals">
 	<div class="bar">
-
+		{*
 		{sub_cats name="cat" category="new-arrivals"}
 		<div>
 		  <a href="{$cat.url}" data="mega menu new-arrivals">{$cat.title}</a>
 		  <span class="line"></span>
 		</div>
 		{/sub_cats}
+		*}
 
+		<div>
+		  
+		  
 
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      <ul class="category first">
+		        <li>Shop by Category</li>
+		        <li><a href="/new-arrivals" class="new arrivals" data="mega menu new-arrivals">All New</a></li>
+		        <li><a href="/girls-clothing/new-arrivals" class="" data="mega menu new-arrivals">Girl</a></li>
+		        <li><a href="/boys-clothing/new-arrivals" class="" data="mega menu new-arrivals">Boy</a></li>
+		        <li><a href="/baby-girl-clothes/new-arrivals" class="" data="mega menu new-arrivals">Baby Girl</a></li>
+		        <li><a href="/baby-boy-clothes/new-arrivals" class="" data="mega menu new-arrivals">Baby Boy</a></li>
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		      <ul class="category">
+		        <li>Currently Loving</li>
+		        <li><a href="/best-sellers" class="" data="mega menu new-arrivals"> Best Sellers &#x1F3C6;</a></li>
+		        <li><a href="/spain-edit" class="" data="mega menu new-arrivals"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+		        <li><a href="/swimwear" class="" data="mega menu new-arrivals"> Swimwear</a></li>
+		        <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu new-arrivals"> Easter Shop 🐰</a></li>
+		      </ul>
+		    </div>
+		  </div>
+
+		  <div class="panel panel-3">
+		    <div class="da-rennab-zone" data-zone="mega_swim"></div>
+		  </div>
+
+		</div>
 	</div>
 </div>
 
 
+{*
 <div class="site-nav-submenu swim">
 	<div class="bar">
 		<div>
@@ -493,6 +526,7 @@
 
 	</div>
 </div>
+*}
 
 
 <div class="site-nav-submenu girl">
@@ -513,6 +547,8 @@
 		        <li>Shop by Category</li>
 		        
 
+		        <li><a href="{$secure_html_url}girls-clothes" data="mega menu girl view all">Shop All Girl (5&#8211;16)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -531,7 +567,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mega menu girl sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -626,6 +662,8 @@
 		        <li>Shop by Category</li>
 		        
 
+		        <li><a href="{$secure_html_url}toddler-girls-clothes" data="mega menu toddler girl view all">Shop All Toddler Girl (2&#8211;4)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -642,7 +680,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="/sale/toddler-girls-clothing" data="mega menu toddler girl sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mega menu toddler girl view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -741,6 +779,8 @@
 		        <li>Shop by Category</li>
 		         
 
+		         <li><a href="{$secure_html_url}boys-clothes" data="mega menu boy view all">Shop All Boy (5&#8211;16)</a></li>
+
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -758,7 +798,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/boys-clothing/view-all" data="mega menu boy sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}boys-clothing/view-all" data="mega menu boy view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -853,6 +893,8 @@
 		        <li>Shop by Category</li>
 		         
 
+		         <li><a href="{$secure_html_url}toddler-boys-clothes" data="mega menu toddler boy view all">Shop All Toddler Boy (2&#8211;4)</a></li>
+
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 		        {if $i && $i % 6 eq 0}
@@ -869,7 +911,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mega menu toddler boy view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -971,6 +1013,8 @@
 		        <li>Shop by Category</li>
 		        
 
+		        <li><a href="{$secure_html_url}baby-girl-clothes" data="mega menu baby girl view all">Shop All Baby Girl (0&#8211;4T)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -988,7 +1032,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu baby girl sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mega menu baby girl view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -1083,6 +1127,8 @@
 		        <li>Shop by Category</li>
 		         
 
+		         <li><a href="{$secure_html_url}baby-boy-clothes" data="mega menu baby boy view all">Shop All Baby Boy (0&#8211;4T)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -1102,7 +1148,7 @@
 		        {/sub_cats}
 
 		          <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale">Sale</a></li>
-		          <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mega menu baby boy view all">View All</a></li>
+		          
 		        </ul>
 		      
 		    </div>
@@ -1197,6 +1243,8 @@
 		        <li>Shop by Category</li>
 		        
 
+		        <li><a href="{$secure_html_url}newborn-clothes" data="mega menu newborn view all">Shop All Newborn (NB to 6&#8211;9 months)</a></li>
+
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
 		        {if $i && $i % 8 eq 0}
@@ -1264,88 +1312,7 @@
 </div>
 
 
-<div class="site-nav-submenu dress">
-	<div class="bar">
-		
-		{*
-		{sub_cats name="cat" category="dresses"}
-		<div>
-		  <a href="{$cat.url}" data="mega menu dresses">{$cat.title}</a>
-		  <span class="line"></span>
-		</div>
-		{/sub_cats}
-		*}
 
-		<div>
-		  <a href="/dresses" data="mega menu dresses">Dress Shop</a> 
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-
-		      <ul class="category first">
-		        <li>Shop by Department</li>
-
-		          <ul class="category">
-		          
-		            <li><a href="/dress-shop/new-arrivals" data="mega menu dresses" class="new arrivals">New Arrivals</a></li>
-		            <li><a href="/girls-dresses" data="mega menu dresses">Girl</a></li>
-		            <li><a href="/baby-girl-dresses" data="mega menu dresses">Baby Girl</a></li>
-		            <li><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Adult</a></li>
-		          </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Silhouette</li>
-
-		        <ul class="category">
-		       
-		          <li><a href="/wrapneck-dresses" data="mega menu dresses">Wrap Neck</a></li>
-		          <li><a href="/ballet-dresses" data="mega menu dresses">Ballet</a></li>
-		          <li><a href="/empriredresses" data="mega menu dresses">Empire</a></li>
-		          <li><a href="/twirldresses" data="mega menu dresses">Twirl</a></li>
-		          
-		          <li><a href="/mididresses" data="mega menu dresses">Midi</a></li>
-		          
-		        </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2" style="border-right: none;">
-		      <ul class="category">
-		        <li>Trending</li>
-
-		        <ul class="category">
-		          
-		          
-		          
-		          
-		          <li><a href="/play-dresses" data="mega menu dresses">Play</a></li>
-		          <li><a href="/occasion-dresses" data="mega menu dresses">Special Occasion</a></li>
-		          <li><a href="/kids-holiday-outfits?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Holiday</a></li>
-		          <li><a href="/family-outfitting/mommy-and-me?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu dresses">Mommy & Me</a></li>
-		          
-		          
-		        </ul>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		
-
-		
-	</div>
-</div>
 
 
 <div class="site-nav-submenu tees">
@@ -2060,26 +2027,59 @@
 		*}
 
 
-		<li>
-			<h2><a href="/select-styles" class="select-styles-font-color-mobile" data="mobile mega menu top level" class="">up to 60% off</a></h2>
-			<div class="sub"></div>
-		</li>
+		
 
 
 		<li>
-			<h2><a href="/new-arrivals" class="new-arrivals-font-color-mobile" data="mobile mega menu top level">NEW</a>
+			<h2 class="new arrivals">
 				
+				 NEW
+				<span class="fas fa-plus"></span>
 			</h2>
-			{*
+			
 			<div class="sub">
-
-				<h3><a href="/new-arrivals" class="view all" data="mobile mega menu new-arrivals">VIEW ALL</a></h3>
+				{*
 				{sub_cats name="cat" category="new-arrivals"}
 				
 				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu new-arrivals">{$cat.title}</a></h3>
 				{/sub_cats}
+				*}
+
+
+				<div class="links new">
+				    <ul>
+				        <li>Shop by Category</li>
+				        <li><a href="/new-arrivals" class="new arrivals" data="mobile mega menu new-arrivals">All New</a></li>
+				        <li><a href="/girls-clothing/new-arrivals" class="" data="mobile mega menu new-arrivals">Girl</a></li>
+				        <li><a href="/boys-clothing/new-arrivals" class="" data="mobile mega menu new-arrivals">Boy</a></li>
+				        <li><a href="/baby-girl-clothes/new-arrivals" class="" data="mobile mega menu new-arrivals">Baby Girl</a></li>
+				        <li><a href="/baby-boy-clothes/new-arrivals" class="" data="mobile mega menu new-arrivals">Baby Boy</a></li>
+				    </ul>
+
+				    <ul>
+				        <li>Currently Loving</li>
+				        <li><a href="/best-sellers" class="" data="mobile mega menu new-arrivals"> Best Sellers &#x1F3C6;</a></li>
+				        <li><a href="/spain-edit" class="" data="mobile mega menu new-arrivals"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+				        <li><a href="/swimwear" class="" data="mobile mega menu new-arrivals"> Swimwear</a></li>
+				        <li><a href="/kids-easter-holiday-clothing" class="" data="mobile mega menu new-arrivals"> Easter Shop 🐰</a></li>
+				    </ul>
+				</div>
+
+				{literal}
+				<style>
+				    header .site-header-inner .site-nav-mobile ul li .sub .links.new {
+				    display:none;
+				    
+				  }
+				@media screen and (max-width:430px){
+				  header .site-header-inner .site-nav-mobile ul li .sub .links.new {
+				    display:block;
+				    padding-top:0;
+				  }
+				}
+				</style>
+				{/literal}
 			</div>
-			*}
 		</li>
 
 
@@ -2117,11 +2117,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}toddler-girls-clothes" data="mobile mega menu toddler girl view all">Shop All Toddler (2&#8211;4)</a></li>
+
 				    {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}toddler-girls-clothes/view-all" data="mobile mega menu toddler girl view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="/sale/toddler-girls-clothing" data="mobile mega menu toddler girl sale">Sale</a></li>
 				  
 				  </ul>
@@ -2197,11 +2199,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}girls-clothes" data="mobile mega menu girl view all">Shop All Girl (5&#8211;16)</a></li>
+
 				    {sub_cats name="cat" category="girls-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}girls-clothing/view-all" data="mobile mega menu girl view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="{$secure_html_url}sale/girls-clothing/view-all" data="mobile mega menu girl sale">Sale</a></li>
 				    
 				  </ul>
@@ -2285,11 +2289,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}toddler-boys-clothes" data="mobile mega menu toddler boy view all">Shop All Toddler (2&#8211;4)</a></li>
+
 				    {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}toddler-boys-clothes/view-all" data="mobile mega menu toddler boy view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="/sale/toddler-boys-clothing" data="mobile mega menu toddler boy sale">Sale</a></li>
 				  </ul>
 
@@ -2364,11 +2370,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}boys-clothes" data="mobile mega menu boy view all">Shop All Boy (5&#8211;16)</a></li>
+
 				    {sub_cats name="cat" category="boys-clothing/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu boy categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}boys-clothing/view-all" data="mobile mega menu boy view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="{$secure_html_url}sale/boys-clothing/view-all" data="mobile mega menu boy sale">Sale</a></li>
 				    
 				  </ul>
@@ -2438,9 +2446,6 @@
 		</li>
 
 
-		
-
-
 		<li>
 			<h2>Baby <span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -2454,11 +2459,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}baby-girl-clothes" data="mobile mega menu baby girl view all">Shop All Baby Girl (0&#8211;4T)</a></li>
+
 				    {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}baby-girl-clothes/view-all" data="mobile mega menu baby girl view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mobile mega menu baby girl sale">Sale</a></li>
 				    
 				  </ul>
@@ -2534,11 +2541,13 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}baby-boy-clothes" data="mobile mega menu baby boy view all">Shop All Baby Boy (0&#8211;4T)</a></li>
+
 				    {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a href="{$secure_html_url}baby-boy-clothes/view-all" data="mobile mega menu baby boy view all">Shop All</a></li>
+				    
 				    <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mobile mega menu baby boy sale">Sale</a></li>
 				   
 				  </ul>
@@ -2614,6 +2623,8 @@
 
 				    
 
+				    <li><a href="{$secure_html_url}newborn-clothes" data="mobile mega menu newborn view all">Shop All Newborn (NB to 6&#8211;9M)</a></li>
+
 
 				    {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
 				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu newborn categories">{$cat.title}</a></li>
@@ -2621,7 +2632,7 @@
 
 				    <li><a class="sale" href="{$secure_html_url}sale/newborn-clothing/view-all" data="mobile mega menu newborn sale">Sale</a></li>
 
-				    <li><a href="{$secure_html_url}newborn-clothes/view-all" data="mobile mega menu newborn view all">View All</a></li>
+				    
 
 				  </ul>
 
@@ -2657,6 +2668,13 @@
 		</li>
 
 
+		<li>
+			<h2><a href="/swimwear" class="" data="mobile mega menu top level" class="">Swim</a></h2>
+			<div class="sub"></div>
+		</li>
+
+
+		{*
 		<li>
 			<h2>Swim<span class="fas fa-plus"></span></h2>
 			<div class="sub">
@@ -2701,83 +2719,17 @@
 				{/literal}
 			</div>
 		</li>
+		*}
 
 
 		<li>
-			<h2>Dresses<span class="fas fa-plus"></span></h2>
-			<div class="sub">
-				{*
-				{sub_cats name="cat" category="dresses"}
-				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu dresses">{$cat.title}</a></h3>
-				{/sub_cats}
-				*}
-
-				<h3><a href="/dress-shop" class="view all" data="mobile mega menu dresses">view all</a></h3>
-				<h3><a href="/girls-dresses" class="" data="mobile mega menu dresses">girl</a></h3>
-				<h3><a href="/toddler-girls-clothes/dresses" class="" data="mobile mega menu dresses">toddler girl</a></h3>
-				<h3><a href="/baby-girl-dresses" class="" data="mobile mega menu dresses">baby girl</a></h3>
-
-				{*
-				
-				<div class="links dress">
-				    
-
-				    <ul>
-				        <li>Shop by Department</li>
-				        <li><a href="/dresses" data="mobile mega menu dresses">Dress Shop</a></li>
-				        <li><a href="/dress-shop/new-arrivals" data="mobile mega menu dresses" class="new arrivals">New Arrivals</a></li>
-				        <li><a href="/girls-dresses" data="mobile mega menu dresses">Girl</a></li>
-				        <li><a href="/baby-girl-dresses" data="mobile mega menu dresses">Baby Girl</a></li>
-				        <li><a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mobile mega menu dresses">Adult</a></li>
-				    </ul>
-
-				        <ul>
-				            <li>Shop by Silhouette</li>
-				            <li><a href="/wrapneck-dresses" data="mobile mega menu dresses">Wrap Neck</a></li>
-				            <li><a href="/ballet-dresses" data="mobile mega menu dresses">Ballet</a></li>
-				            <li><a href="/empriredresses" data="mobile mega menu dresses">Empire</a></li>
-				            <li><a href="/twirldresses" data="mobile mega menu dresses">Twirl</a></li>
-				            
-				            <li><a href="/mididresses" data="mobile mega menu dresses">Midi</a></li>
-				            
-				        </ul>
-
-				        <ul>
-				            <li>Trending</li>
-				            
-				            
-				            
-				            
-				          
-				            <li><a href="/play-dresses" data="mobile mega menu dresses">Play</a></li>
-				            <li><a href="/occasion-dresses" data="mobile mega menu dresses">Special Occasion</a></li>
-				            <li><a href="/kids-holiday-outfits?cat%5B%5D=dresses&store_price%5B%5D=" data="mobile mega menu dresses">Holiday</a></li>
-				            <li><a href="/family-outfitting/mommy-and-me?cat%5B%5D=dresses&store_price%5B%5D=" data="mobile mega menu dresses">Mommy & Me</a></li>
-				            
-				            
-				        </ul>
-
-				</div>
-				*}
-
-				{literal}
-				<style>
-				    header .site-header-inner .site-nav-mobile ul li .sub .links.dress {
-				        display: none;
-
-				    }
-
-				    @media screen and (max-width:835px) {
-				        header .site-header-inner .site-nav-mobile ul li .sub .links.dress {
-				            display: block;
-				            padding-top: 0;
-				        }
-				    }
-				</style>
-				{/literal}
-			</div>
+			<h2><a href="/dress-shop" class="" data="mobile mega menu top level" class="">Dresses</a></h2>
+			<div class="sub"></div>
 		</li>
 
+
+		
+		
 
 		<li>
 			<h2>Tees<span class="fas fa-plus"></span></h2>
@@ -2794,10 +2746,7 @@
 			</div>
 		</li>
 
-		
-		
-
-
+	
 		
 				{*include "../shorts/sub-shorts-m.html"*}
 			
@@ -2859,7 +2808,9 @@
 		</li>
 
 
-		
+		<li>
+			<h2><a href="/clothing-sale" class="sale-font-color-mobile" data="mobile mega menu top level">sale</a></h2>
+		</li>
 
 
 		<li>
@@ -2868,23 +2819,6 @@
 
 
 {*
-
-			<li>
-				<h2><a href="/special-occasion">✨HOLIDAY✨</a></h2>
-				<div class="sub">
-					
-					
-
-					<h3><a href="/sibling-shop" data="mobile mega menu family matching SIBLING SHOP">VIEW ALL</a></h3>
-					<h3><a href="/sibling-shop" data="mobile mega menu family matching SIBLING SHOP">SIBLING SHOP</a></h3>
-					<h3><a href="/family-outfitting/mommy-and-me" data="mobile mega menu family matching MOMMY & ME">MOMMY & ME</a></h3>
-					<h3><a href="/special-occasion/sibling" data="mobile mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a></h3>
-					<h3><a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mobile mega menu family matching SWIM">FAMILY SWIM</a></h3>
-					<h3><a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mobile mega menu family matching PJs">FAMILY PJs</a></h3>
-
-
-				</div>
-			</li>
 	
 			
 			<li>
@@ -2942,11 +2876,6 @@
 				</div>
 			</li>
 	
-			
-			<li>
-				<h2><a href="/kids-fall-outfits">🍁Fall Edit🍁</a></h2>
-			</li>
-	
 	
 			<li>
 				<h2><a href="/back-to-school-shop">back to school</a></h2>
@@ -2958,84 +2887,15 @@
 					<a href="/global-shop" class="">&#127757; Global Shop &#127757;</a>
 				</h2>
 			</li>
-
-
-			<li>
-				<h2><a href="/select-styles" style="color: #FF0009 !important;">Warehouse Sale</a></h2>
-			</li>
 	
-
-			<li>
-				<h2><a href="/sale/clearance" style="color:#C912EB !important">last chance: extra 30% off</a></h2>
-			</li>
-
 
 			<li>
 				<h2><a href="/warehousesale" style="color: #FF0009 !important;">flash Warehouse Sale</a></h2>
 			</li>
-	
-	
-			<li>
-				<h2>
-					<a href="/select-styles" style="color: #0088A2 !important"> end of season 40% off </a>
-				</h2>
-			</li>
-
-
-		<li>
-			<h2> <a href="/select-styles" style="color:#FF1744 !important">50% off all Swim</a>
-				 </h2>
-			<div class="sub">
-
-				
-				<div class="links swim">
-				  <ul>
-				    <li>Shop by Department</li>
-				    <li><a href="/swim-shop/new-arrivals" data="mobile mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
-				    <li><a href="/girls-swimwear" data="mobile mega menu swim girl">Girl</a></li>
-				    <li><a href="/boys-swimwear" data="mobile mega menu swim boy">Boy</a></li>
-				    <li><a href="/baby-girl-swimwear" data="mobile mega menu swim baby girl">Baby Girl</a></li>
-				    <li><a href="/baby-boy-swimwear" data="mobile mega menu swim baby boy">Baby Boy</a></li>
-				    <li><a href="/family-outfitting/swim" data="mobile mega menu swim family swim">Family Swim</a></li>
-				    <li><a href="/swimwear" data="mobile mega menu swim view all">View All</a></li>
-				  <ul>
-				    <li>Shop by Category</li>
-				    
-				 
-				    {sub_cats name="cat" category="swim-shop/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu swim">{$cat.title}</a></li>
-				    {/sub_cats}
-				    
-				    
-				  </ul>
-
-				</ul></div>
-
-				{literal}
-				<style>
-				    header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
-				    display:none;
-				    
-				  }
-				@media screen and (max-width:430px){
-				  header .site-header-inner .site-nav-mobile ul li .sub .links.swim {
-				    display:block;
-				    padding-top:0;
-				  }
-				}
-				</style>
-				{/literal}
-			</div>
-		</li>
 
 	
 		<li>
 			<h2><a href="/cozy-shop">cozy shop</a></h2>
-		</li>
-
-
-		<li>
-			<h2><a href="/special-occasion">Special Occasion</a></h2>
 		</li>
 
 
