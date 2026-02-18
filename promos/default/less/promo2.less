@@ -12,9 +12,9 @@
     span {
         &.span-wrap {
             @media screen and (max-width: 430px) {
-                display: flex;
-                flex-wrap:wrap;
-                justify-content: center;
+                // display: flex;
+                // flex-wrap:wrap;
+                // justify-content: center;
             }
         }
         &.first {
@@ -72,7 +72,7 @@
 
             @media screen and (max-width: 430px) {
                 font-size: 4vw;
-                // display: block;
+                display: inline-block;
                 // display:none;
             }
 
@@ -87,10 +87,10 @@
                 &:after {
                     @media screen and (max-width: 430px) {
                         width: 100%;
-                        // position: absolute;
-                        // left: 0;
-                        margin: 0;
-                        // bottom: 0;
+                        position: absolute;
+                        left: 0;
+                        // margin: 0;
+                        bottom: -10%;
                     }
 
                     left: 0;
