@@ -31,6 +31,8 @@ export const promoVars = {
 
     swim: ``,
     dress: ``,
+    new: ``,
     // swim: '.promo1-url.girl',
     // dress: '.promo1-url.girl'
+    // new: '.promo1-url.girl'
 };

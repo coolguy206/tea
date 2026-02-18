@@ -292,6 +292,31 @@ export const switchNewArrivals = (href) => {
 
       break;
 
+    case '/new-arrivals':
+      // promo1 =  urls.promo.select.swim;
+      promo1 = urls.promo.select2.promo;
+      promo2 = urls.promo.select.promo;
+      promo3 = urls.promo.sale.promo;
+      clearance = urls.promo.clearance.girl;
+
+      if (promoVars.showPromo1) {
+        if (promoVars.new !== ``) {
+          $(promoVars.new).show();
+        } else {
+          $(promoVars.promo1Elem).show();
+        }
+      }
+
+      if (promoVars.showPromo2) {
+        $(promoVars.promo2Elem).show();
+      }
+
+      if (promoVars.showPromo3) {
+        $(promoVars.promo3Elem).show();
+      }
+
+      break;
+
     default:
       break;
   }

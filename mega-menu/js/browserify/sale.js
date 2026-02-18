@@ -86,9 +86,11 @@ var promoVars = exports.promoVars = {
   // newborn:`.promo1-url.newborn`,
   showNewborn: false,
   swim: "",
-  dress: ""
+  dress: "",
+  "new": ""
   // swim: '.promo1-url.girl',
   // dress: '.promo1-url.girl'
+  // new: '.promo1-url.girl'
 };
 
 },{}],3:[function(require,module,exports){
@@ -453,6 +455,26 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       // $('.promo1-url, .promo2-url, .clearance-url').show();
       // $('.clearance-url').hide();
 
+      break;
+    case '/new-arrivals':
+      // promo1 =  urls.promo.select.swim;
+      promo1 = _urls.urls.promo.select2.promo;
+      promo2 = _urls.urls.promo.select.promo;
+      promo3 = _urls.urls.promo.sale.promo;
+      clearance = _urls.urls.promo.clearance.girl;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars["new"] !== "") {
+          $(_promoVars.promoVars["new"]).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
       break;
     default:
       break;
