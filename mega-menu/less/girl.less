@@ -3,7 +3,7 @@
 @bluish: #00A5B6;
 
 .panel.panel-3 {
-    // align-items: center;
+  // align-items: center;
 }
 
 .mega-menu-img {
@@ -15,17 +15,25 @@
 
 .mega-img-container {
   display: flex !important;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
 
-  .promo1-url, .promo2-url {
+  .promo1-url,
+  .promo2-url {
     display: none;
   }
 
+  &.initial {
+    a {
+      display: block;
+    }
+  }
+
   img {
-    @media screen and (max-width: 1679px){
+    @media screen and (max-width: 1679px) {
       width: 18vw;
       // width: 14vw;
     }
+
     width: 300px;
   }
 }

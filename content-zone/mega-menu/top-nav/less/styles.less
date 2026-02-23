@@ -1,11 +1,4 @@
-@bf-font-color: #E894CD !important;
-@cm-font-color: #FF0009!important;
-@sale-font-color: #FF0009 !important;
-@new-font-color: #436FC1 !important;
-// @new-font-color: #47363D !important;
-@select-styles-font-color: #D3625A !important;
-@warehouse-font-color: #FF0009 !important;
-@clearance-font-color: #FF0009 !important;
+@import "vars.less";
 
 .dept-bf {
 	a {
@@ -31,7 +24,6 @@
 	}
 }
 
-
 .dept-warehouse {
 	a {
 		color: @warehouse-font-color;
@@ -43,7 +35,6 @@
 		}
 	}
 }
-
 
 .dept-sale {
 	a {
@@ -58,7 +49,6 @@
 	}
 }
 
-
 .dept-clearance {
 	a {
 		color: @clearance-font-color
@@ -72,7 +62,6 @@
 	}
 }
 
-
 .dept-new-arrivals {
 	a {
 		color: @new-font-color;
@@ -84,7 +73,6 @@
 		}
 	}
 }
-
 
 .dept-select-styles {
 	a {
@@ -106,23 +94,4 @@
 
 }
 
-header .site-header-inner .nav .site-nav-links li {
-	@media screen and (max-width: 1679px) {
-		margin-right: 1.5vw;
-	}
-}
-
-header .site-header-inner .nav .site-nav-links li a {
-	@media screen and (max-width: 1679px) {
-		font-size: 1vw !important;
-		letter-spacing: 0.2vw;
-	}
-}
-
-header .site-header-inner .nav .site-nav-links li.dept-bf.active span.line {
-	// border-color: #FF1744 !important;
-}
-
-header .site-header-inner .nav .site-nav-links li span.line {
-	width: 100%;
-}
+@import "overrides.less";

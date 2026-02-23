@@ -1,8 +1,8 @@
 @import 'var.less';
-@promo2Bg: #4765A1;
-@promo2Color1: #fff;
-@promo2Color2: #fff;
-@promo2Color3: #fff;
+@promo2Bg: #FDF5F2;
+@promo2Color1: #4765A1;
+@promo2Color2: #4765A1;
+@promo2Color3: #4765A1;
 
 
 &.promo2 {
@@ -12,9 +12,9 @@
     span {
         &.span-wrap {
             @media screen and (max-width: 430px) {
-                display: flex;
-                flex-wrap:wrap;
-                justify-content: center;
+                // display: flex;
+                // flex-wrap:wrap;
+                // justify-content: center;
             }
         }
         &.first {
@@ -23,7 +23,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 2.7vw;
+                font-size: 4vw;
                 // display: none;
                 // order: 2;
             }
@@ -49,8 +49,8 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 2.7vw;
-                display: block;
+                font-size: 4vw;
+                display: none;;
                 // order:1;
             }
 
@@ -71,8 +71,8 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 2.7vw;
-                // display: block;
+                font-size: 4vw;
+                display: inline-block;
                 // display:none;
             }
 
@@ -87,10 +87,10 @@
                 &:after {
                     @media screen and (max-width: 430px) {
                         width: 100%;
-                        // position: absolute;
-                        // left: 0;
-                        margin: 0;
-                        // bottom: 0;
+                        position: absolute;
+                        left: 0;
+                        // margin: 0;
+                        bottom: -10%;
                     }
 
                     left: 0;

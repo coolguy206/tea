@@ -18,7 +18,8 @@ jQuery(document).ready(function () {
     // $('.header-banner').css('max-width', '100%');
     // $('.promos')[0].style.display = 'none'
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
-    // $('.promos .the-promo.promo1').show();
+    // $('.promos').hide();
+    $('.promos .the-promo.promo1').remove();
     // $('.promos .the-promo.promo3').show();
     // $('.promos .the-promo.promo2').remove();
 
