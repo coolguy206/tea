@@ -2,11 +2,11 @@
 
 var _inview = require("./inview.js");
 var _cloneExecuteSlider = require("./clone-execute-slider.js");
-var _makeGlide = require("./make-glide.js");
 var _tracking = require("./tracking.js");
+var _makeBxslider = require("./make-bxslider.js");
 // import { countdown } from './countdown.js';
 
-// import { makeBxSlider } from './make-bxslider.js';
+// import { makeGlide } from './make-glide.js';
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
@@ -29,9 +29,9 @@ $(document).ready(function () {
 
   // makeGlide('.c2 .glide');
 
-  (0, _makeGlide.makeGlide)('.c2-slideshow .glide');
+  // makeGlide('.c2-slideshow .glide');
 
-  // makeBxSlider('.c2-slideshow ul');
+  (0, _makeBxslider.makeBxSlider)('.c2-slideshow ul');
 
   // makeGlide('.c6 .glide');
 
