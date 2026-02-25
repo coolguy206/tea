@@ -13,7 +13,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-2');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.select-styles.all', '.shop-slideshow-3');
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.spain-edit.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });

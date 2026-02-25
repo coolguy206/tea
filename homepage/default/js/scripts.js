@@ -14,7 +14,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
-  cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
+  cloneExecuteSlider('.spain-edit.all', '.shop-slideshow-3');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();

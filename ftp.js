@@ -14,16 +14,16 @@ var baseURL = `/media/tea_collection/`;
 // var category = `promos/one-offs/${year}/${num}/${version}/hp/`;
 // var category = `promos/one-offs/${year}/${num}/${version}/mega/`;
 // var category = `promos/giving-tuesday/${year}/${num}/${version}/`;
-var category = `homepage/${year}/${num}/${version}/`;
+// var category = `homepage/${year}/${num}/${version}/`;
 // var category = `headers/${year}/${num}/${version}/`;
-// var category = `landing-pages/email/${year}/${num}/${version}/`;
+var category = `landing-pages/school-days-sign-up/${year}/${num}/${version}/`;
 // var category = `mega-menu/${year}/${num}/${version}/`;
 
 //!EXCEPT THIS ONE
 var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
-var readFilePath = `Site/${num}/Site/`;
+var readFilePath = `Site/${num}/Site/school-days/`;
 // var readFilePath = `Site/${num}/Site/hp`;
 // var readFilePath = `Site/${num}/Site/promo/hp/`;
 // var readFilePath = `Site/${num}/Site/promo/mega/`;
@@ -33,8 +33,8 @@ var readFilePath = `Site/${num}/Site/`;
 // var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
 // var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
-// var writeFilePath = `landing-page/email/dev/images/`;
-var writeFilePath = `homepage/default/dev/images/${num}/`;
+var writeFilePath = `landing-page/school-days/sign-up/dev/images/${num}/`;
+// var writeFilePath = `homepage/default/dev/images/${num}/`;
 // var writeFilePath = `mega-menu/dev/images/`;
 var fileName = `c2b-m`;
 var ext = `.jpg`;
