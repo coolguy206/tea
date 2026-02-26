@@ -112,7 +112,7 @@ var makeBxSlider = exports.makeBxSlider = function makeBxSlider(elem) {
     pager: false,
     // pause: 8000,
     touchEnabled: false,
-    pause: 4000,
+    pause: 2000,
     onSliderLoad: function onSliderLoad() {
       // $('.promos.promo1, .promos.promo2, .promos.promo3').show();
     }
