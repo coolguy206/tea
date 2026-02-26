@@ -2,9 +2,9 @@
 import { inview } from './inview.js';
 // import { countdown } from './countdown.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
-import { makeGlide } from './make-glide.js';
+// import { makeGlide } from './make-glide.js';
 import { tracking, addAltClass } from './tracking.js';
-// import { makeBxSlider } from './make-bxslider.js';
+import { makeBxSlider } from './make-bxslider.js';
 
 
 $(document).ajaxComplete(function (event, xhr, options) {
@@ -14,7 +14,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
-  cloneExecuteSlider('.select-styles.all', '.shop-slideshow-3');
+  cloneExecuteSlider('.spain-edit.all', '.shop-slideshow-3');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
@@ -34,9 +34,9 @@ $(document).ready(function () {
 
   // makeGlide('.c2 .glide');
 
-  makeGlide('.c2-slideshow .glide');
+  // makeGlide('.c2-slideshow .glide');
 
-  // makeBxSlider('.c2-slideshow ul');
+  makeBxSlider('.c2-slideshow ul');
 
   // makeGlide('.c6 .glide');
 
