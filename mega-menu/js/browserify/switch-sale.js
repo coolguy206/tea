@@ -259,7 +259,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
       break;
     case '/clothing-sale':
-      promo1 = _urls.urls.promo.promo;
+      promo1 = _urls.urls.promo.sale.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.promo;

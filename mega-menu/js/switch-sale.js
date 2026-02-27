@@ -242,7 +242,7 @@ export const switchSale = (href) => {
 
 
     case '/clothing-sale':
-      promo1 = urls.promo.promo;
+      promo1 = urls.promo.sale.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.promo;
