@@ -1,6 +1,8 @@
 (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
 "use strict";
 
+// import { makeBxSlider } from './make-bxslider.js';
+
 jQuery(document).ready(function () {
   //? change the aria-label for the promos
   var aria = $('.the-promo');
@@ -33,7 +35,8 @@ jQuery(document).ready(function () {
     if (window.innerWidth < 431) {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
-      $('.promos .the-promo.promo1').hide();
+      // $('.promos .the-promo.promo1').hide();
+      $('.promos .the-promo.promo1').remove();
     }
   } else {
     //? NOT HOME PAGE
@@ -104,18 +107,8 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2000,
-    touchEnabled: false,
-    onSliderLoad: function onSliderLoad() {
-      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-    }
-  });
+
+  //  makeBxSlider('.promos-wrap');
 });
 
 },{}]},{},[1]);

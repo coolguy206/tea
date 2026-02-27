@@ -1,15 +1,15 @@
 @import "../var.less";
 @promo-background: none;
-@promo-h2-color: #fff;
-@promo-h2-color-430: #fff;
-@promo-h2-font-family: @crumb;
-@promo-h3-color: #4765A1;
-@promo-h3-color-430: #fff;
+@promo-h2-color: #60835C;
+@promo-h2-color-430: #60835C;
+@promo-h2-font-family: @souv;
+@promo-h3-color: #4F4243;
+@promo-h3-color-430: #4F4243;
 @promo-h3-font-family: @gilroyb;
 @promo-font-color: #fff;
 @promo-p-color: #fff;
 @promo-cta1-color: #fff;
-@promo-cta1-background: #4765A1;
+@promo-cta1-background: #DD737A;
 @promo-cta2-color: @promo-cta1-color;
 @promo-cta2-background: #4261A6;
 @promo-cta3-color: @promo-cta1-color;
@@ -24,7 +24,7 @@
 
 .promo1 {
   @media screen and (max-width: 1679px) {
-    min-height: 27vw;
+    // min-height: 27vw;
   }
 
   @media screen and (max-width: 430px) {
@@ -47,52 +47,52 @@
   //   max-width: 100%;
   // }
 
-  #countdown {
-    @media screen and (max-width: 1679px) {
-      font-size: 1.8vw;
-      letter-spacing: .25vw;
-      // top: 15vw;
-      // left: 20.5vw;
-    }
+  // #countdown {
+  //   @media screen and (max-width: 1679px) {
+  //     font-size: 1.8vw;
+  //     letter-spacing: .25vw;
+  //     // top: 15vw;
+  //     // left: 20.5vw;
+  //   }
 
-    @media screen and (max-width: 430px) {
-      text-align: center;
-      letter-spacing: 1vw;
-      font-size: 4vw;
-      width: 100%;
-      // position: relative;
-      top: 30%;
-      left: 0;
-      // background: #556A82;
-      padding: 3.2vw 0;
-    }
+  //   @media screen and (max-width: 430px) {
+  //     text-align: center;
+  //     letter-spacing: 1vw;
+  //     font-size: 4vw;
+  //     width: 100%;
+  //     // position: relative;
+  //     top: 30%;
+  //     left: 0;
+  //     // background: #556A82;
+  //     padding: 3.2vw 0;
+  //   }
 
-    position: absolute;
-    font-family: @birdie;
-    color: #fff;
-    top: 32%;
-    left: 7%;
-    transform: translate(0);
-    // letter-spacing: 4px;
-    // text-transform: uppercase;
-    font-size: 30px;
-    letter-spacing: 4px;
-    line-height: normal;
-    width: auto;
-    // display: none;
+  //   position: absolute;
+  //   font-family: @birdie;
+  //   color: #fff;
+  //   top: 32%;
+  //   left: 7%;
+  //   transform: translate(0);
+  //   // letter-spacing: 4px;
+  //   // text-transform: uppercase;
+  //   font-size: 30px;
+  //   letter-spacing: 4px;
+  //   line-height: normal;
+  //   width: auto;
+  //   // display: none;
 
-    span {
-      font-family: @birdie;
-    }
+  //   span {
+  //     font-family: @birdie;
+  //   }
 
-    i {
-      @media screen and (max-width: 430px) {
-        display: none;
-      }
+  //   i {
+  //     @media screen and (max-width: 430px) {
+  //       display: none;
+  //     }
 
-      font-style: normal;
-    }
-  }
+  //     font-style: normal;
+  //   }
+  // }
 
   &>a,
   video {
@@ -101,23 +101,30 @@
 
   div {
     &.the-content {
-      @media screen and (max-width: 1679px) {}
+      @media screen and (max-width: 1679px) {
+        column-gap: 3.1vw;
+      }
 
       @media screen and (max-width: 810px) {}
 
       @media screen and (max-width: 430px) {
-        top: 4.5%;
-        transform: translate(0);
+        top: 50%;
+        transform: translate(0, -50%);
         left: 0;
         width: 100%;
+        flex-wrap: wrap;
+        row-gap: 8vw;
         // padding: 7vw 0 0 7vw;
       }
 
       position: absolute;
-      width: 40%;
+      width: 80%;
       top: 50%;
-      left: 78%;
+      left: 50%;
       transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      column-gap: 52px;
 
       img {
         @media screen and (max-width: 430px) {
@@ -138,107 +145,112 @@
 
       h2 {
         @media screen and (max-width: 1679px) {
-          font-size: 6vw;
-          line-height: 6vw;
-          margin: 2.2vw 0 3.6vw;
+          font-size: 4.2vw;
+          // line-height: 6vw;
+          // margin: 2.2vw 0 3.6vw;
         }
 
         @media screen and (max-width: 430px) {
           color: @promo-h2-color-430;
-          font-size: 12.2vw;
-          line-height: 12.2vw;
+          font-size: 9.4vw;
+          // line-height: 12.2vw;
         }
 
         color: @promo-h2-color;
         font-family: @promo-h2-font-family;
-        font-size: 100px;
-        line-height: 100px;
-        text-transform: uppercase;
-        margin: 36px 0 60px;
+        font-size: 70px;
+        line-height: normal;
+        text-align: left;
+        margin: 0;
+        // text-transform: uppercase;
+        // margin: 36px 0 60px;
 
-        span {
-          @media screen and (max-width: 1679px) {
-            font-size: 1.6vw;
-            letter-spacing: .3vw;
-          }
+        // span {
+        //   @media screen and (max-width: 1679px) {
+        //     font-size: 1.6vw;
+        //     letter-spacing: .3vw;
+        //   }
 
-          @media screen and (max-width: 430px) {
-            font-size: 8vw;
-            letter-spacing: 2vw;
-            line-height: 15vw;
-          }
+        //   @media screen and (max-width: 430px) {
+        //     font-size: 8vw;
+        //     letter-spacing: 2vw;
+        //     line-height: 15vw;
+        //   }
 
-          color: #F5AFBD;
-          font-family: @gilroyb;
-          font-size: 26px;
-          line-height: normal;
-          letter-spacing: 5.2px;
-          text-transform: uppercase;
-        }
+        //   color: #F5AFBD;
+        //   font-family: @gilroyb;
+        //   font-size: 26px;
+        //   line-height: normal;
+        //   letter-spacing: 5.2px;
+        //   text-transform: uppercase;
+        // }
       }
 
       h3 {
         @media screen and (max-width: 1679px) {
-          font-size: 2.2vw;
-          line-height: 2.7vw;
-          letter-spacing: .4vw;
+          font-size: 1.9vw;
+          // line-height: 2.7vw;
+          letter-spacing: .25vw;
         }
 
         @media screen and (max-width: 430px) {
           color: @promo-h3-color-430;
-          line-height: 5.9vw;
-          font-size: 4.7vw;
+          // line-height: 5.9vw;
+          font-size: 6.1vw;
           letter-spacing: .8vw;
+          line-height: 9vw;
+          text-align: center;
         }
 
         font-family: @gilroyb;
         color: @promo-h3-color;
-        font-size: 36px;
-        line-height: 45px;
-        letter-spacing: 6.48px;
+        font-size: 32px;
+        line-height: normal;
+        letter-spacing: 4px;
         text-transform: uppercase;
+        text-align: left;
 
         i {
           @media screen and (max-width: 430px) {
             // display: none;
-            font-size: 9vw;
+            // font-size: 9vw;
           }
 
           font-style: normal;
-          color: @promo-h3-color;
-          font-size: 47px;
+          color: #DD737A;
+          // font-size: 47px;
         }
       }
 
-      p {
-        @media screen and (max-width: 1679px) {
-          font-size: 1.4vw;
-          line-height: 2vw;
-        }
+      // p {
+      //   @media screen and (max-width: 1679px) {
+      //     font-size: 1.4vw;
+      //     line-height: 2vw;
+      //   }
 
-        @media screen and (max-width: 430px) {
-          font-size: 4vw;
-          line-height: 6vw;
-          width: 100%;
-          margin: 4% auto;
-          // display: none;
-          text-shadow: none;
-        }
+      //   @media screen and (max-width: 430px) {
+      //     font-size: 4vw;
+      //     line-height: 6vw;
+      //     width: 100%;
+      //     margin: 4% auto;
+      //     // display: none;
+      //     text-shadow: none;
+      //   }
 
-        @media screen and (max-width: 320px) {
-          font-size: 15px;
-          line-height: 17px;
-        }
+      //   @media screen and (max-width: 320px) {
+      //     font-size: 15px;
+      //     line-height: 17px;
+      //   }
 
-        margin: 4% auto;
-        color: @promo-p-color;
-        text-transform: none;
-        font-size: 24px;
-        line-height: 34px;
-        width: 100%;
-        font-family: @gilroyr;
-        text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-      }
+      //   margin: 4% auto;
+      //   color: @promo-p-color;
+      //   text-transform: none;
+      //   font-size: 24px;
+      //   line-height: 34px;
+      //   width: 100%;
+      //   font-family: @gilroyr;
+      //   text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
+      // }
 
 
       div {
@@ -263,10 +275,20 @@
         margin: 0 auto;
         // margin: 1vw auto;
 
+        &.the-ctas {
+          @media screen and (max-width: 430px) {
+            flex-basis: 100%;
+            justify-content: center;
+          }
+
+          flex-basis: 60%;
+          justify-content: start;
+        }
+
 
         a {
           @media screen and (max-width: 1679px) {
-            // width: 12vw;
+            width: 12vw;
           }
 
           @media screen and (max-width: 810px) {}
@@ -274,70 +296,70 @@
           @media screen and (max-width: 430px) {
             // margin: 0 0 4%;
             // width: 47vw;
-            // width: 41.5vw;
+            width: 41.5vw;
             // background: #615B72 !important;
           }
 
           color: @promo-cta1-color;
           background: @promo-cta1-background;
-          // width: 203px;
+          width: 203px;
           // width: 200px;
           margin: 0;
 
           &:hover {}
 
-          &.mobile-cta {
-            @media screen and (max-width: 430px) {
-              display: block;
-            }
+          // &.mobile-cta {
+          //   @media screen and (max-width: 430px) {
+          //     display: block;
+          //   }
 
-            display: none;
-          }
+          //   display: none;
+          // }
 
-          &.cta1 {
-            // background: @promo-cta1-background;
-            // color: @promo-cta1-color;
-          }
+          // &.cta1 {
+          //   background: @promo-cta1-background;
+          //   color: @promo-cta1-color;
+          // }
 
-          &.cta2 {
-            // background: @promo-cta2-background;
-            // color: @promo-cta2-color;
-          }
+          // &.cta2 {
+          //   background: @promo-cta2-background;
+          //   color: @promo-cta2-color;
+          // }
 
-          &.cta3 {
-            // background: @promo-cta3-background;
-            // color: @promo-cta3-color;
-          }
+          // &.cta3 {
+          //   background: @promo-cta3-background;
+          //   color: @promo-cta3-color;
+          // }
 
-          &.cta4 {
-            // background: @promo-cta4-background;
-            // color: @promo-cta4-color;
-          }
+          // &.cta4 {
+          //   background: @promo-cta4-background;
+          //   color: @promo-cta4-color;
+          // }
 
-          &.cta5 {
-            // &.desktop-only {
-            //   @media screen and (max-width: 430px) {
-            //     // display: none;
-            //   }
-            // }
+          // &.cta5 {
+          //   &.desktop-only {
+          //     @media screen and (max-width: 430px) {
+          //       // display: none;
+          //     }
+          //   }
 
-            // background: @promo-cta5-background;
-            // color: @promo-cta5-color;
-          }
+          //   background: @promo-cta5-background;
+          //   color: @promo-cta5-color;
+          // }
 
-          &.cta6 {
-            //   @media screen and (max-width: 1679px) {
-            //     width: 18vw;
-            //   }
+          // &.cta6 {
+          //     @media screen and (max-width: 1679px) {
+          //       width: 18vw;
+          //     }
 
-            //   @media screen and (max-width: 430px) {
-            //     width: 43.5vw;
-            //   }
+          //     @media screen and (max-width: 430px) {
+          //       width: 43.5vw;
+          //     }
 
-            //   width: 293px;
-            // background: @promo-cta6-background;
-            // color: @promo-cta6-color;
-          }
+          //     width: 293px;
+          //   background: @promo-cta6-background;
+          //   color: @promo-cta6-color;
+          // }
         }
       }
     }
@@ -345,6 +367,6 @@
 }
 
 
-.promos {
-  // display: none !important;
-}
+// .promos {
+//   display: none !important;
+// }

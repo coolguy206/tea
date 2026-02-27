@@ -1,3 +1,5 @@
+// import { makeBxSlider } from './make-bxslider.js';
+
 jQuery(document).ready(function () {
 
   //? change the aria-label for the promos
@@ -35,7 +37,8 @@ jQuery(document).ready(function () {
     if (window.innerWidth < 431) {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
-      $('.promos .the-promo.promo1').hide();
+      // $('.promos .the-promo.promo1').hide();
+      $('.promos .the-promo.promo1').remove();
     }
 
   } else {
@@ -118,18 +121,7 @@ jQuery(document).ready(function () {
 
   });
 
-  $('.promos-wrap').bxSlider({
-    auto: true,
-    autoHover: true,
-    mode: 'fade',
-    controls: false,
-    pager: false,
-    pause: 2000,
-    touchEnabled: false,
+  //  makeBxSlider('.promos-wrap');
 
-    onSliderLoad: function () {
-      $('.promos.promo1, .promos.promo2, .promos.promo3').show();
-    }
-  });
 
 });
