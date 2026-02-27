@@ -1,0 +1,36 @@
+div.sign-up {
+  @media screen and (max-width: 1679px) {
+    column-gap: 6vw;
+  }
+
+  @media screen and (max-width: 430px) {
+    flex-wrap: wrap;
+    row-gap: 6vw;
+    position: relative;
+  }
+
+  display: flex;
+  column-gap: 107px;
+  align-items: center;
+
+  .error {
+    display: none;
+
+    p {
+      color: #d94d52;
+    }
+  }
+
+  .input-fields {
+    @media screen and (max-width: 1679px) {
+      margin: 3vw 0 0;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin: 12vw 0 0;
+    }
+
+    // text-align: center;
+    margin: 50px 0 0;
+  }
+}

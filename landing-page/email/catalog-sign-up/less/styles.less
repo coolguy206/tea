@@ -1,29 +1,36 @@
 @import 'var.less';
 
 .email-wrap {
-  @media screen and (max-width:430px) {
-    flex-wrap: wrap;
-    background: #fcf5f2;
-  }
+  @media screen and (max-width:430px) {}
 
-  // min-height: 500px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  background: #fcf5f2;
   position: relative;
   opacity: 0;
 
-  h1 {
+  img {
     @media screen and (max-width: 1679px) {
-      font-size: 3.5vw;
-      letter-spacing: .6vw;
-      margin: 0 0 2.4vw;
+      width: 50vw;
     }
 
     @media screen and (max-width: 430px) {
-      font-size: 8vw;
-      letter-spacing: 1.4vw;
-      margin: 0px 0 6vw;
+      width: 100%;
+      order: 2;
+    }
+
+    width: 840px;
+  }
+
+  h1 {
+    @media screen and (max-width: 1679px) {
+      font-size: 2.9vw;
+      letter-spacing: .5vw;
+      margin: 0 0 1.8vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 6.5vw;
+      letter-spacing: 1.2vw;
+      margin: 0px 0 7vw;
     }
 
     font-size: 49px;
@@ -36,7 +43,7 @@
 
   p {
     @media screen and (max-width: 1679px) {
-      font-size: 2vw;
+      font-size: 1.9vw;
       line-height: 2.4vw;
     }
 
@@ -48,9 +55,6 @@
     font-family: @souv;
     font-size: 32px;
     line-height: 40px;
-    // text-align: center;
-    // letter-spacing: 0.005em;
-    // color: #47363d;
     margin: 0;
   }
 
@@ -79,7 +83,7 @@
     width: 399px;
     height: 75px;
     background: #F9EBE5;
-    font-family: gilroy-bold;
+    font-family: @gilroyb;
     font-size: 14px;
     display: block;
     margin: 0 auto;
@@ -134,20 +138,17 @@
       letter-spacing: .9vw !important;
       height: 17.3vw;
       margin: 12vw 0 0;
-      background: #47363d !important;
-      color: #fff !important;
+      // background: #47363d !important;
+      // color: #fff !important;
     }
 
     border: 2px solid #4F4243 !important;
     box-sizing: border-box;
     font-family: @gilroyb !important;
     font-size: 15px;
-    // line-height: 28px;
-    // text-align: center;
     letter-spacing: 3.75px !important;
     text-transform: uppercase !important;
     color: #4F4243 !important;
-    // width: 370px;
     height: 74px;
     margin: 50px 0 0;
     background: none !important;
@@ -158,107 +159,17 @@
     }
   }
 
-  div.sign-up {
+  div.the-content {
     @media screen and (max-width: 430px) {
-      left: 0%;
-      transform: translate(0);
-      top: 0%;
-      width: 90%;
-      padding: 12vw 0 0;
-      position: relative;
-    }
-
-    position: absolute;
-    top: 50%;
-    left: 54%;
-    transform: translate(0%, -50%);
-
-    .default {
-      // margin: 0 auto 8%;
-    }
-
-    .error {
-      display: none;
-
-      p {
-        color: #d94d52;
-      }
-    }
-
-    .sending {
-      display: none;
-    }
-
-    .input-fields {
-      @media screen and (max-width: 1679px) {
-        margin: 3vw 0 0;
-      }
-
-      @media screen and (max-width: 430px) {
-        margin: 12vw 0 0;
-      }
-
-      // text-align: center;
-      margin: 50px 0 0;
+      padding: 5vw 5vw 0 5vw;
     }
   }
 
-  div.thanks {
-    @media screen and (max-width: 430px) {
-      left: 0%;
-      transform: translate(0);
-      top: 0%;
-      width: 90%;
-      padding: 12vw 0 0;
-      position: relative;
-    }
+  @import 'signup.less';
 
-    display: none;
-    position: absolute;
-    width: 30%;
-    left: 59%;
+  @import 'thanks.less';
 
-    // .default {
-    //   margin: 1% auto;
-    // }
-
-  }
 }
 
-.nav.col-l-2.col-m-3.col-s-12.col-xs-12 {
-  display: none;
-}
 
-.content.col-l-10.col-m-9.col-s-12.col-xs-12 {
-  width: 100%;
-  padding: 0;
-  float: none;
-}
-
-.site-content-inner.container {
-  padding: 0 !important;
-}
-
-#simplemodal-overlay {
-  display: none !important;
-}
-
-#simplemodal-container {
-  display: none !important;
-}
-
-.box-ajax-none {
-	display: none;
-}
-
-.site-content .site-content-inner .site-content-bg-wrapper,
-.site-content-inner.container {
-	padding: 0;
-	background: #fff;
-}
-
-#simplemodal-container,
-#simplemodal-overlay,
-.common-wrap {
-	display: none !important;
-}
+@import 'overrides.less';

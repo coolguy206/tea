@@ -27,7 +27,6 @@ $(document).ready(function () {
 
     if (f) {
 
-      $(".email-wrap .sign-up .load-more-wrap").show();
       $(".email-wrap .input-fields").hide();
 
       var ac = "catalog_email_signup";
@@ -57,13 +56,12 @@ $(document).ready(function () {
         },
         success: function (data, status, xhr) {
           console.log('klaviyo email sign up page success');
-          $(".email-wrap .sign-up").hide();
+          $(".email-wrap .the-content").hide();
           $(".email-wrap .thanks").show();
         },
         error: function () {
           $(".email-wrap .error").show();
           $(".email-wrap .input-fields").show();
-          $(".email-wrap .sign-up .load-more-wrap").hide();
         }
       });
 
@@ -71,7 +69,6 @@ $(document).ready(function () {
 
       $(".email-wrap .error").show();
       $(".email-wrap .input-fields").show();
-      $(".email-wrap .sign-up .load-more-wrap").hide();
     }
 
   });
