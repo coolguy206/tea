@@ -1,0 +1,122 @@
+@import 'var.less';
+@promo2Bg: #FDF5F2;
+@promo2Color1: #4765A1;
+@promo2Color2: #4765A1;
+@promo2Color3: #4765A1;
+
+
+&.promo2 {
+    background: @promo2Bg;
+    // display:none;
+
+    span {
+        &.span-wrap {
+            @media screen and (max-width: 430px) {
+                // display: flex;
+                // flex-wrap:wrap;
+                // justify-content: center;
+            }
+        }
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 4vw;
+                // display: none;
+                // order: 2;
+            }
+
+            i {
+                @media screen and (max-width: 430px) {
+                    font-size: 3.5vw;
+                    display: none;
+                }
+
+                color: @promo2Color1;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+            color: @promo2Color1;
+            font-family: @gilroyb;
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 4vw;
+                display: none;;
+                // order:1;
+            }
+
+            i {
+                color: @promo2Color2;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+            color: @promo2Color1;
+            font-family: @gilroyb;
+            // text-decoration: underline;
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 4vw;
+                display: inline-block;
+                // display:none;
+            }
+
+            i,
+            u {
+                color: @promo2Color3;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+            u {
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        // margin: 0;
+                        bottom: -10%;
+                    }
+
+                    left: 0;
+                }
+            }
+
+
+            color: @promo2Color2;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+        }
+
+        &.shop-now {
+            i {
+                color: @promo2Color2;
+            }
+        }
+
+        &.details {
+            @media screen and (max-width:430px) {
+                top: 20%;
+            }
+
+            a {
+                color: @promo2Color3;
+            }
+        }
+    }
+}

@@ -1,0 +1,121 @@
+@import 'var.less';
+@promo1Bg: #A2655C;
+@promo1-Bg-2: #DFB6B2;
+@promo1Color1: #fff;
+@promo1Color2: #FFFFFF;
+@promo1Color3: #fff;
+@promo1Details: #fff;
+
+&.promo1 {
+    background: @promo1Bg;
+    // background-image: linear-gradient(to right, @promo1Bg , @promo1-Bg-2);
+    // display: none;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: 3vw;
+                flex-basis: 100%;
+                // display: block;
+                // display: none;
+            }
+
+            color: @promo1Color1;
+            font-family: @gilroyb;
+
+            i {
+                color: @promo1Color3;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+            a {
+                color: @promo1Color1;
+            }
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                // font-size: 2.8vw;
+                font-size: 3vw;
+                // display: none;
+            }
+
+            color: @promo1Color2;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+
+            i {
+                color: @promo1Color3;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+            a {
+                color: @promo1Color1;
+            }
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                // font-size: 2.8vw;
+                font-size: 3vw;
+                display: inline-block;
+            }
+
+            color: @promo1Color3;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+
+            i {
+                color: @promo1Color3;
+                font-style: normal;
+                // font-size: 8px;
+            }
+
+
+            a {
+                color: @promo1Color3;
+            }
+
+            u {
+                color: @promo1Color2;
+
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10%;
+                    }
+
+                    left: 0;
+                }
+            }
+        }
+
+        &.shop-now {
+            i {
+                color: @promo1Color2;
+            }
+        }
+
+        &.details {
+            a {
+                color: @promo1Details;
+            }
+        }
+    }
+}
