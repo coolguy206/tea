@@ -1,0 +1,175 @@
+@import 'var.less';
+
+.email-wrap {
+  @media screen and (max-width:430px) {}
+
+  background: #fcf5f2;
+  position: relative;
+  opacity: 0;
+
+  img {
+    @media screen and (max-width: 1679px) {
+      width: 50vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      width: 100%;
+      order: 2;
+    }
+
+    width: 840px;
+  }
+
+  h1 {
+    @media screen and (max-width: 1679px) {
+      font-size: 2.9vw;
+      letter-spacing: .5vw;
+      margin: 0 0 1.8vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 6.5vw;
+      letter-spacing: 1.2vw;
+      margin: 0px 0 7vw;
+    }
+
+    font-size: 49px;
+    letter-spacing: 8px;
+    text-transform: uppercase;
+    color: #4F4243;
+    margin: 0 0 30px;
+    font-family: @gilroyb;
+  }
+
+  p {
+    @media screen and (max-width: 1679px) {
+      font-size: 1.9vw;
+      line-height: 2.4vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 5.6vw;
+      line-height: 7.2vw;
+    }
+
+    font-family: @souv;
+    font-size: 32px;
+    line-height: 40px;
+    margin: 0;
+  }
+
+  form {
+    @media screen and (max-width: 430px) {
+      width: 100%;
+    }
+
+    position: relative;
+    display: inline-block;
+  }
+
+  input {
+    @media screen and (max-width: 1679px) {
+      width: 24vw;
+      height: 4.5vw;
+      font-size: 1vw;
+    }
+
+    @media screen and (max-width: 430px) {
+      width: 100%;
+      height: 17.5vw;
+      font-size: 4vw;
+    }
+
+    width: 399px;
+    height: 75px;
+    background: #F9EBE5;
+    font-family: @gilroyb;
+    font-size: 14px;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    padding: 0 0 0 6%;
+    border-radius: 0;
+
+    &::placeholder {
+      @media screen and (max-width: 1679px) {
+        font-size: 1vw;
+      }
+
+      @media screen and (max-width: 430px) {
+        font-size: 4vw;
+      }
+
+      color: #757575;
+      font-size: 19px;
+      font-family: @gilroyr;
+
+    }
+  }
+
+  a {
+    @media screen and (max-width: 1679px) {
+      margin: 3vw 0 0;
+    }
+
+    @media screen and (max-width: 430px) {
+      margin: 12vw 0 0;
+    }
+
+    margin: 50px 0 0;
+    background: #47363d !important;
+
+    &:hover {
+      // background-color: #b16b61 !important;
+      // color: #fff !important;
+    }
+  }
+
+  button {
+    @media screen and (max-width: 1679px) {
+      font-size: 1vw;
+      letter-spacing: .2vw !important;
+      height: 4.5vw;
+      margin: 3vw 0 0;
+    }
+
+    @media screen and (max-width: 430px) {
+      font-size: 4vw;
+      letter-spacing: .9vw !important;
+      height: 17.3vw;
+      margin: 12vw 0 0;
+      // background: #47363d !important;
+      // color: #fff !important;
+    }
+
+    border: 2px solid #4F4243 !important;
+    box-sizing: border-box;
+    font-family: @gilroyb !important;
+    font-size: 15px;
+    letter-spacing: 3.75px !important;
+    text-transform: uppercase !important;
+    color: #4F4243 !important;
+    height: 74px;
+    margin: 50px 0 0;
+    background: none !important;
+
+    &:hover {
+      background-color: #4F4243 !important;
+      color: #fff !important;
+    }
+  }
+
+  div.the-content {
+    @media screen and (max-width: 430px) {
+      padding: 5vw 5vw 0 5vw;
+    }
+  }
+
+  @import 'signup.less';
+
+  @import 'thanks.less';
+
+}
+
+
+@import 'overrides.less';
