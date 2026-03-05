@@ -32,7 +32,11 @@ $(document).ready(function () {
         var jobHeader = "<div>".concat(job.header, "</div>");
         var jobPay = "<div>".concat(job.pay, "</div>");
         var jobFooter = "<div>".concat(job.footer, "</div>");
-        var jobContent = "".concat(backTo, " ").concat(jobTitle, " ").concat(jobApply, " ").concat(jobHeader, " ").concat(jobPay, " ").concat(jobFooter);
+
+        //? content with the apply url
+        // var jobContent = `${backTo} ${jobTitle} ${jobApply} ${jobHeader} ${jobPay} ${jobFooter}`;
+        //? content without the apply url
+        var jobContent = "".concat(backTo, " ").concat(jobTitle, " ").concat(jobHeader, " ").concat(jobPay, " ").concat(jobFooter);
 
         // show the title, location, description
         $('.the-job').append(jobContent);
@@ -46,7 +50,10 @@ $(document).ready(function () {
         (0, _dutiesQualifications.dutiesQualifications)(job.qualifications, "Qualifications");
 
         //show the footer and apply
-        $('.the-job').append(jobFooter + jobApply);
+        //? content with the apply url
+        // $('.the-job').append(jobFooter + jobApply);
+        //? content without the apply url
+        $('.the-job').append(jobFooter);
 
         //on click return to all jobs
         $('.all-jobs').click(function (e) {

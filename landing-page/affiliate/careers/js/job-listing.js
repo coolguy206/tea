@@ -5,9 +5,9 @@
 //     SocialMediaContentIntern
 // } from './job-descriptions/social-media-content-intern.js';
 import {
-  marketingCoordinator
-} from './job-descriptions/marketing-coordinator.js';
+  growthMarketingCoordinator
+} from './job-descriptions/growth-marketing-coordinator.js';
 
-export var jobs = [marketingCoordinator];
+export var jobs = [growthMarketingCoordinator];
 
 

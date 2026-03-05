@@ -4,7 +4,7 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.jobs = void 0;
-var _marketingCoordinator = require("./job-descriptions/marketing-coordinator.js");
+var _growthMarketingCoordinator = require("./job-descriptions/growth-marketing-coordinator.js");
 // import {
 //     AccountExecutiveEast
 // } from './account-executive-east.js';
@@ -12,4 +12,4 @@ var _marketingCoordinator = require("./job-descriptions/marketing-coordinator.js
 //     SocialMediaContentIntern
 // } from './job-descriptions/social-media-content-intern.js';
 
-var jobs = exports.jobs = [_marketingCoordinator.marketingCoordinator];
+var jobs = exports.jobs = [_growthMarketingCoordinator.growthMarketingCoordinator];
