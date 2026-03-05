@@ -1,7 +1,6 @@
 "use strict";
 
-// import { makeBxSlider } from './make-bxslider.js';
-
+var _makeBxslider = require("./make-bxslider.js");
 jQuery(document).ready(function () {
   //? change the aria-label for the promos
   var aria = $('.the-promo');
@@ -106,6 +105,5 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-
-  //  makeBxSlider('.promos-wrap');
+  (0, _makeBxslider.makeBxSlider)('.promos-wrap');
 });
