@@ -104,10 +104,11 @@ $(document).ready(function () {
 
   (0, _inview.inview)('.mega-img-container, .mega-img-bf');
   $('.dept-girl').hover(function () {
+
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     //  $('.promo3-url').show();
     //  $('.clearance-url').show();
@@ -116,13 +117,14 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-boy').hover(function () {
+
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
     // $('.promo1-url.boy').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -131,11 +133,12 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-sale').hover(function () {
+
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -148,12 +151,13 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-swim, .dept-dress, .dept-new-arrivals').hover(function () {
+
     // $('.promo1-url.swim').show();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -164,13 +168,14 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.dept-baby').hover(function () {
+
     // $('.promo1-url.baby-girl').show();
     // $('.promo1-url.baby-boy').show();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -181,13 +186,14 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
   $('.site-nav-submenu .bar>div').hover(function () {
     var href = $(this).find('a').first().attr('href');
     // console.log(href);
 
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+
     if (href.indexOf('sale') == -1) {
       (0, _switchNewArrivals.switchNewArrivals)(href);
     } else {

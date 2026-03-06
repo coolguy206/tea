@@ -1,6 +1,18 @@
 
-<h3><a href="/family-outfitting" class="sibling shop" data="mobile mega menu family" >family outfitting</a></h3>
+<!-- <h3><a href="/family-outfitting" class="sibling shop" data="mobile mega menu family" >family outfitting</a></h3>
  <h3><a href="/sibling-shop" class="sibling shop" data="mobile mega menu family" >sibling shop</a></h3>
 {sub_cats name="cat" category="family-outfitting"}
     <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu family" >{$cat.title}</a></h3>
-{/sub_cats}
+{/sub_cats} -->
+
+<div class="links">
+    <ul>
+        <li>Shop by Category</li>
+        <li><a href="/family-outfitting" class="" data="mobile mega menu family">Family Outfitting</a></li>
+        <li><a href="/sibling-shop" class="" data="mobile mega menu family">Sibling Shop</a></li>
+        {sub_cats name="cat" category="family-outfitting"}
+            <li><a href="{$cat.url}" class="" data="mobile mega menu family">{$cat.title}</a></li>
+        {/sub_cats}
+    </ul>
+
+</div>

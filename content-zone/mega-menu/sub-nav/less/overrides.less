@@ -1,3 +1,9 @@
+header .site-header-inner .site-nav-submenu div div {
+    display: block;
+    padding: 0;
+    margin: 0;
+}
+
 header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before {
     content: none !important;
 }
@@ -7,8 +13,8 @@ header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover {
 }
 
 header .site-header-inner .site-nav-submenu div.bar {
-    display: flex;
-    justify-content: center;
+    // display: flex;
+    // justify-content: center;
     padding: 0;
 }
 
@@ -16,6 +22,8 @@ header .site-header-inner .site-nav-submenu {
     @media screen and (max-width: 430px) {
         display: none;
     }
+
+    margin: 0;
 
 }
 
@@ -33,4 +41,9 @@ header .site-header-inner .nav .site-nav-links li {
     @media screen and (max-width: 834px) {
         display: none;
     }
+}
+
+header .site-header-inner .site-nav-mobile ul li .sub .links {
+    display: block;
+    padding: 0;
 }
