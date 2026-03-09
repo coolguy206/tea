@@ -1,12 +1,12 @@
 import { switchNewArrivals } from './switch-new-arrivals.js';
 import { switchSale } from './switch-sale.js';
-import { inview } from './inview.js';
+// import { inview } from './inview.js';
 
 $(document).ready(function () {
 
   // $('.menu .swimwear').text('$15 Swim');
 
-  inview('.mega-img-container, .mega-img-bf');
+  // inview('.mega-img-container, .mega-img-bf');
 
   $('.dept-girl').hover(function () {
 
@@ -101,8 +101,8 @@ $(document).ready(function () {
 
 
 
-  $('.site-nav-submenu .bar>div').hover(function () {
-    var href = $(this).find('a').first().attr('href');
+  $('.site-nav-links li a').hover(function () {
+    var href = $(this).attr('href');
     // console.log(href);
 
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();

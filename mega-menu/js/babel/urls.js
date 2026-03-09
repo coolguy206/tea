@@ -7,15 +7,19 @@ exports.urls = void 0;
 var urls = exports.urls = {
   promo: {
     promo: "/new-arrivals",
+    family: "/sibling-shop",
+    print: "/print-shop",
     swim: "/swimwear",
     girl: "/girls-clothes",
     boy: "/boys-clothes",
     baby: {
+      baby: "/baby-clothes",
       girl: "/baby-girl-clothes",
       boy: "/baby-boy-clothes",
       newborn: "/newborn-clothing"
     },
     toddler: {
+      toddler: "/toddler-clothes",
       girl: "/toddler-girls-clothes",
       boy: "/toddler-boys-clothes"
     },

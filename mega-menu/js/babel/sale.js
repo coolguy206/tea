@@ -2,11 +2,13 @@
 
 var _switchNewArrivals = require("./switch-new-arrivals.js");
 var _switchSale = require("./switch-sale.js");
-var _inview = require("./inview.js");
+// import { inview } from './inview.js';
+
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
-  (0, _inview.inview)('.mega-img-container, .mega-img-bf');
+  // inview('.mega-img-container, .mega-img-bf');
+
   $('.dept-girl').hover(function () {
 
     // $('.promo1-url, .promo2-url, .clearance-url').show();
@@ -92,8 +94,8 @@ $(document).ready(function () {
     // $('.promo1-url').hide();
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
-  $('.site-nav-submenu .bar>div').hover(function () {
-    var href = $(this).find('a').first().attr('href');
+  $('.site-nav-links li a').hover(function () {
+    var href = $(this).attr('href');
     // console.log(href);
 
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();

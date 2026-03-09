@@ -27,7 +27,7 @@ export const switchNewArrivals = (href) => {
   } = promoVars;
 
   switch (href) {
-    case '/girls-clothing/new-arrivals':
+    case '/girls-clothes':
       promo1 = urls.promo.girl;
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
@@ -56,7 +56,7 @@ export const switchNewArrivals = (href) => {
 
       break;
 
-    case '/boys-clothing/new-arrivals':
+    case '/boys-clothes':
       promo1 = urls.promo.boy;
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
@@ -85,8 +85,8 @@ export const switchNewArrivals = (href) => {
 
       break;
 
-    case '/baby-girl-clothes/new-arrivals':
-      promo1 = urls.promo.baby.girl;
+    case '/baby-clothes':
+      promo1 = urls.promo.baby.baby;
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
@@ -114,37 +114,56 @@ export const switchNewArrivals = (href) => {
 
       break;
 
-    case '/baby-boy-clothes/new-arrivals':
-      promo1 = urls.promo.baby.boy;
-      promo2 = urls.promo.select.baby.boy;
-      promo3 = urls.promo.sale.baby.boy;
-      clearance = urls.promo.clearance.baby.boy;
+    // case '/baby-girl-clothes/new-arrivals':
+    //   promo1 = urls.promo.baby.girl;
+    //   promo2 = urls.promo.select.baby.girl;
+    //   promo3 = urls.promo.sale.baby.girl;
+    //   clearance = urls.promo.clearance.baby.girl;
 
-      if (promoVars.showPromo1) {
-        if (promoVars.babyBoy !== ``) {
-          $(promoVars.babyBoy).show();
-        } else {
-          $(promoVars.promo1Elem).show();
-        }
-      }
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.babyGirl !== ``) {
+    //       $(promoVars.babyGirl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      if (promoVars.showPromo2) {
-        $(promoVars.promo2Elem).show();
-      }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      if (promoVars.showPromo3) {
-        $(promoVars.promo3Elem).show();
-      }
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   break;
 
-      break;
+    // case '/baby-boy-clothes/new-arrivals':
+    //   promo1 = urls.promo.baby.boy;
+    //   promo2 = urls.promo.select.baby.boy;
+    //   promo3 = urls.promo.sale.baby.boy;
+    //   clearance = urls.promo.clearance.baby.boy;
 
-    case '/toddler-girls-clothes/favorites/new-arrivals':
-      promo1 = urls.promo.toddler.girl;
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.babyBoy !== ``) {
+    //       $(promoVars.babyBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
+
+    case '/toddler-clothes':
+      promo1 = urls.promo.toddler.toddler;
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
@@ -165,41 +184,55 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
-    case '/toddler-boys-clothes/favorites/new-arrivals':
-      promo1 = urls.promo.toddler.boy;
-      promo2 = urls.promo.select.toddler.boy;
-      promo3 = urls.promo.sale.toddler.boy;
-      clearance = urls.promo.clearance.toddler.boy;
+    // case '/toddler-girls-clothes/favorites/new-arrivals':
+    //   promo1 = urls.promo.toddler.girl;
+    //   promo2 = urls.promo.select.toddler.girl;
+    //   promo3 = urls.promo.sale.toddler.girl;
+    //   clearance = urls.promo.clearance.toddler.girl;
 
-      if (promoVars.showPromo1) {
-        if (promoVars.toddlerBoy !== ``) {
-          $(promoVars.toddlerBoy).show();
-        } else {
-          $(promoVars.promo1Elem).show();
-        }
-      }
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerGirl !== ``) {
+    //       $(promoVars.toddlerGirl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      if (promoVars.showPromo2) {
-        $(promoVars.promo2Elem).show();
-      }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      if (promoVars.showPromo3) {
-        $(promoVars.promo3Elem).show();
-      }
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   break;
 
-      break;
+    // case '/toddler-boys-clothes/favorites/new-arrivals':
+    //   promo1 = urls.promo.toddler.boy;
+    //   promo2 = urls.promo.select.toddler.boy;
+    //   promo3 = urls.promo.sale.toddler.boy;
+    //   clearance = urls.promo.clearance.toddler.boy;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerBoy !== ``) {
+    //       $(promoVars.toddlerBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
@@ -225,26 +258,53 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
-    case '/swim-shop':
-      // promo1 =  urls.promo.select.swim;
-      promo1 = urls.promo.promo;
+    // case '/swim-shop':
+    //   promo1 = urls.promo.select.swim;
+    //   promo1 = urls.promo.promo;
+    //   promo2 = urls.promo.select.promo;
+    //   promo3 = urls.promo.sale.promo;
+    //   clearance = urls.promo.clearance.girl;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.swim !== ``) {
+    //       $(promoVars.swim).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo1) {
+    //     $(promoVars.promo1Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
+
+    case '/print-shop':
+      promo1 = urls.promo.print;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 
+      // if (promoVars.showPromo1) {
+      //   if (promoVars.swim !== ``) {
+      //     $(promoVars.swim).show();
+      //   } else {
+      //     $(promoVars.promo1Elem).show();
+      //   }
+      // }
+
       if (promoVars.showPromo1) {
-        if (promoVars.swim !== ``) {
-          $(promoVars.swim).show();
-        } else {
-          $(promoVars.promo1Elem).show();
-        }
+        $(promoVars.promo1Elem).show();
       }
 
       if (promoVars.showPromo2) {
@@ -255,26 +315,24 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
-    case '/dresses':
-      // promo1 =  urls.promo.select.swim;
-      promo1 = urls.promo.promo;
+    case '/sibling-shop':
+      promo1 = urls.promo.family;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 
+      // if (promoVars.showPromo1) {
+      //   if (promoVars.swim !== ``) {
+      //     $(promoVars.swim).show();
+      //   } else {
+      //     $(promoVars.promo1Elem).show();
+      //   }
+      // }
+
       if (promoVars.showPromo1) {
-        if (promoVars.dress !== ``) {
-          $(promoVars.dress).show();
-        } else {
-          $(promoVars.promo1Elem).show();
-        }
+        $(promoVars.promo1Elem).show();
       }
 
       if (promoVars.showPromo2) {
@@ -285,15 +343,34 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
+
+    // case '/dresses':
+    //   // promo1 =  urls.promo.select.swim;
+    //   promo1 = urls.promo.promo;
+    //   promo2 = urls.promo.select.promo;
+    //   promo3 = urls.promo.sale.promo;
+    //   clearance = urls.promo.clearance.girl;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.dress !== ``) {
+    //       $(promoVars.dress).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
 
     case '/new-arrivals':
-      // promo1 =  urls.promo.select.swim;
       promo1 = urls.promo.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;

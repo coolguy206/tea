@@ -677,6 +677,25 @@
 		</li>
 
 
+		<li>
+			<h2>The Print Shop<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				<div class="links">
+				    <ul>
+				        <!-- <li>Shop by Category</li> -->
+				        <!-- <li><a href="/family-outfitting" class="" data="mobile mega menu family">Family Outfitting</a></li> -->
+				        <!-- <li><a href="/sibling-shop" class="" data="mobile mega menu family">Sibling Shop</a></li> -->
+				        {sub_cats name="cat" category="print-shop"}
+				            <li><a href="{$cat.url}" class="" data="mobile mega menu print shop">{$cat.title}</a></li>
+				        {/sub_cats}
+				    </ul>
+
+				</div>
+			</div>
+		</li>
+
+
 		<!-- <li>
 			<h2><a href="/gift-shop" style="" data="mobile mega menu top level">gift guide</a></h2>
 			<div class="sub"></div>
