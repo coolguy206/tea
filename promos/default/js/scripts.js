@@ -38,7 +38,7 @@ jQuery(document).ready(function () {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
       // $('.promos .the-promo.promo1').hide();
-      $('.promos .the-promo.promo1').remove();
+      // $('.promos .the-promo.promo1').remove();
     }
 
   } else {
