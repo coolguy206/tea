@@ -3,18 +3,31 @@
 
   <div class="menu flex-menu">
     <div class="panel panel-1">
+      {assign var=i value=0}
+
       <ul class="category first">
         <!-- <li>Shop by Category</li> -->
-         <!-- <li><a href="/sibling-shop" class="" data="mega menu family">Sibling Shop</a></li> -->
+         <li><a href="/print-shop" class="" data="mega menu print shop">Shop All Print</a></li>
         {sub_cats name="cat" category="print-shop"}
-          <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
-        {/sub_cats}
+        {if $i && $i % 5 eq 0}
+
       </ul>
     </div>
 
     <div class="panel panel-2">
-    
+      <ul class="category">
+        <!-- <li class="spacer">Spacer</li> -->
+
+        {/if}
+
+        <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
+
+        {math equation="x + y" x=$i y=1 assign=i}  
+        {/sub_cats}
+      </ul>
     </div>
+
+    <!-- <div class="panel panel-2"></div> -->
 
     <div class="panel panel-3">
       <div class="da-rennab-zone" data-zone="mega_swim"></div>

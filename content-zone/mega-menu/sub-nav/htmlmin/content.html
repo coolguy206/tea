@@ -551,7 +551,7 @@
 
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="girls-clothing/shop-by-category"}
-		        {if $i && $i % 8 eq 0}
+		        {if $i && $i % 7 eq 0}
 		        
 		      </ul>
 
@@ -672,7 +672,7 @@
 
 		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="boys-clothing/shop-by-category"}
-		        {if $i && $i % 6 eq 0}
+		        {if $i && $i % 4 eq 0}
 
 		      </ul>
 		    </div>
@@ -794,7 +794,7 @@
 
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="toddler-clothes"}
-		        {if $i && $i % 8 eq 0}
+		        {if $i && $i % 5 eq 0}
 
 		      </ul>
 		    </div>
@@ -916,7 +916,7 @@
 
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
 		        {sub_cats name="cat" category="baby-clothes"}
-		        {if $i && $i % 8 eq 0}
+		        {if $i && $i % 7 eq 0}
 
 		      </ul>
 		    </div>
@@ -926,7 +926,10 @@
 		        <li class="spacer">Spacer</li>
 
 		        {/if}
+
+		        {if $cat.title != 'Newborn' && $cat.title != 'Baby Girl' && $cat.title != 'Baby Boy'}
 		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby categories">{$cat.title}</a></li>
+		        {/if}
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
@@ -1160,18 +1163,31 @@
 
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
+		      {assign var=i value=0}
+
 		      <ul class="category first">
 		        
-		         
+		         <li><a href="/print-shop" class="" data="mega menu print shop">Shop All Print</a></li>
 		        {sub_cats name="cat" category="print-shop"}
-		          <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
-		        {/sub_cats}
+		        {if $i && $i % 5 eq 0}
+
 		      </ul>
 		    </div>
 
 		    <div class="panel panel-2">
-		    
+		      <ul class="category">
+		        
+
+		        {/if}
+
+		        <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
+
+		        {math equation="x + y" x=$i y=1 assign=i}  
+		        {/sub_cats}
+		      </ul>
 		    </div>
+
+		    
 
 		    <div class="panel panel-3">
 		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
@@ -1214,10 +1230,17 @@
 						<li><a href="/new-sale" class="" data="mega menu sale">Just Added</a></li>
 						<li><a href="/sale/girls-clothing/view-all" class="" data="mega menu sale">Girl</a></li>
 						<li><a href="/sale/boys-clothing/view-all" class="" data="mega menu sale">Boy</a></li>
+
+					</ul>
+				</div>
+
+				<div class="panel panel-2">
+					<ul class="category">
+						<li class="spacer">Spacer</li>
 						<li><a href="/sale/toddler-clothing/view-all" class="" data="mega menu sale">Toddler</a></li>
 						
 						
-						 <li><a href="/sale/baby-clothes/view-all" class="" data="mega menu sale">Baby</a></li>
+						<li><a href="/sale/baby-clothes/view-all" class="" data="mega menu sale">Baby</a></li>
 						
 						
 						
@@ -1226,10 +1249,6 @@
 						<li><a href="/sale/clearance" class="dept-clearance" data="mega menu sale" style="color: #FF0009 !important;">Clearance</a>
 						</li>
 					</ul>
-				</div>
-
-				<div class="panel panel-2">
-					
 				</div>
 
 				<div class="panel panel-3">
@@ -1991,8 +2010,7 @@
 				<div class="links">
 				    <ul>
 				        
-				        
-				        
+				        <li><a href="/print-shop" class="" data="mobile mega menu print shop">Shop All Print</a></li>
 				        {sub_cats name="cat" category="print-shop"}
 				            <li><a href="{$cat.url}" class="" data="mobile mega menu print shop">{$cat.title}</a></li>
 				        {/sub_cats}
