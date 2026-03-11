@@ -36,7 +36,7 @@ $(document).ready(function () {
         //? content with the apply url
         // var jobContent = `${backTo} ${jobTitle} ${jobApply} ${jobHeader} ${jobPay} ${jobFooter}`;
         //? content without the apply url
-        var jobContent = "".concat(backTo, " ").concat(jobTitle, " ").concat(jobHeader, " ").concat(jobPay, " ").concat(jobFooter);
+        var jobContent = "".concat(backTo, " ").concat(jobTitle, " ").concat(jobHeader, " ").concat(jobPay);
 
         // show the title, location, description
         $('.the-job').append(jobContent);
