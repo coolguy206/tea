@@ -2,12 +2,10 @@ export var growthMarketingCoordinator = {
     title: `Growth Marketing Coordinator`,
     header: `
     <p>
-    Level: 1<br> 
     Reports to: Growth Marketing Coordinator<br> 
     Department: Site & Growth Marketing<br> 
     Reports: None<br> 
     FLSA Status: Non-Exempt<br> 
-    Employee: TBD
     </p>
 
     <h5>
