@@ -1,19 +1,19 @@
 import { switchNewArrivals } from './switch-new-arrivals.js';
 import { switchSale } from './switch-sale.js';
-import { inview } from './inview.js';
+// import { inview } from './inview.js';
 
 $(document).ready(function () {
 
   // $('.menu .swimwear').text('$15 Swim');
 
-  inview('.mega-img-container, .mega-img-bf');
+  // inview('.mega-img-container, .mega-img-bf');
 
   $('.dept-girl').hover(function () {
 
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     //  $('.promo3-url').show();
     //  $('.clearance-url').show();
@@ -22,7 +22,7 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
 
   $('.dept-boy').hover(function () {
@@ -30,7 +30,7 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .clearance-url').show();
     // $('.promo1-url').hide();
     // $('.promo1-url.boy').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -39,13 +39,13 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo2-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
 
   $('.dept-sale').hover(function () {
 
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -59,14 +59,14 @@ $(document).ready(function () {
 
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
 
   $('.dept-swim, .dept-dress, .dept-new-arrivals').hover(function () {
 
     // $('.promo1-url.swim').show();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -77,7 +77,7 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
 
   $('.dept-baby').hover(function () {
@@ -85,7 +85,7 @@ $(document).ready(function () {
     // $('.promo1-url.baby-girl').show();
     // $('.promo1-url.baby-boy').show();
     // $('.promo1-url.girl').show();
-    $('.promo1-url').show();
+    // $('.promo1-url').show();
     // $('.promo2-url').show();
     // $('.promo3-url').show();
     // $('.clearance-url').show();
@@ -96,16 +96,16 @@ $(document).ready(function () {
     // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   }, function () {
     // $('.promo1-url').hide();
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
   });
 
 
 
-  $('.site-nav-submenu .bar>div').hover(function () {
-    var href = $(this).find('a').first().attr('href');
+  $('.site-nav-links li a').hover(function () {
+    var href = $(this).attr('href');
     // console.log(href);
 
-    $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
+    // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').hide();
 
     if (href.indexOf('sale') == -1) {
       switchNewArrivals(href);

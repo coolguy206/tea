@@ -445,8 +445,7 @@
 		*}
 
 		<div>
-		  <a href="/new-arrivals" data="mega menu new-arrivals">New Arrivals</a>
-		  <span class="line"></span>
+		  
 
 		  <div class="menu flex-menu">
 		    <div class="panel panel-1">
@@ -533,8 +532,8 @@
 <div class="site-nav-submenu girl">
 	<div class="bar">
 		<div>
-		  <a href="/girls-clothing/new-arrivals" data="mega menu girl">Girl (5&#8211;16)</a>
-		  <span class="line"></span>
+		  
+		  
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
@@ -647,117 +646,6 @@
 		  </div>
 		</div>
 
-		<div>
-		  <a href="/toddler-girls-clothes/favorites/new-arrivals" data="mega menu toddler girl">Toddler (2&#8211;4)</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-
-		    {* BLACK FRIDAY *}
-		    {*include "black-friday/toddler-girl.html"*}
-
-		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
-
-		      <ul class="category first">
-		        <li>Shop by Category</li>
-		        
-
-		        <li><a href="{$secure_html_url}toddler-girls-clothes" data="mega menu toddler girl view all">Shop All Toddler Girl (2&#8211;4)</a></li>
-
-		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
-		        {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
-		        {if $i && $i % 8 eq 0}
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		        <ul class="category">
-		          <li class="spacer">Spacer</li>
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler girl categories">{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		          <li><a class="sale" href="/sale/toddler-girls-clothing" data="mega menu toddler girl sale">Sale</a></li>
-		          
-		        </ul>
-		      
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Collection</li>
-		        
-
-		        <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-		        <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-		        
-
-		        
-
-		        
-
-		        <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-		        
-
-		        <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-		        <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-		        <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-		        
-
-		        
-
-		        
-
-		        
-
-		        
-		        {*
-		        {sub_cats name="cat" category="toddler-girls-clothes/favorites"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler girl favorites">{$cat.title}</a></li>
-		        {/sub_cats}
-		        *}
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-4">
-		      
-		          
-		          
-
-		      <ul class="category">
-		          <li>Tea REWEAR</li>
-		          <li>
-		              <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-		          </li>
-		      </ul>
-
-		      <ul class="category">
-		          <li>Tea Gives Back</li>
-		          <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-		          <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-		          <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-		          <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_toddler_girl"></div>
-		    </div>
-
-
-		  </div>
-		</div>
-
 	</div>
 </div>
 
@@ -765,8 +653,8 @@
 <div class="site-nav-submenu boy">
 	<div class="bar">
 		<div>
-		  <a href="/boys-clothing/new-arrivals" data="mega menu boy">Boy (5&#8211;16)</a>
-		  <span class="line"></span>
+		  
+		  
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
@@ -878,129 +766,15 @@
 
 		</div>
 
-		<div>
-		  <a href="/toddler-boys-clothes/favorites/new-arrivals" data="mega menu toddler boy">Toddler (2&#8211;4)</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-
-		    {* BLACK FRIDAY *}
-		    {*include "black-friday/toddler-boy.html"*}
-
-		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
-
-		      <ul class="category first">
-		        <li>Shop by Category</li>
-		         
-
-		         <li><a href="{$secure_html_url}toddler-boys-clothes" data="mega menu toddler boy view all">Shop All Toddler Boy (2&#8211;4)</a></li>
-
-		        {* AFTER 6 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
-		        {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
-		        {if $i && $i % 6 eq 0}
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		        <ul class="category">
-		          <li class="spacer">Spacer</li>
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy categories">{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		          <li><a class="sale" href="/sale/toddler-boys-clothing" data="mega menu toddler boy sale">Sale</a></li>
-		          
-		        </ul>
-		      
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Collection</li>
-		        
-
-		        <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-		        <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-		        
-
-		        
-
-		        
-
-		        <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-		        
-
-		        <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-		        <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-		        <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-		        
-
-		        
-
-		        
-
-		        
-
-		        
-
-		        {*
-		        {sub_cats name="cat" category="toddler-boys-clothes/favorites"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler boy favorites">{$cat.title}</a></li>
-		        {/sub_cats}
-		        *}
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-4">
-		      
-		          
-		          
-
-		      <ul class="category">
-		          <li>Tea REWEAR</li>
-		          <li>
-		              <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-		          </li>
-		      </ul>
-
-		      <ul class="category">
-		          <li>Tea Gives Back</li>
-		          <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-		          <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-		          <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-		          <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_toddler_boy"></div>
-		    </div>
-
-
-		  </div>
-		</div>
-
-
 	</div>
 </div>
 
 
-<div class="site-nav-submenu baby">
+<div class="site-nav-submenu toddler">
 	<div class="bar">
 		<div>
-		  <a href="/baby-girl-clothes/new-arrivals" data="mega menu baby girl">Baby Girl (0&#8211;4T)</a>
-		  <span class="line"></span>
+		  
+		  
 		  <div class="menu flex-menu">
 
 		    {* BLACK FRIDAY *}
@@ -1014,10 +788,12 @@
 		        <li>Shop by Category</li>
 		        
 
-		        <li><a href="{$secure_html_url}baby-girl-clothes" data="mega menu baby girl view all">Shop All Baby Girl (0&#8211;4T)</a></li>
+		         <li><a href="{$secure_html_url}toddler-girls-clothes" data="mega menu toddler girl view all">Shop All Toddler Girl (2&#8211;4)</a></li>
+		         <li><a href="{$secure_html_url}toddler-boys-clothes" data="mega menu toddler boy view all">Shop All Toddler Boy (2&#8211;4)</a></li>
+		        
 
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
-		        {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
+		        {sub_cats name="cat" category="toddler-clothes"}
 		        {if $i && $i % 8 eq 0}
 
 		      </ul>
@@ -1028,11 +804,11 @@
 		        <li class="spacer">Spacer</li>
 
 		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby girl categories">{$cat.title}</a></li>
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		          <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mega menu baby girl sale">Sale</a></li>
+		          
 		          
 		        </ul>
 		      
@@ -1076,7 +852,7 @@
 		        
 		        {*
 		        {sub_cats name="cat" category="baby-girl-clothes/favorites"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby girl favorites">{$cat.title}</a></li>
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu toddler favorites">{$cat.title}</a></li>
 		        {/sub_cats}
 
 		        *}
@@ -1112,13 +888,19 @@
 		  </div>
 		</div>
 
+	</div>
+</div>
+
+
+<div class="site-nav-submenu baby">
+	<div class="bar">
 		<div>
-		  <a href="/baby-boy-clothes/new-arrivals" data="mega menu baby boy">Baby Boy (0&#8211;4T)</a>
-		  <span class="line"></span>
+		  
+		  
 		  <div class="menu flex-menu">
-		    
+
 		    {* BLACK FRIDAY *}
-		    {*include "black-friday/baby-boy.html"*}
+		    {*include "black-friday/baby-girl.html"*}
 
 		    {* DURNING BLACK FRIDAY CHANGE TO PANEL-2 AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
 		    <div class="panel panel-1">
@@ -1126,29 +908,29 @@
 
 		      <ul class="category first">
 		        <li>Shop by Category</li>
-		         
+		        
 
-		         <li><a href="{$secure_html_url}baby-boy-clothes" data="mega menu baby boy view all">Shop All Baby Boy (0&#8211;4T)</a></li>
+		        <li><a href="{$secure_html_url}baby-girl-clothes" data="mega menu baby girl view all">Shop All Baby Girl (0&#8211;4T)</a></li>
+		        <li><a href="{$secure_html_url}baby-boy-clothes" data="mega menu baby boy view all">Shop All Baby Boy (0&#8211;4T)</a></li>
+		         <li><a href="{$secure_html_url}newborn-clothes" data="mega menu newborn view all">Shop All Newborn (NB to 6&#8211;9 months)</a></li>
 
 		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
-		        {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
+		        {sub_cats name="cat" category="baby-clothes"}
 		        {if $i && $i % 8 eq 0}
-		      
+
 		      </ul>
 		    </div>
 
 		    <div class="panel panel-2">
-		        <ul class="category">
-		          <li class="spacer">Spacer</li>
+		      <ul class="category">
+		        <li class="spacer">Spacer</li>
 
 		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy categories">{$cat.title}</a></li>
-
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby categories">{$cat.title}</a></li>
 		        {math equation="x + y" x=$i y=1 assign=i}
 		        {/sub_cats}
 
-		          <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mega menu baby boy sale">Sale</a></li>
+		          
 		          
 		        </ul>
 		      
@@ -1157,45 +939,45 @@
 		    <div class="panel panel-2">
 		      <ul class="category">
 		        <li>Shop by Collection</li>
-		          
 
-		          <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+		        
 
-		          <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
+		        <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
 
-		          
+		        <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
 
-		          
+		        
 
-		          
+		        
 
-		          <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
+		        
 
-		          
+		        <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
 
-		          <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
+		        
 
-		          <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
+		        <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
 
-		          <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
+		        <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
+
+		        <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
 
 
-		          
+		        
 
-		          
+		        
 
-		          
+		        
 
-		          
+		        
 
-		          
-
+		        
 		        {*
-		        {sub_cats name="cat" category="baby-boy-clothes/favorites"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby boy favorites">{$cat.title}</a></li>
+		        {sub_cats name="cat" category="baby-girl-clothes/favorites"}
+		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu baby favorites">{$cat.title}</a></li>
 		        {/sub_cats}
+
 		        *}
-
 		      </ul>
 		    </div>
 
@@ -1221,88 +1003,7 @@
 		    </div>
 
 		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_baby_boy"></div>
-		    </div>
-
-		  </div>
-
-		</div>
-
-		<div>
-		  <a href="/newborn-clothes/" data="mega menu newborn">Newborn (NB to 6&#8211;9 months)</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-
-		    {* BLACK FRIDAY *}
-		    {*include "black-friday/newborn.html"*}
-
-		    {* AFTER BLACK FRIDAY CHANGE CLASS BACK TO PANEL-1 *}
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
-
-		      <ul class="category first">
-		        <li>Shop by Category</li>
-		        
-
-		        <li><a href="{$secure_html_url}newborn-clothes" data="mega menu newborn view all">Shop All Newborn (NB to 6&#8211;9 months)</a></li>
-
-		        {* AFTER 8 ITEMS CLOSE DIV.PANEL-2 AND START A NEW ONE *}
-		        {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
-		        {if $i && $i % 8 eq 0}
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		        <ul class="category">
-		          <li class="spacer">Spacer</li>
-
-		        {/if}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu newborn categories">{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		          <li><a class="sale" href="{$secure_html_url}sale/newborn-clothing/view-all" data="mega menu newborn sale">Sale</a></li>
-		  
-		          <li><a href="{$secure_html_url}newborn-clothes/view-all" data="mega menu newborn view all">View All</a></li>
-		  
-		        </ul>
-		      
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Collection</li>
-		        {sub_cats name="cat" category="newborn-clothes/favorites"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu newborn favorites">{$cat.title}</a></li>
-		        {/sub_cats}
-		        <li><a href="/easy-gifting" class="" data="mega menu Shop by Collection"> Easy Gifting</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-4">
-		      
-		          
-		          
-
-		      <ul class="category">
-		          <li>Tea REWEAR</li>
-		          <li>
-		              <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-		          </li>
-		      </ul>
-
-		      <ul class="category">
-		          <li>Tea Gives Back</li>
-		          <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-		          <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-		          <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-		          <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_newborn"></div>
+		      <div class="da-rennab-zone" data-zone="mega_baby_girl"></div>
 		    </div>
 
 
@@ -1410,6 +1111,7 @@
 <div class="site-nav-submenu family">
 	<div class="bar">
 
+		{*
 		<div>
 		  <a href="/sibling-shop" data="mega menu family">sibling shop</a>
 		  <span class="line"></span>
@@ -1420,7 +1122,64 @@
 		  <span class="line"></span>
 		</div>
 		{/sub_cats}
+		*}
 
+
+		<div>
+
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      <ul class="category first">
+		        <li>Shop by Category</li>
+		         <li><a href="/sibling-shop" class="" data="mega menu family">Sibling Shop</a></li>
+		        {sub_cats name="cat" category="family-outfitting"}
+		          <li><a href="{$cat.url}" class="" data="mega menu family">{$cat.title}</a></li>
+		        {/sub_cats}
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		    
+		    </div>
+
+		    <div class="panel panel-3">
+		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
+		    </div>
+
+		  </div>
+
+		</div>
+
+	</div>
+</div>
+
+<div class="site-nav-submenu print">
+	<div class="bar">
+
+		<div>
+
+		  <div class="menu flex-menu">
+		    <div class="panel panel-1">
+		      <ul class="category first">
+		        
+		         
+		        {sub_cats name="cat" category="print-shop"}
+		          <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
+		        {/sub_cats}
+		      </ul>
+		    </div>
+
+		    <div class="panel panel-2">
+		    
+		    </div>
+
+		    <div class="panel panel-3">
+		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
+		    </div>
+
+		  </div>
+
+		</div>
 
 	</div>
 </div>
@@ -1444,8 +1203,8 @@
 		
 
 		<div class="">
-			<a href="/clothing-sale" data="mega menu sale" style="color: #FF0009 !important;">SALE</a>
-			<span class="line" style="border-color: #FF0009 !important;"></span>
+			
+			
 
 			<div class="menu flex-menu">
 				<div class="panel panel-1">
@@ -1455,14 +1214,15 @@
 						<li><a href="/new-sale" class="" data="mega menu sale">Just Added</a></li>
 						<li><a href="/sale/girls-clothing/view-all" class="" data="mega menu sale">Girl</a></li>
 						<li><a href="/sale/boys-clothing/view-all" class="" data="mega menu sale">Boy</a></li>
-						<li><a href="/sale/toddler-girls-clothing/view-all" class="" data="mega menu sale">Toddler Girl</a></li>
-						<li><a href="/sale/toddler-boys-clothing/view-all" class="" data="mega menu sale">Toddler Boy</a></li>
-						<li><a href="/sale/baby-girl-clothes/view-all" class="" data="mega menu sale">Baby
-								Girl</a></li>
-						<li><a href="/sale/baby-boy-clothes/view-all" class="" data="mega menu sale">Baby Boy</a>
-						</li>
-						<li><a href="/sale/newborn-clothing/view-all" class="" data="mega menu sale">Newborn</a>
-						</li>
+						<li><a href="/sale/toddler-clothing/view-all" class="" data="mega menu sale">Toddler</a></li>
+						
+						
+						 <li><a href="/sale/baby-clothes/view-all" class="" data="mega menu sale">Baby</a></li>
+						
+						
+						
+						
+						
 						<li><a href="/sale/clearance" class="dept-clearance" data="mega menu sale" style="color: #FF0009 !important;">Clearance</a>
 						</li>
 					</ul>
@@ -1782,18 +1542,7 @@
 				</div>
 
 				{literal}
-				<style>
-				    header .site-header-inner .site-nav-mobile ul li .sub .links.new {
-				    display:none;
-				    
-				  }
-				@media screen and (max-width:834px){
-				  header .site-header-inner .site-nav-mobile ul li .sub .links.new {
-				    display:block;
-				    padding-top:0;
-				  }
-				}
-				</style>
+				
 				{/literal}
 			</div>
 		</li>
@@ -1833,89 +1582,7 @@
 		<li>
 			<h2>Girl <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				<h3><span class="fas fa-chevron-left"></span> Toddler (2&#8211;4) <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-				    <li>Shop by Category</li>
-				  
-				    {* BLACK FRIDAY *}
-				    {*include "black-friday/toddler-girl.html"*}
-
-				    
-
-				    <li><a href="{$secure_html_url}toddler-girls-clothes" data="mobile mega menu toddler girl view all">Shop All Toddler (2&#8211;4)</a></li>
-
-				    {sub_cats name="cat" category="toddler-girls-clothes/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl categories">{$cat.title}</a></li>
-				    {/sub_cats}
-
-				    
-				    <li><a class="sale" href="/sale/toddler-girls-clothing" data="mobile mega menu toddler girl sale">Sale</a></li>
-				  
-				  </ul>
-
-				  <ul>
-				    <li>Shop by Collection</li>
-				    
-
-				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-				    
-
-				    
-
-				    
-
-				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-				    
-
-				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    {*
-				    {sub_cats name="cat" category="toddler-girls-clothes/favorites"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler girl favorites">{$cat.title}</a></li>
-				    {/sub_cats}
-				    *}
-				    
-				  </ul>
-
-				  
-
-				  <ul class="category">
-				      <li>Tea REWEAR</li>
-				      <li>
-				          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-				      </li>
-				  </ul>
-
-				  <ul class="category">
-				      <li>Tea Gives Back</li>
-				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-				  </ul>
-				</div>
-
-				<h3><span class="fas fa-chevron-left"></span> Girl (5&#8211;16) <span class="fas fa-chevron-right"></span></h3>
+				
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
@@ -2005,88 +1672,7 @@
 		<li>
 			<h2>Boy <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				<h3><span class="fas fa-chevron-left"></span> Toddler (2&#8211;4) <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-				    <li>Shop by Category</li>
-				   
-				    {* BLACK FRIDAY *}
-				    {*include "black-friday/toddler-boy.html"*}
-
-				    
-
-				    <li><a href="{$secure_html_url}toddler-boys-clothes" data="mobile mega menu toddler boy view all">Shop All Toddler (2&#8211;4)</a></li>
-
-				    {sub_cats name="cat" category="toddler-boys-clothes/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy categories">{$cat.title}</a></li>
-				    {/sub_cats}
-
-				    
-				    <li><a class="sale" href="/sale/toddler-boys-clothing" data="mobile mega menu toddler boy sale">Sale</a></li>
-				  </ul>
-
-				  <ul>
-				    <li>Shop by Collection</li>
-				    
-
-				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-				    
-
-				    
-
-				    
-
-				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-				    
-
-				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    {*
-				    {sub_cats name="cat" category="toddler-boys-clothes/favorites"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler boy favorites">{$cat.title}</a></li>
-				    {/sub_cats}
-				    *}
-				    
-				  </ul>
-
-				  
-
-				  <ul class="category">
-				      <li>Tea REWEAR</li>
-				      <li>
-				          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-				      </li>
-				  </ul>
-
-				  <ul class="category">
-				      <li>Tea Gives Back</li>
-				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-				  </ul>
-				</div>
-
-				<h3><span class="fas fa-chevron-left"></span> Boy (5&#8211;16) <span class="fas fa-chevron-right"></span></h3>
+				
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
@@ -2173,203 +1759,163 @@
 
 
 		<li>
-			<h2>Baby <span class="fas fa-plus"></span></h2>
+			<h2>Toddler <span class="fas fa-plus"></span></h2>
 			<div class="sub">
-				<h3><span class="fas fa-chevron-left"></span> Baby Girl (0&#8211;4T) <span class="fas fa-chevron-right"></span></h3>
+				
 				<div class="links">
 				  <ul>
 				    <li>Shop by Category</li>
-				  
+				    
 				    {* BLACK FRIDAY *}
-				    {*include "black-friday/baby-girl.html"*}
+				    {*include "black-friday/girl.html"*}
+
+				    
+
+				    <li><a href="{$secure_html_url}toddler-girls-clothes" data="mobile mega menu toddler girl view all">Shop All Toddler Girl (2&#8211;4)</a></li>
+				    <li><a href="{$secure_html_url}toddler-boys-clothes" data="mobile mega menu toddler boy view all">Shop All Toddler Boy (2&#8211;4)</a></li>
+
+				    {sub_cats name="cat" category="toddler-clothes"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler categories">{$cat.title}</a></li>
+				    {/sub_cats}
+
+				    
+				    
+				    
+				  </ul>
+				  
+				  <ul>
+				    <li>Shop by Collection</li>
+				    
+
+				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+
+				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
+
+				    
+
+				    
+
+				    
+
+				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
+
+				    
+
+				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
+
+				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
+
+				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
+
+
+				    
+
+				    
+
+				    
+
+				    
+
+				    
+
+				    {*
+				    {sub_cats name="cat" category="girls-clothing/favorites"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler favorites">{$cat.title}</a></li>
+				    {/sub_cats}
+				    *}
+
+				  </ul>
+
+				  
+
+				  <ul class="category">
+				      <li>Tea REWEAR</li>
+				      <li>
+				          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
+				      </li>
+				  </ul>
+
+				  <ul class="category">
+				      <li>Tea Gives Back</li>
+				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
+				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
+				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
+				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
+				  </ul>
+
+				</div>
+
+			</div>
+		</li>
+
+
+		<li>
+			<h2>Baby <span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				
+				<div class="links">
+				  <ul>
+				    <li>Shop by Category</li>
+				    
+				    {* BLACK FRIDAY *}
+				    {*include "black-friday/girl.html"*}
 
 				    
 
 				    <li><a href="{$secure_html_url}baby-girl-clothes" data="mobile mega menu baby girl view all">Shop All Baby Girl (0&#8211;4T)</a></li>
-
-				    {sub_cats name="cat" category="baby-girl-clothes/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl catgories">{$cat.title}</a></li>
-				    {/sub_cats}
-
-				    
-				    <li><a class="sale" href="{$secure_html_url}sale/baby-girl-clothes/view-all" data="mobile mega menu baby girl sale">Sale</a></li>
-				    
-				  </ul>
-
-				  <ul>
-				    <li>Shop by Collection</li>
-				    
-
-				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-				    
-
-				    
-
-				    
-
-				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-				    
-
-				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    {*
-				    {sub_cats name="cat" category="baby-girl-clothes/favorites"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby girl favorites">{$cat.title}</a></li>
-				    {/sub_cats}
-				    *}
-				    
-				  </ul>
-
-				  
-
-				  <ul class="category">
-				      <li>Tea REWEAR</li>
-				      <li>
-				          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-				      </li>
-				  </ul>
-
-				  <ul class="category">
-				      <li>Tea Gives Back</li>
-				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-				  </ul>
-				</div>
-
-				<h3><span class="fas fa-chevron-left"></span> Baby Boy (0&#8211;4T) <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-				    <li>Shop by Category</li>
-
-				    {* BLACK FRIDAY *}
-				    {*include "black-friday/baby-boy.html"*}
-
-				    
-
 				    <li><a href="{$secure_html_url}baby-boy-clothes" data="mobile mega menu baby boy view all">Shop All Baby Boy (0&#8211;4T)</a></li>
-
-				    {sub_cats name="cat" category="baby-boy-clothes/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy categories">{$cat.title}</a></li>
-				    {/sub_cats}
-
-				    
-				    <li><a class="sale" href="{$secure_html_url}sale/baby-boy-clothes/view-all" data="mobile mega menu baby boy sale">Sale</a></li>
-				   
-				  </ul>
-
-				  <ul>
-				    <li>Shop by Collection</li>
-				    
-
-				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
-
-				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
-
-				    
-
-				    
-
-				    
-
-				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
-
-				    
-
-				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
-
-				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
-
-				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
-
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    
-
-				    {*
-				    {sub_cats name="cat" category="baby-boy-clothes/favorites"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby boy favorites">{$cat.title}</a></li>
-				    {/sub_cats}
-				    *}
-				    
-				  </ul>
-
-				  
-
-				  <ul class="category">
-				      <li>Tea REWEAR</li>
-				      <li>
-				          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
-				      </li>
-				  </ul>
-
-				  <ul class="category">
-				      <li>Tea Gives Back</li>
-				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
-				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
-				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
-				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
-				  </ul>
-				</div>
-
-				<h3><span class="fas fa-chevron-left"></span> Newborn (NB to 6&#8211;9M) <span class="fas fa-chevron-right"></span></h3>
-				<div class="links">
-				  <ul>
-				    <li>Shop by Category</li>
-
-				    {* BLACK FRIDAY *}
-				    {*include "black-friday/newborn.html"*}
-
-				    
-
 				    <li><a href="{$secure_html_url}newborn-clothes" data="mobile mega menu newborn view all">Shop All Newborn (NB to 6&#8211;9M)</a></li>
 
-
-				    {sub_cats name="cat" category="newborn-clothes/shop-by-category"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu newborn categories">{$cat.title}</a></li>
+				    {sub_cats name="cat" category="baby-clothes"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby categories">{$cat.title}</a></li>
 				    {/sub_cats}
 
-				    <li><a class="sale" href="{$secure_html_url}sale/newborn-clothing/view-all" data="mobile mega menu newborn sale">Sale</a></li>
-
 				    
-
+				    
+				    
 				  </ul>
-
+				  
 				  <ul>
 				    <li>Shop by Collection</li>
-
-				    {sub_cats name="cat" category="newborn-clothes/favorites"}
-				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu newborn favorites">{$cat.title}</a></li>
-				    {/sub_cats}
 				    
-				    <li><a href="/easy-gifting" class="" data="mega menu Shop by Collection"> Easy Gifting</a></li>
+
+				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+
+				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
+
+				    
+
+				    
+
+				    
+
+				    <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li>
+
+				    
+
+				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
+
+				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
+
+				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
+
+
+				    
+
+				    
+
+				    
+
+				    
+
+				    
+
+				    {*
+				    {sub_cats name="cat" category="girls-clothing/favorites"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu girl favorites">{$cat.title}</a></li>
+				    {/sub_cats}
+				    *}
+
 				  </ul>
 
 				  
@@ -2388,38 +1934,20 @@
 				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
 				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
 				  </ul>
+
 				</div>
 
 			</div>
 		</li>
 
 
-		<li>
-			<h2><a href="/dress-shop" class="" data="mobile mega menu top level" class="">Dresses</a></h2>
-			<div class="sub"></div>
-		</li>
+		
 
 
-		<li>
-			<h2>Tees<span class="fas fa-plus"></span></h2>
-			<div class="sub">
-
-				{*
-				<h3><a href="/black-friday?cat%5B%5D=tops&store_price%5B%5D=" class="" data="mobile mega menu tees" style="color: #FF1744 !important;">Black Friday</a></h3>
-				*}
-
-				<h3><a href="/tee-shop" class="view all" data="mobile mega menu tees">view all</a></h3>
-				{sub_cats name="cat" category="tee-shop"}
-				<h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu tees">{$cat.title}</a></h3>
-				{/sub_cats}
-			</div>
-		</li>
+		
 
 
-		<li>
-			<h2><a href="/swimwear" class="" data="mobile mega menu top level" class="">Swim</a></h2>
-			<div class="sub"></div>
-		</li>
+		
 
 
 		
@@ -2439,11 +1967,38 @@
 			<h2>Family<span class="fas fa-plus"></span></h2>
 			<div class="sub">
 
-				<h3><a href="/family-outfitting" class="sibling shop" data="mobile mega menu family">family outfitting</a></h3>
-				 <h3><a href="/sibling-shop" class="sibling shop" data="mobile mega menu family">sibling shop</a></h3>
-				{sub_cats name="cat" category="family-outfitting"}
-				    <h3><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu family">{$cat.title}</a></h3>
-				{/sub_cats}
+				
+
+				<div class="links">
+				    <ul>
+				        <li>Shop by Category</li>
+				        <li><a href="/family-outfitting" class="" data="mobile mega menu family">Family Outfitting</a></li>
+				        <li><a href="/sibling-shop" class="" data="mobile mega menu family">Sibling Shop</a></li>
+				        {sub_cats name="cat" category="family-outfitting"}
+				            <li><a href="{$cat.url}" class="" data="mobile mega menu family">{$cat.title}</a></li>
+				        {/sub_cats}
+				    </ul>
+
+				</div>
+			</div>
+		</li>
+
+
+		<li>
+			<h2>The Print Shop<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+
+				<div class="links">
+				    <ul>
+				        
+				        
+				        
+				        {sub_cats name="cat" category="print-shop"}
+				            <li><a href="{$cat.url}" class="" data="mobile mega menu print shop">{$cat.title}</a></li>
+				        {/sub_cats}
+				    </ul>
+
+				</div>
 			</div>
 		</li>
 
@@ -2822,6 +2377,6 @@
 
 {literal}
 <style>
-  .black-friday{float:none !important;color:#E894CD !important}.black-friday:hover:before{background-color:#E894CD !important}.black-friday li{padding:10px 0 10px 10px !important}.black-friday li a{color:#E894CD !important}.black-friday li a:hover:before{background-color:#E894CD !important}.holiday-flash-sale-nav{color:#A18CBA !important;text-transform:uppercase !important}.holiday-flash-sale-nav:hover:before{background-color:#A18CBA !important}.bf-font-color-mobile{color:#E894CD !important;font-family:gilroy-bold !important}.bf-font-color-mobile:hover:before{background-color:#E894CD !important}.cm-font-color-mobile{color:#FF0009 !important}.cm-font-color-mobile:hover:before{background-color:#FF0009 !important}.new-arrivals-font-color-mobile{color:#436FC1 !important}.new.arrivals{color:#436FC1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436FC1 !important}.sale-font-color-mobile{color:#FF0009 !important}.select-styles-font-color-mobile{color:#D3625A}.cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.cta-border{font-size:.9vw}}@media screen and (max-width:430px){.cta-border{font-size:3vw}}.a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.a{width:43.5vw;height:11vw;padding:0}}.kidizen-overlay{position:fixed;width:100%;height:100%;background:#000;z-index:9999;opacity:.5}.kidizen-content{position:fixed;width:649px;height:420px;top:50%;left:50%;transform:translate(-50%, -50%);background:#FDF5F2;z-index:99999;display:flex;flex-wrap:wrap;justify-content:center;align-content:center}@media screen and (max-width:1679px){.kidizen-content{width:39vw;height:25vw}}@media screen and (max-width:430px){.kidizen-content{width:100vw;height:116vw;top:11%;left:0;transform:translate(0)}}.kidizen-content img.kidizen-close{position:absolute;top:5%;right:3%;filter:contrast(0%)}.kidizen-content img.kidizen-close:hover{cursor:pointer}.kidizen-content img.tea-rewear-logo{width:403px}@media screen and (max-width:1679px){.kidizen-content img.tea-rewear-logo{width:24vw}}@media screen and (max-width:430px){.kidizen-content img.tea-rewear-logo{width:83vw}}.kidizen-content p{font-family:gilroy-regular;font-size:24px;line-height:34px;text-align:center;flex-basis:100%}@media screen and (max-width:1679px){.kidizen-content p{font-size:1.4vw;line-height:2vw}}@media screen and (max-width:430px){.kidizen-content p{font-size:5.6vw;line-height:8vw}}.kidizen-content a{background:#E8E511;width:219px;color:#47363D}@media screen and (max-width:1679px){.kidizen-content a{width:13vw}}@media screen and (max-width:430px){.kidizen-content a{width:51vw}}@media screen and (max-width:430px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}@media screen and (max-width:810px){.promo-submenu{font-size:.875rem !important}}.flex-menu{display:flex !important;flex-wrap:nowrap !important;padding:2% 3% !important;justify-content:space-between}.panel,.panel-1,.panel-2,.panel-3,.panel-4{width:auto !important;float:none !important;display:flex !important;flex-wrap:nowrap !important;justify-content:center;flex-basis:100% !important}.panel ul,.panel-1 ul,.panel-2 ul,.panel-3 ul,.panel-4 ul{float:none !important;width:auto !important;flex-basis:100% !important;padding:0 !important}@media screen and (max-width:1679px){.panel ul li a,.panel-1 ul li a,.panel-2 ul li a,.panel-3 ul li a,.panel-4 ul li a{font-size:.9vw !important;line-height:1vw !important}}.panel ul li a.sale,.panel-1 ul li a.sale,.panel-2 ul li a.sale,.panel-3 ul li a.sale,.panel-4 ul li a.sale{font-family:gilroy-bold !important}.panel-2,.panel-3,.panel-4{padding:0 0 0 1vw !important}.panel-3{flex-basis:161% !important}.panel-1{border-right:1px solid #B2BAC4}.panel-2{border-right:1px solid #B2BAC4}.panel-4{border-right:1px solid #B2BAC4;flex-wrap:wrap !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}header .site-header-inner .site-nav-submenu div.bar{display:flex;justify-content:center;padding:0}@media screen and (max-width:430px){header .site-header-inner .site-nav-submenu{display:none}}@media screen and (max-width:430px){header.fixed{height:70px}}header .site-header-inner .nav .site-nav-links li{white-space:nowrap}@media screen and (max-width:834px){.nav.col-s-12.col-xs-12.col-xxs-12{display:none}}
+  .black-friday{float:none !important;color:#E894CD !important}.black-friday:hover:before{background-color:#E894CD !important}.black-friday li{padding:10px 0 10px 10px !important}.black-friday li a{color:#E894CD !important}.black-friday li a:hover:before{background-color:#E894CD !important}.holiday-flash-sale-nav{color:#A18CBA !important;text-transform:uppercase !important}.holiday-flash-sale-nav:hover:before{background-color:#A18CBA !important}.bf-font-color-mobile{color:#E894CD !important;font-family:gilroy-bold !important}.bf-font-color-mobile:hover:before{background-color:#E894CD !important}.cm-font-color-mobile{color:#FF0009 !important}.cm-font-color-mobile:hover:before{background-color:#FF0009 !important}.new-arrivals-font-color-mobile{color:#436FC1 !important}.new.arrivals{color:#436FC1 !important;font-family:gilroy-bold !important}.new.arrivals:hover:before{background-color:#436FC1 !important}.sale-font-color-mobile{color:#FF0009 !important}.select-styles-font-color-mobile{color:#D3625A}.cta-border{display:inline-block;text-align:center;text-transform:uppercase;text-decoration:none;position:relative;font-family:gilroy-bold;font-size:15px;line-height:18px;letter-spacing:.2em;color:#FFFFFF}@media screen and (max-width:1679px){.cta-border{font-size:.9vw}}@media screen and (max-width:430px){.cta-border{font-size:3vw}}.a{width:180px;height:45px;display:inline-flex;align-items:center;justify-content:center;padding:0;position:relative}@media screen and (max-width:1679px){.a{width:10.7vw;height:2.7vw}}@media screen and (max-width:430px){.a{width:43.5vw;height:11vw;padding:0}}.kidizen-overlay{position:fixed;width:100%;height:100%;background:#000;z-index:9999;opacity:.5}.kidizen-content{position:fixed;width:649px;height:420px;top:50%;left:50%;transform:translate(-50%, -50%);background:#FDF5F2;z-index:99999;display:flex;flex-wrap:wrap;justify-content:center;align-content:center}@media screen and (max-width:1679px){.kidizen-content{width:39vw;height:25vw}}@media screen and (max-width:430px){.kidizen-content{width:100vw;height:116vw;top:11%;left:0;transform:translate(0)}}.kidizen-content img.kidizen-close{position:absolute;top:5%;right:3%;filter:contrast(0%)}.kidizen-content img.kidizen-close:hover{cursor:pointer}.kidizen-content img.tea-rewear-logo{width:403px}@media screen and (max-width:1679px){.kidizen-content img.tea-rewear-logo{width:24vw}}@media screen and (max-width:430px){.kidizen-content img.tea-rewear-logo{width:83vw}}.kidizen-content p{font-family:gilroy-regular;font-size:24px;line-height:34px;text-align:center;flex-basis:100%}@media screen and (max-width:1679px){.kidizen-content p{font-size:1.4vw;line-height:2vw}}@media screen and (max-width:430px){.kidizen-content p{font-size:5.6vw;line-height:8vw}}.kidizen-content a{background:#E8E511;width:219px;color:#47363D}@media screen and (max-width:1679px){.kidizen-content a{width:13vw}}@media screen and (max-width:430px){.kidizen-content a{width:51vw}}@media screen and (max-width:430px){.desktop{display:none}}.mobile{display:none}@media screen and (max-width:430px){.mobile{display:block}}@media screen and (max-width:810px){.promo-submenu{font-size:.875rem !important}}.flex-menu{display:flex !important;flex-wrap:nowrap !important;padding:2% 3% !important;justify-content:space-between;top:0 !important}.panel,.panel-1,.panel-2,.panel-3,.panel-4{width:auto !important;float:none !important;display:flex !important;flex-wrap:nowrap !important;justify-content:center;flex-basis:100% !important}.panel ul,.panel-1 ul,.panel-2 ul,.panel-3 ul,.panel-4 ul{float:none !important;width:auto !important;flex-basis:100% !important;padding:0 !important}@media screen and (max-width:1679px){.panel ul li a,.panel-1 ul li a,.panel-2 ul li a,.panel-3 ul li a,.panel-4 ul li a{font-size:.9vw !important;line-height:1vw !important}}.panel ul li a.sale,.panel-1 ul li a.sale,.panel-2 ul li a.sale,.panel-3 ul li a.sale,.panel-4 ul li a.sale{font-family:gilroy-bold !important}.panel-2,.panel-3,.panel-4{padding:0 0 0 1vw !important}.panel-3{flex-basis:161% !important}.panel-1{border-right:1px solid #B2BAC4}.panel-2{border-right:1px solid #B2BAC4}.panel-4{border-right:1px solid #B2BAC4;flex-wrap:wrap !important}header .site-header-inner .site-nav-submenu div div{display:block;padding:0;margin:0}header .site-header-inner .site-nav-submenu div div .menu .panel ul.category.first::before{content:none !important}header .site-header-inner .site-nav-submenu div div .menu .panel ul li a:hover{font-family:gilroy-bold !important}header .site-header-inner .site-nav-submenu div.bar{padding:0}header .site-header-inner .site-nav-submenu{margin:0}@media screen and (max-width:430px){header .site-header-inner .site-nav-submenu{display:none}}@media screen and (max-width:430px){header.fixed{height:70px}}header .site-header-inner .nav .site-nav-links li{white-space:nowrap}@media screen and (max-width:834px){.nav.col-s-12.col-xs-12.col-xxs-12{display:none}}header .site-header-inner .site-nav-mobile ul li .sub .links{display:block;padding:0}
 </style>
 {/literal}
