@@ -10,7 +10,7 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow');
+  cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
