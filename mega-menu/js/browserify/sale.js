@@ -185,7 +185,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     dress = _promoVars.promoVars.dress;
   switch (href) {
     case '/girls-clothes':
-      promo1 = _urls.urls.promo.girl;
+      promo1 = _urls.urls.promo.select2.girl;
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
@@ -202,15 +202,9 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       if (_promoVars.promoVars.showPromo3) {
         $(_promoVars.promoVars.promo3Elem).show();
       }
-
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
     case '/boys-clothes':
-      promo1 = _urls.urls.promo.boy;
+      promo1 = _urls.urls.promo.select2.boy;
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
@@ -227,15 +221,9 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       if (_promoVars.promoVars.showPromo3) {
         $(_promoVars.promoVars.promo3Elem).show();
       }
-
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
     case '/baby-clothes':
-      promo1 = _urls.urls.promo.baby.baby;
+      promo1 = _urls.urls.promo.select2.baby.baby;
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
@@ -252,16 +240,10 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       if (_promoVars.promoVars.showPromo3) {
         $(_promoVars.promoVars.promo3Elem).show();
       }
-
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
     // case '/baby-girl-clothes/new-arrivals':
-    //   promo1 = urls.promo.baby.girl;
+    //   promo1 = urls.promo.select2.baby.girl;
     //   promo2 = urls.promo.select.baby.girl;
     //   promo3 = urls.promo.sale.baby.girl;
     //   clearance = urls.promo.clearance.baby.girl;
@@ -285,7 +267,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     // case '/baby-boy-clothes/new-arrivals':
-    //   promo1 = urls.promo.baby.boy;
+    //   promo1 = urls.promo.select2.baby.boy;
     //   promo2 = urls.promo.select.baby.boy;
     //   promo3 = urls.promo.sale.baby.boy;
     //   clearance = urls.promo.clearance.baby.boy;
@@ -309,7 +291,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/toddler-clothes':
-      promo1 = _urls.urls.promo.toddler.toddler;
+      promo1 = _urls.urls.promo.select2.toddler.toddler;
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
@@ -329,7 +311,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
 
     // case '/toddler-girls-clothes/favorites/new-arrivals':
-    //   promo1 = urls.promo.toddler.girl;
+    //   promo1 = urls.promo.select2.toddler.girl;
     //   promo2 = urls.promo.select.toddler.girl;
     //   promo3 = urls.promo.sale.toddler.girl;
     //   clearance = urls.promo.clearance.toddler.girl;
@@ -353,7 +335,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     // case '/toddler-boys-clothes/favorites/new-arrivals':
-    //   promo1 = urls.promo.toddler.boy;
+    //   promo1 = urls.promo.select2.toddler.boy;
     //   promo2 = urls.promo.select.toddler.boy;
     //   promo3 = urls.promo.sale.toddler.boy;
     //   clearance = urls.promo.clearance.toddler.boy;
@@ -378,8 +360,8 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      // promo1 = urls.promo.baby.newborn;
-      promo1 = _urls.urls.promo.promo;
+      // promo1 = urls.promo.select2.baby.newborn;
+      promo1 = _urls.urls.promo.select2.promo;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
@@ -399,8 +381,8 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
 
     // case '/swim-shop':
-    //   promo1 = urls.promo.select.swim;
-    //   promo1 = urls.promo.promo;
+    //   promo1 = urls.promo.select2.select.swim;
+    //   promo1 = urls.promo.select2.promo;
     //   promo2 = urls.promo.select.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
@@ -428,7 +410,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/print-shop':
-      promo1 = _urls.urls.promo.print;
+      promo1 = _urls.urls.promo.select2.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -452,7 +434,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/sibling-shop':
-      promo1 = _urls.urls.promo.family;
+      promo1 = _urls.urls.promo.select2.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -478,7 +460,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
 
     // case '/dresses':
     //   // promo1 =  urls.promo.select.swim;
-    //   promo1 = urls.promo.promo;
+    //   promo1 = urls.promo.select2.promo;
     //   promo2 = urls.promo.select.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
@@ -502,7 +484,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/new-arrivals':
-      promo1 = _urls.urls.promo.promo;
+      promo1 = _urls.urls.promo.select2.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -747,7 +729,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
       break;
     case '/clothing-sale':
-      promo1 = _urls.urls.promo.sale.promo;
+      promo1 = _urls.urls.promo.select2.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.promo;
@@ -853,12 +835,14 @@ var urls = exports.urls = {
       girl: "/select-styles?gender%5B%5D=girl",
       boy: "/select-styles?gender%5B%5D=boy",
       baby: {
+        baby: "/select-styles?gender[]=girl&gender[]=boy&gender[]=baby girl&gender[]=baby boy&size[]=0 to 3 months&size[]=3 to 6 months&size[]=6 to 9 months&size[]=9 to 12 months&size[]=12 to 18 months&size[]=18 to 24 months&size[]=2t&size[]=3t&size[]=4t&size[]=2 years&size[]=3 years&size[]=4 years&size[]=xs&size[]=s&store_price[]=",
         girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         newborn: "/newborn-clothing/favorites/limited-time-sale",
         newborn2: "/select-styles/newborn"
       },
       toddler: {
+        toddler: "/select-styles?gender[]=girl&gender[]=boy&gender[]=baby girl&gender[]=baby boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s",
         girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
       }

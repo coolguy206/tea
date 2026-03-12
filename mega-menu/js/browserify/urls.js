@@ -74,12 +74,14 @@ var urls = exports.urls = {
       girl: "/select-styles?gender%5B%5D=girl",
       boy: "/select-styles?gender%5B%5D=boy",
       baby: {
+        baby: "/select-styles?gender[]=girl&gender[]=boy&gender[]=baby girl&gender[]=baby boy&size[]=0 to 3 months&size[]=3 to 6 months&size[]=6 to 9 months&size[]=9 to 12 months&size[]=12 to 18 months&size[]=18 to 24 months&size[]=2t&size[]=3t&size[]=4t&size[]=2 years&size[]=3 years&size[]=4 years&size[]=xs&size[]=s&store_price[]=",
         girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=0%20to%203%20months&size%5B%5D=3%20to%206%20months&size%5B%5D=6%20to%209%20months&size%5B%5D=9%20to%2012%20months&size%5B%5D=12%20to%2018%20months&size%5B%5D=18%20to%2024%20months&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         newborn: "/newborn-clothing/favorites/limited-time-sale",
         newborn2: "/select-styles/newborn"
       },
       toddler: {
+        toddler: "/select-styles?gender[]=girl&gender[]=boy&gender[]=baby girl&gender[]=baby boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s",
         girl: "/select-styles?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         boy: "/select-styles?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
       }

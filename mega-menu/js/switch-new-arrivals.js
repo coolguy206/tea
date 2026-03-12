@@ -28,7 +28,7 @@ export const switchNewArrivals = (href) => {
 
   switch (href) {
     case '/girls-clothes':
-      promo1 = urls.promo.girl;
+      promo1 = urls.promo.select2.girl;
       promo2 = urls.promo.select.girl;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
@@ -49,15 +49,10 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
     case '/boys-clothes':
-      promo1 = urls.promo.boy;
+      promo1 = urls.promo.select2.boy;
       promo2 = urls.promo.select.boy;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
@@ -78,15 +73,10 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
     case '/baby-clothes':
-      promo1 = urls.promo.baby.baby;
+      promo1 = urls.promo.select2.baby.baby;
       promo2 = urls.promo.select.baby.girl;
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
@@ -107,15 +97,10 @@ export const switchNewArrivals = (href) => {
         $(promoVars.promo3Elem).show();
       }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
 
     // case '/baby-girl-clothes/new-arrivals':
-    //   promo1 = urls.promo.baby.girl;
+    //   promo1 = urls.promo.select2.baby.girl;
     //   promo2 = urls.promo.select.baby.girl;
     //   promo3 = urls.promo.sale.baby.girl;
     //   clearance = urls.promo.clearance.baby.girl;
@@ -139,7 +124,7 @@ export const switchNewArrivals = (href) => {
     //   break;
 
     // case '/baby-boy-clothes/new-arrivals':
-    //   promo1 = urls.promo.baby.boy;
+    //   promo1 = urls.promo.select2.baby.boy;
     //   promo2 = urls.promo.select.baby.boy;
     //   promo3 = urls.promo.sale.baby.boy;
     //   clearance = urls.promo.clearance.baby.boy;
@@ -163,7 +148,7 @@ export const switchNewArrivals = (href) => {
     //   break;
 
     case '/toddler-clothes':
-      promo1 = urls.promo.toddler.toddler;
+      promo1 = urls.promo.select2.toddler.toddler;
       promo2 = urls.promo.select.toddler.girl;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
@@ -187,7 +172,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     // case '/toddler-girls-clothes/favorites/new-arrivals':
-    //   promo1 = urls.promo.toddler.girl;
+    //   promo1 = urls.promo.select2.toddler.girl;
     //   promo2 = urls.promo.select.toddler.girl;
     //   promo3 = urls.promo.sale.toddler.girl;
     //   clearance = urls.promo.clearance.toddler.girl;
@@ -211,7 +196,7 @@ export const switchNewArrivals = (href) => {
     //   break;
 
     // case '/toddler-boys-clothes/favorites/new-arrivals':
-    //   promo1 = urls.promo.toddler.boy;
+    //   promo1 = urls.promo.select2.toddler.boy;
     //   promo2 = urls.promo.select.toddler.boy;
     //   promo3 = urls.promo.sale.toddler.boy;
     //   clearance = urls.promo.clearance.toddler.boy;
@@ -236,8 +221,8 @@ export const switchNewArrivals = (href) => {
 
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
-      // promo1 = urls.promo.baby.newborn;
-      promo1 = urls.promo.promo;
+      // promo1 = urls.promo.select2.baby.newborn;
+      promo1 = urls.promo.select2.promo;
       promo2 = urls.promo.select.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
@@ -261,8 +246,8 @@ export const switchNewArrivals = (href) => {
       break;
 
     // case '/swim-shop':
-    //   promo1 = urls.promo.select.swim;
-    //   promo1 = urls.promo.promo;
+    //   promo1 = urls.promo.select2.select.swim;
+    //   promo1 = urls.promo.select2.promo;
     //   promo2 = urls.promo.select.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
@@ -290,7 +275,7 @@ export const switchNewArrivals = (href) => {
     //   break;
 
     case '/print-shop':
-      promo1 = urls.promo.print;
+      promo1 = urls.promo.select2.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
@@ -318,7 +303,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/sibling-shop':
-      promo1 = urls.promo.family;
+      promo1 = urls.promo.select2.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
@@ -347,7 +332,7 @@ export const switchNewArrivals = (href) => {
 
     // case '/dresses':
     //   // promo1 =  urls.promo.select.swim;
-    //   promo1 = urls.promo.promo;
+    //   promo1 = urls.promo.select2.promo;
     //   promo2 = urls.promo.select.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
@@ -371,7 +356,7 @@ export const switchNewArrivals = (href) => {
     //   break;
 
     case '/new-arrivals':
-      promo1 = urls.promo.promo;
+      promo1 = urls.promo.select2.promo;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;

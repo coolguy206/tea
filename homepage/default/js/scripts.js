@@ -4,7 +4,7 @@ import { inview } from './inview.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
 // import { makeGlide } from './make-glide.js';
 import { tracking, addAltClass } from './tracking.js';
-import { makeBxSlider } from './make-bxslider.js';
+// import { makeBxSlider } from './make-bxslider.js';
 
 
 $(document).ajaxComplete(function (event, xhr, options) {
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   // makeGlide('.c2-slideshow .glide');
 
-  makeBxSlider('.c2-slideshow ul');
+  // makeBxSlider('.c2-slideshow ul');
 
   // makeGlide('.c6 .glide');
 
