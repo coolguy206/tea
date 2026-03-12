@@ -21,6 +21,7 @@
 		@media screen and (max-width: 430px) {
 			margin: 0 0 4%;
 		}
+
 		// font-family: souvenirstd-light;
 		// font-weight: bold;
 		margin: 0 0 1%;
@@ -59,6 +60,7 @@
 	div,
 	li,
 	p {
+
 		// @media screen and (max-width: 1679px) {
 		// 	font-size: 1.3vw;
 		// 	line-height: 2vw;
@@ -68,6 +70,7 @@
 			// line-height: 24px;
 			margin: 0 0 4%;
 		}
+
 		// font-size: 20px;
 		// line-height: 30px;
 		// font-family: gilroy-regular;
@@ -117,9 +120,16 @@
 					float: none;
 					margin: 10px 0 0;
 				}
+
 				display: inline-block;
 				float: right;
 			}
+		}
+	}
+
+	li {
+		&:has(> h4) {
+			list-style-type: none;
 		}
 	}
 
