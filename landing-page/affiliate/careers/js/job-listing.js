@@ -1,13 +1,10 @@
-// import {
-//     AccountExecutiveEast
-// } from './account-executive-east.js';
-// import {
-//     SocialMediaContentIntern
-// } from './job-descriptions/social-media-content-intern.js';
+import {
+  officeCommunityCoordinator
+} from './job-descriptions/office-community-coordinator.js';
 import {
   growthMarketingCoordinator
 } from './job-descriptions/growth-marketing-coordinator.js';
 
-export var jobs = [growthMarketingCoordinator];
+export var jobs = [growthMarketingCoordinator, officeCommunityCoordinator];
 
 
