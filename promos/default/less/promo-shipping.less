@@ -17,11 +17,15 @@
                 font-size: 4vw;
             }
 
-            color: @shipping-promoColor1;
+            color: @shipping-promoColor2;
 
             i {
+                @media screen and (max-width: 430px) {
+                    display: none;
+                }
+
                 font-style: normal;
-                color: @shipping-promoColor2;
+                color: @shipping-promoColor1;
             }
         }
 
@@ -34,7 +38,7 @@
                 font-size: 4vw;
             }
 
-            color: @shipping-promoColor2;
+            color: @shipping-promoColor1;
         }
 
         &.third {
