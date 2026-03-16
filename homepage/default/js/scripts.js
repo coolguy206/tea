@@ -4,13 +4,13 @@ import { inview } from './inview.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
 // import { makeGlide } from './make-glide.js';
 import { tracking, addAltClass } from './tracking.js';
-import { makeBxSlider } from './make-bxslider.js';
+// import { makeBxSlider } from './make-bxslider.js';
 
 
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow');
+  cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
@@ -36,7 +36,7 @@ $(document).ready(function () {
 
   // makeGlide('.c2-slideshow .glide');
 
-  makeBxSlider('.c2-slideshow ul');
+  // makeBxSlider('.c2-slideshow ul');
 
   // makeGlide('.c6 .glide');
 
