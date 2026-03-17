@@ -1,6 +1,6 @@
 <!-- <h3><span class="fas fa-chevron-left"></span> Girl (5&#8211;16) <span class="fas fa-chevron-right"></span></h3> -->
 <div class="links">
-  <ul>
+  <ul aria-label="Shop by Category">
     <li>Shop by Category</li>
     
     {* BLACK FRIDAY *}
@@ -13,7 +13,9 @@
     <li><a href="{$secure_html_url}newborn-clothes" data="mobile mega menu newborn view all" >Shop All Newborn (NB to 6&#8211;9M)</a></li>
 
     {sub_cats name="cat" category="baby-clothes"}
-      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby categories" >{$cat.title}</a></li>
+      {if $cat.title != 'Newborn' && $cat.title != 'Baby Girl' && $cat.title != 'Baby Boy'}
+        <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu baby categories" >{$cat.title}</a></li>
+      {/if}
     {/sub_cats}
 
     <!-- <li><a href="{$secure_html_url}girls-clothing/view-all" data="mobile mega menu girl view all" >Shop All</a></li> -->
@@ -21,7 +23,7 @@
     
   </ul>
   
-  <ul>
+  <ul aria-label="Shop by Collection">
     <li>Shop by Collection</li>
     <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
 
@@ -69,14 +71,14 @@
     <li><a class="kidizen-url" href="#" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&utm_medium=Web+-+girl+dropdown&utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea for Rewards</a></li>
   </ul> -->
 
-  <ul class="category">
+  <ul class="category" aria-label="Tea REWEAR">
       <li>Tea REWEAR</li>
       <li>
-          <a href="#" class="kidizen-url">Trade In & Shop Preloved Tea</a>
+          <a href="#" class="kidizen-url" aria-disabled="true">Trade In & Shop Preloved Tea</a>
       </li>
   </ul>
 
-  <ul class="category">
+  <ul class="category" aria-label="Tea Gives Back">
       <li>Tea Gives Back</li>
       <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
       <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
