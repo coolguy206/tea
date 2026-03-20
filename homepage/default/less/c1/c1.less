@@ -1,13 +1,14 @@
 @import "../var.less";
 
 @c1-font-color: #fff;
-@c1-h2-color: #5F4744;
-@c1-h2-color-430: #5F4744;
-@c1-h3-color: #fff;
-@c1-h3-color-430: #fff;
+@c1-h2-color: #fff;
+@c1-h2-color-430: #fff;
+@c1-h2-font-family: @crumb;
+@c1-h3-color: #52646B;
+@c1-h3-color-430: #52646B;
 @c1-p-color: #fff;
 @c1-cta-color: #fff;
-@c1-cta-background: #C85D5B;
+@c1-cta-background: #52646B;
 
 
 // @import "../c1-slideshow/c1-slideshow.less";
@@ -18,23 +19,31 @@
 
     div {
         &.the-content {
+            @media screen and (max-width: 1679px) {
+                row-gap: 2.7vw;
+            }
+
             @media screen and (max-width: 430px) {
-                width: 100%;
+                width: auto;
                 left: 0;
-                top: 8vw;
+                top: 53vw;
                 transform: translate(0);
-                display: block;
-                text-align: center;
+                // display: block;
+                // text-align: center;
+                padding: 0 0 0 8vw;
+                row-gap: 8vw;
             }
 
             position: absolute;
-            top: 67%;
+            top: 50%;
             transform: translate(-50%, -50%);
-            width: 70%;
-            left: 50%;
+            width: 45%;
+            left: 62%;
             display: flex;
-            justify-content: space-evenly;
+            flex-wrap: wrap;
+            justify-content: start;
             align-items: center;
+            row-gap: 46px;
 
 
             h3 {
@@ -46,9 +55,11 @@
                 @media screen and (max-width: 430px) {
                     color: @c1-h3-color-430;
                     text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
-                    letter-spacing: 3px;
-                    text-align: center;
+                    letter-spacing: .8vw;
+                    // text-align: center;
                     line-height: normal;
+                    flex-basis: 100%;
+                    font-size: 4.3vw;
                 }
 
                 color: @c1-h3-color;
@@ -59,24 +70,24 @@
 
             h2 {
                 @media screen and (max-width: 1679px) {
-                    font-size: 4.8vw;
-                    line-height: 4.8vw;
+                    font-size: 4.2vw;
+                    line-height: 4.5vw;
                 }
 
                 @media screen and (max-width:430px) {
-                    font-size: 12vw;
-                    line-height: 11vw;
-                    margin: 5vw 0;
+                    font-size: 11vw;
+                    line-height: 12vw;
+                    // margin: 5vw 0;
                     color: @c1-h2-color-430;
                     // text-shadow: 0 0 14px rgba(0, 0, 0, 0.15);
                     // line-height: 10.5vw;
-                    text-align: center;
+                    // text-align: center;
                 }
 
-                font-family: @gilroyb;
-                font-size: 80px;
-                // text-transform: uppercase;
-                line-height: 80px;
+                font-family: @c1-h2-font-family;
+                font-size: 70px;
+                text-transform: uppercase;
+                line-height: 75px;
                 // letter-spacing: 0.1rem;
                 color: @c1-h2-color;
                 // margin: 0 0 4%;
@@ -135,9 +146,9 @@
                     @media screen and (max-width: 430px) {
                         // row-gap: 4vw;
                         // column-gap: 4vw;
-                        justify-content: center;
+                        // justify-content: center;
                         margin: 0;
-                        top: 85vw;
+                        // top: 85vw;
                         position: relative;
                     }
 

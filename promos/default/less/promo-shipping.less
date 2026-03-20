@@ -1,7 +1,8 @@
-@shipping-promoBg: #7997A5;
-@shipping-promoColor1: #F5D7DD;
-@shipping-promoColor2: #fff;
-@shipping-promoColor3: #F5D7DD;
+@shipping-promoBg: #40687A;
+@shipping-promoColor1: #fff;
+@shipping-promoColor2: #F5D7DD;
+@shipping-promoColor3: #fff;
+@shipping-fontSize: 3vw;
 
 
 &.shipping-promo {
@@ -14,14 +15,14 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 4vw;
+                font-size: @shipping-fontSize;
             }
 
             color: @shipping-promoColor2;
 
             i {
                 @media screen and (max-width: 430px) {
-                    display: none;
+                    // display: none;
                 }
 
                 font-style: normal;
@@ -35,7 +36,7 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 4vw;
+                font-size: @shipping-fontSize;
             }
 
             color: @shipping-promoColor1;
@@ -47,11 +48,20 @@
             }
 
             @media screen and (max-width: 430px) {
-                font-size: 4vw;
+                font-size: @shipping-fontSize;
             }
 
             color: @shipping-promoColor3;
             // text-decoration:underline;
+
+            i {
+                @media screen and (max-width: 430px) {
+                    // display: none;
+                }
+
+                font-style: normal;
+                color: @shipping-promoColor2;
+            }
         }
 
         &.shop-now {
