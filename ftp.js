@@ -6,13 +6,13 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2026`;
-var num = `0313`;
+var num = `0321`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
-// var category = `promos/one-offs/${year}/${num}/${version}/hp/`;
-var category = `promos/one-offs/${year}/${num}/${version}/mega/`;
+var category = `promos/one-offs/${year}/${num}/${version}/hp/`;
+// var category = `promos/one-offs/${year}/${num}/${version}/mega/`;
 // var category = `promos/giving-tuesday/${year}/${num}/${version}/`;
 // var category = `homepage/${year}/${num}/${version}/`;
 // var category = `headers/${year}/${num}/${version}/`;
@@ -25,13 +25,13 @@ var url = `${baseURL}${category}`
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/email-signup/handoff/`;
 // var readFilePath = `Site/${num}/Site/hp`;
-// var readFilePath = `Site/${num}/Site/promo/hp/`;
-var readFilePath = `Site/${num}/Site/promo/mega/`;
+var readFilePath = `Site/${num}/Site/promo/hp/`;
+// var readFilePath = `Site/${num}/Site/promo/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
 // var writeFilePath = `landing-page/email/catalog-sign-up/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
