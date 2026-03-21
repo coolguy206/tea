@@ -1,9 +1,13 @@
-//? CODE REFRENCE FOR COUNTDOWN.JS
+// import '../../../../node_modules/countdown/countdown.js'
 
-//? COUNTDOWN.JS
-$(".the-promo.countdown-promo #countdown span").countdown("2025/12/02 23:59:59", function (event) {
+export const countDown = function(elem, str) {
+//   console.log(`countdown.js`);
+   $(elem).countdown(str, function (event) {
     $(this).text(
-        event.strftime('%-DD %HH %MM %SS')
-        // event.strftime('%-D %H:%M:%S')
+      event.strftime('%-D days %H hrs %M mins')
+      // event.strftime('%-DDAYS %HHRS %MMINS %SS')
+      // event.strftime('%-D days %H hrs %M mins')
     );
-});
+  });
+};
+

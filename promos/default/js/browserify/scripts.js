@@ -12,6 +12,25 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.countDown = void 0;
+// import '../../../../node_modules/countdown/countdown.js'
+
+var countDown = exports.countDown = function countDown(elem, str) {
+  //   console.log(`countdown.js`);
+  $(elem).countdown(str, function (event) {
+    $(this).text(event.strftime('%-D days %H hrs %M mins')
+    // event.strftime('%-DDAYS %HHRS %MMINS %SS')
+    // event.strftime('%-D days %H hrs %M mins')
+    );
+  });
+};
+
+},{}],3:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.makeBxSlider = void 0;
 require("../../../../node_modules/bxslider/dist/jquery.bxslider.min.js");
 var makeBxSlider = exports.makeBxSlider = function makeBxSlider(elem) {
@@ -30,11 +49,14 @@ var makeBxSlider = exports.makeBxSlider = function makeBxSlider(elem) {
   });
 };
 
-},{"../../../../node_modules/bxslider/dist/jquery.bxslider.min.js":1}],3:[function(require,module,exports){
+},{"../../../../node_modules/bxslider/dist/jquery.bxslider.min.js":1}],4:[function(require,module,exports){
 "use strict";
 
 var _makeBxslider = require("./make-bxslider.js");
+var _countdown = require("./countdown.js");
 jQuery(document).ready(function () {
+  (0, _countdown.countDown)('.promos .the-promo.promo1 span.first i', '2026/03/22 23:59:59');
+
   //? change the aria-label for the promos
   var aria = $('.the-promo');
   aria.map(function (i, val) {
@@ -141,4 +163,4 @@ jQuery(document).ready(function () {
   (0, _makeBxslider.makeBxSlider)('.promos-wrap');
 });
 
-},{"./make-bxslider.js":2}]},{},[3]);
+},{"./countdown.js":2,"./make-bxslider.js":3}]},{},[4]);

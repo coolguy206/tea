@@ -1,6 +1,9 @@
 import { makeBxSlider } from './make-bxslider.js';
+import {countDown} from './countdown.js';
 
 jQuery(document).ready(function () {
+
+  countDown('.promos .the-promo.promo1 span.first i', '2026/03/22 23:59:59')
 
   //? change the aria-label for the promos
   let aria = $('.the-promo')

@@ -1,7 +1,10 @@
 "use strict";
 
 var _makeBxslider = require("./make-bxslider.js");
+var _countdown = require("./countdown.js");
 jQuery(document).ready(function () {
+  (0, _countdown.countDown)('.promos .the-promo.promo1 span.first i', '2026/03/22 23:59:59');
+
   //? change the aria-label for the promos
   var aria = $('.the-promo');
   aria.map(function (i, val) {
