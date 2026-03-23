@@ -1,69 +1,11 @@
-<div class="container-promo-header swim select-styles">
+<div class="container-promo-header tees select-styles">
   <!-- <h2>end of season sale</h2> -->
-  
-  <div class="the-content swim select-styles">
 
-    <!-- <div class="the-grid"> -->
-      
+  <div class="the-content tees select-styles"></div>
 
-      <!-- <a href="/girls-swimwear" class="girl-one"> -->
-        <!-- include "../../images/swim/girl.html" -->
-        <!-- include "../../images/swim/girl-d.html" -->
-        <!-- include "../../images/swim/girl-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a">shop girl</span>
-        </div>
-      </a> -->
-
-      <!-- <a href="/boys-swimwear" class="boy-two"> -->
-        <!-- include "../../images/swim/boy.html" -->
-        <!-- include "../../images/swim/boy-d.html" -->
-        <!-- include "../../images/swim/boy-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a">shop boy</span>
-        </div>
-      </a> -->
-
-      <!-- <a href="/baby-swimwear" class="baby-girl-three"> -->
-        <!-- include "../../images/swim/baby_girl.html" -->
-        <!-- include "../../images/swim/baby_girl-d.html" -->
-        <!-- include "../../images/swim/baby_girl-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a">shop baby</span>
-        </div>
-      </a> -->
-
-      <!-- <a href="/family-outfitting/adult?cat%5B%5D=swimwear&cat%5B%5D=swim&store_price%5B%5D=" class="baby-boy-four"> -->
-        <!-- include "../../images/swim/baby_boy.html" -->
-        <!-- include "../../images/swim/baby_boy-d.html" -->
-        <!-- include "../../images/swim/baby_boy-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a">shop Adult</span>
-        </div>
-      </a> -->
-
-      <!-- <a href="/family-outfitting/adult?cat%5B%5D=swimwear&store_price%5B%5D=" class="baby-boy-four desktop"> -->
-        <!-- include "../../images/swim/family.html" -->
-        <!-- include "../../images/swim/baby_boy-d.html" -->
-        <!-- include "../../images/swim/baby_boy-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a"><i style="font-style: normal; margin: 0 10px 0 0;" class="desktop">shop</i> adult</span>
-        </div> -->
-      <!-- </a> -->
-
-      <!-- <a href="/family-outfitting/swim" class="family-five"> -->
-        <!-- include "../../images/swim/family-d.html" -->
-        <!-- include "../../images/swim/family-m.html" -->
-        <!-- <div class="the-cta">
-          <span class="cta-border a"><i style="font-style: normal; margin: 0 10px 0 0;" class="desktop">shop</i> family</span>
-        </div>
-      </a> -->
-
-  </div>
-
-  <h1>The Swim Shop</h1>
+  <h1>Tees Shop</h1>
   <p>
-    Recycled fabric, UPF 50+ protection, and artist-drawn prints for the whole family. Made for wherever the water takes you.
+    Soft cotton jersey meets globally-inspired, hand-drawn graphics by our San Francisco studio’s design team.
   </p>
 </div>
 
@@ -74,6 +16,6 @@
 </style>
 
 <script>
-  !function(){return function e(r,s,t){function i(o,n){if(!s[o]){if(!r[o]){var u="function"==typeof require&&require;if(!n&&u)return u(o,!0);if(a)return a(o,!0);var w=new Error("Cannot find module '"+o+"'");throw w.code="MODULE_NOT_FOUND",w}var c=s[o]={exports:{}};r[o][0].call(c.exports,function(e){return i(r[o][1][e]||e)},c,c.exports,e,r,s,t)}return s[o].exports}for(var a="function"==typeof require&&require,o=0;o<t.length;o++)i(t[o]);return i}}()({1:[function(e,r,s){"use strict";var t=e("./urls");$(document).ready(function(){var e=window.location.pathname,r="",s=function(e){e.map(function(e,s){r='<a href="'.concat(e.url,'" class="">\n                  <div class="the-cta">\n                    <span class="cta-border a">').concat(e.text,"</span>\n                  </div>\n                </a>"),$(".container-promo-header .the-content.select-styles").append(r)})};switch(e){case"/girls-swimsuits-swimwear":s(t.urls[0].girl);break;case"/boys-swimwear":s(t.urls[1].boy);break;case"/baby-swimwear":s(t.urls[2].baby);break;case"/toddler-swimwear":s(t.urls[3].toddler)}})},{"./urls":2}],2:[function(e,r,s){"use strict";Object.defineProperty(s,"__esModule",{value:!0}),s.urls=void 0;s.urls=[{girl:[{text:"One Pieces",url:"/girls-swimsuits-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=One%20Pieces"},{text:"Two Pieces",url:"/girls-swimsuits-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=Two%20Pieces"},{text:"Rashguards",url:"/girls-swimsuits-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=Rash%20Guards"}]},{boy:[{text:"Rashguards",url:"/boys-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=Rash%20Guards&swimwear_type%5B%5D=One%20Pieces"},{text:"Swim Trunks",url:"/boys-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=Swim%20Trunks"},{text:"Sets",url:"/boys-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=Two%20Pieces"}]},{baby:[{text:"Baby Girl",url:"/baby-swimwear?gender%5B%5D=baby%20girl"},{text:"Baby Boy",url:"/baby-swimwear?gender%5B%5D=baby%20boy"}]},{toddler:[{text:"Toddler Girl",url:"/toddler-swimwear?gender%5B%5D=girl&gender%5B%5D=baby%20girl&store_price%5B%5D="},{text:"Toddler Boy",url:"/toddler-swimwear?gender%5B%5D=boy&gender%5B%5D=baby%20boy&store_price%5B%5D="}]}]},{}]},{},[1]);
+  !function(){return function e(r,t,o){function n(a,i){if(!t[a]){if(!r[a]){var u="function"==typeof require&&require;if(!i&&u)return u(a,!0);if(s)return s(a,!0);var c=new Error("Cannot find module '"+a+"'");throw c.code="MODULE_NOT_FOUND",c}var d=t[a]={exports:{}};r[a][0].call(d.exports,function(e){return n(r[a][1][e]||e)},d,d.exports,e,r,t,o)}return t[a].exports}for(var s="function"==typeof require&&require,a=0;a<o.length;a++)n(o[a]);return n}}()({1:[function(e,r,t){"use strict";var o=e("./urls");$(document).ready(function(){var e=window.location.pathname,r="",t=function(e){e.map(function(e,t){r='<a href="'.concat(e.url,'" class="">\n                  <div class="the-cta">\n                    <span class="cta-border a">').concat(e.text,"</span>\n                  </div>\n                </a>"),$(".container-promo-header .the-content.select-styles").append(r)})};switch(e){case"/baby-tees-tops":t(o.urls[0].baby);break;case"/toddler-tees-tops":t(o.urls[1].toddler)}})},{"./urls":2}],2:[function(e,r,t){"use strict";Object.defineProperty(t,"__esModule",{value:!0}),t.urls=void 0;t.urls=[{baby:[{text:"Baby Girl",url:"/baby-tees-tops?gender%5B%5D=girl&gender%5B%5D=baby%20girl&store_price%5B%5D="},{text:"Baby Boy",url:"/baby-tees-tops?gender%5B%5D=boy&gender%5B%5D=baby%20boy&store_price%5B%5D="}]},{toddler:[{text:"Toddler Girl",url:"/toddler-tees-tops?gender%5B%5D=girl&gender%5B%5D=baby%20girl&store_price%5B%5D="},{text:"Toddler Boy",url:"/toddler-tees-tops?gender%5B%5D=boy&gender%5B%5D=baby%20boy&store_price%5B%5D="}]}]},{}]},{},[1]);
   !function(){return function e(i,n,r){function t(a,u){if(!n[a]){if(!i[a]){var c="function"==typeof require&&require;if(!u&&c)return c(a,!0);if(o)return o(a,!0);var f=new Error("Cannot find module '"+a+"'");throw f.code="MODULE_NOT_FOUND",f}var s=n[a]={exports:{}};i[a][0].call(s.exports,function(e){return t(i[a][1][e]||e)},s,s.exports,e,i,n,r)}return n[a].exports}for(var o="function"==typeof require&&require,a=0;a<r.length;a++)t(r[a]);return t}}()({1:[function(e,i,n){"use strict";Object.defineProperty(n,"__esModule",{value:!0}),n.inview=void 0;n.inview=function(e){$(e).on("inview",function(e,i){if(i){var n=$(this).find("img");$.each(n,function(e,i){var n=$(i).attr("data-set");n&&$(i).attr("src",n),$(i).removeAttr("data-set")}),$(this).css("visibility","visible")}})}},{}],2:[function(e,i,n){"use strict";var r=e("./inview.js");$(document).ready(function(){(0,r.inview)(".container-promo-header"),$(".container-promo-header a").map(function(e,i){$(i).addClass("sale-category-header")}),$(".category-page .nav .side-nav ul li .links ul li a").map(function(e,i){"Warehouse Sale: Up to 75% Off "==$(i).text()&&$(i).hide()})})},{"./inview.js":1}]},{},[2]);
 </script>
