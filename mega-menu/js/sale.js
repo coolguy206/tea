@@ -1,12 +1,12 @@
 import { switchNewArrivals } from './switch-new-arrivals.js';
 import { switchSale } from './switch-sale.js';
-// import { inview } from './inview.js';
+import { inview } from './inview.js';
 
 $(document).ready(function () {
 
   // $('.menu .swimwear').text('$15 Swim');
 
-  // inview('.mega-img-container, .mega-img-bf');
+  inview('.mega-img-container, .mega-img-bf');
 
   $('.dept-girl').hover(function () {
 

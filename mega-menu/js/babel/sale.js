@@ -2,13 +2,11 @@
 
 var _switchNewArrivals = require("./switch-new-arrivals.js");
 var _switchSale = require("./switch-sale.js");
-// import { inview } from './inview.js';
-
+var _inview = require("./inview.js");
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
-  // inview('.mega-img-container, .mega-img-bf');
-
+  (0, _inview.inview)('.mega-img-container, .mega-img-bf');
   $('.dept-girl').hover(function () {
 
     // $('.promo1-url, .promo2-url, .clearance-url').show();

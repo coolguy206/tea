@@ -10,7 +10,7 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
+  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
 
   cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
 
@@ -22,6 +22,10 @@ $(document).ajaxComplete(function (event, xhr, options) {
 });
 
 $(document).ready(function () {
+
+  var alt = $('.hp .promo1').find('img')[0].alt;
+  $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
+
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);

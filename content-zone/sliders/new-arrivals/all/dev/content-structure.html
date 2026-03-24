@@ -1,4 +1,4 @@
-<div class="new-arrivals-slider all">
+<div class="new-arrivals-slider all" role="region" aria-label="shop new arrivals slider items">
     <div class="white-out"></div>
    
     <div class="glide">
@@ -20,7 +20,7 @@
                                         </a>
                                     {/if}
     
-                                    <a href="{$cat.item->item_url()}" class="new-arrivals-slider-all {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
+                                    <a href="{$cat.item->item_url()}" class="new-arrivals-slider-all {$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}" aria-label="Shop {$cat.model|smarty:nodefaults}" role="button">
                                         <img src="{image size=thumb type=item id=$cat.sku}" alt="{$cat.brand|smarty:nodefaults} {$cat.model|smarty:nodefaults}">
     
                                         {if $cat.thumb_wink_images[$id]}
@@ -120,10 +120,10 @@
         <div class="glide__bullets" data-glide-el="controls[nav]"></div>
 
         <div data-glide-el="controls">
-            <span data-glide-dir="<" class="lt-arrow">
+            <span data-glide-dir="<" class="lt-arrow" aria-label="left arrow" role="button">
                 include "images/lt-arrow.html"
             </span>
-            <span data-glide-dir=">" class="rt-arrow">
+            <span data-glide-dir=">" class="rt-arrow" aria-label="right arrow" role="button">
                 include "images/rt-arrow.html"
             </span>
         </div>
