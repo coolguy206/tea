@@ -40,7 +40,7 @@ export var officeCommunityCoordinator = {
                 `Proactive communication and support for anyone who works in or visits our office to ensure a welcoming environment`,
                 `Keep office organized and professional. Maintain/manage off site storage. Prioritize a positive, productive, and brand right environment.`,
                 `Manage inbound and outbound mail and shipments`,
-                `Coordinate with office related services including janitorial, landlord (??), security, groceries, and other`,
+                `Coordinate with office related services including janitorial, landlord, security, groceries, and other`,
                 `Coordinate with landlord and/or contractors for any office needs`,
                 `Manage parking assignments and security procedures including distributing access codes/keys, keeping technology equipment and confidential documentation secure in the office`,
                 `Support for community building activities including delivering supplies, organizing events and monthly staff meetings`,
