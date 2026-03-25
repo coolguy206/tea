@@ -52,6 +52,7 @@ jQuery(document).ready(function () {
     $('.promos .the-promo span.details, .promos .the-promo span > a.details').hide();
     // $('.promos').hide();
     // $('.promos .the-promo.promo1').remove();
+    //  $('.promos .the-promo.shipping-promo').remove();
     // $('.promos .the-promo.promo3').show();
     // $('.promos .the-promo.promo2').remove();
 
@@ -67,7 +68,9 @@ jQuery(document).ready(function () {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
       // $('.promos .the-promo.promo1').hide();
-      // $('.promos .the-promo.promo1').remove();
+      $('.promos .the-promo.promo1').remove();
+    } else {
+      $('.promos .the-promo.shipping-promo').remove();
     }
   } else {
     //? NOT HOME PAGE
