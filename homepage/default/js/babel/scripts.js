@@ -12,15 +12,17 @@ var _tracking = require("./tracking.js");
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.select-styles.all', '.shop-slideshow');
+  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
+
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-2');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.spain-edit.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
 $(document).ready(function () {
-  var alt = $('.hp .promo1').find('img')[0].alt;
-  $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
+  //? ARIA LABELS
+  // var alt = $('.hp .promo1').find('img')[0].alt;
+  // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
