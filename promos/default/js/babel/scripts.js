@@ -38,9 +38,9 @@ jQuery(document).ready(function () {
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
       // $('.promos .the-promo.promo1').hide();
-      $('.promos .the-promo.promo1').remove();
+      // $('.promos .the-promo.promo1').remove();
     } else {
-      $('.promos .the-promo.shipping-promo').remove();
+      // $('.promos .the-promo.shipping-promo').remove();
     }
   } else {
     //? NOT HOME PAGE
@@ -111,5 +111,6 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-  (0, _makeBxslider.makeBxSlider)('.promos-wrap');
+
+  // makeBxSlider('.promos-wrap');
 });
