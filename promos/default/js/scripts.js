@@ -124,7 +124,7 @@ jQuery(document).ready(function () {
 
   });
 
-  makeBxSlider('.promos-wrap');
+  // makeBxSlider('.promos-wrap');
 
 
 });
