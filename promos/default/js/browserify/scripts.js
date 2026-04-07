@@ -163,7 +163,8 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-  (0, _makeBxslider.makeBxSlider)('.promos-wrap');
+
+  // makeBxSlider('.promos-wrap');
 });
 
 },{"./countdown.js":2,"./make-bxslider.js":3}]},{},[4]);
