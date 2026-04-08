@@ -1,4 +1,12 @@
 export const urls = [
+   {
+    default: [
+      { text: 'Girl', url: '/girls-swimsuits-swimwear' },
+      { text: 'Boy', url: '/boys-swimwear' },
+      { text: 'Baby', url: '/baby-swimwear' },
+      { text: 'Toddler', url: '/toddler-swimwear' },
+    ]
+  },
   {
     girl: [
       { text: 'One Pieces', url: '/girls-swimsuits-swimwear?store_price%5B%5D=&swimwear_type%5B%5D=One%20Pieces' },

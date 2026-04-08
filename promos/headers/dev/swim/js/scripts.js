@@ -20,29 +20,36 @@ $(document).ready(function () {
   };
 
   switch (href) {
+    case '/swimwear':
+      //code here
+      makeCtas(urls[0].default);
+
+      break;
+      
     case '/girls-swimsuits-swimwear':
       //code here
-      makeCtas(urls[0].girl);
+      makeCtas(urls[1].girl);
 
       break;
 
     case '/boys-swimwear':
       //code here
-      makeCtas(urls[1].boy);
+      makeCtas(urls[2].boy);
 
       break;
 
     case '/baby-swimwear':
       //code here
-      makeCtas(urls[2].baby);
+      makeCtas(urls[3].baby);
 
       break;
 
     case '/toddler-swimwear':
       //code here
-      makeCtas(urls[3].toddler);
+      makeCtas(urls[4].toddler);
 
       break;
+
   };
 
 
