@@ -5,6 +5,7 @@ export const urls = [
       { text: 'Boy', url: '/boys-swimwear' },
       { text: 'Baby', url: '/baby-swimwear' },
       { text: 'Toddler', url: '/toddler-swimwear' },
+      { text: 'Family', url: '/family-outfitting/swim'}
     ]
   },
   {

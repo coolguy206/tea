@@ -18,6 +18,9 @@ var urls = exports.urls = [{
   }, {
     text: 'Toddler',
     url: '/toddler-swimwear'
+  }, {
+    text: 'Family',
+    url: '/family-outfitting/swim'
   }]
 }, {
   girl: [{
