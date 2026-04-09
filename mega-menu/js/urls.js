@@ -18,14 +18,17 @@ export const urls = {
       boy: `/toddler-boys-clothes`,
     },
     new: {
+      promo: `/new-arrivals`,
       girl: `/girls-clothing/new-arrivals`,
       boy: `/boys-clothing/new-arrivals`,
       baby: {
+        baby:`/baby-clothes/new-arrivals`,
         girl: `/baby-girl-clothes/new-arrivals`,
         boy: `/baby-boy-clothes/new-arrivals`,
         newborn: `/newborn-clothes/favorites/new-arrivals`,
       },
       toddler: {
+        toddler: `/toddler-clothes/new-arrivals`,
         girl: `/toddler-girls-clothes/favorites/new-arrivals`,
         boy: `/toddler-boys-clothes/favorites/new-arrivals`,
       }

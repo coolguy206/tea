@@ -6,7 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2026`;
-var num = `0328`;
+var num = `0410`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
@@ -129,7 +129,7 @@ c.on('ready', function () {
   */
 
   //?MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
-
+/*
   c.mkdir(url, true, (err) => {
     if (err) throw err;
     console.log(`successfully made dir: ${url}`);
@@ -239,10 +239,10 @@ c.on('ready', function () {
     })
     // c.end();
   });
-
+*/
 
   //?GET LIST OF FILES THEN COMPILE HTML FILES
-  /*
+  
     c.list(url, function (err, list) {
       if (err) throw err;
       list.map((file, i) => {
@@ -344,7 +344,7 @@ c.on('ready', function () {
   
       c.end();
     });
-  */
+  
 
   //?GET LIST OF FILES THEN DELETE FILES IN DIRECTORY
   /*
