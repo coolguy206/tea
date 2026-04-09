@@ -48,4 +48,3 @@ var inview = exports.inview = function inview(elem) {
 //     }
 //   });
 // };
-//# sourceMappingURL=inview.js.map

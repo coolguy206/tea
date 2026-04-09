@@ -2,7 +2,7 @@
 
 var _inview = require("./inview.js");
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
   $('.best-sellers').css('opacity', 1);
 
@@ -35,4 +35,3 @@ $(document).ready(function () {
   }
   (0, _inview.inview)('.best-sellers');
 });
-//# sourceMappingURL=scripts.js.map

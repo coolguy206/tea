@@ -10,11 +10,11 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  // cloneExecuteSlider('.select-styles.all', '.shop-slideshow');
+  // cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow');
 
-  cloneExecuteSlider('.the-swim-slider', '.shop-slideshow-2');
+  cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
-  cloneExecuteSlider('.spain-edit.all', '.shop-slideshow-3');
+  cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow-3');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
