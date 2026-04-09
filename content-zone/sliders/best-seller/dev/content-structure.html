@@ -6,7 +6,7 @@
         <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
                 
-                {load_thumbs mode="category_recursive" category="clothing-sale"}
+                {load_thumbs mode="category_recursive" category="best-sellers"}
                 {thumb_loop count="20"}
                     {thumb name=cat}
                         {if $cat.item->badge != "soldout" && $cat.item->badge != "comingsoon"}
