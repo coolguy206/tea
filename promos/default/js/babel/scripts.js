@@ -1,6 +1,6 @@
 "use strict";
 
-// import { makeBxSlider } from './make-bxslider.js';
+var _makeBxslider = require("./make-bxslider.js");
 // import {countDown} from './countdown.js';
 
 jQuery(document).ready(function () {
@@ -59,6 +59,7 @@ jQuery(document).ready(function () {
     //? MOBILE
     if (window.innerWidth < 431) {
       $(".promos .the-promo").css('height', '100px');
+      (0, _makeBxslider.makeBxSlider)('.promos-wrap');
     }
   }
 

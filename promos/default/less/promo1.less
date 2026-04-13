@@ -53,7 +53,12 @@
             // text-decoration:underline;
 
             i {
-                color: @promo1Color3;
+                @media screen and (max-width: 430px) {
+                    // font-size: @promo1FontSize;
+                    display: none;
+                }
+
+                color: @promo1Color2;
                 font-style: normal;
             }
 
@@ -77,6 +82,11 @@
             // text-decoration:underline;
 
             i {
+                @media screen and (max-width: 430px) {
+                    // font-size: @promo1FontSize;
+                    display: none;
+                }
+
                 color: @promo1Color3;
                 font-style: normal;
             }

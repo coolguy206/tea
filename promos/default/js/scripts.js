@@ -1,4 +1,4 @@
-// import { makeBxSlider } from './make-bxslider.js';
+import { makeBxSlider } from './make-bxslider.js';
 // import {countDown} from './countdown.js';
 
 jQuery(document).ready(function () {
@@ -63,6 +63,7 @@ jQuery(document).ready(function () {
     //? MOBILE
     if (window.innerWidth < 431) {
       $(`.promos .the-promo`).css('height', '100px');
+      makeBxSlider('.promos-wrap');
     }
 
   }

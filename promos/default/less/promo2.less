@@ -1,14 +1,18 @@
 @import 'var.less';
-@promo2Bg: #B53968;
-@promo2Color1: #E9E91B;
-@promo2Color2: #E9E91B;
+@promo2Bg: #2C519F;
+@promo2Color1: #fff;
+@promo2Color2: #FFE100;
 @promo2Color3: #fff;
 @promo2FontSize: 4vw;
 
 
 &.promo2 {
+    @media screen and (max-width: 430px) {
+        display: block;
+    }
+
     background: @promo2Bg;
-    // display:none;
+    display:none;
 
     span {
         &.span-wrap {
@@ -18,6 +22,7 @@
                 // justify-content: center;
             }
         }
+
         &.first {
             @media screen and (max-width: 1679px) {
                 font-size: 1.2vw;
@@ -59,7 +64,7 @@
                 font-style: normal;
             }
 
-            color: @promo2Color1;
+            color: @promo2Color2;
             font-family: @gilroyb;
             // text-decoration: underline;
         }
