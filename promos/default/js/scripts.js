@@ -39,6 +39,7 @@ jQuery(document).ready(function () {
 
     //? MOBILE
     if (window.innerWidth < 431) {
+        makeBxSlider('.promos-wrap');
       // $(`.promos .the-promo`).css('height', '46px');
       // $(`.promos .the-promo span.third, .promos .the-promo span > a.third`).hide()
       // $('.promos .the-promo.promo1').hide();
@@ -62,6 +63,7 @@ jQuery(document).ready(function () {
 
     //? MOBILE
     if (window.innerWidth < 431) {
+      // console.log(`mobile`);
       $(`.promos .the-promo`).css('height', '100px');
       makeBxSlider('.promos-wrap');
     }

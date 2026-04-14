@@ -1,7 +1,7 @@
 import '../../../../node_modules/bxslider/dist/jquery.bxslider.min.js'
 
 export const makeBxSlider = function (elem) {
-
+  // console.log(`execute makeBxSlider`);
   $(elem).bxSlider({
     auto: true,
     autoHover: true,

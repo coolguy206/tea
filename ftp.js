@@ -7,7 +7,7 @@ require('dotenv').config()
 
 var year = `2026`;
 var num = `0415`;
-var version = `v0`;
+var version = `v1`;
 
 //!NEEDS ENDING SLASH
 var baseURL = `/media/tea_collection/`;
@@ -24,14 +24,14 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/email-signup/handoff/`;
-var readFilePath = `Site/${num}/Site/hp`;
+// var readFilePath = `Site/${num}/Site/`;
 // var readFilePath = `Site/${num}/Site/promo/hp/`;
-// var readFilePath = `Site/${num}/Site/promo/mega/`;
+var readFilePath = `Site/${num}/Site/promo/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/promo/print-shop/`;
 // var writeFilePath = `landing-page/email/catalog-sign-up/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
@@ -129,7 +129,7 @@ c.on('ready', function () {
   */
 
   //?MAKE DIRECTORY THEN UPLOAD FILES AND MAKE HTML FILES
-/*
+
   c.mkdir(url, true, (err) => {
     if (err) throw err;
     console.log(`successfully made dir: ${url}`);
@@ -239,10 +239,10 @@ c.on('ready', function () {
     })
     // c.end();
   });
-*/
+
 
   //?GET LIST OF FILES THEN COMPILE HTML FILES
-  
+  /*
     c.list(url, function (err, list) {
       if (err) throw err;
       list.map((file, i) => {
@@ -344,7 +344,7 @@ c.on('ready', function () {
   
       c.end();
     });
-  
+  */
 
   //?GET LIST OF FILES THEN DELETE FILES IN DIRECTORY
   /*

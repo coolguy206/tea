@@ -15,6 +15,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.makeBxSlider = void 0;
 require("../../../../node_modules/bxslider/dist/jquery.bxslider.min.js");
 var makeBxSlider = exports.makeBxSlider = function makeBxSlider(elem) {
+  // console.log(`execute makeBxSlider`);
   $(elem).bxSlider({
     auto: true,
     autoHover: true,
