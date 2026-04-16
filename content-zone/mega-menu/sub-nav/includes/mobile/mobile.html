@@ -424,12 +424,100 @@
 		</li>
 
 
-		<!-- <li>
+		<li>
 			<h2>Toddler <span class="fas fa-plus"></span></h2>
-			<div class="sub"> -->
-				<!-- include "toddler-m.html" -->
-			<!-- </div>
-		</li> -->
+			<div class="sub">
+				<!-- <h3><span class="fas fa-chevron-left"></span> Girl (5&#8211;16) <span class="fas fa-chevron-right"></span></h3> -->
+				<div class="links">
+				  <ul aria-label="Shop by Category">
+				    <li>Shop by Category</li>
+				    
+				    {* BLACK FRIDAY *}
+				    {*include "black-friday/girl.html"*}
+
+				    <!-- <li><a href="/black-friday?gender%5B%5D=girl" data="mobile mega menu black friday girl" class="bf-font-color-mobile">Black Friday</a></li> -->
+
+				    <li><a href="{$secure_html_url}toddler-girls-clothes" data="mobile mega menu toddler girl view all" >Shop All Toddler Girl (2&#8211;4)</a></li>
+				    <li><a href="{$secure_html_url}toddler-boys-clothes" data="mobile mega menu toddler boy view all" >Shop All Toddler Boy (2&#8211;4)</a></li>
+
+				    {sub_cats name="cat" category="toddler-clothes"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler categories" >{$cat.title}</a></li>
+				    {/sub_cats}
+
+				    <!-- <li><a href="{$secure_html_url}girls-clothing/view-all" data="mobile mega menu girl view all" >Shop All</a></li> -->
+				    <li><a class="sale" href="{$secure_html_url}sale/toddler-clothing/view-all" data="mobile mega menu toddler categories sale" >Sale</a></li>
+				    
+				  </ul>
+				  
+				  <ul aria-label="Shop by Collection">
+				    <li>Shop by Collection</li>
+				    <!-- <li><a href="/product/20f92802/tea-adult-mask-2-pack.html" class="masks" data="mega menu"> Tea Adult Masks</a></li> -->
+
+				    <li><a href="/spain-edit" class="" data="mega menu Shop by Collection"> Spain Edit &#x1F1EA;&#x1F1F8;</a></li>
+
+				    <li><a href="/kids-vacation-outfits" class="" data="mega menu Shop by Collection"> Vacation Edit ✈️</a></li>
+
+				    <li><a href="/special-occasion_2" class="" data="mega menu Shop by Collection"> Special Occasion ✨</a></li>
+
+				    <!-- <li><a href="/gift-shop" data="mega menu Shop by Collection">Gift Guide 🎁</a></li> -->
+
+				    <!-- <li><a href="/kids-cozy-clothing" data="mega menu Shop by Collection">Cozy Shop &#x2615;</a></li> -->
+
+				    <!-- <li><a href="/south-korea-edit" class="" data="mega menu Shop by Collection"> South Korea &#127472;&#127479;</a></li> -->
+
+				    <!-- <li><a href="/kids-easter-holiday-clothing" class="" data="mega menu Shop by Collection"> Easter Shop 🐰</a></li> -->
+
+				    <!-- <li><a href="/valentines-day-print-shop" class="" data="mega menu Shop by Collection">Valentine's Day &#128150;</a></li> -->
+
+				    <li><a href="/print-shop" class="" data="mega menu Shop by Collection">The Print Shop &#127912;</a></li>
+
+				    <li><a href="/global-shop" class="" data="mega menu Shop by Collection">Global Shop &#127757;</a></li>
+
+				    <li><a href="/best-sellers" class="" data="mega menu Shop by Collection"> Best Sellers &#x1F3C6;</a></li>
+
+
+				    <!-- <li><a href="/gift-and-save-shop" class="" data="mega menu Shop by Collection">  Bundle & Save</a></li> -->
+
+				    <!-- <li><a href="/tushbaby" class="" data="mega menu Shop by Collection">  Tea x Tushbaby</a></li> -->
+
+
+
+				    <!-- <li><a href="/back-to-school" class="" data="mega menu Shop by Collection"> Back to School &#127822;</a></li> -->
+
+				    <!-- <li><a href="/picture-day-edit" class="" data="mega menu Shop by Collection"> Picture Day &#128247;</a></li> -->
+
+				    {*
+				    {sub_cats name="cat" category="girls-clothing/favorites"}
+				      <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mobile mega menu toddler favorites" >{$cat.title}</a></li>
+				    {/sub_cats}
+				    *}
+
+				  </ul>
+
+				  <!-- <ul>
+				    <li>Tea REWEAR</li>
+				    <li><a class="kidizen-url" href="#" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&utm_medium=Web+-+girl+dropdown&utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea for Rewards</a></li>
+				  </ul> -->
+
+				  <ul class="category" aria-label="Tea REWEAR">
+				      <li>Tea REWEAR</li>
+				      <li>
+				          <a href="#" class="kidizen-url" aria-disabled="true">Trade In & Shop Preloved Tea</a>
+				      </li>
+				  </ul>
+
+				  <ul class="category" aria-label="Tea Gives Back">
+				      <li>Tea Gives Back</li>
+				      <li><a href="/elimugirls" data="mega menu tea gives back">Tea x Elimu Girls</a></li>
+				      <li><a href="/about/our-values" data="mega menu tea gives back">Our Give Back</a></li>
+				      <li><a href="/giving-shop" data="mega menu tea gives back">Donate to Global Fund for Children</a></li>
+				      <li><a href="/cms/school-days/school-days/1.html" data="mega menu tea gives back">School Days</a></li>
+				  </ul>
+
+				</div>
+
+			</div>
+		</li>
 
 
 		<li>
@@ -604,6 +692,24 @@
 			<div class="sub"></div>
 		</li> -->
 
+		
+		<li>
+			<!-- <h2><a href="/gift-and-save-shop" class="" data="mobile mega menu top level"> BUNDLES</a></h2> -->
+			 <h2>BUNDLES<span class="fas fa-plus"></span></h2>
+			<div class="sub">
+				<div class="links">
+				    <ul aria-label="Shop by Category">
+				        <li>Shop by Category</li>
+				        <li><a href="/leggings-shop" class="" data="mobile mega menu bundles">Leggings: $16 Each 3+ Items</a></li>
+				        <li><a href="/dress-shop" class="" data="mobile mega menu bundles">Dresses: 20% Off 3+ Items</a></li>
+				        <li><a href="/baby-rompers" class="" data="mobile mega menu bundles">Baby Rompers: 20% Off 3+ Items</a></li>
+				        <!-- <li><a href="/mothers-day" class="" data="mobile mega menu bundles">Tea x Baby2Baby Mother's Day</a></li> -->
+				        <!-- <li><a href="/product/shiplabel/tea-collection-rewear-shipping-label-tea-rewear-shipping-label.html#tea%20rewear" class="" data="mobile mega menu bundles">Rewear Label</a></li> -->
+				    </ul>
+				</div>
+			</div>
+		</li>
+
 
 		<li>
 			<h2>The Print Shop<span class="fas fa-plus"></span></h2>
@@ -632,11 +738,6 @@
 		<!-- <li>
 			<h2><a href="/special-occasion_2" style="" data="mobile mega menu top level">special occasion</a></h2>
 			<div class="sub"></div>
-		</li> -->
-
-
-		<!-- <li>
-			<h2><a href="/gift-and-save-shop" class="" data="mobile mega menu top level"> BUNDLES</a></h2>
 		</li> -->
 
 
