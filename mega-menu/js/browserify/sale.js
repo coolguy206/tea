@@ -99,9 +99,12 @@ var promoVars = exports.promoVars = {
 var _switchNewArrivals = require("./switch-new-arrivals.js");
 var _switchSale = require("./switch-sale.js");
 var _inview = require("./inview.js");
+var _urls = require("./urls.js");
 $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
+  //? CHANGER MOBILE MEGA MENU IMAGE URL
+  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', _urls.urls.promo.sale2.promo);
   (0, _inview.inview)('.mega-img-container, .mega-img-bf');
   $('.dept-girl').hover(function () {
 
@@ -202,7 +205,7 @@ $(document).ready(function () {
   }, function () {});
 });
 
-},{"./inview.js":1,"./switch-new-arrivals.js":4,"./switch-sale.js":5}],4:[function(require,module,exports){
+},{"./inview.js":1,"./switch-new-arrivals.js":4,"./switch-sale.js":5,"./urls.js":6}],4:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
