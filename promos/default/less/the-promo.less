@@ -55,47 +55,8 @@ header.site-header {
   }
 }
 
-//? CHANGE THE TOP OF THE MOBILE FILTERS
-/*
-.category-page .content .mobile-filter-toggle-wrapper.fixed,
-  .search-page .content .mobile-filter-toggle-wrapper.fixed {
-    @media screen and (max-width: 991px){
-      top: 10% !important;
-    }
-    @media screen and (max-width: 768px){
-      // top: 9% !important;
-    }
-    @media screen and (max-width: 600px){
-      top: 12% !important;
-    }
-    @media screen and (max-width: 430px){
-      top: 15% !important;
-    }
-    @media screen and (max-width: 414px){
-      top: 19% !important;
-    }
-    @media screen and (max-width: 411px){
-      top: 17% !important;
-    }
-    @media screen and (max-width: 390px){
-      top: 17% !important;
-    }
-    @media screen and (max-width: 376px){
-      top: 21% !important;
-    }
-    @media screen and (max-width: 320px){
-      top: 25% !important;
-    }
-   
-  }
-*/
 
 .promos {
-  // max-width: 1680px;
-  // margin: 0 auto;
-  // position: relative;
-  // display: none;
-  // background: @promo1Bg;
 
   .promos-wrap {
     // max-width: 1680px;
@@ -192,11 +153,8 @@ header.site-header {
       &.first {
         @media screen and (max-width: 430px) {
           left: 0;
-          // display: none;
         }
 
-        // left: -1%;
-        // color: @fontColor1;
         position: relative;
         font-family: gilroy-bold;
       }
@@ -204,45 +162,15 @@ header.site-header {
       &.second {
         @media screen and (max-width: 430px) {
           display: block;
-          // display: inline;
         }
 
-        // color: @fontColor2;
         i {
-
-          &:first-of-type {
-            @media screen and (max-width: 430px) {
-              // color: @promo2Color2;
-            }
-
-            // color: @defaultPromoColor1;
-          }
-
-          &:nth-of-type(2) {
-            @media screen and (max-width: 430px) {
-              // color: @promo2Color1;
-            }
-
-            // color: @defaultPromoColor2;
-          }
-
-          &:last-of-type {
-            @media screen and (max-width: 430px) {}
-
-            // color: @defaultPromoColor3;
-          }
-
-          &.mobile {
-            // display: inline !important;
-          }
-
           font-style: normal;
         }
       }
 
       &.third {
         @media screen and (max-width: 430px) {
-          // left: 0;
           display: block;
         }
 
@@ -265,12 +193,9 @@ header.site-header {
             padding: 2px;
             position: absolute;
             bottom: -10%;
-            // left: 0;
-            // display:none;
           }
         }
 
-        // left: 0;
       }
 
       &.shop-now {
@@ -292,7 +217,6 @@ header.site-header {
           text-transform: uppercase;
           font-style: normal;
           text-decoration: none;
-          // color: #768ca3;
         }
       }
 
@@ -301,35 +225,18 @@ header.site-header {
           right: 6vw;
         }
 
-        @media screen and (max-width: 810px) {
-          // left: 86%;
-          // display: none;
-        }
+        @media screen and (max-width: 810px) {}
 
         @media screen and (max-width: 430px) {
-          // left: 78%;
-
-          // left: 50%;
-
-          // top: 74%;
-          // top: 78%;
           top: 76%;
           transform: translate(-50%, 0);
-          // position: relative;
-          // display: none;
-          // margin: 2% 0 0;
-
 
           //? rotated 45 degrees
           transform: rotate(45deg);
 
-          // left: 86%;
-
           right: 0;
           top: 19%;
         }
-
-        // left: 91%;
 
         right: 100px;
         top: 50%;
@@ -354,7 +261,6 @@ header.site-header {
 
           font-size: 15px;
           line-height: 18px;
-          // color: #fff;
           text-decoration: none;
           font-family: gilroy-regular;
           text-transform: capitalize;
@@ -369,14 +275,15 @@ header.site-header {
       max-width: 100%;
     }
 
-    @import 'promo1.less';
+    // @import 'promo1.less';
     // @import 'promo2.less';
     // @import 'promo3.less';
-    
+
     // @import 'promo-email.less';
-    @import 'promo-rewear.less';
+    // @import 'promo-rewear.less';
     // @import 'promo-shipping.less';
     // @import 'promo-school-days.less';
+    @import 'promo-sos.less';
     // @import 'bf.less';
 
 

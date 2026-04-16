@@ -115,5 +115,6 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-  (0, _makeBxslider.makeBxSlider)('.promos-wrap');
+
+  // makeBxSlider('.promos-wrap');
 });

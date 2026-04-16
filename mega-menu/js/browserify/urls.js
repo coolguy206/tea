@@ -103,6 +103,22 @@ var urls = exports.urls = {
         boy: "/sale/toddler-boys-clothing/view-all"
       }
     },
+    sale2: {
+      promo: "/clothing-sale",
+      girl: "/clothing-sale?gender%5B%5D=girl&store_price%5B%5D=",
+      boy: "/clothing-sale?gender%5B%5D=boy&store_price%5B%5D=",
+      baby: {
+        baby: "/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=",
+        girl: "/sale/baby-girl-clothes/view-all",
+        boy: "/sale/baby-boy-clothes/view-all",
+        newborn: "/sale/newborn-clothing/view-all"
+      },
+      toddler: {
+        toddler: "/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=",
+        girl: "/sale/toddler-girls-clothing/view-all",
+        boy: "/sale/toddler-boys-clothing/view-all"
+      }
+    },
     clearance: {
       promo: "/sale/clearance",
       girl: "/sale/girls-clothing/clearance",

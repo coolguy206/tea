@@ -1,0 +1,92 @@
+@sale-on-sale-promoBg: #477461;
+@sale-on-sale-promoColor1: #FF0;
+@sale-on-sale-promoColor2: #fff;
+@sale-on-sale-promoColor3: #FF0;
+@sale-on-sale-promoColorDetails: #fff;
+@sale-on-sale-promoFontSize: 3.5vw;
+
+&.sale-on-sale-promo {
+    background: @sale-on-sale-promoBg;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @sale-on-sale-promoFontSize;
+                // display: none;
+            }
+
+            i {
+                font-style: normal;
+                color: @sale-on-sale-promoColor2;
+            }
+
+            color: @sale-on-sale-promoColor1;
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @sale-on-sale-promoFontSize;
+            }
+
+            i {
+                font-style: normal;
+                color: @sale-on-sale-promoColor2;
+            }
+
+            color: @sale-on-sale-promoColor2;
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @sale-on-sale-promoFontSize;
+            }
+
+            i {
+                font-style: normal;
+                color: @sale-on-sale-promoColor2;
+            }
+
+            u {
+                color: @sale-on-sale-promoColor3;
+
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 28%;
+                        left: 0vw;
+                    }
+
+                    width: 100%;
+                    right: 0 !important;
+                }
+
+            }
+
+            color: @sale-on-sale-promoColor3;
+            // text-decoration:underline;
+        }
+
+        &.shop-now {
+            i {
+                color: @sale-on-sale-promoColor2;
+            }
+        }
+
+        &.details {
+            a {
+                color: @sale-on-sale-promoColorDetails;
+            }
+        }
+    }
+}
