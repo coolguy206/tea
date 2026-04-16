@@ -391,6 +391,25 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
         $(_promoVars.promoVars.promo3Elem).show();
       }
       break;
+    case '/gift-and-save-shop':
+      promo1 = _urls.urls.promo["new"].promo;
+      promo2 = _urls.urls.promo.select.promo;
+      promo3 = _urls.urls.promo.sale.promo;
+      clearance = _urls.urls.promo.clearance.girl;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars["new"] !== "") {
+          $(_promoVars.promoVars["new"]).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
+      break;
     default:
       break;
   }
