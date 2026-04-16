@@ -15,13 +15,13 @@ refreshAccessToken((data) => {
     accessToken: access_token
   });
 
-  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/04 April/041026 Friends & Family/Handoff/Site/extra 10/`;
-  // var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Site/032426 Summer 1/handoff/`;
+  // var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Promotions/04 April/041026 Friends & Family/Handoff/Site/extra 10/`;
+  var folderPath = `/Sam Khieu’s files/Shared/Design/2026/Site/042026 Summer 1 Refresh/handoff/`;
   // var folderPath = `/Sam Khieu’s files/Shared/Design/2025/Campaign/121425 Tea x Tushbaby Giveaway/handoff/site/`
   folderPath = folderPath.toLowerCase();
   // console.log(folderPath);
 
-  var writeFilePath = `Site/0415/`;
+  var writeFilePath = `Site/0420/`;
   // var writeFilePath = `handoff/landing-pages/dresses/0210/`;
   writeFilePath = resolve(writeFilePath);
   // console.log(writeFilePath);

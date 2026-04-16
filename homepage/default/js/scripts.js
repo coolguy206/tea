@@ -10,7 +10,7 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  // cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow');
+  cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
 
   cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
@@ -54,7 +54,7 @@ $(document).ready(function () {
   // });
 
 
-  inview('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
+  inview('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promo4, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
 
 
   for (var i = 1; i < 9; i++) {

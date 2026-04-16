@@ -12,15 +12,52 @@
       .glide__slide {
         position: relative;
       }
+
+      .thumb-content {
+        @media screen and (max-width: 1679px) {
+          display: flex;
+          flex-wrap: wrap;
+          row-gap: .3vw;
+          padding: 0 0 0 3vw;
+        }
+
+        @media screen and (max-width: 430px) {
+          row-gap: 1vw;
+          padding: 0 0 0 7vw;
+        }
+
+
+        &>a,
+        .price-wrap,
+        .size,
+        .promo-teaser-thumb,
+        .js-qv {
+          @media screen and (max-width:1679px) {
+            font-size: .85vw !important;
+            margin: 0;
+            flex-basis: 100%;
+          }
+
+          @media screen and (max-width:1032px) {
+            font-size: 1.1vw !important;
+          }
+
+          @media screen and (max-width:430px) {
+            font-size: 3vw !important;
+          }
+
+        }
+      }
     }
   }
 
   .glide__bullets {
-    @media screen and (max-width: 430px){
+    @media screen and (max-width: 430px) {
       position: relative;
       padding: 6vw 0;
       bottom: 0;
     }
+
     position: absolute;
 
     button {
@@ -28,11 +65,13 @@
         width: 1.3vw;
         height: 1.3vw;
       }
+
       @media screen and (max-width: 430px) {
         width: 5vw;
         height: 5vw;
         border-radius: 3vw;
       }
+
       border-radius: 1vw;
       width: 21px;
       height: 21px;

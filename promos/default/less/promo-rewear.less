@@ -1,0 +1,127 @@
+@import 'var.less';
+@rewear-promoBg: #2C519F;
+@rewear-promo-Bg-2: #DFB6B2;
+@rewear-promoColor1: #fff;
+@rewear-promoColor2: #FFE100;
+@rewear-promoColor3: #fff;
+@rewear-promoDetails: #fff;
+@rewear-promoFontSize: 3.5vw;
+
+&.rewear-promo {
+    background: @rewear-promoBg;
+    // background-image: linear-gradient(to right, @rewear-promoBg , @rewear-promo-Bg-2);
+    // display: none;
+
+    span {
+        &.first {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @rewear-promoFontSize;
+                flex-basis: 100%;
+                // display: block;
+                // display: none;
+            }
+
+            color: @rewear-promoColor1;
+            font-family: @gilroyb;
+
+            i {
+                color: @rewear-promoColor3;
+                font-style: normal;
+            }
+
+            a {
+                color: @rewear-promoColor1;
+            }
+        }
+
+        &.second {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @rewear-promoFontSize;
+                // display: none;
+            }
+
+            color: @rewear-promoColor2;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+
+            i {
+                @media screen and (max-width: 430px) {
+                    // font-size: @rewear-promoFontSize;
+                    display: none;
+                }
+
+                color: @rewear-promoColor2;
+                font-style: normal;
+            }
+
+            a {
+                color: @rewear-promoColor1;
+            }
+        }
+
+        &.third {
+            @media screen and (max-width: 1679px) {
+                font-size: 1.2vw;
+            }
+
+            @media screen and (max-width: 430px) {
+                font-size: @rewear-promoFontSize;
+                display: inline-block;
+            }
+
+            color: @rewear-promoColor3;
+            font-family: @gilroyb;
+            // text-decoration:underline;
+
+            i {
+                @media screen and (max-width: 430px) {
+                    // font-size: @rewear-promoFontSize;
+                    display: none;
+                }
+
+                color: @rewear-promoColor3;
+                font-style: normal;
+            }
+
+
+            a {
+                color: @rewear-promoColor3;
+            }
+
+            u {
+                color: @rewear-promoColor3;
+
+                &:after {
+                    @media screen and (max-width: 430px) {
+                        width: 100%;
+                        position: absolute;
+                        left: 0;
+                        bottom: -10%;
+                    }
+
+                    left: 0;
+                }
+            }
+        }
+
+        &.shop-now {
+            i {
+                color: @rewear-promoColor2;
+            }
+        }
+
+        &.details {
+            a {
+                color: @rewear-promoDetails;
+            }
+        }
+    }
+}

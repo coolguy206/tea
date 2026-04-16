@@ -1,5 +1,7 @@
 @import "var.less";
 
+@import "glide/glide.less";
+
 .hp {
   background: #fff;
 
@@ -19,8 +21,10 @@
     display:flex;
   }
 
-  .spain-edit.all.sliders, .the-swim-slider {
-    display:none !important;
+  .spain-edit.all.sliders,
+  .the-swim-slider,
+  .best-sellers {
+    display: none !important;
   }
 
   .c1,
@@ -158,8 +162,9 @@
   @import "promos/promo1.less";
   // @import "promos/promo2.less";
   @import "promos/promo3.less";
+  @import "promos/promo4.less";
 
-  // @import "c1/c1.less";
+  @import "c1/c1.less";
   // @import "c1-slideshow/c1-slideshow.less";
 
   @import "c2/c2.less";
@@ -188,12 +193,14 @@
 
   @import "c7/c7.less";
 
-  @import "glide/glide.less";
+  // @import "glide/glide.less";
 
   @import "shop-slideshow/shop-slideshow.less";
   @import "shop-slideshow-2/shop-slideshow-2.less";
   @import "shop-slideshow-3/shop-slideshow-3.less";
 
   @import "why-tea/why-tea.less";
+
+  @import "hide-sliders.less";
 
 }
