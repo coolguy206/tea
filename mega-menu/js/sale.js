@@ -1,10 +1,14 @@
 import { switchNewArrivals } from './switch-new-arrivals.js';
 import { switchSale } from './switch-sale.js';
 import { inview } from './inview.js';
+import { urls } from './urls.js';
 
 $(document).ready(function () {
 
   // $('.menu .swimwear').text('$15 Swim');
+
+  //? CHANGER MOBILE MEGA MENU IMAGE URL
+  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', urls.promo.sale2.promo);
 
   inview('.mega-img-container, .mega-img-bf');
 
