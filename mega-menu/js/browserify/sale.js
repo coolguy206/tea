@@ -555,6 +555,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/gift-and-save-shop':
+    case '/':
       promo1 = _urls.urls.promo.sale2.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
