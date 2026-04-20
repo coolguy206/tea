@@ -149,8 +149,7 @@ jQuery(document).ready(function () {
     }
     // console.log(`fancy closed clicked`);
   });
-
-  // makeBxSlider('.promos-wrap');
+  (0, _makeBxslider.makeBxSlider)('.promos-wrap');
 });
 
 },{"./make-bxslider.js":2}]},{},[3]);
