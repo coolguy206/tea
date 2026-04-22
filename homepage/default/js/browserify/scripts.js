@@ -111,7 +111,9 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.mothers-day.all', '.shop-slideshow');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.best-sellers', '.shop-slideshow-2');
+
+  // cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
+
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
