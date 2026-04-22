@@ -1,10 +1,10 @@
 @import "../var.less";
 @c6-font-color: #fff;
-@c6-cta-color: #2C519F;
-@c6-cta-background: #FFE100;
+@c6-cta-color: #fff;
+@c6-cta-background: #32455D;
 @c6-h2-color: #fff;
-@c6-h3-color: #034F73;
-@c6-h3-color-430: #034F73;
+@c6-h3-color: #32455D;
+@c6-h3-color-430: #32455D;
 @c6-font-family: @crumb;
 
 .c6 {
@@ -99,6 +99,7 @@
             color: @c6-h2-color;
             font-size: 100px;
             line-height: 100px;
+            text-shadow: @text-shadow;
             // margin: 0 0 40px;
 
         }
@@ -137,15 +138,15 @@
                 width: 100%;
                 transform: translate(0, 0);
                 left: 0;
-                top: 98vw;
+                top: 10vw;
                 row-gap: 4vw;
             }
 
             margin: 0;
             position: absolute;
             transform: translate(-50%, -50%);
-            top: 56%;
-            left: 23%;
+            top: 50%;
+            left: 32%;
             width: 40%;
             text-align: center;
             display: flex;
@@ -161,7 +162,7 @@
                     // justify-content: center;
                     // margin: 110% 0 0;
                     // top: 120vw;
-                    top: 0;
+                    top: 110vw;
                     position: relative;
                     text-align: center;
                 }
@@ -171,16 +172,16 @@
 
                 a {
                     @media screen and (max-width:1679px) {
-                        // width: 16.4vw;
+                        width: 19vw;
                     }
 
                     @media screen and(max-width: 430px) {
-                        // width: 56.5vw;
+                        width: 56.5vw;
                     }
 
                     background: @c6-cta-background;
                     color: @c6-cta-color;
-                    // width: 275px;
+                    width: 316px;
                 }
             }
 

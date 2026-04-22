@@ -12,7 +12,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
 
-  // cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
+  cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
   cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow-3');
 
