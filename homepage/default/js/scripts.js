@@ -1,5 +1,6 @@
 
 import { inview } from './inview.js';
+import { ariaLabel } from './aria-label.js';
 // import { countdown } from './countdown.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
 // import { makeGlide } from './make-glide.js';
@@ -27,7 +28,10 @@ $(document).ready(function () {
   //? ARIA LABELS
   // var alt = $('.hp .promo1').find('img')[0].alt;
   // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
- 
+
+  ariaLabel('.hp .c2 a.cta-border', 'shop ');
+  ariaLabel('.hp .c3 a.cta-border', 'shop ');
+
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);

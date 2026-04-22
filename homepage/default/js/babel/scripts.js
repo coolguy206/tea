@@ -1,6 +1,7 @@
 "use strict";
 
 var _inview = require("./inview.js");
+var _ariaLabel = require("./aria-label.js");
 var _cloneExecuteSlider = require("./clone-execute-slider.js");
 var _tracking = require("./tracking.js");
 // import { countdown } from './countdown.js';
@@ -22,6 +23,9 @@ $(document).ready(function () {
   //? ARIA LABELS
   // var alt = $('.hp .promo1').find('img')[0].alt;
   // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
+
+  (0, _ariaLabel.ariaLabel)('.hp .c2 a.cta-border', 'shop ');
+  (0, _ariaLabel.ariaLabel)('.hp .c3 a.cta-border', 'shop ');
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
