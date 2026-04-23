@@ -4,6 +4,23 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
+exports.ariaLabel = void 0;
+var ariaLabel = exports.ariaLabel = function ariaLabel(elem, str) {
+  var ctas = $(elem);
+  $(ctas).each(function () {
+    // console.log($(this).text())
+    var regex = new RegExp(str, "g");
+    var text = $(this).text().replace(regex, "").trim();
+    $(this).closest('div[role="region"]').attr('aria-label', text);
+  });
+};
+
+},{}],2:[function(require,module,exports){
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
 exports.cloneExecuteSlider = void 0;
 var _glide = _interopRequireDefault(require("@glidejs/glide"));
 function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
@@ -43,7 +60,7 @@ var cloneExecuteSlider = exports.cloneExecuteSlider = function cloneExecuteSlide
   $('.hp ' + elem).show();
 };
 
-},{"@glidejs/glide":5}],2:[function(require,module,exports){
+},{"@glidejs/glide":6}],3:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -95,10 +112,11 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],3:[function(require,module,exports){
+},{}],4:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
+var _ariaLabel = require("./aria-label.js");
 var _cloneExecuteSlider = require("./clone-execute-slider.js");
 var _tracking = require("./tracking.js");
 // import { countdown } from './countdown.js';
@@ -111,9 +129,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.mothers-day.all', '.shop-slideshow');
-
-  // cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
-
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.best-sellers', '.shop-slideshow-2');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow-3');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
@@ -122,6 +138,9 @@ $(document).ready(function () {
   //? ARIA LABELS
   // var alt = $('.hp .promo1').find('img')[0].alt;
   // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
+
+  (0, _ariaLabel.ariaLabel)('.hp .c2 a.cta-border', 'shop ');
+  (0, _ariaLabel.ariaLabel)('.hp .c3 a.cta-border', 'shop ');
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
@@ -156,7 +175,7 @@ $(document).ready(function () {
   (0, _tracking.addAltClass)();
 });
 
-},{"./clone-execute-slider.js":1,"./inview.js":2,"./tracking.js":4}],4:[function(require,module,exports){
+},{"./aria-label.js":1,"./clone-execute-slider.js":2,"./inview.js":3,"./tracking.js":5}],5:[function(require,module,exports){
 "use strict";
 
 Object.defineProperty(exports, "__esModule", {
@@ -207,7 +226,7 @@ var addAltClass = exports.addAltClass = function addAltClass() {
 //   });
 // };
 
-},{}],5:[function(require,module,exports){
+},{}],6:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4109,4 +4128,4 @@ var addAltClass = exports.addAltClass = function addAltClass() {
 
 }));
 
-},{}]},{},[3]);
+},{}]},{},[4]);

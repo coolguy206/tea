@@ -1,5 +1,6 @@
 
 import { inview } from './inview.js';
+import { ariaLabel } from './aria-label.js';
 // import { countdown } from './countdown.js';
 import { cloneExecuteSlider } from './clone-execute-slider.js';
 // import { makeGlide } from './make-glide.js';
@@ -12,7 +13,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
 
-  // cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
+  cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
   cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow-3');
 
@@ -27,7 +28,10 @@ $(document).ready(function () {
   //? ARIA LABELS
   // var alt = $('.hp .promo1').find('img')[0].alt;
   // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
- 
+
+  ariaLabel('.hp .c2 a.cta-border', 'shop ');
+  ariaLabel('.hp .c3 a.cta-border', 'shop ');
+
 
   // if (window.innerWidth < 431) {
   //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
