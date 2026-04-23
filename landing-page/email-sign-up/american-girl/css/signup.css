@@ -1,1 +1,1 @@
-div.sign-up{text-align:center}div.sign-up .the-content{display:flex;row-gap:59px;flex-wrap:wrap;justify-content:center;align-items:center}div.sign-up .error{display:none}div.sign-up .error p{color:#d94d52}
+div.sign-up{text-align:center}div.sign-up .the-content{display:flex;row-gap:59px;flex-wrap:wrap;justify-content:center;align-items:center}@media screen and (max-width:1679px){div.sign-up .the-content{row-gap:3.5vw}}

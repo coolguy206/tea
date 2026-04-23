@@ -1,48 +1,86 @@
 import {
   inview
 } from './inview.js';
+import {
+  phoneConvert
+} from './phone.js';
+// console.log(keys);
 
 $(document).ready(function () {
 
+  var notifiedDate = `12/22/25`;
+  $('.notified-date').html(notifiedDate);
+
   inview('.email-wrap');
 
-  var a;
-  var url = window.location.href;
-  var c = $(".email-wrap").find("button");
-  var e = null;
-
-  var listId = `WwYEri`;
-  // var listId = `UERrV4`;
   var companyId = `RAd6JR`;
+  var list = `WwYEri`;
+  var custom_source = `AG_Tea_Signup`;
 
   function emailIsValid(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)
   }
 
-  $(c).click(function (c) {
-    c.preventDefault();
-    var e = $(".email-wrap").find("input").val();
-    $(".email-wrap .error").hide();
-    var f = emailIsValid(e);
+  //? force phone to only be numbers
+  $('.this-form input[name="the-phone"]').on('input', function (e) {
+    $(this).val($(this).val().replace(/[^0-9]/g, ''));
+  });
 
-    if (f) {
+  $('.this-form form button').click(function (e) {
+    e.preventDefault();
+    // console.log(e.target);
+    var fname = $('.this-form input[name="fname"]').val();
+    var lname = $('.this-form input[name="lname"]').val();
+    // var instagram = $('.this-form input[name="instagram"]').val();
+    var email = $('.this-form input[name="email"]').val();
+    // var childAge = $('.this-form input[name="childAge"]').val();
+    var phone = $('.this-form input[name="the-phone"]').val();
+    var checkbox = $('.this-form input[type=checkbox]').prop('checked');
+    var valid = emailIsValid(email);
+    // console.log(`
+    //   fname: ${fname}
+    //   lname: ${lname}
+    //   email: ${email}
+    //   checkbox: ${checkbox}
+    //   valid: ${valid}`);
 
-      $(".email-wrap .input-fields").hide();
-
-      var ac = "AG_Tea_Signup";
-
-      // console.log(ac);
+    if (valid && checkbox && fname !== '' && lname !== '') {
+      $('.this-form form').hide();
+      $('.this-form .sending').show();
 
       var theData = {
         data: {
           type: "subscription",
           attributes: {
-            list_id: listId,
-            custom_source: ac,
-            email: e
+            profile: {
+              data: {
+                type: "profile",
+                attributes: {
+                  // properties: { instagram: instagram },
+                  first_name: fname,
+                  last_name: lname,
+                  email: email,
+                },
+              }
+            },
+            custom_source: custom_source
+          },
+          relationships: {
+            list: { data: { type: "list", id: list } }
           }
         }
-      };
+      }
+
+      // if (childAge !== ``) {
+      //   theData.data.attributes.properties.child_age = childAge;
+      // }
+
+      if (phone !== `` && phone.length == 10) {
+        phone = phoneConvert(phone);
+        theData.data.attributes.profile.data.attributes.phone_number = phone;
+      }
+
+      console.log(theData);
 
       theData = JSON.stringify(theData);
 
@@ -51,26 +89,26 @@ $(document).ready(function () {
         type: 'post',
         data: theData,
         headers: {
-          revision: '2023-02-22',
+          revision: '2024-10-15',
           'content-type': 'application/json'
         },
         success: function (data, status, xhr) {
-          console.log('klaviyo email sign up page success');
-          $(".email-wrap .the-content").hide();
-          $(".email-wrap .thanks").css('display', 'flex');
-        },
-        error: function () {
-          $(".email-wrap .error").show();
-          $(".email-wrap .input-fields").show();
+          console.log('klaviyo success register');
+          // jQuery(document).trigger('klaviyoSuccess', data);
+          $('.this-form .sending').hide();
+          $('.email-wrap .the-content').hide();
+          $('.email-wrap .thanks').css('display', 'flex');
         }
       });
 
     } else {
-
-      $(".email-wrap .error").show();
-      $(".email-wrap .input-fields").show();
+      console.log('form sent error');
+      $('.this-form .sending').hide();
+      $('.this-form form').show();
+      $('.this-form .this-error').css('display', 'block');
+      $('.this-form input[name="fname"], .this-form input[name="lname"], .this-form input[name="instagram"], .this-form input[name="email"], .this-form input[type=checkbox]').addClass('error-border')
+      // $('.this-form input').focus();
     }
-
   });
 
 });
