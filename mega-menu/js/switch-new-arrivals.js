@@ -303,7 +303,7 @@ export const switchNewArrivals = (href) => {
       break;
 
     case '/sibling-shop':
-      promo1 = urls.promo.thePromo.family;
+      promo1 = urls.promo.thePromo.promo.family;
       promo2 = urls.promo.select.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;

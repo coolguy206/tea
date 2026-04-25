@@ -104,7 +104,7 @@ $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
   //? CHANGER MOBILE MEGA MENU IMAGE URL
-  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', _urls.urls.promo.sale2.promo);
+  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', _urls.urls.promo.thePromo.promo.promo);
   (0, _inview.inview)('.mega-img-container, .mega-img-bf');
   $('.dept-girl').hover(function () {
 
@@ -486,7 +486,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/sibling-shop':
-      promo1 = _urls.urls.promo.thePromo.family;
+      promo1 = _urls.urls.promo.thePromo.promo.family;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
