@@ -259,7 +259,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
       break;
     case '/clothing-sale':
-      promo1 = _urls.urls.promo.sale.promo;
+      promo1 = _urls.urls.promo.thePromo.promo.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.promo;
@@ -332,16 +332,22 @@ var urls = exports.urls = {
       }
     },
     thePromo: {
-      girl: "/girls-pajamas-sleepwear",
-      boy: "/boys-pajamas-sleepwear",
+      girl: "/girls-swimsuits-swimwear",
+      boy: "/boys-swimwear",
       baby: {
+        baby: "/baby-swimwear",
         girl: "/baby-girl-pajamas",
         boy: "/baby-boy-pajamas",
         newborn: "/newborn-clothing"
       },
       toddler: {
+        toddler: "/toddler-swimwear",
         girl: "/toddler-girls-clothes/pajamas",
         boy: "/toddler-boys-clothes/pajamas"
+      },
+      promo: {
+        promo: "/swimwear",
+        family: "/family-outfitting/swim"
       }
     },
     select: {

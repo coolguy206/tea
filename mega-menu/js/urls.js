@@ -22,7 +22,7 @@ export const urls = {
       girl: `/girls-clothing/new-arrivals`,
       boy: `/boys-clothing/new-arrivals`,
       baby: {
-        baby:`/baby-clothes/new-arrivals`,
+        baby: `/baby-clothes/new-arrivals`,
         girl: `/baby-girl-clothes/new-arrivals`,
         boy: `/baby-boy-clothes/new-arrivals`,
         newborn: `/newborn-clothes/favorites/new-arrivals`,
@@ -34,16 +34,22 @@ export const urls = {
       }
     },
     thePromo: {
-      girl: `/girls-pajamas-sleepwear`,
-      boy: `/boys-pajamas-sleepwear`,
+      girl: `/girls-swimsuits-swimwear`,
+      boy: `/boys-swimwear`,
       baby: {
+        baby: `/baby-swimwear`,
         girl: `/baby-girl-pajamas`,
         boy: `/baby-boy-pajamas`,
         newborn: `/newborn-clothing`,
       },
       toddler: {
+        toddler: `/toddler-swimwear`,
         girl: `/toddler-girls-clothes/pajamas`,
         boy: `/toddler-boys-clothes/pajamas`,
+      },
+      promo: {
+        promo: `/swimwear`,
+        family: `/family-outfitting/swim`,
       }
     },
     select: {
@@ -101,13 +107,13 @@ export const urls = {
       girl: `/clothing-sale?gender%5B%5D=girl&store_price%5B%5D=`,
       boy: `/clothing-sale?gender%5B%5D=boy&store_price%5B%5D=`,
       baby: {
-        baby:`/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=`,
+        baby: `/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=`,
         girl: `/sale/baby-girl-clothes/view-all`,
         boy: `/sale/baby-boy-clothes/view-all`,
         newborn: `/sale/newborn-clothing/view-all`,
       },
       toddler: {
-        toddler:`/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=`,
+        toddler: `/clothing-sale?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=`,
         girl: `/sale/toddler-girls-clothing/view-all`,
         boy: `/sale/toddler-boys-clothing/view-all`,
       }

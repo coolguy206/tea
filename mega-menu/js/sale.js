@@ -8,7 +8,7 @@ $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
   //? CHANGER MOBILE MEGA MENU IMAGE URL
-  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', urls.promo.sale2.promo);
+  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', urls.promo.thePromo.promo.promo);
 
   inview('.mega-img-container, .mega-img-bf');
 

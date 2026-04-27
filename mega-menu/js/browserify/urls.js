@@ -41,16 +41,22 @@ var urls = exports.urls = {
       }
     },
     thePromo: {
-      girl: "/girls-pajamas-sleepwear",
-      boy: "/boys-pajamas-sleepwear",
+      girl: "/girls-swimsuits-swimwear",
+      boy: "/boys-swimwear",
       baby: {
+        baby: "/baby-swimwear",
         girl: "/baby-girl-pajamas",
         boy: "/baby-boy-pajamas",
         newborn: "/newborn-clothing"
       },
       toddler: {
+        toddler: "/toddler-swimwear",
         girl: "/toddler-girls-clothes/pajamas",
         boy: "/toddler-boys-clothes/pajamas"
+      },
+      promo: {
+        promo: "/swimwear",
+        family: "/family-outfitting/swim"
       }
     },
     select: {

@@ -16,6 +16,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.mothers-day.all', '.shop-slideshow');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.best-sellers', '.shop-slideshow-2');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow-3');
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-swim-slider', '.shop-slideshow-4');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });
@@ -50,12 +51,14 @@ $(document).ready(function () {
   //   }
   // });
 
-  (0, _inview.inview)('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promo4, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .why-tea');
+  (0, _inview.inview)('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promo4, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .shop-slideshow4, .hp .why-tea');
   for (var i = 1; i < 9; i++) {
     (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);
   }
   (0, _tracking.tracking)('.hp .shop-slideshow a', 'shop-slideshow');
   (0, _tracking.tracking)('.hp .shop-slideshow2 a', 'shop-slideshow2');
+  (0, _tracking.tracking)('.hp .shop-slideshow3 a', 'shop-slideshow3');
+  (0, _tracking.tracking)('.hp .shop-slideshow4 a', 'shop-slideshow4');
   (0, _tracking.tracking)('.hp .promo1 a', 'promo1');
   (0, _tracking.addAltClass)();
 });
