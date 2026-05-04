@@ -4,68 +4,6 @@
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
-exports.ariaLabel = void 0;
-var ariaLabel = exports.ariaLabel = function ariaLabel(elem, str) {
-  var ctas = $(elem);
-  $(ctas).each(function () {
-    // console.log($(this).text())
-    var regex = new RegExp(str, "g");
-    var text = $(this).text().replace(regex, "").trim();
-    $(this).closest('div[role="region"]').attr('aria-label', text);
-  });
-};
-
-},{}],2:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.cloneExecuteSlider = void 0;
-var _glide = _interopRequireDefault(require("@glidejs/glide"));
-function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
-var cloneExecuteSlider = exports.cloneExecuteSlider = function cloneExecuteSlider(elem, slider) {
-  //? MAKE A CLONE BECAUSE IF YOU MOVE THE ORIGINAL AND THE PAGE RELOADS IT WILL BE GONE
-  var theClone = $(elem).clone();
-
-  //? ONLY EXECUTE IF THE HP DOES NOT HAVE THE SLIDER
-  var sliderCount = $('.hp ' + elem).length;
-  if (sliderCount == 0) {
-    $('.hp ' + slider).append(theClone);
-  }
-  new _glide["default"]('.hp ' + elem + ' .glide', {
-    type: 'slider',
-    // autoplay: 4000,
-    animationDuration: 500,
-    perView: 5,
-    hoverpause: true,
-    gap: 0,
-    bound: true,
-    rewind: false,
-    breakpoints: {
-      // 821: {
-      //   perView: 4,
-      //   perSwipe: '|',
-      // },
-      431: {
-        perView: 2,
-        perSwipe: '|'
-      }
-    }
-  }).mount();
-
-  //? HIDE ALL THE SLIDERS
-  $(elem).hide();
-  //? ONLY SHOW THE SLIDER IN THE HP ELEM
-  $('.hp ' + elem).show();
-};
-
-},{"@glidejs/glide":6}],3:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
 exports.inview = void 0;
 var inview = exports.inview = function inview(elem) {
   // console.log(`from inview.js`);
@@ -112,124 +50,47 @@ var inview = exports.inview = function inview(elem) {
 //   });
 // };
 
-},{}],4:[function(require,module,exports){
+},{}],2:[function(require,module,exports){
 "use strict";
 
 var _inview = require("./inview.js");
-var _ariaLabel = require("./aria-label.js");
-var _cloneExecuteSlider = require("./clone-execute-slider.js");
-var _tracking = require("./tracking.js");
-// import { countdown } from './countdown.js';
-
-// import { makeGlide } from './make-glide.js';
-
-// import { makeBxSlider } from './make-bxslider.js';
-
-$(document).ajaxComplete(function (event, xhr, options) {
-  // console.log(event,xhr,options)
-
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.mothers-day.all', '.shop-slideshow');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.best-sellers', '.shop-slideshow-2');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.new-arrivals-slider.all', '.shop-slideshow-3');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.americangirl.all', '.shop-slideshow-4');
-  $('.hp .white-out').fadeOut();
-  // $('.the-sliders').hide();
-});
+var _glide = _interopRequireDefault(require("@glidejs/glide"));
+function _interopRequireDefault(e) { return e && e.__esModule ? e : { "default": e }; }
 $(document).ready(function () {
-  //? ARIA LABELS
-  // var alt = $('.hp .promo1').find('img')[0].alt;
-  // $('.hp .promo1 a[role="button"]').attr('aria-label', alt);
+  $('.spain-edit').css('opacity', 1);
+  $($(".spain-edit .lgw-thumb")[6]).before($('.spain-edit .img-2'));
 
-  (0, _ariaLabel.ariaLabel)('.hp .c2 a.cta-border', 'shop ');
-  (0, _ariaLabel.ariaLabel)('.hp .c3 a.cta-border', 'shop ');
-
-  // if (window.innerWidth < 431) {
-  //   $(`.hp .promo1`).insertBefore(`.hp .c1`);
-  // }
-
-  //? COUNTDOWN.JS
-  // countdown('2026/01/30 23:59:59');
-
-  // makeGlide('.c1 .glide');
-
-  // makeGlide('.c2 .glide');
-
-  // makeGlide('.c2-slideshow .glide');
-
-  // makeBxSlider('.c2-slideshow ul');
-
-  // makeGlide('.c6 .glide');
-
-  // $('.furoshiki .see-details').fancybox({
-  //   helpers: {
-  //     overlay: null
-  //   }
-  // });
-
-  (0, _inview.inview)('.hp .promo1-skinny, .hp .promo2-skinny, .hp .promo1, .hp .promo2, .hp .promo3, .hp .promo4, .hp .promos-2-cell, .hp .c1, .hp .c2, .hp .c2-slideshow, .hp .c3, .hp .c4, .hp .c5, .hp .c6, .hp .c7, .hp .c8, .hp .graphics, .hp .refer-friend, .hp .rewear, .hp .shop-slideshow, .hp .shop-slideshow2, .hp .shop-slideshow3, .hp .shop-slideshow4, .hp .why-tea');
-  for (var i = 1; i < 9; i++) {
-    (0, _tracking.tracking)('.hp .c' + i + ' a', 'c' + i);
-  }
-  (0, _tracking.tracking)('.hp .shop-slideshow a', 'shop-slideshow');
-  (0, _tracking.tracking)('.hp .shop-slideshow2 a', 'shop-slideshow2');
-  (0, _tracking.tracking)('.hp .shop-slideshow3 a', 'shop-slideshow3');
-  (0, _tracking.tracking)('.hp .shop-slideshow4 a', 'shop-slideshow4');
-  (0, _tracking.tracking)('.hp .promo1 a', 'promo1');
-  (0, _tracking.addAltClass)();
-});
-
-},{"./aria-label.js":1,"./clone-execute-slider.js":2,"./inview.js":3,"./tracking.js":5}],5:[function(require,module,exports){
-"use strict";
-
-Object.defineProperty(exports, "__esModule", {
-  value: true
-});
-exports.tracking = exports.addAltClass = void 0;
-var tracking = exports.tracking = function tracking(elem, id) {
-  // console.log(`from tracking.js`);
-  var a = $(elem);
-  $.each(a, function (j, val) {
-    $(val).addClass('hp-url').attr({
-      'data-page': 'home page',
-      'id': id
-    });
-  });
-};
-var addAltClass = exports.addAltClass = function addAltClass() {
-  var a = $('.hp a');
-  $(a).each(function (i, val) {
-    var img = $(val).find('img');
-    // console.log(img);
-    if (img.length !== 0) {
-      // var theClass = $(val).next().find('h2').text().replace(/ /g, '-').toLowerCase();
-      if ($(img).attr('alt') !== undefined) {
-        var theClass = 'img ' + $(img).attr('alt').replace(/ /g, '-').toLowerCase();
-        // console.log(theClass);
-        var oldClass = $(val).attr('class');
-        if (oldClass !== undefined) {
-          theClass = "".concat(oldClass, " ").concat(theClass);
-          // console.log(theClass);
-          $(val).attr('class', theClass);
-        } else {
-          $(val).attr('class', theClass);
+  //? IF BOUGHT ITEMS ARE MORE THAN 5 EXECUTE SLIDER
+  if ($('.spain-edit li').length >= 5 || window.innerWidth < 431) {
+    new _glide["default"]('.spain-edit .glide', {
+      type: 'carousel',
+      // autoplay: 4000,
+      animationDuration: 500,
+      perView: 5,
+      hoverpause: true,
+      gap: 0,
+      bound: true,
+      rewind: false,
+      breakpoints: {
+        // 821: {
+        //   perView: 3,
+        //   perSwipe: '|',
+        // },
+        431: {
+          perView: 2,
+          perSwipe: '|'
         }
       }
-    }
-  });
-};
+    }).mount();
+  } else {
+    //? BOUGHT ITEMS ARE LESS THAN 5 HIDE SCROLL ARROWS AND ADD CLASS WIDTH-300
+    $('.spain-edit div[data-glide-el="controls"]').hide();
+    $('.spain-edit ul').addClass('width-300');
+  }
+  (0, _inview.inview)('.spain-edit');
+});
 
-// module.exports = function(elem, id) {
-//   // console.log(`from tracking.js`);
-//   let a = $(elem);
-//   $.each(a, function(j, val) {
-//     $(val).addClass('hp-url').attr({
-//       'data-page': 'home page',
-//       'id': id
-//     });
-//   });
-// };
-
-},{}],6:[function(require,module,exports){
+},{"./inview.js":1,"@glidejs/glide":3}],3:[function(require,module,exports){
 /*!
  * Glide.js v3.7.1
  * (c) 2013-2024 Jędrzej Chałubek (https://github.com/jedrzejchalubek/)
@@ -4131,4 +3992,4 @@ var addAltClass = exports.addAltClass = function addAltClass() {
 
 }));
 
-},{}]},{},[4]);
+},{}]},{},[2]);
