@@ -104,7 +104,7 @@ $(document).ready(function () {
   // $('.menu .swimwear').text('$15 Swim');
 
   //? CHANGER MOBILE MEGA MENU IMAGE URL
-  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', _urls.urls.promo.thePromo.promo.promo);
+  $('#site-nav-mobile li.mega-menu-image-mobile a').attr('href', _urls.urls.promo.select.promo);
   (0, _inview.inview)('.mega-img-container, .mega-img-bf');
   $('.dept-girl').hover(function () {
 
@@ -237,7 +237,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     dress = _promoVars.promoVars.dress;
   switch (href) {
     case '/girls-clothes':
-      promo1 = _urls.urls.promo.thePromo.girl;
+      promo1 = _urls.urls.promo.select.girl;
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
@@ -256,7 +256,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/boys-clothes':
-      promo1 = _urls.urls.promo.thePromo.boy;
+      promo1 = _urls.urls.promo.select.boy;
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
@@ -275,7 +275,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/baby-clothes':
-      promo1 = _urls.urls.promo.thePromo.baby.baby;
+      promo1 = _urls.urls.promo.select.baby.baby;
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
@@ -343,7 +343,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/toddler-clothes':
-      promo1 = _urls.urls.promo.thePromo.toddler.toddler;
+      promo1 = _urls.urls.promo.select.toddler.toddler;
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
@@ -413,7 +413,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
       // promo1 =urls.promo.new.baby.newborn;
-      promo1 = _urls.urls.promo.thePromo.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
@@ -462,7 +462,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/print-shop':
-      promo1 = _urls.urls.promo.thePromo.promo.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -486,7 +486,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/sibling-shop':
-      promo1 = _urls.urls.promo.thePromo.promo.family;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -536,7 +536,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/new-arrivals':
-      promo1 = _urls.urls.promo.thePromo.promo.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -556,7 +556,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
     case '/gift-and-save-shop':
     case '/':
-      promo1 = _urls.urls.promo.thePromo.promo.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -617,191 +617,219 @@ var switchSale = exports.switchSale = function switchSale(href) {
     swim = _promoVars.promoVars.swim,
     dress = _promoVars.promoVars.dress;
   switch (href) {
-    case '/sale/girls-clothing/view-all':
-      promo1 = _urls.urls.promo.sale2.girl;
-      promo2 = _urls.urls.promo.select.girl;
-      promo3 = _urls.urls.promo.sale.girl;
-      clearance = _urls.urls.promo.clearance.girl;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.girl !== "") {
-          $(_promoVars.promoVars.girl).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    // case '/sale/girls-clothing/view-all':
+    //   promo1 = urls.promo.select.girl;
+    //   promo2 = urls.promo.select.girl;
+    //   promo3 = urls.promo.sale.girl;
+    //   clearance = urls.promo.clearance.girl;
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.girl').show();
-      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.girl !== ``) {
+    //       $(promoVars.girl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      break;
-    case '/sale/boys-clothing/view-all':
-      promo1 = _urls.urls.promo.sale2.boy;
-      promo2 = _urls.urls.promo.select.boy;
-      promo3 = _urls.urls.promo.sale.boy;
-      clearance = _urls.urls.promo.clearance.boy;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.boy !== "") {
-          $(_promoVars.promoVars.boy).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.boy').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      break;
-    case '/sale/baby-girl-clothes/view-all':
-      promo1 = _urls.urls.promo.sale2.baby.girl;
-      promo2 = _urls.urls.promo.select.baby.girl;
-      promo3 = _urls.urls.promo.sale.baby.girl;
-      clearance = _urls.urls.promo.clearance.baby.girl;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.babyGirl !== "") {
-          $(_promoVars.promoVars.babyGirl).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.girl').show();
+    //   // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.baby-girl').show();
-      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   break;
 
-      break;
-    case '/sale/baby-boy-clothes/view-all':
-      promo1 = _urls.urls.promo.sale2.baby.boy;
-      promo2 = _urls.urls.promo.select.baby.boy;
-      promo3 = _urls.urls.promo.sale.baby.boy;
-      clearance = _urls.urls.promo.clearance.baby.boy;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.babyBoy !== "") {
-          $(_promoVars.promoVars.babyBoy).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    // case '/sale/boys-clothing/view-all':
+    //   promo1 = urls.promo.select.boy;
+    //   promo2 = urls.promo.select.boy;
+    //   promo3 = urls.promo.sale.boy;
+    //   clearance = urls.promo.clearance.boy;
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.baby-boy').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.boy !== ``) {
+    //       $(promoVars.boy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      break;
-    case '/sale/toddler-girls-clothing/view-all':
-      promo1 = _urls.urls.promo.sale2.toddler.girl;
-      promo2 = _urls.urls.promo.select.toddler.girl;
-      promo3 = _urls.urls.promo.sale.toddler.girl;
-      clearance = _urls.urls.promo.clearance.toddler.girl;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.toddlerGirl !== "") {
-          $(_promoVars.promoVars.toddlerGirl).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.toddler-girl').show();
-      // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      break;
-    case '/sale/toddler-boys-clothing/view-all':
-      promo1 = _urls.urls.promo.sale2.toddler.boy;
-      promo2 = _urls.urls.promo.select.toddler.boy;
-      promo3 = _urls.urls.promo.sale.toddler.boy;
-      clearance = _urls.urls.promo.clearance.toddler.boy;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.toddlerBoy !== "") {
-          $(_promoVars.promoVars.toddlerBoy).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.boy').show();
+    //   // $('.promo1-url, .promo2-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      // $('.promo2-url.toddler-boy').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   break;
 
-      break;
-    case '/sale/newborn-clothing/view-all':
-      // promo1 = urls.promo.sale2.baby.newborn;
-      promo1 = _urls.urls.promo.sale2.promo;
-      promo2 = _urls.urls.promo.select.baby.newborn;
-      promo3 = _urls.urls.promo.sale.baby.newborn;
-      clearance = _urls.urls.promo.clearance.baby.newborn;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.newborn !== "") {
-          $(_promoVars.promoVars.newborn).show();
-        } else if (_promoVars.promoVars.showNewborn) {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
+    // case '/sale/baby-girl-clothes/view-all':
+    //   promo1 = urls.promo.select.baby.girl;
+    //   promo2 = urls.promo.select.baby.girl;
+    //   promo3 = urls.promo.sale.baby.girl;
+    //   clearance = urls.promo.clearance.baby.girl;
 
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      //  $('.promo2-url.newborn').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.babyGirl !== ``) {
+    //       $(promoVars.babyGirl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      break;
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.baby-girl').show();
+    //   // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
+
+    //   break;
+
+    // case '/sale/baby-boy-clothes/view-all':
+    //   promo1 = urls.promo.select.baby.boy;
+    //   promo2 = urls.promo.select.baby.boy;
+    //   promo3 = urls.promo.sale.baby.boy;
+    //   clearance = urls.promo.clearance.baby.boy;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.babyBoy !== ``) {
+    //       $(promoVars.babyBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.baby-boy').show();
+    //   // $('.promo1-url, .promo2-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
+
+    //   break;
+
+    // case '/sale/toddler-girls-clothing/view-all':
+    //   promo1 = urls.promo.select.toddler.girl;
+    //   promo2 = urls.promo.select.toddler.girl;
+    //   promo3 = urls.promo.sale.toddler.girl;
+    //   clearance = urls.promo.clearance.toddler.girl;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerGirl !== ``) {
+    //       $(promoVars.toddlerGirl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.toddler-girl').show();
+    //   // $('.promo1-url, .promo2-url, .promo3-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
+
+    //   break;
+
+    // case '/sale/toddler-boys-clothing/view-all':
+    //   promo1 = urls.promo.select.toddler.boy;
+    //   promo2 = urls.promo.select.toddler.boy;
+    //   promo3 = urls.promo.sale.toddler.boy;
+    //   clearance = urls.promo.clearance.toddler.boy;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerBoy !== ``) {
+    //       $(promoVars.toddlerBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   // $('.promo2-url.toddler-boy').show();
+    //   // $('.promo1-url, .promo2-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
+
+    //   break;
+
+    // case '/sale/newborn-clothing/view-all':
+    //   // promo1 = urls.promo.select.baby.newborn;
+    //   promo1 = urls.promo.select.promo;
+    //   promo2 = urls.promo.select.baby.newborn;
+    //   promo3 = urls.promo.sale.baby.newborn;
+    //   clearance = urls.promo.clearance.baby.newborn;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.newborn !== ``) {
+    //       $(promoVars.newborn).show();
+    //     } else if (promoVars.showNewborn) {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   // $('.promo3-url').show();
+    //   // $('.clearance-url').show();
+    //   //  $('.promo2-url.newborn').show();
+    //   // $('.promo1-url, .promo2-url, .clearance-url').show();
+    //   // $('.clearance-url').hide();
+
+    //   break;
+
     case '/clothing-sale':
-      promo1 = _urls.urls.promo.thePromo.promo.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.promo;
@@ -814,13 +842,6 @@ var switchSale = exports.switchSale = function switchSale(href) {
       if (_promoVars.promoVars.showPromo3) {
         $(_promoVars.promoVars.promo3Elem).show();
       }
-
-      // $('.promo3-url').show();
-      // $('.clearance-url').show();
-      //  $('.promo2-url.newborn').show();
-      // $('.promo1-url, .promo2-url, .clearance-url').show();
-      // $('.clearance-url').hide();
-
       break;
     default:
       break;

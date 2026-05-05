@@ -17,7 +17,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
 
   cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow-3');
 
-   cloneExecuteSlider('.americangirl.all', '.shop-slideshow-4');
+   cloneExecuteSlider('.select-styles.all', '.shop-slideshow-4');
 
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
