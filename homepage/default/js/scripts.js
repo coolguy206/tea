@@ -11,7 +11,7 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
+  // cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
 
   cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
