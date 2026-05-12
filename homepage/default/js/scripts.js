@@ -11,11 +11,11 @@ import { tracking, addAltClass } from './tracking.js';
 $(document).ajaxComplete(function (event, xhr, options) {
   // console.log(event,xhr,options)
 
-  // cloneExecuteSlider('.mothers-day.all', '.shop-slideshow');
+  cloneExecuteSlider('.global-shop-slider.all', '.shop-slideshow');
 
   cloneExecuteSlider('.best-sellers', '.shop-slideshow-2');
 
-  cloneExecuteSlider('.new-arrivals-slider.all', '.shop-slideshow-3');
+  cloneExecuteSlider('.the-dresses-slider', '.shop-slideshow-3');
 
   cloneExecuteSlider('.americangirl.all', '.shop-slideshow-4');
 
