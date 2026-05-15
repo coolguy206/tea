@@ -94,6 +94,14 @@ var urls = exports.urls = {
         boy: "/select-styles-2?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
       }
     },
+    memorial: {
+      promo: "/memorial-day",
+      family: "/memorial-day",
+      girl: "/memorial-day?gender%5B%5D=girl",
+      boy: "/memorial-day?gender%5B%5D=boy",
+      baby: "/memorial-day?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=",
+      toddler: "/memorial-day?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D="
+    },
     sitewide: {
       promo: "/sitewide",
       family: "/sitewide",
