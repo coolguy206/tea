@@ -36,7 +36,20 @@
 	}
 }
 
-.dept-sale, .dept-memorial {
+.dept-memorial {
+	a {
+		color: @promo-font-color;
+	}
+
+	&.active,
+	&:hover {
+		.line {
+			border-color: @promo-font-color;
+		}
+	}
+}
+
+.dept-sale {
 	a {
 		color: @sale-font-color;
 	}
