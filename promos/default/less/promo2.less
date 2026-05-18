@@ -1,10 +1,10 @@
 @import 'var.less';
-@promo2Bg: #FDF5F2;
-@promo2Color1: #4F4243;
-@promo2Color2: #4765A1;
-@promo2Color3: #4F4243;
+@promo2Bg: #32455D;
+@promo2Color1: #E7B2BB;
+@promo2Color2: #fff;
+@promo2Color3: #E7B2BB;
 @promo2Details: #fff;
-@promo2FontSize: 3.5vw;
+@promo2FontSize: 4vw;
 
 
 &.promo2 {
@@ -13,7 +13,7 @@
     }
 
     background: @promo2Bg;
-    display:none;
+    // display:none;
 
     span {
         &.span-wrap {
@@ -37,7 +37,7 @@
 
             i {
                 @media screen and (max-width: 430px) {
-                    font-size: 3.5vw;
+                    font-size: @promo2FontSize;
                     display: none;
                 }
 

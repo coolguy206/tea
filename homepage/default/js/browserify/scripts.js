@@ -132,7 +132,7 @@ $(document).ajaxComplete(function (event, xhr, options) {
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.best-sellers', '.shop-slideshow-2');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.the-dresses-slider', '.shop-slideshow-3');
   (0, _cloneExecuteSlider.cloneExecuteSlider)('.americangirl.all', '.shop-slideshow-4');
-  (0, _cloneExecuteSlider.cloneExecuteSlider)('.select-styles.all', '.shop-slideshow-5');
+  (0, _cloneExecuteSlider.cloneExecuteSlider)('.memorial-day.all', '.shop-slideshow-5');
   $('.hp .white-out').fadeOut();
   // $('.the-sliders').hide();
 });

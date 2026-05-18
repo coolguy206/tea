@@ -74,7 +74,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     dress = _promoVars.promoVars.dress;
   switch (href) {
     case '/girls-clothes':
-      promo1 = _urls.urls.promo.select.girl;
+      promo1 = _urls.urls.promo.memorial.girl;
       promo2 = _urls.urls.promo.select.girl;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
@@ -93,7 +93,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/boys-clothes':
-      promo1 = _urls.urls.promo.select.boy;
+      promo1 = _urls.urls.promo.memorial.boy;
       promo2 = _urls.urls.promo.select.boy;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
@@ -112,7 +112,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/baby-clothes':
-      promo1 = _urls.urls.promo.select.baby.baby;
+      promo1 = _urls.urls.promo.memorial.baby;
       promo2 = _urls.urls.promo.select.baby.girl;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
@@ -180,7 +180,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/toddler-clothes':
-      promo1 = _urls.urls.promo.select.toddler.toddler;
+      promo1 = _urls.urls.promo.memorial.toddler;
       promo2 = _urls.urls.promo.select.toddler.girl;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
@@ -250,7 +250,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     case '/newborn-clothes/favorites/new-arrivals':
     case '/newborn-clothes/':
       // promo1 =urls.promo.new.baby.newborn;
-      promo1 = _urls.urls.promo.select.promo;
+      promo1 = _urls.urls.promo.memorial.promo;
       promo2 = _urls.urls.promo.select.baby.newborn;
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
@@ -299,7 +299,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/print-shop':
-      promo1 = _urls.urls.promo.select.promo;
+      promo1 = _urls.urls.promo.memorial.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -323,7 +323,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/sibling-shop':
-      promo1 = _urls.urls.promo.select.promo;
+      promo1 = _urls.urls.promo.memorial.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -373,7 +373,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/new-arrivals':
-      promo1 = _urls.urls.promo.select.promo;
+      promo1 = _urls.urls.promo.memorial.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -393,7 +393,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
     case '/gift-and-save-shop':
     case '/':
-      promo1 = _urls.urls.promo.select.promo;
+      promo1 = _urls.urls.promo.memorial.promo;
       promo2 = _urls.urls.promo.select.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -517,6 +517,22 @@ var urls = exports.urls = {
         girl: "/select-styles-2?gender%5B%5D=girl&gender%5B%5D=baby%20girl&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D=",
         boy: "/select-styles-2?gender%5B%5D=boy&gender%5B%5D=baby%20boy&size%5B%5D=2t&size%5B%5D=3t&size%5B%5D=4t&size%5B%5D=2%20years&size%5B%5D=3%20years&size%5B%5D=4%20years&size%5B%5D=xs&size%5B%5D=s&store_price%5B%5D="
       }
+    },
+    memorial: {
+      promo: "/memorial-day",
+      family: "/memorial-day",
+      girl: "/memorial-day?gender%5B%5D=girl",
+      boy: "/memorial-day?gender%5B%5D=boy",
+      baby: "/memorial-day?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=",
+      toddler: "/memorial-day?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D="
+    },
+    sitewide: {
+      promo: "/sitewide",
+      family: "/sitewide",
+      girl: "/sitewide?gender%5B%5D=girl",
+      boy: "/sitewide?gender%5B%5D=boy",
+      baby: "/sitewide?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D=",
+      toddler: "/sitewide?gender%5B%5D=baby%20girl&gender%5B%5D=baby%20boy&gender%5B%5D=newborn&store_price%5B%5D="
     },
     sale: {
       promo: "/clothing-sale",
