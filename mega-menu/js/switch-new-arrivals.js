@@ -29,7 +29,7 @@ export const switchNewArrivals = (href) => {
   switch (href) {
     case '/girls-clothes':
       promo1 = urls.promo.memorial.girl;
-      promo2 = urls.promo.select.girl;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.girl;
       clearance = urls.promo.clearance.girl;
 
@@ -53,7 +53,7 @@ export const switchNewArrivals = (href) => {
 
     case '/boys-clothes':
       promo1 = urls.promo.memorial.boy;
-      promo2 = urls.promo.select.boy;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.boy;
       clearance = urls.promo.clearance.boy;
 
@@ -77,7 +77,7 @@ export const switchNewArrivals = (href) => {
 
     case '/baby-clothes':
       promo1 = urls.promo.memorial.baby;
-      promo2 = urls.promo.select.baby.girl;
+      promo2 = urls.promo.thePromo.promo.promo
       promo3 = urls.promo.sale.baby.girl;
       clearance = urls.promo.clearance.baby.girl;
 
@@ -101,7 +101,7 @@ export const switchNewArrivals = (href) => {
 
     // case '/baby-girl-clothes/new-arrivals':
     //   promo1 =urls.promo.new.baby.girl;
-    //   promo2 = urls.promo.select.baby.girl;
+    //   promo2 = urls.promo.thePromo.promo.promo.baby.girl;
     //   promo3 = urls.promo.sale.baby.girl;
     //   clearance = urls.promo.clearance.baby.girl;
 
@@ -125,7 +125,7 @@ export const switchNewArrivals = (href) => {
 
     // case '/baby-boy-clothes/new-arrivals':
     //   promo1 =urls.promo.new.baby.boy;
-    //   promo2 = urls.promo.select.baby.boy;
+    //   promo2 = urls.promo.thePromo.promo.promo.baby.boy;
     //   promo3 = urls.promo.sale.baby.boy;
     //   clearance = urls.promo.clearance.baby.boy;
 
@@ -149,7 +149,7 @@ export const switchNewArrivals = (href) => {
 
     case '/toddler-clothes':
       promo1 = urls.promo.memorial.toddler;
-      promo2 = urls.promo.select.toddler.girl;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.toddler.girl;
       clearance = urls.promo.clearance.toddler.girl;
 
@@ -173,7 +173,7 @@ export const switchNewArrivals = (href) => {
 
     // case '/toddler-girls-clothes/favorites/new-arrivals':
     //   promo1 =urls.promo.new.toddler.girl;
-    //   promo2 = urls.promo.select.toddler.girl;
+    //   promo2 = urls.promo.thePromo.promo.promo.toddler.girl;
     //   promo3 = urls.promo.sale.toddler.girl;
     //   clearance = urls.promo.clearance.toddler.girl;
 
@@ -197,7 +197,7 @@ export const switchNewArrivals = (href) => {
 
     // case '/toddler-boys-clothes/favorites/new-arrivals':
     //   promo1 =urls.promo.new.toddler.boy;
-    //   promo2 = urls.promo.select.toddler.boy;
+    //   promo2 = urls.promo.thePromo.promo.promo.toddler.boy;
     //   promo3 = urls.promo.sale.toddler.boy;
     //   clearance = urls.promo.clearance.toddler.boy;
 
@@ -219,11 +219,11 @@ export const switchNewArrivals = (href) => {
 
     //   break;
 
-    case '/newborn-clothes/favorites/new-arrivals':
-    case '/newborn-clothes/':
+    // case '/newborn-clothes/favorites/new-arrivals':
+    // case '/newborn-clothes/':
       // promo1 =urls.promo.new.baby.newborn;
       promo1 = urls.promo.memorial.promo;
-      promo2 = urls.promo.select.baby.newborn;
+      promo2 = urls.promo.thePromo.promo.promo.baby.newborn;
       promo3 = urls.promo.sale.baby.newborn;
       clearance = urls.promo.clearance.baby.newborn;
 
@@ -248,7 +248,7 @@ export const switchNewArrivals = (href) => {
     // case '/swim-shop':
     //   promo1 =urls.promo.new.select.swim;
     //   promo1 =urls.promo.new.promo;
-    //   promo2 = urls.promo.select.promo;
+    //   promo2 = urls.promo.thePromo.promo.promo.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
 
@@ -276,7 +276,7 @@ export const switchNewArrivals = (href) => {
 
     case '/print-shop':
       promo1 = urls.promo.memorial.promo;
-      promo2 = urls.promo.select.promo;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 
@@ -304,7 +304,7 @@ export const switchNewArrivals = (href) => {
 
     case '/sibling-shop':
       promo1 = urls.promo.memorial.promo;
-      promo2 = urls.promo.select.promo;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 
@@ -333,7 +333,7 @@ export const switchNewArrivals = (href) => {
     // case '/dresses':
     //   // promo1 =  urls.promo.select.swim;
     //   promo1 =urls.promo.new.promo;
-    //   promo2 = urls.promo.select.promo;
+    //   promo2 = urls.promo.thePromo.promo.promo.promo;
     //   promo3 = urls.promo.sale.promo;
     //   clearance = urls.promo.clearance.girl;
 
@@ -357,7 +357,7 @@ export const switchNewArrivals = (href) => {
 
     case '/new-arrivals':
       promo1 = urls.promo.memorial.promo;
-      promo2 = urls.promo.select.promo;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 
@@ -382,7 +382,7 @@ export const switchNewArrivals = (href) => {
     case '/gift-and-save-shop':
     case '/':
       promo1 = urls.promo.memorial.promo;
-      promo2 = urls.promo.select.promo;
+      promo2 = urls.promo.thePromo.promo.promo;
       promo3 = urls.promo.sale.promo;
       clearance = urls.promo.clearance.girl;
 

@@ -288,7 +288,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     case '/clothing-sale':
       promo1 = _urls.urls.promo.memorial.promo;
-      promo2 = _urls.urls.promo.select.promo;
+      promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.promo;
       if (_promoVars.promoVars.showPromo1) {
@@ -367,7 +367,7 @@ var urls = exports.urls = {
         boy: "/toddler-boys-clothes/pajamas"
       },
       promo: {
-        promo: "/swimwear",
+        promo: "/americangirl",
         family: "/family-outfitting/swim"
       }
     },
