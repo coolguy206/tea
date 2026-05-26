@@ -6,11 +6,7 @@ const mkDir = util.promisify(fs.mkdir);
 require('dotenv').config()
 
 var year = `2026`;
-<<<<<<< HEAD
-var num = `0519`;
-=======
-var num = `0522`;
->>>>>>> 05.22.memorial
+var num = `0524`;
 var version = `v0`;
 
 //!NEEDS ENDING SLASH
@@ -28,14 +24,14 @@ var url = `${baseURL}${category}`
 
 //!NEEDS ENDING SLASH
 // var readFilePath = `Site/${num}/handoff/global/`;
-// var readFilePath = `Site/${num}/Site/hp/`;
+var readFilePath = `Site/${num}/Site/`;
 // var readFilePath = `Site/${num}/Site/promo/hp/`;
-var readFilePath = `Site/${num}/Site/promo/mega/`;
+// var readFilePath = `Site/${num}/Site/promo/mega/`;
 // var readFilePath = `handoff/landing-pages/dresses/${num}/handoff/`;
 
 // var writeFilePath = `promos/bubble/dev/images/`;
-// var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
-var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
+var writeFilePath = `promos/default/dev/images/homepage/${num}/`;
+// var writeFilePath = `promos/default/dev/images/mega-menu/${num}/`;
 // var writeFilePath = `promos/headers/dev/images/landing-pages/global-shop/all/`;
 // var writeFilePath = `landing-page/email-sign-up/american-girl/dev/images/${num}/`;
 // var writeFilePath = `homepage/default/dev/images/${num}/`;
