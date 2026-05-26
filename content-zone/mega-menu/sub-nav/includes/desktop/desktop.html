@@ -1,435 +1,45 @@
-{*
-<div class="site-nav-submenu bf" role="navigation" aria-label="Black Friday Menu">
-	<div class="bar">
-		
-		<div>
-		  <a href="/black-friday/shop-all" data="mega menu black friday">SHOP ALL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
+<!-- <div class="site-nav-submenu bf" role="navigation" aria-label="Black Friday Menu">
+	<div class="bar"> -->
 
-		        <li><a href="{$secure_html_url}black-friday/" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
+<!-- include "../black-friday/desktop/shop-all.html" -->
+<!-- include "../black-friday/desktop/girl.html" -->
+<!-- include "../black-friday/desktop/boy.html" -->
+<!-- include "../black-friday/desktop/baby-girl.html" -->
+<!-- include "../black-friday/desktop/baby-boy.html" -->
+<!-- include "../black-friday/desktop/newborn.html" -->
 
-		        {sub_cats name="cat" category="black-friday/shop-all"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        
-		        <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		        
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_all"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/black-friday/girl" data="mega menu black friday">GIRL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        <li><a href="{$secure_html_url}black-friday/girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		        {sub_cats name="cat" category="black-friday/girl"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Girl':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-		        
-		        
-		        <li><a href="/girls-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		        
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_girl"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/black-friday/boy" data="mega menu black friday">BOY</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        <li><a href="{$secure_html_url}black-friday/boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		        {sub_cats name="cat" category="black-friday/boy"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Boy':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        
-		        <li><a href="/boys-clothing/favorites/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		        
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_boy"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/black-friday/baby-girl" data="mega menu black friday">BABY GIRL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        <li><a href="{$secure_html_url}black-friday/baby-girl" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		        {sub_cats name="cat" category="black-friday/baby-girl"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Baby Girl':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        
-		        <li><a href="/baby-girl-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		        
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_baby_girl"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/black-friday/baby-boy" data="mega menu black friday">BABY BOY</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-
-		        <li><a href="{$secure_html_url}black-friday/baby-boy" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-
-		        {sub_cats name="cat" category="black-friday/baby-boy"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Baby Boy':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-
-		        
-		        <li><a href="/baby-boy-clothes/limited-time-sale" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-		        
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_baby_boy"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/newborn-clothing" data="mega menu black friday">50% OFF NEWBORN</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      {assign var=i value=0}
-		      <ul class="category first">
-		        
-		        <li>Shop by Category</li>
-		        <li><a href="{$secure_html_url}girls-clothing/view-all" data="mega menu girl view all" >View All</a></li>
-
-		        <li><a href="{$secure_html_url}black-friday/newborn" data="mega menu black friday categories" class="bf-font-color-mobile" >Black Friday</a></li>
-		        
-		        {sub_cats name="cat" category="black-friday/newborn"}
-		        {if $i && $i % 8 eq 0}
-		          </ul>
-		          <ul class="category">
-		            <li class="spacer">Spacer</li>
-		        {/if}
-
-		          <li><a href="{$cat.url}" class="{$cat.title|lower} bf-font-color-mobile" data="mega menu black friday categories" >{$cat.title|replace:'Newborn':''}</a></li>
-		        {math equation="x + y" x=$i y=1 assign=i}
-		        {/sub_cats}
-		        
-
-		        <li><a href="/newborn-clothes/shop-by-category/rompers" class="rompers bf-font-color-mobile" data="mega menu black friday categories" >Rompers</a></li>
-
-		        <li><a href="/newborn-dresses" class="dresses bf-font-color-mobile" data="mega menu black friday categories" >Dresses</a></li>
-
-		        <li><a href="/newborn-clothes/shop-by-category/outfits" class="2-piece outfits bf-font-color-mobile" data="mega menu black friday categories" >2-Piece Outfits</a></li>
-
-		        <li><a href="/newborn-accessories" class="accessories bf-font-color-mobile" data="mega menu black friday categories" >Accessories</a></li>
-
-		        <li><a href="/newborn-tops-and-bottoms" class="bodysuits bf-font-color-mobile" data="mega menu black friday categories" >Bodysuits</a></li>
-
-		        <li><a href="/select-styles" class="holiday-flash-sale-nav">holiday flash sale</a></li>
-
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_newborn"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-
-		<div>
+<!-- <div>
 			<a href="/select-styles" data="mega menu" class="holiday-flash-sale-nav">✨holiday flash sale✨</a>
 			<span class="line"></span>
 		</div>
 	
 	</div>
-</div>
+</div> -->
 
 
-<div class="site-nav-submenu cm" role="navigation" aria-label="Cyber Monday Menu">
-	<div class="bar">
-
-		{sub_cats name="cat" category="tee-shop"}
-		<div>
-		  <a href="{$cat.url}" data="mega menu tees">{$cat.title}</a>
-		  <span class="line"></span>
-		</div>
-		{/sub_cats}
+<!-- <div class="site-nav-submenu cm" role="navigation" aria-label="Cyber Monday Menu">
+	<div class="bar"> -->
+<!-- include "../select-styles/select-styles-d.html" -->
+<!-- </div>
+</div> -->
 
 
-		{literal}
-		<style>
-		  .cyber-monday-sub-nav-font {
-		    color: #556A82 !important;
-		    font-family: gilroy-black;
-		    font-size: 18px !important;
-		  }
-		</style>
-		{/literal}
+<!-- <div class="site-nav-submenu select-styles">
+	<div class="bar"> -->
 
-		<div>
-		  <a href="/girls-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">girl</a>
-		  <span class="line"></span>
-		</div>
+<!-- include "../select-styles/categories-desktop/shop-all.html" -->
+<!-- include "../select-styles/categories-desktop/girl.html" -->
+<!-- include "../select-styles/categories-desktop/boy.html" -->
+<!-- include "../select-styles/categories-desktop/baby-girl.html" -->
+<!-- include "../select-styles/categories-desktop/baby-boy.html" -->
 
-		<div>
-		  <a href="/boys-clothing/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">boy</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-girl-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby girl</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/baby-boy-clothes/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">baby boy</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/newborn-clothes/favorites/limited-time-sale" data="mega menu select-styles" class="cyber-monday-sub-nav-font">newborn</a>
-		  <span class="line"></span>
-		</div>
-
-		<div>
-		  <a href="/select-styles" data="mega menu select-styles" class="cyber-monday-sub-nav-font">shop all</a>
-		  <span class="line"></span>
-		</div>
-	</div>
-</div>
-
-
-<div class="site-nav-submenu select-styles">
-	<div class="bar">
-		
-		<div>
-		  <a href="/select-styles" data="mega menu black friday">SHOP ALL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      <ul class="category first dept-select-styles">
-
-		        <li><a class="" href="/select-styles/leggings">$11+ Leggings</a></li>
-		        <li><a class="" href="/select-styles/tees">$13+ Tees & Tops</a></li>
-		        <li><a class="" href="/select-styles/bottoms">$18+ Bottoms</a></li>
-		        <li><a class="" href="/select-styles/dresses">$18+ Dresses</a></li>
-		        <li><a class="" href="/select-styles/pajamas">$22+ Pajamas</a></li>
-		        <li><a class="" href="/select-styles">Shop All</a></li>
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_all"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/girls-clothing/favorites/limited-time-sale" data="mega menu black friday">GIRL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      <ul class="category first dept-select-styles">
-
-		        <li>Shop by Price</li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale/leggings">$11+ leggings</a></li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale/tees-tops">$13+ tees & tops</a></li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale/dresses">$18+ dresses</a></li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale/bottoms">$18+ bottoms</a></li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale/pajamas">$22+ pajamas</a></li>
-		        <li><a class="" href="/girls-clothing/favorites/limited-time-sale">shop all</a></li>
-		       
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_girl"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/boys-clothing/favorites/limited-time-sale" data="mega menu black friday">BOY</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      <ul class="category first dept-select-styles">
-
-		        <li>Shop by Price</li>
-		        <!-- <li><a class="" href="/black-friday/boy/10">shop $10</a></li> -->
-		        <li><a class="" href="/favorites/limited-time-sale/tees-tops">$13+ tees & tops</a></li>
-		        <li><a class="" href="/boys-clothing/favorites/limited-time-sale/pants">$21+ pants</a></li>
-		        <li><a class="" href="/boys-clothing/favorites/limited-time-sale/pajamas">$22+ pajamas</a></li>
-		        <!-- <li><a class="" href="/black-friday/boy/20">$20 & up</a></li> -->
-		        <li><a class="" href="/boys-clothing/favorites/limited-time-sale">shop all</a></li>
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_boy"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/baby-girl-clothes/limited-time-sale" data="mega menu black friday">BABY GIRL</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      <ul class="category first dept-select-styles">
-
-		        <li>Shop by Price</li>
-		        <li><a class="" href="/baby-girl-clothes/favorites/limited-time-sale/bottoms">$11+ Bottoms</a></li>
-		        <li><a class="" href="/baby-girl-clothes/favorites/limited-time-sale/tees-tops">$14+ tees & tops</a></li>
-		        <li><a class="" href="/baby-girl-clothes/favorites/limited-time-sale/dresses">$18+ dresses</a></li>
-		        <!-- <li><a class="" href="/black-friday/baby-girl/pants">$15+ pants</a></li> -->
-		        <li><a class="" href="/baby-girl-clothes/favorites/limited-time-sale/rompers">$18+ rompers</a></li>
-		        <li><a class="" href="/baby-girl-clothes/favorites/limited-time-sale/pajamas">$22+ pajamas</a></li>
-		        <li><a class="" href="/baby-girl-clothes/limited-time-sale">shop all</a></li>
-		        
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_baby_girl"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		<div>
-		  <a href="/baby-boy-clothes/limited-time-sale " data="mega menu black friday">BABY BOY</a>
-		  <span class="line"></span>
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1" style="flex-basis:18% !important; border:none !important">
-		      <ul class="category first dept-select-styles">
-
-		        <li>Shop by Price</li>
-		        <li><a class="" href="/baby-boy-clothes/favorites/limited-time-sale/tees-tops">$13+ tees & tops</a></li>
-		        <li><a class="" href="/baby-boy-clothes/favorites/limited-time-sale/bottoms">$18+ bottoms</a></li>
-		        <li><a class="" href="/baby-boy-clothes/favorites/limited-time-sale/rompers">$18+ rompers</a></li>
-		        <li><a class="" href="/baby-boy-clothes/favorites/limited-time-sale/pajamas">$22+ pajamas</a></li>
-		        <li><a class="" href="/baby-boy-clothes/limited-time-sale">shop all</a></li>
-		        
-		        </ul>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3" style="flex-basis: 100% !important">
-		      <div class="da-rennab-zone" data-zone="mega_bf_baby_boy"></div>
-		    </div>
-
-		  </div>
-		</div>
-
-		
-		<div>
+<!-- <div>
 			<a href="/select-styles/adult">adult</a>
 		</div>
 		
 	</div>
-</div>
-*}
+</div> -->
+
 
 
 <div class="site-nav-submenu new-arrivals" role="navigation" aria-label="New Arrivals Menu">
@@ -483,53 +93,13 @@
 </div>
 
 
-{*
-<div class="site-nav-submenu swim" role="navigation" aria-label="Swim Menu">
-	<div class="bar">
-		<div>
-		  <a href="/swim-shop" data="mega menu Swim">Swim</a>
-		  <span class="line"></span>
 
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
+<!-- <div class="site-nav-submenu swim" role="navigation" aria-label="Swim Menu">
+	<div class="bar"> -->
+<!-- include "../swim/sub-swim-d.html" -->
+<!-- </div>
+</div> -->
 
-		      <ul class="category first">
-		        <li>Shop by Department</li>
-		        <li><a href="/swim-shop/new-arrivals" data="mega menu swim new arrivals" style="color: #436FC1 !important; font-family: gilroy-bold">New Arrivals</a></li>
-		        <li><a href="/girls-swimwear" data="mega menu swim girl" >Girl</a></li>
-		        <li><a href="/boys-swimwear" data="mega menu swim boy" >Boy</a></li>
-		        <li><a href="/baby-girl-swimwear" data="mega menu swim baby girl" >Baby Girl</a></li>
-		        <li><a href="/baby-boy-swimwear" data="mega menu swim baby boy" >Baby Boy</a></li>
-		        <li><a href="/family-outfitting/swim" data="mega menu swim family swim" >Family Swim</a></li>
-		        <li><a href="/swimwear" data="mega menu swim view all" >View All</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <li>Shop by Category</li>
-		        <!-- include "../shop-by-collection.html" -->
-		     
-		        {sub_cats name="cat" category="swim-shop/shop-by-category"}
-		          <li><a href="{$cat.url}" class="{$cat.title|lower}" data="mega menu swim">{$cat.title}</a></li>
-		        {/sub_cats}
-		        
-		        <!-- <li><a href="/teaxgreensprouts" class="" data="mega menu swim">Tea x Green Sprouts</a></li> -->
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-
-		  </div>
-		</div>
-
-	</div>
-</div>
-*}
 
 
 <div class="site-nav-submenu girl" role="navigation" aria-label="Girl Menu">
@@ -1065,53 +635,29 @@
 
 <!-- <div class="site-nav-submenu tees" role="navigation" aria-label="Tees Menu">
 	<div class="bar"> -->
-		<!-- include "../tees/sub-tees-d.html" -->
-	<!-- </div>
+<!-- include "../tees/sub-tees-d.html" -->
+<!-- </div>
 </div> -->
 
 
 <!-- <div class="site-nav-submenu shorts" role="navigation" aria-label="Shorts Menu">
 	<div class="bar"> -->
-		<!-- include "../shorts/sub-shorts-d.html" -->
-	<!-- </div>
+<!-- include "../shorts/sub-shorts-d.html" -->
+<!-- </div>
 </div> -->
 
 
 <!-- <div class="site-nav-submenu pjs" role="navigation" aria-label="Pjs Menu">
 	<div class="bar"> -->
-		<!-- include "../pjs/sub-pjs-d.html" -->
-	<!-- </div>
+<!-- include "../pjs/sub-pjs-d.html" -->
+<!-- </div>
 </div> -->
 
-<div class="site-nav-submenu bundles" role="navigation" aria-label="Bundles Menu">
-	<div class="bar">
-		<div>
-
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-		      <ul class="category first" aria-label="Shop by Category">
-		        <li>Shop by Category</li>
-		        <li><a href="/leggings-shop" class="" data="mega menu bundles">Leggings: $16 Each 3+ Items</a></li>
-		        <li><a href="/dress-shop" class="" data="mega menu bundles">Dresses: 20% Off 3+ Items</a></li>
-		        <li><a href="/baby-rompers" class="" data="mega menu bundles">Baby Rompers: 20% Off 3+ Items</a></li>
-		        <!-- <li><a href="/mothers-day" class="" data="mega menu bundles">Tea x Baby2Baby Mother's Day</a></li> -->
-		        <!-- <li><a href="/product/shiplabel/tea-collection-rewear-shipping-label-tea-rewear-shipping-label.html#tea%20rewear" class="" data="mega menu bundles">Rewear Label</a></li> -->
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-		  </div>
-
-		</div>
-	</div>
-</div>
+<!-- <div class="site-nav-submenu bundles" role="navigation" aria-label="Bundles Menu">
+	<div class="bar"> -->
+<!-- include "../promo/bundles/sub-bundles-d.html" -->
+<!-- </div>
+</div> -->
 
 
 <div class="site-nav-submenu family" role="navigation" aria-label="Family Menu">
@@ -1159,81 +705,18 @@
 	</div>
 </div>
 
-<div class="site-nav-submenu print" role="navigation" aria-label="Print Menu">
-	<div class="bar">
-
-		<div>
-
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-		      {assign var=i value=0}
-
-		      <ul class="category first" aria-label="Shop by Category">
-		        <!-- <li>Shop by Category</li> -->
-		         <li><a href="/print-shop" class="" data="mega menu print shop">Shop All Print</a></li>
-		        {sub_cats name="cat" category="print-shop"}
-		        {if $i && $i % 5 eq 0}
-
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		      <ul class="category">
-		        <!-- <li class="spacer">Spacer</li> -->
-
-		        {/if}
-
-		        <li><a href="{$cat.url}" class="" data="mega menu print shop">{$cat.title}</a></li>
-
-		        {math equation="x + y" x=$i y=1 assign=i}  
-		        {/sub_cats}
-		      </ul>
-		    </div>
-
-		    <!-- <div class="panel panel-2"></div> -->
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-		  </div>
-
-		</div>
-
-	</div>
-</div>
+<!-- <div class="site-nav-submenu print" role="navigation" aria-label="Print Menu">
+	<div class="bar"> -->
+<!-- include "../print-shop/sub-print-d.html" -->
+<!-- </div>
+</div> -->
 
 
-<div class="site-nav-submenu memorial-day" role="navigation" aria-label="Memorial Day Menu">
-	<div class="bar">
-
-		<div>
-		  <!-- <a href="/memorial-day" data="mega menu memorial-day">New Arrivals</a>
-		  <span class="line"></span> -->
-
-		  <div class="menu flex-menu">
-		    <div class="panel panel-1">
-		      <ul class="category first" aria-label="Shop by Category">
-		        <!-- <li>Shop by Category</li> -->
-		        <li><a href="/memorial-day" class="" data="mega menu memorial-day">Shop all</a></li>
-		        <li><a href="/flash-sale" class="" data="mega menu memorial-day">40% off flash sale</a></li>
-		        <li><a href="/sitewide" class="" data="mega menu memorial-day">25% Off everything else</a></li>
-		        <li><a href="/clothing-sale" class="" data="mega menu memorial-day">up to 60% off sale</a></li>
-		      </ul>
-		    </div>
-
-		    <div class="panel panel-2">
-		    </div>
-
-		    <div class="panel panel-3">
-		      <div class="da-rennab-zone" data-zone="mega_swim"></div>
-		    </div>
-
-		  </div>
-
-		</div>
-	</div>
-</div>
+<!-- <div class="site-nav-submenu memorial-day" role="navigation" aria-label="Memorial Day Menu">
+	<div class="bar"> -->
+<!-- include "../promo/memorial-day/sub-memorial-day-d.html" -->
+<!-- </div>
+</div> -->
 
 
 <div class="site-nav-submenu sale">
@@ -1335,129 +818,3 @@
 
 	</div>
 </div>
-
-
-{*	
-	<div class="site-nav-submenu gift-guide">
-		<div class="bar">
-			<div>
-			  <a href="/gift-and-save-shop" class="" data="mega menu Gift Guide"> Gift Guide</a>
-			  <span class="line"></span>
-
-			  <div class="menu flex-menu">
-
-			    <div class="panel panel-1">
-			      <ul class="category first">
-			        <li>Shop by Department</li>
-			        <li><a href="/girls-clothing/favorites/gift-shop" data="mega menu Gift Guide">Girl</a></li>
-			        <li><a href="/boys-clothing/favorites/gift-shop" data="mega menu Gift Guide">Boy</a></li>
-			        <li><a href="/baby-girl-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Girl</a></li>
-			        <li><a href="/baby-boy-clothes/favorites/gift-shop" data="mega menu Gift Guide">Baby Boy</a></li>
-			        <li><a href="/newborn-clothing" data="mega menu Gift Guide">Newborn</a></li>
-			        <li><a href="/family-outfitting/adult" data="mega menu Gift Guide">Adult</a></li>
-			      </ul>
-			    </div>
-
-			    <div class="panel panel-2">
-			      <ul class="category">
-			        <li>Shop by Collection</li>
-			        <li><a href="/gift-and-save-shop" data="mega menu Gift Guide">Gift & Save Shop</a></li>
-			        <li><a href="/cozy-shop" data="mega menu Gift Guide">Cozy & Cute</a></li>
-			        <li><a href="/dress-shop" data="mega menu Gift Guide">Dreamy Dresses</a></li>
-			        <li><a href="/holiday-print-shop" data="mega menu Gift Guide">Holiday Shop</a></li>
-			        <!-- <li><a href="/teaxsanrio" data="mega menu Gift Guide">Tea x Hello Kitty</a></li> -->
-			        <li><a href="/best-sellers" data="mega menu Gift Guide">Best Sellers</a></li>
-			      </ul>
-			    </div>
-
-			    <div class="panel panel-2">
-			      <ul class="category">
-			        <li class="spacer">Spacer</li>
-			        <li><a href="/product/giftfuroserv/furoshiki-wrap-service.html#cayenne" data="mega menu Gift Guide">Gift Wrap Services</a></li>
-			        <li><a href="/product/giftfurosupp/furoshiki-wrap-supplies.html#ink" data="mega menu Gift Guide">Gift Wrap Supplies</a></li>
-			        <li><a href="/product/egiftcard-999-ns/tea-collection-gift-certificate-gift-card.html" data="mega menu Gift Guide">Gift Cards</a></li>
-			      </ul>
-			    </div>
-
-			    <!-- <div class="panel panel-4">
-			      <ul class="category">
-			        <li>Tea REWEAR</li>
-			        <li>
-			          <a href="#" class="kidizen-url" data-mega="true" data-url="https://teacollection.kidizen.com/?utm_source=https%3A%2F%2Fwww.teacollection.com%2F&amp;utm_medium=Web+-+girl+dropdown&amp;utm_campaign=Tea+Rewear">Shop, Sell, or Trade In Your Preloved Tea
-			    for Rewards</a>
-			        </li>
-			      </ul>
-			    </div> -->
-
-			  
-			  </div>
-			    
-			</div>
-
-
-
-		</div>
-	</div>
-
-
-	<div class="site-nav-submenu special-occasion">
-		<div class="bar">
-			<!-- 
-			<div>
-			  <a href="/girls-clothing/favorites/special-occasion" data="mega menu special occasion girl">Girl</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/boys-clothing/favorites/special-occasion" data="mega menu special occasion boy">Boy</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/baby-girl-clothes/favorites/special-occasion" data="mega menu special occasion baby girl">Baby Girl</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/baby-boy-clothes/favorites/special-occasion " data="mega menu special occasion baby boy">Baby Boy</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/family-outfitting/adult?cat%5B%5D=dresses&store_price%5B%5D=" data="mega menu special occasion adult dresses">Adult Dresses</a>
-			  <span class="line"></span>
-			</div> -->
-
-			<!-- <div>
-			  <a href="/select-styles/family" data="mega menu special occasion family">Family</a>
-			  <span class="line"></span>
-			</div> -->
-
-
-			<div>
-			  <a href="/sibling-shop" data="mega menu family matching SIBLING SHOP">SIBLING SHOP</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/family-outfitting/mommy-and-me" data="mega menu family matching MOMMY & ME">MOMMY & ME</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/special-occasion/sibling" data="mega menu family matching SPECIAL OCCASION">SPECIAL OCCASION</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/sibling-shop?cat%5B%5D=swimwear&store_price%5B%5D=" data="mega menu family matching SWIM">SWIM</a>
-			  <span class="line"></span>
-			</div>
-
-			<div>
-			  <a href="/sibling-shop?cat%5B%5D=sleepwear&store_price%5B%5D=" data="mega menu family matching PJs">PJs</a>
-			  <span class="line"></span>
-			</div>
-		</div>
-	</div>
-*}
