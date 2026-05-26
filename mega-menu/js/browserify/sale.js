@@ -342,6 +342,25 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
 
     //   break;
 
+      // case '/baby-boy-clothes/new-arrivals':
+      promo1 = _urls.urls.promo["new"].baby.boy;
+      promo2 = _urls.urls.promo.thePromo.promo.promobaby.boy;
+      promo3 = _urls.urls.promo.sale.baby.boy;
+      clearance = _urls.urls.promo.clearance.baby.boy;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars.babyBoy !== "") {
+          $(_promoVars.promoVars.babyBoy).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
+      break;
     case '/toddler-clothes':
       promo1 = _urls.urls.promo.memorial.toddler;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
@@ -418,9 +437,9 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.newborn !== "") {
-          $(_promoVars.promoVars.newborn).show();
-        } else if (_promoVars.promoVars.showNewborn) {
+        if (_promoVars.promoVars.toddlerGirl !== "") {
+          $(_promoVars.promoVars.toddlerGirl).show();
+        } else {
           $(_promoVars.promoVars.promo1Elem).show();
         }
       }
@@ -431,6 +450,52 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
         $(_promoVars.promoVars.promo3Elem).show();
       }
       break;
+
+      // case '/toddler-boys-clothes/favorites/new-arrivals':
+      promo1 = _urls.urls.promo["new"].toddler.boy;
+      promo2 = _urls.urls.promo.thePromo.promo.promotoddler.boy;
+      promo3 = _urls.urls.promo.sale.toddler.boy;
+      clearance = _urls.urls.promo.clearance.toddler.boy;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars.toddlerBoy !== "") {
+          $(_promoVars.promoVars.toddlerBoy).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
+      break;
+
+    // case '/newborn-clothes/favorites/new-arrivals':
+    // case '/newborn-clothes/':
+    //   // promo1 =urls.promo.new.baby.newborn;
+    //   promo1 = urls.promo.memorial.promo;
+    //  promo2 = urls.promo.thePromo.promo.promobaby.newborn;
+    //   promo3 = urls.promo.sale.baby.newborn;
+    //   clearance = urls.promo.clearance.baby.newborn;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.newborn !== ``) {
+    //       $(promoVars.newborn).show();
+    //     } else if (promoVars.showNewborn) {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
 
     // case '/swim-shop':
     //   promo1 =urls.promo.new.select.swim;
@@ -619,7 +684,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
   switch (href) {
     // case '/sale/girls-clothing/view-all':
     //   promo1 = urls.promo.memorial.girl;
-    //   promo2 = urls.promo.select.girl;
+    //  promo2 = urls.promo.thePromo.promo.promogirl;
     //   promo3 = urls.promo.sale.girl;
     //   clearance = urls.promo.clearance.girl;
 
@@ -649,7 +714,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     // case '/sale/boys-clothing/view-all':
     //   promo1 = urls.promo.memorial.boy;
-    //   promo2 = urls.promo.select.boy;
+    //  promo2 = urls.promo.thePromo.promo.promoboy;
     //   promo3 = urls.promo.sale.boy;
     //   clearance = urls.promo.clearance.boy;
 
@@ -679,7 +744,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     // case '/sale/baby-girl-clothes/view-all':
     //   promo1 = urls.promo.memorial.baby.girl;
-    //   promo2 = urls.promo.select.baby.girl;
+    //  promo2 = urls.promo.thePromo.promo.promobaby.girl;
     //   promo3 = urls.promo.sale.baby.girl;
     //   clearance = urls.promo.clearance.baby.girl;
 
@@ -709,7 +774,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     // case '/sale/baby-boy-clothes/view-all':
     //   promo1 = urls.promo.memorial.baby.boy;
-    //   promo2 = urls.promo.select.baby.boy;
+    //  promo2 = urls.promo.thePromo.promo.promobaby.boy;
     //   promo3 = urls.promo.sale.baby.boy;
     //   clearance = urls.promo.clearance.baby.boy;
 
@@ -739,7 +804,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     // case '/sale/toddler-girls-clothing/view-all':
     //   promo1 = urls.promo.memorial.toddler.girl;
-    //   promo2 = urls.promo.select.toddler.girl;
+    //  promo2 = urls.promo.thePromo.promo.promotoddler.girl;
     //   promo3 = urls.promo.sale.toddler.girl;
     //   clearance = urls.promo.clearance.toddler.girl;
 
@@ -769,7 +834,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
 
     // case '/sale/toddler-boys-clothing/view-all':
     //   promo1 = urls.promo.memorial.toddler.boy;
-    //   promo2 = urls.promo.select.toddler.boy;
+    //  promo2 = urls.promo.thePromo.promo.promotoddler.boy;
     //   promo3 = urls.promo.sale.toddler.boy;
     //   clearance = urls.promo.clearance.toddler.boy;
 
@@ -800,7 +865,7 @@ var switchSale = exports.switchSale = function switchSale(href) {
     // case '/sale/newborn-clothing/view-all':
     //   // promo1 = urls.promo.memorial.baby.newborn;
     //   promo1 = urls.promo.memorial.promo;
-    //   promo2 = urls.promo.select.baby.newborn;
+    //  promo2 = urls.promo.thePromo.promo.promobaby.newborn;
     //   promo3 = urls.promo.sale.baby.newborn;
     //   clearance = urls.promo.clearance.baby.newborn;
 

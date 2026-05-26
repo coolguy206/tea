@@ -134,6 +134,25 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
 
     //   break;
 
+      // case '/baby-boy-clothes/new-arrivals':
+      promo1 = _urls.urls.promo["new"].baby.boy;
+      promo2 = _urls.urls.promo.thePromo.promo.promobaby.boy;
+      promo3 = _urls.urls.promo.sale.baby.boy;
+      clearance = _urls.urls.promo.clearance.baby.boy;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars.babyBoy !== "") {
+          $(_promoVars.promoVars.babyBoy).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
+      break;
     case '/toddler-clothes':
       promo1 = _urls.urls.promo.memorial.toddler;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
@@ -210,9 +229,9 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       promo3 = _urls.urls.promo.sale.baby.newborn;
       clearance = _urls.urls.promo.clearance.baby.newborn;
       if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.newborn !== "") {
-          $(_promoVars.promoVars.newborn).show();
-        } else if (_promoVars.promoVars.showNewborn) {
+        if (_promoVars.promoVars.toddlerGirl !== "") {
+          $(_promoVars.promoVars.toddlerGirl).show();
+        } else {
           $(_promoVars.promoVars.promo1Elem).show();
         }
       }
@@ -223,6 +242,52 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
         $(_promoVars.promoVars.promo3Elem).show();
       }
       break;
+
+      // case '/toddler-boys-clothes/favorites/new-arrivals':
+      promo1 = _urls.urls.promo["new"].toddler.boy;
+      promo2 = _urls.urls.promo.thePromo.promo.promotoddler.boy;
+      promo3 = _urls.urls.promo.sale.toddler.boy;
+      clearance = _urls.urls.promo.clearance.toddler.boy;
+      if (_promoVars.promoVars.showPromo1) {
+        if (_promoVars.promoVars.toddlerBoy !== "") {
+          $(_promoVars.promoVars.toddlerBoy).show();
+        } else {
+          $(_promoVars.promoVars.promo1Elem).show();
+        }
+      }
+      if (_promoVars.promoVars.showPromo2) {
+        $(_promoVars.promoVars.promo2Elem).show();
+      }
+      if (_promoVars.promoVars.showPromo3) {
+        $(_promoVars.promoVars.promo3Elem).show();
+      }
+      break;
+
+    // case '/newborn-clothes/favorites/new-arrivals':
+    // case '/newborn-clothes/':
+    //   // promo1 =urls.promo.new.baby.newborn;
+    //   promo1 = urls.promo.memorial.promo;
+    //  promo2 = urls.promo.thePromo.promo.promobaby.newborn;
+    //   promo3 = urls.promo.sale.baby.newborn;
+    //   clearance = urls.promo.clearance.baby.newborn;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.newborn !== ``) {
+    //       $(promoVars.newborn).show();
+    //     } else if (promoVars.showNewborn) {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
 
     // case '/swim-shop':
     //   promo1 =urls.promo.new.select.swim;
