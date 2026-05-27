@@ -92,23 +92,23 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   promo3 = urls.promo.sale.baby.girl;
     //   clearance = urls.promo.clearance.baby.girl;
 
-    //   if (promoVars.showPromo1) {
-    //     if (promoVars.babyGirl !== ``) {
-    //       $(promoVars.babyGirl).show();
-    //     } else {
-    //       $(promoVars.promo1Elem).show();
-    //     }
+    // if (promoVars.showPromo1) {
+    //   if (promoVars.babyGirl !== ``) {
+    //     $(promoVars.babyGirl).show();
+    //   } else {
+    //     $(promoVars.promo1Elem).show();
     //   }
+    // }
 
-    //   if (promoVars.showPromo2) {
-    //     $(promoVars.promo2Elem).show();
-    //   }
+    // if (promoVars.showPromo2) {
+    //   $(promoVars.promo2Elem).show();
+    // }
 
-    //   if (promoVars.showPromo3) {
-    //     $(promoVars.promo3Elem).show();
-    //   }
+    // if (promoVars.showPromo3) {
+    //   $(promoVars.promo3Elem).show();
+    // }
 
-    //   break;
+    // break;
 
     // case '/baby-boy-clothes/new-arrivals':
     //   promo1 =urls.promo.new.baby.boy;
@@ -116,43 +116,24 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   promo3 = urls.promo.sale.baby.boy;
     //   clearance = urls.promo.clearance.baby.boy;
 
-    //   if (promoVars.showPromo1) {
-    //     if (promoVars.babyBoy !== ``) {
-    //       $(promoVars.babyBoy).show();
-    //     } else {
-    //       $(promoVars.promo1Elem).show();
-    //     }
+    // if (promoVars.showPromo1) {
+    //   if (promoVars.babyBoy !== ``) {
+    //     $(promoVars.babyBoy).show();
+    //   } else {
+    //     $(promoVars.promo1Elem).show();
     //   }
+    // }
 
-    //   if (promoVars.showPromo2) {
-    //     $(promoVars.promo2Elem).show();
-    //   }
+    // if (promoVars.showPromo2) {
+    //   $(promoVars.promo2Elem).show();
+    // }
 
-    //   if (promoVars.showPromo3) {
-    //     $(promoVars.promo3Elem).show();
-    //   }
+    // if (promoVars.showPromo3) {
+    //   $(promoVars.promo3Elem).show();
+    // }
 
-    //   break;
+    // break;
 
-      // case '/baby-boy-clothes/new-arrivals':
-      promo1 = _urls.urls.promo["new"].baby.boy;
-      promo2 = _urls.urls.promo.thePromo.promo.promobaby.boy;
-      promo3 = _urls.urls.promo.sale.baby.boy;
-      clearance = _urls.urls.promo.clearance.baby.boy;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.babyBoy !== "") {
-          $(_promoVars.promoVars.babyBoy).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
-      break;
     case '/toddler-clothes':
       promo1 = _urls.urls.promo.memorial.toddler;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
@@ -173,95 +154,103 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
 
-      // case '/toddler-girls-clothes/favorites/new-arrivals':
-      //   promo1 =urls.promo.new.toddler.girl;
-      //   promo2 = urls.promo.thePromo.promo.promo.toddler.girl;
-      //   promo3 = urls.promo.sale.toddler.girl;
-      //   clearance = urls.promo.clearance.toddler.girl;
+    // case '/toddler-girls-clothes/favorites/new-arrivals':
+    //   promo1 =urls.promo.new.toddler.girl;
+    //   promo2 = urls.promo.thePromo.promo.promo.toddler.girl;
+    //   promo3 = urls.promo.sale.toddler.girl;
+    //   clearance = urls.promo.clearance.toddler.girl;
 
-      //   if (promoVars.showPromo1) {
-      //     if (promoVars.toddlerGirl !== ``) {
-      //       $(promoVars.toddlerGirl).show();
-      //     } else {
-      //       $(promoVars.promo1Elem).show();
-      //     }
-      //   }
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerGirl !== ``) {
+    //       $(promoVars.toddlerGirl).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      //   if (promoVars.showPromo2) {
-      //     $(promoVars.promo2Elem).show();
-      //   }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      //   if (promoVars.showPromo3) {
-      //     $(promoVars.promo3Elem).show();
-      //   }
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      //   break;
+    //   break;
 
-      // case '/toddler-boys-clothes/favorites/new-arrivals':
-      //   promo1 =urls.promo.new.toddler.boy;
-      //   promo2 = urls.promo.thePromo.promo.promo.toddler.boy;
-      //   promo3 = urls.promo.sale.toddler.boy;
-      //   clearance = urls.promo.clearance.toddler.boy;
+    // case '/toddler-boys-clothes/favorites/new-arrivals':
+    //   promo1 =urls.promo.new.toddler.boy;
+    //   promo2 = urls.promo.thePromo.promo.promo.toddler.boy;
+    //   promo3 = urls.promo.sale.toddler.boy;
+    //   clearance = urls.promo.clearance.toddler.boy;
 
-      //   if (promoVars.showPromo1) {
-      //     if (promoVars.toddlerBoy !== ``) {
-      //       $(promoVars.toddlerBoy).show();
-      //     } else {
-      //       $(promoVars.promo1Elem).show();
-      //     }
-      //   }
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerBoy !== ``) {
+    //       $(promoVars.toddlerBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
 
-      //   if (promoVars.showPromo2) {
-      //     $(promoVars.promo2Elem).show();
-      //   }
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
 
-      //   if (promoVars.showPromo3) {
-      //     $(promoVars.promo3Elem).show();
-      //   }
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
 
-      //   break;
+    //   break;
 
-      // case '/newborn-clothes/favorites/new-arrivals':
-      // case '/newborn-clothes/':
-      // promo1 =urls.promo.new.baby.newborn;
-      promo1 = _urls.urls.promo.memorial.promo;
-      promo2 = _urls.urls.promo.thePromo.promo.promo.baby.newborn;
-      promo3 = _urls.urls.promo.sale.baby.newborn;
-      clearance = _urls.urls.promo.clearance.baby.newborn;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.toddlerGirl !== "") {
-          $(_promoVars.promoVars.toddlerGirl).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
-      break;
+    // case '/newborn-clothes/favorites/new-arrivals':
+    // case '/newborn-clothes/':
+    // promo1 =urls.promo.new.baby.newborn;
+    // promo1 = urls.promo.memorial.promo;
+    // promo2 = urls.promo.thePromo.promo.promo.baby.newborn;
+    // promo3 = urls.promo.sale.baby.newborn;
+    // clearance = urls.promo.clearance.baby.newborn;
 
-      // case '/toddler-boys-clothes/favorites/new-arrivals':
-      promo1 = _urls.urls.promo["new"].toddler.boy;
-      promo2 = _urls.urls.promo.thePromo.promo.promotoddler.boy;
-      promo3 = _urls.urls.promo.sale.toddler.boy;
-      clearance = _urls.urls.promo.clearance.toddler.boy;
-      if (_promoVars.promoVars.showPromo1) {
-        if (_promoVars.promoVars.toddlerBoy !== "") {
-          $(_promoVars.promoVars.toddlerBoy).show();
-        } else {
-          $(_promoVars.promoVars.promo1Elem).show();
-        }
-      }
-      if (_promoVars.promoVars.showPromo2) {
-        $(_promoVars.promoVars.promo2Elem).show();
-      }
-      if (_promoVars.promoVars.showPromo3) {
-        $(_promoVars.promoVars.promo3Elem).show();
-      }
-      break;
+    // if (promoVars.showPromo1) {
+    //   if (promoVars.toddlerGirl !== ``) {
+    //     $(promoVars.toddlerGirl).show();
+    //   } else {
+    //     $(promoVars.promo1Elem).show();
+    //   }
+    // }
+
+    // if (promoVars.showPromo2) {
+    //   $(promoVars.promo2Elem).show();
+    // }
+
+    // if (promoVars.showPromo3) {
+    //   $(promoVars.promo3Elem).show();
+    // }
+
+    // break;
+
+    // case '/toddler-boys-clothes/favorites/new-arrivals':
+    //   promo1 =urls.promo.new.toddler.boy;
+    //  promo2 = urls.promo.thePromo.promo.promotoddler.boy;
+    //   promo3 = urls.promo.sale.toddler.boy;
+    //   clearance = urls.promo.clearance.toddler.boy;
+
+    //   if (promoVars.showPromo1) {
+    //     if (promoVars.toddlerBoy !== ``) {
+    //       $(promoVars.toddlerBoy).show();
+    //     } else {
+    //       $(promoVars.promo1Elem).show();
+    //     }
+    //   }
+
+    //   if (promoVars.showPromo2) {
+    //     $(promoVars.promo2Elem).show();
+    //   }
+
+    //   if (promoVars.showPromo3) {
+    //     $(promoVars.promo3Elem).show();
+    //   }
+
+    //   break;
 
     // case '/newborn-clothes/favorites/new-arrivals':
     // case '/newborn-clothes/':

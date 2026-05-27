@@ -7,7 +7,7 @@ Object.defineProperty(exports, "__esModule", {
 exports.promoVars = void 0;
 var promoVars = exports.promoVars = {
   showPromo1: true,
-  showPromo2: false,
+  showPromo2: true,
   showPromo3: false,
   promo1Elem: '.promo1-url',
   promo2Elem: '.promo2-url',
