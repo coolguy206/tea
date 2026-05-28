@@ -29,7 +29,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     dress = _promoVars.promoVars.dress;
   switch (href) {
     case '/girls-clothes':
-      promo1 = _urls.urls.promo.memorial.girl;
+      promo1 = _urls.urls.promo.select.girl;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.girl;
       clearance = _urls.urls.promo.clearance.girl;
@@ -48,7 +48,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/boys-clothes':
-      promo1 = _urls.urls.promo.memorial.boy;
+      promo1 = _urls.urls.promo.select.boy;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.boy;
       clearance = _urls.urls.promo.clearance.boy;
@@ -67,7 +67,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/baby-clothes':
-      promo1 = _urls.urls.promo.memorial.baby;
+      promo1 = _urls.urls.promo.select.baby.baby;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.baby.girl;
       clearance = _urls.urls.promo.clearance.baby.girl;
@@ -135,7 +135,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     // break;
 
     case '/toddler-clothes':
-      promo1 = _urls.urls.promo.memorial.toddler;
+      promo1 = _urls.urls.promo.select.toddler.toddler;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.toddler.girl;
       clearance = _urls.urls.promo.clearance.toddler.girl;
@@ -205,7 +205,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     // case '/newborn-clothes/favorites/new-arrivals':
     // case '/newborn-clothes/':
     // promo1 =urls.promo.new.baby.newborn;
-    // promo1 = urls.promo.memorial.promo;
+    // promo1 = urls.promo.select.promo;
     // promo2 = urls.promo.thePromo.promo.promo.baby.newborn;
     // promo3 = urls.promo.sale.baby.newborn;
     // clearance = urls.promo.clearance.baby.newborn;
@@ -255,7 +255,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     // case '/newborn-clothes/favorites/new-arrivals':
     // case '/newborn-clothes/':
     //   // promo1 =urls.promo.new.baby.newborn;
-    //   promo1 = urls.promo.memorial.promo;
+    //   promo1 = urls.promo.select.promo;
     //  promo2 = urls.promo.thePromo.promo.promobaby.newborn;
     //   promo3 = urls.promo.sale.baby.newborn;
     //   clearance = urls.promo.clearance.baby.newborn;
@@ -308,7 +308,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/print-shop':
-      promo1 = _urls.urls.promo.memorial.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -332,7 +332,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       }
       break;
     case '/sibling-shop':
-      promo1 = _urls.urls.promo.memorial.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -382,7 +382,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
     //   break;
 
     case '/new-arrivals':
-      promo1 = _urls.urls.promo.memorial.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;
@@ -402,7 +402,7 @@ var switchNewArrivals = exports.switchNewArrivals = function switchNewArrivals(h
       break;
     case '/gift-and-save-shop':
     case '/':
-      promo1 = _urls.urls.promo.memorial.promo;
+      promo1 = _urls.urls.promo.select.promo;
       promo2 = _urls.urls.promo.thePromo.promo.promo;
       promo3 = _urls.urls.promo.sale.promo;
       clearance = _urls.urls.promo.clearance.girl;

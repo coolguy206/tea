@@ -1,4 +1,4 @@
-import { makeBxSlider } from './make-bxslider.js';
+// import { makeBxSlider } from './make-bxslider.js';
 // import {countDown} from './countdown.js';
 
 jQuery(document).ready(function () {
@@ -130,7 +130,7 @@ jQuery(document).ready(function () {
 
   });
 
-  makeBxSlider('.promos-wrap');
+  // makeBxSlider('.promos-wrap');
 
 
 });
