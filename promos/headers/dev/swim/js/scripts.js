@@ -1,56 +1,36 @@
 import { urls } from './urls';
 
 $(document).ready(function () {
-  // console.log(urls);
-
   const href = window.location.pathname;
-  let elem = ``;
+
+  // Map each route to its corresponding index and key inside your exported urls array
+  const routeMap = {
+    '/swimwear': urls[0].default,
+    '/girls-swimsuits-swimwear': urls[1].girl,
+    '/boys-swimwear': urls[2].boy,
+    '/baby-swimwear': urls[3].baby,
+    '/toddler-swimwear': urls[4].toddler
+  };
 
   const makeCtas = (arr) => {
-    arr.map((val, i) => {
-      // console.log(val.text);
-      // console.log(val.url);
-      elem = `<a href="${val.url}" class="">
-                  <div class="the-cta">
-                    <span class="cta-border a">${val.text}</span>
-                  </div>
-                </a>`
+    if (!arr) return; 
+
+    arr.forEach((val) => {
+      const lowerText = val.text.toLowerCase().trim();
+      const targetWords = ['girl', 'boy', 'toddler', 'family'];
+      
+      const displayText = targetWords.includes(lowerText) ? `Shop ${val.text}` : val.text;
+
+      const elem = `<a href="${val.url}" class="">
+                    <div class="the-cta">
+                      <span class="cta-border a">${displayText}</span>
+                    </div>
+                  </a>`;
+                  
       $(`.container-promo-header .the-content.select-styles`).append(elem);
     });
   };
 
-  switch (href) {
-    case '/swimwear':
-      //code here
-      makeCtas(urls[0].default);
-
-      break;
-      
-    case '/girls-swimsuits-swimwear':
-      //code here
-      makeCtas(urls[1].girl);
-
-      break;
-
-    case '/boys-swimwear':
-      //code here
-      makeCtas(urls[2].boy);
-
-      break;
-
-    case '/baby-swimwear':
-      //code here
-      makeCtas(urls[3].baby);
-
-      break;
-
-    case '/toddler-swimwear':
-      //code here
-      makeCtas(urls[4].toddler);
-
-      break;
-
-  };
-
-
+  // Dynamically passes the correct array using the adjusted routeMap
+  makeCtas(routeMap[href]);
 });

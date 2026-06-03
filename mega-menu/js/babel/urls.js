@@ -54,7 +54,7 @@ var urls = exports.urls = {
         boy: "/toddler-boys-clothes/pajamas"
       },
       promo: {
-        promo: "/americangirl",
+        promo: "/swimwear",
         family: "/family-outfitting/swim"
       }
     },
