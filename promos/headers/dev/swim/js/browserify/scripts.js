@@ -17,7 +17,7 @@ $(document).ready(function () {
     if (!arr) return;
     arr.forEach(function (val) {
       var lowerText = val.text.toLowerCase().trim();
-      var targetWords = ['girl', 'boy', 'toddler', 'family'];
+      var targetWords = ['girl', 'boy', 'baby', 'toddler', 'family'];
       var displayText = targetWords.includes(lowerText) ? "Shop ".concat(val.text) : val.text;
       var elem = "<a href=\"".concat(val.url, "\" class=\"\">\n                    <div class=\"the-cta\">\n                      <span class=\"cta-border a\">").concat(displayText, "</span>\n                    </div>\n                  </a>");
       $(".container-promo-header .the-content.select-styles").append(elem);

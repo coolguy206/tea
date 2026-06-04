@@ -17,7 +17,7 @@ $(document).ready(function () {
 
     arr.forEach((val) => {
       const lowerText = val.text.toLowerCase().trim();
-      const targetWords = ['girl', 'boy', 'toddler', 'family'];
+      const targetWords = ['girl', 'boy', 'baby', 'toddler', 'family'];
       
       const displayText = targetWords.includes(lowerText) ? `Shop ${val.text}` : val.text;
 
